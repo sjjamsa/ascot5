@@ -1,0 +1,254 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structnbi__offload__data" kind="struct" language="C++" prot="public">
+    <compoundname>nbi_offload_data</compoundname>
+    <includes refid="nbi_8h" local="no">nbi.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structnbi__offload__data_1a33a60c4d1ef8425bc59dfecd4d832d86" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int nbi_offload_data::ninj</definition>
+        <argsstring></argsstring>
+        <name>ninj</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>number of injectors </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="nbi.h" line="45" column="9" bodyfile="nbi.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structnbi__offload__data_1ac21d3fd0f2cb35767681e2cc071667d7" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int nbi_offload_data::id[NBI_MAX_INJ]</definition>
+        <argsstring>[NBI_MAX_INJ]</argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>integer identifier for the injectors <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="nbi.h" line="46" column="9" bodyfile="nbi.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structnbi__offload__data_1a4509b76be609cac77fc175823df89c39" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int nbi_offload_data::n_beamlet[NBI_MAX_INJ]</definition>
+        <argsstring>[NBI_MAX_INJ]</argsstring>
+        <name>n_beamlet</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>number of beamlets in a given injector </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="nbi.h" line="47" column="9" bodyfile="nbi.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structnbi__offload__data_1ad1f58dc2fe3fc230d5fc60f7cb66d4b2" prot="public" static="no" mutable="no">
+        <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+        <definition>real nbi_offload_data::power[NBI_MAX_INJ]</definition>
+        <argsstring>[NBI_MAX_INJ]</argsstring>
+        <name>power</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>injected power [W] <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="nbi.h" line="48" column="10" bodyfile="nbi.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structnbi__offload__data_1aa51fe43fca712cfc9979521c349705a1" prot="public" static="no" mutable="no">
+        <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+        <definition>real nbi_offload_data::energy[NBI_MAX_INJ]</definition>
+        <argsstring>[NBI_MAX_INJ]</argsstring>
+        <name>energy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>full energy of injected particles [J] <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="nbi.h" line="49" column="10" bodyfile="nbi.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structnbi__offload__data_1ae68e18b4bb51a1e69d170453d9f37524" prot="public" static="no" mutable="no">
+        <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+        <definition>real nbi_offload_data::efrac[NBI_MAX_INJ *3]</definition>
+        <argsstring>[NBI_MAX_INJ *3]</argsstring>
+        <name>efrac</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>fractions of full, 1/2 and 1/3 energy <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="nbi.h" line="50" column="10" bodyfile="nbi.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structnbi__offload__data_1a3fa39320e5608a3a61dfa524a45a8f13" prot="public" static="no" mutable="no">
+        <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+        <definition>real nbi_offload_data::div_h[NBI_MAX_INJ]</definition>
+        <argsstring>[NBI_MAX_INJ]</argsstring>
+        <name>div_h</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>vertical divergence [rad] <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="nbi.h" line="51" column="10" bodyfile="nbi.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structnbi__offload__data_1a0d851ef1e71c74c188a556d6168edc68" prot="public" static="no" mutable="no">
+        <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+        <definition>real nbi_offload_data::div_v[NBI_MAX_INJ]</definition>
+        <argsstring>[NBI_MAX_INJ]</argsstring>
+        <name>div_v</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>horizontal divergence [rad] <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="nbi.h" line="52" column="10" bodyfile="nbi.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structnbi__offload__data_1ad10a672462bb7f67638e4d0173208823" prot="public" static="no" mutable="no">
+        <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+        <definition>real nbi_offload_data::div_halo_frac[NBI_MAX_INJ]</definition>
+        <argsstring>[NBI_MAX_INJ]</argsstring>
+        <name>div_halo_frac</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>fraction of power in the halo <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="nbi.h" line="53" column="10" bodyfile="nbi.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structnbi__offload__data_1a2de00821d294e9382daa00363eaf0a3d" prot="public" static="no" mutable="no">
+        <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+        <definition>real nbi_offload_data::div_halo_h[NBI_MAX_INJ]</definition>
+        <argsstring>[NBI_MAX_INJ]</argsstring>
+        <name>div_halo_h</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>horizontal divergence of the halo [rad] </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="nbi.h" line="54" column="10" bodyfile="nbi.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structnbi__offload__data_1a2120eb5e5b6b9072448356d80187de41" prot="public" static="no" mutable="no">
+        <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+        <definition>real nbi_offload_data::div_halo_v[NBI_MAX_INJ]</definition>
+        <argsstring>[NBI_MAX_INJ]</argsstring>
+        <name>div_halo_v</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>vertical divergence of the halo [rad] <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="nbi.h" line="55" column="10" bodyfile="nbi.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structnbi__offload__data_1a57e4df7b513b913642dc71625d183ce0" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int nbi_offload_data::anum[NBI_MAX_INJ]</definition>
+        <argsstring>[NBI_MAX_INJ]</argsstring>
+        <name>anum</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>mass number of injected species <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="nbi.h" line="56" column="9" bodyfile="nbi.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structnbi__offload__data_1a324bd22a5dc2a73306ac81039a86f479" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int nbi_offload_data::znum[NBI_MAX_INJ]</definition>
+        <argsstring>[NBI_MAX_INJ]</argsstring>
+        <name>znum</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>charge number of injected species <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="nbi.h" line="57" column="9" bodyfile="nbi.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structnbi__offload__data_1a5348fd72722c15d87a42b303ae1508a3" prot="public" static="no" mutable="no">
+        <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+        <definition>real nbi_offload_data::mass[NBI_MAX_INJ]</definition>
+        <argsstring>[NBI_MAX_INJ]</argsstring>
+        <name>mass</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>mass of injected species [kg] <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="nbi.h" line="58" column="10" bodyfile="nbi.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structnbi__offload__data_1a4d797d415483270cc7f80408c82dbd93" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int nbi_offload_data::offload_array_length</definition>
+        <argsstring></argsstring>
+        <name>offload_array_length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>number of elements in offload_array <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="nbi.h" line="59" column="9" bodyfile="nbi.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>NBI parameters consisting of a bundle of injectors. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="nbi.h" line="44" column="1" bodyfile="nbi.h" bodystart="44" bodyend="60"/>
+    <listofallmembers>
+      <member refid="structnbi__offload__data_1a57e4df7b513b913642dc71625d183ce0" prot="public" virt="non-virtual"><scope>nbi_offload_data</scope><name>anum</name></member>
+      <member refid="structnbi__offload__data_1a3fa39320e5608a3a61dfa524a45a8f13" prot="public" virt="non-virtual"><scope>nbi_offload_data</scope><name>div_h</name></member>
+      <member refid="structnbi__offload__data_1ad10a672462bb7f67638e4d0173208823" prot="public" virt="non-virtual"><scope>nbi_offload_data</scope><name>div_halo_frac</name></member>
+      <member refid="structnbi__offload__data_1a2de00821d294e9382daa00363eaf0a3d" prot="public" virt="non-virtual"><scope>nbi_offload_data</scope><name>div_halo_h</name></member>
+      <member refid="structnbi__offload__data_1a2120eb5e5b6b9072448356d80187de41" prot="public" virt="non-virtual"><scope>nbi_offload_data</scope><name>div_halo_v</name></member>
+      <member refid="structnbi__offload__data_1a0d851ef1e71c74c188a556d6168edc68" prot="public" virt="non-virtual"><scope>nbi_offload_data</scope><name>div_v</name></member>
+      <member refid="structnbi__offload__data_1ae68e18b4bb51a1e69d170453d9f37524" prot="public" virt="non-virtual"><scope>nbi_offload_data</scope><name>efrac</name></member>
+      <member refid="structnbi__offload__data_1aa51fe43fca712cfc9979521c349705a1" prot="public" virt="non-virtual"><scope>nbi_offload_data</scope><name>energy</name></member>
+      <member refid="structnbi__offload__data_1ac21d3fd0f2cb35767681e2cc071667d7" prot="public" virt="non-virtual"><scope>nbi_offload_data</scope><name>id</name></member>
+      <member refid="structnbi__offload__data_1a5348fd72722c15d87a42b303ae1508a3" prot="public" virt="non-virtual"><scope>nbi_offload_data</scope><name>mass</name></member>
+      <member refid="structnbi__offload__data_1a4509b76be609cac77fc175823df89c39" prot="public" virt="non-virtual"><scope>nbi_offload_data</scope><name>n_beamlet</name></member>
+      <member refid="structnbi__offload__data_1a33a60c4d1ef8425bc59dfecd4d832d86" prot="public" virt="non-virtual"><scope>nbi_offload_data</scope><name>ninj</name></member>
+      <member refid="structnbi__offload__data_1a4d797d415483270cc7f80408c82dbd93" prot="public" virt="non-virtual"><scope>nbi_offload_data</scope><name>offload_array_length</name></member>
+      <member refid="structnbi__offload__data_1ad1f58dc2fe3fc230d5fc60f7cb66d4b2" prot="public" virt="non-virtual"><scope>nbi_offload_data</scope><name>power</name></member>
+      <member refid="structnbi__offload__data_1a324bd22a5dc2a73306ac81039a86f479" prot="public" virt="non-virtual"><scope>nbi_offload_data</scope><name>znum</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

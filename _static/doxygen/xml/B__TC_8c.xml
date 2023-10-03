@@ -1,0 +1,807 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="B__TC_8c" kind="file" language="C++">
+    <compoundname>B_TC.c</compoundname>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes refid="math_8h" local="no">math.h</includes>
+    <includes refid="ascot5_8h" local="yes">../ascot5.h</includes>
+    <includes refid="error_8h" local="yes">../error.h</includes>
+    <includes refid="print_8h" local="yes">../print.h</includes>
+    <includes refid="B__TC_8h" local="yes">B_TC.h</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>stdlib.h</label>
+      </node>
+      <node id="6">
+        <label>omp.h</label>
+      </node>
+      <node id="8">
+        <label>../error.h</label>
+        <link refid="error_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>time.h</label>
+      </node>
+      <node id="1">
+        <label>Bfield/B_TC.c</label>
+        <link refid="B__TC_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>B_TC.h</label>
+        <link refid="B__TC_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>math.h</label>
+        <link refid="math_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>stdio.h</label>
+      </node>
+      <node id="9">
+        <label>../print.h</label>
+        <link refid="print_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>ascot5.h</label>
+        <link refid="ascot5_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="B__TC_8c_1aa5849b8153849a6692f37aea1be0e638" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int B_TC_init_offload</definition>
+        <argsstring>(B_TC_offload_data *offload_data, real **offload_array)</argsstring>
+        <name>B_TC_init_offload</name>
+        <param>
+          <type><ref refid="structB__TC__offload__data" kindref="compound">B_TC_offload_data</ref> *</type>
+          <declname>offload_data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> **</type>
+          <declname>offload_array</declname>
+        </param>
+        <briefdescription>
+<para>Initialize magnetic field offload data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The offload data struct is very simple and contains only the necessary fields which are all initialized when the data is read (except B_TC.offload_array_length). The offload array is not required at all. Therefore, this function only sets the offload_array_length to zero, assigns a NULL pointer to offload_array, and prints sanity checks so that user may verify that data was initialized succesfully.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>offload_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload array</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>zero to indicate success </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bfield/B_TC.c" line="47" column="5" bodyfile="Bfield/B_TC.c" bodystart="47" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="B__TC_8c_1a361cc6e8e3d1ee2d87f81fc091dbb282" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void B_TC_free_offload</definition>
+        <argsstring>(B_TC_offload_data *offload_data, real **offload_array)</argsstring>
+        <name>B_TC_free_offload</name>
+        <param>
+          <type><ref refid="structB__TC__offload__data" kindref="compound">B_TC_offload_data</ref> *</type>
+          <declname>offload_data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> **</type>
+          <declname>offload_array</declname>
+        </param>
+        <briefdescription>
+<para>Free offload array. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>offload_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to pointer to offload array </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bfield/B_TC.c" line="78" column="6" bodyfile="Bfield/B_TC.c" bodystart="78" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="B__TC_8c_1aa1f9387ce3b329d6f94cddbe9bda0583" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void B_TC_init</definition>
+        <argsstring>(B_TC_data *Bdata, B_TC_offload_data *offload_data, real *offload_array)</argsstring>
+        <name>B_TC_init</name>
+        <param>
+          <type><ref refid="structB__TC__data" kindref="compound">B_TC_data</ref> *</type>
+          <declname>Bdata</declname>
+        </param>
+        <param>
+          <type><ref refid="structB__TC__offload__data" kindref="compound">B_TC_offload_data</ref> *</type>
+          <declname>offload_data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>offload_array</declname>
+        </param>
+        <briefdescription>
+<para>Initialize magnetic field data struct on target. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Bdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to data struct on target </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>offload array </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bfield/B_TC.c" line="91" column="6" bodyfile="Bfield/B_TC.c" bodystart="91" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="B__TC_8c_1a4561b9ecbc8fe09d63d361f3cc3503d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref></type>
+        <definition>a5err B_TC_eval_psi</definition>
+        <argsstring>(real *psi, real r, real phi, real z, B_TC_data *Bdata)</argsstring>
+        <name>B_TC_eval_psi</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>psi</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>phi</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type><ref refid="structB__TC__data" kindref="compound">B_TC_data</ref> *</type>
+          <declname>Bdata</declname>
+        </param>
+        <briefdescription>
+<para>Evaluate poloidal flux psi. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>psi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer where psi [V*s*m^-1] value will be stored </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>R coordinate [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>phi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>phi coordinate [rad] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>z coordinate [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Bdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to magnetic field data struct</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>zero to indicate success </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bfield/B_TC.c" line="114" column="7" bodyfile="Bfield/B_TC.c" bodystart="114" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="B__TC_8c_1a5527eb8501f2a9a1bd3c192878296290" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref></type>
+        <definition>a5err B_TC_eval_psi_dpsi</definition>
+        <argsstring>(real psi_dpsi[4], real r, real phi, real z, B_TC_data *Bdata)</argsstring>
+        <name>B_TC_eval_psi_dpsi</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>psi_dpsi</declname>
+          <array>[4]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>phi</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type><ref refid="structB__TC__data" kindref="compound">B_TC_data</ref> *</type>
+          <declname>Bdata</declname>
+        </param>
+        <briefdescription>
+<para>Evaluate poloidal flux psi and its derivatives. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>psi_dpsi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer for storing psi [V*s*m^-1] and its derivatives </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>R coordinate [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>phi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>phi coordinate [rad] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>z coordinate [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Bdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to magnetic field data struct</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>zero to indicate success </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bfield/B_TC.c" line="132" column="7" bodyfile="Bfield/B_TC.c" bodystart="132" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="B__TC_8c_1a39984b7a7a89470b1dfd9f22860139b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref></type>
+        <definition>a5err B_TC_eval_rho_drho</definition>
+        <argsstring>(real rho_drho[4], real r, real phi, real z, B_TC_data *Bdata)</argsstring>
+        <name>B_TC_eval_rho_drho</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>rho_drho</declname>
+          <array>[4]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>phi</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type><ref refid="structB__TC__data" kindref="compound">B_TC_data</ref> *</type>
+          <declname>Bdata</declname>
+        </param>
+        <briefdescription>
+<para>Evaluate normalized poloidal flux rho and its derivatives. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rho_drho</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer where rho and its derivatives will be stored </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>R coordinate [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>phi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>phi coordinate [rad] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>z coordinate [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Bdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to magnetic field data struct</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>zero to indicate success </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bfield/B_TC.c" line="153" column="7" bodyfile="Bfield/B_TC.c" bodystart="153" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="B__TC_8c_1af2a0d0220250259ff55230d27caf97dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref></type>
+        <definition>a5err B_TC_eval_B</definition>
+        <argsstring>(real B[3], real r, real phi, real z, B_TC_data *Bdata)</argsstring>
+        <name>B_TC_eval_B</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>B</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>phi</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type><ref refid="structB__TC__data" kindref="compound">B_TC_data</ref> *</type>
+          <declname>Bdata</declname>
+        </param>
+        <briefdescription>
+<para>Evaluate magnetic field. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>B</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to array where magnetic field values are stored </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>R coordinate [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>phi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>phi coordinate [rad] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>z coordinate [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Bdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to magnetic field data struct</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>zero to indicate success </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bfield/B_TC.c" line="175" column="7" bodyfile="Bfield/B_TC.c" bodystart="175" bodyend="194"/>
+      </memberdef>
+      <memberdef kind="function" id="B__TC_8c_1a9eaf667fd2a6fb6678691fe1c77cebe2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref></type>
+        <definition>a5err B_TC_eval_B_dB</definition>
+        <argsstring>(real B_dB[12], real r, real phi, real z, B_TC_data *Bdata)</argsstring>
+        <name>B_TC_eval_B_dB</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>B_dB</declname>
+          <array>[12]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>phi</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type><ref refid="structB__TC__data" kindref="compound">B_TC_data</ref> *</type>
+          <declname>Bdata</declname>
+        </param>
+        <briefdescription>
+<para>Evaluate magnetic field and its derivatives. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>B_dB</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to array where the field and its derivatives are stored </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>R coordinate [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>phi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>phi coordinate [rad] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>z coordinate [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Bdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to magnetic field data struct</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>zero to indicate success </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bfield/B_TC.c" line="207" column="7" bodyfile="Bfield/B_TC.c" bodystart="207" bodyend="236"/>
+      </memberdef>
+      <memberdef kind="function" id="B__TC_8c_1aefa5808c1333c3d1bcd1321bfc42099b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref></type>
+        <definition>a5err B_TC_get_axis_rz</definition>
+        <argsstring>(real rz[2], B_TC_data *Bdata)</argsstring>
+        <name>B_TC_get_axis_rz</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>rz</declname>
+          <array>[2]</array>
+        </param>
+        <param>
+          <type><ref refid="structB__TC__data" kindref="compound">B_TC_data</ref> *</type>
+          <declname>Bdata</declname>
+        </param>
+        <briefdescription>
+<para>Return magnetic axis R-coordinate. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer where axis R and z [m] values will be stored </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Bdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to magnetic field data struct</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Zero a5err value as this function can&apos;t fail. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bfield/B_TC.c" line="246" column="7" bodyfile="Bfield/B_TC.c" bodystart="246" bodyend="251"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Trivial Cartesian magnetic field. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Magnetic field whose Cartesian components <formula id="30">$(B_x, B_y, B_z)$</formula> have user-defined values at the origo <formula id="31">$(R,z) = (0,0)$</formula>, and constant Jacobian</para>
+<para><formula id="32">\[ \begin{bmatrix} \frac{\partial B_x}{\partial x}, &amp;\frac{\partial B_x}{\partial y}, &amp;\frac{\partial B_x}{\partial z} \\ \frac{\partial B_y}{\partial x}, &amp;\frac{\partial B_y}{\partial y}, &amp;\frac{\partial B_y}{\partial z} \\ \frac{\partial B_z}{\partial x}, &amp;\frac{\partial B_z}{\partial y}, &amp;\frac{\partial B_z}{\partial z} \end{bmatrix} \]</formula></para>
+<para>This magnetic field is intended to serve debugging and testing purposes. Other values <formula id="7">$\psi$</formula>, <formula id="33">$\rho$</formula> and magnetic axis coordinates have fixed user-defined values. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="math_8h" kindref="compound">math.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../ascot5.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../math.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../error.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../print.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="B__TC_8h" kindref="compound">B_TC.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="B__TC_8c_1aa5849b8153849a6692f37aea1be0e638" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="B__TC_8c_1aa5849b8153849a6692f37aea1be0e638" kindref="member">B_TC_init_offload</ref>(<ref refid="structB__TC__offload__data" kindref="compound">B_TC_offload_data</ref>*<sp/>offload_data,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>**<sp/>offload_array)<sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>No<sp/>initialization<sp/>done</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structB__TC__offload__data_1a5ebf86bc63202d89d27e724cdcb25e72" kindref="member">offload_array_length</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>*offload_array<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="print_8h_1a8520c71eb5db223009e5079e420bc398" kindref="member">print_out</ref>(VERBOSE_IO,</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;\nTrivial<sp/>cartesian<sp/>magnetic<sp/>field<sp/>(B_TC)\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Magnetic<sp/>axis<sp/>at<sp/>(R,z)<sp/>=<sp/>(%.1f,%.1f)\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;psi<sp/>=<sp/>%.1f,<sp/>rho<sp/>=<sp/>%.1f\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Magnetic<sp/>field<sp/>at<sp/>origo\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;B_x<sp/>=<sp/>%.3f<sp/>B_y<sp/>=<sp/>%.3f<sp/>B_z<sp/>=<sp/>%.3f\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Magnetic<sp/>field<sp/>gradient\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;dB_x/dx<sp/>=<sp/>%.3f<sp/>dB_x/dy<sp/>=<sp/>%.3f<sp/>B_x/dz<sp/>=<sp/>%.3f\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;dB_y/dx<sp/>=<sp/>%.3f<sp/>dB_y/dy<sp/>=<sp/>%.3f<sp/>B_y/dz<sp/>=<sp/>%.3f\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;dB_z/dx<sp/>=<sp/>%.3f<sp/>dB_z/dy<sp/>=<sp/>%.3f<sp/>B_z/dz<sp/>=<sp/>%.3f\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structB__TC__offload__data_1a3c5c9214ff685242ad7e5f6ac5a90cbc" kindref="member">axisr</ref>,<sp/>offload_data-&gt;<ref refid="structB__TC__offload__data_1a373d86deca49c03c1200bad954071508" kindref="member">axisz</ref>,</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structB__TC__offload__data_1a2e24748553363e0190c347d547f628cd" kindref="member">psival</ref>,<sp/>offload_data-&gt;<ref refid="structB__TC__offload__data_1a89dc3a4999d2ca297a0a05bccbaa2b4d" kindref="member">rhoval</ref>,</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structB__TC__offload__data_1ae8e82830551871da860181a8a7b291c0" kindref="member">B</ref>[0],<sp/><sp/>offload_data-&gt;<ref refid="structB__TC__offload__data_1ae8e82830551871da860181a8a7b291c0" kindref="member">B</ref>[1],<sp/><sp/>offload_data-&gt;<ref refid="structB__TC__offload__data_1ae8e82830551871da860181a8a7b291c0" kindref="member">B</ref>[2],</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structB__TC__offload__data_1a9f54f6374d1553cf7c0286fefb02c983" kindref="member">dB</ref>[0],<sp/>offload_data-&gt;<ref refid="structB__TC__offload__data_1a9f54f6374d1553cf7c0286fefb02c983" kindref="member">dB</ref>[1],<sp/>offload_data-&gt;<ref refid="structB__TC__offload__data_1a9f54f6374d1553cf7c0286fefb02c983" kindref="member">dB</ref>[2],</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structB__TC__offload__data_1a9f54f6374d1553cf7c0286fefb02c983" kindref="member">dB</ref>[3],<sp/>offload_data-&gt;<ref refid="structB__TC__offload__data_1a9f54f6374d1553cf7c0286fefb02c983" kindref="member">dB</ref>[4],<sp/>offload_data-&gt;<ref refid="structB__TC__offload__data_1a9f54f6374d1553cf7c0286fefb02c983" kindref="member">dB</ref>[5],</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structB__TC__offload__data_1a9f54f6374d1553cf7c0286fefb02c983" kindref="member">dB</ref>[6],<sp/>offload_data-&gt;<ref refid="structB__TC__offload__data_1a9f54f6374d1553cf7c0286fefb02c983" kindref="member">dB</ref>[7],<sp/>offload_data-&gt;<ref refid="structB__TC__offload__data_1a9f54f6374d1553cf7c0286fefb02c983" kindref="member">dB</ref>[8]);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="B__TC_8c_1a361cc6e8e3d1ee2d87f81fc091dbb282" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="B__TC_8c_1a361cc6e8e3d1ee2d87f81fc091dbb282" kindref="member">B_TC_free_offload</ref>(<ref refid="structB__TC__offload__data" kindref="compound">B_TC_offload_data</ref>*<sp/>offload_data,</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>**<sp/>offload_array)<sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>free(*offload_array);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>*offload_array<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="B__TC_8c_1aa1f9387ce3b329d6f94cddbe9bda0583" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="B__TC_8c_1aa1f9387ce3b329d6f94cddbe9bda0583" kindref="member">B_TC_init</ref>(<ref refid="structB__TC__data" kindref="compound">B_TC_data</ref>*<sp/>Bdata,<sp/><ref refid="structB__TC__offload__data" kindref="compound">B_TC_offload_data</ref>*<sp/>offload_data,</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>offload_array)<sp/>{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>Bdata-&gt;<ref refid="structB__TC__data_1adb5f6506271a964e01a83d4ecbe64315" kindref="member">rhoval</ref><sp/>=<sp/>offload_data-&gt;<ref refid="structB__TC__offload__data_1a89dc3a4999d2ca297a0a05bccbaa2b4d" kindref="member">rhoval</ref>;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>Bdata-&gt;<ref refid="structB__TC__data_1a7a1bd4304427daca203f582812b64704" kindref="member">psival</ref><sp/>=<sp/>offload_data-&gt;<ref refid="structB__TC__offload__data_1a2e24748553363e0190c347d547f628cd" kindref="member">psival</ref>;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>Bdata-&gt;<ref refid="structB__TC__data_1aa5c0d01ec55cfc176d880df1b973b45a" kindref="member">axisr</ref><sp/>=<sp/>offload_data-&gt;<ref refid="structB__TC__offload__data_1a3c5c9214ff685242ad7e5f6ac5a90cbc" kindref="member">axisr</ref>;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>Bdata-&gt;<ref refid="structB__TC__data_1a8e2fbfbbde16e2fbc387d9bdf6e96623" kindref="member">axisz</ref><sp/>=<sp/>offload_data-&gt;<ref refid="structB__TC__offload__data_1a373d86deca49c03c1200bad954071508" kindref="member">axisz</ref>;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>Bdata-&gt;<ref refid="structB__TC__data_1a8d88a66a2a10774a2e97afa0d43f675d" kindref="member">B</ref><sp/><sp/>=<sp/>offload_data-&gt;<ref refid="structB__TC__offload__data_1ae8e82830551871da860181a8a7b291c0" kindref="member">B</ref>;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>Bdata-&gt;<ref refid="structB__TC__data_1a31c44d3bfa7e00770db92504e86952ad" kindref="member">dB</ref><sp/>=<sp/>offload_data-&gt;<ref refid="structB__TC__offload__data_1a9f54f6374d1553cf7c0286fefb02c983" kindref="member">dB</ref>;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114" refid="B__TC_8c_1a4561b9ecbc8fe09d63d361f3cc3503d2" refkind="member"><highlight class="normal"><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref><sp/><ref refid="B__TC_8c_1a4561b9ecbc8fe09d63d361f3cc3503d2" kindref="member">B_TC_eval_psi</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>psi,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>phi,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z,</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structB__TC__data" kindref="compound">B_TC_data</ref>*<sp/>Bdata)<sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>psi[0]<sp/>=<sp/>Bdata-&gt;<ref refid="structB__TC__data_1a7a1bd4304427daca203f582812b64704" kindref="member">psival</ref>;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132" refid="B__TC_8c_1a5527eb8501f2a9a1bd3c192878296290" refkind="member"><highlight class="normal"><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref><sp/><ref refid="B__TC_8c_1a5527eb8501f2a9a1bd3c192878296290" kindref="member">B_TC_eval_psi_dpsi</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>psi_dpsi[4],<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>phi,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z,</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structB__TC__data" kindref="compound">B_TC_data</ref>*<sp/>Bdata)<sp/>{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>psi_dpsi[0]<sp/>=<sp/>Bdata-&gt;<ref refid="structB__TC__data_1a7a1bd4304427daca203f582812b64704" kindref="member">psival</ref>;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>psi_dpsi[1]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>psi_dpsi[2]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>psi_dpsi[3]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153" refid="B__TC_8c_1a39984b7a7a89470b1dfd9f22860139b3" refkind="member"><highlight class="normal"><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref><sp/><ref refid="B__TC_8c_1a39984b7a7a89470b1dfd9f22860139b3" kindref="member">B_TC_eval_rho_drho</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>rho_drho[4],<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>phi,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z,</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structB__TC__data" kindref="compound">B_TC_data</ref>*<sp/>Bdata)<sp/>{</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>rho_drho[0]<sp/>=<sp/>Bdata-&gt;<ref refid="structB__TC__data_1adb5f6506271a964e01a83d4ecbe64315" kindref="member">rhoval</ref>;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>rho_drho[1]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>rho_drho[2]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>rho_drho[3]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175" refid="B__TC_8c_1af2a0d0220250259ff55230d27caf97dd" refkind="member"><highlight class="normal"><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref><sp/><ref refid="B__TC_8c_1af2a0d0220250259ff55230d27caf97dd" kindref="member">B_TC_eval_B</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>B[3],<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>phi,</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z,<sp/><ref refid="structB__TC__data" kindref="compound">B_TC_data</ref>*<sp/>Bdata)<sp/>{</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Find<sp/>the<sp/>Cartesian<sp/>position<sp/>and<sp/>evaluate<sp/>the<sp/>field<sp/>there<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>xyz[3];</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>rpz[3]<sp/>=<sp/>{r,<sp/>phi,<sp/>z};</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="math_8h_1a809a2184a4686fc5413b60fa21b9b5cc" kindref="member">math_rpz2xyz</ref>(rpz,<sp/>xyz);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>Bxyz[3];</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>Bxyz[0]<sp/>=<sp/>Bdata-&gt;<ref refid="structB__TC__data_1a8d88a66a2a10774a2e97afa0d43f675d" kindref="member">B</ref>[0]<sp/>+<sp/>Bdata-&gt;<ref refid="structB__TC__data_1a31c44d3bfa7e00770db92504e86952ad" kindref="member">dB</ref>[0]*xyz[0]<sp/>+<sp/>Bdata-&gt;<ref refid="structB__TC__data_1a31c44d3bfa7e00770db92504e86952ad" kindref="member">dB</ref>[1]*xyz[1]</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>Bdata-&gt;<ref refid="structB__TC__data_1a31c44d3bfa7e00770db92504e86952ad" kindref="member">dB</ref>[2]*xyz[2];</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>Bxyz[1]<sp/>=<sp/>Bdata-&gt;<ref refid="structB__TC__data_1a8d88a66a2a10774a2e97afa0d43f675d" kindref="member">B</ref>[1]<sp/>+<sp/>Bdata-&gt;<ref refid="structB__TC__data_1a31c44d3bfa7e00770db92504e86952ad" kindref="member">dB</ref>[3]*xyz[0]<sp/>+<sp/>Bdata-&gt;<ref refid="structB__TC__data_1a31c44d3bfa7e00770db92504e86952ad" kindref="member">dB</ref>[4]*xyz[1]</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>Bdata-&gt;<ref refid="structB__TC__data_1a31c44d3bfa7e00770db92504e86952ad" kindref="member">dB</ref>[5]*xyz[2];</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/>Bxyz[2]<sp/>=<sp/>Bdata-&gt;<ref refid="structB__TC__data_1a8d88a66a2a10774a2e97afa0d43f675d" kindref="member">B</ref>[2]<sp/>+<sp/>Bdata-&gt;<ref refid="structB__TC__data_1a31c44d3bfa7e00770db92504e86952ad" kindref="member">dB</ref>[6]*xyz[0]<sp/>+<sp/>Bdata-&gt;<ref refid="structB__TC__data_1a31c44d3bfa7e00770db92504e86952ad" kindref="member">dB</ref>[7]*xyz[1]</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>Bdata-&gt;<ref refid="structB__TC__data_1a31c44d3bfa7e00770db92504e86952ad" kindref="member">dB</ref>[8]*xyz[2];</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Transform<sp/>the<sp/>Cartesian<sp/>field<sp/>vector<sp/>to<sp/>cylindrical<sp/>coordinates<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="math_8h_1a2926fc9962621a0a75d463e6b43f449d" kindref="member">math_vec_xyz2rpz</ref>(Bxyz,<sp/>B,<sp/>phi);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207" refid="B__TC_8c_1a9eaf667fd2a6fb6678691fe1c77cebe2" refkind="member"><highlight class="normal"><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref><sp/><ref refid="B__TC_8c_1a9eaf667fd2a6fb6678691fe1c77cebe2" kindref="member">B_TC_eval_B_dB</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>B_dB[12],<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>phi,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z,</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structB__TC__data" kindref="compound">B_TC_data</ref>*<sp/>Bdata)<sp/>{</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Find<sp/>the<sp/>Cartesian<sp/>position<sp/>and<sp/>evaluate<sp/>the<sp/>field<sp/>there<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>xyz[3];</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>rpz[3]<sp/>=<sp/>{r,<sp/>phi,<sp/>z};</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="math_8h_1a809a2184a4686fc5413b60fa21b9b5cc" kindref="member">math_rpz2xyz</ref>(rpz,<sp/>xyz);</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>Bxyz[3];</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/>Bxyz[0]<sp/>=<sp/>Bdata-&gt;<ref refid="structB__TC__data_1a8d88a66a2a10774a2e97afa0d43f675d" kindref="member">B</ref>[0]<sp/>+<sp/>Bdata-&gt;<ref refid="structB__TC__data_1a31c44d3bfa7e00770db92504e86952ad" kindref="member">dB</ref>[0]*xyz[0]<sp/>+<sp/>Bdata-&gt;<ref refid="structB__TC__data_1a31c44d3bfa7e00770db92504e86952ad" kindref="member">dB</ref>[1]*xyz[1]</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>Bdata-&gt;<ref refid="structB__TC__data_1a31c44d3bfa7e00770db92504e86952ad" kindref="member">dB</ref>[2]*xyz[2];</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/>Bxyz[1]<sp/>=<sp/>Bdata-&gt;<ref refid="structB__TC__data_1a8d88a66a2a10774a2e97afa0d43f675d" kindref="member">B</ref>[1]<sp/>+<sp/>Bdata-&gt;<ref refid="structB__TC__data_1a31c44d3bfa7e00770db92504e86952ad" kindref="member">dB</ref>[3]*xyz[0]<sp/>+<sp/>Bdata-&gt;<ref refid="structB__TC__data_1a31c44d3bfa7e00770db92504e86952ad" kindref="member">dB</ref>[4]*xyz[1]</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>Bdata-&gt;<ref refid="structB__TC__data_1a31c44d3bfa7e00770db92504e86952ad" kindref="member">dB</ref>[5]*xyz[2];</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/>Bxyz[2]<sp/>=<sp/>Bdata-&gt;<ref refid="structB__TC__data_1a8d88a66a2a10774a2e97afa0d43f675d" kindref="member">B</ref>[2]<sp/>+<sp/>Bdata-&gt;<ref refid="structB__TC__data_1a31c44d3bfa7e00770db92504e86952ad" kindref="member">dB</ref>[6]*xyz[0]<sp/>+<sp/>Bdata-&gt;<ref refid="structB__TC__data_1a31c44d3bfa7e00770db92504e86952ad" kindref="member">dB</ref>[7]*xyz[1]</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>Bdata-&gt;<ref refid="structB__TC__data_1a31c44d3bfa7e00770db92504e86952ad" kindref="member">dB</ref>[8]*xyz[2];</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Transform<sp/>the<sp/>Cartesian<sp/>field<sp/>vector<sp/>and<sp/>Jacobian</highlight></codeline>
+<codeline lineno="223"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>to<sp/>cylindrical<sp/>coordinates<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>Brpz[3];</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="math_8h_1a2926fc9962621a0a75d463e6b43f449d" kindref="member">math_vec_xyz2rpz</ref>(Bxyz,<sp/>Brpz,<sp/>phi);</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/>B_dB[0]<sp/>=<sp/>Brpz[0];</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/>B_dB[4]<sp/>=<sp/>Brpz[1];</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/>B_dB[8]<sp/>=<sp/>Brpz[2];</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>B_dBxyz[12]<sp/>=<sp/>{Bdata-&gt;<ref refid="structB__TC__data_1a8d88a66a2a10774a2e97afa0d43f675d" kindref="member">B</ref>[0],<sp/>Bdata-&gt;<ref refid="structB__TC__data_1a31c44d3bfa7e00770db92504e86952ad" kindref="member">dB</ref>[0],<sp/>Bdata-&gt;<ref refid="structB__TC__data_1a31c44d3bfa7e00770db92504e86952ad" kindref="member">dB</ref>[1],<sp/>Bdata-&gt;<ref refid="structB__TC__data_1a31c44d3bfa7e00770db92504e86952ad" kindref="member">dB</ref>[2],</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Bdata-&gt;<ref refid="structB__TC__data_1a8d88a66a2a10774a2e97afa0d43f675d" kindref="member">B</ref>[1],<sp/>Bdata-&gt;<ref refid="structB__TC__data_1a31c44d3bfa7e00770db92504e86952ad" kindref="member">dB</ref>[3],<sp/>Bdata-&gt;<ref refid="structB__TC__data_1a31c44d3bfa7e00770db92504e86952ad" kindref="member">dB</ref>[4],<sp/>Bdata-&gt;<ref refid="structB__TC__data_1a31c44d3bfa7e00770db92504e86952ad" kindref="member">dB</ref>[5],</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Bdata-&gt;<ref refid="structB__TC__data_1a8d88a66a2a10774a2e97afa0d43f675d" kindref="member">B</ref>[2],<sp/>Bdata-&gt;<ref refid="structB__TC__data_1a31c44d3bfa7e00770db92504e86952ad" kindref="member">dB</ref>[6],<sp/>Bdata-&gt;<ref refid="structB__TC__data_1a31c44d3bfa7e00770db92504e86952ad" kindref="member">dB</ref>[7],<sp/>Bdata-&gt;<ref refid="structB__TC__data_1a31c44d3bfa7e00770db92504e86952ad" kindref="member">dB</ref>[8]};</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="math_8c_1aed7ada7822595d869435af64095f5330" kindref="member">math_jac_xyz2rpz</ref>(B_dBxyz,<sp/>B_dB,<sp/>r,<sp/>phi);</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="236"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246" refid="B__TC_8c_1aefa5808c1333c3d1bcd1321bfc42099b" refkind="member"><highlight class="normal"><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref><sp/><ref refid="B__TC_8c_1aefa5808c1333c3d1bcd1321bfc42099b" kindref="member">B_TC_get_axis_rz</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>rz[2],<sp/><ref refid="structB__TC__data" kindref="compound">B_TC_data</ref>*<sp/>Bdata)<sp/>{</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref><sp/>err<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/>rz[0]<sp/>=<sp/>Bdata-&gt;<ref refid="structB__TC__data_1aa5c0d01ec55cfc176d880df1b973b45a" kindref="member">axisr</ref>;</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/>rz[1]<sp/>=<sp/>Bdata-&gt;<ref refid="structB__TC__data_1a8e2fbfbbde16e2fbc387d9bdf6e96623" kindref="member">axisz</ref>;</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>err;</highlight></codeline>
+<codeline lineno="251"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="Bfield/B_TC.c"/>
+  </compounddef>
+</doxygen>

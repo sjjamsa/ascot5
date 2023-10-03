@@ -1,0 +1,1282 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="mhd_8h" kind="file" language="C++">
+    <compoundname>mhd.h</compoundname>
+    <includes refid="ascot5_8h" local="yes">ascot5.h</includes>
+    <includes refid="error_8h" local="yes">error.h</includes>
+    <includes refid="B__field_8h" local="yes">B_field.h</includes>
+    <includes refid="boozer_8h" local="yes">boozer.h</includes>
+    <includes refid="mhd__stat_8h" local="yes">mhd/mhd_stat.h</includes>
+    <includes refid="mhd__nonstat_8h" local="yes">mhd/mhd_nonstat.h</includes>
+    <includedby refid="hdf5__mhd_8c" local="yes">hdf5io/hdf5_mhd.c</includedby>
+    <includedby refid="hdf5__mhd_8h" local="yes">hdf5io/hdf5_mhd.h</includedby>
+    <includedby refid="libascot_8c" local="yes">libascot.c</includedby>
+    <includedby refid="mhd__nonstat_8c" local="yes">mhd/mhd_nonstat.c</includedby>
+    <includedby refid="mhd__stat_8c" local="yes">mhd/mhd_stat.c</includedby>
+    <includedby refid="mhd_8c" local="yes">mhd.c</includedby>
+    <includedby refid="simulate__gc__adaptive_8c" local="yes">simulate/simulate_gc_adaptive.c</includedby>
+    <includedby refid="step__fo__vpa_8c" local="yes">simulate/step/step_fo_vpa.c</includedby>
+    <includedby refid="step__fo__vpa_8h" local="yes">simulate/step/step_fo_vpa.h</includedby>
+    <includedby refid="step__gc__cashkarp_8h" local="yes">simulate/step/step_gc_cashkarp.h</includedby>
+    <includedby refid="step__gc__rk4_8c" local="yes">simulate/step/step_gc_rk4.c</includedby>
+    <includedby refid="step__gc__rk4_8h" local="yes">simulate/step/step_gc_rk4.h</includedby>
+    <includedby refid="step__ml__cashkarp_8c" local="yes">simulate/step/step_ml_cashkarp.c</includedby>
+    <includedby refid="step__ml__cashkarp_8h" local="yes">simulate/step/step_ml_cashkarp.h</includedby>
+    <includedby refid="simulate_8h" local="yes">simulate.h</includedby>
+    <incdepgraph>
+      <node id="11">
+        <label>../spline/interp.h</label>
+        <link refid="interp_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>Bfield/B_GS.h</label>
+        <link refid="B__GS_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>mhd/mhd_nonstat.h</label>
+        <link refid="mhd__nonstat_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>omp.h</label>
+      </node>
+      <node id="8">
+        <label>B_field.h</label>
+        <link refid="B__field_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>mhd/mhd_stat.h</label>
+        <link refid="mhd__stat_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>error.h</label>
+        <link refid="error_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>time.h</label>
+      </node>
+      <node id="15">
+        <label>Bfield/B_TC.h</label>
+        <link refid="B__TC_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>../linint/linint.h</label>
+        <link refid="linint_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>Bfield/B_2DS.h</label>
+        <link refid="B__2DS_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>mhd.h</label>
+        <link refid="mhd_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>boozer.h</label>
+        <link refid="boozer_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>Bfield/B_3DS.h</label>
+        <link refid="B__3DS_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>math.h</label>
+        <link refid="math_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>stdio.h</label>
+      </node>
+      <node id="13">
+        <label>Bfield/B_STS.h</label>
+        <link refid="B__STS_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ascot5.h</label>
+        <link refid="ascot5_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="20">
+        <label>simulate/simulate_ml_adaptive.c</label>
+        <link refid="simulate__ml__adaptive_8c"/>
+      </node>
+      <node id="42">
+        <label>simulate/simulate_ml_adaptive.h</label>
+        <link refid="simulate__ml__adaptive_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>diag.c</label>
+        <link refid="diag_8c"/>
+      </node>
+      <node id="33">
+        <label>simulate.c</label>
+        <link refid="simulate_8c"/>
+      </node>
+      <node id="21">
+        <label>simulate.h</label>
+        <link refid="simulate_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>simulate/simulate_fo_fixed.c</label>
+        <link refid="simulate__fo__fixed_8c"/>
+      </node>
+      <node id="39">
+        <label>simulate/simulate_fo_fixed.h</label>
+        <link refid="simulate__fo__fixed_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>simulate/step/step_gc_rk4.c</label>
+        <link refid="step__gc__rk4_8c"/>
+      </node>
+      <node id="17">
+        <label>simulate/simulate_gc_fixed.c</label>
+        <link refid="simulate__gc__fixed_8c"/>
+      </node>
+      <node id="16">
+        <label>simulate/step/step_gc_rk4.h</label>
+        <link refid="step__gc__rk4_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>ascot5_main.c</label>
+        <link refid="ascot5__main_8c"/>
+      </node>
+      <node id="41">
+        <label>simulate/simulate_gc_fixed.h</label>
+        <link refid="simulate__gc__fixed_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>ascot5_main.h</label>
+        <link refid="ascot5__main_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>mhd/mhd_nonstat.c</label>
+        <link refid="mhd__nonstat_8c"/>
+      </node>
+      <node id="30">
+        <label>endcond.c</label>
+        <link refid="endcond_8c"/>
+      </node>
+      <node id="31">
+        <label>endcond.h</label>
+        <link refid="endcond_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>afsi.c</label>
+        <link refid="afsi_8c"/>
+      </node>
+      <node id="23">
+        <label>afsi.h</label>
+        <link refid="afsi_8h_source"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>diag/diag_orb.c</label>
+        <link refid="diag__orb_8c"/>
+      </node>
+      <node id="7">
+        <label>mhd/mhd_stat.c</label>
+        <link refid="mhd__stat_8c"/>
+      </node>
+      <node id="32">
+        <label>hdf5io/hdf5_options.c</label>
+        <link refid="hdf5__options_8c"/>
+      </node>
+      <node id="35">
+        <label>hdf5io/hdf5_options.h</label>
+        <link refid="hdf5__options_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hdf5io/hdf5_mhd.c</label>
+        <link refid="hdf5__mhd_8c"/>
+      </node>
+      <node id="36">
+        <label>hdf5io/hdf5_orbit.c</label>
+        <link refid="hdf5__orbit_8c"/>
+      </node>
+      <node id="3">
+        <label>hdf5io/hdf5_mhd.h</label>
+        <link refid="hdf5__mhd_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>simulate/simulate_gc_adaptive.c</label>
+        <link refid="simulate__gc__adaptive_8c"/>
+      </node>
+      <node id="40">
+        <label>simulate/simulate_gc_adaptive.h</label>
+        <link refid="simulate__gc__adaptive_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>mpi_interface.c</label>
+        <link refid="mpi__interface_8c"/>
+      </node>
+      <node id="38">
+        <label>mpi_interface.h</label>
+        <link refid="mpi__interface_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>libascot.c</label>
+        <link refid="libascot_8c"/>
+      </node>
+      <node id="4">
+        <label>hdf5_interface.c</label>
+        <link refid="hdf5__interface_8c"/>
+      </node>
+      <node id="34">
+        <label>hdf5_interface.h</label>
+        <link refid="hdf5__interface_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>simulate/step/step_ml_cashkarp.c</label>
+        <link refid="step__ml__cashkarp_8c"/>
+      </node>
+      <node id="19">
+        <label>simulate/step/step_ml_cashkarp.h</label>
+        <link refid="step__ml__cashkarp_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>diag/diag_transcoef.c</label>
+        <link refid="diag__transcoef_8c"/>
+      </node>
+      <node id="14">
+        <label>simulate/step/step_gc_cashkarp.c</label>
+        <link refid="step__gc__cashkarp_8c"/>
+      </node>
+      <node id="13">
+        <label>simulate/step/step_gc_cashkarp.h</label>
+        <link refid="step__gc__cashkarp_8h_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>mhd.c</label>
+        <link refid="mhd_8c"/>
+      </node>
+      <node id="1">
+        <label>mhd.h</label>
+        <link refid="mhd_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>bbnbi5.c</label>
+        <link refid="bbnbi5_8c"/>
+      </node>
+      <node id="10">
+        <label>simulate/step/step_fo_vpa.c</label>
+        <link refid="step__fo__vpa_8c"/>
+      </node>
+      <node id="11">
+        <label>simulate/step/step_fo_vpa.h</label>
+        <link refid="step__fo__vpa_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structmhd__offload__data" prot="public">mhd_offload_data</innerclass>
+    <innerclass refid="structmhd__data" prot="public">mhd_data</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="mhd_8h_1a95e3bd9666ff5d412346f507838ab568" prot="public" static="no">
+        <name>MHD_INCLUDE_ALL</name>
+        <initializer>-1</initializer>
+        <briefdescription>
+<para>includemode parameter to include all modes (default) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mhd.h" line="19" column="9" bodyfile="mhd.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="mhd_8h_1ab21aab0cb19764b60e853c7d2c0a4316" prot="public" static="no" strong="no">
+        <type></type>
+        <name>mhd_type</name>
+        <enumvalue id="mhd_8h_1ab21aab0cb19764b60e853c7d2c0a4316a34cf1c1aa3179513ab9dd550ddb1ecba" prot="public">
+          <name>mhd_type_stat</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>MHD where mode amplitude does not depend on time </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mhd_8h_1ab21aab0cb19764b60e853c7d2c0a4316aec758ad0eb94e9ba0ae3761ca4952a5d" prot="public">
+          <name>mhd_type_nonstat</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>MHD where mode amplitude depends on time <linebreak/>
+ </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>MHD input types. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>MHD types are used in the MHD interface (<ref refid="mhd_8c" kindref="compound">mhd.c</ref>) to direct function calls to correct MHD instances. Each MHD instance must have a corresponding type. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mhd.h" line="27" column="1" bodyfile="mhd.h" bodystart="27" bodyend="30"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="mhd_8h_1a7236f60a700055f8ec40d81910a02f8b" prot="public" static="no">
+        <type>enum <ref refid="mhd_8h_1ab21aab0cb19764b60e853c7d2c0a4316" kindref="member">mhd_type</ref></type>
+        <definition>typedef enum mhd_type mhd_type</definition>
+        <argsstring></argsstring>
+        <name>mhd_type</name>
+        <briefdescription>
+<para>MHD input types. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>MHD types are used in the MHD interface (<ref refid="mhd_8c" kindref="compound">mhd.c</ref>) to direct function calls to correct MHD instances. Each MHD instance must have a corresponding type. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mhd.h" line="30" column="10"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="mhd_8h_1af3708acc9639d894ee7552974fd85055" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mhd_init_offload</definition>
+        <argsstring>(mhd_offload_data *offload_data, real **offload_array)</argsstring>
+        <name>mhd_init_offload</name>
+        <param>
+          <type><ref refid="structmhd__offload__data" kindref="compound">mhd_offload_data</ref> *</type>
+          <declname>offload_data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> **</type>
+          <declname>offload_array</declname>
+        </param>
+        <briefdescription>
+<para>Load MHD data and prepare parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function fills the relevant MHD offload struct with parameters and allocates and fills the offload array.</para>
+<para>The offload data has to have a type when this function is called as it should be set when the offload data is constructed from inputs.</para>
+<para>This function is host only.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>offload_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to pointer to offload array</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>zero if initialization succeeded </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mhd.h" line="63" column="5" bodyfile="mhd.c" bodystart="45" bodyend="78" declfile="mhd.h" declline="63" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="mhd_8h_1af5eb45555f91d9272b5ecc8a244dc0d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mhd_free_offload</definition>
+        <argsstring>(mhd_offload_data *offload_data, real **offload_array)</argsstring>
+        <name>mhd_free_offload</name>
+        <param>
+          <type><ref refid="structmhd__offload__data" kindref="compound">mhd_offload_data</ref> *</type>
+          <declname>offload_data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> **</type>
+          <declname>offload_array</declname>
+        </param>
+        <briefdescription>
+<para>Free offload array and reset parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function deallocates the offload_array.</para>
+<para>This function is host only.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>offload_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to pointer to offload array </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mhd.h" line="65" column="6" bodyfile="mhd.c" bodystart="90" bodyend="102" declfile="mhd.h" declline="65" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="mhd_8h_1ae22a71112d24ba28030f4e9fc949d8d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mhd_init</definition>
+        <argsstring>(mhd_data *data, mhd_offload_data *offload_data, real *offload_array)</argsstring>
+        <name>mhd_init</name>
+        <param>
+          <type><ref refid="structmhd__data" kindref="compound">mhd_data</ref> *</type>
+          <declname>data</declname>
+          <defname>mhddata</defname>
+        </param>
+        <param>
+          <type><ref refid="structmhd__offload__data" kindref="compound">mhd_offload_data</ref> *</type>
+          <declname>offload_data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>offload_array</declname>
+        </param>
+        <briefdescription>
+<para>Initialize MHD data struct on target. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function copies the electric field parameters from the offload struct to the struct on target and sets the MHD data pointers to correct offsets in the offload array.</para>
+<para>This function returns error if the offload data has not been initialized. The instances themselves should not return an error since all they do is assign pointers and values.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mhddata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to data struct on target </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the offload array</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Non-zero integer if offload was not initialized beforehand </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mhd.h" line="69" column="5" bodyfile="mhd.c" bodystart="121" bodyend="146" declfile="mhd.h" declline="69" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="mhd_8h_1aa00e63ac9f53cb606e34d4f61e35d591" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref></type>
+        <definition>a5err mhd_eval</definition>
+        <argsstring>(real mhd_dmhd[10], real r, real phi, real z, real t, int includemode, boozer_data *boozerdata, mhd_data *mhddata, B_field_data *Bdata)</argsstring>
+        <name>mhd_eval</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>mhd_dmhd</declname>
+          <array>[10]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>phi</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>includemode</declname>
+        </param>
+        <param>
+          <type><ref refid="structboozer__data" kindref="compound">boozer_data</ref> *</type>
+          <declname>boozerdata</declname>
+        </param>
+        <param>
+          <type><ref refid="structmhd__data" kindref="compound">mhd_data</ref> *</type>
+          <declname>mhddata</declname>
+        </param>
+        <param>
+          <type><ref refid="structB__field__data" kindref="compound">B_field_data</ref> *</type>
+          <declname>Bdata</declname>
+        </param>
+        <briefdescription>
+<para>Evaluate the needed quantities from MHD mode for orbit following. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The quantities to be evaluated are alpha, phi, grad alpha, grad phi, partial t alpha, partial t phi</para>
+<para>The values are stored in the given array as:<itemizedlist>
+<listitem><para>mhd_dmhd[0] = alpha</para>
+</listitem><listitem><para>mhd_dmhd[1] = dalpha/dt</para>
+</listitem><listitem><para>mhd_dmhd[2] = grad alpha, r component</para>
+</listitem><listitem><para>mhd_dmhd[3] = grad alpha, phi component</para>
+</listitem><listitem><para>mhd_dmhd[4] = grad alpha, z component</para>
+</listitem><listitem><para>mhd_dmhd[5] = phi</para>
+</listitem><listitem><para>mhd_dmhd[6] = dphi/dt</para>
+</listitem><listitem><para>mhd_dmhd[7] = grad phi, r component</para>
+</listitem><listitem><para>mhd_dmhd[8] = grad phi, phi component</para>
+</listitem><listitem><para>mhd_dmhd[9] = grad phi, z component</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mhd_dmhd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>R coordinate [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>phi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>phi coordinate [rad] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>z coordinate [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>time coordinate [s] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>includemode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>mode number to be included or MHD_INCLUDE_ALL </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>boozerdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to boozer data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mhddata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to mhd data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Bdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to magnetic field data</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Non-zero a5err value if evaluation failed, zero otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mhd.h" line="72" column="7" bodyfile="mhd.c" bodystart="178" bodyend="202" declfile="mhd.h" declline="72" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="mhd_8h_1a66777d1e7f114f5aa5cfa384996bd67a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref></type>
+        <definition>a5err mhd_perturbations</definition>
+        <argsstring>(real pert_field[7], real r, real phi, real z, real t, int pertonly, int includemode, boozer_data *boozerdata, mhd_data *mhddata, B_field_data *Bdata)</argsstring>
+        <name>mhd_perturbations</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>pert_field</declname>
+          <array>[7]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>phi</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pertonly</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>includemode</declname>
+        </param>
+        <param>
+          <type><ref refid="structboozer__data" kindref="compound">boozer_data</ref> *</type>
+          <declname>boozerdata</declname>
+        </param>
+        <param>
+          <type><ref refid="structmhd__data" kindref="compound">mhd_data</ref> *</type>
+          <declname>mhddata</declname>
+        </param>
+        <param>
+          <type><ref refid="structB__field__data" kindref="compound">B_field_data</ref> *</type>
+          <declname>Bdata</declname>
+        </param>
+        <briefdescription>
+<para>Evaluate perturbed fields Btilde, Etilde and potential Phi explicitly. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The values are stored in the given array as<itemizedlist>
+<listitem><para>pert_field[0] = BtildeR</para>
+</listitem><listitem><para>pert_field[1] = BtildePhi</para>
+</listitem><listitem><para>pert_field[2] = BtildeZ</para>
+</listitem><listitem><para>pert_field[3] = EtildeR</para>
+</listitem><listitem><para>pert_field[4] = EtildePhi</para>
+</listitem><listitem><para>pert_field[5] = EtildeZ</para>
+</listitem><listitem><para>pert_field[6] = Phi</para>
+</listitem></itemizedlist>
+</para>
+<para>Only the perturbation values for the magnetic field are returned if pertonly=1, otherwise, the total perturbed field is returned. This is done to avoid double evaluation of the magnetic field e.g. in field line tracing. For electric field only the perturbation component is returned always.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pert_field</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>perturbation field components </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>R coordinate [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>phi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>phi coordinate [rad] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>z coordinate [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>time coordinate [s] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pertonly</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>flag whether to return the whole field or only perturbation </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>includemode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>mode number to be included or MHD_INCLUDE_ALL </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>boozerdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to boozer data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mhddata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to mhd data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Bdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to magnetic field data</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Non-zero a5err value if evaluation failed, zero otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mhd.h" line="77" column="7" bodyfile="mhd.c" bodystart="234" bodyend="261" declfile="mhd.h" declline="77" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="mhd_8h_1a066906671291098767dc35af8d85e3c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mhd_get_n_modes</definition>
+        <argsstring>(mhd_data *mhddata)</argsstring>
+        <name>mhd_get_n_modes</name>
+        <param>
+          <type><ref refid="structmhd__data" kindref="compound">mhd_data</ref> *</type>
+          <declname>mhddata</declname>
+        </param>
+        <briefdescription>
+<para>Return number of modes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mhddata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to mhd data</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>number of modes </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mhd.h" line="82" column="5" bodyfile="mhd.c" bodystart="270" bodyend="281" declfile="mhd.h" declline="82" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="mhd_8h_1ae443ac5bbd950952e8ecbf4a2ba4ef54" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const int *</type>
+        <definition>const int* mhd_get_nmode</definition>
+        <argsstring>(mhd_data *mhddata)</argsstring>
+        <name>mhd_get_nmode</name>
+        <param>
+          <type><ref refid="structmhd__data" kindref="compound">mhd_data</ref> *</type>
+          <declname>mhddata</declname>
+        </param>
+        <briefdescription>
+<para>Return mode toroidal numbers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mhddata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to mhd data</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>mode n numbers </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mhd.h" line="84" column="11" bodyfile="mhd.c" bodystart="290" bodyend="301" declfile="mhd.h" declline="84" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="mhd_8h_1ad18add369b8f37c3240fdb3d3724b94a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const int *</type>
+        <definition>const int* mhd_get_mmode</definition>
+        <argsstring>(mhd_data *mhddata)</argsstring>
+        <name>mhd_get_mmode</name>
+        <param>
+          <type><ref refid="structmhd__data" kindref="compound">mhd_data</ref> *</type>
+          <declname>mhddata</declname>
+        </param>
+        <briefdescription>
+<para>Return mode poloidal numbers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mhddata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to mhd data</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>mode m numbers </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mhd.h" line="86" column="11" bodyfile="mhd.c" bodystart="310" bodyend="321" declfile="mhd.h" declline="86" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="mhd_8h_1ac57282a671e54f54abc977855a34bbdf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+        <definition>const real* mhd_get_amplitude</definition>
+        <argsstring>(mhd_data *mhddata)</argsstring>
+        <name>mhd_get_amplitude</name>
+        <param>
+          <type><ref refid="structmhd__data" kindref="compound">mhd_data</ref> *</type>
+          <declname>mhddata</declname>
+        </param>
+        <briefdescription>
+<para>Return mode amplitudes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mhddata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to mhd data</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>mode amplitudes </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mhd.h" line="88" column="12" bodyfile="mhd.c" bodystart="330" bodyend="341" declfile="mhd.h" declline="88" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="mhd_8h_1a7833912413a8d4c6ea74e0de2b9417f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+        <definition>const real* mhd_get_frequency</definition>
+        <argsstring>(mhd_data *mhddata)</argsstring>
+        <name>mhd_get_frequency</name>
+        <param>
+          <type><ref refid="structmhd__data" kindref="compound">mhd_data</ref> *</type>
+          <declname>mhddata</declname>
+        </param>
+        <briefdescription>
+<para>Return mode frequencies. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mhddata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to mhd data</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>mode omega </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mhd.h" line="90" column="12" bodyfile="mhd.c" bodystart="350" bodyend="361" declfile="mhd.h" declline="90" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="mhd_8h_1ad3cb7cc97f032144f13c0748856482f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+        <definition>const real* mhd_get_phase</definition>
+        <argsstring>(mhd_data *mhddata)</argsstring>
+        <name>mhd_get_phase</name>
+        <param>
+          <type><ref refid="structmhd__data" kindref="compound">mhd_data</ref> *</type>
+          <declname>mhddata</declname>
+        </param>
+        <briefdescription>
+<para>Return mode phases. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mhddata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to mhd data</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>mode phases </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mhd.h" line="92" column="13" bodyfile="mhd.c" bodystart="370" bodyend="381" declfile="mhd.h" declline="92" declcolumn="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Header file for <ref refid="mhd_8c" kindref="compound">mhd.c</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Contains a list declaring all mhd_types, and declaration of <ref refid="structmhd__offload__data" kindref="compound">mhd_offload_data</ref> and <ref refid="structmhd__data" kindref="compound">mhd_data</ref> structs. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MHD_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MHD_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ascot5_8h" kindref="compound">ascot5.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="error_8h" kindref="compound">error.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="B__field_8h" kindref="compound">B_field.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="boozer_8h" kindref="compound">boozer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mhd__stat_8h" kindref="compound">mhd/mhd_stat.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mhd__nonstat_8h" kindref="compound">mhd/mhd_nonstat.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="mhd_8h_1a95e3bd9666ff5d412346f507838ab568" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MHD_INCLUDE_ALL<sp/>-1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="mhd_8h_1ab21aab0cb19764b60e853c7d2c0a4316" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="mhd_8h_1ab21aab0cb19764b60e853c7d2c0a4316" kindref="member">mhd_type</ref><sp/>{</highlight></codeline>
+<codeline lineno="28" refid="mhd_8h_1ab21aab0cb19764b60e853c7d2c0a4316a34cf1c1aa3179513ab9dd550ddb1ecba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mhd_8h_1ab21aab0cb19764b60e853c7d2c0a4316a34cf1c1aa3179513ab9dd550ddb1ecba" kindref="member">mhd_type_stat</ref>,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mhd_8h_1ab21aab0cb19764b60e853c7d2c0a4316aec758ad0eb94e9ba0ae3761ca4952a5d" kindref="member">mhd_type_nonstat</ref><sp/></highlight></codeline>
+<codeline lineno="30" refid="mhd_8h_1a7236f60a700055f8ec40d81910a02f8b" refkind="member"><highlight class="normal">}<sp/><ref refid="mhd_8h_1ab21aab0cb19764b60e853c7d2c0a4316" kindref="member">mhd_type</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="structmhd__offload__data" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="42" refid="structmhd__offload__data_1a211904f45beef67cee64c181999f2d0f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mhd_8h_1ab21aab0cb19764b60e853c7d2c0a4316" kindref="member">mhd_type</ref><sp/><ref refid="structmhd__offload__data_1a211904f45beef67cee64c181999f2d0f" kindref="member">type</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="43" refid="structmhd__offload__data_1a8d47f8daef869f2206e2473a3fb44062" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmhd__stat__offload__data" kindref="compound">mhd_stat_offload_data</ref><sp/><ref refid="structmhd__offload__data_1a8d47f8daef869f2206e2473a3fb44062" kindref="member">stat</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="44" refid="structmhd__offload__data_1a868b2d6eec09361e9068b83cead2bcbd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmhd__nonstat__offload__data" kindref="compound">mhd_nonstat_offload_data</ref><sp/><ref refid="structmhd__offload__data_1a868b2d6eec09361e9068b83cead2bcbd" kindref="member">nonstat</ref>;</highlight></codeline>
+<codeline lineno="45" refid="structmhd__offload__data_1a6fdcee91b43e43f63c5171d9a0e659f9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structmhd__offload__data_1a6fdcee91b43e43f63c5171d9a0e659f9" kindref="member">offload_array_length</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="46"><highlight class="normal">}<sp/><ref refid="structmhd__offload__data" kindref="compound">mhd_offload_data</ref>;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="structmhd__data" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="58" refid="structmhd__data_1a347d449bf250c7c0b4dac59fe4f3b910" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mhd_8h_1ab21aab0cb19764b60e853c7d2c0a4316" kindref="member">mhd_type</ref><sp/><ref refid="structmhd__data_1a347d449bf250c7c0b4dac59fe4f3b910" kindref="member">type</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="59" refid="structmhd__data_1a50864ab0f1a446927c5040d00b20e0e2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmhd__stat__data" kindref="compound">mhd_stat_data</ref><sp/><ref refid="structmhd__data_1a50864ab0f1a446927c5040d00b20e0e2" kindref="member">stat</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="60" refid="structmhd__data_1a9c9b4bde21bd0cb33a2b41d32d975ebf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmhd__nonstat__data" kindref="compound">mhd_nonstat_data</ref><sp/><ref refid="structmhd__data_1a9c9b4bde21bd0cb33a2b41d32d975ebf" kindref="member">nonstat</ref>;<sp/></highlight></codeline>
+<codeline lineno="61"><highlight class="normal">}<sp/><ref refid="structmhd__data" kindref="compound">mhd_data</ref>;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="mhd_8h_1af3708acc9639d894ee7552974fd85055" kindref="member">mhd_init_offload</ref>(<ref refid="structmhd__offload__data" kindref="compound">mhd_offload_data</ref>*<sp/>offload_data,</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>**<sp/>offload_array);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="mhd_8h_1af5eb45555f91d9272b5ecc8a244dc0d5" kindref="member">mhd_free_offload</ref>(<ref refid="structmhd__offload__data" kindref="compound">mhd_offload_data</ref>*<sp/>offload_data,</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>**<sp/>offload_array);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>declare<sp/>target</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="mhd_8h_1ae22a71112d24ba28030f4e9fc949d8d4" kindref="member">mhd_init</ref>(<ref refid="structmhd__data" kindref="compound">mhd_data</ref>*<sp/>data,<sp/><ref refid="structmhd__offload__data" kindref="compound">mhd_offload_data</ref>*<sp/>offload_data,</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>offload_array);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>declare<sp/>simd<sp/>uniform(boozerdata,<sp/>mhddata,<sp/>Bdata,<sp/>includemode)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref><sp/><ref refid="mhd_8h_1aa00e63ac9f53cb606e34d4f61e35d591" kindref="member">mhd_eval</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>mhd_dmhd[10],<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>phi,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>t,</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>includemode,<sp/><ref refid="structboozer__data" kindref="compound">boozer_data</ref>*<sp/>boozerdata,<sp/><ref refid="structmhd__data" kindref="compound">mhd_data</ref>*<sp/>mhddata,</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structB__field__data" kindref="compound">B_field_data</ref>*<sp/>Bdata);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>declare<sp/>simd<sp/>uniform(boozerdata,<sp/>mhddata,<sp/>Bdata,<sp/>pertonly,\</highlight></codeline>
+<codeline lineno="76"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>includemode)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref><sp/><ref refid="mhd_8h_1a66777d1e7f114f5aa5cfa384996bd67a" kindref="member">mhd_perturbations</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>pert_field[7],<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>phi,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z,</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>t,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pertonly,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>includemode,</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structboozer__data" kindref="compound">boozer_data</ref>*<sp/>boozerdata,<sp/><ref refid="structmhd__data" kindref="compound">mhd_data</ref>*<sp/>mhddata,</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structB__field__data" kindref="compound">B_field_data</ref>*<sp/>Bdata);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>declare<sp/>simd<sp/>uniform(mhddata)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="mhd_8h_1a066906671291098767dc35af8d85e3c1" kindref="member">mhd_get_n_modes</ref>(<ref refid="structmhd__data" kindref="compound">mhd_data</ref>*<sp/>mhddata);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>declare<sp/>simd<sp/>uniform(mhddata)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/><ref refid="mhd_8h_1ae443ac5bbd950952e8ecbf4a2ba4ef54" kindref="member">mhd_get_nmode</ref>(<ref refid="structmhd__data" kindref="compound">mhd_data</ref>*<sp/>mhddata);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>declare<sp/>simd<sp/>uniform(mhddata)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/><ref refid="mhd_8h_1ad18add369b8f37c3240fdb3d3724b94a" kindref="member">mhd_get_mmode</ref>(<ref refid="structmhd__data" kindref="compound">mhd_data</ref>*<sp/>mhddata);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>declare<sp/>simd<sp/>uniform(mhddata)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/><ref refid="mhd_8h_1ac57282a671e54f54abc977855a34bbdf" kindref="member">mhd_get_amplitude</ref>(<ref refid="structmhd__data" kindref="compound">mhd_data</ref>*<sp/>mhddata);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>declare<sp/>simd<sp/>uniform(mhddata)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/><ref refid="mhd_8h_1a7833912413a8d4c6ea74e0de2b9417f4" kindref="member">mhd_get_frequency</ref>(<ref refid="structmhd__data" kindref="compound">mhd_data</ref>*<sp/>mhddata);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>declare<sp/>simd<sp/>uniform(mhddata)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/><sp/><ref refid="mhd_8h_1ad3cb7cc97f032144f13c0748856482f9" kindref="member">mhd_get_phase</ref>(<ref refid="structmhd__data" kindref="compound">mhd_data</ref>*<sp/>mhddata);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>end<sp/>declare<sp/>target</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="mhd.h"/>
+  </compounddef>
+</doxygen>

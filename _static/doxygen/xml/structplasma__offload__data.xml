@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structplasma__offload__data" kind="struct" language="C++" prot="public">
+    <compoundname>plasma_offload_data</compoundname>
+    <includes refid="plasma_8h" local="no">plasma.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structplasma__offload__data_1a606d83112093cf2266034efc79752058" prot="public" static="no" mutable="no">
+        <type><ref refid="plasma_8h_1aeac371b8350c40fe94429c0e2167df63" kindref="member">plasma_type</ref></type>
+        <definition>plasma_type plasma_offload_data::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Plasma data type wrapped by this struct <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="plasma.h" line="41" column="17" bodyfile="plasma.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structplasma__offload__data_1a400fcc19a992c82cb9cdfbe3273d8980" prot="public" static="no" mutable="no">
+        <type><ref refid="structplasma__1D__offload__data" kindref="compound">plasma_1D_offload_data</ref></type>
+        <definition>plasma_1D_offload_data plasma_offload_data::plasma_1D</definition>
+        <argsstring></argsstring>
+        <name>plasma_1D</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>1D data or NULL if not active <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="plasma.h" line="42" column="28" bodyfile="plasma.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structplasma__offload__data_1a498b2116e000736408f306533ef157d6" prot="public" static="no" mutable="no">
+        <type><ref refid="structplasma__1Dt__offload__data" kindref="compound">plasma_1Dt_offload_data</ref></type>
+        <definition>plasma_1Dt_offload_data plasma_offload_data::plasma_1Dt</definition>
+        <argsstring></argsstring>
+        <name>plasma_1Dt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>1D data or NULL if not active <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="plasma.h" line="43" column="29" bodyfile="plasma.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structplasma__offload__data_1a078cdf266d24fea6a018ecaa13d70fa7" prot="public" static="no" mutable="no">
+        <type><ref refid="structplasma__1DS__offload__data" kindref="compound">plasma_1DS_offload_data</ref></type>
+        <definition>plasma_1DS_offload_data plasma_offload_data::plasma_1DS</definition>
+        <argsstring></argsstring>
+        <name>plasma_1DS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>1DS data or NULL if not active <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="plasma.h" line="44" column="29" bodyfile="plasma.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structplasma__offload__data_1a05b3b7ba22ace0f56aa395ff14f4a25e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int plasma_offload_data::offload_array_length</definition>
+        <argsstring></argsstring>
+        <name>offload_array_length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Allocated offload array length <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="plasma.h" line="45" column="9" bodyfile="plasma.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Plasma offload data. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This struct holds data necessary for offloading. The struct is initialized in <ref refid="plasma_8c_1aa4b07a053504e5ae77ee0ed80338af05" kindref="member">plasma_init_offload()</ref>.</para>
+<para>The intended usage is that only single offload data is used at the time, and the type of the data is declared with the &quot;type&quot; field. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>plasma_offload_data</label>
+        <link refid="structplasma__offload__data"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>plasma_1D</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>plasma_1Dt</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>plasma_1DS</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>plasma_1DS_offload_data</label>
+        <link refid="structplasma__1DS__offload__data"/>
+      </node>
+      <node id="2">
+        <label>plasma_1D_offload_data</label>
+        <link refid="structplasma__1D__offload__data"/>
+      </node>
+      <node id="3">
+        <label>plasma_1Dt_offload_data</label>
+        <link refid="structplasma__1Dt__offload__data"/>
+      </node>
+    </collaborationgraph>
+    <location file="plasma.h" line="40" column="1" bodyfile="plasma.h" bodystart="40" bodyend="46"/>
+    <listofallmembers>
+      <member refid="structplasma__offload__data_1a05b3b7ba22ace0f56aa395ff14f4a25e" prot="public" virt="non-virtual"><scope>plasma_offload_data</scope><name>offload_array_length</name></member>
+      <member refid="structplasma__offload__data_1a400fcc19a992c82cb9cdfbe3273d8980" prot="public" virt="non-virtual"><scope>plasma_offload_data</scope><name>plasma_1D</name></member>
+      <member refid="structplasma__offload__data_1a078cdf266d24fea6a018ecaa13d70fa7" prot="public" virt="non-virtual"><scope>plasma_offload_data</scope><name>plasma_1DS</name></member>
+      <member refid="structplasma__offload__data_1a498b2116e000736408f306533ef157d6" prot="public" virt="non-virtual"><scope>plasma_offload_data</scope><name>plasma_1Dt</name></member>
+      <member refid="structplasma__offload__data_1a606d83112093cf2266034efc79752058" prot="public" virt="non-virtual"><scope>plasma_offload_data</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

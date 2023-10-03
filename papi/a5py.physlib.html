@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>physlib &mdash; ASCOT5 5.5 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/sg_gallery.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=b689823a"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="routines" href="a5py.routines.html" />
+    <link rel="prev" title="templates" href="a5py.templates.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html">
+            
+              <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Running Simulations</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../running.html">Installing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../running.html#simulations">Simulations</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Processing Data</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../processing.html">Data storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../processing.html#input-generation">Input generation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../processing.html#post-processing">Post-processing</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Simulating Physics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../teaching.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../teaching.html#physics-in-ascot5">Physics in ASCOT5</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Publications</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../publishing.html">Citing ASCOT5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../publishing.html#gallery">Gallery</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Code Development</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../developing.html">Coding style and practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developing.html#parallelization">Parallelization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developing.html#testing">Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developing.html#id2">C API</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="a5py.html">Python API</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="a5py.html#module-a5py"><code class="docutils literal notranslate"><span class="pre">a5py</span></code></a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="a5py.ascot5io.html"><code class="docutils literal notranslate"><span class="pre">ascot5io</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.ascotpy.html"><code class="docutils literal notranslate"><span class="pre">ascotpy</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.templates.html"><code class="docutils literal notranslate"><span class="pre">templates</span></code></a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">physlib</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#a5py.physlib.anglemod"><code class="docutils literal notranslate"><span class="pre">anglemod()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#a5py.physlib.bouncefrequency"><code class="docutils literal notranslate"><span class="pre">bouncefrequency()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#a5py.physlib.cart2pol"><code class="docutils literal notranslate"><span class="pre">cart2pol()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#a5py.physlib.collfreq_ei"><code class="docutils literal notranslate"><span class="pre">collfreq_ei()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#a5py.physlib.collfreq_ie"><code class="docutils literal notranslate"><span class="pre">collfreq_ie()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#a5py.physlib.energy_gamma"><code class="docutils literal notranslate"><span class="pre">energy_gamma()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#a5py.physlib.energy_momentum"><code class="docutils literal notranslate"><span class="pre">energy_momentum()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#a5py.physlib.energy_muppar"><code class="docutils literal notranslate"><span class="pre">energy_muppar()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#a5py.physlib.energy_muvpar"><code class="docutils literal notranslate"><span class="pre">energy_muvpar()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#a5py.physlib.energy_velocity"><code class="docutils literal notranslate"><span class="pre">energy_velocity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#a5py.physlib.gamma_energy"><code class="docutils literal notranslate"><span class="pre">gamma_energy()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#a5py.physlib.gamma_momentum"><code class="docutils literal notranslate"><span class="pre">gamma_momentum()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#a5py.physlib.gamma_muppar"><code class="docutils literal notranslate"><span class="pre">gamma_muppar()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#a5py.physlib.gamma_muvpar"><code class="docutils literal notranslate"><span class="pre">gamma_muvpar()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#a5py.physlib.gamma_velocity"><code class="docutils literal notranslate"><span class="pre">gamma_velocity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#a5py.physlib.gyrofrequency"><code class="docutils literal notranslate"><span class="pre">gyrofrequency()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#a5py.physlib.gyrolength"><code class="docutils literal notranslate"><span class="pre">gyrolength()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#a5py.physlib.momentum_muppar"><code class="docutils literal notranslate"><span class="pre">momentum_muppar()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#a5py.physlib.momentum_velocity"><code class="docutils literal notranslate"><span class="pre">momentum_velocity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#a5py.physlib.mu_momentum"><code class="docutils literal notranslate"><span class="pre">mu_momentum()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#a5py.physlib.mu_velocity"><code class="docutils literal notranslate"><span class="pre">mu_velocity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#a5py.physlib.parseunits"><code class="docutils literal notranslate"><span class="pre">parseunits()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#a5py.physlib.pitch_momentum"><code class="docutils literal notranslate"><span class="pre">pitch_momentum()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#a5py.physlib.pitch_muppar"><code class="docutils literal notranslate"><span class="pre">pitch_muppar()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#a5py.physlib.pnorm_gamma"><code class="docutils literal notranslate"><span class="pre">pnorm_gamma()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#a5py.physlib.pol2cart"><code class="docutils literal notranslate"><span class="pre">pol2cart()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#a5py.physlib.ppar_momentum"><code class="docutils literal notranslate"><span class="pre">ppar_momentum()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#a5py.physlib.torcanangmom_momentum"><code class="docutils literal notranslate"><span class="pre">torcanangmom_momentum()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#a5py.physlib.torcanangmom_ppar"><code class="docutils literal notranslate"><span class="pre">torcanangmom_ppar()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#a5py.physlib.velocity_momentum"><code class="docutils literal notranslate"><span class="pre">velocity_momentum()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#a5py.physlib.velocity_muppar"><code class="docutils literal notranslate"><span class="pre">velocity_muppar()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#a5py.physlib.vnorm_gamma"><code class="docutils literal notranslate"><span class="pre">vnorm_gamma()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#a5py.physlib.vpar_momentum"><code class="docutils literal notranslate"><span class="pre">vpar_momentum()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#a5py.physlib.vpar_muppar"><code class="docutils literal notranslate"><span class="pre">vpar_muppar()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.routines.html"><code class="docutils literal notranslate"><span class="pre">routines</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.gui.html"><code class="docutils literal notranslate"><span class="pre">a5py.gui</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.html#a5py.exceptions.AscotIOException"><code class="docutils literal notranslate"><span class="pre">AscotIOException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.html#a5py.exceptions.AscotInitException"><code class="docutils literal notranslate"><span class="pre">AscotInitException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.html#a5py.exceptions.AscotNoDataException"><code class="docutils literal notranslate"><span class="pre">AscotNoDataException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.html#a5py.exceptions.AscotUnitWarning"><code class="docutils literal notranslate"><span class="pre">AscotUnitWarning</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="a5py.html#ascot"><code class="docutils literal notranslate"><span class="pre">Ascot</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ASCOT5</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="a5py.html">Python API</a></li>
+      <li class="breadcrumb-item active"><code class="docutils literal notranslate"><span class="pre">physlib</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/papi/a5py.physlib.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-a5py.physlib">
+<span id="physlib"></span><h1><code class="docutils literal notranslate"><span class="pre">physlib</span></code><a class="headerlink" href="#module-a5py.physlib" title="Link to this heading"></a></h1>
+<p>Tools for assessing physical quantities and units.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="a5py.physlib.anglemod">
+<span class="sig-prename descclassname"><span class="pre">a5py.physlib.</span></span><span class="sig-name descname"><span class="pre">anglemod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">angle</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.physlib.anglemod" title="Link to this definition"></a></dt>
+<dd><p>Transfer arbitrary angle to between interval [0, 2pi].</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a5py.physlib.bouncefrequency">
+<span class="sig-prename descclassname"><span class="pre">a5py.physlib.</span></span><span class="sig-name descname"><span class="pre">bouncefrequency</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ekin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minorradius</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">majorradius</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">safetyfactor</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.physlib.bouncefrequency" title="Link to this definition"></a></dt>
+<dd><p>Estimate bounce frequency from energy and aspect ratio.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a5py.physlib.cart2pol">
+<span class="sig-prename descclassname"><span class="pre">a5py.physlib.</span></span><span class="sig-name descname"><span class="pre">cart2pol</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.physlib.cart2pol" title="Link to this definition"></a></dt>
+<dd><p>Cartesian x coordinate from cylindrical coordinates.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a5py.physlib.collfreq_ei">
+<span class="sig-prename descclassname"><span class="pre">a5py.physlib.</span></span><span class="sig-name descname"><span class="pre">collfreq_ei</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ne</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Te</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clog</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.physlib.collfreq_ei" title="Link to this definition"></a></dt>
+<dd><p>Evaluate electron-ion collision frequency.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a5py.physlib.collfreq_ie">
+<span class="sig-prename descclassname"><span class="pre">a5py.physlib.</span></span><span class="sig-name descname"><span class="pre">collfreq_ie</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ne</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Te</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clog</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.physlib.collfreq_ie" title="Link to this definition"></a></dt>
+<dd><p>Evaluate ion-electron collision frequency.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a5py.physlib.energy_gamma">
+<span class="sig-prename descclassname"><span class="pre">a5py.physlib.</span></span><span class="sig-name descname"><span class="pre">energy_gamma</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.physlib.energy_gamma" title="Link to this definition"></a></dt>
+<dd><p>Evaluate kinetic energy from Lorentz factor.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a5py.physlib.energy_momentum">
+<span class="sig-prename descclassname"><span class="pre">a5py.physlib.</span></span><span class="sig-name descname"><span class="pre">energy_momentum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.physlib.energy_momentum" title="Link to this definition"></a></dt>
+<dd><p>Evaluate kinetic energy from momentum.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a5py.physlib.energy_muppar">
+<span class="sig-prename descclassname"><span class="pre">a5py.physlib.</span></span><span class="sig-name descname"><span class="pre">energy_muppar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ppar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.physlib.energy_muppar" title="Link to this definition"></a></dt>
+<dd><p>Evaluate kinetic energy from magnetic moment and parallel momentum.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a5py.physlib.energy_muvpar">
+<span class="sig-prename descclassname"><span class="pre">a5py.physlib.</span></span><span class="sig-name descname"><span class="pre">energy_muvpar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vpar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.physlib.energy_muvpar" title="Link to this definition"></a></dt>
+<dd><p>Evaluate kinetic energy from magnetic moment and parallel velocity.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a5py.physlib.energy_velocity">
+<span class="sig-prename descclassname"><span class="pre">a5py.physlib.</span></span><span class="sig-name descname"><span class="pre">energy_velocity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.physlib.energy_velocity" title="Link to this definition"></a></dt>
+<dd><p>Evaluate kinetic energy from velocity.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a5py.physlib.gamma_energy">
+<span class="sig-prename descclassname"><span class="pre">a5py.physlib.</span></span><span class="sig-name descname"><span class="pre">gamma_energy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">energy</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.physlib.gamma_energy" title="Link to this definition"></a></dt>
+<dd><p>Evaluate gamma from kinetic energy.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a5py.physlib.gamma_momentum">
+<span class="sig-prename descclassname"><span class="pre">a5py.physlib.</span></span><span class="sig-name descname"><span class="pre">gamma_momentum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.physlib.gamma_momentum" title="Link to this definition"></a></dt>
+<dd><p>Evaluate gamma from momentum.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a5py.physlib.gamma_muppar">
+<span class="sig-prename descclassname"><span class="pre">a5py.physlib.</span></span><span class="sig-name descname"><span class="pre">gamma_muppar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ppar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.physlib.gamma_muppar" title="Link to this definition"></a></dt>
+<dd><p>Evaluate gamma from magnetic moment and parallel momentum.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a5py.physlib.gamma_muvpar">
+<span class="sig-prename descclassname"><span class="pre">a5py.physlib.</span></span><span class="sig-name descname"><span class="pre">gamma_muvpar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vpar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.physlib.gamma_muvpar" title="Link to this definition"></a></dt>
+<dd><p>Evaluate gamma from magnetic moment and parallel velocity.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a5py.physlib.gamma_velocity">
+<span class="sig-prename descclassname"><span class="pre">a5py.physlib.</span></span><span class="sig-name descname"><span class="pre">gamma_velocity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.physlib.gamma_velocity" title="Link to this definition"></a></dt>
+<dd><p>Evaluate gamma from velocity.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a5py.physlib.gyrofrequency">
+<span class="sig-prename descclassname"><span class="pre">a5py.physlib.</span></span><span class="sig-name descname"><span class="pre">gyrofrequency</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">energy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bnorm</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.physlib.gyrofrequency" title="Link to this definition"></a></dt>
+<dd><p>Evaluate gyrofrequency from energy.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a5py.physlib.gyrolength">
+<span class="sig-prename descclassname"><span class="pre">a5py.physlib.</span></span><span class="sig-name descname"><span class="pre">gyrolength</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">energy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pitch</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bnorm</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.physlib.gyrolength" title="Link to this definition"></a></dt>
+<dd><p>Evaluate gyrolength from energy and pitch.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a5py.physlib.momentum_muppar">
+<span class="sig-prename descclassname"><span class="pre">a5py.physlib.</span></span><span class="sig-name descname"><span class="pre">momentum_muppar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ppar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zeta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.physlib.momentum_muppar" title="Link to this definition"></a></dt>
+<dd><p>Evaluate momentum from mu and ppar.</p>
+<p>If gyroangle zeta is given, return the momentum vector. Otherwise return
+momentum norm.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a5py.physlib.momentum_velocity">
+<span class="sig-prename descclassname"><span class="pre">a5py.physlib.</span></span><span class="sig-name descname"><span class="pre">momentum_velocity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.physlib.momentum_velocity" title="Link to this definition"></a></dt>
+<dd><p>Evaluate momentum from velocity.</p>
+<p>If v is a vector (scalar) then returned value is a vector (scalar).</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a5py.physlib.mu_momentum">
+<span class="sig-prename descclassname"><span class="pre">a5py.physlib.</span></span><span class="sig-name descname"><span class="pre">mu_momentum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.physlib.mu_momentum" title="Link to this definition"></a></dt>
+<dd><p>Evaluate magnetic moment from momentum vector.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a5py.physlib.mu_velocity">
+<span class="sig-prename descclassname"><span class="pre">a5py.physlib.</span></span><span class="sig-name descname"><span class="pre">mu_velocity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.physlib.mu_velocity" title="Link to this definition"></a></dt>
+<dd><p>TODO: Evaluate magnetic moment from velocity vector.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a5py.physlib.parseunits">
+<span class="sig-prename descclassname"><span class="pre">a5py.physlib.</span></span><span class="sig-name descname"><span class="pre">parseunits</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">strip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">units</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.physlib.parseunits" title="Link to this definition"></a></dt>
+<dd><p>Prepare arguments that are expected to have physical units.</p>
+<p>This decorator:</p>
+<ul class="simple">
+<li><p>Makes sure every argument has expected physical dimensions.</p></li>
+<li><p>Assigns units if units were not provided but they were expected.</p></li>
+<li><p>Strips units if asked (after checking/assignment).</p></li>
+</ul>
+<p>Examples:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@parseunits</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;m&quot;</span><span class="p">,</span> <span class="n">strip</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">fun</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>strip</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Strip units so that dimensionless quantities (but in expected units)
+are passed to the function.</p>
+</dd>
+<dt><strong>**units</strong></dt><dd><p>Argument in wrapped function and the expected unit as a string.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a5py.physlib.pitch_momentum">
+<span class="sig-prename descclassname"><span class="pre">a5py.physlib.</span></span><span class="sig-name descname"><span class="pre">pitch_momentum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.physlib.pitch_momentum" title="Link to this definition"></a></dt>
+<dd><p>Evaluate pitch from momentum vector.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a5py.physlib.pitch_muppar">
+<span class="sig-prename descclassname"><span class="pre">a5py.physlib.</span></span><span class="sig-name descname"><span class="pre">pitch_muppar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ppar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.physlib.pitch_muppar" title="Link to this definition"></a></dt>
+<dd><p>Evaluate pitch from mu and ppar.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a5py.physlib.pnorm_gamma">
+<span class="sig-prename descclassname"><span class="pre">a5py.physlib.</span></span><span class="sig-name descname"><span class="pre">pnorm_gamma</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.physlib.pnorm_gamma" title="Link to this definition"></a></dt>
+<dd><p>Evaluate momentum norm from Lorentz factor.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a5py.physlib.pol2cart">
+<span class="sig-prename descclassname"><span class="pre">a5py.physlib.</span></span><span class="sig-name descname"><span class="pre">pol2cart</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.physlib.pol2cart" title="Link to this definition"></a></dt>
+<dd><p>Cartesian x coordinate from cylindrical coordinates.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a5py.physlib.ppar_momentum">
+<span class="sig-prename descclassname"><span class="pre">a5py.physlib.</span></span><span class="sig-name descname"><span class="pre">ppar_momentum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.physlib.ppar_momentum" title="Link to this definition"></a></dt>
+<dd><p>Evaluate parallel momentum from momentum vector.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a5py.physlib.torcanangmom_momentum">
+<span class="sig-prename descclassname"><span class="pre">a5py.physlib.</span></span><span class="sig-name descname"><span class="pre">torcanangmom_momentum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psi</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.physlib.torcanangmom_momentum" title="Link to this definition"></a></dt>
+<dd><p>Evaluate toroidal canonical angular momentum from momentum.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a5py.physlib.torcanangmom_ppar">
+<span class="sig-prename descclassname"><span class="pre">a5py.physlib.</span></span><span class="sig-name descname"><span class="pre">torcanangmom_ppar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ppar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psi</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.physlib.torcanangmom_ppar" title="Link to this definition"></a></dt>
+<dd><p>Evaluate toroidal canonical angular momentum from mu and ppar.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a5py.physlib.velocity_momentum">
+<span class="sig-prename descclassname"><span class="pre">a5py.physlib.</span></span><span class="sig-name descname"><span class="pre">velocity_momentum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.physlib.velocity_momentum" title="Link to this definition"></a></dt>
+<dd><p>Evaluate velocity from momentum.</p>
+<p>If p is a vector (scalar) then returned value is a vector (scalar).</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a5py.physlib.velocity_muppar">
+<span class="sig-prename descclassname"><span class="pre">a5py.physlib.</span></span><span class="sig-name descname"><span class="pre">velocity_muppar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ppar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zeta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.physlib.velocity_muppar" title="Link to this definition"></a></dt>
+<dd><p>Evaluate velocity from mu and ppar.</p>
+<p>If gyroangle zeta is given, return the velocity vector. Otherwise return
+velocity norm.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a5py.physlib.vnorm_gamma">
+<span class="sig-prename descclassname"><span class="pre">a5py.physlib.</span></span><span class="sig-name descname"><span class="pre">vnorm_gamma</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gamma</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.physlib.vnorm_gamma" title="Link to this definition"></a></dt>
+<dd><p>Evaluate velocity norm from Lorentz factor.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a5py.physlib.vpar_momentum">
+<span class="sig-prename descclassname"><span class="pre">a5py.physlib.</span></span><span class="sig-name descname"><span class="pre">vpar_momentum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.physlib.vpar_momentum" title="Link to this definition"></a></dt>
+<dd><p>Evaluate parallel velocity from momentum vector.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a5py.physlib.vpar_muppar">
+<span class="sig-prename descclassname"><span class="pre">a5py.physlib.</span></span><span class="sig-name descname"><span class="pre">vpar_muppar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ppar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.physlib.vpar_muppar" title="Link to this definition"></a></dt>
+<dd><p>Evaluate vpar from mu and ppar.</p>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="a5py.templates.html" class="btn btn-neutral float-left" title="templates" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="a5py.routines.html" class="btn btn-neutral float-right" title="routines" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Ascot Group.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

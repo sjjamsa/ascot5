@@ -1,0 +1,374 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="linint2D_8c" kind="file" language="C++">
+    <compoundname>linint2D.c</compoundname>
+    <includes local="no">stdlib.h</includes>
+    <includes refid="math_8h" local="no">math.h</includes>
+    <includes refid="ascot5_8h" local="yes">../ascot5.h</includes>
+    <includes refid="linint_8h" local="yes">linint.h</includes>
+    <incdepgraph>
+      <node id="8">
+        <label>../spline/interp.h</label>
+        <link refid="interp_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stdlib.h</label>
+      </node>
+      <node id="5">
+        <label>omp.h</label>
+      </node>
+      <node id="1">
+        <label>linint/linint2D.c</label>
+        <link refid="linint2D_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>../error.h</label>
+        <link refid="error_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>time.h</label>
+      </node>
+      <node id="7">
+        <label>linint.h</label>
+        <link refid="linint_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>math.h</label>
+        <link refid="math_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>stdio.h</label>
+      </node>
+      <node id="4">
+        <label>ascot5.h</label>
+        <link refid="ascot5_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="linint2D_8c_1aa0e45b655154c123ab9af5f861acbf93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linint2D_init</definition>
+        <argsstring>(linint2D_data *str, real *c, int n_x, int n_y, int bc_x, int bc_y, real x_min, real x_max, real y_min, real y_max)</argsstring>
+        <name>linint2D_init</name>
+        <param>
+          <type><ref refid="structlinint2D__data" kindref="compound">linint2D_data</ref> *</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n_x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n_y</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bc_x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bc_y</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>x_min</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>x_max</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>y_min</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>y_max</declname>
+        </param>
+        <briefdescription>
+<para>Initialize linear interpolation struct for scalar 2D data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to struct to be initialized </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>array where data is stored </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of data points in the x direction </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n_y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of data points in the y direction </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bc_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>boundary condition for x axis </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bc_y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>boundary condition for y axis </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x_min</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>minimum value of the x axis </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x_max</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>maximum value of the x axis </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y_min</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>minimum value of the y axis </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y_max</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>maximum value of the y axis </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="linint/linint2D.c" line="24" column="6" bodyfile="linint/linint2D.c" bodystart="24" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="linint2D_8c_1ae4a92f2ea5e31e5a39127be84cbe80fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int linint2D_eval_f</definition>
+        <argsstring>(real *f, linint2D_data *str, real x, real y)</argsstring>
+        <name>linint2D_eval_f</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type><ref refid="structlinint2D__data" kindref="compound">linint2D_data</ref> *</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Evaluate interpolated value of 2D scalar field. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function evaluates the interpolated value of a 2D scalar field using bilinear interpolation.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>variable in which to place the evaluated value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>data struct for data interpolation </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>x-coordinate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>y-coordinate</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>zero on success and one if (x,y) point is outside the grid. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="linint/linint2D.c" line="57" column="5" bodyfile="linint/linint2D.c" bodystart="57" bodyend="115"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Bilinear interpolation. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="math_8h" kindref="compound">math.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../ascot5.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="linint_8h" kindref="compound">linint.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="linint_8h_1aa0e45b655154c123ab9af5f861acbf93" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="linint2D_8c_1aa0e45b655154c123ab9af5f861acbf93" kindref="member">linint2D_init</ref>(<ref refid="structlinint2D__data" kindref="compound">linint2D_data</ref>*<sp/>str,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>c,</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n_x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n_y,</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bc_x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bc_y,</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>x_min,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>x_max,</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>y_min,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>y_max)<sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>x_grid<sp/>=<sp/>(x_max<sp/>-<sp/>x_min)<sp/>/<sp/>(<sp/>n_x<sp/>-<sp/>1<sp/>*<sp/>(bc_x<sp/>==<sp/><ref refid="interp_8h_1a65e5120fbe667470941a6bd9258b97afa66bcb6506f4bbd571f4ba3bc80114cec" kindref="member">NATURALBC</ref>)<sp/>);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>y_grid<sp/>=<sp/>(y_max<sp/>-<sp/>y_min)<sp/>/<sp/>(<sp/>n_y<sp/>-<sp/>1<sp/>*<sp/>(bc_y<sp/>==<sp/><ref refid="interp_8h_1a65e5120fbe667470941a6bd9258b97afa66bcb6506f4bbd571f4ba3bc80114cec" kindref="member">NATURALBC</ref>)<sp/>);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>str-&gt;<ref refid="structlinint2D__data_1aae03185ef29a493abe16b30160f9a613" kindref="member">n_x</ref><sp/><sp/><sp/><sp/>=<sp/>n_x;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>str-&gt;<ref refid="structlinint2D__data_1a7e4cb66ad2b893de072aac9a4a771ee2" kindref="member">n_y</ref><sp/><sp/><sp/><sp/>=<sp/>n_y;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>str-&gt;<ref refid="structlinint2D__data_1adbca93f3c757a73fff396b07ee3e1298" kindref="member">x_min</ref><sp/><sp/>=<sp/>x_min;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>str-&gt;<ref refid="structlinint2D__data_1a6818743b6b57c8dfa403a1ed398e2075" kindref="member">x_max</ref><sp/><sp/>=<sp/>x_max;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>str-&gt;<ref refid="structlinint2D__data_1af1f387827b9ba1dcb63bb2387a2f87d6" kindref="member">x_grid</ref><sp/>=<sp/>x_grid;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>str-&gt;<ref refid="structlinint2D__data_1af07c6ef97ded2c97338368eba9f257e9" kindref="member">y_min</ref><sp/><sp/>=<sp/>y_min;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>str-&gt;<ref refid="structlinint2D__data_1a5cd2b413b6c6b3445e2bcad7258dd709" kindref="member">y_max</ref><sp/><sp/>=<sp/>y_max;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>str-&gt;<ref refid="structlinint2D__data_1a4558687c9ad51c3cdcc2c825577f2f29" kindref="member">y_grid</ref><sp/>=<sp/>y_grid;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>str-&gt;<ref refid="structlinint2D__data_1af6ee26c2ab6276ebdf8290b78a80e144" kindref="member">c</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>c;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="linint_8h_1ae4a92f2ea5e31e5a39127be84cbe80fc" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="linint2D_8c_1ae4a92f2ea5e31e5a39127be84cbe80fc" kindref="member">linint2D_eval_f</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>f,<sp/><ref refid="structlinint2D__data" kindref="compound">linint2D_data</ref>*<sp/>str,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>x,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>y)<sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>c00,<sp/>c01,<sp/>c10,<sp/>c11;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>c0,<sp/>c1;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Make<sp/>sure<sp/>periodic<sp/>coordinates<sp/>are<sp/>within<sp/>[max,<sp/>min]<sp/>region.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(str-&gt;<ref refid="structlinint2D__data_1a399909283d5773d7650bbcf7af459224" kindref="member">bc_x</ref><sp/>==<sp/><ref refid="interp_8h_1a65e5120fbe667470941a6bd9258b97afa8b66be978239727ccd08c3060d18f72e" kindref="member">PERIODICBC</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x<sp/>=<sp/>fmod(x<sp/>-<sp/>str-&gt;<ref refid="structlinint2D__data_1adbca93f3c757a73fff396b07ee3e1298" kindref="member">x_min</ref>,<sp/>str-&gt;<ref refid="structlinint2D__data_1a6818743b6b57c8dfa403a1ed398e2075" kindref="member">x_max</ref><sp/>-<sp/>str-&gt;<ref refid="structlinint2D__data_1adbca93f3c757a73fff396b07ee3e1298" kindref="member">x_min</ref>)<sp/>+<sp/>str-&gt;<ref refid="structlinint2D__data_1adbca93f3c757a73fff396b07ee3e1298" kindref="member">x_min</ref>;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x<sp/>=<sp/>x<sp/>+<sp/>(x<sp/>&lt;<sp/>str-&gt;<ref refid="structlinint2D__data_1adbca93f3c757a73fff396b07ee3e1298" kindref="member">x_min</ref>)<sp/>*<sp/>(str-&gt;<ref refid="structlinint2D__data_1a6818743b6b57c8dfa403a1ed398e2075" kindref="member">x_max</ref><sp/>-<sp/>str-&gt;<ref refid="structlinint2D__data_1adbca93f3c757a73fff396b07ee3e1298" kindref="member">x_min</ref>);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(str-&gt;<ref refid="structlinint2D__data_1a6f533ab4ffd71cfb74b0c96306a638af" kindref="member">bc_y</ref><sp/>==<sp/><ref refid="interp_8h_1a65e5120fbe667470941a6bd9258b97afa8b66be978239727ccd08c3060d18f72e" kindref="member">PERIODICBC</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>y<sp/>=<sp/>fmod(y<sp/>-<sp/>str-&gt;<ref refid="structlinint2D__data_1af07c6ef97ded2c97338368eba9f257e9" kindref="member">y_min</ref>,<sp/>str-&gt;<ref refid="structlinint2D__data_1a5cd2b413b6c6b3445e2bcad7258dd709" kindref="member">y_max</ref><sp/>-<sp/>str-&gt;<ref refid="structlinint2D__data_1af07c6ef97ded2c97338368eba9f257e9" kindref="member">y_min</ref>)<sp/>+<sp/>str-&gt;<ref refid="structlinint2D__data_1af07c6ef97ded2c97338368eba9f257e9" kindref="member">y_min</ref>;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>y<sp/>=<sp/>y<sp/>+<sp/>(y<sp/>&lt;<sp/>str-&gt;<ref refid="structlinint2D__data_1af07c6ef97ded2c97338368eba9f257e9" kindref="member">y_min</ref>)<sp/>*<sp/>(str-&gt;<ref refid="structlinint2D__data_1a5cd2b413b6c6b3445e2bcad7258dd709" kindref="member">y_max</ref><sp/>-<sp/>str-&gt;<ref refid="structlinint2D__data_1af07c6ef97ded2c97338368eba9f257e9" kindref="member">y_min</ref>);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Index<sp/>for<sp/>x<sp/>variable<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i_x<sp/><sp/><sp/>=<sp/>(x<sp/>-<sp/>str-&gt;<ref refid="structlinint2D__data_1adbca93f3c757a73fff396b07ee3e1298" kindref="member">x_min</ref>)<sp/>/<sp/>str-&gt;<ref refid="structlinint2D__data_1af1f387827b9ba1dcb63bb2387a2f87d6" kindref="member">x_grid</ref>;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Normalized<sp/>x<sp/>coordinate<sp/>in<sp/>current<sp/>cell<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>dx<sp/><sp/><sp/>=<sp/>(<sp/>x<sp/>-<sp/>(str-&gt;<ref refid="structlinint2D__data_1adbca93f3c757a73fff396b07ee3e1298" kindref="member">x_min</ref><sp/>+<sp/>i_x*str-&gt;<ref refid="structlinint2D__data_1af1f387827b9ba1dcb63bb2387a2f87d6" kindref="member">x_grid</ref>)<sp/>)<sp/>/<sp/>str-&gt;<ref refid="structlinint2D__data_1af1f387827b9ba1dcb63bb2387a2f87d6" kindref="member">x_grid</ref>;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Index<sp/>for<sp/>y<sp/>variable<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i_y<sp/><sp/><sp/>=<sp/>(y<sp/>-<sp/>str-&gt;<ref refid="structlinint2D__data_1af07c6ef97ded2c97338368eba9f257e9" kindref="member">y_min</ref>)<sp/>/<sp/>str-&gt;<ref refid="structlinint2D__data_1a4558687c9ad51c3cdcc2c825577f2f29" kindref="member">y_grid</ref>;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Normalized<sp/>y<sp/>coordinate<sp/>in<sp/>current<sp/>cell<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>dy<sp/><sp/><sp/>=<sp/>(<sp/>y<sp/>-<sp/>(str-&gt;<ref refid="structlinint2D__data_1af07c6ef97ded2c97338368eba9f257e9" kindref="member">y_min</ref><sp/>+<sp/>i_y*str-&gt;<ref refid="structlinint2D__data_1a4558687c9ad51c3cdcc2c825577f2f29" kindref="member">y_grid</ref>)<sp/>)<sp/>/<sp/>str-&gt;<ref refid="structlinint2D__data_1a4558687c9ad51c3cdcc2c825577f2f29" kindref="member">y_grid</ref>;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n<sp/><sp/>=<sp/>i_y*str-&gt;<ref refid="structlinint2D__data_1aae03185ef29a493abe16b30160f9a613" kindref="member">n_x</ref><sp/>+<sp/>i_x;<sp/></highlight><highlight class="comment">/*<sp/>Index<sp/>jump<sp/>to<sp/>cell<sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x1<sp/>=<sp/>1;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Index<sp/>jump<sp/>one<sp/>x<sp/>forward<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y1<sp/>=<sp/>str-&gt;<ref refid="structlinint2D__data_1aae03185ef29a493abe16b30160f9a613" kindref="member">n_x</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Index<sp/>jump<sp/>one<sp/>y<sp/>forward<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>err<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Enforce<sp/>periodic<sp/>BC<sp/>or<sp/>check<sp/>that<sp/>the<sp/>coordinate<sp/>is<sp/>within<sp/>the<sp/>grid.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>str-&gt;<ref refid="structlinint2D__data_1a399909283d5773d7650bbcf7af459224" kindref="member">bc_x</ref><sp/>==<sp/><ref refid="interp_8h_1a65e5120fbe667470941a6bd9258b97afa8b66be978239727ccd08c3060d18f72e" kindref="member">PERIODICBC</ref><sp/>&amp;&amp;<sp/>i_x<sp/>==<sp/>str-&gt;<ref refid="structlinint2D__data_1aae03185ef29a493abe16b30160f9a613" kindref="member">n_x</ref>-1<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x1<sp/>=<sp/>-(str-&gt;<ref refid="structlinint2D__data_1aae03185ef29a493abe16b30160f9a613" kindref="member">n_x</ref>-1)*x1;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>str-&gt;<ref refid="structlinint2D__data_1a399909283d5773d7650bbcf7af459224" kindref="member">bc_x</ref><sp/>==<sp/><ref refid="interp_8h_1a65e5120fbe667470941a6bd9258b97afa66bcb6506f4bbd571f4ba3bc80114cec" kindref="member">NATURALBC</ref><sp/>&amp;&amp;<sp/>!(x<sp/>&gt;=<sp/>str-&gt;<ref refid="structlinint2D__data_1adbca93f3c757a73fff396b07ee3e1298" kindref="member">x_min</ref><sp/>&amp;&amp;<sp/>x<sp/>&lt;=<sp/>str-&gt;x_max)<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>str-&gt;<ref refid="structlinint2D__data_1a6f533ab4ffd71cfb74b0c96306a638af" kindref="member">bc_y</ref><sp/>==<sp/><ref refid="interp_8h_1a65e5120fbe667470941a6bd9258b97afa8b66be978239727ccd08c3060d18f72e" kindref="member">PERIODICBC</ref><sp/>&amp;&amp;<sp/>i_y<sp/>==<sp/>str-&gt;<ref refid="structlinint2D__data_1a7e4cb66ad2b893de072aac9a4a771ee2" kindref="member">n_y</ref>-1<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>y1<sp/>=<sp/>-(str-&gt;<ref refid="structlinint2D__data_1a7e4cb66ad2b893de072aac9a4a771ee2" kindref="member">n_y</ref>-1)*y1;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>str-&gt;<ref refid="structlinint2D__data_1a6f533ab4ffd71cfb74b0c96306a638af" kindref="member">bc_y</ref><sp/>==<sp/><ref refid="interp_8h_1a65e5120fbe667470941a6bd9258b97afa66bcb6506f4bbd571f4ba3bc80114cec" kindref="member">NATURALBC</ref><sp/>&amp;&amp;<sp/>!(y<sp/>&gt;=<sp/>str-&gt;<ref refid="structlinint2D__data_1af07c6ef97ded2c97338368eba9f257e9" kindref="member">y_min</ref><sp/>&amp;&amp;<sp/>y<sp/>&lt;=<sp/>str-&gt;y_max)<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!err)<sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Values<sp/>at<sp/>grid<sp/>cell<sp/>corners<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c00<sp/>=<sp/>str-&gt;<ref refid="structlinint2D__data_1af6ee26c2ab6276ebdf8290b78a80e144" kindref="member">c</ref>[n];</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c10<sp/>=<sp/>str-&gt;<ref refid="structlinint2D__data_1af6ee26c2ab6276ebdf8290b78a80e144" kindref="member">c</ref>[n<sp/>+<sp/>x1];</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c01<sp/>=<sp/>str-&gt;<ref refid="structlinint2D__data_1af6ee26c2ab6276ebdf8290b78a80e144" kindref="member">c</ref>[n<sp/>+<sp/>y1];</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c11<sp/>=<sp/>str-&gt;<ref refid="structlinint2D__data_1af6ee26c2ab6276ebdf8290b78a80e144" kindref="member">c</ref>[n<sp/>+<sp/>y1<sp/>+<sp/>x1];</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Interpolate<sp/>along<sp/>x<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c0<sp/>=<sp/>c00*(1<sp/>-<sp/>dx)<sp/>+<sp/>c10*dx;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c1<sp/>=<sp/>c01*(1<sp/>-<sp/>dx)<sp/>+<sp/>c11*dx;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Finally<sp/>we<sp/>interpolate<sp/>these<sp/>values<sp/>along<sp/>y<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*f<sp/>=<sp/>c0*(1<sp/>-<sp/>dy)<sp/>+<sp/>c1*dy;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>err;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="linint/linint2D.c"/>
+  </compounddef>
+</doxygen>

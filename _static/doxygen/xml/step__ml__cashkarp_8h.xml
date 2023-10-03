@@ -1,0 +1,468 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="step__ml__cashkarp_8h" kind="file" language="C++">
+    <compoundname>step_ml_cashkarp.h</compoundname>
+    <includes refid="B__field_8h" local="yes">../../B_field.h</includes>
+    <includes refid="boozer_8h" local="yes">../../boozer.h</includes>
+    <includes refid="mhd_8h" local="yes">../../mhd.h</includes>
+    <includes refid="particle_8h" local="yes">../../particle.h</includes>
+    <includedby refid="simulate__ml__adaptive_8c" local="yes">simulate/simulate_ml_adaptive.c</includedby>
+    <includedby refid="step__ml__cashkarp_8c" local="yes">simulate/step/step_ml_cashkarp.c</includedby>
+    <incdepgraph>
+      <node id="20">
+        <label>../../particle.h</label>
+        <link refid="particle_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>../spline/interp.h</label>
+        <link refid="interp_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>Bfield/B_GS.h</label>
+        <link refid="B__GS_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>mhd/mhd_nonstat.h</label>
+        <link refid="mhd__nonstat_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>omp.h</label>
+      </node>
+      <node id="2">
+        <label>../../B_field.h</label>
+        <link refid="B__field_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>mhd/mhd_stat.h</label>
+        <link refid="mhd__stat_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>Efield/E_1DS.h</label>
+        <link refid="E__1DS_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>simulate/step/step_ml_cashkarp.h</label>
+        <link refid="step__ml__cashkarp_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>error.h</label>
+        <link refid="error_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>E_field.h</label>
+        <link refid="E__field_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>time.h</label>
+      </node>
+      <node id="15">
+        <label>Bfield/B_TC.h</label>
+        <link refid="B__TC_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>../linint/linint.h</label>
+        <link refid="linint_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>Bfield/B_2DS.h</label>
+        <link refid="B__2DS_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>../../mhd.h</label>
+        <link refid="mhd_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>Efield/E_TC.h</label>
+        <link refid="E__TC_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>../../boozer.h</label>
+        <link refid="boozer_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>Bfield/B_3DS.h</label>
+        <link refid="B__3DS_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>math.h</label>
+        <link refid="math_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>stdio.h</label>
+      </node>
+      <node id="13">
+        <label>Bfield/B_STS.h</label>
+        <link refid="B__STS_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ascot5.h</label>
+        <link refid="ascot5_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>simulate/simulate_ml_adaptive.c</label>
+        <link refid="simulate__ml__adaptive_8c"/>
+      </node>
+      <node id="3">
+        <label>simulate/step/step_ml_cashkarp.c</label>
+        <link refid="step__ml__cashkarp_8c"/>
+      </node>
+      <node id="1">
+        <label>simulate/step/step_ml_cashkarp.h</label>
+        <link refid="step__ml__cashkarp_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="step__ml__cashkarp_8h_1ac55443349c5ca3e5f1a3fe81bd4c62d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void step_ml_cashkarp</definition>
+        <argsstring>(particle_simd_ml *p, real *h, real *hnext, real tol, B_field_data *Bdata)</argsstring>
+        <name>step_ml_cashkarp</name>
+        <param>
+          <type><ref refid="structparticle__simd__ml" kindref="compound">particle_simd_ml</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>h</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>hnext</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>tol</declname>
+        </param>
+        <param>
+          <type><ref refid="structB__field__data" kindref="compound">B_field_data</ref> *</type>
+          <declname>Bdata</declname>
+        </param>
+        <briefdescription>
+<para>Integrate a magnetic field line step for a struct of markers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function calculates a magnetic field line step for a struct of NSIMD markers with Cash-Karp (adaptive RK5) simultaneously using SIMD instructions. All arrays in the function are of NSIMD length so vectorization can be performed directly without gather and scatter operations. Informs whether time step was accepted or rejected and provides a suggestion for the next time step.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>marker struct that will be integrated </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>h</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>NSIMD length array containing time step lengths </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hnext</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>suggestion for the next time step. Negative if rejected. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tol</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>error tolerance </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Bdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to magnetic field data </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="simulate/step/step_ml_cashkarp.h" line="14" column="6" bodyfile="simulate/step/step_ml_cashkarp.c" bodystart="32" bodyend="245" declfile="simulate/step/step_ml_cashkarp.h" declline="14" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="step__ml__cashkarp_8h_1aa71dcb1356f67b63a38b4a3667320625" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void step_ml_cashkarp_mhd</definition>
+        <argsstring>(particle_simd_ml *p, real *h, real *hnext, real tol, B_field_data *Bdata, boozer_data *boozerdata, mhd_data *mhddata)</argsstring>
+        <name>step_ml_cashkarp_mhd</name>
+        <param>
+          <type><ref refid="structparticle__simd__ml" kindref="compound">particle_simd_ml</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>h</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>hnext</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>tol</declname>
+        </param>
+        <param>
+          <type><ref refid="structB__field__data" kindref="compound">B_field_data</ref> *</type>
+          <declname>Bdata</declname>
+        </param>
+        <param>
+          <type><ref refid="structboozer__data" kindref="compound">boozer_data</ref> *</type>
+          <declname>boozerdata</declname>
+        </param>
+        <param>
+          <type><ref refid="structmhd__data" kindref="compound">mhd_data</ref> *</type>
+          <declname>mhddata</declname>
+        </param>
+        <briefdescription>
+<para>Integrate a magnetic field line step for a struct of markers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function calculates a magnetic field line step for a struct of NSIMD markers with Cash-Karp (adaptive RK5) simultaneously using SIMD instructions. All arrays in the function are of NSIMD length so vectorization can be performed directly without gather and scatter operations. Informs whether time step was accepted or rejected and provides a suggestion for the next time step.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>marker struct that will be integrated </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>h</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>NSIMD length array containing time step lengths </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hnext</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>suggestion for the next time step. Negative if rejected. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tol</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>error tolerance </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Bdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to magnetic field data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>boozerdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to Boozer data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mhddata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to MHD data </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="simulate/step/step_ml_cashkarp.h" line="16" column="6" bodyfile="simulate/step/step_ml_cashkarp.c" bodystart="265" bodyend="517" declfile="simulate/step/step_ml_cashkarp.h" declline="16" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Header file for <ref refid="step__ml__cashkarp_8c" kindref="compound">step_ml_cashkarp.c</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>STEP_ML_CASHKARP_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STEP_ML_CASHKARP_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../B_field.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../boozer.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../mhd.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../particle.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>declare<sp/>target</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="step__ml__cashkarp_8h_1ac55443349c5ca3e5f1a3fe81bd4c62d4" kindref="member">step_ml_cashkarp</ref>(<ref refid="structparticle__simd__ml" kindref="compound">particle_simd_ml</ref>*<sp/>p,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>h,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>hnext,</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>tol,<sp/><ref refid="structB__field__data" kindref="compound">B_field_data</ref>*<sp/>Bdata);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="step__ml__cashkarp_8h_1aa71dcb1356f67b63a38b4a3667320625" kindref="member">step_ml_cashkarp_mhd</ref>(<ref refid="structparticle__simd__ml" kindref="compound">particle_simd_ml</ref>*<sp/>p,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>h,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>hnext,</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>tol,<sp/><ref refid="structB__field__data" kindref="compound">B_field_data</ref>*<sp/>Bdata,</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structboozer__data" kindref="compound">boozer_data</ref>*<sp/>boozerdata,</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structmhd__data" kindref="compound">mhd_data</ref>*<sp/>mhddata);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>end<sp/>declare<sp/>target</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="simulate/step/step_ml_cashkarp.h"/>
+  </compounddef>
+</doxygen>

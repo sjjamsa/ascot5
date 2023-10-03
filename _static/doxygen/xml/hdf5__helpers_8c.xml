@@ -1,0 +1,938 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="hdf5__helpers_8c" kind="file" language="C++">
+    <compoundname>hdf5_helpers.c</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">unistd.h</includes>
+    <includes local="no">string.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes refid="math_8h" local="no">math.h</includes>
+    <includes local="no">hdf5.h</includes>
+    <includes local="no">hdf5_hl.h</includes>
+    <includes refid="ascot5_8h" local="yes">../ascot5.h</includes>
+    <includes refid="print_8h" local="yes">../print.h</includes>
+    <incdepgraph>
+      <node id="5">
+        <label>stdlib.h</label>
+      </node>
+      <node id="11">
+        <label>hdf5_hl.h</label>
+      </node>
+      <node id="8">
+        <label>omp.h</label>
+      </node>
+      <node id="1">
+        <label>hdf5io/hdf5_helpers.c</label>
+        <link refid="hdf5__helpers_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>string.h</label>
+      </node>
+      <node id="3">
+        <label>unistd.h</label>
+      </node>
+      <node id="10">
+        <label>hdf5.h</label>
+      </node>
+      <node id="9">
+        <label>time.h</label>
+      </node>
+      <node id="6">
+        <label>math.h</label>
+        <link refid="math_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+      </node>
+      <node id="12">
+        <label>../print.h</label>
+        <link refid="print_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>ascot5.h</label>
+        <link refid="ascot5_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="hdf5__helpers_8c_1a96896104ec8205478725d5556a2293b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hdf5_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>hdf5_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize hdf5, right now just disables automatic error messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hdf5io/hdf5_helpers.c" line="18" column="6" bodyfile="hdf5io/hdf5_helpers.c" bodystart="18" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="hdf5__helpers_8c_1a513c532c74d7bd4b67a2bff995f2d035" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>hid_t</type>
+        <definition>hid_t hdf5_create</definition>
+        <argsstring>(const char *filename)</argsstring>
+        <name>hdf5_create</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Create an hdf5 file, fail if file exists. A negative value is returned on failure. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hdf5io/hdf5_helpers.c" line="26" column="7" bodyfile="hdf5io/hdf5_helpers.c" bodystart="26" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="hdf5__helpers_8c_1ae738519932114db33526f43aaac618c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>hid_t</type>
+        <definition>hid_t hdf5_open</definition>
+        <argsstring>(const char *filename)</argsstring>
+        <name>hdf5_open</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Open a hdf5 file for reading and writing. A negative value is returned on failure. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hdf5io/hdf5_helpers.c" line="36" column="7" bodyfile="hdf5io/hdf5_helpers.c" bodystart="36" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="hdf5__helpers_8c_1ab5b4abd94d6b4aef3f7887744ae29ae4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>hid_t</type>
+        <definition>hid_t hdf5_open_ro</definition>
+        <argsstring>(const char *filename)</argsstring>
+        <name>hdf5_open_ro</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Open a hdf5 file for read only. A negative value is returned on failure. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hdf5io/hdf5_helpers.c" line="46" column="7" bodyfile="hdf5io/hdf5_helpers.c" bodystart="46" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="hdf5__helpers_8c_1a6a57d2832437c9de3c753c7be13b165b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>herr_t</type>
+        <definition>herr_t hdf5_close</definition>
+        <argsstring>(hid_t file_id)</argsstring>
+        <name>hdf5_close</name>
+        <param>
+          <type>hid_t</type>
+          <declname>file_id</declname>
+        </param>
+        <briefdescription>
+<para>Close access to given hdf5 file identifier. A negative value is returned on failure. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hdf5io/hdf5_helpers.c" line="56" column="8" bodyfile="hdf5io/hdf5_helpers.c" bodystart="56" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="hdf5__helpers_8c_1a04a66d2b32f3c7d078a9407c7228a216" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>hid_t</type>
+        <definition>hid_t hdf5_create_group</definition>
+        <argsstring>(hid_t loc, const char *path)</argsstring>
+        <name>hdf5_create_group</name>
+        <param>
+          <type>hid_t</type>
+          <declname>loc</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>Create a group (with parent groups if necessary). Returns a handle to the group. Negative on failure. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hdf5io/hdf5_helpers.c" line="66" column="7" bodyfile="hdf5io/hdf5_helpers.c" bodystart="66" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="hdf5__helpers_8c_1a3b6edfba63099574025bea60453da24b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>herr_t</type>
+        <definition>herr_t hdf5_find_group</definition>
+        <argsstring>(hid_t loc, const char *path)</argsstring>
+        <name>hdf5_find_group</name>
+        <param>
+          <type>hid_t</type>
+          <declname>loc</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>Checks if given group exists within given hdf5 file. Negative value is returned if the group doesn&apos;t exist. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hdf5io/hdf5_helpers.c" line="100" column="8" bodyfile="hdf5io/hdf5_helpers.c" bodystart="100" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="hdf5__helpers_8c_1af45edbf1fd8a20d127bfd9588b9ebae8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* hdf5_generate_qid_path</definition>
+        <argsstring>(const char *original, char *qid, char *path)</argsstring>
+        <name>hdf5_generate_qid_path</name>
+        <param>
+          <type>const char *</type>
+          <declname>original</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>qid</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>Generate a valid path from a given template and qid. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Data in ASCOT5 HDF5 files is stored in groups, where each group is assigned a unique identifier. The paths are then in format such as &quot;bfield/B_2D-0123456789&quot;. This function turns a template e.g. &quot;bfield/B_2D-XXXXXXXXXX&quot; to a valid path. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hdf5io/hdf5_helpers.c" line="112" column="6" bodyfile="hdf5io/hdf5_helpers.c" bodystart="112" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="hdf5__helpers_8c_1ab43ae79d4f8e8d83bf098da8a0054a72" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* hdf5_gen_path</definition>
+        <argsstring>(const char *original, char *qid, char *path)</argsstring>
+        <name>hdf5_gen_path</name>
+        <param>
+          <type>const char *</type>
+          <declname>original</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>qid</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>Generate a valid path from a given template and qid. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Data in ASCOT5 HDF5 files is stored in groups, where each group is assigned a unique identifier. The paths are then in format such as &quot;bfield/B_2D-0123456789&quot;. This function turns a template e.g. &quot;bfield/B_2D-XXXXXXXXXX&quot; to a valid path. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hdf5io/hdf5_helpers.c" line="131" column="6" bodyfile="hdf5io/hdf5_helpers.c" bodystart="131" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="hdf5__helpers_8c_1a43b9438fc244982ddff7dc58ea3b9ef9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hdf5_read_double</definition>
+        <argsstring>(const char *var, real *ptr, hid_t file, char *qid, const char *errfile, int errline)</argsstring>
+        <name>hdf5_read_double</name>
+        <param>
+          <type>const char *</type>
+          <declname>var</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>hid_t</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>qid</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>errfile</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>errline</declname>
+        </param>
+        <briefdescription>
+<para>Read double-valued data from ASCOT5 HDF5 file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Datasets in ASCOT5 are located in the HDF5 file at paths that look like this: &quot;/options/opt-XXXXXXXXXX/dataset&quot;, where X&apos;s is the QID value that is used differentiate between inputs of same type. This function constructs the path for a given dummy path, dataset, and qid, reads the dataset, and writes error message if the dataset could not be read.</para>
+<para>This function reads data that has type double.</para>
+<para>The file is opened and closed outside of this function.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>var</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&quot;dummy&quot; (otherwise valid but with X&apos;s) path to variable </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer where data will be stored </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>HDF5 file </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>qid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>QID value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>errfile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>use macro <bold>FILE</bold> here to indicate the file this function was called </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>errline</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>use macro <bold>LINE</bold> here to indicate the line this function was called</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>zero if success </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hdf5io/hdf5_helpers.c" line="166" column="5" bodyfile="hdf5io/hdf5_helpers.c" bodystart="166" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="hdf5__helpers_8c_1ae78f9ef2bb986e45d4cca2861d97e1fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hdf5_read_int</definition>
+        <argsstring>(const char *var, int *ptr, hid_t file, char *qid, const char *errfile, int errline)</argsstring>
+        <name>hdf5_read_int</name>
+        <param>
+          <type>const char *</type>
+          <declname>var</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>hid_t</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>qid</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>errfile</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>errline</declname>
+        </param>
+        <briefdescription>
+<para>Read int-valued data from ASCOT5 HDF5 file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Datasets in ASCOT5 are located in the HDF5 file at paths that look like this: &quot;/options/opt-XXXXXXXXXX/dataset&quot;, where X&apos;s is the QID value that is used differentiate between inputs of same type. This function constructs the path for a given dummy path, dataset, and qid, reads the dataset, and writes error message if the dataset could not be read.</para>
+<para>This function reads data that has type double.</para>
+<para>The file is opened and closed outside of this function.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>var</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&quot;dummy&quot; (otherwise valid but with X&apos;s) path to variable </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer where data will be stored </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>HDF5 file </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>qid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>QID value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>errfile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>use macro <bold>FILE</bold> here to indicate the file this function was called </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>errline</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>use macro <bold>LINE</bold> here to indicate the line this function was called</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>zero if success </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hdf5io/hdf5_helpers.c" line="201" column="5" bodyfile="hdf5io/hdf5_helpers.c" bodystart="201" bodyend="210"/>
+      </memberdef>
+      <memberdef kind="function" id="hdf5__helpers_8c_1a4dc165719c858d5f3937a69d3a9eca68" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hdf5_read_long</definition>
+        <argsstring>(const char *var, long *ptr, hid_t file, char *qid, const char *errfile, int errline)</argsstring>
+        <name>hdf5_read_long</name>
+        <param>
+          <type>const char *</type>
+          <declname>var</declname>
+        </param>
+        <param>
+          <type>long *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>hid_t</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>qid</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>errfile</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>errline</declname>
+        </param>
+        <briefdescription>
+<para>Read long-valued data from ASCOT5 HDF5 file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Datasets in ASCOT5 are located in the HDF5 file at paths that look like this: &quot;/options/opt-XXXXXXXXXX/dataset&quot;, where X&apos;s is the QID value that is used differentiate between inputs of same type. This function constructs the path for a given dummy path, dataset, and qid, reads the dataset, and writes error message if the dataset could not be read.</para>
+<para>This function reads data that has type double.</para>
+<para>The file is opened and closed outside of this function.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>var</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&quot;dummy&quot; (otherwise valid but with X&apos;s) path to variable </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer where data will be stored </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>HDF5 file </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>qid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>QID value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>errfile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>use macro <bold>FILE</bold> here to indicate the file this function was called </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>errline</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>use macro <bold>LINE</bold> here to indicate the line this function was called</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>zero if success </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hdf5io/hdf5_helpers.c" line="236" column="5" bodyfile="hdf5io/hdf5_helpers.c" bodystart="236" bodyend="245"/>
+      </memberdef>
+      <memberdef kind="function" id="hdf5__helpers_8c_1a2bad29ebd3986c3c3af247f9e2aa451c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>herr_t</type>
+        <definition>herr_t hdf5_write_string_attribute</definition>
+        <argsstring>(hid_t loc, const char *path, const char *attrname, const char *string)</argsstring>
+        <name>hdf5_write_string_attribute</name>
+        <param>
+          <type>hid_t</type>
+          <declname>loc</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>attrname</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>string</declname>
+        </param>
+        <briefdescription>
+<para>Write string attribute with null-padding. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>There is a H5LTset_attribute_string function but it writes strings as null-terminated. However, string attributes in ASCOT5 HDF5 file are assumed to be null-padded. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hdf5io/hdf5_helpers.c" line="254" column="8" bodyfile="hdf5io/hdf5_helpers.c" bodystart="254" bodyend="290"/>
+      </memberdef>
+      <memberdef kind="function" id="hdf5__helpers_8c_1ab8f64c059ee0a1313e77b05e4de69e54" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>herr_t</type>
+        <definition>herr_t hdf5_write_extendible_dataset_double</definition>
+        <argsstring>(hid_t group, const char *datasetname, int length, double *data)</argsstring>
+        <name>hdf5_write_extendible_dataset_double</name>
+        <param>
+          <type>hid_t</type>
+          <declname>group</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>datasetname</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Create and write to an extendible dataset for double data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hdf5io/hdf5_helpers.c" line="295" column="8" bodyfile="hdf5io/hdf5_helpers.c" bodystart="295" bodyend="323"/>
+      </memberdef>
+      <memberdef kind="function" id="hdf5__helpers_8c_1a3c0b1edd399d012cc00b5979567f1b05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>herr_t</type>
+        <definition>herr_t hdf5_write_extendible_dataset_long</definition>
+        <argsstring>(hid_t group, const char *datasetname, int length, long *data)</argsstring>
+        <name>hdf5_write_extendible_dataset_long</name>
+        <param>
+          <type>hid_t</type>
+          <declname>group</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>datasetname</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>long *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Create and write to an extendible dataset for long data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hdf5io/hdf5_helpers.c" line="329" column="8" bodyfile="hdf5io/hdf5_helpers.c" bodystart="329" bodyend="357"/>
+      </memberdef>
+      <memberdef kind="function" id="hdf5__helpers_8c_1a4190689187d3e7220ab772c9ae0baa0f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>herr_t</type>
+        <definition>herr_t hdf5_write_extendible_dataset_int</definition>
+        <argsstring>(hid_t group, const char *datasetname, int length, int *data)</argsstring>
+        <name>hdf5_write_extendible_dataset_int</name>
+        <param>
+          <type>hid_t</type>
+          <declname>group</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>datasetname</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Create and write to an extendible dataset int data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hdf5io/hdf5_helpers.c" line="362" column="8" bodyfile="hdf5io/hdf5_helpers.c" bodystart="362" bodyend="390"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>HDF5 wrappers and shortcuts. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unistd.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="math_8h" kindref="compound">math.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hdf5.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hdf5_hl.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../ascot5.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../print.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="hdf5__helpers_8c_1a96896104ec8205478725d5556a2293b9" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="hdf5__helpers_8c_1a96896104ec8205478725d5556a2293b9" kindref="member">hdf5_init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>H5Eset_auto1(NULL,<sp/>NULL);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="hdf5__helpers_8c_1a513c532c74d7bd4b67a2bff995f2d035" refkind="member"><highlight class="normal">hid_t<sp/><ref refid="hdf5__helpers_8c_1a513c532c74d7bd4b67a2bff995f2d035" kindref="member">hdf5_create</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>filename)<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>hid_t<sp/>file;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>file<sp/>=<sp/>H5Fcreate(filename,<sp/>H5F_ACC_EXCL,<sp/>H5P_DEFAULT,<sp/>H5P_DEFAULT);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>file;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="hdf5__helpers_8c_1ae738519932114db33526f43aaac618c7" refkind="member"><highlight class="normal">hid_t<sp/><ref refid="hdf5__helpers_8c_1ae738519932114db33526f43aaac618c7" kindref="member">hdf5_open</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*filename)<sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>hid_t<sp/>file;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>file<sp/>=<sp/>H5Fopen(filename,<sp/>H5F_ACC_RDWR,<sp/>H5P_DEFAULT);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>file;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="hdf5__helpers_8c_1ab5b4abd94d6b4aef3f7887744ae29ae4" refkind="member"><highlight class="normal">hid_t<sp/><ref refid="hdf5__helpers_8c_1ab5b4abd94d6b4aef3f7887744ae29ae4" kindref="member">hdf5_open_ro</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*filename)<sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>hid_t<sp/>file;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>file<sp/>=<sp/>H5Fopen(filename,<sp/>H5F_ACC_RDONLY,<sp/>H5P_DEFAULT);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>file;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="hdf5__helpers_8c_1a6a57d2832437c9de3c753c7be13b165b" refkind="member"><highlight class="normal">herr_t<sp/><ref refid="hdf5__helpers_8c_1a6a57d2832437c9de3c753c7be13b165b" kindref="member">hdf5_close</ref>(hid_t<sp/>file_id)<sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>herr_t<sp/>err;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>err<sp/>=<sp/>H5Fclose(file_id);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>err;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="hdf5__helpers_8c_1a04a66d2b32f3c7d078a9407c7228a216" refkind="member"><highlight class="normal">hid_t<sp/><ref refid="hdf5__helpers_8c_1a04a66d2b32f3c7d078a9407c7228a216" kindref="member">hdf5_create_group</ref>(hid_t<sp/>loc,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>path)<sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>start;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(path[0]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;/&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>start<sp/>=<sp/>path<sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>start<sp/>=<sp/>path;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>end<sp/>=<sp/>strstr(start,<sp/></highlight><highlight class="stringliteral">&quot;/&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(end<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hid_t<sp/>g<sp/>=<sp/>H5Gcreate2(loc,<sp/>start,<sp/>H5P_DEFAULT,<sp/>H5P_DEFAULT,<sp/>H5P_DEFAULT);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>g;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>group<sp/>=<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)<sp/>malloc((strlen(path)<sp/>+<sp/>1)<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(char));</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strncpy(group,<sp/>start,<sp/>end-start);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>group[end-start]<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Open<sp/>or<sp/>create<sp/>parent<sp/>group<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hid_t<sp/>g<sp/>=<sp/>H5Gopen2(loc,<sp/>group,<sp/>H5P_DEFAULT);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(g<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>g<sp/>=<sp/>H5Gcreate2(loc,<sp/>group,<sp/>H5P_DEFAULT,<sp/>H5P_DEFAULT,<sp/>H5P_DEFAULT);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(group);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hid_t<sp/>g0<sp/>=<sp/><ref refid="hdf5__helpers_8c_1a04a66d2b32f3c7d078a9407c7228a216" kindref="member">hdf5_create_group</ref>(g,<sp/>end);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>H5Gclose(g);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>g0;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="hdf5__helpers_8c_1a3b6edfba63099574025bea60453da24b" refkind="member"><highlight class="normal">herr_t<sp/><ref refid="hdf5__helpers_8c_1a3b6edfba63099574025bea60453da24b" kindref="member">hdf5_find_group</ref>(hid_t<sp/>loc,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>path)<sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>H5Gget_objinfo<sp/>(loc,<sp/>path,<sp/>0,<sp/>NULL);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112" refid="hdf5__helpers_8c_1af45edbf1fd8a20d127bfd9588b9ebae8" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="hdf5__helpers_8c_1af45edbf1fd8a20d127bfd9588b9ebae8" kindref="member">hdf5_generate_qid_path</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>original,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>qid,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>path)<sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>strcpy(path,<sp/>original);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>ptr<sp/>=<sp/>strstr(path,</highlight><highlight class="stringliteral">&quot;XXXXXXXXXX&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>10;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr[i]<sp/>=<sp/>qid[i];</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>path;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131" refid="hdf5__helpers_8c_1ab43ae79d4f8e8d83bf098da8a0054a72" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="hdf5__helpers_8c_1ab43ae79d4f8e8d83bf098da8a0054a72" kindref="member">hdf5_gen_path</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>original,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>qid,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>path)<sp/>{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>strcpy(path,<sp/>original);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>ptr<sp/>=<sp/>strstr(path,</highlight><highlight class="stringliteral">&quot;XXXXXXXXXX&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>10;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ptr[i]<sp/>=<sp/>qid[i];</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>path;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166" refid="hdf5__helpers_8c_1a43b9438fc244982ddff7dc58ea3b9ef9" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hdf5__helpers_8c_1a43b9438fc244982ddff7dc58ea3b9ef9" kindref="member">hdf5_read_double</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>var,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>ptr,<sp/>hid_t<sp/>file,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>qid,</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>errfile,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>errline)<sp/>{</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>temp[256];</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>H5LTread_dataset_double(file,<sp/><ref refid="hdf5__helpers_8c_1ab43ae79d4f8e8d83bf098da8a0054a72" kindref="member">hdf5_gen_path</ref>(var,<sp/>qid,<sp/>temp),<sp/>ptr)<sp/>&lt;<sp/>0<sp/>){</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="print_8h_1ae9242d843e65413a3e5dba7129c75101" kindref="member">print_err</ref>(</highlight><highlight class="stringliteral">&quot;Error:<sp/>could<sp/>not<sp/>read<sp/>HDF5<sp/>dataset<sp/>%s<sp/>FILE<sp/>%s<sp/>LINE<sp/>%d\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp,<sp/>errfile,<sp/>errline);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201" refid="hdf5__helpers_8c_1ae78f9ef2bb986e45d4cca2861d97e1fd" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hdf5__helpers_8c_1ae78f9ef2bb986e45d4cca2861d97e1fd" kindref="member">hdf5_read_int</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>var,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>ptr,<sp/>hid_t<sp/>file,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>qid,</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>errfile,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>errline)<sp/>{</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>temp[256];</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>H5LTread_dataset_int(file,<sp/><ref refid="hdf5__helpers_8c_1ab43ae79d4f8e8d83bf098da8a0054a72" kindref="member">hdf5_gen_path</ref>(var,<sp/>qid,<sp/>temp),<sp/>ptr)<sp/>&lt;<sp/>0<sp/>){</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="print_8h_1ae9242d843e65413a3e5dba7129c75101" kindref="member">print_err</ref>(</highlight><highlight class="stringliteral">&quot;Error:<sp/>could<sp/>not<sp/>read<sp/>HDF5<sp/>dataset<sp/>%s<sp/>FILE<sp/>%s<sp/>LINE<sp/>%d\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp,<sp/>errfile,<sp/>errline);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236" refid="hdf5__helpers_8c_1a4dc165719c858d5f3937a69d3a9eca68" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hdf5__helpers_8c_1a4dc165719c858d5f3937a69d3a9eca68" kindref="member">hdf5_read_long</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>var,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">*<sp/>ptr,<sp/>hid_t<sp/>file,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>qid,</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>errfile,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>errline)<sp/>{</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>temp[256];</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>H5LTread_dataset_long(file,<sp/><ref refid="hdf5__helpers_8c_1ab43ae79d4f8e8d83bf098da8a0054a72" kindref="member">hdf5_gen_path</ref>(var,<sp/>qid,<sp/>temp),<sp/>ptr)<sp/>&lt;<sp/>0<sp/>){</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="print_8h_1ae9242d843e65413a3e5dba7129c75101" kindref="member">print_err</ref>(</highlight><highlight class="stringliteral">&quot;Error:<sp/>could<sp/>not<sp/>read<sp/>HDF5<sp/>dataset<sp/>%s<sp/>FILE<sp/>%s<sp/>LINE<sp/>%d\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp,<sp/>errfile,<sp/>errline);</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="245"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="254" refid="hdf5__helpers_8c_1a2bad29ebd3986c3c3af247f9e2aa451c" refkind="member"><highlight class="normal">herr_t<sp/><ref refid="hdf5__helpers_8c_1a2bad29ebd3986c3c3af247f9e2aa451c" kindref="member">hdf5_write_string_attribute</ref>(hid_t<sp/>loc,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>path,</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>attrname,<sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/>herr_t<sp/>err;</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/>hid_t<sp/>grp<sp/>=<sp/>H5Gopen(loc,<sp/>path,<sp/>H5P_DEFAULT);</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/>hid_t<sp/>aid<sp/>=<sp/>H5Screate(H5S_SCALAR);</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/>hid_t<sp/>atype<sp/>=<sp/>H5Tcopy(H5T_C_S1);</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/>H5Tset_size(atype,<sp/>strlen(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/>H5Tset_strpad(atype,H5T_STR_NULLPAD);</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/>hid_t<sp/>attr<sp/>=<sp/>H5Aopen(grp,<sp/>attrname,<sp/>H5P_DEFAULT);</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Delete<sp/>existing<sp/>attribute<sp/>with<sp/>a<sp/>same<sp/>name<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(attr<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>H5Adelete(grp,<sp/>attrname);</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>H5Aclose(attr);</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/>attr<sp/>=<sp/>H5Acreate2(grp,<sp/>attrname,<sp/>atype,<sp/>aid,<sp/>H5P_DEFAULT,<sp/>H5P_DEFAULT);</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/>err<sp/>=<sp/>H5Awrite(attr,<sp/>atype,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(err)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>err;}</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/>err<sp/>=<sp/>H5Sclose(aid);</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(err)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>err;}</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/>err<sp/>=<sp/>H5Tclose(atype);</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(err)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>err;}</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/>err<sp/>=<sp/>H5Aclose(attr);</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(err)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>err;}</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/>err<sp/>=<sp/>H5Gclose(grp);</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(err)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>err;}</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="290"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight></codeline>
+<codeline lineno="295" refid="hdf5__helpers_8c_1ab8f64c059ee0a1313e77b05e4de69e54" refkind="member"><highlight class="normal">herr_t<sp/><ref refid="hdf5__helpers_8c_1ab8f64c059ee0a1313e77b05e4de69e54" kindref="member">hdf5_write_extendible_dataset_double</ref>(hid_t<sp/>group,</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>datasetname,</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>length,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*<sp/>data)<sp/>{</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Create<sp/>the<sp/>data<sp/>space<sp/>with<sp/>unlimited<sp/>dimensions.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/>hsize_t<sp/>dim[1]<sp/><sp/><sp/><sp/>=<sp/>{length};</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/>hsize_t<sp/>maxdim[1]<sp/>=<sp/>{H5S_UNLIMITED};</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/>hid_t<sp/>dataspace<sp/><sp/><sp/>=<sp/>H5Screate_simple(1,<sp/>dim,<sp/>maxdim);</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"></highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Modify<sp/>dataset<sp/>creation<sp/>properties,<sp/>i.e.<sp/>enable<sp/>chunking<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/>hsize_t<sp/>chunk_dim[1]<sp/>=<sp/>{(int)ceil(length/2.0)};</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/>hid_t<sp/>prop<sp/><sp/><sp/>=<sp/>H5Pcreate(H5P_DATASET_CREATE);</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/>H5Pset_chunk<sp/>(prop,<sp/>1,<sp/>chunk_dim);</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"></highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Create<sp/>a<sp/>new<sp/>dataset<sp/>within<sp/>the<sp/>file<sp/>using<sp/>chunk<sp/>creation<sp/>properties.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/>hid_t<sp/>dataset<sp/>=<sp/>H5Dcreate2(group,<sp/>datasetname,<sp/>H5T_IEEE_F64LE,<sp/>dataspace,</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>H5P_DEFAULT,<sp/>prop,<sp/>H5P_DEFAULT);</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"></highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Write<sp/>data<sp/>to<sp/>dataset<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>err<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>H5Dwrite(dataset,<sp/>H5T_IEEE_F64LE,<sp/>H5S_ALL,<sp/>H5S_ALL,</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>H5P_DEFAULT,<sp/>data)<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/>H5Dclose(dataset);</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/>H5Pclose(prop);</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/>H5Sclose(dataspace);</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>err;</highlight></codeline>
+<codeline lineno="323"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"></highlight></codeline>
+<codeline lineno="325"><highlight class="normal"></highlight></codeline>
+<codeline lineno="329" refid="hdf5__helpers_8c_1a3c0b1edd399d012cc00b5979567f1b05" refkind="member"><highlight class="normal">herr_t<sp/><ref refid="hdf5__helpers_8c_1a3c0b1edd399d012cc00b5979567f1b05" kindref="member">hdf5_write_extendible_dataset_long</ref>(hid_t<sp/>group,</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>datasetname,</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>length,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">*<sp/>data)<sp/>{</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Create<sp/>the<sp/>data<sp/>space<sp/>with<sp/>unlimited<sp/>dimensions.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/>hsize_t<sp/>dim[1]<sp/><sp/><sp/><sp/>=<sp/>{length};</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/>hsize_t<sp/>maxdim[1]<sp/>=<sp/>{H5S_UNLIMITED};</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/>hid_t<sp/>dataspace<sp/><sp/><sp/>=<sp/>H5Screate_simple(1,<sp/>dim,<sp/>maxdim);</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"></highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Modify<sp/>dataset<sp/>creation<sp/>properties,<sp/>i.e.<sp/>enable<sp/>chunking<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/>hsize_t<sp/>chunk_dim[1]<sp/>=<sp/>{(int)ceil(length/2.0)};</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/>hid_t<sp/>prop<sp/><sp/><sp/>=<sp/>H5Pcreate(H5P_DATASET_CREATE);</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/>H5Pset_chunk<sp/>(prop,<sp/>1,<sp/>chunk_dim);</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"></highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Create<sp/>a<sp/>new<sp/>dataset<sp/>within<sp/>the<sp/>file<sp/>using<sp/>chunk<sp/>creation<sp/>properties.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/>hid_t<sp/>dataset<sp/>=<sp/>H5Dcreate2(group,<sp/>datasetname,<sp/>H5T_STD_I64LE,<sp/>dataspace,</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>H5P_DEFAULT,<sp/>prop,<sp/>H5P_DEFAULT);</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"></highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Write<sp/>data<sp/>to<sp/>dataset<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>err<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>H5Dwrite(dataset,<sp/>H5T_STD_I64LE,<sp/>H5S_ALL,<sp/>H5S_ALL,</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>H5P_DEFAULT,<sp/>data)<sp/>&lt;<sp/>0<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/>H5Dclose(dataset);</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/>H5Pclose(prop);</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/>H5Sclose(dataspace);</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"></highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>err;</highlight></codeline>
+<codeline lineno="357"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"></highlight></codeline>
+<codeline lineno="362" refid="hdf5__helpers_8c_1a4190689187d3e7220ab772c9ae0baa0f" refkind="member"><highlight class="normal">herr_t<sp/><ref refid="hdf5__helpers_8c_1a4190689187d3e7220ab772c9ae0baa0f" kindref="member">hdf5_write_extendible_dataset_int</ref>(hid_t<sp/>group,</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>datasetname,</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>length,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>data)<sp/>{</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Create<sp/>the<sp/>data<sp/>space<sp/>with<sp/>unlimited<sp/>dimensions.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/>hsize_t<sp/>dim[1]<sp/><sp/><sp/><sp/>=<sp/>{length};</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/>hsize_t<sp/>maxdim[1]<sp/>=<sp/>{H5S_UNLIMITED};</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/>hid_t<sp/>dataspace<sp/><sp/><sp/>=<sp/>H5Screate_simple(1,<sp/>dim,<sp/>maxdim);</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"></highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Modify<sp/>dataset<sp/>creation<sp/>properties,<sp/>i.e.<sp/>enable<sp/>chunking<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/>hsize_t<sp/>chunk_dim[1]<sp/>=<sp/>{(int)ceil(length/2.0)};</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"><sp/><sp/><sp/><sp/>hid_t<sp/>prop<sp/><sp/><sp/>=<sp/>H5Pcreate(H5P_DATASET_CREATE);</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/>H5Pset_chunk<sp/>(prop,<sp/>1,<sp/>chunk_dim);</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"></highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Create<sp/>a<sp/>new<sp/>dataset<sp/>within<sp/>the<sp/>file<sp/>using<sp/>chunk<sp/>creation<sp/>properties.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/>hid_t<sp/>dataset<sp/>=<sp/>H5Dcreate2(group,<sp/>datasetname,<sp/>H5T_STD_I32LE,<sp/>dataspace,</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>H5P_DEFAULT,<sp/>prop,<sp/>H5P_DEFAULT);</highlight></codeline>
+<codeline lineno="378"><highlight class="normal"></highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Write<sp/>data<sp/>to<sp/>dataset<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>err<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>H5Dwrite(dataset,<sp/>H5T_STD_I32LE,<sp/>H5S_ALL,<sp/>H5S_ALL,</highlight></codeline>
+<codeline lineno="382"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>H5P_DEFAULT,<sp/>data)<sp/>&lt;<sp/>0<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="384"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="385"><highlight class="normal"><sp/><sp/><sp/><sp/>H5Dclose(dataset);</highlight></codeline>
+<codeline lineno="386"><highlight class="normal"><sp/><sp/><sp/><sp/>H5Pclose(prop);</highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/>H5Sclose(dataspace);</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"></highlight></codeline>
+<codeline lineno="389"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>err;</highlight></codeline>
+<codeline lineno="390"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="hdf5io/hdf5_helpers.c"/>
+  </compounddef>
+</doxygen>

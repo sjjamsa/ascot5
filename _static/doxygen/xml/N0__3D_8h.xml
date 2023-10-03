@@ -1,0 +1,741 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="N0__3D_8h" kind="file" language="C++">
+    <compoundname>N0_3D.h</compoundname>
+    <includes refid="ascot5_8h" local="yes">../ascot5.h</includes>
+    <includes refid="linint_8h" local="yes">../linint/linint.h</includes>
+    <includedby refid="hdf5__neutral_8c" local="yes">hdf5io/hdf5_neutral.c</includedby>
+    <includedby refid="hdf5__neutral_8h" local="yes">hdf5io/hdf5_neutral.h</includedby>
+    <includedby refid="N0__3D_8c" local="yes">neutral/N0_3D.c</includedby>
+    <includedby refid="neutral_8c" local="yes">neutral.c</includedby>
+    <includedby refid="neutral_8h" local="yes">neutral.h</includedby>
+    <incdepgraph>
+      <node id="6">
+        <label>../spline/interp.h</label>
+        <link refid="interp_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>omp.h</label>
+      </node>
+      <node id="1">
+        <label>neutral/N0_3D.h</label>
+        <link refid="N0__3D_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>../error.h</label>
+        <link refid="error_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>time.h</label>
+      </node>
+      <node id="5">
+        <label>../linint/linint.h</label>
+        <link refid="linint_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>math.h</label>
+        <link refid="math_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>stdio.h</label>
+      </node>
+      <node id="2">
+        <label>../ascot5.h</label>
+        <link refid="ascot5_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="26">
+        <label>simulate/simulate_ml_adaptive.c</label>
+        <link refid="simulate__ml__adaptive_8c"/>
+      </node>
+      <node id="36">
+        <label>simulate/simulate_ml_adaptive.h</label>
+        <link refid="simulate__ml__adaptive_8h"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>diag.c</label>
+        <link refid="diag_8c"/>
+      </node>
+      <node id="27">
+        <label>simulate.c</label>
+        <link refid="simulate_8c"/>
+      </node>
+      <node id="12">
+        <label>simulate.h</label>
+        <link refid="simulate_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>simulate/simulate_fo_fixed.c</label>
+        <link refid="simulate__fo__fixed_8c"/>
+      </node>
+      <node id="33">
+        <label>simulate/simulate_fo_fixed.h</label>
+        <link refid="simulate__fo__fixed_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>simulate/simulate_gc_fixed.c</label>
+        <link refid="simulate__gc__fixed_8c"/>
+      </node>
+      <node id="15">
+        <label>ascot5_main.c</label>
+        <link refid="ascot5__main_8c"/>
+      </node>
+      <node id="35">
+        <label>simulate/simulate_gc_fixed.h</label>
+        <link refid="simulate__gc__fixed_8h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>ascot5_main.h</label>
+        <link refid="ascot5__main_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>endcond.c</label>
+        <link refid="endcond_8c"/>
+      </node>
+      <node id="22">
+        <label>endcond.h</label>
+        <link refid="endcond_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>simulate/atomic.c</label>
+        <link refid="atomic_8c"/>
+      </node>
+      <node id="9">
+        <label>simulate/atomic.h</label>
+        <link refid="atomic_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>afsi.c</label>
+        <link refid="afsi_8c"/>
+      </node>
+      <node id="14">
+        <label>afsi.h</label>
+        <link refid="afsi_8h_source"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>diag/diag_orb.c</label>
+        <link refid="diag__orb_8c"/>
+      </node>
+      <node id="6">
+        <label>neutral/N0_3D.c</label>
+        <link refid="N0__3D_8c"/>
+      </node>
+      <node id="1">
+        <label>neutral/N0_3D.h</label>
+        <link refid="N0__3D_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>hdf5io/hdf5_options.c</label>
+        <link refid="hdf5__options_8c"/>
+      </node>
+      <node id="29">
+        <label>hdf5io/hdf5_options.h</label>
+        <link refid="hdf5__options_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>hdf5io/hdf5_orbit.c</label>
+        <link refid="hdf5__orbit_8c"/>
+      </node>
+      <node id="24">
+        <label>simulate/simulate_gc_adaptive.c</label>
+        <link refid="simulate__gc__adaptive_8c"/>
+      </node>
+      <node id="34">
+        <label>simulate/simulate_gc_adaptive.h</label>
+        <link refid="simulate__gc__adaptive_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>neutral.c</label>
+        <link refid="neutral_8c"/>
+      </node>
+      <node id="8">
+        <label>neutral.h</label>
+        <link refid="neutral_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>mpi_interface.c</label>
+        <link refid="mpi__interface_8c"/>
+      </node>
+      <node id="32">
+        <label>mpi_interface.h</label>
+        <link refid="mpi__interface_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>libascot.c</label>
+        <link refid="libascot_8c"/>
+      </node>
+      <node id="4">
+        <label>hdf5_interface.c</label>
+        <link refid="hdf5__interface_8c"/>
+      </node>
+      <node id="28">
+        <label>hdf5_interface.h</label>
+        <link refid="hdf5__interface_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hdf5io/hdf5_neutral.c</label>
+        <link refid="hdf5__neutral_8c"/>
+      </node>
+      <node id="3">
+        <label>hdf5io/hdf5_neutral.h</label>
+        <link refid="hdf5__neutral_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>diag/diag_transcoef.c</label>
+        <link refid="diag__transcoef_8c"/>
+      </node>
+      <node id="17">
+        <label>bbnbi5.c</label>
+        <link refid="bbnbi5_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structN0__3D__offload__data" prot="public">N0_3D_offload_data</innerclass>
+    <innerclass refid="structN0__3D__data" prot="public">N0_3D_data</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="N0__3D_8h_1aed777775a81471e183a0651d3abc27f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int N0_3D_init_offload</definition>
+        <argsstring>(N0_3D_offload_data *offload_data, real **offload_array)</argsstring>
+        <name>N0_3D_init_offload</name>
+        <param>
+          <type><ref refid="structN0__3D__offload__data" kindref="compound">N0_3D_offload_data</ref> *</type>
+          <declname>offload_data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> **</type>
+          <declname>offload_array</declname>
+        </param>
+        <briefdescription>
+<para>Initialize offload data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>offload_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload data array</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>zero if initialization succeeded </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="neutral/N0_3D.h" line="46" column="5" bodyfile="neutral/N0_3D.c" bodystart="24" bodyend="56" declfile="neutral/N0_3D.h" declline="46" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="N0__3D_8h_1a69baf9dad0fcaed8b8d78ef8f9a06848" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void N0_3D_free_offload</definition>
+        <argsstring>(N0_3D_offload_data *offload_data, real **offload_array)</argsstring>
+        <name>N0_3D_free_offload</name>
+        <param>
+          <type><ref refid="structN0__3D__offload__data" kindref="compound">N0_3D_offload_data</ref> *</type>
+          <declname>offload_data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> **</type>
+          <declname>offload_array</declname>
+        </param>
+        <briefdescription>
+<para>Free offload array and reset parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function deallocates the offload_array.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>offload_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to pointer to offload array </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="neutral/N0_3D.h" line="47" column="6" bodyfile="neutral/N0_3D.c" bodystart="66" bodyend="70" declfile="neutral/N0_3D.h" declline="47" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="N0__3D_8h_1ad7c1b9474c9e8bd48777c27a4a231c62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void N0_3D_init</definition>
+        <argsstring>(N0_3D_data *ndata, N0_3D_offload_data *offload_data, real *offload_array)</argsstring>
+        <name>N0_3D_init</name>
+        <param>
+          <type><ref refid="structN0__3D__data" kindref="compound">N0_3D_data</ref> *</type>
+          <declname>ndata</declname>
+        </param>
+        <param>
+          <type><ref refid="structN0__3D__offload__data" kindref="compound">N0_3D_offload_data</ref> *</type>
+          <declname>offload_data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>offload_array</declname>
+        </param>
+        <briefdescription>
+<para>Initialize neutral data on target. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function copies parameters from the offload struct to the struct on target and sets the data pointers on target struct to correct offsets in the offload array.</para>
+<para>Any initialization that requires any computations must have been done already when the offload struct was initialized.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ndata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to data struct on target </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload array </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="neutral/N0_3D.h" line="50" column="6" bodyfile="neutral/N0_3D.c" bodystart="86" bodyend="113" declfile="neutral/N0_3D.h" declline="50" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="N0__3D_8h_1a4cb09379a260afc23e94bcb29610b2b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref></type>
+        <definition>a5err N0_3D_eval_n0</definition>
+        <argsstring>(real *n0, real r, real phi, real z, N0_3D_data *ndata)</argsstring>
+        <name>N0_3D_eval_n0</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>n0</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>phi</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type><ref refid="structN0__3D__data" kindref="compound">N0_3D_data</ref> *</type>
+          <declname>ndata</declname>
+        </param>
+        <briefdescription>
+<para>Evaluate neutral density. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function evaluates the neutral density at the given coordinates using trilinear interpolation on the 3D neutral density data.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>n0 value will be stored in n0[0] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>r coordinate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>phi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>phi coordinate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>z coordinate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ndata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to neutral data struct</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>zero if evaluation succeeded </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="neutral/N0_3D.h" line="53" column="7" bodyfile="neutral/N0_3D.c" bodystart="129" bodyend="141" declfile="neutral/N0_3D.h" declline="53" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="N0__3D_8h_1a7d9ec9f9acf55fd91fa3f59938d9057f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref></type>
+        <definition>a5err N0_3D_eval_t0</definition>
+        <argsstring>(real *t0, real r, real phi, real z, N0_3D_data *ndata)</argsstring>
+        <name>N0_3D_eval_t0</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>t0</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>phi</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type><ref refid="structN0__3D__data" kindref="compound">N0_3D_data</ref> *</type>
+          <declname>ndata</declname>
+        </param>
+        <briefdescription>
+<para>Evaluate neutral temperature. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function evaluates the neutral temperature at the given coordinates using trilinear interpolation on the 3D neutral temperature data.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>t0 value will be stored in t0[0] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>r coordinate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>phi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>phi coordinate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>z coordinate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ndata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to neutral data struct</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>zero if evaluation succeeded </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="neutral/N0_3D.h" line="55" column="7" bodyfile="neutral/N0_3D.c" bodystart="157" bodyend="169" declfile="neutral/N0_3D.h" declline="55" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="N0__3D_8h_1a5d83802a6ced6d789936ea5bceef59f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int N0_3D_get_n_species</definition>
+        <argsstring>(N0_3D_data *ndata)</argsstring>
+        <name>N0_3D_get_n_species</name>
+        <param>
+          <type><ref refid="structN0__3D__data" kindref="compound">N0_3D_data</ref> *</type>
+          <declname>ndata</declname>
+        </param>
+        <briefdescription>
+<para>Return number of neutral species. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ndata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to neutral data struct</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>number of neutral species </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="neutral/N0_3D.h" line="57" column="5" bodyfile="neutral/N0_3D.c" bodystart="178" bodyend="180" declfile="neutral/N0_3D.h" declline="57" declcolumn="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Header file for <ref refid="N0__3D_8c" kindref="compound">N0_3D.c</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>N0_3D_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>N0_3D_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../ascot5.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../linint/linint.h&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">/*<sp/>for<sp/>3D<sp/>interpolation<sp/>routines<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="structN0__3D__offload__data" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14" refid="structN0__3D__offload__data_1a0861553c4c1d1e4ad25eadd66472114e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structN0__3D__offload__data_1a0861553c4c1d1e4ad25eadd66472114e" kindref="member">n_r</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="15" refid="structN0__3D__offload__data_1abfa33742a44925dbd9ef3e3bc0a369ee" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structN0__3D__offload__data_1abfa33742a44925dbd9ef3e3bc0a369ee" kindref="member">n_z</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="16" refid="structN0__3D__offload__data_1ae3a9c8bc64aefdf21db2af4aae234702" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structN0__3D__offload__data_1ae3a9c8bc64aefdf21db2af4aae234702" kindref="member">n_phi</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="17" refid="structN0__3D__offload__data_1ae1cbde85dbd0d5b67a611567a47265bb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structN0__3D__offload__data_1ae1cbde85dbd0d5b67a611567a47265bb" kindref="member">r_min</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="18" refid="structN0__3D__offload__data_1ae4d07b5eab0db639e4d1045b03f10c75" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structN0__3D__offload__data_1ae4d07b5eab0db639e4d1045b03f10c75" kindref="member">r_max</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="19" refid="structN0__3D__offload__data_1a7529ec3d60a1c7eebefe2789307c6b2e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structN0__3D__offload__data_1a7529ec3d60a1c7eebefe2789307c6b2e" kindref="member">z_min</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20" refid="structN0__3D__offload__data_1a150f4f1c1da4b049f4dbb29786d0e723" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structN0__3D__offload__data_1a150f4f1c1da4b049f4dbb29786d0e723" kindref="member">z_max</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="21" refid="structN0__3D__offload__data_1ab5b66f44abbe9951eee1c278a1d9c3d6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structN0__3D__offload__data_1ab5b66f44abbe9951eee1c278a1d9c3d6" kindref="member">phi_min</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="22" refid="structN0__3D__offload__data_1a89e55615ec62e2c490d792e4fd681d2e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structN0__3D__offload__data_1a89e55615ec62e2c490d792e4fd681d2e" kindref="member">phi_max</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="23" refid="structN0__3D__offload__data_1afd206dc0445bcebc44e88898b987cd04" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structN0__3D__offload__data_1afd206dc0445bcebc44e88898b987cd04" kindref="member">n_species</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="24" refid="structN0__3D__offload__data_1ae649417c45fdffbabea239abedf644a5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>anum[<ref refid="ascot5_8h_1a9a9ccddfec36bf0f49a168a9dcb8f87e" kindref="member">MAX_SPECIES</ref>];<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="25" refid="structN0__3D__offload__data_1a53540af67ab475687048fc7bc3fd82b3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>znum[<ref refid="ascot5_8h_1a9a9ccddfec36bf0f49a168a9dcb8f87e" kindref="member">MAX_SPECIES</ref>];<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="26" refid="structN0__3D__offload__data_1aa46854e6ce78aa39ea1a8cd7af7cbbe7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>maxwellian[<ref refid="ascot5_8h_1a9a9ccddfec36bf0f49a168a9dcb8f87e" kindref="member">MAX_SPECIES</ref>];<sp/></highlight></codeline>
+<codeline lineno="28" refid="structN0__3D__offload__data_1ab7b21a2d401ef9161716fd52e03f73f8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structN0__3D__offload__data_1ab7b21a2d401ef9161716fd52e03f73f8" kindref="member">offload_array_length</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="normal">}<sp/><ref refid="structN0__3D__offload__data" kindref="compound">N0_3D_offload_data</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="structN0__3D__data" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="35" refid="structN0__3D__data_1a88e25968fbacd73e219b352f3d0fc9de" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structN0__3D__data_1a88e25968fbacd73e219b352f3d0fc9de" kindref="member">n_species</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="36" refid="structN0__3D__data_1af0624694454abfbdb7a8c0d3b87b97aa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>anum[<ref refid="ascot5_8h_1a9a9ccddfec36bf0f49a168a9dcb8f87e" kindref="member">MAX_SPECIES</ref>];<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="37" refid="structN0__3D__data_1a5605e60e979834d6fc858c13373f6d1e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>znum[<ref refid="ascot5_8h_1a9a9ccddfec36bf0f49a168a9dcb8f87e" kindref="member">MAX_SPECIES</ref>];<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="38" refid="structN0__3D__data_1acf502410aa0fcd56a9859d4ee27a70c0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>maxwellian[<ref refid="ascot5_8h_1a9a9ccddfec36bf0f49a168a9dcb8f87e" kindref="member">MAX_SPECIES</ref>];<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="40" refid="structN0__3D__data_1a27a38d3b4e769a34aa534c3b48b8f4fe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structlinint3D__data" kindref="compound">linint3D_data</ref><sp/>n0[<ref refid="ascot5_8h_1a9a9ccddfec36bf0f49a168a9dcb8f87e" kindref="member">MAX_SPECIES</ref>];<sp/><sp/></highlight></codeline>
+<codeline lineno="42" refid="structN0__3D__data_1a27a005e11a58423d634ee404c67b49b8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structlinint3D__data" kindref="compound">linint3D_data</ref><sp/>t0[<ref refid="ascot5_8h_1a9a9ccddfec36bf0f49a168a9dcb8f87e" kindref="member">MAX_SPECIES</ref>];<sp/><sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}<sp/><ref refid="structN0__3D__data" kindref="compound">N0_3D_data</ref>;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="N0__3D_8h_1aed777775a81471e183a0651d3abc27f8" kindref="member">N0_3D_init_offload</ref>(<ref refid="structN0__3D__offload__data" kindref="compound">N0_3D_offload_data</ref>*<sp/>offload_data,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>**<sp/>offload_array);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="N0__3D_8h_1a69baf9dad0fcaed8b8d78ef8f9a06848" kindref="member">N0_3D_free_offload</ref>(<ref refid="structN0__3D__offload__data" kindref="compound">N0_3D_offload_data</ref>*<sp/>offload_data,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>**<sp/>offload_array);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>declare<sp/>target</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="N0__3D_8h_1ad7c1b9474c9e8bd48777c27a4a231c62" kindref="member">N0_3D_init</ref>(<ref refid="structN0__3D__data" kindref="compound">N0_3D_data</ref>*<sp/>ndata,<sp/><ref refid="structN0__3D__offload__data" kindref="compound">N0_3D_offload_data</ref>*<sp/>offload_data,</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>offload_array);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>declare<sp/>simd<sp/>uniform(ndata)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref><sp/><ref refid="N0__3D_8h_1a4cb09379a260afc23e94bcb29610b2b1" kindref="member">N0_3D_eval_n0</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>n0,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>phi,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z,<sp/><ref refid="structN0__3D__data" kindref="compound">N0_3D_data</ref>*<sp/>ndata);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>declare<sp/>simd<sp/>uniform(ndata)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref><sp/><ref refid="N0__3D_8h_1a7d9ec9f9acf55fd91fa3f59938d9057f" kindref="member">N0_3D_eval_t0</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>t0,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>phi,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z,<sp/><ref refid="structN0__3D__data" kindref="compound">N0_3D_data</ref>*<sp/>ndata);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>declare<sp/>simd<sp/>uniform(ndata)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="N0__3D_8h_1a5d83802a6ced6d789936ea5bceef59f5" kindref="member">N0_3D_get_n_species</ref>(<ref refid="structN0__3D__data" kindref="compound">N0_3D_data</ref>*<sp/>ndata);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>end<sp/>declare<sp/>target</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="neutral/N0_3D.h"/>
+  </compounddef>
+</doxygen>

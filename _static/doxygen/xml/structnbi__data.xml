@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structnbi__data" kind="struct" language="C++" prot="public">
+    <compoundname>nbi_data</compoundname>
+    <includes refid="nbi_8h" local="no">nbi.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structnbi__data_1a28a0988a5d563562d47d87be315973d1" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int nbi_data::ninj</definition>
+        <argsstring></argsstring>
+        <name>ninj</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>number of injectors </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="nbi.h" line="66" column="9" bodyfile="nbi.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structnbi__data_1a6d5ff3b6d7fd3ead920cb27dc8da424b" prot="public" static="no" mutable="no">
+        <type><ref refid="structnbi__injector" kindref="compound">nbi_injector</ref></type>
+        <definition>nbi_injector nbi_data::inj[NBI_MAX_INJ]</definition>
+        <argsstring>[NBI_MAX_INJ]</argsstring>
+        <name>inj</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>array of injectors <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="nbi.h" line="67" column="18" bodyfile="nbi.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>NBI data on target. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>nbi_data</label>
+        <link refid="structnbi__data"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>inj</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>nbi_injector</label>
+        <link refid="structnbi__injector"/>
+      </node>
+    </collaborationgraph>
+    <location file="nbi.h" line="65" column="1" bodyfile="nbi.h" bodystart="65" bodyend="68"/>
+    <listofallmembers>
+      <member refid="structnbi__data_1a6d5ff3b6d7fd3ead920cb27dc8da424b" prot="public" virt="non-virtual"><scope>nbi_data</scope><name>inj</name></member>
+      <member refid="structnbi__data_1a28a0988a5d563562d47d87be315973d1" prot="public" virt="non-virtual"><scope>nbi_data</scope><name>ninj</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

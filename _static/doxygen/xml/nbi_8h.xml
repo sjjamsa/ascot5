@@ -1,0 +1,960 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="nbi_8h" kind="file" language="C++">
+    <compoundname>nbi.h</compoundname>
+    <includes refid="ascot5_8h" local="yes">ascot5.h</includes>
+    <includes refid="particle_8h" local="yes">particle.h</includes>
+    <includes refid="B__field_8h" local="yes">B_field.h</includes>
+    <includes refid="plasma_8h" local="yes">plasma.h</includes>
+    <includes refid="wall_8h" local="yes">wall.h</includes>
+    <includes refid="random_8h" local="yes">random.h</includes>
+    <includes refid="diag_8h" local="yes">diag.h</includes>
+    <includedby refid="bbnbi5_8c" local="yes">bbnbi5.c</includedby>
+    <includedby refid="hdf5__nbi_8c" local="yes">hdf5io/hdf5_nbi.c</includedby>
+    <includedby refid="hdf5__nbi_8h" local="yes">hdf5io/hdf5_nbi.h</includedby>
+    <includedby refid="nbi_8c" local="yes">nbi.c</includedby>
+    <includedby refid="simulate_8h" local="yes">simulate.h</includedby>
+    <incdepgraph>
+      <node id="32">
+        <label>diag/dist_rho5D.h</label>
+        <link refid="dist__rho5D_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>plasma.h</label>
+        <link refid="plasma_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>diag/dist_5D.h</label>
+        <link refid="dist__5D_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>particle.h</label>
+        <link refid="particle_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>diag.h</label>
+        <link refid="diag_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>../spline/interp.h</label>
+        <link refid="interp_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>Bfield/B_GS.h</label>
+        <link refid="B__GS_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>wall.h</label>
+        <link refid="wall_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>plasma/plasma_1DS.h</label>
+        <link refid="plasma__1DS_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>stdlib.h</label>
+      </node>
+      <node id="1">
+        <label>nbi.h</label>
+        <link refid="nbi_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>diag/diag_orb.h</label>
+        <link refid="diag__orb_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>omp.h</label>
+      </node>
+      <node id="6">
+        <label>B_field.h</label>
+        <link refid="B__field_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>Efield/E_1DS.h</label>
+        <link refid="E__1DS_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>plasma/plasma_1Dt.h</label>
+        <link refid="plasma__1Dt_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>random.h</label>
+        <link refid="random_8h"/>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>error.h</label>
+        <link refid="error_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>diag/dist_com.h</label>
+        <link refid="dist__com_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>diag/diag_transcoef.h</label>
+        <link refid="diag__transcoef_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>E_field.h</label>
+        <link refid="E__field_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>plasma/plasma_1D.h</label>
+        <link refid="plasma__1D_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>time.h</label>
+      </node>
+      <node id="16">
+        <label>Bfield/B_TC.h</label>
+        <link refid="B__TC_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>../linint/linint.h</label>
+        <link refid="linint_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>Bfield/B_2DS.h</label>
+        <link refid="B__2DS_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>Efield/E_TC.h</label>
+        <link refid="E__TC_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>Bfield/B_3DS.h</label>
+        <link refid="B__3DS_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>math.h</label>
+        <link refid="math_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>diag/dist_6D.h</label>
+        <link refid="dist__6D_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>wall/wall_3d.h</label>
+        <link refid="wall__3d_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>stdio.h</label>
+      </node>
+      <node id="33">
+        <label>diag/dist_rho6D.h</label>
+        <link refid="dist__rho6D_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>Bfield/B_STS.h</label>
+        <link refid="B__STS_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>wall/wall_2d.h</label>
+        <link refid="wall__2d_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ascot5.h</label>
+        <link refid="ascot5_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="21">
+        <label>simulate/simulate_ml_adaptive.c</label>
+        <link refid="simulate__ml__adaptive_8c"/>
+      </node>
+      <node id="32">
+        <label>simulate/simulate_ml_adaptive.h</label>
+        <link refid="simulate__ml__adaptive_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>diag.c</label>
+        <link refid="diag_8c"/>
+      </node>
+      <node id="22">
+        <label>simulate.c</label>
+        <link refid="simulate_8c"/>
+      </node>
+      <node id="7">
+        <label>simulate.h</label>
+        <link refid="simulate_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>simulate/simulate_fo_fixed.c</label>
+        <link refid="simulate__fo__fixed_8c"/>
+      </node>
+      <node id="29">
+        <label>simulate/simulate_fo_fixed.h</label>
+        <link refid="simulate__fo__fixed_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>simulate/simulate_gc_fixed.c</label>
+        <link refid="simulate__gc__fixed_8c"/>
+      </node>
+      <node id="10">
+        <label>ascot5_main.c</label>
+        <link refid="ascot5__main_8c"/>
+      </node>
+      <node id="31">
+        <label>simulate/simulate_gc_fixed.h</label>
+        <link refid="simulate__gc__fixed_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>ascot5_main.h</label>
+        <link refid="ascot5__main_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>endcond.c</label>
+        <link refid="endcond_8c"/>
+      </node>
+      <node id="16">
+        <label>endcond.h</label>
+        <link refid="endcond_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>afsi.c</label>
+        <link refid="afsi_8c"/>
+      </node>
+      <node id="9">
+        <label>afsi.h</label>
+        <link refid="afsi_8h_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>nbi.c</label>
+        <link refid="nbi_8c"/>
+      </node>
+      <node id="1">
+        <label>nbi.h</label>
+        <link refid="nbi_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>diag/diag_orb.c</label>
+        <link refid="diag__orb_8c"/>
+      </node>
+      <node id="17">
+        <label>hdf5io/hdf5_options.c</label>
+        <link refid="hdf5__options_8c"/>
+      </node>
+      <node id="25">
+        <label>hdf5io/hdf5_options.h</label>
+        <link refid="hdf5__options_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>hdf5io/hdf5_orbit.c</label>
+        <link refid="hdf5__orbit_8c"/>
+      </node>
+      <node id="19">
+        <label>simulate/simulate_gc_adaptive.c</label>
+        <link refid="simulate__gc__adaptive_8c"/>
+      </node>
+      <node id="30">
+        <label>simulate/simulate_gc_adaptive.h</label>
+        <link refid="simulate__gc__adaptive_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>mpi_interface.c</label>
+        <link refid="mpi__interface_8c"/>
+      </node>
+      <node id="28">
+        <label>mpi_interface.h</label>
+        <link refid="mpi__interface_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>libascot.c</label>
+        <link refid="libascot_8c"/>
+      </node>
+      <node id="5">
+        <label>hdf5_interface.c</label>
+        <link refid="hdf5__interface_8c"/>
+      </node>
+      <node id="23">
+        <label>hdf5_interface.h</label>
+        <link refid="hdf5__interface_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>diag/diag_transcoef.c</label>
+        <link refid="diag__transcoef_8c"/>
+      </node>
+      <node id="2">
+        <label>bbnbi5.c</label>
+        <link refid="bbnbi5_8c"/>
+      </node>
+      <node id="3">
+        <label>hdf5io/hdf5_nbi.c</label>
+        <link refid="hdf5__nbi_8c"/>
+      </node>
+      <node id="4">
+        <label>hdf5io/hdf5_nbi.h</label>
+        <link refid="hdf5__nbi_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structnbi__injector" prot="public">nbi_injector</innerclass>
+    <innerclass refid="structnbi__offload__data" prot="public">nbi_offload_data</innerclass>
+    <innerclass refid="structnbi__data" prot="public">nbi_data</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="nbi_8h_1aa530236ad7d5792eed628c4c6f26c4e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int nbi_init_offload</definition>
+        <argsstring>(nbi_offload_data *offload_data, real **offload_array)</argsstring>
+        <name>nbi_init_offload</name>
+        <param>
+          <type><ref refid="structnbi__offload__data" kindref="compound">nbi_offload_data</ref> *</type>
+          <declname>offload_data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> **</type>
+          <declname>offload_array</declname>
+        </param>
+        <briefdescription>
+<para>Load NBI data and prepare parameters for offload. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>offload_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to pointer to offload array</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>zero if initialization succeeded. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="nbi.h" line="70" column="5" bodyfile="nbi.c" bodystart="38" bodyend="65" declfile="nbi.h" declline="70" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="nbi_8h_1a5b349c25f536509d77d56a923483996d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void nbi_init</definition>
+        <argsstring>(nbi_data *nbi, nbi_offload_data *offload_data, real *offload_array)</argsstring>
+        <name>nbi_init</name>
+        <param>
+          <type><ref refid="structnbi__data" kindref="compound">nbi_data</ref> *</type>
+          <declname>nbi</declname>
+        </param>
+        <param>
+          <type><ref refid="structnbi__offload__data" kindref="compound">nbi_offload_data</ref> *</type>
+          <declname>offload_data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>offload_array</declname>
+        </param>
+        <briefdescription>
+<para>Initialize NBI data struct on target. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nbi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to data struct on target </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload array </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="nbi.h" line="72" column="6" bodyfile="nbi.c" bodystart="74" bodyend="104" declfile="nbi.h" declline="72" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="nbi_8h_1a2aece30b973ce906587694e5a00b8570" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void nbi_free_offload</definition>
+        <argsstring>(nbi_offload_data *offload_data, real **offload_array)</argsstring>
+        <name>nbi_free_offload</name>
+        <param>
+          <type><ref refid="structnbi__offload__data" kindref="compound">nbi_offload_data</ref> *</type>
+          <declname>offload_data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> **</type>
+          <declname>offload_array</declname>
+        </param>
+        <briefdescription>
+<para>Free offload array. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>offload_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to pointer to offload array </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="nbi.h" line="75" column="6" bodyfile="nbi.c" bodystart="112" bodyend="119" declfile="nbi.h" declline="75" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="nbi_8h_1a8f35d8105acc2616b8d99150d1fd08f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void nbi_generate</definition>
+        <argsstring>(particle *p, int nprt, real t0, real t1, nbi_injector *inj, B_field_data *Bdata, plasma_data *plsdata, wall_data *walldata, random_data *rng, diag_data *diag)</argsstring>
+        <name>nbi_generate</name>
+        <param>
+          <type><ref refid="structparticle" kindref="compound">particle</ref> *</type>
+          <declname>p</declname>
+          <defname>pout</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nprt</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>t0</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>t1</declname>
+        </param>
+        <param>
+          <type><ref refid="structnbi__injector" kindref="compound">nbi_injector</ref> *</type>
+          <declname>inj</declname>
+        </param>
+        <param>
+          <type><ref refid="structB__field__data" kindref="compound">B_field_data</ref> *</type>
+          <declname>Bdata</declname>
+        </param>
+        <param>
+          <type><ref refid="structplasma__data" kindref="compound">plasma_data</ref> *</type>
+          <declname>plsdata</declname>
+          <defname>plasma_data</defname>
+        </param>
+        <param>
+          <type><ref refid="structwall__data" kindref="compound">wall_data</ref> *</type>
+          <declname>walldata</declname>
+          <defname>wall_data</defname>
+        </param>
+        <param>
+          <type><ref refid="random_8h_1a103c9e22750b3fbab1ce5060f56f5100" kindref="member">random_data</ref> *</type>
+          <declname>rng</declname>
+          <defname>random_data</defname>
+        </param>
+        <param>
+          <type><ref refid="structdiag__data" kindref="compound">diag_data</ref> *</type>
+          <declname>diag</declname>
+        </param>
+        <briefdescription>
+<para>Generate NBI ions by injecting and tracing neutrals from an injector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pout</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer where generated markers are stored or NULL </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nprt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of markers to be injected or generated </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>time when the injector is turned on </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>time when the injector is turned off </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>inj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to injector data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Bdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to magnetic field data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="structplasma__data" kindref="compound">plasma_data</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to plasma data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="structwall__data" kindref="compound">wall_data</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to wall data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>random_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to random number generator data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>diag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to diagnostics data </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="nbi.h" line="77" column="6" bodyfile="nbi.c" bodystart="135" bodyend="296" declfile="nbi.h" declline="77" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Header file for <ref refid="nbi_8c" kindref="compound">nbi.c</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>NBI_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NBI_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ascot5_8h" kindref="compound">ascot5.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="particle_8h" kindref="compound">particle.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="B__field_8h" kindref="compound">B_field.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="plasma_8h" kindref="compound">plasma.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="wall_8h" kindref="compound">wall.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="random_8h" kindref="compound">random.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="diag_8h" kindref="compound">diag.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="structnbi__injector" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20" refid="structnbi__injector_1a4992fdc3797eab500c2c784b0355cb27" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structnbi__injector_1a4992fdc3797eab500c2c784b0355cb27" kindref="member">id</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="21" refid="structnbi__injector_1ae5f0e8aff63eb521a0f26f1df2cc5f8b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structnbi__injector_1ae5f0e8aff63eb521a0f26f1df2cc5f8b" kindref="member">n_beamlet</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="22" refid="structnbi__injector_1a628de9e1a819e362c4e5c37f62f18ad4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/><ref refid="structnbi__injector_1a628de9e1a819e362c4e5c37f62f18ad4" kindref="member">beamlet_x</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="23" refid="structnbi__injector_1aa143d69ae485908e2c3de27742ded29c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/><ref refid="structnbi__injector_1aa143d69ae485908e2c3de27742ded29c" kindref="member">beamlet_y</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="24" refid="structnbi__injector_1ace5199912e824f220215f106c01503d9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/><ref refid="structnbi__injector_1ace5199912e824f220215f106c01503d9" kindref="member">beamlet_z</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="25" refid="structnbi__injector_1acd6eefa63429b5bf795607d9ea89b9c5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/><ref refid="structnbi__injector_1acd6eefa63429b5bf795607d9ea89b9c5" kindref="member">beamlet_dx</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="26" refid="structnbi__injector_1a8425d110584a5865a9764562f4cf5a70" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/><ref refid="structnbi__injector_1a8425d110584a5865a9764562f4cf5a70" kindref="member">beamlet_dy</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="27" refid="structnbi__injector_1abbae9f6d2bb1aafef7f45e212c7f0a1d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/><ref refid="structnbi__injector_1abbae9f6d2bb1aafef7f45e212c7f0a1d" kindref="member">beamlet_dz</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="28" refid="structnbi__injector_1a98149d434fcf1e10b3b9e1b6cc781be1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structnbi__injector_1a98149d434fcf1e10b3b9e1b6cc781be1" kindref="member">power</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="29" refid="structnbi__injector_1a8f382df18a541a7f5e78220d704043f1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structnbi__injector_1a8f382df18a541a7f5e78220d704043f1" kindref="member">energy</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="30" refid="structnbi__injector_1a4babebabafe0a6231ef12c62705e3485" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>efrac[3];<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="31" refid="structnbi__injector_1aee5a03a106a09a14d0b60ffb91024022" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structnbi__injector_1aee5a03a106a09a14d0b60ffb91024022" kindref="member">div_h</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="32" refid="structnbi__injector_1aea7880f5caeaa228fdeb7666069858fb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structnbi__injector_1aea7880f5caeaa228fdeb7666069858fb" kindref="member">div_v</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="33" refid="structnbi__injector_1ac04563ffe5fb880ee2a527ab215feffc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structnbi__injector_1ac04563ffe5fb880ee2a527ab215feffc" kindref="member">div_halo_frac</ref>;<sp/></highlight></codeline>
+<codeline lineno="34" refid="structnbi__injector_1a92677add3fcb3a574f429750055433b0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structnbi__injector_1a92677add3fcb3a574f429750055433b0" kindref="member">div_halo_h</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="35" refid="structnbi__injector_1ae9f35ca3e721f757859168b27890fbf2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structnbi__injector_1ae9f35ca3e721f757859168b27890fbf2" kindref="member">div_halo_v</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="36" refid="structnbi__injector_1a6df8610919c2d0adf71fd4fb28366df5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structnbi__injector_1a6df8610919c2d0adf71fd4fb28366df5" kindref="member">anum</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="37" refid="structnbi__injector_1ab6405f49c6284f4441223d75055f4e35" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structnbi__injector_1ab6405f49c6284f4441223d75055f4e35" kindref="member">znum</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="38" refid="structnbi__injector_1a0d88412779d6ce4f6842852577d64637" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structnbi__injector_1a0d88412779d6ce4f6842852577d64637" kindref="member">mass</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="normal">}<sp/><ref refid="structnbi__injector" kindref="compound">nbi_injector</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="structnbi__offload__data" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="45" refid="structnbi__offload__data_1a33a60c4d1ef8425bc59dfecd4d832d86" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structnbi__offload__data_1a33a60c4d1ef8425bc59dfecd4d832d86" kindref="member">ninj</ref>;<sp/></highlight></codeline>
+<codeline lineno="46" refid="structnbi__offload__data_1ac21d3fd0f2cb35767681e2cc071667d7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">[<ref refid="ascot5_8h_1ab5608d7a206845bac35995099d5f2a13" kindref="member">NBI_MAX_INJ</ref>];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="47" refid="structnbi__offload__data_1a4509b76be609cac77fc175823df89c39" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n_beamlet[<ref refid="ascot5_8h_1ab5608d7a206845bac35995099d5f2a13" kindref="member">NBI_MAX_INJ</ref>];<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="48" refid="structnbi__offload__data_1ad1f58dc2fe3fc230d5fc60f7cb66d4b2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>power[<ref refid="ascot5_8h_1ab5608d7a206845bac35995099d5f2a13" kindref="member">NBI_MAX_INJ</ref>];<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="49" refid="structnbi__offload__data_1aa51fe43fca712cfc9979521c349705a1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>energy[<ref refid="ascot5_8h_1ab5608d7a206845bac35995099d5f2a13" kindref="member">NBI_MAX_INJ</ref>];<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="50" refid="structnbi__offload__data_1ae68e18b4bb51a1e69d170453d9f37524" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>efrac[<ref refid="ascot5_8h_1ab5608d7a206845bac35995099d5f2a13" kindref="member">NBI_MAX_INJ</ref>*3];<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="51" refid="structnbi__offload__data_1a3fa39320e5608a3a61dfa524a45a8f13" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>div_h[<ref refid="ascot5_8h_1ab5608d7a206845bac35995099d5f2a13" kindref="member">NBI_MAX_INJ</ref>];<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="52" refid="structnbi__offload__data_1a0d851ef1e71c74c188a556d6168edc68" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>div_v[<ref refid="ascot5_8h_1ab5608d7a206845bac35995099d5f2a13" kindref="member">NBI_MAX_INJ</ref>];<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="53" refid="structnbi__offload__data_1ad10a672462bb7f67638e4d0173208823" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>div_halo_frac[<ref refid="ascot5_8h_1ab5608d7a206845bac35995099d5f2a13" kindref="member">NBI_MAX_INJ</ref>];<sp/></highlight></codeline>
+<codeline lineno="54" refid="structnbi__offload__data_1a2de00821d294e9382daa00363eaf0a3d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>div_halo_h[<ref refid="ascot5_8h_1ab5608d7a206845bac35995099d5f2a13" kindref="member">NBI_MAX_INJ</ref>];<sp/></highlight></codeline>
+<codeline lineno="55" refid="structnbi__offload__data_1a2120eb5e5b6b9072448356d80187de41" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>div_halo_v[<ref refid="ascot5_8h_1ab5608d7a206845bac35995099d5f2a13" kindref="member">NBI_MAX_INJ</ref>];<sp/></highlight></codeline>
+<codeline lineno="56" refid="structnbi__offload__data_1a57e4df7b513b913642dc71625d183ce0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>anum[<ref refid="ascot5_8h_1ab5608d7a206845bac35995099d5f2a13" kindref="member">NBI_MAX_INJ</ref>];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="57" refid="structnbi__offload__data_1a324bd22a5dc2a73306ac81039a86f479" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>znum[<ref refid="ascot5_8h_1ab5608d7a206845bac35995099d5f2a13" kindref="member">NBI_MAX_INJ</ref>];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="58" refid="structnbi__offload__data_1a5348fd72722c15d87a42b303ae1508a3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>mass[<ref refid="ascot5_8h_1ab5608d7a206845bac35995099d5f2a13" kindref="member">NBI_MAX_INJ</ref>];<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="59" refid="structnbi__offload__data_1a4d797d415483270cc7f80408c82dbd93" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structnbi__offload__data_1a4d797d415483270cc7f80408c82dbd93" kindref="member">offload_array_length</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="60"><highlight class="normal">}<sp/><ref refid="structnbi__offload__data" kindref="compound">nbi_offload_data</ref>;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="structnbi__data" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="66" refid="structnbi__data_1a28a0988a5d563562d47d87be315973d1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structnbi__data_1a28a0988a5d563562d47d87be315973d1" kindref="member">ninj</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="67" refid="structnbi__data_1a6d5ff3b6d7fd3ead920cb27dc8da424b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structnbi__injector" kindref="compound">nbi_injector</ref><sp/>inj[<ref refid="ascot5_8h_1ab5608d7a206845bac35995099d5f2a13" kindref="member">NBI_MAX_INJ</ref>];<sp/></highlight></codeline>
+<codeline lineno="68"><highlight class="normal">}<sp/><ref refid="structnbi__data" kindref="compound">nbi_data</ref>;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="nbi_8h_1aa530236ad7d5792eed628c4c6f26c4e1" kindref="member">nbi_init_offload</ref>(<ref refid="structnbi__offload__data" kindref="compound">nbi_offload_data</ref>*<sp/>offload_data,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>**<sp/>offload_array);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="nbi_8h_1a5b349c25f536509d77d56a923483996d" kindref="member">nbi_init</ref>(<ref refid="structnbi__data" kindref="compound">nbi_data</ref>*<sp/>nbi,<sp/><ref refid="structnbi__offload__data" kindref="compound">nbi_offload_data</ref>*<sp/>offload_data,</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>offload_array);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="nbi_8h_1a2aece30b973ce906587694e5a00b8570" kindref="member">nbi_free_offload</ref>(<ref refid="structnbi__offload__data" kindref="compound">nbi_offload_data</ref>*<sp/>offload_data,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>**<sp/>offload_array);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="nbi_8h_1a8f35d8105acc2616b8d99150d1fd08f9" kindref="member">nbi_generate</ref>(<ref refid="structparticle" kindref="compound">particle</ref>*<sp/>p,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nprt,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>t0,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>t1,<sp/><ref refid="structnbi__injector" kindref="compound">nbi_injector</ref>*<sp/>inj,</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structB__field__data" kindref="compound">B_field_data</ref>*<sp/>Bdata,<sp/><ref refid="structplasma__data" kindref="compound">plasma_data</ref>*<sp/>plsdata,</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structwall__data" kindref="compound">wall_data</ref>*<sp/>walldata,<sp/><ref refid="random_8h_1a103c9e22750b3fbab1ce5060f56f5100" kindref="member">random_data</ref>*<sp/>rng,<sp/><ref refid="structdiag__data" kindref="compound">diag_data</ref>*<sp/>diag);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="nbi.h"/>
+  </compounddef>
+</doxygen>

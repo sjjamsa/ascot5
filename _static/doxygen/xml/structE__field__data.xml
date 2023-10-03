@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structE__field__data" kind="struct" language="C++" prot="public">
+    <compoundname>E_field_data</compoundname>
+    <includes refid="E__field_8h" local="no">E_field.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structE__field__data_1a2de181c807f4b643ab9371bc9e673b1e" prot="public" static="no" mutable="no">
+        <type><ref refid="E__field_8h_1acd92ff41d651621c8f1778e14c2808a6" kindref="member">E_field_type</ref></type>
+        <definition>E_field_type E_field_data::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Electric field type wrapped by this struct </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E_field.h" line="55" column="18" bodyfile="E_field.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structE__field__data_1a0c7f0bd3db238502910f6b244e9f388b" prot="public" static="no" mutable="no">
+        <type><ref refid="structE__TC__data" kindref="compound">E_TC_data</ref></type>
+        <definition>E_TC_data E_field_data::ETC</definition>
+        <argsstring></argsstring>
+        <name>ETC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TC field or NULL if not active <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E_field.h" line="56" column="15" bodyfile="E_field.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structE__field__data_1afe5f4d35526bfb1f6cf78ded958ee6bf" prot="public" static="no" mutable="no">
+        <type><ref refid="structE__1DS__data" kindref="compound">E_1DS_data</ref></type>
+        <definition>E_1DS_data E_field_data::E1DS</definition>
+        <argsstring></argsstring>
+        <name>E1DS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>1DS field or NULL if not active <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E_field.h" line="57" column="16" bodyfile="E_field.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Electric field simulation data. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This struct holds data necessary for simulation. The struct is initialized from the <ref refid="structE__field__offload__data" kindref="compound">E_field_offload_data</ref> in <ref refid="E__field_8c_1a4e05d8421c44170d72aa3cc694606c05" kindref="member">E_field_init()</ref>.</para>
+<para>The intended usage is that only single <ref refid="structE__field__data" kindref="compound">E_field_data</ref> is used at the time, and the type of the data is declared with the &quot;type&quot; field. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="4">
+        <label>E_TC_data</label>
+        <link refid="structE__TC__data"/>
+      </node>
+      <node id="1">
+        <label>E_field_data</label>
+        <link refid="structE__field__data"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>E1DS</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>ETC</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>interp1D_data</label>
+        <link refid="structinterp1D__data"/>
+      </node>
+      <node id="2">
+        <label>E_1DS_data</label>
+        <link refid="structE__1DS__data"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>dV</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="E_field.h" line="54" column="1" bodyfile="E_field.h" bodystart="54" bodyend="58"/>
+    <listofallmembers>
+      <member refid="structE__field__data_1afe5f4d35526bfb1f6cf78ded958ee6bf" prot="public" virt="non-virtual"><scope>E_field_data</scope><name>E1DS</name></member>
+      <member refid="structE__field__data_1a0c7f0bd3db238502910f6b244e9f388b" prot="public" virt="non-virtual"><scope>E_field_data</scope><name>ETC</name></member>
+      <member refid="structE__field__data_1a2de181c807f4b643ab9371bc9e673b1e" prot="public" virt="non-virtual"><scope>E_field_data</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

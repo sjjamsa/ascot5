@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structparticle__queue" kind="struct" language="C++" prot="public">
+    <compoundname>particle_queue</compoundname>
+    <includes refid="particle_8h" local="no">particle.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structparticle__queue_1af86da1478db0cc051aaf7d51d3d1a2b8" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int particle_queue::n</definition>
+        <argsstring></argsstring>
+        <name>n</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Total number of markers in this queue <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="particle.h" line="156" column="9" bodyfile="particle.h" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structparticle__queue_1a2dd6f6f1de06a359c46b0f6d7545c63a" prot="public" static="no" mutable="no">
+        <type><ref refid="structparticle__state" kindref="compound">particle_state</ref> **</type>
+        <definition>particle_state** particle_queue::p</definition>
+        <argsstring></argsstring>
+        <name>p</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Pointer to an array storing pointers to all markers within this queue. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="particle.h" line="157" column="20" bodyfile="particle.h" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structparticle__queue_1ab46285cd292490bcf7adb93d147df99e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>volatile int particle_queue::next</definition>
+        <argsstring></argsstring>
+        <name>next</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Index where next unsimulated marker is found </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="particle.h" line="159" column="18" bodyfile="particle.h" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structparticle__queue_1ad5cc76df822bf1425819520c18f573ff" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>volatile int particle_queue::finished</definition>
+        <argsstring></argsstring>
+        <name>finished</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of markers who have finished simulation <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="particle.h" line="160" column="18" bodyfile="particle.h" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Marker queue. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Each time a marker has finished simulation, a new marker is chosen from this queue and the old marker&apos;s data is updated. Markers are never removed from the queue but an index is kept to mark where the next not yet simulated marker is found. Markers are represented by <ref refid="structparticle__state" kindref="compound">particle_state</ref> struct when they are stored in the queue.</para>
+<para>Note: The queue can and is accessed by several threads, so make sure each access is thread-safe. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>particle_queue</label>
+        <link refid="structparticle__queue"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>p</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>particle_state</label>
+        <link refid="structparticle__state"/>
+      </node>
+    </collaborationgraph>
+    <location file="particle.h" line="155" column="1" bodyfile="particle.h" bodystart="155" bodyend="162"/>
+    <listofallmembers>
+      <member refid="structparticle__queue_1ad5cc76df822bf1425819520c18f573ff" prot="public" virt="non-virtual"><scope>particle_queue</scope><name>finished</name></member>
+      <member refid="structparticle__queue_1af86da1478db0cc051aaf7d51d3d1a2b8" prot="public" virt="non-virtual"><scope>particle_queue</scope><name>n</name></member>
+      <member refid="structparticle__queue_1ab46285cd292490bcf7adb93d147df99e" prot="public" virt="non-virtual"><scope>particle_queue</scope><name>next</name></member>
+      <member refid="structparticle__queue_1a2dd6f6f1de06a359c46b0f6d7545c63a" prot="public" virt="non-virtual"><scope>particle_queue</scope><name>p</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

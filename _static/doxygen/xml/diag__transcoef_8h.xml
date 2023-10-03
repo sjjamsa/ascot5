@@ -1,0 +1,807 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="diag__transcoef_8h" kind="file" language="C++">
+    <compoundname>diag_transcoef.h</compoundname>
+    <includes refid="ascot5_8h" local="yes">../ascot5.h</includes>
+    <includes refid="particle_8h" local="yes">../particle.h</includes>
+    <includedby refid="diag__transcoef_8c" local="yes">diag/diag_transcoef.c</includedby>
+    <includedby refid="diag_8c" local="yes">diag.c</includedby>
+    <includedby refid="diag_8h" local="yes">diag.h</includedby>
+    <includedby refid="hdf5__transcoef_8c" local="yes">hdf5io/hdf5_transcoef.c</includedby>
+    <includedby refid="hdf5__transcoef_8h" local="yes">hdf5io/hdf5_transcoef.h</includedby>
+    <incdepgraph>
+      <node id="5">
+        <label>../particle.h</label>
+        <link refid="particle_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>../spline/interp.h</label>
+        <link refid="interp_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>Bfield/B_GS.h</label>
+        <link refid="B__GS_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>omp.h</label>
+      </node>
+      <node id="6">
+        <label>B_field.h</label>
+        <link refid="B__field_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>Efield/E_1DS.h</label>
+        <link refid="E__1DS_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>error.h</label>
+        <link refid="error_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>diag/diag_transcoef.h</label>
+        <link refid="diag__transcoef_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>E_field.h</label>
+        <link refid="E__field_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>time.h</label>
+      </node>
+      <node id="16">
+        <label>Bfield/B_TC.h</label>
+        <link refid="B__TC_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>../linint/linint.h</label>
+        <link refid="linint_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>Bfield/B_2DS.h</label>
+        <link refid="B__2DS_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>Efield/E_TC.h</label>
+        <link refid="E__TC_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>Bfield/B_3DS.h</label>
+        <link refid="B__3DS_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>math.h</label>
+        <link refid="math_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>stdio.h</label>
+      </node>
+      <node id="14">
+        <label>Bfield/B_STS.h</label>
+        <link refid="B__STS_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>../ascot5.h</label>
+        <link refid="ascot5_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="25">
+        <label>simulate/simulate_ml_adaptive.c</label>
+        <link refid="simulate__ml__adaptive_8c"/>
+      </node>
+      <node id="34">
+        <label>simulate/simulate_ml_adaptive.h</label>
+        <link refid="simulate__ml__adaptive_8h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>diag.c</label>
+        <link refid="diag_8c"/>
+      </node>
+      <node id="4">
+        <label>diag.h</label>
+        <link refid="diag_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>simulate.c</label>
+        <link refid="simulate_8c"/>
+      </node>
+      <node id="15">
+        <label>simulate.h</label>
+        <link refid="simulate_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>simulate/simulate_fo_fixed.c</label>
+        <link refid="simulate__fo__fixed_8c"/>
+      </node>
+      <node id="31">
+        <label>simulate/simulate_fo_fixed.h</label>
+        <link refid="simulate__fo__fixed_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>simulate/simulate_gc_fixed.c</label>
+        <link refid="simulate__gc__fixed_8c"/>
+      </node>
+      <node id="5">
+        <label>ascot5_main.c</label>
+        <link refid="ascot5__main_8c"/>
+      </node>
+      <node id="33">
+        <label>simulate/simulate_gc_fixed.h</label>
+        <link refid="simulate__gc__fixed_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>ascot5_main.h</label>
+        <link refid="ascot5__main_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>endcond.c</label>
+        <link refid="endcond_8c"/>
+      </node>
+      <node id="21">
+        <label>endcond.h</label>
+        <link refid="endcond_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>afsi.c</label>
+        <link refid="afsi_8c"/>
+      </node>
+      <node id="35">
+        <label>hdf5io/hdf5_transcoef.c</label>
+        <link refid="hdf5__transcoef_8c"/>
+      </node>
+      <node id="17">
+        <label>afsi.h</label>
+        <link refid="afsi_8h_source"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>nbi.c</label>
+        <link refid="nbi_8c"/>
+      </node>
+      <node id="36">
+        <label>hdf5io/hdf5_transcoef.h</label>
+        <link refid="hdf5__transcoef_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>nbi.h</label>
+        <link refid="nbi_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>diag/diag_orb.c</label>
+        <link refid="diag__orb_8c"/>
+      </node>
+      <node id="7">
+        <label>hdf5io/hdf5_options.c</label>
+        <link refid="hdf5__options_8c"/>
+      </node>
+      <node id="29">
+        <label>hdf5io/hdf5_options.h</label>
+        <link refid="hdf5__options_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>hdf5io/hdf5_orbit.c</label>
+        <link refid="hdf5__orbit_8c"/>
+      </node>
+      <node id="23">
+        <label>simulate/simulate_gc_adaptive.c</label>
+        <link refid="simulate__gc__adaptive_8c"/>
+      </node>
+      <node id="32">
+        <label>simulate/simulate_gc_adaptive.h</label>
+        <link refid="simulate__gc__adaptive_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>mpi_interface.c</label>
+        <link refid="mpi__interface_8c"/>
+      </node>
+      <node id="9">
+        <label>mpi_interface.h</label>
+        <link refid="mpi__interface_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>libascot.c</label>
+        <link refid="libascot_8c"/>
+      </node>
+      <node id="14">
+        <label>hdf5_interface.c</label>
+        <link refid="hdf5__interface_8c"/>
+      </node>
+      <node id="27">
+        <label>hdf5_interface.h</label>
+        <link refid="hdf5__interface_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>diag/diag_transcoef.c</label>
+        <link refid="diag__transcoef_8c"/>
+      </node>
+      <node id="1">
+        <label>diag/diag_transcoef.h</label>
+        <link refid="diag__transcoef_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>bbnbi5.c</label>
+        <link refid="bbnbi5_8c"/>
+      </node>
+      <node id="12">
+        <label>hdf5io/hdf5_nbi.c</label>
+        <link refid="hdf5__nbi_8c"/>
+      </node>
+      <node id="13">
+        <label>hdf5io/hdf5_nbi.h</label>
+        <link refid="hdf5__nbi_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structdiag__transcoef__link" prot="public">diag_transcoef_link</innerclass>
+    <innerclass refid="structdiag__transcoef__offload__data" prot="public">diag_transcoef_offload_data</innerclass>
+    <innerclass refid="structdiag__transcoef__data" prot="public">diag_transcoef_data</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="diag__transcoef_8h_1aa3759d2e475158e064648c770af9e781" prot="public" static="no">
+        <type>struct <ref refid="structdiag__transcoef__link" kindref="compound">diag_transcoef_link</ref></type>
+        <definition>typedef struct diag_transcoef_link diag_transcoef_link</definition>
+        <argsstring></argsstring>
+        <name>diag_transcoef_link</name>
+        <briefdescription>
+<para>Simple linked list link for storing data points. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="diag/diag_transcoef.h" line="21" column="20"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="diag__transcoef_8h_1ab8d983ad1ded176a70aa7fe8df781eae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void diag_transcoef_init</definition>
+        <argsstring>(diag_transcoef_data *data, diag_transcoef_offload_data *offload_data, real *offload_array)</argsstring>
+        <name>diag_transcoef_init</name>
+        <param>
+          <type><ref refid="structdiag__transcoef__data" kindref="compound">diag_transcoef_data</ref> *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type><ref refid="structdiag__transcoef__offload__data" kindref="compound">diag_transcoef_offload_data</ref> *</type>
+          <declname>offload_data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>offload_array</declname>
+        </param>
+        <briefdescription>
+<para>Initializes orbit diagnostics offload data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>transport coefficient diagnostics data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>transport coefficient diagnostics offload data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>offload data array </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="diag/diag_transcoef.h" line="53" column="6" bodyfile="diag/diag_transcoef.c" bodystart="34" bodyend="51" declfile="diag/diag_transcoef.h" declline="53" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="diag__transcoef_8h_1a914f9c237bb8563cf0ea18138ed879d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void diag_transcoef_free</definition>
+        <argsstring>(diag_transcoef_data *data)</argsstring>
+        <name>diag_transcoef_free</name>
+        <param>
+          <type><ref refid="structdiag__transcoef__data" kindref="compound">diag_transcoef_data</ref> *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Free transport coefficient data on target. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>transport coefficient diagnostics data struct </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="diag/diag_transcoef.h" line="57" column="6" bodyfile="diag/diag_transcoef.c" bodystart="58" bodyend="60" declfile="diag/diag_transcoef.h" declline="57" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="diag__transcoef_8h_1a87f98b46dade3b9864da7a7b8403371b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void diag_transcoef_update_fo</definition>
+        <argsstring>(diag_transcoef_data *data, particle_simd_fo *p_f, particle_simd_fo *p_i)</argsstring>
+        <name>diag_transcoef_update_fo</name>
+        <param>
+          <type><ref refid="structdiag__transcoef__data" kindref="compound">diag_transcoef_data</ref> *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type><ref refid="structparticle__simd__fo" kindref="compound">particle_simd_fo</ref> *</type>
+          <declname>p_f</declname>
+        </param>
+        <param>
+          <type><ref refid="structparticle__simd__fo" kindref="compound">particle_simd_fo</ref> *</type>
+          <declname>p_i</declname>
+        </param>
+        <briefdescription>
+<para>Collect transport diagnostics for fo simulation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>transport diagnostics data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to SIMD struct storing marker states at the end of current time-step </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to SIMD struct storing marker states at the beginning of current time-step </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="diag/diag_transcoef.h" line="59" column="6" bodyfile="diag/diag_transcoef.c" bodystart="71" bodyend="94" declfile="diag/diag_transcoef.h" declline="59" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="diag__transcoef_8h_1a68ee7043ac4a17a086e768c53fefa6a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void diag_transcoef_update_gc</definition>
+        <argsstring>(diag_transcoef_data *data, particle_simd_gc *p_f, particle_simd_gc *p_i)</argsstring>
+        <name>diag_transcoef_update_gc</name>
+        <param>
+          <type><ref refid="structdiag__transcoef__data" kindref="compound">diag_transcoef_data</ref> *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type><ref refid="structparticle__simd__gc" kindref="compound">particle_simd_gc</ref> *</type>
+          <declname>p_f</declname>
+        </param>
+        <param>
+          <type><ref refid="structparticle__simd__gc" kindref="compound">particle_simd_gc</ref> *</type>
+          <declname>p_i</declname>
+        </param>
+        <briefdescription>
+<para>Collect transport diagnostics for gc simulation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>transport diagnostics data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to SIMD struct storing marker states at the end of current time-step </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to SIMD struct storing marker states at the beginning of current time-step </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="diag/diag_transcoef.h" line="62" column="6" bodyfile="diag/diag_transcoef.c" bodystart="105" bodyend="126" declfile="diag/diag_transcoef.h" declline="62" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="diag__transcoef_8h_1a1676a3bc35d3f74186e01b0009d951be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void diag_transcoef_update_ml</definition>
+        <argsstring>(diag_transcoef_data *data, particle_simd_ml *p_f, particle_simd_ml *p_i)</argsstring>
+        <name>diag_transcoef_update_ml</name>
+        <param>
+          <type><ref refid="structdiag__transcoef__data" kindref="compound">diag_transcoef_data</ref> *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type><ref refid="structparticle__simd__ml" kindref="compound">particle_simd_ml</ref> *</type>
+          <declname>p_f</declname>
+        </param>
+        <param>
+          <type><ref refid="structparticle__simd__ml" kindref="compound">particle_simd_ml</ref> *</type>
+          <declname>p_i</declname>
+        </param>
+        <briefdescription>
+<para>Collect transport diagnostics for ml simulation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>transport diagnostics data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to SIMD struct storing marker states at the end of current time-step </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to SIMD struct storing marker states at the beginning of current time-step </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="diag/diag_transcoef.h" line="65" column="6" bodyfile="diag/diag_transcoef.c" bodystart="137" bodyend="157" declfile="diag/diag_transcoef.h" declline="65" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Header file for <ref refid="diag__transcoef_8c" kindref="compound">diag_transcoef.c</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Contains definitions for transport coefficient data structures. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>DIAG_TRANSCOEF_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DIAG_TRANSCOEF_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../ascot5.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../particle.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="structdiag__transcoef__link" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdiag__transcoef__link" kindref="compound">diag_transcoef_link</ref>{</highlight></codeline>
+<codeline lineno="17" refid="structdiag__transcoef__link_1a62194c33f160963bdc1e8aa345848c9c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structdiag__transcoef__link_1a62194c33f160963bdc1e8aa345848c9c" kindref="member">rho</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="18" refid="structdiag__transcoef__link_1ac5e840bcb6942030b507d67cb36ebc2f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structdiag__transcoef__link_1ac5e840bcb6942030b507d67cb36ebc2f" kindref="member">time</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="19" refid="structdiag__transcoef__link_1a9826b1ce491ec1c40557a24d771c9df9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structdiag__transcoef__link_1a9826b1ce491ec1c40557a24d771c9df9" kindref="member">pitchsign</ref>;<sp/></highlight></codeline>
+<codeline lineno="20" refid="structdiag__transcoef__link_1a6881c727e1e823a08280c8d7ea377ba9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdiag__transcoef__link" kindref="compound">diag_transcoef_link</ref>*<sp/><ref refid="structdiag__transcoef__link_1a6881c727e1e823a08280c8d7ea377ba9" kindref="member">prevlink</ref>;<sp/></highlight></codeline>
+<codeline lineno="21" refid="diag__transcoef_8h_1aa3759d2e475158e064648c770af9e781" refkind="member"><highlight class="normal">}<ref refid="diag__transcoef_8h_1aa3759d2e475158e064648c770af9e781" kindref="member">diag_transcoef_link</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="structdiag__transcoef__offload__data" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27" refid="structdiag__transcoef__offload__data_1a48f656b4352359b467791dac8ecf6df6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a865b01f4cbb6f2bb3270e094934d3263" kindref="member">integer</ref><sp/><ref refid="structdiag__transcoef__offload__data_1a48f656b4352359b467791dac8ecf6df6" kindref="member">Nmrk</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="28" refid="structdiag__transcoef__offload__data_1aa4cedc2d58e0151753a40c8c650eb89c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structdiag__transcoef__offload__data_1aa4cedc2d58e0151753a40c8c650eb89c" kindref="member">Navg</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="30" refid="structdiag__transcoef__offload__data_1a9d184eaac0989781ab0fc907dbb5118a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structdiag__transcoef__offload__data_1a9d184eaac0989781ab0fc907dbb5118a" kindref="member">recordrho</ref>;<sp/></highlight></codeline>
+<codeline lineno="31" refid="structdiag__transcoef__offload__data_1ae90934ee051fe83bf281accf4a5b4921" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structdiag__transcoef__offload__data_1ae90934ee051fe83bf281accf4a5b4921" kindref="member">interval</ref>;<sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}<ref refid="structdiag__transcoef__offload__data" kindref="compound">diag_transcoef_offload_data</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="structdiag__transcoef__data" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="39" refid="structdiag__transcoef__data_1a178ace37655c6230d1db581bf1c8a092" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structdiag__transcoef__data_1a178ace37655c6230d1db581bf1c8a092" kindref="member">Navg</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="41" refid="structdiag__transcoef__data_1a8fb857b5321bf18b621ffe74de03420b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structdiag__transcoef__data_1a8fb857b5321bf18b621ffe74de03420b" kindref="member">recordrho</ref>;<sp/></highlight></codeline>
+<codeline lineno="42" refid="structdiag__transcoef__data_1ae3c19d7791fe772e9b44388eb01df2e6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structdiag__transcoef__data_1ae3c19d7791fe772e9b44388eb01df2e6" kindref="member">interval</ref>;<sp/></highlight></codeline>
+<codeline lineno="43" refid="structdiag__transcoef__data_1ae72ca36c5baf64e1f7a283f9488f1fb0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structdiag__transcoef__link" kindref="compound">diag_transcoef_link</ref>**<sp/><ref refid="structdiag__transcoef__data_1ae72ca36c5baf64e1f7a283f9488f1fb0" kindref="member">datapoints</ref>;<sp/></highlight></codeline>
+<codeline lineno="45" refid="structdiag__transcoef__data_1afbf71a5c17150d7f906c5be2dc011767" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/><ref refid="structdiag__transcoef__data_1afbf71a5c17150d7f906c5be2dc011767" kindref="member">id</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="46" refid="structdiag__transcoef__data_1aefd94cfa32c4173f38e0d0bb4de84206" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/><ref refid="structdiag__transcoef__data_1aefd94cfa32c4173f38e0d0bb4de84206" kindref="member">Kcoef</ref>;<sp/></highlight></codeline>
+<codeline lineno="47" refid="structdiag__transcoef__data_1a919ef3981fe6a68f879eb23f86994405" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/><ref refid="structdiag__transcoef__data_1a919ef3981fe6a68f879eb23f86994405" kindref="member">Dcoef</ref>;<sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}<ref refid="structdiag__transcoef__data" kindref="compound">diag_transcoef_data</ref>;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>declare<sp/>target</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="diag__transcoef_8h_1ab8d983ad1ded176a70aa7fe8df781eae" kindref="member">diag_transcoef_init</ref>(<ref refid="structdiag__transcoef__data" kindref="compound">diag_transcoef_data</ref>*<sp/>data,</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structdiag__transcoef__offload__data" kindref="compound">diag_transcoef_offload_data</ref>*<sp/>offload_data,</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>offload_array);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="diag__transcoef_8h_1a914f9c237bb8563cf0ea18138ed879d4" kindref="member">diag_transcoef_free</ref>(<ref refid="structdiag__transcoef__data" kindref="compound">diag_transcoef_data</ref>*<sp/>data);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="diag__transcoef_8h_1a87f98b46dade3b9864da7a7b8403371b" kindref="member">diag_transcoef_update_fo</ref>(<ref refid="structdiag__transcoef__data" kindref="compound">diag_transcoef_data</ref>*<sp/>data,</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structparticle__simd__fo" kindref="compound">particle_simd_fo</ref>*<sp/>p_f,<sp/><ref refid="structparticle__simd__fo" kindref="compound">particle_simd_fo</ref>*<sp/>p_i);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="diag__transcoef_8h_1a68ee7043ac4a17a086e768c53fefa6a2" kindref="member">diag_transcoef_update_gc</ref>(<ref refid="structdiag__transcoef__data" kindref="compound">diag_transcoef_data</ref>*<sp/>data,</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structparticle__simd__gc" kindref="compound">particle_simd_gc</ref>*<sp/>p_f,<sp/><ref refid="structparticle__simd__gc" kindref="compound">particle_simd_gc</ref>*<sp/>p_i);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="diag__transcoef_8h_1a1676a3bc35d3f74186e01b0009d951be" kindref="member">diag_transcoef_update_ml</ref>(<ref refid="structdiag__transcoef__data" kindref="compound">diag_transcoef_data</ref>*<sp/>data,</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structparticle__simd__ml" kindref="compound">particle_simd_ml</ref>*<sp/>p_f,<sp/><ref refid="structparticle__simd__ml" kindref="compound">particle_simd_ml</ref>*<sp/>p_i);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>end<sp/>declare<sp/>target</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="diag/diag_transcoef.h"/>
+  </compounddef>
+</doxygen>

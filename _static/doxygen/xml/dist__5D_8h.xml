@@ -1,0 +1,817 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dist__5D_8h" kind="file" language="C++">
+    <compoundname>dist_5D.h</compoundname>
+    <includes refid="ascot5_8h" local="yes">../ascot5.h</includes>
+    <includes refid="particle_8h" local="yes">../particle.h</includes>
+    <includedby refid="afsi_8c" local="yes">afsi.c</includedby>
+    <includedby refid="afsi_8h" local="yes">afsi.h</includedby>
+    <includedby refid="dist__5D_8c" local="yes">diag/dist_5D.c</includedby>
+    <includedby refid="diag_8c" local="yes">diag.c</includedby>
+    <includedby refid="diag_8h" local="yes">diag.h</includedby>
+    <includedby refid="hdf5__dist_8c" local="yes">hdf5io/hdf5_dist.c</includedby>
+    <includedby refid="hdf5__dist_8h" local="yes">hdf5io/hdf5_dist.h</includedby>
+    <includedby refid="hdf5__options_8c" local="yes">hdf5io/hdf5_options.c</includedby>
+    <includedby refid="nbi_8c" local="yes">nbi.c</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>diag/dist_5D.h</label>
+        <link refid="dist__5D_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>../particle.h</label>
+        <link refid="particle_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>../spline/interp.h</label>
+        <link refid="interp_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>Bfield/B_GS.h</label>
+        <link refid="B__GS_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>omp.h</label>
+      </node>
+      <node id="6">
+        <label>B_field.h</label>
+        <link refid="B__field_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>Efield/E_1DS.h</label>
+        <link refid="E__1DS_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>error.h</label>
+        <link refid="error_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>E_field.h</label>
+        <link refid="E__field_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>time.h</label>
+      </node>
+      <node id="16">
+        <label>Bfield/B_TC.h</label>
+        <link refid="B__TC_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>../linint/linint.h</label>
+        <link refid="linint_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>Bfield/B_2DS.h</label>
+        <link refid="B__2DS_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>Efield/E_TC.h</label>
+        <link refid="E__TC_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>Bfield/B_3DS.h</label>
+        <link refid="B__3DS_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>math.h</label>
+        <link refid="math_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>stdio.h</label>
+      </node>
+      <node id="14">
+        <label>Bfield/B_STS.h</label>
+        <link refid="B__STS_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>../ascot5.h</label>
+        <link refid="ascot5_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="26">
+        <label>simulate/simulate_ml_adaptive.c</label>
+        <link refid="simulate__ml__adaptive_8c"/>
+      </node>
+      <node id="35">
+        <label>simulate/simulate_ml_adaptive.h</label>
+        <link refid="simulate__ml__adaptive_8h"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>diag/dist_5D.c</label>
+        <link refid="dist__5D_8c"/>
+      </node>
+      <node id="1">
+        <label>diag/dist_5D.h</label>
+        <link refid="dist__5D_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>diag.c</label>
+        <link refid="diag_8c"/>
+      </node>
+      <node id="6">
+        <label>diag.h</label>
+        <link refid="diag_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>simulate.c</label>
+        <link refid="simulate_8c"/>
+      </node>
+      <node id="17">
+        <label>simulate.h</label>
+        <link refid="simulate_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>simulate/simulate_fo_fixed.c</label>
+        <link refid="simulate__fo__fixed_8c"/>
+      </node>
+      <node id="32">
+        <label>simulate/simulate_fo_fixed.h</label>
+        <link refid="simulate__fo__fixed_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>simulate/simulate_gc_fixed.c</label>
+        <link refid="simulate__gc__fixed_8c"/>
+      </node>
+      <node id="7">
+        <label>ascot5_main.c</label>
+        <link refid="ascot5__main_8c"/>
+      </node>
+      <node id="34">
+        <label>simulate/simulate_gc_fixed.h</label>
+        <link refid="simulate__gc__fixed_8h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>ascot5_main.h</label>
+        <link refid="ascot5__main_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>endcond.c</label>
+        <link refid="endcond_8c"/>
+      </node>
+      <node id="22">
+        <label>endcond.h</label>
+        <link refid="endcond_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>hdf5io/hdf5_dist.c</label>
+        <link refid="hdf5__dist_8c"/>
+      </node>
+      <node id="37">
+        <label>hdf5io/hdf5_dist.h</label>
+        <link refid="hdf5__dist_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>afsi.c</label>
+        <link refid="afsi_8c"/>
+      </node>
+      <node id="12">
+        <label>nbi.c</label>
+        <link refid="nbi_8c"/>
+      </node>
+      <node id="3">
+        <label>afsi.h</label>
+        <link refid="afsi_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>nbi.h</label>
+        <link refid="nbi_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>diag/diag_orb.c</label>
+        <link refid="diag__orb_8c"/>
+      </node>
+      <node id="9">
+        <label>hdf5io/hdf5_options.c</label>
+        <link refid="hdf5__options_8c"/>
+      </node>
+      <node id="30">
+        <label>hdf5io/hdf5_options.h</label>
+        <link refid="hdf5__options_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>hdf5io/hdf5_orbit.c</label>
+        <link refid="hdf5__orbit_8c"/>
+      </node>
+      <node id="24">
+        <label>simulate/simulate_gc_adaptive.c</label>
+        <link refid="simulate__gc__adaptive_8c"/>
+      </node>
+      <node id="33">
+        <label>simulate/simulate_gc_adaptive.h</label>
+        <link refid="simulate__gc__adaptive_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>mpi_interface.c</label>
+        <link refid="mpi__interface_8c"/>
+      </node>
+      <node id="11">
+        <label>mpi_interface.h</label>
+        <link refid="mpi__interface_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>libascot.c</label>
+        <link refid="libascot_8c"/>
+      </node>
+      <node id="16">
+        <label>hdf5_interface.c</label>
+        <link refid="hdf5__interface_8c"/>
+      </node>
+      <node id="28">
+        <label>hdf5_interface.h</label>
+        <link refid="hdf5__interface_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>diag/diag_transcoef.c</label>
+        <link refid="diag__transcoef_8c"/>
+      </node>
+      <node id="8">
+        <label>bbnbi5.c</label>
+        <link refid="bbnbi5_8c"/>
+      </node>
+      <node id="14">
+        <label>hdf5io/hdf5_nbi.c</label>
+        <link refid="hdf5__nbi_8c"/>
+      </node>
+      <node id="15">
+        <label>hdf5io/hdf5_nbi.h</label>
+        <link refid="hdf5__nbi_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structdist__5D__offload__data" prot="public">dist_5D_offload_data</innerclass>
+    <innerclass refid="structdist__5D__data" prot="public">dist_5D_data</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="dist__5D_8h_1ac81ab720e5931e55f7f990aee0a7319b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned long</type>
+        <definition>unsigned long dist_5D_index</definition>
+        <argsstring>(int i_r, int i_phi, int i_z, int i_ppara, int i_pperp, int i_time, int i_q, int n_phi, int n_z, int n_ppara, int n_pperp, int n_time, int n_q)</argsstring>
+        <name>dist_5D_index</name>
+        <param>
+          <type>int</type>
+          <declname>i_r</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>i_phi</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>i_z</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>i_ppara</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>i_pperp</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>i_time</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>i_q</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n_phi</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n_z</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n_ppara</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n_pperp</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n_time</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n_q</declname>
+        </param>
+        <briefdescription>
+<para>Internal function calculating the index in the histogram array. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="diag/dist_5D.h" line="80" column="15" bodyfile="diag/dist_5D.c" bodystart="18" bodyend="29" declfile="diag/dist_5D.h" declline="80" declcolumn="15"/>
+      </memberdef>
+      <memberdef kind="function" id="dist__5D_8h_1a5324e9964aa2c3f42080d062800bdb45" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dist_5D_init</definition>
+        <argsstring>(dist_5D_data *dist_data, dist_5D_offload_data *offload_data, real *offload_array)</argsstring>
+        <name>dist_5D_init</name>
+        <param>
+          <type><ref refid="structdist__5D__data" kindref="compound">dist_5D_data</ref> *</type>
+          <declname>dist_data</declname>
+        </param>
+        <param>
+          <type><ref refid="structdist__5D__offload__data" kindref="compound">dist_5D_offload_data</ref> *</type>
+          <declname>offload_data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>offload_array</declname>
+        </param>
+        <briefdescription>
+<para>Initializes distribution from offload data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dist_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>offload array </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="diag/dist_5D.h" line="84" column="6" bodyfile="diag/dist_5D.c" bodystart="62" bodyend="93" declfile="diag/dist_5D.h" declline="84" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="dist__5D_8h_1a79bdbcde10462af101c7909fc9fe2595" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dist_5D_update_fo</definition>
+        <argsstring>(dist_5D_data *dist, particle_simd_fo *p_f, particle_simd_fo *p_i)</argsstring>
+        <name>dist_5D_update_fo</name>
+        <param>
+          <type><ref refid="structdist__5D__data" kindref="compound">dist_5D_data</ref> *</type>
+          <declname>dist</declname>
+        </param>
+        <param>
+          <type><ref refid="structparticle__simd__fo" kindref="compound">particle_simd_fo</ref> *</type>
+          <declname>p_f</declname>
+        </param>
+        <param>
+          <type><ref refid="structparticle__simd__fo" kindref="compound">particle_simd_fo</ref> *</type>
+          <declname>p_i</declname>
+        </param>
+        <briefdescription>
+<para>Update the histogram from full-orbit particles. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function updates the histogram from the particle data. Bins are calculated as vector op and histogram is updates as an atomic operation to avoid race conditions.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dist</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to distribution parameter struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to SIMD particle struct at the end of current time step </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to SIMD particle struct at the start of current time step </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="diag/dist_5D.h" line="87" column="6" bodyfile="diag/dist_5D.c" bodystart="106" bodyend="190" declfile="diag/dist_5D.h" declline="87" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="dist__5D_8h_1a1c4dc3fabef916fe84509c29767cc46b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dist_5D_update_gc</definition>
+        <argsstring>(dist_5D_data *dist, particle_simd_gc *p_f, particle_simd_gc *p_i)</argsstring>
+        <name>dist_5D_update_gc</name>
+        <param>
+          <type><ref refid="structdist__5D__data" kindref="compound">dist_5D_data</ref> *</type>
+          <declname>dist</declname>
+        </param>
+        <param>
+          <type><ref refid="structparticle__simd__gc" kindref="compound">particle_simd_gc</ref> *</type>
+          <declname>p_f</declname>
+        </param>
+        <param>
+          <type><ref refid="structparticle__simd__gc" kindref="compound">particle_simd_gc</ref> *</type>
+          <declname>p_i</declname>
+        </param>
+        <briefdescription>
+<para>Update the histogram from guiding center markers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function updates the histogram from the marker data. Bins are calculated as vector op and histogram is updates as an atomic operation to avoid race conditions.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dist</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to distribution parameter struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to SIMD gc struct at the end of current time step </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to SIMD gc struct at the start of current time step </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="diag/dist_5D.h" line="89" column="6" bodyfile="diag/dist_5D.c" bodystart="203" bodyend="280" declfile="diag/dist_5D.h" declline="89" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Header file for <ref refid="dist__5D_8c" kindref="compound">dist_5D.c</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>DIST_5D_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DIST_5D_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../ascot5.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../particle.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="structdist__5D__offload__data" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15" refid="structdist__5D__offload__data_1a3a4cf2862747e9526878fc6872aa0031" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structdist__5D__offload__data_1a3a4cf2862747e9526878fc6872aa0031" kindref="member">n_r</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="16" refid="structdist__5D__offload__data_1a650be27cff551acab0a356e375e95914" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structdist__5D__offload__data_1a650be27cff551acab0a356e375e95914" kindref="member">min_r</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="17" refid="structdist__5D__offload__data_1a00bfe77f5b7f949e38ed7225f57a5775" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structdist__5D__offload__data_1a00bfe77f5b7f949e38ed7225f57a5775" kindref="member">max_r</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="19" refid="structdist__5D__offload__data_1a4b4d47dcfd64dd5f62485b3639a8e0a8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structdist__5D__offload__data_1a4b4d47dcfd64dd5f62485b3639a8e0a8" kindref="member">n_phi</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20" refid="structdist__5D__offload__data_1a77f7d5f0d61e4c3d3b843da646d76007" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structdist__5D__offload__data_1a77f7d5f0d61e4c3d3b843da646d76007" kindref="member">min_phi</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="21" refid="structdist__5D__offload__data_1a57372c51cdfd2579b8875a144f856358" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structdist__5D__offload__data_1a57372c51cdfd2579b8875a144f856358" kindref="member">max_phi</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="23" refid="structdist__5D__offload__data_1a35da14d74409c4e4e05f736202dd4bfe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structdist__5D__offload__data_1a35da14d74409c4e4e05f736202dd4bfe" kindref="member">n_z</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="24" refid="structdist__5D__offload__data_1a08c6333da74d9a2f835c00c2f2cac639" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structdist__5D__offload__data_1a08c6333da74d9a2f835c00c2f2cac639" kindref="member">min_z</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="25" refid="structdist__5D__offload__data_1a3fcad184dd2cc56aa24d27c2abcfbc57" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structdist__5D__offload__data_1a3fcad184dd2cc56aa24d27c2abcfbc57" kindref="member">max_z</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="27" refid="structdist__5D__offload__data_1a13905a27c3413aa064c852ba4a3c1330" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structdist__5D__offload__data_1a13905a27c3413aa064c852ba4a3c1330" kindref="member">n_ppara</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="28" refid="structdist__5D__offload__data_1a8d6c99b6fec35054cc036b4349dcab91" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structdist__5D__offload__data_1a8d6c99b6fec35054cc036b4349dcab91" kindref="member">min_ppara</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="29" refid="structdist__5D__offload__data_1a7b74c14cd8f4229e007c3a33160f4b5f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structdist__5D__offload__data_1a7b74c14cd8f4229e007c3a33160f4b5f" kindref="member">max_ppara</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="31" refid="structdist__5D__offload__data_1aec2faec072adcd6eaf93e511a6b343c5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structdist__5D__offload__data_1aec2faec072adcd6eaf93e511a6b343c5" kindref="member">n_pperp</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="32" refid="structdist__5D__offload__data_1aa645a6748c2137a42db00ec93bc53682" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structdist__5D__offload__data_1aa645a6748c2137a42db00ec93bc53682" kindref="member">min_pperp</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="33" refid="structdist__5D__offload__data_1aebda7473849744fb43ce4d0d255ebb75" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structdist__5D__offload__data_1aebda7473849744fb43ce4d0d255ebb75" kindref="member">max_pperp</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="35" refid="structdist__5D__offload__data_1abec2d6748b7f9a08b900b4ee362da465" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structdist__5D__offload__data_1abec2d6748b7f9a08b900b4ee362da465" kindref="member">n_time</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="36" refid="structdist__5D__offload__data_1ac28ec971133212656678d7d302f304fd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structdist__5D__offload__data_1ac28ec971133212656678d7d302f304fd" kindref="member">min_time</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="37" refid="structdist__5D__offload__data_1ac073bc748a79310ba3ddc59551eb1d18" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structdist__5D__offload__data_1ac073bc748a79310ba3ddc59551eb1d18" kindref="member">max_time</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="39" refid="structdist__5D__offload__data_1ad5462a6532aa2dfc348c193c478d805b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structdist__5D__offload__data_1ad5462a6532aa2dfc348c193c478d805b" kindref="member">n_q</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="40" refid="structdist__5D__offload__data_1a0545a9d8f0be9c00d16de1d69ab12189" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structdist__5D__offload__data_1a0545a9d8f0be9c00d16de1d69ab12189" kindref="member">min_q</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="41" refid="structdist__5D__offload__data_1a64960bb514c6099ddbea965f02fbbf45" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structdist__5D__offload__data_1a64960bb514c6099ddbea965f02fbbf45" kindref="member">max_q</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}<sp/><ref refid="structdist__5D__offload__data" kindref="compound">dist_5D_offload_data</ref>;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="structdist__5D__data" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="48" refid="structdist__5D__data_1abc462bbc3033b1bc805a66be29a55a64" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structdist__5D__data_1abc462bbc3033b1bc805a66be29a55a64" kindref="member">n_r</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="49" refid="structdist__5D__data_1ad29b6d5b1e5c0ecaaca490ac3dfa862e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structdist__5D__data_1ad29b6d5b1e5c0ecaaca490ac3dfa862e" kindref="member">min_r</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="50" refid="structdist__5D__data_1a2c97ded5d14db8c0fc90d39c357ef1b5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structdist__5D__data_1a2c97ded5d14db8c0fc90d39c357ef1b5" kindref="member">max_r</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="52" refid="structdist__5D__data_1a80d23047d67075c02e64ee842064a0a6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structdist__5D__data_1a80d23047d67075c02e64ee842064a0a6" kindref="member">n_phi</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="53" refid="structdist__5D__data_1a4255aec81d38b85cf51bc5c8feef247f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structdist__5D__data_1a4255aec81d38b85cf51bc5c8feef247f" kindref="member">min_phi</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="54" refid="structdist__5D__data_1a57cd918d59fe4f17d7d99625eb610dc5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structdist__5D__data_1a57cd918d59fe4f17d7d99625eb610dc5" kindref="member">max_phi</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="56" refid="structdist__5D__data_1a1b670354fa7058fa2d02fbb367f50515" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structdist__5D__data_1a1b670354fa7058fa2d02fbb367f50515" kindref="member">n_z</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="57" refid="structdist__5D__data_1abc07be198eb336381fbfcaef670f9517" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structdist__5D__data_1abc07be198eb336381fbfcaef670f9517" kindref="member">min_z</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="58" refid="structdist__5D__data_1a7c6ca2458e006efb0d62c961acf43af3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structdist__5D__data_1a7c6ca2458e006efb0d62c961acf43af3" kindref="member">max_z</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="60" refid="structdist__5D__data_1aa76d706d6f6541541a07d3be5de7f663" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structdist__5D__data_1aa76d706d6f6541541a07d3be5de7f663" kindref="member">n_ppara</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="61" refid="structdist__5D__data_1a634936a63468f53f2d1fdb3f98b56b1c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structdist__5D__data_1a634936a63468f53f2d1fdb3f98b56b1c" kindref="member">min_ppara</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="62" refid="structdist__5D__data_1ac79d7d3ce25cc9a8caa23db7075219a7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structdist__5D__data_1ac79d7d3ce25cc9a8caa23db7075219a7" kindref="member">max_ppara</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="64" refid="structdist__5D__data_1ab892f6197d07ab80b6fbf41462611ba6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structdist__5D__data_1ab892f6197d07ab80b6fbf41462611ba6" kindref="member">n_pperp</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="65" refid="structdist__5D__data_1ae82796d807673dd05c09ebdc67164aa9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structdist__5D__data_1ae82796d807673dd05c09ebdc67164aa9" kindref="member">min_pperp</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="66" refid="structdist__5D__data_1a2fcf9a779f550f0ae96445f51a3a3882" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structdist__5D__data_1a2fcf9a779f550f0ae96445f51a3a3882" kindref="member">max_pperp</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="68" refid="structdist__5D__data_1a8a3cbbaf6c10d9289b0e3f0c494b0670" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structdist__5D__data_1a8a3cbbaf6c10d9289b0e3f0c494b0670" kindref="member">n_time</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="69" refid="structdist__5D__data_1a1f2987d68f327941f4542daadd659f48" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structdist__5D__data_1a1f2987d68f327941f4542daadd659f48" kindref="member">min_time</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="70" refid="structdist__5D__data_1a89fac3e19ff9d4d699d10392e95280cb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structdist__5D__data_1a89fac3e19ff9d4d699d10392e95280cb" kindref="member">max_time</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="72" refid="structdist__5D__data_1a7c55b4c2350f948333c1ec948730fe6b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structdist__5D__data_1a7c55b4c2350f948333c1ec948730fe6b" kindref="member">n_q</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="73" refid="structdist__5D__data_1aea54bf73ec2faca860415518f6571864" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structdist__5D__data_1aea54bf73ec2faca860415518f6571864" kindref="member">min_q</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="74" refid="structdist__5D__data_1ae3a4b27e051ba09aed3339348f562de0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structdist__5D__data_1ae3a4b27e051ba09aed3339348f562de0" kindref="member">max_q</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="76" refid="structdist__5D__data_1ae5ca4e6ef70c74ebf55efebcdacc4dba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/><ref refid="structdist__5D__data_1ae5ca4e6ef70c74ebf55efebcdacc4dba" kindref="member">histogram</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="77"><highlight class="normal">}<sp/><ref refid="structdist__5D__data" kindref="compound">dist_5D_data</ref>;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>declare<sp/>target</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="dist__5D_8h_1ac81ab720e5931e55f7f990aee0a7319b" kindref="member">dist_5D_index</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i_r,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i_phi,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i_z,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i_ppara,</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i_pperp,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i_time,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i_q,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n_phi,</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n_z,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n_ppara,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n_pperp,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n_time,</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n_q);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dist__5D_8h_1a5324e9964aa2c3f42080d062800bdb45" kindref="member">dist_5D_init</ref>(<ref refid="structdist__5D__data" kindref="compound">dist_5D_data</ref>*<sp/>dist_data,</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structdist__5D__offload__data" kindref="compound">dist_5D_offload_data</ref>*<sp/>offload_data,</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>offload_array);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dist__5D_8h_1a79bdbcde10462af101c7909fc9fe2595" kindref="member">dist_5D_update_fo</ref>(<ref refid="structdist__5D__data" kindref="compound">dist_5D_data</ref>*<sp/>dist,<sp/><ref refid="structparticle__simd__fo" kindref="compound">particle_simd_fo</ref>*<sp/>p_f,</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structparticle__simd__fo" kindref="compound">particle_simd_fo</ref>*<sp/>p_i);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dist__5D_8h_1a1c4dc3fabef916fe84509c29767cc46b" kindref="member">dist_5D_update_gc</ref>(<ref refid="structdist__5D__data" kindref="compound">dist_5D_data</ref>*<sp/>dist,<sp/><ref refid="structparticle__simd__gc" kindref="compound">particle_simd_gc</ref>*<sp/>p_f,</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structparticle__simd__gc" kindref="compound">particle_simd_gc</ref>*<sp/>p_i);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>end<sp/>declare<sp/>target</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="diag/dist_5D.h"/>
+  </compounddef>
+</doxygen>

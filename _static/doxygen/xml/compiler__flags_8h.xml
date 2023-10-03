@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="compiler__flags_8h" kind="file" language="C++">
+    <compoundname>compiler_flags.h</compoundname>
+    <includedby refid="hdf5__interface_8c" local="yes">hdf5_interface.c</includedby>
+    <invincdepgraph>
+      <node id="1">
+        <label>compiler_flags.h</label>
+        <link refid="compiler__flags_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hdf5_interface.c</label>
+        <link refid="hdf5__interface_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="compiler__flags_8h_1ad96068ccba4fb10c1ecd2faac6ca9935" prot="public" static="no">
+        <name>CFLAGS</name>
+        <initializer>-O2 -lm -Wall -fopenmp -fPIC -std=c11 -DVERBOSE=1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler_flags.h" line="1" column="9" bodyfile="compiler_flags.h" bodystart="1" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="compiler__flags_8h_1a78d126676907aa89a0adbfbef8282585" prot="public" static="no">
+        <name>CC</name>
+        <initializer>h5cc</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler_flags.h" line="2" column="9" bodyfile="compiler_flags.h" bodystart="2" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#define<sp/>CFLAGS<sp/><sp/>-O2<sp/>-lm<sp/>-Wall<sp/>-fopenmp<sp/>-fPIC<sp/>-std=c11<sp/>-DVERBOSE=1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CC<sp/><sp/>h5cc</highlight></codeline>
+    </programlisting>
+    <location file="compiler_flags.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structdiag__transcoef__data" kind="struct" language="C++" prot="public">
+    <compoundname>diag_transcoef_data</compoundname>
+    <includes refid="diag__transcoef_8h" local="no">diag_transcoef.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structdiag__transcoef__data_1a178ace37655c6230d1db581bf1c8a092" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int diag_transcoef_data::Navg</definition>
+        <argsstring></argsstring>
+        <name>Navg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Data is divided into subarrays of length Navg, before taking average value and evaluating K and D <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="diag/diag_transcoef.h" line="39" column="9" bodyfile="diag/diag_transcoef.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdiag__transcoef__data_1a8fb857b5321bf18b621ffe74de03420b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int diag_transcoef_data::recordrho</definition>
+        <argsstring></argsstring>
+        <name>recordrho</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Flag for whether the spatial unit is rho or R. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="diag/diag_transcoef.h" line="41" column="9" bodyfile="diag/diag_transcoef.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdiag__transcoef__data_1ae3c19d7791fe772e9b44388eb01df2e6" prot="public" static="no" mutable="no">
+        <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+        <definition>real diag_transcoef_data::interval</definition>
+        <argsstring></argsstring>
+        <name>interval</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Interval at which markers are recorded. <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="diag/diag_transcoef.h" line="42" column="10" bodyfile="diag/diag_transcoef.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdiag__transcoef__data_1ae72ca36c5baf64e1f7a283f9488f1fb0" prot="public" static="no" mutable="no">
+        <type><ref refid="structdiag__transcoef__link" kindref="compound">diag_transcoef_link</ref> **</type>
+        <definition>diag_transcoef_link** diag_transcoef_data::datapoints</definition>
+        <argsstring></argsstring>
+        <name>datapoints</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Temporary data storage <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="diag/diag_transcoef.h" line="43" column="25" bodyfile="diag/diag_transcoef.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdiag__transcoef__data_1afbf71a5c17150d7f906c5be2dc011767" prot="public" static="no" mutable="no">
+        <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+        <definition>real* diag_transcoef_data::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Marker ID whose data is stored at this index <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="diag/diag_transcoef.h" line="45" column="10" bodyfile="diag/diag_transcoef.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdiag__transcoef__data_1aefd94cfa32c4173f38e0d0bb4de84206" prot="public" static="no" mutable="no">
+        <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+        <definition>real* diag_transcoef_data::Kcoef</definition>
+        <argsstring></argsstring>
+        <name>Kcoef</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Calculated drift coefficients <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="diag/diag_transcoef.h" line="46" column="10" bodyfile="diag/diag_transcoef.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdiag__transcoef__data_1a919ef3981fe6a68f879eb23f86994405" prot="public" static="no" mutable="no">
+        <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+        <definition>real* diag_transcoef_data::Dcoef</definition>
+        <argsstring></argsstring>
+        <name>Dcoef</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Calculated diffusion coefficients where negative value means coefficients are/were not calculated <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="diag/diag_transcoef.h" line="47" column="10" bodyfile="diag/diag_transcoef.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Transport coefficient diagnostics offload data struct. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>diag_transcoef_link</label>
+        <link refid="structdiag__transcoef__link"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>prevlink</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>diag_transcoef_data</label>
+        <link refid="structdiag__transcoef__data"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>datapoints</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="diag/diag_transcoef.h" line="38" column="1" bodyfile="diag/diag_transcoef.h" bodystart="38" bodyend="50"/>
+    <listofallmembers>
+      <member refid="structdiag__transcoef__data_1ae72ca36c5baf64e1f7a283f9488f1fb0" prot="public" virt="non-virtual"><scope>diag_transcoef_data</scope><name>datapoints</name></member>
+      <member refid="structdiag__transcoef__data_1a919ef3981fe6a68f879eb23f86994405" prot="public" virt="non-virtual"><scope>diag_transcoef_data</scope><name>Dcoef</name></member>
+      <member refid="structdiag__transcoef__data_1afbf71a5c17150d7f906c5be2dc011767" prot="public" virt="non-virtual"><scope>diag_transcoef_data</scope><name>id</name></member>
+      <member refid="structdiag__transcoef__data_1ae3c19d7791fe772e9b44388eb01df2e6" prot="public" virt="non-virtual"><scope>diag_transcoef_data</scope><name>interval</name></member>
+      <member refid="structdiag__transcoef__data_1aefd94cfa32c4173f38e0d0bb4de84206" prot="public" virt="non-virtual"><scope>diag_transcoef_data</scope><name>Kcoef</name></member>
+      <member refid="structdiag__transcoef__data_1a178ace37655c6230d1db581bf1c8a092" prot="public" virt="non-virtual"><scope>diag_transcoef_data</scope><name>Navg</name></member>
+      <member refid="structdiag__transcoef__data_1a8fb857b5321bf18b621ffe74de03420b" prot="public" virt="non-virtual"><scope>diag_transcoef_data</scope><name>recordrho</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

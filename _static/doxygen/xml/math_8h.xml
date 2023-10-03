@@ -1,0 +1,3252 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="math_8h" kind="file" language="C++">
+    <compoundname>math.h</compoundname>
+    <includes refid="math_8h" local="no">math.h</includes>
+    <includes refid="ascot5_8h" local="yes">ascot5.h</includes>
+    <includedby refid="afsi_8c" local="no">afsi.c</includedby>
+    <includedby refid="afsi_8h" local="no">afsi.h</includedby>
+    <includedby refid="ascot5__main_8c" local="no">ascot5_main.c</includedby>
+    <includedby refid="asigma__loc_8c" local="yes">asigma/asigma_loc.c</includedby>
+    <includedby refid="asigma_8c" local="no">asigma.c</includedby>
+    <includedby refid="bbnbi5_8c" local="no">bbnbi5.c</includedby>
+    <includedby refid="B__2DS_8c" local="no">Bfield/B_2DS.c</includedby>
+    <includedby refid="B__3DS_8c" local="no">Bfield/B_3DS.c</includedby>
+    <includedby refid="B__GS_8c" local="no">Bfield/B_GS.c</includedby>
+    <includedby refid="B__STS_8c" local="no">Bfield/B_STS.c</includedby>
+    <includedby refid="B__TC_8c" local="no">Bfield/B_TC.c</includedby>
+    <includedby refid="biosaw_8c" local="yes">biosaw.c</includedby>
+    <includedby refid="boozer_8c" local="no">boozer.c</includedby>
+    <includedby refid="boschhale_8c" local="no">boschhale.c</includedby>
+    <includedby refid="diag__orb_8c" local="no">diag/diag_orb.c</includedby>
+    <includedby refid="diag__transcoef_8c" local="no">diag/diag_transcoef.c</includedby>
+    <includedby refid="dist__5D_8c" local="no">diag/dist_5D.c</includedby>
+    <includedby refid="dist__6D_8c" local="no">diag/dist_6D.c</includedby>
+    <includedby refid="dist__com_8c" local="no">diag/dist_com.c</includedby>
+    <includedby refid="dist__rho5D_8c" local="no">diag/dist_rho5D.c</includedby>
+    <includedby refid="dist__rho6D_8c" local="no">diag/dist_rho6D.c</includedby>
+    <includedby refid="E__TC_8c" local="yes">Efield/E_TC.c</includedby>
+    <includedby refid="endcond_8c" local="no">endcond.c</includedby>
+    <includedby refid="error_8c" local="no">error.c</includedby>
+    <includedby refid="error_8h" local="no">error.h</includedby>
+    <includedby refid="gctransform_8c" local="no">gctransform.c</includedby>
+    <includedby refid="hdf5__bfield_8c" local="no">hdf5io/hdf5_bfield.c</includedby>
+    <includedby refid="hdf5__dist_8c" local="yes">hdf5io/hdf5_dist.c</includedby>
+    <includedby refid="hdf5__helpers_8c" local="no">hdf5io/hdf5_helpers.c</includedby>
+    <includedby refid="hdf5__marker_8c" local="yes">hdf5io/hdf5_marker.c</includedby>
+    <includedby refid="hdf5__neutral_8c" local="yes">hdf5io/hdf5_neutral.c</includedby>
+    <includedby refid="hdf5__options_8c" local="yes">hdf5io/hdf5_options.c</includedby>
+    <includedby refid="hdf5__orbit_8c" local="no">hdf5io/hdf5_orbit.c</includedby>
+    <includedby refid="hdf5__transcoef_8c" local="no">hdf5io/hdf5_transcoef.c</includedby>
+    <includedby refid="libascot_8c" local="no">libascot.c</includedby>
+    <includedby refid="linint1D_8c" local="no">linint/linint1D.c</includedby>
+    <includedby refid="linint2D_8c" local="no">linint/linint2D.c</includedby>
+    <includedby refid="linint3D_8c" local="no">linint/linint3D.c</includedby>
+    <includedby refid="math_8c" local="no">math.c</includedby>
+    <includedby refid="math_8h" local="no">math.h</includedby>
+    <includedby refid="mhd__nonstat_8c" local="yes">mhd/mhd_nonstat.c</includedby>
+    <includedby refid="mhd__stat_8c" local="yes">mhd/mhd_stat.c</includedby>
+    <includedby refid="nbi_8c" local="no">nbi.c</includedby>
+    <includedby refid="N0__1D_8c" local="no">neutral/N0_1D.c</includedby>
+    <includedby refid="N0__3D_8c" local="no">neutral/N0_3D.c</includedby>
+    <includedby refid="particle_8c" local="no">particle.c</includedby>
+    <includedby refid="physlib_8h" local="no">physlib.h</includedby>
+    <includedby refid="plasma__1D_8c" local="no">plasma/plasma_1D.c</includedby>
+    <includedby refid="plasma__1DS_8c" local="no">plasma/plasma_1DS.c</includedby>
+    <includedby refid="plasma__1Dt_8c" local="no">plasma/plasma_1Dt.c</includedby>
+    <includedby refid="random_8c" local="no">random.c</includedby>
+    <includedby refid="atomic_8c" local="yes">simulate/atomic.c</includedby>
+    <includedby refid="mccc_8c" local="no">simulate/mccc/mccc.c</includedby>
+    <includedby refid="mccc__coefs_8h" local="no">simulate/mccc/mccc_coefs.h</includedby>
+    <includedby refid="mccc__fo__euler_8c" local="no">simulate/mccc/mccc_fo_euler.c</includedby>
+    <includedby refid="mccc__gc__euler_8c" local="no">simulate/mccc/mccc_gc_euler.c</includedby>
+    <includedby refid="mccc__gc__milstein_8c" local="no">simulate/mccc/mccc_gc_milstein.c</includedby>
+    <includedby refid="mccc__wiener_8c" local="no">simulate/mccc/mccc_wiener.c</includedby>
+    <includedby refid="simulate__fo__fixed_8c" local="no">simulate/simulate_fo_fixed.c</includedby>
+    <includedby refid="simulate__gc__adaptive_8c" local="no">simulate/simulate_gc_adaptive.c</includedby>
+    <includedby refid="simulate__gc__fixed_8c" local="no">simulate/simulate_gc_fixed.c</includedby>
+    <includedby refid="simulate__ml__adaptive_8c" local="no">simulate/simulate_ml_adaptive.c</includedby>
+    <includedby refid="step__fo__vpa_8c" local="no">simulate/step/step_fo_vpa.c</includedby>
+    <includedby refid="step__gc__cashkarp_8c" local="no">simulate/step/step_gc_cashkarp.c</includedby>
+    <includedby refid="step__gc__rk4_8c" local="no">simulate/step/step_gc_rk4.c</includedby>
+    <includedby refid="step__gceom_8h" local="no">simulate/step/step_gceom.h</includedby>
+    <includedby refid="step__gceom__mhd_8h" local="no">simulate/step/step_gceom_mhd.h</includedby>
+    <includedby refid="step__ml__cashkarp_8c" local="no">simulate/step/step_ml_cashkarp.c</includedby>
+    <includedby refid="interp1Dcomp_8c" local="no">spline/interp1Dcomp.c</includedby>
+    <includedby refid="interp1Dexpl_8c" local="no">spline/interp1Dexpl.c</includedby>
+    <includedby refid="interp2Dcomp_8c" local="no">spline/interp2Dcomp.c</includedby>
+    <includedby refid="interp2Dexpl_8c" local="no">spline/interp2Dexpl.c</includedby>
+    <includedby refid="interp3Dcomp_8c" local="no">spline/interp3Dcomp.c</includedby>
+    <includedby refid="interp3Dexpl_8c" local="no">spline/interp3Dexpl.c</includedby>
+    <includedby refid="suzuki_8c" local="no">suzuki.c</includedby>
+    <includedby refid="wall__2d_8c" local="no">wall/wall_2d.c</includedby>
+    <includedby refid="wall__3d_8c" local="no">wall/wall_3d.c</includedby>
+    <includedby refid="wall_8c" local="no">wall.c</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>omp.h</label>
+      </node>
+      <node id="4">
+        <label>time.h</label>
+      </node>
+      <node id="1">
+        <label>math.h</label>
+        <link refid="math_8h"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ascot5.h</label>
+        <link refid="ascot5_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="21">
+        <label>diag/dist_rho5D.c</label>
+        <link refid="dist__rho5D_8c"/>
+      </node>
+      <node id="43">
+        <label>simulate/simulate_ml_adaptive.c</label>
+        <link refid="simulate__ml__adaptive_8c"/>
+      </node>
+      <node id="96">
+        <label>diag/dist_rho5D.h</label>
+        <link refid="dist__rho5D_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="53">
+        <label>simulate/simulate_ml_adaptive.h</label>
+        <link refid="simulate__ml__adaptive_8h"/>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+      </node>
+      <node id="153">
+        <label>suzuki.c</label>
+        <link refid="suzuki_8c"/>
+      </node>
+      <node id="154">
+        <label>suzuki.h</label>
+        <link refid="suzuki_8h"/>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="153" relation="include">
+        </childnode>
+      </node>
+      <node id="128">
+        <label>plasma.c</label>
+        <link refid="plasma_8c"/>
+      </node>
+      <node id="129">
+        <label>plasma.h</label>
+        <link refid="plasma_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="127" relation="include">
+        </childnode>
+        <childnode refid="130" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="128" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="104" relation="include">
+        </childnode>
+        <childnode refid="107" relation="include">
+        </childnode>
+        <childnode refid="108" relation="include">
+        </childnode>
+        <childnode refid="109" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="150">
+        <label>spline/interp3Dexpl.c</label>
+        <link refid="interp3Dexpl_8c"/>
+      </node>
+      <node id="18">
+        <label>diag/dist_5D.c</label>
+        <link refid="dist__5D_8c"/>
+      </node>
+      <node id="155">
+        <label>gctransform.c</label>
+        <link refid="gctransform_8c"/>
+      </node>
+      <node id="94">
+        <label>diag/dist_5D.h</label>
+        <link refid="dist__5D_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+      </node>
+      <node id="148">
+        <label>spline/interp2Dexpl.c</label>
+        <link refid="interp2Dexpl_8c"/>
+      </node>
+      <node id="146">
+        <label>spline/interp1Dexpl.c</label>
+        <link refid="interp1Dexpl_8c"/>
+      </node>
+      <node id="87">
+        <label>particle.c</label>
+        <link refid="particle_8c"/>
+      </node>
+      <node id="38">
+        <label>diag.c</label>
+        <link refid="diag_8c"/>
+      </node>
+      <node id="88">
+        <label>particle.h</label>
+        <link refid="particle_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="89" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="91" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="94" relation="include">
+        </childnode>
+        <childnode refid="95" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="96" relation="include">
+        </childnode>
+        <childnode refid="97" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="98" relation="include">
+        </childnode>
+        <childnode refid="99" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="100" relation="include">
+        </childnode>
+        <childnode refid="101" relation="include">
+        </childnode>
+        <childnode refid="102" relation="include">
+        </childnode>
+        <childnode refid="103" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="87" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="104" relation="include">
+        </childnode>
+        <childnode refid="107" relation="include">
+        </childnode>
+        <childnode refid="108" relation="include">
+        </childnode>
+        <childnode refid="109" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+      </node>
+      <node id="76">
+        <label>diag.h</label>
+        <link refid="diag_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>simulate.c</label>
+        <link refid="simulate_8c"/>
+      </node>
+      <node id="137">
+        <label>spline/interp.h</label>
+        <link refid="interp_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="115" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="116" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="138" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="110" relation="include">
+        </childnode>
+        <childnode refid="111" relation="include">
+        </childnode>
+        <childnode refid="139" relation="include">
+        </childnode>
+        <childnode refid="140" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="131" relation="include">
+        </childnode>
+        <childnode refid="132" relation="include">
+        </childnode>
+        <childnode refid="145" relation="include">
+        </childnode>
+        <childnode refid="146" relation="include">
+        </childnode>
+        <childnode refid="147" relation="include">
+        </childnode>
+        <childnode refid="148" relation="include">
+        </childnode>
+        <childnode refid="149" relation="include">
+        </childnode>
+        <childnode refid="150" relation="include">
+        </childnode>
+        <childnode refid="151" relation="include">
+        </childnode>
+        <childnode refid="152" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>simulate.h</label>
+        <link refid="simulate_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+      </node>
+      <node id="149">
+        <label>spline/interp3Dcomp.c</label>
+        <link refid="interp3Dcomp_8c"/>
+      </node>
+      <node id="35">
+        <label>simulate/simulate_fo_fixed.c</label>
+        <link refid="simulate__fo__fixed_8c"/>
+      </node>
+      <node id="10">
+        <label>Bfield/B_GS.c</label>
+        <link refid="B__GS_8c"/>
+      </node>
+      <node id="117">
+        <label>Bfield/B_GS.h</label>
+        <link refid="B__GS_8h"/>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="113" relation="include">
+        </childnode>
+        <childnode refid="114" relation="include">
+        </childnode>
+      </node>
+      <node id="50">
+        <label>simulate/simulate_fo_fixed.h</label>
+        <link refid="simulate__fo__fixed_8h"/>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+      </node>
+      <node id="70">
+        <label>simulate/step/step_gc_rk4.c</label>
+        <link refid="step__gc__rk4_8c"/>
+      </node>
+      <node id="164">
+        <label>wall.c</label>
+        <link refid="wall_8c"/>
+      </node>
+      <node id="147">
+        <label>spline/interp2Dcomp.c</label>
+        <link refid="interp2Dcomp_8c"/>
+      </node>
+      <node id="71">
+        <label>simulate/step/step_gc_rk4.h</label>
+        <link refid="step__gc__rk4_8h"/>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>simulate/simulate_gc_fixed.c</label>
+        <link refid="simulate__gc__fixed_8c"/>
+      </node>
+      <node id="4">
+        <label>ascot5_main.c</label>
+        <link refid="ascot5__main_8c"/>
+      </node>
+      <node id="52">
+        <label>simulate/simulate_gc_fixed.h</label>
+        <link refid="simulate__gc__fixed_8h"/>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>ascot5_main.h</label>
+        <link refid="ascot5__main_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="145">
+        <label>spline/interp1Dcomp.c</label>
+        <link refid="interp1Dcomp_8c"/>
+      </node>
+      <node id="6">
+        <label>asigma.c</label>
+        <link refid="asigma_8c"/>
+      </node>
+      <node id="131">
+        <label>plasma/plasma_1DS.c</label>
+        <link refid="plasma__1DS_8c"/>
+      </node>
+      <node id="28">
+        <label>asigma.h</label>
+        <link refid="asigma_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="132">
+        <label>plasma/plasma_1DS.h</label>
+        <link refid="plasma__1DS_8h"/>
+        <childnode refid="127" relation="include">
+        </childnode>
+        <childnode refid="131" relation="include">
+        </childnode>
+        <childnode refid="128" relation="include">
+        </childnode>
+        <childnode refid="129" relation="include">
+        </childnode>
+      </node>
+      <node id="59">
+        <label>mhd/mhd_nonstat.c</label>
+        <link refid="mhd__nonstat_8c"/>
+      </node>
+      <node id="60">
+        <label>mhd/mhd_nonstat.h</label>
+        <link refid="mhd__nonstat_8h"/>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>endcond.c</label>
+        <link refid="endcond_8c"/>
+      </node>
+      <node id="39">
+        <label>endcond.h</label>
+        <link refid="endcond_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+      </node>
+      <node id="105">
+        <label>simulate/mccc/mccc.c</label>
+        <link refid="mccc_8c"/>
+      </node>
+      <node id="104">
+        <label>simulate/mccc/mccc.h</label>
+        <link refid="mccc_8h"/>
+        <childnode refid="105" relation="include">
+        </childnode>
+        <childnode refid="106" relation="include">
+        </childnode>
+        <childnode refid="107" relation="include">
+        </childnode>
+        <childnode refid="108" relation="include">
+        </childnode>
+        <childnode refid="109" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>simulate/atomic.c</label>
+        <link refid="atomic_8c"/>
+      </node>
+      <node id="5">
+        <label>asigma/asigma_loc.c</label>
+        <link refid="asigma__loc_8c"/>
+      </node>
+      <node id="34">
+        <label>simulate/atomic.h</label>
+        <link refid="atomic_8h"/>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>asigma/asigma_loc.h</label>
+        <link refid="asigma__loc_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="102">
+        <label>libascot_mem.c</label>
+        <link refid="libascot__mem_8c"/>
+      </node>
+      <node id="103">
+        <label>libascot_mem.h</label>
+        <link refid="libascot__mem_8h"/>
+        <childnode refid="102" relation="include">
+        </childnode>
+      </node>
+      <node id="98">
+        <label>hdf5io/hdf5_marker.c</label>
+        <link refid="hdf5__marker_8c"/>
+      </node>
+      <node id="99">
+        <label>hdf5io/hdf5_marker.h</label>
+        <link refid="hdf5__marker_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="98" relation="include">
+        </childnode>
+      </node>
+      <node id="81">
+        <label>hdf5io/hdf5_dist.c</label>
+        <link refid="hdf5__dist_8c"/>
+      </node>
+      <node id="82">
+        <label>hdf5io/hdf5_dist.h</label>
+        <link refid="hdf5__dist_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>afsi.c</label>
+        <link refid="afsi_8c"/>
+      </node>
+      <node id="92">
+        <label>hdf5io/hdf5_transcoef.c</label>
+        <link refid="hdf5__transcoef_8c"/>
+      </node>
+      <node id="77">
+        <label>nbi.c</label>
+        <link refid="nbi_8c"/>
+      </node>
+      <node id="3">
+        <label>afsi.h</label>
+        <link refid="afsi_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="93">
+        <label>hdf5io/hdf5_transcoef.h</label>
+        <link refid="hdf5__transcoef_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="92" relation="include">
+        </childnode>
+      </node>
+      <node id="78">
+        <label>nbi.h</label>
+        <link refid="nbi_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>diag/diag_orb.c</label>
+        <link refid="diag__orb_8c"/>
+      </node>
+      <node id="89">
+        <label>diag/diag_orb.h</label>
+        <link refid="diag__orb_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="90" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>hdf5io/hdf5_asigma.c</label>
+        <link refid="hdf5__asigma_8c"/>
+      </node>
+      <node id="127">
+        <label>hdf5io/hdf5_plasma.c</label>
+        <link refid="hdf5__plasma_8c"/>
+      </node>
+      <node id="30">
+        <label>hdf5io/hdf5_asigma.h</label>
+        <link refid="hdf5__asigma_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="130">
+        <label>hdf5io/hdf5_plasma.h</label>
+        <link refid="hdf5__plasma_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="127" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>biosaw.c</label>
+        <link refid="biosaw_8c"/>
+      </node>
+      <node id="156">
+        <label>hdf5io/hdf5_helpers.c</label>
+        <link refid="hdf5__helpers_8c"/>
+      </node>
+      <node id="151">
+        <label>spline/splinecomp.c</label>
+        <link refid="splinecomp_8c"/>
+      </node>
+      <node id="135">
+        <label>simulate/mccc/mccc_wiener.c</label>
+        <link refid="mccc__wiener_8c"/>
+      </node>
+      <node id="136">
+        <label>simulate/mccc/mccc_wiener.h</label>
+        <link refid="mccc__wiener_8h"/>
+        <childnode refid="104" relation="include">
+        </childnode>
+        <childnode refid="109" relation="include">
+        </childnode>
+        <childnode refid="135" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+      </node>
+      <node id="120">
+        <label>neutral/N0_3D.c</label>
+        <link refid="N0__3D_8c"/>
+      </node>
+      <node id="109">
+        <label>simulate/mccc/mccc_gc_milstein.c</label>
+        <link refid="mccc__gc__milstein_8c"/>
+      </node>
+      <node id="144">
+        <label>neutral/N0_3D.h</label>
+        <link refid="N0__3D_8h"/>
+        <childnode refid="123" relation="include">
+        </childnode>
+        <childnode refid="124" relation="include">
+        </childnode>
+        <childnode refid="120" relation="include">
+        </childnode>
+        <childnode refid="121" relation="include">
+        </childnode>
+        <childnode refid="122" relation="include">
+        </childnode>
+      </node>
+      <node id="54">
+        <label>B_field.c</label>
+        <link refid="B__field_8c"/>
+      </node>
+      <node id="55">
+        <label>B_field.h</label>
+        <link refid="B__field_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="84" relation="include">
+        </childnode>
+        <childnode refid="110" relation="include">
+        </childnode>
+        <childnode refid="111" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="112" relation="include">
+        </childnode>
+        <childnode refid="113" relation="include">
+        </childnode>
+        <childnode refid="114" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="87" relation="include">
+        </childnode>
+        <childnode refid="88" relation="include">
+        </childnode>
+        <childnode refid="104" relation="include">
+        </childnode>
+        <childnode refid="108" relation="include">
+        </childnode>
+        <childnode refid="109" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="65">
+        <label>mhd/mhd_stat.c</label>
+        <link refid="mhd__stat_8c"/>
+      </node>
+      <node id="40">
+        <label>hdf5io/hdf5_options.c</label>
+        <link refid="hdf5__options_8c"/>
+      </node>
+      <node id="74">
+        <label>mhd/mhd_stat.h</label>
+        <link refid="mhd__stat_8h"/>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+      </node>
+      <node id="140">
+        <label>linint/linint1D.c</label>
+        <link refid="linint1D_8c"/>
+      </node>
+      <node id="46">
+        <label>hdf5io/hdf5_options.h</label>
+        <link refid="hdf5__options_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="110">
+        <label>Efield/E_1DS.c</label>
+        <link refid="E__1DS_8c"/>
+      </node>
+      <node id="111">
+        <label>Efield/E_1DS.h</label>
+        <link refid="E__1DS_8h"/>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="84" relation="include">
+        </childnode>
+        <childnode refid="110" relation="include">
+        </childnode>
+        <childnode refid="85" relation="include">
+        </childnode>
+        <childnode refid="86" relation="include">
+        </childnode>
+      </node>
+      <node id="61">
+        <label>hdf5io/hdf5_mhd.c</label>
+        <link refid="hdf5__mhd_8c"/>
+      </node>
+      <node id="47">
+        <label>hdf5io/hdf5_orbit.c</label>
+        <link refid="hdf5__orbit_8c"/>
+      </node>
+      <node id="62">
+        <label>hdf5io/hdf5_mhd.h</label>
+        <link refid="hdf5__mhd_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="141">
+        <label>linint/linint2D.c</label>
+        <link refid="linint2D_8c"/>
+      </node>
+      <node id="90">
+        <label>hdf5io/hdf5_orbit.h</label>
+        <link refid="hdf5__orbit_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+      </node>
+      <node id="119">
+        <label>neutral/N0_1D.c</label>
+        <link refid="N0__1D_8c"/>
+      </node>
+      <node id="133">
+        <label>plasma/plasma_1Dt.c</label>
+        <link refid="plasma__1Dt_8c"/>
+      </node>
+      <node id="143">
+        <label>neutral/N0_1D.h</label>
+        <link refid="N0__1D_8h"/>
+        <childnode refid="123" relation="include">
+        </childnode>
+        <childnode refid="124" relation="include">
+        </childnode>
+        <childnode refid="119" relation="include">
+        </childnode>
+        <childnode refid="121" relation="include">
+        </childnode>
+        <childnode refid="122" relation="include">
+        </childnode>
+      </node>
+      <node id="134">
+        <label>plasma/plasma_1Dt.h</label>
+        <link refid="plasma__1Dt_8h"/>
+        <childnode refid="127" relation="include">
+        </childnode>
+        <childnode refid="133" relation="include">
+        </childnode>
+        <childnode refid="129" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>simulate/simulate_gc_adaptive.c</label>
+        <link refid="simulate__gc__adaptive_8c"/>
+      </node>
+      <node id="51">
+        <label>simulate/simulate_gc_adaptive.h</label>
+        <link refid="simulate__gc__adaptive_8h"/>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+      </node>
+      <node id="142">
+        <label>linint/linint3D.c</label>
+        <link refid="linint3D_8c"/>
+      </node>
+      <node id="158">
+        <label>physlib.h</label>
+        <link refid="physlib_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="155" relation="include">
+        </childnode>
+        <childnode refid="100" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="87" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="107" relation="include">
+        </childnode>
+        <childnode refid="108" relation="include">
+        </childnode>
+        <childnode refid="109" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="159" relation="include">
+        </childnode>
+        <childnode refid="160" relation="include">
+        </childnode>
+      </node>
+      <node id="121">
+        <label>neutral.c</label>
+        <link refid="neutral_8c"/>
+      </node>
+      <node id="122">
+        <label>neutral.h</label>
+        <link refid="neutral_8h"/>
+        <childnode refid="123" relation="include">
+        </childnode>
+        <childnode refid="124" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="121" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="107">
+        <label>simulate/mccc/mccc_fo_euler.c</label>
+        <link refid="mccc__fo__euler_8c"/>
+      </node>
+      <node id="161">
+        <label>random.c</label>
+        <link refid="random_8c"/>
+      </node>
+      <node id="48">
+        <label>mpi_interface.c</label>
+        <link refid="mpi__interface_8c"/>
+      </node>
+      <node id="49">
+        <label>mpi_interface.h</label>
+        <link refid="mpi__interface_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>libascot.c</label>
+        <link refid="libascot_8c"/>
+      </node>
+      <node id="31">
+        <label>hdf5_interface.c</label>
+        <link refid="hdf5__interface_8c"/>
+      </node>
+      <node id="45">
+        <label>hdf5_interface.h</label>
+        <link refid="hdf5__interface_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="160">
+        <label>simulate/step/step_gceom_mhd.h</label>
+        <link refid="step__gceom__mhd_8h"/>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+      </node>
+      <node id="72">
+        <label>simulate/step/step_ml_cashkarp.c</label>
+        <link refid="step__ml__cashkarp_8c"/>
+      </node>
+      <node id="73">
+        <label>simulate/step/step_ml_cashkarp.h</label>
+        <link refid="step__ml__cashkarp_8h"/>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>error.c</label>
+        <link refid="error_8c"/>
+      </node>
+      <node id="26">
+        <label>error.h</label>
+        <link refid="error_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="115" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="116" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="117" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="118" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="84" relation="include">
+        </childnode>
+        <childnode refid="110" relation="include">
+        </childnode>
+        <childnode refid="111" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="112" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="119" relation="include">
+        </childnode>
+        <childnode refid="120" relation="include">
+        </childnode>
+        <childnode refid="121" relation="include">
+        </childnode>
+        <childnode refid="122" relation="include">
+        </childnode>
+        <childnode refid="87" relation="include">
+        </childnode>
+        <childnode refid="88" relation="include">
+        </childnode>
+        <childnode refid="125" relation="include">
+        </childnode>
+        <childnode refid="126" relation="include">
+        </childnode>
+        <childnode refid="131" relation="include">
+        </childnode>
+        <childnode refid="132" relation="include">
+        </childnode>
+        <childnode refid="133" relation="include">
+        </childnode>
+        <childnode refid="134" relation="include">
+        </childnode>
+        <childnode refid="128" relation="include">
+        </childnode>
+        <childnode refid="129" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="107" relation="include">
+        </childnode>
+        <childnode refid="108" relation="include">
+        </childnode>
+        <childnode refid="109" relation="include">
+        </childnode>
+        <childnode refid="135" relation="include">
+        </childnode>
+        <childnode refid="136" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="137" relation="include">
+        </childnode>
+        <childnode refid="153" relation="include">
+        </childnode>
+        <childnode refid="154" relation="include">
+        </childnode>
+      </node>
+      <node id="123">
+        <label>hdf5io/hdf5_neutral.c</label>
+        <link refid="hdf5__neutral_8c"/>
+      </node>
+      <node id="124">
+        <label>hdf5io/hdf5_neutral.h</label>
+        <link refid="hdf5__neutral_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="123" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>diag/dist_com.c</label>
+        <link refid="dist__com_8c"/>
+      </node>
+      <node id="75">
+        <label>diag/dist_com.h</label>
+        <link refid="dist__com_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>diag/diag_transcoef.c</label>
+        <link refid="diag__transcoef_8c"/>
+      </node>
+      <node id="83">
+        <label>E_field.c</label>
+        <link refid="E__field_8c"/>
+      </node>
+      <node id="91">
+        <label>diag/diag_transcoef.h</label>
+        <link refid="diag__transcoef_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="92" relation="include">
+        </childnode>
+        <childnode refid="93" relation="include">
+        </childnode>
+      </node>
+      <node id="159">
+        <label>simulate/step/step_gceom.h</label>
+        <link refid="step__gceom_8h"/>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+      </node>
+      <node id="84">
+        <label>E_field.h</label>
+        <link refid="E__field_8h"/>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="85" relation="include">
+        </childnode>
+        <childnode refid="86" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="87" relation="include">
+        </childnode>
+        <childnode refid="88" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="106">
+        <label>simulate/mccc/mccc_coefs.h</label>
+        <link refid="mccc__coefs_8h"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="107" relation="include">
+        </childnode>
+        <childnode refid="108" relation="include">
+        </childnode>
+        <childnode refid="109" relation="include">
+        </childnode>
+      </node>
+      <node id="125">
+        <label>plasma/plasma_1D.c</label>
+        <link refid="plasma__1D_8c"/>
+      </node>
+      <node id="15">
+        <label>boschhale.c</label>
+        <link refid="boschhale_8c"/>
+      </node>
+      <node id="126">
+        <label>plasma/plasma_1D.h</label>
+        <link refid="plasma__1D_8h"/>
+        <childnode refid="127" relation="include">
+        </childnode>
+        <childnode refid="125" relation="include">
+        </childnode>
+        <childnode refid="128" relation="include">
+        </childnode>
+        <childnode refid="129" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>Bfield/B_TC.c</label>
+        <link refid="B__TC_8c"/>
+      </node>
+      <node id="118">
+        <label>Bfield/B_TC.h</label>
+        <link refid="B__TC_8h"/>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="113" relation="include">
+        </childnode>
+        <childnode refid="114" relation="include">
+        </childnode>
+      </node>
+      <node id="139">
+        <label>linint/linint.h</label>
+        <link refid="linint_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="138" relation="include">
+        </childnode>
+        <childnode refid="140" relation="include">
+        </childnode>
+        <childnode refid="141" relation="include">
+        </childnode>
+        <childnode refid="142" relation="include">
+        </childnode>
+        <childnode refid="119" relation="include">
+        </childnode>
+        <childnode refid="143" relation="include">
+        </childnode>
+        <childnode refid="120" relation="include">
+        </childnode>
+        <childnode refid="144" relation="include">
+        </childnode>
+      </node>
+      <node id="69">
+        <label>simulate/step/step_gc_cashkarp.c</label>
+        <link refid="step__gc__cashkarp_8c"/>
+      </node>
+      <node id="68">
+        <label>simulate/step/step_gc_cashkarp.h</label>
+        <link refid="step__gc__cashkarp_8h_source"/>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>Bfield/B_2DS.c</label>
+        <link refid="B__2DS_8c"/>
+      </node>
+      <node id="63">
+        <label>mhd.c</label>
+        <link refid="mhd_8c"/>
+      </node>
+      <node id="115">
+        <label>Bfield/B_2DS.h</label>
+        <link refid="B__2DS_8h"/>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="113" relation="include">
+        </childnode>
+        <childnode refid="114" relation="include">
+        </childnode>
+      </node>
+      <node id="64">
+        <label>mhd.h</label>
+        <link refid="mhd_8h"/>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>bbnbi5.c</label>
+        <link refid="bbnbi5_8c"/>
+      </node>
+      <node id="23">
+        <label>Efield/E_TC.c</label>
+        <link refid="E__TC_8c"/>
+      </node>
+      <node id="108">
+        <label>simulate/mccc/mccc_gc_euler.c</label>
+        <link refid="mccc__gc__euler_8c"/>
+      </node>
+      <node id="14">
+        <label>boozer.c</label>
+        <link refid="boozer_8c"/>
+      </node>
+      <node id="112">
+        <label>Efield/E_TC.h</label>
+        <link refid="E__TC_8h"/>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="84" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="85" relation="include">
+        </childnode>
+        <childnode refid="86" relation="include">
+        </childnode>
+      </node>
+      <node id="56">
+        <label>boozer.h</label>
+        <link refid="boozer_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="79">
+        <label>hdf5io/hdf5_nbi.c</label>
+        <link refid="hdf5__nbi_8c"/>
+      </node>
+      <node id="80">
+        <label>hdf5io/hdf5_nbi.h</label>
+        <link refid="hdf5__nbi_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>Bfield/B_3DS.c</label>
+        <link refid="B__3DS_8c"/>
+      </node>
+      <node id="157">
+        <label>math.c</label>
+        <link refid="math_8c"/>
+      </node>
+      <node id="116">
+        <label>Bfield/B_3DS.h</label>
+        <link refid="B__3DS_8h"/>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="113" relation="include">
+        </childnode>
+        <childnode refid="114" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>math.h</label>
+        <link refid="math_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="155" relation="include">
+        </childnode>
+        <childnode refid="113" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="156" relation="include">
+        </childnode>
+        <childnode refid="98" relation="include">
+        </childnode>
+        <childnode refid="123" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="92" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="140" relation="include">
+        </childnode>
+        <childnode refid="141" relation="include">
+        </childnode>
+        <childnode refid="142" relation="include">
+        </childnode>
+        <childnode refid="157" relation="include">
+        </childnode>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="119" relation="include">
+        </childnode>
+        <childnode refid="120" relation="include">
+        </childnode>
+        <childnode refid="87" relation="include">
+        </childnode>
+        <childnode refid="158" relation="include">
+        </childnode>
+        <childnode refid="125" relation="include">
+        </childnode>
+        <childnode refid="131" relation="include">
+        </childnode>
+        <childnode refid="133" relation="include">
+        </childnode>
+        <childnode refid="161" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="105" relation="include">
+        </childnode>
+        <childnode refid="106" relation="include">
+        </childnode>
+        <childnode refid="107" relation="include">
+        </childnode>
+        <childnode refid="108" relation="include">
+        </childnode>
+        <childnode refid="109" relation="include">
+        </childnode>
+        <childnode refid="135" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="159" relation="include">
+        </childnode>
+        <childnode refid="160" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="145" relation="include">
+        </childnode>
+        <childnode refid="146" relation="include">
+        </childnode>
+        <childnode refid="147" relation="include">
+        </childnode>
+        <childnode refid="148" relation="include">
+        </childnode>
+        <childnode refid="149" relation="include">
+        </childnode>
+        <childnode refid="150" relation="include">
+        </childnode>
+        <childnode refid="153" relation="include">
+        </childnode>
+        <childnode refid="162" relation="include">
+        </childnode>
+        <childnode refid="163" relation="include">
+        </childnode>
+        <childnode refid="164" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>diag/dist_6D.c</label>
+        <link refid="dist__6D_8c"/>
+      </node>
+      <node id="95">
+        <label>diag/dist_6D.h</label>
+        <link refid="dist__6D_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="100">
+        <label>hdf5io/hdf5_state.c</label>
+        <link refid="hdf5__state_8c"/>
+      </node>
+      <node id="101">
+        <label>hdf5io/hdf5_state.h</label>
+        <link refid="hdf5__state_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="100" relation="include">
+        </childnode>
+      </node>
+      <node id="57">
+        <label>hdf5io/hdf5_boozer.c</label>
+        <link refid="hdf5__boozer_8c"/>
+      </node>
+      <node id="152">
+        <label>spline/splineexpl.c</label>
+        <link refid="splineexpl_8c"/>
+      </node>
+      <node id="58">
+        <label>hdf5io/hdf5_boozer.h</label>
+        <link refid="hdf5__boozer_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="163">
+        <label>wall/wall_3d.c</label>
+        <link refid="wall__3d_8c"/>
+      </node>
+      <node id="66">
+        <label>simulate/step/step_fo_vpa.c</label>
+        <link refid="step__fo__vpa_8c"/>
+      </node>
+      <node id="67">
+        <label>simulate/step/step_fo_vpa.h</label>
+        <link refid="step__fo__vpa_8h"/>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>diag/dist_rho6D.c</label>
+        <link refid="dist__rho6D_8c"/>
+      </node>
+      <node id="97">
+        <label>diag/dist_rho6D.h</label>
+        <link refid="dist__rho6D_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>Bfield/B_STS.c</label>
+        <link refid="B__STS_8c"/>
+      </node>
+      <node id="138">
+        <label>Bfield/B_STS.h</label>
+        <link refid="B__STS_8h"/>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="113" relation="include">
+        </childnode>
+        <childnode refid="114" relation="include">
+        </childnode>
+      </node>
+      <node id="85">
+        <label>hdf5io/hdf5_efield.c</label>
+        <link refid="hdf5__efield_8c"/>
+      </node>
+      <node id="86">
+        <label>hdf5io/hdf5_efield.h</label>
+        <link refid="hdf5__efield_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="85" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="162">
+        <label>wall/wall_2d.c</label>
+        <link refid="wall__2d_8c"/>
+      </node>
+      <node id="113">
+        <label>hdf5io/hdf5_bfield.c</label>
+        <link refid="hdf5__bfield_8c"/>
+      </node>
+      <node id="114">
+        <label>hdf5io/hdf5_bfield.h</label>
+        <link refid="hdf5__bfield_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="113" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="math_8h_1a5a5865f0359145b3bce567c038bd8390" prot="public" static="no">
+        <name>math_degrad</name>
+        <initializer>0.0174532925199432957692</initializer>
+        <briefdescription>
+<para>One degree in radians. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="math.h" line="12" column="9" bodyfile="math.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="math_8h_1ac9cb87ee9b77c695c1ce36cf6a23ed57" prot="public" static="no">
+        <name>math_raddeg</name>
+        <initializer>57.295779513082320876798</initializer>
+        <briefdescription>
+<para>One radian in degrees. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="math.h" line="14" column="9" bodyfile="math.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="math_8h_1a4535483342e05f7c8bee5caa4407a150" prot="public" static="no">
+        <name>math_maxSimpsonDepth</name>
+        <initializer>20</initializer>
+        <briefdescription>
+<para>Maximum recursion depth for the simpson integral rule. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="math.h" line="17" column="9" bodyfile="math.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="math_8h_1a50766b1793ed1c721c5e174603cc4a38" prot="public" static="no">
+        <name>math_copy</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>do { a[0]=b[0];a[1]=b[1];a[2]=b[2]; } while(0)</initializer>
+        <briefdescription>
+<para>Copies elements of vector b to vector a. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="math.h" line="20" column="9" bodyfile="math.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="math_8h_1af6e9a112b2b69e775eaefff5646f136c" prot="public" static="no">
+        <name>math_matcopy</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>        do { a[0]=b[0];a[1]=b[1];a[2]=b[2];a[3]=b[3]; \
+        a[4]=b[4];a[5]=b[5];a[6]=b[6];a[7]=b[7];a[8]=b[8]; } while(0)</initializer>
+        <briefdescription>
+<para>Copies elements of matrix b to matrix a. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="math.h" line="23" column="9" bodyfile="math.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="math_8h_1a212fc9c17be398b934456f0fa641541a" prot="public" static="no">
+        <name>math_dot</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>(a[0]*b[0]+a[1]*b[1]+a[2]*b[2])</initializer>
+        <briefdescription>
+<para>Calculate dot product a[3] dot b[3]. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="math.h" line="27" column="9" bodyfile="math.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="math_8h_1abe0d82787eb750e38e7fbb791c575084" prot="public" static="no">
+        <name>math_cross</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <param><defname>c</defname></param>
+        <initializer>        do { c[0]=a[1]*b[2]-a[2]*b[1];                \
+        c[1]=a[2]*b[0]-a[0]*b[2];c[2]=a[0]*b[1]-a[1]*b[0]; } while(0)</initializer>
+        <briefdescription>
+<para>Calculate cross product for 3D vectors c = a x b. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="math.h" line="30" column="9" bodyfile="math.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="math_8h_1a78ab588b36d3bad74748769c518cbeea" prot="public" static="no">
+        <name>math_scalar_triple_product</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <param><defname>c</defname></param>
+        <initializer>       ( - (a[2] * b[1] * c[0] ) \
+         + (a[1] * b[2] * c[0] ) \
+         + (a[2] * b[0] * c[1] ) \
+         - (a[0] * b[2] * c[1] ) \
+         - (a[1] * b[0] * c[2] ) \
+         + (a[0] * b[1] * c[2] )     )</initializer>
+        <briefdescription>
+<para>the mixed or triple product of three vectors (a cross b) dot c mathematica: a={a0,a1,a2};b={b0,b1,b2};c={c0,c1,c2};FullSimplify[Dot[Cross[a,b],c]] -(a2 b1 c0) + a1 b2 c0 + a2 b0 c1 - a0 b2 c1 - a1 b0 c2 + a0 b1 c2 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="math.h" line="38" column="9" bodyfile="math.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="math_8h_1a0f858f243cd3c2c11928fe2b17eb5bf4" prot="public" static="no">
+        <name>math_sumew</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>do { a[0]=a[0]+b[0];a[1]=a[1]+b[1];a[2]=a[2]+b[2] } while(0)</initializer>
+        <briefdescription>
+<para>Elementwise vector sum a = a + b. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="math.h" line="47" column="9" bodyfile="math.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="math_8h_1ae60adcaf65436d9a7aa9793227410ff8" prot="public" static="no">
+        <name>math_prod</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>do { a[0]=a[0]*b;a[1]=a[1]*b;a[2]=a[2]*b; } while(0)</initializer>
+        <briefdescription>
+<para>Multiply vector elements with a scalar a = b*a. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="math.h" line="50" column="9" bodyfile="math.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="math_8h_1a8d7d021b368f53f10bf43bb2d86f3de3" prot="public" static="no">
+        <name>math_matsumew</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>        do { a[0]=a[0]+b[0];a[1]=a[1]+b[1];a[2]=a[2]+b[2]; \
+        a[3]=a[3]+b[3];a[4]=a[4]+b[4];a[5]=a[5]+b[5];a[6]=a[6]+b[6];    \
+        a[7]=a[7]+b[7];a[8]=a[8]+b[8]; } while(0)</initializer>
+        <briefdescription>
+<para>Elementwise matrix sum a = a + b. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="math.h" line="53" column="9" bodyfile="math.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="math_8h_1a184a10666bfb4a029c15f291c3494104" prot="public" static="no">
+        <name>math_matprod</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>        do { a[0]=a[0]*b;a[1]=a[1]*b;a[2]=a[2]*b;  \
+        a[3]=a[3]*b;a[4]=a[4]*b;a[5]=a[5]*b;a[6]=a[6]*b;a[7]=a[7]*b; \
+        a[8]=a[8]*b } while(0)</initializer>
+        <briefdescription>
+<para>Multiply matrix a with scalar b: a = b*a. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="math.h" line="58" column="9" bodyfile="math.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="math_8h_1adfcdc12f390386bae35dfed59f73e247" prot="public" static="no">
+        <name>math_norm</name>
+        <param><defname>a</defname></param>
+        <initializer>(sqrt(a[0]*a[0]+a[1]*a[1]+a[2]*a[2]))</initializer>
+        <briefdescription>
+<para>Calculate norm of 3D vector a. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="math.h" line="63" column="9" bodyfile="math.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="math_8h_1abd3175f6bee0adbe5ac6a37d856aa407" prot="public" static="no">
+        <name>math_normc</name>
+        <param><defname>a1</defname></param>
+        <param><defname>a2</defname></param>
+        <param><defname>a3</defname></param>
+        <initializer>(sqrt(a1*a1+a2*a2+a3*a3))</initializer>
+        <briefdescription>
+<para>Calculate norm of 3D vector from its components a1, a2, a3. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="math.h" line="66" column="9" bodyfile="math.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="math_8h_1a29911679af4275647fea8492f908bbd9" prot="public" static="no">
+        <name>math_unit</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>        do {<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> _n=sqrt(a[0]*a[0]+a[1]*a[1]+a[2]*a[2]); \
+        b[0]=a[0]/_n;b[1]=a[1]/_n;b[2]=a[2]/_n; } while(0)</initializer>
+        <briefdescription>
+<para>Calculate unit vector b from a 3D vector a. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="math.h" line="69" column="9" bodyfile="math.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="math_8h_1a484ec0cbb3628bc8451a4f82ba292803" prot="public" static="no">
+        <name>math_xyz2rpz</name>
+        <param><defname>xyz</defname></param>
+        <param><defname>rpz</defname></param>
+        <initializer>        do { rpz[0]=sqrt(xyz[0]*xyz[0]+xyz[1]*xyz[1]); \
+        rpz[1]=atan2(xyz[1],xyz[0]);rpz[2]=xyz[2]; } while(0)</initializer>
+        <briefdescription>
+<para>Convert cartesian coordinates xyz to cylindrical coordinates rpz. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="math.h" line="73" column="9" bodyfile="math.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="math_8h_1a809a2184a4686fc5413b60fa21b9b5cc" prot="public" static="no">
+        <name>math_rpz2xyz</name>
+        <param><defname>rpz</defname></param>
+        <param><defname>xyz</defname></param>
+        <initializer>        do { xyz[0]=rpz[0]*cos(rpz[1]); \
+        xyz[1]=rpz[0]*sin(rpz[1]);xyz[2]=rpz[2]; } while(0)</initializer>
+        <briefdescription>
+<para>Convert cylindrical coordinates rpz to cartesian coordinates xyz. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="math.h" line="77" column="9" bodyfile="math.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="math_8h_1a66786bed3cb8894ebcc2f06c9162fef2" prot="public" static="no">
+        <name>math_vec_rpz2xyz</name>
+        <param><defname>vrpz</defname></param>
+        <param><defname>vxyz</defname></param>
+        <param><defname>phi</defname></param>
+        <initializer>        do {     \
+        vxyz[0]=vrpz[0]*cos(phi)-vrpz[1]*sin(phi); \
+        vxyz[1]=vrpz[0]*sin(phi)+vrpz[1]*cos(phi); \
+        vxyz[2]=vrpz[2]; } while(0)</initializer>
+        <briefdescription>
+<para>Transform vector from cylindrical to cartesian basis: vrpz -&gt; vxyz, phi is the toroidal angle in radians. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="math.h" line="82" column="9" bodyfile="math.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="math_8h_1a2926fc9962621a0a75d463e6b43f449d" prot="public" static="no">
+        <name>math_vec_xyz2rpz</name>
+        <param><defname>vxyz</defname></param>
+        <param><defname>vrpz</defname></param>
+        <param><defname>phi</defname></param>
+        <initializer>        do {      \
+        vrpz[0]=vxyz[0]*cos(phi)+vxyz[1]*sin(phi);  \
+        vrpz[1]=-vxyz[0]*sin(phi)+vxyz[1]*cos(phi); \
+        vrpz[2]=vxyz[2]; } while(0)</initializer>
+        <briefdescription>
+<para>Transform vector from cartesian to cylindrical basis: vxyz -&gt; vrpz, phi is the toroidal angle in radians. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="math.h" line="89" column="9" bodyfile="math.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="math_8h_1a1d820c5b699aab90f4f55194b3d705bf" prot="public" static="no">
+        <name>math_determinant3x3</name>
+        <param><defname>x1</defname></param>
+        <param><defname>x2</defname></param>
+        <param><defname>x3</defname></param>
+        <param><defname>y1</defname></param>
+        <param><defname>y2</defname></param>
+        <param><defname>y3</defname></param>
+        <param><defname>z1</defname></param>
+        <param><defname>z2</defname></param>
+        <param><defname>z3</defname></param>
+        <initializer>    (x1) * ( (y2)*(z3) - (y3)*(z2) ) + \
+    (x2) * ( (y3)*(z1) - (y1)*(z3) ) + \
+    (x3) * ( (y1)*(z2) - (y2)*(z1) )</initializer>
+        <briefdescription>
+<para>Direct expansion of 3x3 matrix determinant. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="math.h" line="99" column="9" bodyfile="math.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="math_8h_1aa53741808556b85db16d3816d7f47f63" prot="public" static="no">
+        <name>math_deg2rad</name>
+        <param><defname>a</defname></param>
+        <initializer>(a * <ref refid="math_8h_1a5a5865f0359145b3bce567c038bd8390" kindref="member">math_degrad</ref>)</initializer>
+        <briefdescription>
+<para>Convert degrees to radians. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="math.h" line="106" column="9" bodyfile="math.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="math_8h_1a99307d8c1ae67cdea38938ac1fb5095d" prot="public" static="no">
+        <name>math_rad2deg</name>
+        <param><defname>a</defname></param>
+        <initializer>(a * <ref refid="math_8h_1ac9cb87ee9b77c695c1ce36cf6a23ed57" kindref="member">math_raddeg</ref>)</initializer>
+        <briefdescription>
+<para>Convert radians to degrees. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="math.h" line="109" column="9" bodyfile="math.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="math_8h_1afe38b43cda283fdf4db89eafe9515746" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void math_jac_rpz2xyz</definition>
+        <argsstring>(real *rpz, real *xyz, real r, real phi)</argsstring>
+        <name>math_jac_rpz2xyz</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>rpz</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>xyz</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>phi</declname>
+        </param>
+        <briefdescription>
+<para>Convert a Jacobian from cylindrical to cartesian coordinates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function converts a Jacobian located at angle phi and radius r from cylindrical to cartesian coordinates. The input Jacobian is an array with</para>
+<para>[Br dBr/dr dBr/dphi dBr/dz Bphi dBphi/dr dBphi/dphi dBphi/dz Bz dBz/dr dBz/dphi dBz/dz]</para>
+<para>an the output is</para>
+<para>[Bx dBx/dx dBx/dy dBx/dz By dBy/dx dBy/dy dBy/dz Bz dBz/dx dBz/dy dBz/dz].</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rpz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>input rpz coordinates in a 3-length array </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>xyz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>output xyz coordinates in a 3-length array </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>r coordinate of the gradient </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>phi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>phi coordinate of the gradient </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="math.h" line="113" column="6" bodyfile="math.c" bodystart="36" bodyend="75" declfile="math.h" declline="113" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="math_8h_1aed7ada7822595d869435af64095f5330" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void math_jac_xyz2rpz</definition>
+        <argsstring>(real *xyz, real *rpz, real r, real phi)</argsstring>
+        <name>math_jac_xyz2rpz</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>xyz</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>rpz</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>phi</declname>
+        </param>
+        <briefdescription>
+<para>Convert a Jacobian from cartesian to cylindrical coordinates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function converts a Jacobian located at angle phi and radius r from cartesian to cylindrical coordinates. The input Jacobian is an array with</para>
+<para>[Bx dBx/dx dBx/dy dBx/dz By dBy/dx dBy/dy dBy/dz Bz dBz/dx dBz/dy dBz/dz]</para>
+<para>an the output is</para>
+<para>[Br dBr/dr dBr/dphi dBr/dz Bphi dBphi/dr dBphi/dphi dBphi/dz Bz dBz/dr dBz/dphi dBz/dz].</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>xyz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>output xyz coordinates in a 3-length array </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rpz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>input rpz coordinates in a 3-length array </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>r coordinate of the gradient </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>phi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>phi coordinate of the gradient </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="math.h" line="115" column="6" bodyfile="math.c" bodystart="95" bodyend="136" declfile="math.h" declline="115" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="math_8h_1a42e276b970620bc71c2d4833079b4ddc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void math_matmul</definition>
+        <argsstring>(real *matA, real *matB, int d1, int d2, int d3, real *matC)</argsstring>
+        <name>math_matmul</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>matA</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>matB</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>d1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>d2</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>d3</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>matC</declname>
+        </param>
+        <briefdescription>
+<para>Matrix multiplication. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function performs matrix multiplication. The matrices are given as arrays, the indexing being row-wise.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>matA</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>input array representing a d1 x d2 matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>matB</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>input array representing a d2 x d3 matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>d1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>input scalar dimension (columns in matA and matC) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>d2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>input scalar dimension (rows in matA and columns in matB) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>d3</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>input scalar dimension (rows in matB and matC) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>matC</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>output array representing a d1 x d3 matrix </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="math.h" line="117" column="6" bodyfile="math.c" bodystart="151" bodyend="162" declfile="math.h" declline="117" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="math_8h_1a3cdff9b5af7c4cc64bafa9765e112ca3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+        <definition>real math_normal_rand</definition>
+        <argsstring>()</argsstring>
+        <name>math_normal_rand</name>
+        <briefdescription>
+<para>Generate normally distributed random numbers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function generates normally distributed random numbers with expected value of 0 and variance of 1 using the polar method [1]. The rand48 random number generator should be initialized with srand48() before calling this function.</para>
+<para>[1] G. Marsaglia, T. A. Bray. A convenient method for generating normal variables. Siam Review 6.3 (1964): 260-264. <ulink url="http://epubs.siam.org/doi/abs/10.1137/1006063:w">http://epubs.siam.org/doi/abs/10.1137/1006063:w</ulink></para>
+<para><xrefsect id="todo_1_todo000006"><xreftitle>Todo</xreftitle><xrefdescription><para>Currently only one of the generated numbers is returned; a second independent variate is Y = v2 * sqrt(-2*log(s) / s) </para>
+<para>Try other random number generators such as those in Intel MKL </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="math.h" line="119" column="6" bodyfile="math.c" bodystart="180" bodyend="192" declfile="math.h" declline="119" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="math_8h_1a268aacd23c5013cad8ccaa9692aa3631" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int math_ipow</definition>
+        <argsstring>(int a, int p)</argsstring>
+        <name>math_ipow</name>
+        <param>
+          <type>int</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>Calculate a^p where both a and p are integers (p &gt;= 0) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>argument </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>power</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a^b </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="math.h" line="121" column="5" bodyfile="math.c" bodystart="202" bodyend="208" declfile="math.h" declline="121" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="math_8h_1a2790a09a5107237e5b11d875f8e3703d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double math_simpson</definition>
+        <argsstring>(double(*f)(double), double a, double b, double epsilon)</argsstring>
+        <name>math_simpson</name>
+        <param>
+          <type>double(*)(double)</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>epsilon</declname>
+          <defname>eps</defname>
+        </param>
+        <briefdescription>
+<para>Adaptive Simpsons rule for integral. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function uses recursive splitting of the interval until either maximum number of intervals is reached or given relative error tolerance is obtained</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the integrand function (of one variable) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>lower limit for the interval </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>upper limit for the interval </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>eps</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>absolute tolerance</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<xrefsect id="bug_1_bug000001"><xreftitle>Bug</xreftitle><xrefdescription><para>Probably does not work with SIMD </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="math.h" line="122" column="8" bodyfile="math.c" bodystart="224" bodyend="230" declfile="math.h" declline="122" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="math_8h_1acbaa1d87b5cc438fbd03b48912b3fee1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void math_linspace</definition>
+        <argsstring>(real *vec, real a, real b, int n)</argsstring>
+        <name>math_linspace</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>vec</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Generate linearly spaced vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Generates linearly space vector with n elements whose end points are a and b. If n = 1, return b.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>n length array where result is stored </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>start point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>end point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of elements </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="math.h" line="123" column="6" bodyfile="math.c" bodystart="243" bodyend="253" declfile="math.h" declline="123" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="math_8h_1ad058764586ae6b1953b866bf156fa521" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int math_point_on_plane</definition>
+        <argsstring>(real q[3], real t1[3], real t2[3], real t3[3])</argsstring>
+        <name>math_point_on_plane</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>q</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>t1</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>t2</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>t3</declname>
+          <array>[3]</array>
+        </param>
+        <briefdescription>
+<para>Find if a point is on a given plane. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Let t1=(x1, y1, z1), t2=(x2, y2, z2), and t3=(x3, y3, z3) be non-collinear points on the plane. Let q =(x, y, z) be an arbitrary point. It lies in the plane if:</para>
+<para>det( |x -x1 y -y1 z -z1| |x2-x1 y2-y1 z2-z1| |x3-x1 y3-y1 z3-z1| ) == 0</para>
+<para>det( |x -x1 y -y1 z -z1| |x -x2 y -y2 z -z2| |x -x3 y -y3 z -z3| ) == 0</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>q</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>xyz coordinates of a query point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>xyz coordinates of the first point defining the plane </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>xyz coordinates of the second point defining the plane </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t3</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>xyz coordinates of the third point defining the plane </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="math.h" line="125" column="5" bodyfile="math.c" bodystart="316" bodyend="336" declfile="math.h" declline="125" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="math_8h_1a8556627d200439ee8b6da2c5dc1a1af2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void math_barycentric_coords_triangle</definition>
+        <argsstring>(real AP[3], real AB[3], real AC[3], real n[3], real *s, real *t)</argsstring>
+        <name>math_barycentric_coords_triangle</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>AP</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>AB</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>AC</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>n</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Find barycentric coordinates for a given point. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Let a,b,c be the vertices of a triangle and p an arbitrary point. The s,t are the barycentric coordinates of p if: p = (1-s-t)*a + s*b + t*c</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>AP</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>point position vector [x,y,z] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>AB</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>triangle edge AB vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>AC</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>triangle edge AC vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>normal vector [nx, ny, nz] of the triangle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>evaluated s coordinate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>evaluated t coordinate </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="math.h" line="127" column="6" bodyfile="math.c" bodystart="352" bodyend="359" declfile="math.h" declline="127" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="math_8h_1a0891e188229459cadca6a189675d9af6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void math_uniquecount</definition>
+        <argsstring>(int *in, int *unique, int *count, int n)</argsstring>
+        <name>math_uniquecount</name>
+        <param>
+          <type>int *</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>unique</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>count</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Find unique numbers and their frequency in given array. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>All argument arrays are assumed to have the same length as the array holding the input numbers. If not all numbers are unique, the remaining entries in unique and count arguments are zero.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>input array of length n </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>unique</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>array where unique numbers are stored, must be of length n </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>count[i] is how many times unique[i] appears in array in, must be of length n </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of the argument arrays </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="math.h" line="129" column="6" bodyfile="math.c" bodystart="268" bodyend="293" declfile="math.h" declline="129" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="math_8h_1ad2fe8b5e5783b76fd11470a5c4db27bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+        <definition>real* math_rsearch</definition>
+        <argsstring>(const real key, const real *base, int num)</argsstring>
+        <name>math_rsearch</name>
+        <param>
+          <type>const <ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>const <ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>num</declname>
+        </param>
+        <briefdescription>
+<para>Search for array element preceding a key value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function takes an array of real values and a key value, and finds the array element which precedes the key value. The array to be searched has to be in ascending sorted order (according to comparison function rcomp).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>real value that serves as key for the search </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the first object of the array to be searched </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of elements in array</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>pointer to array element preceding the key, or NULL if search failed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="math.h" line="131" column="6" bodyfile="math.c" bodystart="397" bodyend="399" declfile="math.h" declline="131" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="math_8h_1a2f5d2f375008cc840b427e332b15588c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int math_point_in_polygon</definition>
+        <argsstring>(real r, real z, real *rv, real *zv, int n)</argsstring>
+        <name>math_point_in_polygon</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>rv</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>zv</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Check if coordinates are within polygon. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function checks if the given coordinates are within a 2D polygon using a modified axis crossing method [1]. Origin is moved to the coordinates and the number of wall segments crossing the positive r-axis are calculated. If this is odd, the point is inside the polygon.</para>
+<para>[1] D.G. Alciatore, R. Miranda. A Winding Number and Point-in-Polygon Algorithm. Technical report, Colorado State University, 1995. <ulink url="http://www.engr.colostate.edu/~dga/dga/papers/point_in_polygon.pdf">http://www.engr.colostate.edu/~dga/dga/papers/point_in_polygon.pdf</ulink></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>r coordinate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>z coordinate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>array of r points for the polygon </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>zv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>array of z points for the polygon </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of points in the polygon </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="math.h" line="133" column="5" bodyfile="math.c" bodystart="419" bodyend="436" declfile="math.h" declline="133" declcolumn="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Header file for <ref refid="math_8c" kindref="compound">math.c</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MATH_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MATH_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="math_8h" kindref="compound">math.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ascot5_8h" kindref="compound">ascot5.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="math_8h_1a5a5865f0359145b3bce567c038bd8390" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>math_degrad<sp/>0.0174532925199432957692</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="math_8h_1ac9cb87ee9b77c695c1ce36cf6a23ed57" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>math_raddeg<sp/>57.295779513082320876798</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="math_8h_1a4535483342e05f7c8bee5caa4407a150" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>math_maxSimpsonDepth<sp/>20</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="math_8h_1a50766b1793ed1c721c5e174603cc4a38" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>math_copy(a,b)<sp/>do<sp/>{<sp/>a[0]=b[0];a[1]=b[1];a[2]=b[2];<sp/>}<sp/>while(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="math_8h_1af6e9a112b2b69e775eaefff5646f136c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>math_matcopy(a,b)<sp/>do<sp/>{<sp/>a[0]=b[0];a[1]=b[1];a[2]=b[2];a[3]=b[3];<sp/>\</highlight></codeline>
+<codeline lineno="24"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a[4]=b[4];a[5]=b[5];a[6]=b[6];a[7]=b[7];a[8]=b[8];<sp/>}<sp/>while(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="math_8h_1a212fc9c17be398b934456f0fa641541a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>math_dot(a,b)<sp/>(a[0]*b[0]+a[1]*b[1]+a[2]*b[2])</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="math_8h_1abe0d82787eb750e38e7fbb791c575084" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>math_cross(a,b,c)<sp/>do<sp/>{<sp/>c[0]=a[1]*b[2]-a[2]*b[1];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="31"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c[1]=a[2]*b[0]-a[0]*b[2];c[2]=a[0]*b[1]-a[1]*b[0];<sp/>}<sp/>while(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="math_8h_1a78ab588b36d3bad74748769c518cbeea" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>math_scalar_triple_product(a,b,c)<sp/>\</highlight></codeline>
+<codeline lineno="39"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<sp/>-<sp/>(a[2]<sp/>*<sp/>b[1]<sp/>*<sp/>c[0]<sp/>)<sp/>\</highlight></codeline>
+<codeline lineno="40"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>(a[1]<sp/>*<sp/>b[2]<sp/>*<sp/>c[0]<sp/>)<sp/>\</highlight></codeline>
+<codeline lineno="41"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>(a[2]<sp/>*<sp/>b[0]<sp/>*<sp/>c[1]<sp/>)<sp/>\</highlight></codeline>
+<codeline lineno="42"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>(a[0]<sp/>*<sp/>b[2]<sp/>*<sp/>c[1]<sp/>)<sp/>\</highlight></codeline>
+<codeline lineno="43"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>(a[1]<sp/>*<sp/>b[0]<sp/>*<sp/>c[2]<sp/>)<sp/>\</highlight></codeline>
+<codeline lineno="44"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>(a[0]<sp/>*<sp/>b[1]<sp/>*<sp/>c[2]<sp/>)<sp/><sp/><sp/><sp/><sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="math_8h_1a0f858f243cd3c2c11928fe2b17eb5bf4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>math_sumew(a,b)<sp/>do<sp/>{<sp/>a[0]=a[0]+b[0];a[1]=a[1]+b[1];a[2]=a[2]+b[2]<sp/>}<sp/>while(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="math_8h_1ae60adcaf65436d9a7aa9793227410ff8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>math_prod(a,b)<sp/>do<sp/>{<sp/>a[0]=a[0]*b;a[1]=a[1]*b;a[2]=a[2]*b;<sp/>}<sp/>while(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="math_8h_1a8d7d021b368f53f10bf43bb2d86f3de3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>math_matsumew(a,b)<sp/>do<sp/>{<sp/>a[0]=a[0]+b[0];a[1]=a[1]+b[1];a[2]=a[2]+b[2];<sp/>\</highlight></codeline>
+<codeline lineno="54"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a[3]=a[3]+b[3];a[4]=a[4]+b[4];a[5]=a[5]+b[5];a[6]=a[6]+b[6];<sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="55"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a[7]=a[7]+b[7];a[8]=a[8]+b[8];<sp/>}<sp/>while(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="math_8h_1a184a10666bfb4a029c15f291c3494104" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>math_matprod(a,b)<sp/>do<sp/>{<sp/>a[0]=a[0]*b;a[1]=a[1]*b;a[2]=a[2]*b;<sp/><sp/>\</highlight></codeline>
+<codeline lineno="59"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a[3]=a[3]*b;a[4]=a[4]*b;a[5]=a[5]*b;a[6]=a[6]*b;a[7]=a[7]*b;<sp/>\</highlight></codeline>
+<codeline lineno="60"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a[8]=a[8]*b<sp/>}<sp/>while(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="math_8h_1adfcdc12f390386bae35dfed59f73e247" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>math_norm(a)<sp/>(sqrt(a[0]*a[0]+a[1]*a[1]+a[2]*a[2]))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="math_8h_1abd3175f6bee0adbe5ac6a37d856aa407" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>math_normc(a1,<sp/>a2,<sp/>a3)<sp/>(sqrt(a1*a1+a2*a2+a3*a3))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="math_8h_1a29911679af4275647fea8492f908bbd9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>math_unit(a,<sp/>b)<sp/>do<sp/>{real<sp/>_n=sqrt(a[0]*a[0]+a[1]*a[1]+a[2]*a[2]);<sp/>\</highlight></codeline>
+<codeline lineno="70"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b[0]=a[0]/_n;b[1]=a[1]/_n;b[2]=a[2]/_n;<sp/>}<sp/>while(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="math_8h_1a484ec0cbb3628bc8451a4f82ba292803" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>math_xyz2rpz(xyz,<sp/>rpz)<sp/>do<sp/>{<sp/>rpz[0]=sqrt(xyz[0]*xyz[0]+xyz[1]*xyz[1]);<sp/>\</highlight></codeline>
+<codeline lineno="74"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rpz[1]=atan2(xyz[1],xyz[0]);rpz[2]=xyz[2];<sp/>}<sp/>while(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="math_8h_1a809a2184a4686fc5413b60fa21b9b5cc" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>math_rpz2xyz(rpz,<sp/>xyz)<sp/>do<sp/>{<sp/>xyz[0]=rpz[0]*cos(rpz[1]);<sp/>\</highlight></codeline>
+<codeline lineno="78"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>xyz[1]=rpz[0]*sin(rpz[1]);xyz[2]=rpz[2];<sp/>}<sp/>while(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="math_8h_1a66786bed3cb8894ebcc2f06c9162fef2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>math_vec_rpz2xyz(vrpz,<sp/>vxyz,<sp/>phi)<sp/>do<sp/>{<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="83"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vxyz[0]=vrpz[0]*cos(phi)-vrpz[1]*sin(phi);<sp/>\</highlight></codeline>
+<codeline lineno="84"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vxyz[1]=vrpz[0]*sin(phi)+vrpz[1]*cos(phi);<sp/>\</highlight></codeline>
+<codeline lineno="85"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vxyz[2]=vrpz[2];<sp/>}<sp/>while(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="math_8h_1a2926fc9962621a0a75d463e6b43f449d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>math_vec_xyz2rpz(vxyz,<sp/>vrpz,<sp/>phi)<sp/>do<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="90"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vrpz[0]=vxyz[0]*cos(phi)+vxyz[1]*sin(phi);<sp/><sp/>\</highlight></codeline>
+<codeline lineno="91"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vrpz[1]=-vxyz[0]*sin(phi)+vxyz[1]*cos(phi);<sp/>\</highlight></codeline>
+<codeline lineno="92"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vrpz[2]=vxyz[2];<sp/>}<sp/>while(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="math_8h_1a1d820c5b699aab90f4f55194b3d705bf" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>math_determinant3x3(<sp/>\</highlight></codeline>
+<codeline lineno="97"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>x1,<sp/>x2,<sp/>x3,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="98"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>y1,<sp/>y2,<sp/>y3,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="99"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>z1,<sp/>z2,<sp/>z3)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="100"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(x1)<sp/>*<sp/>(<sp/>(y2)*(z3)<sp/>-<sp/>(y3)*(z2)<sp/>)<sp/>+<sp/>\</highlight></codeline>
+<codeline lineno="101"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(x2)<sp/>*<sp/>(<sp/>(y3)*(z1)<sp/>-<sp/>(y1)*(z3)<sp/>)<sp/>+<sp/>\</highlight></codeline>
+<codeline lineno="102"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(x3)<sp/>*<sp/>(<sp/>(y1)*(z2)<sp/>-<sp/>(y2)*(z1)<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106" refid="math_8h_1aa53741808556b85db16d3816d7f47f63" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>math_deg2rad(a)<sp/>(a<sp/>*<sp/>math_degrad)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109" refid="math_8h_1a99307d8c1ae67cdea38938ac1fb5095d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>math_rad2deg(a)<sp/>(a<sp/>*<sp/>math_raddeg)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>declare<sp/>target</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>declare<sp/>simd</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="math_8h_1afe38b43cda283fdf4db89eafe9515746" kindref="member">math_jac_rpz2xyz</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>rpz,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>xyz,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>phi);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>declare<sp/>simd</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="math_8h_1aed7ada7822595d869435af64095f5330" kindref="member">math_jac_xyz2rpz</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>xyz,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>rpz,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>phi);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>declare<sp/>simd</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="math_8h_1a42e276b970620bc71c2d4833079b4ddc" kindref="member">math_matmul</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>matA,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>matB,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>d1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>d2,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>d3,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>matC);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>declare<sp/>simd</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="math_8h_1a3cdff9b5af7c4cc64bafa9765e112ca3" kindref="member">math_normal_rand</ref>();</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>declare<sp/>simd</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="math_8h_1a268aacd23c5013cad8ccaa9692aa3631" kindref="member">math_ipow</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>a,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>p);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="math_8h_1a2790a09a5107237e5b11d875f8e3703d" kindref="member">math_simpson</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>(*f)(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">),<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>a,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>b,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>epsilon);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="math_8h_1acbaa1d87b5cc438fbd03b48912b3fee1" kindref="member">math_linspace</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>vec,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>a,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>b,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>declare<sp/>simd</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="math_8h_1ad058764586ae6b1953b866bf156fa521" kindref="member">math_point_on_plane</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>q[3],<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>t1[3],<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>t2[3],<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>t3[3]);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>declare<sp/>simd</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="math_8h_1a8556627d200439ee8b6da2c5dc1a1af2" kindref="member">math_barycentric_coords_triangle</ref>(</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>AP[3],<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>AB[3],<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>AC[3],<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>n[3],<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>*s,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>*t);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="math_8h_1a0891e188229459cadca6a189675d9af6" kindref="member">math_uniquecount</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>in,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>unique,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>count,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>declare<sp/>simd</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/><ref refid="math_8h_1ad2fe8b5e5783b76fd11470a5c4db27bd" kindref="member">math_rsearch</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>key,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>base,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>num);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>declare<sp/>simd<sp/>uniform(rv,zv,n)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="math_8h_1a2f5d2f375008cc840b427e332b15588c" kindref="member">math_point_in_polygon</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>rv,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>zv,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>end<sp/>declare<sp/>target</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="math.h"/>
+  </compounddef>
+</doxygen>

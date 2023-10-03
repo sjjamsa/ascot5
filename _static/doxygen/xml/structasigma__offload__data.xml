@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structasigma__offload__data" kind="struct" language="C++" prot="public">
+    <compoundname>asigma_offload_data</compoundname>
+    <includes refid="asigma_8h" local="no">asigma.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structasigma__offload__data_1a22649daa5f9a9ea3ba4caac5991821cb" prot="public" static="no" mutable="no">
+        <type><ref refid="asigma_8h_1ae46aca98722780bc5950aa6c1636282c" kindref="member">asigma_type</ref></type>
+        <definition>asigma_type asigma_offload_data::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Atomic reaction data type wrapped by this struct </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="asigma.h" line="54" column="17" bodyfile="asigma.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structasigma__offload__data_1a8c0884325fa9038f44451dc3654bb306" prot="public" static="no" mutable="no">
+        <type><ref refid="structasigma__loc__offload__data" kindref="compound">asigma_loc_offload_data</ref></type>
+        <definition>asigma_loc_offload_data asigma_offload_data::asigma_loc</definition>
+        <argsstring></argsstring>
+        <name>asigma_loc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Local-files data or NULL if not active </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="asigma.h" line="55" column="29" bodyfile="asigma.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structasigma__offload__data_1a91bd61350679824f725402d02e4012a5" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int asigma_offload_data::offload_array_length</definition>
+        <argsstring></argsstring>
+        <name>offload_array_length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Allocated offload array length </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="asigma.h" line="57" column="9" bodyfile="asigma.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Atomic reaction offload data. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This struct holds data necessary for offloading. The struct is initialized in <ref refid="asigma_8c_1aea2ea2d3f324bbebabcc9fca5571a125" kindref="member">asigma_init_offload()</ref>. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>asigma_offload_data</label>
+        <link refid="structasigma__offload__data"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>asigma_loc</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>asigma_loc_offload_data</label>
+        <link refid="structasigma__loc__offload__data"/>
+      </node>
+    </collaborationgraph>
+    <location file="asigma.h" line="53" column="1" bodyfile="asigma.h" bodystart="53" bodyend="58"/>
+    <listofallmembers>
+      <member refid="structasigma__offload__data_1a8c0884325fa9038f44451dc3654bb306" prot="public" virt="non-virtual"><scope>asigma_offload_data</scope><name>asigma_loc</name></member>
+      <member refid="structasigma__offload__data_1a91bd61350679824f725402d02e4012a5" prot="public" virt="non-virtual"><scope>asigma_offload_data</scope><name>offload_array_length</name></member>
+      <member refid="structasigma__offload__data_1a22649daa5f9a9ea3ba4caac5991821cb" prot="public" virt="non-virtual"><scope>asigma_offload_data</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

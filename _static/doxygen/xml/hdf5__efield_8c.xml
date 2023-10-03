@@ -1,0 +1,575 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="hdf5__efield_8c" kind="file" language="C++">
+    <compoundname>hdf5_efield.c</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">hdf5.h</includes>
+    <includes local="no">hdf5_hl.h</includes>
+    <includes refid="ascot5_8h" local="yes">../ascot5.h</includes>
+    <includes refid="E__field_8h" local="yes">../E_field.h</includes>
+    <includes refid="E__TC_8h" local="yes">../Efield/E_TC.h</includes>
+    <includes refid="E__1DS_8h" local="yes">../Efield/E_1DS.h</includes>
+    <includes refid="print_8h" local="yes">../print.h</includes>
+    <includes refid="hdf5__helpers_8h" local="yes">hdf5_helpers.h</includes>
+    <includes refid="hdf5__efield_8h" local="yes">hdf5_efield.h</includes>
+    <incdepgraph>
+      <node id="15">
+        <label>../spline/interp.h</label>
+        <link refid="interp_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>Bfield/B_GS.h</label>
+        <link refid="B__GS_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>stdlib.h</label>
+      </node>
+      <node id="5">
+        <label>hdf5_hl.h</label>
+      </node>
+      <node id="7">
+        <label>omp.h</label>
+      </node>
+      <node id="23">
+        <label>hdf5_helpers.h</label>
+        <link refid="hdf5__helpers_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>B_field.h</label>
+        <link refid="B__field_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>Efield/E_1DS.h</label>
+        <link refid="E__1DS_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>error.h</label>
+        <link refid="error_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>hdf5.h</label>
+      </node>
+      <node id="9">
+        <label>../E_field.h</label>
+        <link refid="E__field_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>time.h</label>
+      </node>
+      <node id="19">
+        <label>Bfield/B_TC.h</label>
+        <link refid="B__TC_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>../linint/linint.h</label>
+        <link refid="linint_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>Bfield/B_2DS.h</label>
+        <link refid="B__2DS_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>Efield/E_TC.h</label>
+        <link refid="E__TC_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>Bfield/B_3DS.h</label>
+        <link refid="B__3DS_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>math.h</label>
+        <link refid="math_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+      </node>
+      <node id="17">
+        <label>Bfield/B_STS.h</label>
+        <link refid="B__STS_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>../print.h</label>
+        <link refid="print_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>hdf5io/hdf5_efield.c</label>
+        <link refid="hdf5__efield_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>hdf5_efield.h</label>
+        <link refid="hdf5__efield_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>../ascot5.h</label>
+        <link refid="ascot5_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="hdf5__efield_8c_1ab3d60d73f9c7c32d3f199a965a7dccfe" prot="public" static="no">
+        <name>EPATH</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro that is used to store paths to data groups </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hdf5io/hdf5_efield.c" line="29" column="9" bodyfile="hdf5io/hdf5_efield.c" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hdf5__efield_8c_1ab3d60d73f9c7c32d3f199a965a7dccfe" prot="public" static="no">
+        <name>EPATH</name>
+        <initializer>&quot;/efield/E_1DS_XXXXXXXXXX/&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro that is used to store paths to data groups </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hdf5io/hdf5_efield.c" line="99" column="18" bodyfile="hdf5io/hdf5_efield.c" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hdf5__efield_8c_1ab3d60d73f9c7c32d3f199a965a7dccfe" prot="public" static="no">
+        <name>EPATH</name>
+        <initializer>&quot;/efield/E_TC_XXXXXXXXXX/&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro that is used to store paths to data groups </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hdf5io/hdf5_efield.c" line="149" column="18" bodyfile="hdf5io/hdf5_efield.c" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="hdf5__efield_8c_1a318a68dd85b3f4752c87d2782cce1423" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hdf5_efield_read_1DS</definition>
+        <argsstring>(hid_t f, E_1DS_offload_data *offload_data, real **offload_array, char *qid)</argsstring>
+        <name>hdf5_efield_read_1DS</name>
+        <param>
+          <type>hid_t</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type><ref refid="structE__1DS__offload__data" kindref="compound">E_1DS_offload_data</ref> *</type>
+          <declname>offload_data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> **</type>
+          <declname>offload_array</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>qid</declname>
+        </param>
+        <briefdescription>
+<para>Read E1DS electric field data from HDF5 file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>HDF5 file from which data is read </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload array </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>qid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>QID of the data</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Zero if reading succeeded </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hdf5io/hdf5_efield.c" line="96" column="5" bodyfile="hdf5io/hdf5_efield.c" bodystart="96" bodyend="125" declfile="hdf5io/hdf5_efield.c" declline="31" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="hdf5__efield_8c_1ab415cf6081f7cc5abe9bebd14cf176ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hdf5_efield_read_TC</definition>
+        <argsstring>(hid_t f, E_TC_offload_data *offload_data, real **offload_array, char *qid)</argsstring>
+        <name>hdf5_efield_read_TC</name>
+        <param>
+          <type>hid_t</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type><ref refid="structE__TC__offload__data" kindref="compound">E_TC_offload_data</ref> *</type>
+          <declname>offload_data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> **</type>
+          <declname>offload_array</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>qid</declname>
+        </param>
+        <briefdescription>
+<para>Read magnetic field data of type E_TC. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The E_TC data is stored in HDF5 file under the group /efield/E_TC-XXXXXXXXXX/ where X&apos;s mark the QID.</para>
+<para>This function assumes the group holds the following datasets:</para>
+<para><itemizedlist>
+<listitem><para>double Exyz Electric field values [E_x, E_y, E_z] [V/m]</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>HDF5 file identifier for a file which is opened and closed outside of this function </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload data struct which is allocated here </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload array but no data is stored there so it is not allocated and NULL pointer is returned instead </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>qid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>QID of the B_TC field that is to be read</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>zero if reading succeeded </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hdf5io/hdf5_efield.c" line="146" column="5" bodyfile="hdf5io/hdf5_efield.c" bodystart="146" bodyend="157" declfile="hdf5io/hdf5_efield.c" declline="33" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="hdf5__efield_8c_1a713239b33cbb1c0d82863922e36131e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hdf5_efield_init_offload</definition>
+        <argsstring>(hid_t f, E_field_offload_data *offload_data, real **offload_array, char *qid)</argsstring>
+        <name>hdf5_efield_init_offload</name>
+        <param>
+          <type>hid_t</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type><ref refid="structE__field__offload__data" kindref="compound">E_field_offload_data</ref> *</type>
+          <declname>offload_data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> **</type>
+          <declname>offload_array</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>qid</declname>
+        </param>
+        <briefdescription>
+<para>Read electric field data from HDF5 file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function reads electric field data with given qid while also initializing offload data and allocating and filling offload array. The file is opened and closed outside this function.</para>
+<para>The electric field data is stored under /efield/ group in ASCOT5 HDF5 file. Several electric fields of same or different type maybe stored there in their respective groups as long as the group name contains QID as an identifier.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>HDF5 file identifier for a file which is opened and closed outside of this function </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload data struct which is initialized here </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload array which is allocated and initialized here </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>qid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>QID of the data that is to be read</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>zero if reading and initialization succeeded </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hdf5io/hdf5_efield.c" line="57" column="5" bodyfile="hdf5io/hdf5_efield.c" bodystart="57" bodyend="84"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Module for reading electric field data from HDF5 file. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Electric field must be read by calling <ref refid="hdf5__efield_8c_1a713239b33cbb1c0d82863922e36131e3" kindref="member">hdf5_efield_init_offload()</ref> contained in this module. This module contains reading routines for all electric field types.</para>
+<para>Note: the routines within this module that read the data from HDF5 file may use the offload data struct and offload arrays as (temporary) storage. However, the actual initialization is done at the specific <ref refid="E__field_8c_1a5784612c08e8edb20602a0a3a13c1562" kindref="member">E_field_init_offload()</ref> function the electric field data corresponds to. Check from that function what the offload data and the offload array are expected to contain. As a rule of thumb, the reading routines here should only read the data and maybe do some trivial computations but nothing complicated. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hdf5.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hdf5_hl.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../ascot5.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../E_field.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../Efield/E_TC.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../Efield/E_1DS.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../print.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hdf5__helpers_8h" kindref="compound">hdf5_helpers.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hdf5__efield_8h" kindref="compound">hdf5_efield.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="hdf5__efield_8c_1ab3d60d73f9c7c32d3f199a965a7dccfe" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EPATH<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hdf5__efield_8c_1a318a68dd85b3f4752c87d2782cce1423" kindref="member">hdf5_efield_read_1DS</ref>(hid_t<sp/>f,<sp/><ref refid="structE__1DS__offload__data" kindref="compound">E_1DS_offload_data</ref>*<sp/>offload_data,</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>**<sp/>offload_array,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>qid);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hdf5__efield_8c_1ab415cf6081f7cc5abe9bebd14cf176ea" kindref="member">hdf5_efield_read_TC</ref>(hid_t<sp/>f,<sp/><ref refid="structE__TC__offload__data" kindref="compound">E_TC_offload_data</ref>*<sp/>offload_data,</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>**<sp/>offload_array,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>qid);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="hdf5__efield_8c_1a713239b33cbb1c0d82863922e36131e3" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hdf5__efield_8c_1a713239b33cbb1c0d82863922e36131e3" kindref="member">hdf5_efield_init_offload</ref>(hid_t<sp/>f,<sp/><ref refid="structE__field__offload__data" kindref="compound">E_field_offload_data</ref>*<sp/>offload_data,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>**<sp/>offload_array,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>qid)<sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>path[256];</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>err<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Read<sp/>data<sp/>the<sp/>QID<sp/>corresponds<sp/>to<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hdf5__helpers_8c_1ab43ae79d4f8e8d83bf098da8a0054a72" kindref="member">hdf5_gen_path</ref>(</highlight><highlight class="stringliteral">&quot;/efield/E_TC_XXXXXXXXXX&quot;</highlight><highlight class="normal">,<sp/>qid,<sp/>path);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>!<ref refid="hdf5__helpers_8c_1a3b6edfba63099574025bea60453da24b" kindref="member">hdf5_find_group</ref>(f,<sp/>path)<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structE__field__offload__data_1a84bcd5efca36c7336eda033036726feb" kindref="member">type</ref><sp/>=<sp/><ref refid="E__field_8h_1acd92ff41d651621c8f1778e14c2808a6a8404cd875b8e300cd93f1278034775a4" kindref="member">E_field_type_TC</ref>;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="hdf5__efield_8c_1ab415cf6081f7cc5abe9bebd14cf176ea" kindref="member">hdf5_efield_read_TC</ref>(f,<sp/>&amp;(offload_data-&gt;<ref refid="structE__field__offload__data_1a26a62d4cb90506d697307ed550a6738a" kindref="member">ETC</ref>),</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_array,<sp/>qid);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hdf5__helpers_8c_1ab43ae79d4f8e8d83bf098da8a0054a72" kindref="member">hdf5_gen_path</ref>(</highlight><highlight class="stringliteral">&quot;/efield/E_1DS_XXXXXXXXXX&quot;</highlight><highlight class="normal">,<sp/>qid,<sp/>path);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="hdf5__helpers_8c_1a3b6edfba63099574025bea60453da24b" kindref="member">hdf5_find_group</ref>(f,<sp/>path)<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structE__field__offload__data_1a84bcd5efca36c7336eda033036726feb" kindref="member">type</ref><sp/>=<sp/><ref refid="E__field_8h_1acd92ff41d651621c8f1778e14c2808a6ab220a8fe8bba0892c5c46ead08253079" kindref="member">E_field_type_1DS</ref>;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="hdf5__efield_8c_1a318a68dd85b3f4752c87d2782cce1423" kindref="member">hdf5_efield_read_1DS</ref>(f,<sp/>&amp;(offload_data-&gt;<ref refid="structE__field__offload__data_1a5171c57a6705c6b0821057d120d0d66c" kindref="member">E1DS</ref>),</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_array,<sp/>qid);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Initialize<sp/>if<sp/>data<sp/>was<sp/>read<sp/>succesfully<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!err)<sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="E__field_8c_1a5784612c08e8edb20602a0a3a13c1562" kindref="member">E_field_init_offload</ref>(offload_data,<sp/>offload_array);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>err;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="hdf5__efield_8c_1a318a68dd85b3f4752c87d2782cce1423" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hdf5__efield_8c_1a318a68dd85b3f4752c87d2782cce1423" kindref="member">hdf5_efield_read_1DS</ref>(hid_t<sp/>f,<sp/><ref refid="structE__1DS__offload__data" kindref="compound">E_1DS_offload_data</ref>*<sp/>offload_data,</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>**<sp/>offload_array,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>qid)<sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#undef<sp/>EPATH</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>EPATH<sp/>&quot;/efield/E_1DS_XXXXXXXXXX/&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1ae78f9ef2bb986e45d4cca2861d97e1fd" kindref="member">hdf5_read_int</ref>(<ref refid="hdf5__efield_8c_1ab3d60d73f9c7c32d3f199a965a7dccfe" kindref="member">EPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;nrho&quot;</highlight><highlight class="normal">,<sp/>&amp;(offload_data-&gt;<ref refid="structE__1DS__offload__data_1a71c8e5975ccaeda19a117d65358d15e2" kindref="member">n_rho</ref>),</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1a43b9438fc244982ddff7dc58ea3b9ef9" kindref="member">hdf5_read_double</ref>(<ref refid="hdf5__efield_8c_1ab3d60d73f9c7c32d3f199a965a7dccfe" kindref="member">EPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;rhomin&quot;</highlight><highlight class="normal">,<sp/>&amp;(offload_data-&gt;<ref refid="structE__1DS__offload__data_1a76c50d4b3f285d183e933064ae8e0287" kindref="member">rho_min</ref>),</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1a43b9438fc244982ddff7dc58ea3b9ef9" kindref="member">hdf5_read_double</ref>(<ref refid="hdf5__efield_8c_1ab3d60d73f9c7c32d3f199a965a7dccfe" kindref="member">EPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;rhomax&quot;</highlight><highlight class="normal">,<sp/>&amp;(offload_data-&gt;<ref refid="structE__1DS__offload__data_1abef3a697ca9309dac474a20b86de9fca" kindref="member">rho_max</ref>),</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Allocate<sp/>n_rho<sp/>space<sp/>for<sp/>dV/drho<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>*offload_array<sp/>=<sp/>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*)<sp/>malloc(offload_data-&gt;<ref refid="structE__1DS__offload__data_1a71c8e5975ccaeda19a117d65358d15e2" kindref="member">n_rho</ref>*</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>));</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1a43b9438fc244982ddff7dc58ea3b9ef9" kindref="member">hdf5_read_double</ref>(<ref refid="hdf5__efield_8c_1ab3d60d73f9c7c32d3f199a965a7dccfe" kindref="member">EPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;dvdrho&quot;</highlight><highlight class="normal">,<sp/>*offload_array,</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Effective<sp/>minor<sp/>radius<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r_eff;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1a43b9438fc244982ddff7dc58ea3b9ef9" kindref="member">hdf5_read_double</ref>(<ref refid="hdf5__efield_8c_1ab3d60d73f9c7c32d3f199a965a7dccfe" kindref="member">EPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;reff&quot;</highlight><highlight class="normal">,<sp/>&amp;(r_eff),</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Scale<sp/>derivatives<sp/>by<sp/>effective<sp/>minor<sp/>radius<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>offload_data-&gt;<ref refid="structE__1DS__offload__data_1a71c8e5975ccaeda19a117d65358d15e2" kindref="member">n_rho</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*offload_array)[i]<sp/>=<sp/>r_eff<sp/>*<sp/>(*offload_array)[i];</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146" refid="hdf5__efield_8c_1ab415cf6081f7cc5abe9bebd14cf176ea" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hdf5__efield_8c_1ab415cf6081f7cc5abe9bebd14cf176ea" kindref="member">hdf5_efield_read_TC</ref>(hid_t<sp/>f,<sp/><ref refid="structE__TC__offload__data" kindref="compound">E_TC_offload_data</ref>*<sp/>offload_data,</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>**<sp/>offload_array,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>qid)<sp/>{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#undef<sp/>EPATH</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>EPATH<sp/>&quot;/efield/E_TC_XXXXXXXXXX/&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>*offload_array<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1a43b9438fc244982ddff7dc58ea3b9ef9" kindref="member">hdf5_read_double</ref>(<ref refid="hdf5__efield_8c_1ab3d60d73f9c7c32d3f199a965a7dccfe" kindref="member">EPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;exyz&quot;</highlight><highlight class="normal">,<sp/>offload_data-&gt;<ref refid="structE__TC__offload__data_1a13e88c10a2aeefc3f32628422688e627" kindref="member">Exyz</ref>,</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="hdf5io/hdf5_efield.c"/>
+  </compounddef>
+</doxygen>

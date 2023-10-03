@@ -1,0 +1,1351 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="B__field_8c" kind="file" language="C++">
+    <compoundname>B_field.c</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes refid="ascot5_8h" local="yes">ascot5.h</includes>
+    <includes refid="error_8h" local="yes">error.h</includes>
+    <includes refid="print_8h" local="yes">print.h</includes>
+    <includes refid="B__field_8h" local="yes">B_field.h</includes>
+    <includes refid="B__GS_8h" local="yes">Bfield/B_GS.h</includes>
+    <includes refid="B__2DS_8h" local="yes">Bfield/B_2DS.h</includes>
+    <includes refid="B__3DS_8h" local="yes">Bfield/B_3DS.h</includes>
+    <includes refid="B__STS_8h" local="yes">Bfield/B_STS.h</includes>
+    <includes refid="B__TC_8h" local="yes">Bfield/B_TC.h</includes>
+    <incdepgraph>
+      <node id="12">
+        <label>../spline/interp.h</label>
+        <link refid="interp_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>Bfield/B_GS.h</label>
+        <link refid="B__GS_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>omp.h</label>
+      </node>
+      <node id="1">
+        <label>B_field.c</label>
+        <link refid="B__field_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>B_field.h</label>
+        <link refid="B__field_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>error.h</label>
+        <link refid="error_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>time.h</label>
+      </node>
+      <node id="16">
+        <label>Bfield/B_TC.h</label>
+        <link refid="B__TC_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>../linint/linint.h</label>
+        <link refid="linint_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>Bfield/B_2DS.h</label>
+        <link refid="B__2DS_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>Bfield/B_3DS.h</label>
+        <link refid="B__3DS_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>math.h</label>
+        <link refid="math_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+      </node>
+      <node id="14">
+        <label>Bfield/B_STS.h</label>
+        <link refid="B__STS_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>print.h</label>
+        <link refid="print_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ascot5.h</label>
+        <link refid="ascot5_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="B__field_8c_1a2d598ab320e3063286cdbde51a265d74" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int B_field_init_offload</definition>
+        <argsstring>(B_field_offload_data *offload_data, real **offload_array)</argsstring>
+        <name>B_field_init_offload</name>
+        <param>
+          <type><ref refid="structB__field__offload__data" kindref="compound">B_field_offload_data</ref> *</type>
+          <declname>offload_data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> **</type>
+          <declname>offload_array</declname>
+        </param>
+        <briefdescription>
+<para>Load magnetic field data and prepare parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function fills the relevant magnetic field offload struct with parameters and allocates and fills the offload array. Sets offload array length in the offload struct.</para>
+<para>The offload data has to have a type when this function is called as it should be set when the offload data is constructed from inputs.</para>
+<para>This function is host only.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>offload_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to pointer to offload array</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Zero if initialization succeeded </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="B_field.c" line="44" column="5" bodyfile="B_field.c" bodystart="44" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="B__field_8c_1ad9f1807c8824e65f22bbff2056379003" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void B_field_free_offload</definition>
+        <argsstring>(B_field_offload_data *offload_data, real **offload_array)</argsstring>
+        <name>B_field_free_offload</name>
+        <param>
+          <type><ref refid="structB__field__offload__data" kindref="compound">B_field_offload_data</ref> *</type>
+          <declname>offload_data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> **</type>
+          <declname>offload_array</declname>
+        </param>
+        <briefdescription>
+<para>Free offload array and reset parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function deallocates the offload_array.</para>
+<para>This function is host only.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>offload_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to pointer to offload array</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Zero if initialization succeeded </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="B_field.c" line="107" column="6" bodyfile="B_field.c" bodystart="107" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="B__field_8c_1ad85ceaa2570aa7a5395ec20e400f4b9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int B_field_init</definition>
+        <argsstring>(B_field_data *Bdata, B_field_offload_data *offload_data, real *offload_array)</argsstring>
+        <name>B_field_init</name>
+        <param>
+          <type><ref refid="structB__field__data" kindref="compound">B_field_data</ref> *</type>
+          <declname>Bdata</declname>
+        </param>
+        <param>
+          <type><ref refid="structB__field__offload__data" kindref="compound">B_field_offload_data</ref> *</type>
+          <declname>offload_data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>offload_array</declname>
+        </param>
+        <briefdescription>
+<para>Initialize magnetic field data struct on target. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function copies the magnetic field parameters from the offload struct to the struct on target and sets the magnetic field data pointers to correct offsets in the offload array.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Bdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to data struct on target </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>offload array</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Zero if initialization succeeded </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="B_field.c" line="145" column="5" bodyfile="B_field.c" bodystart="145" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="B__field_8c_1a48c1f881a5f7fc9bf2d04edadfc2becf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref></type>
+        <definition>a5err B_field_eval_psi</definition>
+        <argsstring>(real *psi, real r, real phi, real z, real t, B_field_data *Bdata)</argsstring>
+        <name>B_field_eval_psi</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>psi</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>phi</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type><ref refid="structB__field__data" kindref="compound">B_field_data</ref> *</type>
+          <declname>Bdata</declname>
+        </param>
+        <briefdescription>
+<para>Evaluate poloidal flux psi. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function evaluates the poloidal flux psi at the given coordinates. The psi is exactly as it appears in Grad-Shafranov equation.</para>
+<para>This is a SIMD function.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>psi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer where psi [V*s*m^-1] value will be stored </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>R coordinate [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>phi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>phi coordinate [rad] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>z coordinate [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>time coordinate [s] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Bdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to magnetic field data struct</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Non-zero a5err value if evaluation failed, zero otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="B_field.c" line="203" column="7" bodyfile="B_field.c" bodystart="203" bodyend="241"/>
+      </memberdef>
+      <memberdef kind="function" id="B__field_8c_1a26cc6bf09e4cc46e99d4ab19b2a8b370" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref></type>
+        <definition>a5err B_field_eval_psi_dpsi</definition>
+        <argsstring>(real psi_dpsi[4], real r, real phi, real z, real t, B_field_data *Bdata)</argsstring>
+        <name>B_field_eval_psi_dpsi</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>psi_dpsi</declname>
+          <array>[4]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>phi</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type><ref refid="structB__field__data" kindref="compound">B_field_data</ref> *</type>
+          <declname>Bdata</declname>
+        </param>
+        <briefdescription>
+<para>Evaluate poloidal flux psi and its derivatives. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function evaluates the poloidal flux psi and its derivatives at the given coordinates. The psi is exactly as it appears in Grad-Shafranov equation.</para>
+<para>The values are stored in the given array as:<itemizedlist>
+<listitem><para>psi_dpsi[0] = psi</para>
+</listitem><listitem><para>psi_dpsi[1] = dpsi/dr</para>
+</listitem><listitem><para>psi_dpsi[2] = dpsi/dphi</para>
+</listitem><listitem><para>psi_dpsi[3] = dpsi/dz</para>
+</listitem></itemizedlist>
+</para>
+<para>This is a SIMD function.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>psi_dpsi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer for storing psi [V*s*m^-1] and its derivatives </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>R coordinate [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>phi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>phi coordinate [rad] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>z coordinate [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>time coordinate [s] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Bdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to magnetic field data struct</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Non-zero a5err value if evaluation failed, zero otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="B_field.c" line="267" column="7" bodyfile="B_field.c" bodystart="267" bodyend="306"/>
+      </memberdef>
+      <memberdef kind="function" id="B__field_8c_1a3e0114363493349f81a78142e70f2bd4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref></type>
+        <definition>a5err B_field_eval_rho</definition>
+        <argsstring>(real rho[2], real psi, B_field_data *Bdata)</argsstring>
+        <name>B_field_eval_rho</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>rho</declname>
+          <array>[2]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>psi</declname>
+        </param>
+        <param>
+          <type><ref refid="structB__field__data" kindref="compound">B_field_data</ref> *</type>
+          <declname>Bdata</declname>
+        </param>
+        <briefdescription>
+<para>Evaluate normalized poloidal flux rho and its psi derivative. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function evaluates the normalized poloidal flux rho at the given coordinates. The rho is evaluated from psi as:</para>
+<para><formula id="0">\begin{equation*} \rho = \sqrt{ \frac{\psi - \psi_0}{\psi_1 - \psi_0} }, \end{equation*}</formula></para>
+<para>where <formula id="1">$\psi_0$</formula> is psi at magnetic axis and <formula id="2">$\psi_1$</formula> is psi at separatrix.</para>
+<para>This is a SIMD function.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rho</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer where rho value will be stored </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>psi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>poloidal flux from which rho is evaluated </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Bdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to magnetic field data struct</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Non-zero a5err value if evaluation failed, zero otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="B_field.c" line="329" column="7" bodyfile="B_field.c" bodystart="329" bodyend="381"/>
+      </memberdef>
+      <memberdef kind="function" id="B__field_8c_1aba435be442080ac85a1b3963029f9aa1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref></type>
+        <definition>a5err B_field_eval_rho_drho</definition>
+        <argsstring>(real rho_drho[4], real r, real phi, real z, B_field_data *Bdata)</argsstring>
+        <name>B_field_eval_rho_drho</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>rho_drho</declname>
+          <array>[4]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>phi</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type><ref refid="structB__field__data" kindref="compound">B_field_data</ref> *</type>
+          <declname>Bdata</declname>
+        </param>
+        <briefdescription>
+<para>Evaluate normalized poloidal flux rho and its derivatives. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function evaluates the normalized poloidal flux rho at the given coordinates. The rho is evaluated from psi as:</para>
+<para><formula id="0">\begin{equation*} \rho = \sqrt{ \frac{\psi - \psi_0}{\psi_1 - \psi_0} }, \end{equation*}</formula></para>
+<para>where <formula id="1">$\psi_0$</formula> is psi at magnetic axis and <formula id="2">$\psi_1$</formula> is psi at separatrix.</para>
+<para>The values are stored in the given array as:<itemizedlist>
+<listitem><para>rho_drho[0] = rho</para>
+</listitem><listitem><para>rho_drho[1] = drho/dr</para>
+</listitem><listitem><para>rho_drho[2] = drho/dphi</para>
+</listitem><listitem><para>rho_drho[3] = drho/dz</para>
+</listitem></itemizedlist>
+</para>
+<para>This is a SIMD function.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rho_drho</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer where rho and its derivatives will be stored </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>R coordinate [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>phi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>phi coordinate [rad] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>z coordinate [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Bdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to magnetic field data struct</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Non-zero a5err value if evaluation failed, zero otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="B_field.c" line="412" column="7" bodyfile="B_field.c" bodystart="412" bodyend="451"/>
+      </memberdef>
+      <memberdef kind="function" id="B__field_8c_1af9d719b1f559e39fdeacfd8527af587c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref></type>
+        <definition>a5err B_field_eval_B</definition>
+        <argsstring>(real B[3], real r, real phi, real z, real t, B_field_data *Bdata)</argsstring>
+        <name>B_field_eval_B</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>B</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>phi</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type><ref refid="structB__field__data" kindref="compound">B_field_data</ref> *</type>
+          <declname>Bdata</declname>
+        </param>
+        <briefdescription>
+<para>Evaluate magnetic field. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function evaluates the magnetic field at the given coordinates.</para>
+<para>The values are stored in the given array as:<itemizedlist>
+<listitem><para>B[0] = BR</para>
+</listitem><listitem><para>B[1] = Bphi</para>
+</listitem><listitem><para>B[2] = Bz</para>
+</listitem></itemizedlist>
+</para>
+<para>This is a SIMD function.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>B</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to array where magnetic field values are stored </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>R coordinate [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>phi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>phi coordinate [deg] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>z coordinate [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>time coordinate [s] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Bdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to magnetic field data struct</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Non-zero a5err value if evaluation failed, zero otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="B_field.c" line="474" column="7" bodyfile="B_field.c" bodystart="474" bodyend="513"/>
+      </memberdef>
+      <memberdef kind="function" id="B__field_8c_1a90eee159b997ec948d58e1b760f7a555" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref></type>
+        <definition>a5err B_field_eval_B_dB</definition>
+        <argsstring>(real B_dB[15], real r, real phi, real z, real t, B_field_data *Bdata)</argsstring>
+        <name>B_field_eval_B_dB</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>B_dB</declname>
+          <array>[15]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>phi</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type><ref refid="structB__field__data" kindref="compound">B_field_data</ref> *</type>
+          <declname>Bdata</declname>
+        </param>
+        <briefdescription>
+<para>Evaluate magnetic field and its derivatives. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function evaluates the magnetic field and its derivatives at the given coordinates.</para>
+<para>The values are stored in the given array as:<itemizedlist>
+<listitem><para>B[0] = BR</para>
+</listitem><listitem><para>B[1] = dBR/dR</para>
+</listitem><listitem><para>B[2] = dBR/dphi</para>
+</listitem><listitem><para>B[3] = dBR/dz</para>
+</listitem><listitem><para>B[4] = Bphi</para>
+</listitem><listitem><para>B[5] = dBphi/dR</para>
+</listitem><listitem><para>B[6] = dBphi/dphi</para>
+</listitem><listitem><para>B[7] = dBphi/dz</para>
+</listitem><listitem><para>B[8] = Bz</para>
+</listitem><listitem><para>B[9] = dBz/dR</para>
+</listitem><listitem><para>B[10] = dBz/dphi</para>
+</listitem><listitem><para>B[11] = dBz/dz</para>
+</listitem><listitem><para>B[12] = dBR/dt</para>
+</listitem><listitem><para>B[13] = dBphi/dt</para>
+</listitem><listitem><para>B[14] = dBz/dt</para>
+</listitem></itemizedlist>
+</para>
+<para>This is a SIMD function.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>B_dB</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to array where the field and its derivatives are stored </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>R coordinate [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>phi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>phi coordinate [deg] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>z coordinate [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>time coordinate [s] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Bdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to magnetic field data struct</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Non-zero a5err value if evaluation failed, zero otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="B_field.c" line="549" column="7" bodyfile="B_field.c" bodystart="549" bodyend="588"/>
+      </memberdef>
+      <memberdef kind="function" id="B__field_8c_1ad8cf51ecdc7730eca39eb54ef4484a2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref></type>
+        <definition>a5err B_field_get_axis_rz</definition>
+        <argsstring>(real rz[2], B_field_data *Bdata, real phi)</argsstring>
+        <name>B_field_get_axis_rz</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>rz</declname>
+          <array>[2]</array>
+        </param>
+        <param>
+          <type><ref refid="structB__field__data" kindref="compound">B_field_data</ref> *</type>
+          <declname>Bdata</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>phi</declname>
+        </param>
+        <briefdescription>
+<para>Return magnetic axis Rz-coordinates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns magnetic axis Rz-coordinates at given toroidal angle.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer where axis R and z [m] values will be stored </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Bdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to magnetic field data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>phi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>phi coordinate [deg]</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Magnetic axis R-coordinate [m] </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="B_field.c" line="601" column="7" bodyfile="B_field.c" bodystart="601" bodyend="639"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Magnetic field interface. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This is an interface through which magnetic field data is initialized and accessed. Reading e.g. from disk is done elsewhere.</para>
+<para>To add a new magnetic field instance, make sure these functions are implemented and called from this interface, and that <ref refid="B__field_8h" kindref="compound">B_field.h</ref> contains enum type for the new instance.</para>
+<para>The interface checks which instance given data corresponds to from <ref refid="structB__field__offload__data_1aa831a5fdf440b4490c9cf774be57349b" kindref="member">B_field_offload_data.type</ref> and <ref refid="structB__field__data_1a5eaf6065b399089f080fd8110789201a" kindref="member">B_field_data.type</ref> from the structure that is given as an argument, and calls the relevant function for that instance. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ascot5_8h" kindref="compound">ascot5.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="error_8h" kindref="compound">error.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="print_8h" kindref="compound">print.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="B__field_8h" kindref="compound">B_field.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="B__GS_8h" kindref="compound">Bfield/B_GS.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="B__2DS_8h" kindref="compound">Bfield/B_2DS.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="B__3DS_8h" kindref="compound">Bfield/B_3DS.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="B__STS_8h" kindref="compound">Bfield/B_STS.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="B__TC_8h" kindref="compound">Bfield/B_TC.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="B__field_8c_1a2d598ab320e3063286cdbde51a265d74" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="B__field_8c_1a2d598ab320e3063286cdbde51a265d74" kindref="member">B_field_init_offload</ref>(<ref refid="structB__field__offload__data" kindref="compound">B_field_offload_data</ref>*<sp/>offload_data,</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>**<sp/>offload_array)<sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>err<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal">(offload_data-&gt;<ref refid="structB__field__offload__data_1aa831a5fdf440b4490c9cf774be57349b" kindref="member">type</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6aeaae35c569ce5b05f25150378264dad5" kindref="member">B_field_type_GS</ref>:</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="B__GS_8c_1acff473136a0a436d863018e5f38ee596" kindref="member">B_GS_init_offload</ref>(&amp;(offload_data-&gt;<ref refid="structB__field__offload__data_1ad568b60fc7226dc57def1746aae5370c" kindref="member">BGS</ref>),<sp/>offload_array);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structB__field__offload__data_1aa18fb7c0f67ea0f1b8fe6f92952020b0" kindref="member">offload_array_length</ref><sp/>=</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structB__field__offload__data_1ad568b60fc7226dc57def1746aae5370c" kindref="member">BGS</ref>.<ref refid="structB__GS__offload__data_1acb9ac0f80150230ce2868d83c44b890a" kindref="member">offload_array_length</ref>;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6a08a6eeec9f59141cfc01878c7776b84a" kindref="member">B_field_type_2DS</ref>:</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="B__2DS_8c_1afcf0b85f08ad40a47972977c250f40e8" kindref="member">B_2DS_init_offload</ref>(&amp;(offload_data-&gt;<ref refid="structB__field__offload__data_1a1a15b385dc6c20318facbd027585c439" kindref="member">B2DS</ref>),<sp/>offload_array);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structB__field__offload__data_1aa18fb7c0f67ea0f1b8fe6f92952020b0" kindref="member">offload_array_length</ref><sp/>=</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structB__field__offload__data_1a1a15b385dc6c20318facbd027585c439" kindref="member">B2DS</ref>.<ref refid="structB__2DS__offload__data_1a969cc9e6388b75c91e81f6fe902b56dc" kindref="member">offload_array_length</ref>;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6acddc6f4338f89f1aa608b08ca1d03af9" kindref="member">B_field_type_3DS</ref>:</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="B__3DS_8c_1a6ef9bae22aaa9142883fd9235c094690" kindref="member">B_3DS_init_offload</ref>(&amp;(offload_data-&gt;<ref refid="structB__field__offload__data_1aec0175d0425f36b2eb727cc7e05e95a1" kindref="member">B3DS</ref>),<sp/>offload_array);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structB__field__offload__data_1aa18fb7c0f67ea0f1b8fe6f92952020b0" kindref="member">offload_array_length</ref><sp/>=</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structB__field__offload__data_1aec0175d0425f36b2eb727cc7e05e95a1" kindref="member">B3DS</ref>.<ref refid="structB__3DS__offload__data_1a9f7f356647e41fc8c937631e86a66f9e" kindref="member">offload_array_length</ref>;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6ad8b42ea6016c92f4767615d7fb9027f8" kindref="member">B_field_type_STS</ref>:</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="B__STS_8c_1acb08fede18445a4c412118c8d0dca978" kindref="member">B_STS_init_offload</ref>(&amp;(offload_data-&gt;<ref refid="structB__field__offload__data_1ae3a36c2bf7060d370638c216f4ffce79" kindref="member">BSTS</ref>),<sp/>offload_array);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structB__field__offload__data_1aa18fb7c0f67ea0f1b8fe6f92952020b0" kindref="member">offload_array_length</ref><sp/>=</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structB__field__offload__data_1ae3a36c2bf7060d370638c216f4ffce79" kindref="member">BSTS</ref>.<ref refid="structB__STS__offload__data_1a4a5bc280010988ef4ca24a57a44c46f2" kindref="member">offload_array_length</ref>;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6a24ea2346ab109f89825d54ea4518e662" kindref="member">B_field_type_TC</ref>:</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="B__TC_8c_1aa5849b8153849a6692f37aea1be0e638" kindref="member">B_TC_init_offload</ref>(&amp;(offload_data-&gt;<ref refid="structB__field__offload__data_1aa9584fb7afce2bf745fce0b9048f5a1f" kindref="member">BTC</ref>),<sp/>offload_array);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structB__field__offload__data_1aa18fb7c0f67ea0f1b8fe6f92952020b0" kindref="member">offload_array_length</ref><sp/>=</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structB__field__offload__data_1aa9584fb7afce2bf745fce0b9048f5a1f" kindref="member">BTC</ref>.<ref refid="structB__TC__offload__data_1a5ebf86bc63202d89d27e724cdcb25e72" kindref="member">offload_array_length</ref>;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Unregonized<sp/>input.<sp/>Produce<sp/>error.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="print_8h_1ae9242d843e65413a3e5dba7129c75101" kindref="member">print_err</ref>(</highlight><highlight class="stringliteral">&quot;Error:<sp/>Unregonized<sp/>magnetic<sp/>field<sp/>type.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!err)<sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="print_8h_1a8520c71eb5db223009e5079e420bc398" kindref="member">print_out</ref>(VERBOSE_IO,<sp/></highlight><highlight class="stringliteral">&quot;Estimated<sp/>memory<sp/>usage<sp/>%.1f<sp/>MB\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structB__field__offload__data_1aa18fb7c0f67ea0f1b8fe6f92952020b0" kindref="member">offload_array_length</ref></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>)<sp/>/<sp/>(1024.0*1024.0)<sp/>);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>err;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107" refid="B__field_8c_1ad9f1807c8824e65f22bbff2056379003" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="B__field_8c_1ad9f1807c8824e65f22bbff2056379003" kindref="member">B_field_free_offload</ref>(<ref refid="structB__field__offload__data" kindref="compound">B_field_offload_data</ref>*<sp/>offload_data,</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>**<sp/>offload_array)<sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal">(offload_data-&gt;<ref refid="structB__field__offload__data_1aa831a5fdf440b4490c9cf774be57349b" kindref="member">type</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6aeaae35c569ce5b05f25150378264dad5" kindref="member">B_field_type_GS</ref>:</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="B__GS_8c_1aa16073904d31d2c02cc9417bf06ca71c" kindref="member">B_GS_free_offload</ref>(&amp;(offload_data-&gt;<ref refid="structB__field__offload__data_1ad568b60fc7226dc57def1746aae5370c" kindref="member">BGS</ref>),<sp/>offload_array);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6a08a6eeec9f59141cfc01878c7776b84a" kindref="member">B_field_type_2DS</ref>:</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="B__2DS_8c_1a49b90b805921f5d25f3118c8db61f533" kindref="member">B_2DS_free_offload</ref>(&amp;(offload_data-&gt;<ref refid="structB__field__offload__data_1a1a15b385dc6c20318facbd027585c439" kindref="member">B2DS</ref>),<sp/>offload_array);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6acddc6f4338f89f1aa608b08ca1d03af9" kindref="member">B_field_type_3DS</ref>:</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="B__3DS_8c_1a3aea0e3381c822f20cefc33ce7e9cad8" kindref="member">B_3DS_free_offload</ref>(&amp;(offload_data-&gt;<ref refid="structB__field__offload__data_1aec0175d0425f36b2eb727cc7e05e95a1" kindref="member">B3DS</ref>),<sp/>offload_array);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6ad8b42ea6016c92f4767615d7fb9027f8" kindref="member">B_field_type_STS</ref>:</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="B__STS_8c_1a6f091681bce5d60c97023e6b289aec68" kindref="member">B_STS_free_offload</ref>(&amp;(offload_data-&gt;<ref refid="structB__field__offload__data_1ae3a36c2bf7060d370638c216f4ffce79" kindref="member">BSTS</ref>),<sp/>offload_array);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6a24ea2346ab109f89825d54ea4518e662" kindref="member">B_field_type_TC</ref>:</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="B__TC_8c_1a361cc6e8e3d1ee2d87f81fc091dbb282" kindref="member">B_TC_free_offload</ref>(&amp;(offload_data-&gt;<ref refid="structB__field__offload__data_1aa9584fb7afce2bf745fce0b9048f5a1f" kindref="member">BTC</ref>),<sp/>offload_array);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145" refid="B__field_8c_1ad85ceaa2570aa7a5395ec20e400f4b9b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="B__field_8c_1ad85ceaa2570aa7a5395ec20e400f4b9b" kindref="member">B_field_init</ref>(<ref refid="structB__field__data" kindref="compound">B_field_data</ref>*<sp/>Bdata,<sp/><ref refid="structB__field__offload__data" kindref="compound">B_field_offload_data</ref>*<sp/>offload_data,</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>offload_array)<sp/>{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>err<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal">(offload_data-&gt;<ref refid="structB__field__offload__data_1aa831a5fdf440b4490c9cf774be57349b" kindref="member">type</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6aeaae35c569ce5b05f25150378264dad5" kindref="member">B_field_type_GS</ref>:</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="B__GS_8c_1a21d761b61c95291e7c8df63bee726e3f" kindref="member">B_GS_init</ref>(</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;(Bdata-&gt;<ref refid="structB__field__data_1a998ad9cf3f1561f787601bbdec849810" kindref="member">BGS</ref>),<sp/>&amp;(offload_data-&gt;<ref refid="structB__field__offload__data_1ad568b60fc7226dc57def1746aae5370c" kindref="member">BGS</ref>),<sp/>offload_array);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6a08a6eeec9f59141cfc01878c7776b84a" kindref="member">B_field_type_2DS</ref>:</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="B__2DS_8c_1a561eb8a7b4605f5992ff9177d7c95f80" kindref="member">B_2DS_init</ref>(</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;(Bdata-&gt;<ref refid="structB__field__data_1a26126a3a3ac31c677af14da45ec6bb7f" kindref="member">B2DS</ref>),<sp/>&amp;(offload_data-&gt;<ref refid="structB__field__offload__data_1a1a15b385dc6c20318facbd027585c439" kindref="member">B2DS</ref>),<sp/>offload_array);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6acddc6f4338f89f1aa608b08ca1d03af9" kindref="member">B_field_type_3DS</ref>:</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="B__3DS_8c_1a720f424be1c3990267bd41dfff687fd4" kindref="member">B_3DS_init</ref>(</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;(Bdata-&gt;<ref refid="structB__field__data_1a999c3aa9dc4ca032efd5b95179cba20a" kindref="member">B3DS</ref>),<sp/>&amp;(offload_data-&gt;<ref refid="structB__field__offload__data_1aec0175d0425f36b2eb727cc7e05e95a1" kindref="member">B3DS</ref>),<sp/>offload_array);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6ad8b42ea6016c92f4767615d7fb9027f8" kindref="member">B_field_type_STS</ref>:</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="B__STS_8c_1a931ef0d099dc26a73c7658aa0978c098" kindref="member">B_STS_init</ref>(</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;(Bdata-&gt;<ref refid="structB__field__data_1a008fae4c7877895a76d13405e15273ed" kindref="member">BSTS</ref>),<sp/>&amp;(offload_data-&gt;<ref refid="structB__field__offload__data_1ae3a36c2bf7060d370638c216f4ffce79" kindref="member">BSTS</ref>),<sp/>offload_array);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6a24ea2346ab109f89825d54ea4518e662" kindref="member">B_field_type_TC</ref>:</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="B__TC_8c_1aa1f9387ce3b329d6f94cddbe9bda0583" kindref="member">B_TC_init</ref>(</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;(Bdata-&gt;<ref refid="structB__field__data_1a04b89c7bacbe0e9708d5b16bc40624d4" kindref="member">BTC</ref>),<sp/>&amp;(offload_data-&gt;<ref refid="structB__field__offload__data_1aa9584fb7afce2bf745fce0b9048f5a1f" kindref="member">BTC</ref>),<sp/>offload_array);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Unregonized<sp/>input.<sp/>Produce<sp/>error.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="print_8h_1ae9242d843e65413a3e5dba7129c75101" kindref="member">print_err</ref>(</highlight><highlight class="stringliteral">&quot;Error:<sp/>Unregonized<sp/>magnetic<sp/>field<sp/>type.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>Bdata-&gt;<ref refid="structB__field__data_1a5eaf6065b399089f080fd8110789201a" kindref="member">type</ref><sp/>=<sp/>offload_data-&gt;<ref refid="structB__field__offload__data_1aa831a5fdf440b4490c9cf774be57349b" kindref="member">type</ref>;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>err;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203" refid="B__field_8c_1a48c1f881a5f7fc9bf2d04edadfc2becf" refkind="member"><highlight class="normal"><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref><sp/><ref refid="B__field_8c_1a48c1f881a5f7fc9bf2d04edadfc2becf" kindref="member">B_field_eval_psi</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>psi,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>phi,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>t,</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structB__field__data" kindref="compound">B_field_data</ref>*<sp/>Bdata)<sp/>{</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref><sp/>err<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal">(Bdata-&gt;<ref refid="structB__field__data_1a5eaf6065b399089f080fd8110789201a" kindref="member">type</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6aeaae35c569ce5b05f25150378264dad5" kindref="member">B_field_type_GS</ref>:</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="B__GS_8c_1a33e019b4f05632836ec69715c988d406" kindref="member">B_GS_eval_psi</ref>(psi,<sp/>r,<sp/>phi,<sp/>z,<sp/>&amp;(Bdata-&gt;<ref refid="structB__field__data_1a998ad9cf3f1561f787601bbdec849810" kindref="member">BGS</ref>));</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6a08a6eeec9f59141cfc01878c7776b84a" kindref="member">B_field_type_2DS</ref>:</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="B__2DS_8c_1a08da6625d107648011f31f183d9c6c1e" kindref="member">B_2DS_eval_psi</ref>(psi,<sp/>r,<sp/>phi,<sp/>z,<sp/>&amp;(Bdata-&gt;<ref refid="structB__field__data_1a26126a3a3ac31c677af14da45ec6bb7f" kindref="member">B2DS</ref>));</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6acddc6f4338f89f1aa608b08ca1d03af9" kindref="member">B_field_type_3DS</ref>:</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="B__3DS_8c_1a883e700789d36bd74e3b9d8eaec98259" kindref="member">B_3DS_eval_psi</ref>(psi,<sp/>r,<sp/>phi,<sp/>z,<sp/>&amp;(Bdata-&gt;<ref refid="structB__field__data_1a999c3aa9dc4ca032efd5b95179cba20a" kindref="member">B3DS</ref>));</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6ad8b42ea6016c92f4767615d7fb9027f8" kindref="member">B_field_type_STS</ref>:</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="B__STS_8c_1ad5644b9978d382c606bc01bdbe9fbd7b" kindref="member">B_STS_eval_psi</ref>(psi,<sp/>r,<sp/>phi,<sp/>z,<sp/>&amp;(Bdata-&gt;<ref refid="structB__field__data_1a008fae4c7877895a76d13405e15273ed" kindref="member">BSTS</ref>));</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6a24ea2346ab109f89825d54ea4518e662" kindref="member">B_field_type_TC</ref>:</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="B__TC_8c_1a4561b9ecbc8fe09d63d361f3cc3503d2" kindref="member">B_TC_eval_psi</ref>(psi,<sp/>r,<sp/>phi,<sp/>z,<sp/>&amp;(Bdata-&gt;<ref refid="structB__field__data_1a04b89c7bacbe0e9708d5b16bc40624d4" kindref="member">BTC</ref>));</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Unregonized<sp/>input.<sp/>Produce<sp/>error.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="error_8h_1a580a0b8b4a823a26a00b2f83d9343bc4" kindref="member">error_raise</ref>(<sp/><ref refid="error_8h_1a6756b9f30781ed8ca8ce938e49ad9d92ac2125be888742dd78b8d8bd4fc40b5b7" kindref="member">ERR_UNKNOWN_INPUT</ref>,<sp/>__LINE__,<sp/><ref refid="error_8h_1a4e101179605aba551caa2576fd83a1dda7a54a842179dd40325b9143336f7345d" kindref="member">EF_B_FIELD</ref><sp/>);</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(err)<sp/>{</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>In<sp/>case<sp/>of<sp/>error,<sp/>return<sp/>some<sp/>reasonable<sp/>value<sp/>to<sp/>avoid<sp/>further</highlight></codeline>
+<codeline lineno="236"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>complications<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>psi[0]<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>err;</highlight></codeline>
+<codeline lineno="241"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="267" refid="B__field_8c_1a26cc6bf09e4cc46e99d4ab19b2a8b370" refkind="member"><highlight class="normal"><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref><sp/><ref refid="B__field_8c_1a26cc6bf09e4cc46e99d4ab19b2a8b370" kindref="member">B_field_eval_psi_dpsi</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>psi_dpsi[4],<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>phi,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>t,</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structB__field__data" kindref="compound">B_field_data</ref>*<sp/>Bdata)<sp/>{</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref><sp/>err<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal">(Bdata-&gt;<ref refid="structB__field__data_1a5eaf6065b399089f080fd8110789201a" kindref="member">type</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6aeaae35c569ce5b05f25150378264dad5" kindref="member">B_field_type_GS</ref>:</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="B__GS_8c_1ab6d19c0c87844118bd02db019a78566e" kindref="member">B_GS_eval_psi_dpsi</ref>(psi_dpsi,<sp/>r,<sp/>phi,<sp/>z,<sp/>&amp;(Bdata-&gt;<ref refid="structB__field__data_1a998ad9cf3f1561f787601bbdec849810" kindref="member">BGS</ref>));</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6a08a6eeec9f59141cfc01878c7776b84a" kindref="member">B_field_type_2DS</ref>:</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="B__2DS_8c_1a6f274daf37a8fa9197d24f5118f74e05" kindref="member">B_2DS_eval_psi_dpsi</ref>(psi_dpsi,<sp/>r,<sp/>phi,<sp/>z,<sp/>&amp;(Bdata-&gt;<ref refid="structB__field__data_1a26126a3a3ac31c677af14da45ec6bb7f" kindref="member">B2DS</ref>));</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6acddc6f4338f89f1aa608b08ca1d03af9" kindref="member">B_field_type_3DS</ref>:</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="B__3DS_8c_1a73698063d869ee4042a45bc53019ccb8" kindref="member">B_3DS_eval_psi_dpsi</ref>(psi_dpsi,<sp/>r,<sp/>phi,<sp/>z,<sp/>&amp;(Bdata-&gt;<ref refid="structB__field__data_1a999c3aa9dc4ca032efd5b95179cba20a" kindref="member">B3DS</ref>));</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6ad8b42ea6016c92f4767615d7fb9027f8" kindref="member">B_field_type_STS</ref>:</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="B__STS_8c_1ae1cafb9166148608daf09e6bf4ae8db2" kindref="member">B_STS_eval_psi_dpsi</ref>(psi_dpsi,<sp/>r,<sp/>phi,<sp/>z,<sp/>&amp;(Bdata-&gt;<ref refid="structB__field__data_1a008fae4c7877895a76d13405e15273ed" kindref="member">BSTS</ref>));</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6a24ea2346ab109f89825d54ea4518e662" kindref="member">B_field_type_TC</ref>:</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="B__TC_8c_1a5527eb8501f2a9a1bd3c192878296290" kindref="member">B_TC_eval_psi_dpsi</ref>(psi_dpsi,<sp/>r,<sp/>phi,<sp/>z,<sp/>&amp;(Bdata-&gt;<ref refid="structB__field__data_1a04b89c7bacbe0e9708d5b16bc40624d4" kindref="member">BTC</ref>));</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Unregonized<sp/>input.<sp/>Produce<sp/>error.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="error_8h_1a580a0b8b4a823a26a00b2f83d9343bc4" kindref="member">error_raise</ref>(<sp/><ref refid="error_8h_1a6756b9f30781ed8ca8ce938e49ad9d92ac2125be888742dd78b8d8bd4fc40b5b7" kindref="member">ERR_UNKNOWN_INPUT</ref>,<sp/>__LINE__,<sp/><ref refid="error_8h_1a4e101179605aba551caa2576fd83a1dda7a54a842179dd40325b9143336f7345d" kindref="member">EF_B_FIELD</ref><sp/>);</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(err)<sp/>{</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>In<sp/>case<sp/>of<sp/>error,<sp/>return<sp/>some<sp/>reasonable<sp/>values<sp/>to<sp/>avoid<sp/>further</highlight></codeline>
+<codeline lineno="300"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>complications<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>psi_dpsi[0]<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k=1;<sp/>k&lt;4;<sp/>k++)<sp/>{psi_dpsi[k]<sp/>=<sp/>0;}</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"></highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>err;</highlight></codeline>
+<codeline lineno="306"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"></highlight></codeline>
+<codeline lineno="329" refid="B__field_8c_1a3e0114363493349f81a78142e70f2bd4" refkind="member"><highlight class="normal"><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref><sp/><ref refid="B__field_8c_1a3e0114363493349f81a78142e70f2bd4" kindref="member">B_field_eval_rho</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>rho[2],<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>psi,<sp/><ref refid="structB__field__data" kindref="compound">B_field_data</ref>*<sp/>Bdata)<sp/>{</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref><sp/>err<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"></highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>psi0<sp/>=<sp/>0.0,<sp/>psi1<sp/>=<sp/>1.0;</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal">(Bdata-&gt;<ref refid="structB__field__data_1a5eaf6065b399089f080fd8110789201a" kindref="member">type</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6aeaae35c569ce5b05f25150378264dad5" kindref="member">B_field_type_GS</ref>:</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>psi0<sp/>=<sp/>Bdata-&gt;<ref refid="structB__field__data_1a998ad9cf3f1561f787601bbdec849810" kindref="member">BGS</ref>.<ref refid="structB__GS__data_1a8e777a9a53d33d4fc8db2327311c042c" kindref="member">psi0</ref>;</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>psi1<sp/>=<sp/>Bdata-&gt;<ref refid="structB__field__data_1a998ad9cf3f1561f787601bbdec849810" kindref="member">BGS</ref>.<ref refid="structB__GS__data_1a78a0c3b8bb9a249fe5e9e20b72ebf66e" kindref="member">psi1</ref>;</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"></highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6a08a6eeec9f59141cfc01878c7776b84a" kindref="member">B_field_type_2DS</ref>:</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>psi0<sp/>=<sp/>Bdata-&gt;<ref refid="structB__field__data_1a26126a3a3ac31c677af14da45ec6bb7f" kindref="member">B2DS</ref>.<ref refid="structB__2DS__data_1ada2ae86958b948e35004172bb4be6556" kindref="member">psi0</ref>;</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>psi1<sp/>=<sp/>Bdata-&gt;<ref refid="structB__field__data_1a26126a3a3ac31c677af14da45ec6bb7f" kindref="member">B2DS</ref>.<ref refid="structB__2DS__data_1a20a5e9e791d3f16e1653571e1d400a6d" kindref="member">psi1</ref>;</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"></highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6acddc6f4338f89f1aa608b08ca1d03af9" kindref="member">B_field_type_3DS</ref>:</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>psi0<sp/>=<sp/>Bdata-&gt;<ref refid="structB__field__data_1a999c3aa9dc4ca032efd5b95179cba20a" kindref="member">B3DS</ref>.<ref refid="structB__3DS__data_1a6d1920cef9daaf5cb91b64395ff5b75b" kindref="member">psi0</ref>;</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>psi1<sp/>=<sp/>Bdata-&gt;<ref refid="structB__field__data_1a999c3aa9dc4ca032efd5b95179cba20a" kindref="member">B3DS</ref>.<ref refid="structB__3DS__data_1a7835e59b0b6508c774445d1cb5576471" kindref="member">psi1</ref>;</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"></highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6ad8b42ea6016c92f4767615d7fb9027f8" kindref="member">B_field_type_STS</ref>:</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>psi0<sp/>=<sp/>Bdata-&gt;<ref refid="structB__field__data_1a008fae4c7877895a76d13405e15273ed" kindref="member">BSTS</ref>.<ref refid="structB__STS__data_1a8ee302ab260da9e9922bd1a33d1b6616" kindref="member">psi0</ref>;</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>psi1<sp/>=<sp/>Bdata-&gt;<ref refid="structB__field__data_1a008fae4c7877895a76d13405e15273ed" kindref="member">BSTS</ref>.<ref refid="structB__STS__data_1a6c73d86dbc04d55ce91ebf880d50701b" kindref="member">psi1</ref>;</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"></highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6a24ea2346ab109f89825d54ea4518e662" kindref="member">B_field_type_TC</ref>:</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>psi0<sp/>=<sp/>Bdata-&gt;<ref refid="structB__field__data_1a04b89c7bacbe0e9708d5b16bc40624d4" kindref="member">BTC</ref>.<ref refid="structB__TC__data_1a7a1bd4304427daca203f582812b64704" kindref="member">psival</ref>;</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>psi1<sp/>=<sp/>2.0;</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"></highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Unregonized<sp/>input.<sp/>Produce<sp/>error.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="error_8h_1a580a0b8b4a823a26a00b2f83d9343bc4" kindref="member">error_raise</ref>(<sp/><ref refid="error_8h_1a6756b9f30781ed8ca8ce938e49ad9d92ac2125be888742dd78b8d8bd4fc40b5b7" kindref="member">ERR_UNKNOWN_INPUT</ref>,<sp/>__LINE__,<sp/><ref refid="error_8h_1a4e101179605aba551caa2576fd83a1dda7a54a842179dd40325b9143336f7345d" kindref="member">EF_B_FIELD</ref><sp/>);</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"></highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>delta<sp/>=<sp/>(psi1<sp/>-<sp/>psi0);</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>(psi<sp/>-<sp/>psi0)<sp/>/<sp/>delta<sp/>&lt;<sp/>0<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="error_8h_1a580a0b8b4a823a26a00b2f83d9343bc4" kindref="member">error_raise</ref>(<sp/><ref refid="error_8h_1a6756b9f30781ed8ca8ce938e49ad9d92afd37c4badd68d8e161fa0676fd11eb4c" kindref="member">ERR_INPUT_UNPHYSICAL</ref>,<sp/>__LINE__,<sp/><ref refid="error_8h_1a4e101179605aba551caa2576fd83a1dda7a54a842179dd40325b9143336f7345d" kindref="member">EF_B_FIELD</ref><sp/>);</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rho[0]<sp/>=<sp/>sqrt(<sp/>(psi<sp/>-<sp/>psi0)<sp/>/<sp/>delta<sp/>);</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rho[1]<sp/>=<sp/>1.0<sp/>/<sp/>(2*delta*rho[0]);</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"></highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(err)<sp/>{</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>In<sp/>case<sp/>of<sp/>error,<sp/>return<sp/>some<sp/>reasonable<sp/>value<sp/>to<sp/>avoid<sp/>further</highlight></codeline>
+<codeline lineno="375"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>complications<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rho[0]<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rho[1]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"></highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>err;</highlight></codeline>
+<codeline lineno="381"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="382"><highlight class="normal"></highlight></codeline>
+<codeline lineno="412" refid="B__field_8c_1aba435be442080ac85a1b3963029f9aa1" refkind="member"><highlight class="normal"><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref><sp/><ref refid="B__field_8c_1aba435be442080ac85a1b3963029f9aa1" kindref="member">B_field_eval_rho_drho</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>rho_drho[4],<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>phi,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z,</highlight></codeline>
+<codeline lineno="413"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structB__field__data" kindref="compound">B_field_data</ref>*<sp/>Bdata)<sp/>{</highlight></codeline>
+<codeline lineno="414"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref><sp/>err<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="415"><highlight class="normal"></highlight></codeline>
+<codeline lineno="416"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal">(Bdata-&gt;<ref refid="structB__field__data_1a5eaf6065b399089f080fd8110789201a" kindref="member">type</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="417"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6aeaae35c569ce5b05f25150378264dad5" kindref="member">B_field_type_GS</ref>:</highlight></codeline>
+<codeline lineno="418"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="B__GS_8c_1aaed1e4b9331e94b2ebcea1859fabf92b" kindref="member">B_GS_eval_rho_drho</ref>(rho_drho,<sp/>r,<sp/>phi,<sp/>z,<sp/>&amp;(Bdata-&gt;<ref refid="structB__field__data_1a998ad9cf3f1561f787601bbdec849810" kindref="member">BGS</ref>));</highlight></codeline>
+<codeline lineno="419"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="420"><highlight class="normal"></highlight></codeline>
+<codeline lineno="421"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6a08a6eeec9f59141cfc01878c7776b84a" kindref="member">B_field_type_2DS</ref>:</highlight></codeline>
+<codeline lineno="422"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="B__2DS_8c_1a7d2d2b34991c91a0f4dab381780a3ca4" kindref="member">B_2DS_eval_rho_drho</ref>(rho_drho,<sp/>r,<sp/>phi,<sp/>z,<sp/>&amp;(Bdata-&gt;<ref refid="structB__field__data_1a26126a3a3ac31c677af14da45ec6bb7f" kindref="member">B2DS</ref>));</highlight></codeline>
+<codeline lineno="423"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="424"><highlight class="normal"></highlight></codeline>
+<codeline lineno="425"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6acddc6f4338f89f1aa608b08ca1d03af9" kindref="member">B_field_type_3DS</ref>:</highlight></codeline>
+<codeline lineno="426"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="B__3DS_8c_1a544624e1482fa702684c9fa403c80ca8" kindref="member">B_3DS_eval_rho_drho</ref>(rho_drho,<sp/>r,<sp/>phi,<sp/>z,<sp/>&amp;(Bdata-&gt;<ref refid="structB__field__data_1a999c3aa9dc4ca032efd5b95179cba20a" kindref="member">B3DS</ref>));</highlight></codeline>
+<codeline lineno="427"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="428"><highlight class="normal"></highlight></codeline>
+<codeline lineno="429"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6ad8b42ea6016c92f4767615d7fb9027f8" kindref="member">B_field_type_STS</ref>:</highlight></codeline>
+<codeline lineno="430"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="B__STS_8c_1a58b56b89cf87058455f51443068187b1" kindref="member">B_STS_eval_rho_drho</ref>(rho_drho,<sp/>r,<sp/>phi,<sp/>z,<sp/>&amp;(Bdata-&gt;<ref refid="structB__field__data_1a008fae4c7877895a76d13405e15273ed" kindref="member">BSTS</ref>));</highlight></codeline>
+<codeline lineno="431"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="432"><highlight class="normal"></highlight></codeline>
+<codeline lineno="433"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6a24ea2346ab109f89825d54ea4518e662" kindref="member">B_field_type_TC</ref>:</highlight></codeline>
+<codeline lineno="434"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="B__TC_8c_1a39984b7a7a89470b1dfd9f22860139b3" kindref="member">B_TC_eval_rho_drho</ref>(rho_drho,<sp/>r,<sp/>phi,<sp/>z,<sp/>&amp;(Bdata-&gt;<ref refid="structB__field__data_1a04b89c7bacbe0e9708d5b16bc40624d4" kindref="member">BTC</ref>));</highlight></codeline>
+<codeline lineno="435"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="436"><highlight class="normal"></highlight></codeline>
+<codeline lineno="437"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="438"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Unregonized<sp/>input.<sp/>Produce<sp/>error.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="439"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="error_8h_1a580a0b8b4a823a26a00b2f83d9343bc4" kindref="member">error_raise</ref>(<sp/><ref refid="error_8h_1a6756b9f30781ed8ca8ce938e49ad9d92ac2125be888742dd78b8d8bd4fc40b5b7" kindref="member">ERR_UNKNOWN_INPUT</ref>,<sp/>__LINE__,<sp/><ref refid="error_8h_1a4e101179605aba551caa2576fd83a1dda7a54a842179dd40325b9143336f7345d" kindref="member">EF_B_FIELD</ref><sp/>);</highlight></codeline>
+<codeline lineno="440"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="441"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="442"><highlight class="normal"></highlight></codeline>
+<codeline lineno="443"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(err)<sp/>{</highlight></codeline>
+<codeline lineno="444"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>In<sp/>case<sp/>of<sp/>error,<sp/>return<sp/>some<sp/>reasonable<sp/>values<sp/>to<sp/>avoid<sp/>further</highlight></codeline>
+<codeline lineno="445"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>complications<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="446"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rho_drho[0]<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="447"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k=1;<sp/>k&lt;4;<sp/>k++)<sp/>{rho_drho[k]<sp/>=<sp/>0;}</highlight></codeline>
+<codeline lineno="448"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="449"><highlight class="normal"></highlight></codeline>
+<codeline lineno="450"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>err;</highlight></codeline>
+<codeline lineno="451"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="452"><highlight class="normal"></highlight></codeline>
+<codeline lineno="474" refid="B__field_8c_1af9d719b1f559e39fdeacfd8527af587c" refkind="member"><highlight class="normal"><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref><sp/><ref refid="B__field_8c_1af9d719b1f559e39fdeacfd8527af587c" kindref="member">B_field_eval_B</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>B[3],<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>phi,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>t,</highlight></codeline>
+<codeline lineno="475"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structB__field__data" kindref="compound">B_field_data</ref>*<sp/>Bdata)<sp/>{</highlight></codeline>
+<codeline lineno="476"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref><sp/>err<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="477"><highlight class="normal"></highlight></codeline>
+<codeline lineno="478"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal">(Bdata-&gt;<ref refid="structB__field__data_1a5eaf6065b399089f080fd8110789201a" kindref="member">type</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="479"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6aeaae35c569ce5b05f25150378264dad5" kindref="member">B_field_type_GS</ref>:</highlight></codeline>
+<codeline lineno="480"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="B__GS_8c_1a52e303d3851a693317243f80114bbea2" kindref="member">B_GS_eval_B</ref>(B,<sp/>r,<sp/>phi,<sp/>z,<sp/>&amp;(Bdata-&gt;<ref refid="structB__field__data_1a998ad9cf3f1561f787601bbdec849810" kindref="member">BGS</ref>));</highlight></codeline>
+<codeline lineno="481"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="482"><highlight class="normal"></highlight></codeline>
+<codeline lineno="483"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6a08a6eeec9f59141cfc01878c7776b84a" kindref="member">B_field_type_2DS</ref>:</highlight></codeline>
+<codeline lineno="484"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="B__2DS_8c_1aa3dfebc629c27dbbcf227fbbdc81000d" kindref="member">B_2DS_eval_B</ref>(B,<sp/>r,<sp/>phi,<sp/>z,<sp/>&amp;(Bdata-&gt;<ref refid="structB__field__data_1a26126a3a3ac31c677af14da45ec6bb7f" kindref="member">B2DS</ref>));</highlight></codeline>
+<codeline lineno="485"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="486"><highlight class="normal"></highlight></codeline>
+<codeline lineno="487"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6acddc6f4338f89f1aa608b08ca1d03af9" kindref="member">B_field_type_3DS</ref>:</highlight></codeline>
+<codeline lineno="488"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="B__3DS_8c_1a562e6b13dc35609abdae61046f38e01e" kindref="member">B_3DS_eval_B</ref>(B,<sp/>r,<sp/>phi,<sp/>z,<sp/>&amp;(Bdata-&gt;<ref refid="structB__field__data_1a999c3aa9dc4ca032efd5b95179cba20a" kindref="member">B3DS</ref>));</highlight></codeline>
+<codeline lineno="489"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="490"><highlight class="normal"></highlight></codeline>
+<codeline lineno="491"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6ad8b42ea6016c92f4767615d7fb9027f8" kindref="member">B_field_type_STS</ref>:</highlight></codeline>
+<codeline lineno="492"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="B__STS_8c_1af6e97ba3be86103ac1233235ee1a9ab6" kindref="member">B_STS_eval_B</ref>(B,<sp/>r,<sp/>phi,<sp/>z,<sp/>&amp;(Bdata-&gt;<ref refid="structB__field__data_1a008fae4c7877895a76d13405e15273ed" kindref="member">BSTS</ref>));</highlight></codeline>
+<codeline lineno="493"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="494"><highlight class="normal"></highlight></codeline>
+<codeline lineno="495"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6a24ea2346ab109f89825d54ea4518e662" kindref="member">B_field_type_TC</ref>:</highlight></codeline>
+<codeline lineno="496"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="B__TC_8c_1af2a0d0220250259ff55230d27caf97dd" kindref="member">B_TC_eval_B</ref>(B,<sp/>r,<sp/>phi,<sp/>z,<sp/>&amp;(Bdata-&gt;<ref refid="structB__field__data_1a04b89c7bacbe0e9708d5b16bc40624d4" kindref="member">BTC</ref>));</highlight></codeline>
+<codeline lineno="497"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="498"><highlight class="normal"></highlight></codeline>
+<codeline lineno="499"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="500"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Unregonized<sp/>input.<sp/>Produce<sp/>error.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="501"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="error_8h_1a580a0b8b4a823a26a00b2f83d9343bc4" kindref="member">error_raise</ref>(<sp/><ref refid="error_8h_1a6756b9f30781ed8ca8ce938e49ad9d92ac2125be888742dd78b8d8bd4fc40b5b7" kindref="member">ERR_UNKNOWN_INPUT</ref>,<sp/>__LINE__,<sp/><ref refid="error_8h_1a4e101179605aba551caa2576fd83a1dda7a54a842179dd40325b9143336f7345d" kindref="member">EF_B_FIELD</ref><sp/>);</highlight></codeline>
+<codeline lineno="502"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="503"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="504"><highlight class="normal"></highlight></codeline>
+<codeline lineno="505"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(err)<sp/>{</highlight></codeline>
+<codeline lineno="506"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>In<sp/>case<sp/>of<sp/>error,<sp/>return<sp/>some<sp/>reasonable<sp/>values<sp/>to<sp/>avoid<sp/>further</highlight></codeline>
+<codeline lineno="507"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>complications<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="508"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>B[0]<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="509"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k=1;<sp/>k&lt;3;<sp/>k++)<sp/>{B[k]<sp/>=<sp/>0;}</highlight></codeline>
+<codeline lineno="510"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="511"><highlight class="normal"></highlight></codeline>
+<codeline lineno="512"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>err;</highlight></codeline>
+<codeline lineno="513"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="514"><highlight class="normal"></highlight></codeline>
+<codeline lineno="549" refid="B__field_8c_1a90eee159b997ec948d58e1b760f7a555" refkind="member"><highlight class="normal"><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref><sp/><ref refid="B__field_8c_1a90eee159b997ec948d58e1b760f7a555" kindref="member">B_field_eval_B_dB</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>B_dB[15],<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>phi,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>t,</highlight></codeline>
+<codeline lineno="550"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structB__field__data" kindref="compound">B_field_data</ref>*<sp/>Bdata)<sp/>{</highlight></codeline>
+<codeline lineno="551"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref><sp/>err<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="552"><highlight class="normal"></highlight></codeline>
+<codeline lineno="553"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal">(Bdata-&gt;<ref refid="structB__field__data_1a5eaf6065b399089f080fd8110789201a" kindref="member">type</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="554"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6aeaae35c569ce5b05f25150378264dad5" kindref="member">B_field_type_GS</ref>:</highlight></codeline>
+<codeline lineno="555"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="B__GS_8c_1a6619ede1977dc97229e00d3826f46a8a" kindref="member">B_GS_eval_B_dB</ref>(B_dB,<sp/>r,<sp/>phi,<sp/>z,<sp/>&amp;(Bdata-&gt;<ref refid="structB__field__data_1a998ad9cf3f1561f787601bbdec849810" kindref="member">BGS</ref>));</highlight></codeline>
+<codeline lineno="556"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="557"><highlight class="normal"></highlight></codeline>
+<codeline lineno="558"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6a08a6eeec9f59141cfc01878c7776b84a" kindref="member">B_field_type_2DS</ref>:</highlight></codeline>
+<codeline lineno="559"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="B__2DS_8c_1af2078677105f9bdc040b813cc7932563" kindref="member">B_2DS_eval_B_dB</ref>(B_dB,<sp/>r,<sp/>phi,<sp/>z,<sp/>&amp;(Bdata-&gt;<ref refid="structB__field__data_1a26126a3a3ac31c677af14da45ec6bb7f" kindref="member">B2DS</ref>));</highlight></codeline>
+<codeline lineno="560"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="561"><highlight class="normal"></highlight></codeline>
+<codeline lineno="562"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6acddc6f4338f89f1aa608b08ca1d03af9" kindref="member">B_field_type_3DS</ref>:</highlight></codeline>
+<codeline lineno="563"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="B__3DS_8c_1ac285975a962968aff5e06995a26921fe" kindref="member">B_3DS_eval_B_dB</ref>(B_dB,<sp/>r,<sp/>phi,<sp/>z,<sp/>&amp;(Bdata-&gt;<ref refid="structB__field__data_1a999c3aa9dc4ca032efd5b95179cba20a" kindref="member">B3DS</ref>));</highlight></codeline>
+<codeline lineno="564"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="565"><highlight class="normal"></highlight></codeline>
+<codeline lineno="566"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6ad8b42ea6016c92f4767615d7fb9027f8" kindref="member">B_field_type_STS</ref>:</highlight></codeline>
+<codeline lineno="567"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="B__STS_8c_1a93ec19559be9866c0d0b001e2818cc4e" kindref="member">B_STS_eval_B_dB</ref>(B_dB,<sp/>r,<sp/>phi,<sp/>z,<sp/>&amp;(Bdata-&gt;<ref refid="structB__field__data_1a008fae4c7877895a76d13405e15273ed" kindref="member">BSTS</ref>));</highlight></codeline>
+<codeline lineno="568"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="569"><highlight class="normal"></highlight></codeline>
+<codeline lineno="570"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6a24ea2346ab109f89825d54ea4518e662" kindref="member">B_field_type_TC</ref>:</highlight></codeline>
+<codeline lineno="571"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="B__TC_8c_1a9eaf667fd2a6fb6678691fe1c77cebe2" kindref="member">B_TC_eval_B_dB</ref>(B_dB,<sp/>r,<sp/>phi,<sp/>z,<sp/>&amp;(Bdata-&gt;<ref refid="structB__field__data_1a04b89c7bacbe0e9708d5b16bc40624d4" kindref="member">BTC</ref>));</highlight></codeline>
+<codeline lineno="572"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="573"><highlight class="normal"></highlight></codeline>
+<codeline lineno="574"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="575"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Unregonized<sp/>input.<sp/>Produce<sp/>error.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="576"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="error_8h_1a580a0b8b4a823a26a00b2f83d9343bc4" kindref="member">error_raise</ref>(<sp/><ref refid="error_8h_1a6756b9f30781ed8ca8ce938e49ad9d92ac2125be888742dd78b8d8bd4fc40b5b7" kindref="member">ERR_UNKNOWN_INPUT</ref>,<sp/>__LINE__,<sp/><ref refid="error_8h_1a4e101179605aba551caa2576fd83a1dda7a54a842179dd40325b9143336f7345d" kindref="member">EF_B_FIELD</ref><sp/>);</highlight></codeline>
+<codeline lineno="577"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="578"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="579"><highlight class="normal"></highlight></codeline>
+<codeline lineno="580"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(err)<sp/>{</highlight></codeline>
+<codeline lineno="581"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>In<sp/>case<sp/>of<sp/>error,<sp/>return<sp/>some<sp/>reasonable<sp/>values<sp/>to<sp/>avoid<sp/>further</highlight></codeline>
+<codeline lineno="582"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>complications<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="583"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>B_dB[0]<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="584"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k=1;<sp/>k&lt;12;<sp/>k++)<sp/>{B_dB[k]<sp/>=<sp/>0;}</highlight></codeline>
+<codeline lineno="585"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="586"><highlight class="normal"></highlight></codeline>
+<codeline lineno="587"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>err;</highlight></codeline>
+<codeline lineno="588"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="589"><highlight class="normal"></highlight></codeline>
+<codeline lineno="601" refid="B__field_8c_1ad8cf51ecdc7730eca39eb54ef4484a2d" refkind="member"><highlight class="normal"><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref><sp/><ref refid="B__field_8c_1ad8cf51ecdc7730eca39eb54ef4484a2d" kindref="member">B_field_get_axis_rz</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>rz[2],<sp/><ref refid="structB__field__data" kindref="compound">B_field_data</ref>*<sp/>Bdata,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>phi)<sp/>{</highlight></codeline>
+<codeline lineno="602"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref><sp/>err<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="603"><highlight class="normal"></highlight></codeline>
+<codeline lineno="604"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal">(Bdata-&gt;<ref refid="structB__field__data_1a5eaf6065b399089f080fd8110789201a" kindref="member">type</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="605"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6aeaae35c569ce5b05f25150378264dad5" kindref="member">B_field_type_GS</ref>:</highlight></codeline>
+<codeline lineno="606"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="B__GS_8c_1a867b0d8e0fe8f279a3e7708d0d240a48" kindref="member">B_GS_get_axis_rz</ref>(rz,<sp/>&amp;(Bdata-&gt;<ref refid="structB__field__data_1a998ad9cf3f1561f787601bbdec849810" kindref="member">BGS</ref>));</highlight></codeline>
+<codeline lineno="607"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="608"><highlight class="normal"></highlight></codeline>
+<codeline lineno="609"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6a08a6eeec9f59141cfc01878c7776b84a" kindref="member">B_field_type_2DS</ref>:</highlight></codeline>
+<codeline lineno="610"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="B__2DS_8c_1ad1653b70b0d0f8a85e79f30e5b793489" kindref="member">B_2DS_get_axis_rz</ref>(rz,<sp/>&amp;(Bdata-&gt;<ref refid="structB__field__data_1a26126a3a3ac31c677af14da45ec6bb7f" kindref="member">B2DS</ref>));</highlight></codeline>
+<codeline lineno="611"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="612"><highlight class="normal"></highlight></codeline>
+<codeline lineno="613"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6acddc6f4338f89f1aa608b08ca1d03af9" kindref="member">B_field_type_3DS</ref>:</highlight></codeline>
+<codeline lineno="614"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="B__3DS_8c_1a7d0aae827aa4af4050015ba322962b52" kindref="member">B_3DS_get_axis_rz</ref>(rz,<sp/>&amp;(Bdata-&gt;<ref refid="structB__field__data_1a999c3aa9dc4ca032efd5b95179cba20a" kindref="member">B3DS</ref>));</highlight></codeline>
+<codeline lineno="615"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="616"><highlight class="normal"></highlight></codeline>
+<codeline lineno="617"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6ad8b42ea6016c92f4767615d7fb9027f8" kindref="member">B_field_type_STS</ref>:</highlight></codeline>
+<codeline lineno="618"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="B__STS_8c_1aea8eeb2c4dfd0112d3dc7cd46ebe147a" kindref="member">B_STS_get_axis_rz</ref>(rz,<sp/>&amp;(Bdata-&gt;<ref refid="structB__field__data_1a008fae4c7877895a76d13405e15273ed" kindref="member">BSTS</ref>),<sp/>phi);</highlight></codeline>
+<codeline lineno="619"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="620"><highlight class="normal"></highlight></codeline>
+<codeline lineno="621"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6a24ea2346ab109f89825d54ea4518e662" kindref="member">B_field_type_TC</ref>:</highlight></codeline>
+<codeline lineno="622"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="B__TC_8c_1aefa5808c1333c3d1bcd1321bfc42099b" kindref="member">B_TC_get_axis_rz</ref>(rz,<sp/>&amp;(Bdata-&gt;<ref refid="structB__field__data_1a04b89c7bacbe0e9708d5b16bc40624d4" kindref="member">BTC</ref>));</highlight></codeline>
+<codeline lineno="623"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="624"><highlight class="normal"></highlight></codeline>
+<codeline lineno="625"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="626"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Unregonized<sp/>input.<sp/>Produce<sp/>error.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="627"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="error_8h_1a580a0b8b4a823a26a00b2f83d9343bc4" kindref="member">error_raise</ref>(<sp/><ref refid="error_8h_1a6756b9f30781ed8ca8ce938e49ad9d92ac2125be888742dd78b8d8bd4fc40b5b7" kindref="member">ERR_UNKNOWN_INPUT</ref>,<sp/>__LINE__,<sp/><ref refid="error_8h_1a4e101179605aba551caa2576fd83a1dda7a54a842179dd40325b9143336f7345d" kindref="member">EF_B_FIELD</ref><sp/>);</highlight></codeline>
+<codeline lineno="628"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="629"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="630"><highlight class="normal"></highlight></codeline>
+<codeline lineno="631"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(err)<sp/>{</highlight></codeline>
+<codeline lineno="632"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>In<sp/>case<sp/>of<sp/>error,<sp/>return<sp/>some<sp/>reasonable<sp/>values<sp/>to<sp/>avoid<sp/>further</highlight></codeline>
+<codeline lineno="633"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>complications<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="634"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>rz[0]<sp/>=<sp/>1.0;</highlight></codeline>
+<codeline lineno="635"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>rz[1]<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="636"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="637"><highlight class="normal"></highlight></codeline>
+<codeline lineno="638"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>err;</highlight></codeline>
+<codeline lineno="639"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="B_field.c"/>
+  </compounddef>
+</doxygen>

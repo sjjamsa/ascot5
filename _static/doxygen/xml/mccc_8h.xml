@@ -1,0 +1,945 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="mccc_8h" kind="file" language="C++">
+    <compoundname>mccc.h</compoundname>
+    <includes refid="ascot5_8h" local="yes">../../ascot5.h</includes>
+    <includes refid="B__field_8h" local="yes">../../B_field.h</includes>
+    <includes refid="plasma_8h" local="yes">../../plasma.h</includes>
+    <includes refid="particle_8h" local="yes">../../particle.h</includes>
+    <includes refid="random_8h" local="yes">../../random.h</includes>
+    <includes refid="mccc__wiener_8h" local="yes">mccc_wiener.h</includes>
+    <includedby refid="mccc_8c" local="yes">simulate/mccc/mccc.c</includedby>
+    <includedby refid="mccc__coefs_8h" local="yes">simulate/mccc/mccc_coefs.h</includedby>
+    <includedby refid="mccc__fo__euler_8c" local="yes">simulate/mccc/mccc_fo_euler.c</includedby>
+    <includedby refid="mccc__gc__euler_8c" local="yes">simulate/mccc/mccc_gc_euler.c</includedby>
+    <includedby refid="mccc__gc__milstein_8c" local="yes">simulate/mccc/mccc_gc_milstein.c</includedby>
+    <includedby refid="simulate__fo__fixed_8c" local="yes">simulate/simulate_fo_fixed.c</includedby>
+    <includedby refid="simulate__gc__adaptive_8c" local="yes">simulate/simulate_gc_adaptive.c</includedby>
+    <includedby refid="simulate__gc__fixed_8c" local="yes">simulate/simulate_gc_fixed.c</includedby>
+    <includedby refid="simulate_8c" local="yes">simulate.c</includedby>
+    <includedby refid="simulate_8h" local="yes">simulate.h</includedby>
+    <incdepgraph>
+      <node id="16">
+        <label>../../plasma.h</label>
+        <link refid="plasma_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>../../particle.h</label>
+        <link refid="particle_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>../spline/interp.h</label>
+        <link refid="interp_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>Bfield/B_GS.h</label>
+        <link refid="B__GS_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>plasma/plasma_1DS.h</label>
+        <link refid="plasma__1DS_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>stdlib.h</label>
+      </node>
+      <node id="1">
+        <label>simulate/mccc/mccc.h</label>
+        <link refid="mccc_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>omp.h</label>
+      </node>
+      <node id="26">
+        <label>mccc_wiener.h</label>
+        <link refid="mccc__wiener_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>../../B_field.h</label>
+        <link refid="B__field_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>Efield/E_1DS.h</label>
+        <link refid="E__1DS_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>plasma/plasma_1Dt.h</label>
+        <link refid="plasma__1Dt_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>../../random.h</label>
+        <link refid="random_8h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>error.h</label>
+        <link refid="error_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>E_field.h</label>
+        <link refid="E__field_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>plasma/plasma_1D.h</label>
+        <link refid="plasma__1D_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>time.h</label>
+      </node>
+      <node id="15">
+        <label>Bfield/B_TC.h</label>
+        <link refid="B__TC_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>../linint/linint.h</label>
+        <link refid="linint_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>Bfield/B_2DS.h</label>
+        <link refid="B__2DS_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>Efield/E_TC.h</label>
+        <link refid="E__TC_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>Bfield/B_3DS.h</label>
+        <link refid="B__3DS_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>math.h</label>
+        <link refid="math_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>stdio.h</label>
+      </node>
+      <node id="13">
+        <label>Bfield/B_STS.h</label>
+        <link refid="B__STS_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>../../ascot5.h</label>
+        <link refid="ascot5_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="24">
+        <label>simulate/simulate_ml_adaptive.c</label>
+        <link refid="simulate__ml__adaptive_8c"/>
+      </node>
+      <node id="34">
+        <label>simulate/simulate_ml_adaptive.h</label>
+        <link refid="simulate__ml__adaptive_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>diag.c</label>
+        <link refid="diag_8c"/>
+      </node>
+      <node id="11">
+        <label>simulate.c</label>
+        <link refid="simulate_8c"/>
+      </node>
+      <node id="12">
+        <label>simulate.h</label>
+        <link refid="simulate_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>simulate/simulate_fo_fixed.c</label>
+        <link refid="simulate__fo__fixed_8c"/>
+      </node>
+      <node id="31">
+        <label>simulate/simulate_fo_fixed.h</label>
+        <link refid="simulate__fo__fixed_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>simulate/simulate_gc_fixed.c</label>
+        <link refid="simulate__gc__fixed_8c"/>
+      </node>
+      <node id="15">
+        <label>ascot5_main.c</label>
+        <link refid="ascot5__main_8c"/>
+      </node>
+      <node id="33">
+        <label>simulate/simulate_gc_fixed.h</label>
+        <link refid="simulate__gc__fixed_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>ascot5_main.h</label>
+        <link refid="ascot5__main_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>endcond.c</label>
+        <link refid="endcond_8c"/>
+      </node>
+      <node id="22">
+        <label>endcond.h</label>
+        <link refid="endcond_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>simulate/mccc/mccc.c</label>
+        <link refid="mccc_8c"/>
+      </node>
+      <node id="1">
+        <label>simulate/mccc/mccc.h</label>
+        <link refid="mccc_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>afsi.c</label>
+        <link refid="afsi_8c"/>
+      </node>
+      <node id="14">
+        <label>afsi.h</label>
+        <link refid="afsi_8h_source"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>diag/diag_orb.c</label>
+        <link refid="diag__orb_8c"/>
+      </node>
+      <node id="7">
+        <label>simulate/mccc/mccc_gc_milstein.c</label>
+        <link refid="mccc__gc__milstein_8c"/>
+      </node>
+      <node id="23">
+        <label>hdf5io/hdf5_options.c</label>
+        <link refid="hdf5__options_8c"/>
+      </node>
+      <node id="27">
+        <label>hdf5io/hdf5_options.h</label>
+        <link refid="hdf5__options_8h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>hdf5io/hdf5_orbit.c</label>
+        <link refid="hdf5__orbit_8c"/>
+      </node>
+      <node id="9">
+        <label>simulate/simulate_gc_adaptive.c</label>
+        <link refid="simulate__gc__adaptive_8c"/>
+      </node>
+      <node id="32">
+        <label>simulate/simulate_gc_adaptive.h</label>
+        <link refid="simulate__gc__adaptive_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>simulate/mccc/mccc_fo_euler.c</label>
+        <link refid="mccc__fo__euler_8c"/>
+      </node>
+      <node id="29">
+        <label>mpi_interface.c</label>
+        <link refid="mpi__interface_8c"/>
+      </node>
+      <node id="30">
+        <label>mpi_interface.h</label>
+        <link refid="mpi__interface_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>libascot.c</label>
+        <link refid="libascot_8c"/>
+      </node>
+      <node id="25">
+        <label>hdf5_interface.c</label>
+        <link refid="hdf5__interface_8c"/>
+      </node>
+      <node id="26">
+        <label>hdf5_interface.h</label>
+        <link refid="hdf5__interface_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>diag/diag_transcoef.c</label>
+        <link refid="diag__transcoef_8c"/>
+      </node>
+      <node id="3">
+        <label>simulate/mccc/mccc_coefs.h</label>
+        <link refid="mccc__coefs_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>bbnbi5.c</label>
+        <link refid="bbnbi5_8c"/>
+      </node>
+      <node id="6">
+        <label>simulate/mccc/mccc_gc_euler.c</label>
+        <link refid="mccc__gc__euler_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structmccc__data" prot="public">mccc_data</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="mccc_8h_1aa102e827f39cad511f5eb13a64540041" prot="public" static="no">
+        <name>MCCC_CUTOFF</name>
+        <initializer>0.1</initializer>
+        <briefdescription>
+<para>Defines minimum energy boundary condition. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This times local electron temperature is minimum energy boundary. If guiding center energy goes below this, it is mirrored to prevent collision coefficients from diverging. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="simulate/mccc/mccc.h" line="22" column="9" bodyfile="simulate/mccc/mccc.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="mccc_8h_1ad455bb3ad490edc38bd5bb5f3b8df67a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mccc_init</definition>
+        <argsstring>(mccc_data *mdata, int include_energy, int include_pitch, int include_gcdiff)</argsstring>
+        <name>mccc_init</name>
+        <param>
+          <type><ref refid="structmccc__data" kindref="compound">mccc_data</ref> *</type>
+          <declname>mdata</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>include_energy</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>include_pitch</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>include_gcdiff</declname>
+        </param>
+        <briefdescription>
+<para>Set collision operator data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to collision operator data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>include_energy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>can collisions change marker energy, either 0 or 1 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>include_pitch</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>can collisions change marker pitch, either 0 or 1 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>include_gcdiff</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>can collisions change GC position, either 0 or 1 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="simulate/mccc/mccc.h" line="36" column="6" bodyfile="simulate/mccc/mccc.c" bodystart="17" bodyend="24" declfile="simulate/mccc/mccc.h" declline="36" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="mccc_8h_1ae720e4b9c8b3bbacd38f22839cce8baa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mccc_fo_euler</definition>
+        <argsstring>(particle_simd_fo *p, real *h, plasma_data *pdata, random_data *rdata, mccc_data *mdata)</argsstring>
+        <name>mccc_fo_euler</name>
+        <param>
+          <type><ref refid="structparticle__simd__fo" kindref="compound">particle_simd_fo</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>h</declname>
+        </param>
+        <param>
+          <type><ref refid="structplasma__data" kindref="compound">plasma_data</ref> *</type>
+          <declname>pdata</declname>
+        </param>
+        <param>
+          <type><ref refid="random_8h_1a103c9e22750b3fbab1ce5060f56f5100" kindref="member">random_data</ref> *</type>
+          <declname>rdata</declname>
+        </param>
+        <param>
+          <type><ref refid="structmccc__data" kindref="compound">mccc_data</ref> *</type>
+          <declname>mdata</declname>
+        </param>
+        <briefdescription>
+<para>Integrate collisions for one time-step. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>fo struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>h</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>time-steps for NSIMD markers </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to plasma data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to random-generator data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer collision data struct </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="simulate/mccc/mccc.h" line="38" column="6" bodyfile="simulate/mccc/mccc_fo_euler.c" bodystart="26" bodyend="132" declfile="simulate/mccc/mccc.h" declline="38" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="mccc_8h_1acd785ecff7d4437266961eaf3363c4f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mccc_gc_euler</definition>
+        <argsstring>(particle_simd_gc *p, real *h, B_field_data *Bdata, plasma_data *pdata, random_data *rdata, mccc_data *mdata)</argsstring>
+        <name>mccc_gc_euler</name>
+        <param>
+          <type><ref refid="structparticle__simd__gc" kindref="compound">particle_simd_gc</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>h</declname>
+        </param>
+        <param>
+          <type><ref refid="structB__field__data" kindref="compound">B_field_data</ref> *</type>
+          <declname>Bdata</declname>
+        </param>
+        <param>
+          <type><ref refid="structplasma__data" kindref="compound">plasma_data</ref> *</type>
+          <declname>pdata</declname>
+        </param>
+        <param>
+          <type><ref refid="random_8h_1a103c9e22750b3fbab1ce5060f56f5100" kindref="member">random_data</ref> *</type>
+          <declname>rdata</declname>
+        </param>
+        <param>
+          <type><ref refid="structmccc__data" kindref="compound">mccc_data</ref> *</type>
+          <declname>mdata</declname>
+        </param>
+        <briefdescription>
+<para>Integrate collisions for one time-step. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>gc struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>h</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>time-steps for NSIMD markers </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Bdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to magnetic field </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to plasma data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to random-generator data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to collision data struct </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="simulate/mccc/mccc.h" line="40" column="6" bodyfile="simulate/mccc/mccc_gc_euler.c" bodystart="28" bodyend="219" declfile="simulate/mccc/mccc.h" declline="40" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="mccc_8h_1a9547abeadd36ee6e10c56bfe1590ebd9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mccc_gc_milstein</definition>
+        <argsstring>(particle_simd_gc *p, real *hin, real *hout, real tol, mccc_wienarr *wienarr, B_field_data *Bdata, plasma_data *pdata, random_data *rdata, mccc_data *mdata)</argsstring>
+        <name>mccc_gc_milstein</name>
+        <param>
+          <type><ref refid="structparticle__simd__gc" kindref="compound">particle_simd_gc</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>hin</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>hout</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>tol</declname>
+        </param>
+        <param>
+          <type><ref refid="structmccc__wienarr" kindref="compound">mccc_wienarr</ref> *</type>
+          <declname>wienarr</declname>
+          <defname>w</defname>
+        </param>
+        <param>
+          <type><ref refid="structB__field__data" kindref="compound">B_field_data</ref> *</type>
+          <declname>Bdata</declname>
+        </param>
+        <param>
+          <type><ref refid="structplasma__data" kindref="compound">plasma_data</ref> *</type>
+          <declname>pdata</declname>
+        </param>
+        <param>
+          <type><ref refid="random_8h_1a103c9e22750b3fbab1ce5060f56f5100" kindref="member">random_data</ref> *</type>
+          <declname>rdata</declname>
+        </param>
+        <param>
+          <type><ref refid="structmccc__data" kindref="compound">mccc_data</ref> *</type>
+          <declname>mdata</declname>
+        </param>
+        <briefdescription>
+<para>Integrate collisions for one time-step. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to gc simd struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>time-steps for NSIMD markers </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hout</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>suggestions for the next timesteps for NSIMD markers </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tol</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>relative error tolerance </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>w</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>array holding wiener structs for NSIMD markers </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Bdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to magnetic field data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to plasma data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to random-generator data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to collision data struct </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="simulate/mccc/mccc.h" line="42" column="6" bodyfile="simulate/mccc/mccc_gc_milstein.c" bodystart="33" bodyend="287" declfile="simulate/mccc/mccc.h" declline="42" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Header file for mccc package. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MCCC_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MCCC_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../ascot5.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../B_field.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../plasma.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../particle.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../random.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mccc__wiener_8h" kindref="compound">mccc_wiener.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="mccc_8h_1aa102e827f39cad511f5eb13a64540041" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MCCC_CUTOFF<sp/>0.1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="structmccc__data" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28" refid="structmccc__data_1a901b1637e9119ea5dff0a1c0315055b5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structmccc__data_1a901b1637e9119ea5dff0a1c0315055b5" kindref="member">usetabulated</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="29" refid="structmccc__data_1afc0459587e33ddb64dbc39950ea113b2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structmccc__data_1afc0459587e33ddb64dbc39950ea113b2" kindref="member">include_energy</ref>;<sp/></highlight></codeline>
+<codeline lineno="30" refid="structmccc__data_1a133297a08c489d8db0b651298eb42d94" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structmccc__data_1a133297a08c489d8db0b651298eb42d94" kindref="member">include_pitch</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="31" refid="structmccc__data_1a398de02fbc6a47884db46d6893fac196" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structmccc__data_1a398de02fbc6a47884db46d6893fac196" kindref="member">include_gcdiff</ref>;<sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}<sp/><ref refid="structmccc__data" kindref="compound">mccc_data</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>declare<sp/>target</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="mccc_8h_1ad455bb3ad490edc38bd5bb5f3b8df67a" kindref="member">mccc_init</ref>(<ref refid="structmccc__data" kindref="compound">mccc_data</ref>*<sp/>mdata,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>include_energy,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>include_pitch,</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>include_gcdiff);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="mccc_8h_1ae720e4b9c8b3bbacd38f22839cce8baa" kindref="member">mccc_fo_euler</ref>(<ref refid="structparticle__simd__fo" kindref="compound">particle_simd_fo</ref>*<sp/>p,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>h,<sp/><sp/><ref refid="structplasma__data" kindref="compound">plasma_data</ref>*<sp/>pdata,</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="random_8h_1a103c9e22750b3fbab1ce5060f56f5100" kindref="member">random_data</ref>*<sp/><ref refid="afsi_8c_1a1ea73a6198c64bba3f8809a2c97aff0f" kindref="member">rdata</ref>,<sp/><ref refid="structmccc__data" kindref="compound">mccc_data</ref>*<sp/>mdata);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="mccc_8h_1acd785ecff7d4437266961eaf3363c4f8" kindref="member">mccc_gc_euler</ref>(<ref refid="structparticle__simd__gc" kindref="compound">particle_simd_gc</ref>*<sp/>p,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>h,<sp/><ref refid="structB__field__data" kindref="compound">B_field_data</ref>*<sp/>Bdata,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structplasma__data" kindref="compound">plasma_data</ref>*<sp/>pdata,<sp/><ref refid="random_8h_1a103c9e22750b3fbab1ce5060f56f5100" kindref="member">random_data</ref>*<sp/><ref refid="afsi_8c_1a1ea73a6198c64bba3f8809a2c97aff0f" kindref="member">rdata</ref>,<sp/><ref refid="structmccc__data" kindref="compound">mccc_data</ref>*<sp/>mdata);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="mccc_8h_1a9547abeadd36ee6e10c56bfe1590ebd9" kindref="member">mccc_gc_milstein</ref>(<ref refid="structparticle__simd__gc" kindref="compound">particle_simd_gc</ref>*<sp/>p,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>hin,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>hout,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>tol,</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structmccc__wienarr" kindref="compound">mccc_wienarr</ref>*<sp/>wienarr,<sp/><ref refid="structB__field__data" kindref="compound">B_field_data</ref>*<sp/>Bdata,</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structplasma__data" kindref="compound">plasma_data</ref>*<sp/>pdata,<sp/><ref refid="random_8h_1a103c9e22750b3fbab1ce5060f56f5100" kindref="member">random_data</ref>*<sp/><ref refid="afsi_8c_1a1ea73a6198c64bba3f8809a2c97aff0f" kindref="member">rdata</ref>,<sp/><ref refid="structmccc__data" kindref="compound">mccc_data</ref>*<sp/>mdata);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>end<sp/>declare<sp/>target</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="simulate/mccc/mccc.h"/>
+  </compounddef>
+</doxygen>

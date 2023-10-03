@@ -1,0 +1,1219 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="wall__3d_8h" kind="file" language="C++">
+    <compoundname>wall_3d.h</compoundname>
+    <includes refid="ascot5_8h" local="yes">../ascot5.h</includes>
+    <includedby refid="hdf5__wall_8c" local="yes">hdf5io/hdf5_wall.c</includedby>
+    <includedby refid="octree_8c" local="yes">octree.c</includedby>
+    <includedby refid="wall__3d_8c" local="yes">wall/wall_3d.c</includedby>
+    <includedby refid="wall_8c" local="yes">wall.c</includedby>
+    <includedby refid="wall_8h" local="yes">wall.h</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>omp.h</label>
+      </node>
+      <node id="4">
+        <label>time.h</label>
+      </node>
+      <node id="1">
+        <label>wall/wall_3d.h</label>
+        <link refid="wall__3d_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>../ascot5.h</label>
+        <link refid="ascot5_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="29">
+        <label>simulate/simulate_ml_adaptive.c</label>
+        <link refid="simulate__ml__adaptive_8c"/>
+      </node>
+      <node id="39">
+        <label>simulate/simulate_ml_adaptive.h</label>
+        <link refid="simulate__ml__adaptive_8h"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>diag.c</label>
+        <link refid="diag_8c"/>
+      </node>
+      <node id="30">
+        <label>simulate.c</label>
+        <link refid="simulate_8c"/>
+      </node>
+      <node id="16">
+        <label>simulate.h</label>
+        <link refid="simulate_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>simulate/simulate_fo_fixed.c</label>
+        <link refid="simulate__fo__fixed_8c"/>
+      </node>
+      <node id="36">
+        <label>simulate/simulate_fo_fixed.h</label>
+        <link refid="simulate__fo__fixed_8h"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>wall.c</label>
+        <link refid="wall_8c"/>
+      </node>
+      <node id="28">
+        <label>simulate/simulate_gc_fixed.c</label>
+        <link refid="simulate__gc__fixed_8c"/>
+      </node>
+      <node id="7">
+        <label>ascot5_main.c</label>
+        <link refid="ascot5__main_8c"/>
+      </node>
+      <node id="6">
+        <label>wall.h</label>
+        <link refid="wall_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>simulate/simulate_gc_fixed.h</label>
+        <link refid="simulate__gc__fixed_8h"/>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>ascot5_main.h</label>
+        <link refid="ascot5__main_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>endcond.c</label>
+        <link refid="endcond_8c"/>
+      </node>
+      <node id="24">
+        <label>endcond.h</label>
+        <link refid="endcond_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>afsi.c</label>
+        <link refid="afsi_8c"/>
+      </node>
+      <node id="18">
+        <label>afsi.h</label>
+        <link refid="afsi_8h_source"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>nbi.c</label>
+        <link refid="nbi_8c"/>
+      </node>
+      <node id="13">
+        <label>nbi.h</label>
+        <link refid="nbi_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hdf5io/hdf5_wall.c</label>
+        <link refid="hdf5__wall_8c"/>
+      </node>
+      <node id="9">
+        <label>hdf5io/hdf5_wall.h</label>
+        <link refid="hdf5__wall_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>diag/diag_orb.c</label>
+        <link refid="diag__orb_8c"/>
+      </node>
+      <node id="25">
+        <label>hdf5io/hdf5_options.c</label>
+        <link refid="hdf5__options_8c"/>
+      </node>
+      <node id="32">
+        <label>hdf5io/hdf5_options.h</label>
+        <link refid="hdf5__options_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>hdf5io/hdf5_orbit.c</label>
+        <link refid="hdf5__orbit_8c"/>
+      </node>
+      <node id="27">
+        <label>simulate/simulate_gc_adaptive.c</label>
+        <link refid="simulate__gc__adaptive_8c"/>
+      </node>
+      <node id="37">
+        <label>simulate/simulate_gc_adaptive.h</label>
+        <link refid="simulate__gc__adaptive_8h"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>mpi_interface.c</label>
+        <link refid="mpi__interface_8c"/>
+      </node>
+      <node id="35">
+        <label>mpi_interface.h</label>
+        <link refid="mpi__interface_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>libascot.c</label>
+        <link refid="libascot_8c"/>
+      </node>
+      <node id="3">
+        <label>octree.c</label>
+        <link refid="octree_8c"/>
+      </node>
+      <node id="10">
+        <label>hdf5_interface.c</label>
+        <link refid="hdf5__interface_8c"/>
+      </node>
+      <node id="31">
+        <label>hdf5_interface.h</label>
+        <link refid="hdf5__interface_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>diag/diag_transcoef.c</label>
+        <link refid="diag__transcoef_8c"/>
+      </node>
+      <node id="8">
+        <label>bbnbi5.c</label>
+        <link refid="bbnbi5_8c"/>
+      </node>
+      <node id="14">
+        <label>hdf5io/hdf5_nbi.c</label>
+        <link refid="hdf5__nbi_8c"/>
+      </node>
+      <node id="15">
+        <label>hdf5io/hdf5_nbi.h</label>
+        <link refid="hdf5__nbi_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>wall/wall_3d.c</label>
+        <link refid="wall__3d_8c"/>
+      </node>
+      <node id="1">
+        <label>wall/wall_3d.h</label>
+        <link refid="wall__3d_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structwall__3d__offload__data" prot="public">wall_3d_offload_data</innerclass>
+    <innerclass refid="structwall__3d__data" prot="public">wall_3d_data</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="wall__3d_8h_1a2b53ef755c6f7a4537538a79d6998c9a" prot="public" static="no">
+        <name>WALL_EPSILON</name>
+        <initializer>1e-9</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Small value to check if x = 0 (i.e. abs(x) &lt; WALL_EPSILON) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="wall/wall_3d.h" line="10" column="9" bodyfile="wall/wall_3d.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="wall__3d_8h_1a95776be277218fa57c28c4b7f2154eca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wall_3d_init_offload</definition>
+        <argsstring>(wall_3d_offload_data *offload_data, real **offload_array, int **int_offload_array)</argsstring>
+        <name>wall_3d_init_offload</name>
+        <param>
+          <type><ref refid="structwall__3d__offload__data" kindref="compound">wall_3d_offload_data</ref> *</type>
+          <declname>offload_data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> **</type>
+          <declname>offload_array</declname>
+        </param>
+        <param>
+          <type>int **</type>
+          <declname>int_offload_array</declname>
+        </param>
+        <briefdescription>
+<para>Initialize 3D wall data and check inputs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Before calling this function, the offload struct is expected to hold triangle positions as</para>
+<para>[x1_1, y1_1, z1_1, x2_1, y2_1, z2_1, x3_1, y3_1, z3_1,... ],</para>
+<para>where first index is for the triangle vertex and second for the triangle itself.</para>
+<para>This function fill rest of the offload struct and constructs the octree, while also printing some values as sanity check.</para>
+<para>The default octree depth is defined by macro WALL_OCTREE_DEPTH in <ref refid="wall__3d_8h" kindref="compound">wall_3d.h</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>offload_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload array </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload array containing integers</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>zero if initialization succeeded </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="wall/wall_3d.h" line="65" column="5" bodyfile="wall/wall_3d.c" bodystart="44" bodyend="97" declfile="wall/wall_3d.h" declline="65" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="wall__3d_8h_1abd94f5ab151031ee4dd86e757557c3c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wall_3d_free_offload</definition>
+        <argsstring>(wall_3d_offload_data *offload_data, real **offload_array, int **int_offload_array)</argsstring>
+        <name>wall_3d_free_offload</name>
+        <param>
+          <type><ref refid="structwall__3d__offload__data" kindref="compound">wall_3d_offload_data</ref> *</type>
+          <declname>offload_data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> **</type>
+          <declname>offload_array</declname>
+        </param>
+        <param>
+          <type>int **</type>
+          <declname>int_offload_array</declname>
+        </param>
+        <briefdescription>
+<para>Free offload array and reset parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function deallocates the offload_array.</para>
+<para>This function is host only.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>offload_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload array </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload array containing integers </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="wall/wall_3d.h" line="67" column="6" bodyfile="wall/wall_3d.c" bodystart="110" bodyend="117" declfile="wall/wall_3d.h" declline="67" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="wall__3d_8h_1a8be479b0ea3f33d12754ed2d0f21e1b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wall_3d_init_octree</definition>
+        <argsstring>(wall_3d_offload_data *w, real *offload_array, int **int_offload_array)</argsstring>
+        <name>wall_3d_init_octree</name>
+        <param>
+          <type><ref refid="structwall__3d__offload__data" kindref="compound">wall_3d_offload_data</ref> *</type>
+          <declname>w</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>offload_array</declname>
+        </param>
+        <param>
+          <type>int **</type>
+          <declname>int_offload_array</declname>
+          <defname>tree_array</defname>
+        </param>
+        <briefdescription>
+<para>Construct wall octree recursively. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs the octree array by iterating through all wall triangles and placing them into an octree structure</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>w</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to wall data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the offload array </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tree_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to array storing what octree cells contain which triangles </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="wall/wall_3d.h" line="69" column="6" bodyfile="wall/wall_3d.c" bodystart="242" bodyend="321" declfile="wall/wall_3d.h" declline="69" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="wall__3d_8h_1a497356fffb82793491c87d8d375761e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wall_3d_init</definition>
+        <argsstring>(wall_3d_data *w, wall_3d_offload_data *offload_data, real *offload_array, int *int_offload_array)</argsstring>
+        <name>wall_3d_init</name>
+        <param>
+          <type><ref refid="structwall__3d__data" kindref="compound">wall_3d_data</ref> *</type>
+          <declname>w</declname>
+        </param>
+        <param>
+          <type><ref refid="structwall__3d__offload__data" kindref="compound">wall_3d_offload_data</ref> *</type>
+          <declname>offload_data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>offload_array</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>int_offload_array</declname>
+        </param>
+        <briefdescription>
+<para>Initialize wall data struct on target. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function copies the wall parameters from the offload struct to the struct on target and sets the wall data pointers to correct offsets in the offload array.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>w</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to data struct on target </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>offload array </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>offload array containing integers </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="wall/wall_3d.h" line="73" column="6" bodyfile="wall/wall_3d.c" bodystart="131" bodyend="149" declfile="wall/wall_3d.h" declline="73" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="wall__3d_8h_1a2390e48b32304e750b4459d1e230f71d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wall_3d_hit_wall</definition>
+        <argsstring>(real r1, real phi1, real z1, real r2, real phi2, real z2, wall_3d_data *w, real *w_coll)</argsstring>
+        <name>wall_3d_hit_wall</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>r1</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>phi1</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>z1</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>r2</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>phi2</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>z2</declname>
+        </param>
+        <param>
+          <type><ref refid="structwall__3d__data" kindref="compound">wall_3d_data</ref> *</type>
+          <declname>w</declname>
+          <defname>wdata</defname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>w_coll</declname>
+        </param>
+        <briefdescription>
+<para>Check if trajectory from (r1, phi1, z1) to (r2, phi2, z2) intersects the wall using the octree structure. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>r1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>start point R coordinate [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>phi1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>start point phi coordinate [rad] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>start point z coordinate [rad] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>end point R coordinate [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>phi2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>end point phi coordinate [rad] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>end point z coordinate [rad] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>wdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to data struct on target </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>w_coll</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer for storing the parameter in P = P1 + w_coll * (P2-P1), where P is the point where the collision occurred.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>id, which is the first element id if hit, zero otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="wall/wall_3d.h" line="76" column="5" bodyfile="wall/wall_3d.c" bodystart="339" bodyend="401" declfile="wall/wall_3d.h" declline="76" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="wall__3d_8h_1a5bef5f929d02f48ef539c3b751f59fb3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wall_3d_hit_wall_full</definition>
+        <argsstring>(real r1, real phi1, real z1, real r2, real phi2, real z2, wall_3d_data *w, real *w_coll)</argsstring>
+        <name>wall_3d_hit_wall_full</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>r1</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>phi1</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>z1</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>r2</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>phi2</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>z2</declname>
+        </param>
+        <param>
+          <type><ref refid="structwall__3d__data" kindref="compound">wall_3d_data</ref> *</type>
+          <declname>w</declname>
+          <defname>wdata</defname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>w_coll</declname>
+        </param>
+        <briefdescription>
+<para>Check if trajectory from (r1, phi1, z1) to (r2, phi2, z2) intersects the wall against all triangles. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>r1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>start point R coordinate [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>phi1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>start point phi coordinate [rad] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>start point z coordinate [rad] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>end point R coordinate [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>phi2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>end point phi coordinate [rad] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>end point z coordinate [rad] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>wdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to data struct on target </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>w_coll</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer for storing the parameter in P = P1 + w_coll * (P2-P1), where P is the point where the collision occurred.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>id is wall element id if hit, zero otherwise* </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="wall/wall_3d.h" line="79" column="5" bodyfile="wall/wall_3d.c" bodystart="419" bodyend="451" declfile="wall/wall_3d.h" declline="79" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="wall__3d_8h_1a64ae89b58068702c9e084b80cd78fd1b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double wall_3d_tri_collision</definition>
+        <argsstring>(real q1[3], real q2[3], real t1[3], real t2[3], real t3[3])</argsstring>
+        <name>wall_3d_tri_collision</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>q1</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>q2</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>t1</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>t2</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>t3</declname>
+          <array>[3]</array>
+        </param>
+        <briefdescription>
+<para>Check if a line segment intersects a triangle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This routine implements the Möller-Trumbore algorithm.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>q1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>line segment start point xyz coordinates [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>q2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>line segment end point xyz coordinates [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>xyz coordinates of first triangle vertex [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>xyz coordinates of second triangle vertex [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t3</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>xyz coordinates of third triangle vertex [m]</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A positive number w which is defined so that vector q1 + w*(q2-q1) is the intersection point. A negative number is returned if no there is no intersection </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="wall/wall_3d.h" line="82" column="8" bodyfile="wall/wall_3d.c" bodystart="544" bodyend="605" declfile="wall/wall_3d.h" declline="82" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="wall__3d_8h_1a1420772005932496348e1ce1fbb06587" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wall_3d_init_tree</definition>
+        <argsstring>(wall_3d_data *w, real *offload_array)</argsstring>
+        <name>wall_3d_init_tree</name>
+        <param>
+          <type><ref refid="structwall__3d__data" kindref="compound">wall_3d_data</ref> *</type>
+          <declname>w</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>offload_array</declname>
+        </param>
+        <briefdescription>
+<para>Construct wall octree iteratively. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs the octree array by iterating through all wall triangles and octree grid to identify triangles belonging to each grid cell.</para>
+<para>Slow, only for testing purposes.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>w</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to wall data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>offload array </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="wall/wall_3d.h" line="85" column="6" bodyfile="wall/wall_3d.c" bodystart="162" bodyend="229" declfile="wall/wall_3d.h" declline="85" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="wall__3d_8h_1a10ecf6ad1ca68351067111cf6dfdec9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wall_3d_tri_in_cube</definition>
+        <argsstring>(real t1[3], real t2[3], real t3[3], real bb1[3], real bb2[3])</argsstring>
+        <name>wall_3d_tri_in_cube</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>t1</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>t2</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>t3</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>bb1</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>bb2</declname>
+          <array>[3]</array>
+        </param>
+        <briefdescription>
+<para>Check if any part of a triangle is inside a box. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>xyz coordinates of first triangle vertex [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>xyz coordinates of second triangle vertex [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t3</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>xyz coordinates of third triangle vertex [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bb1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>bounding box minimum xyz coordinates [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bb2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>bounding box maximum xyz coordinates [m]</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>zero if not any part of the triangle is within the box </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="wall/wall_3d.h" line="86" column="5" bodyfile="wall/wall_3d.c" bodystart="464" bodyend="527" declfile="wall/wall_3d.h" declline="86" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="wall__3d_8h_1ae7d0f1f8ac2ab55fa76ba1dd377f689d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wall_3d_quad_collision</definition>
+        <argsstring>(real q1[3], real q2[3], real t1[3], real t2[3], real t3[3], real t4[3])</argsstring>
+        <name>wall_3d_quad_collision</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>q1</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>q2</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>t1</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>t2</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>t3</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>t4</declname>
+          <array>[3]</array>
+        </param>
+        <briefdescription>
+<para>Check if a line segment intersects a quad (assumed planar) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>q1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>line segment start point xyz coordinates [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>q2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>line segment end point xyz coordinates [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>xyz coordinates of first quad vertex [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>xyz coordinates of second quad vertex [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t3</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>xyz coordinates of third quad vertex [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t4</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>xyz coordinates of fourth quad vertex [m]</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Zero if no intersection, positive number otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="wall/wall_3d.h" line="88" column="5" bodyfile="wall/wall_3d.c" bodystart="619" bodyend="626" declfile="wall/wall_3d.h" declline="88" declcolumn="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Header file for <ref refid="wall__3d_8c" kindref="compound">wall_3d.c</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>WALL_3D_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WALL_3D_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../ascot5.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="wall__3d_8h_1a2b53ef755c6f7a4537538a79d6998c9a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WALL_EPSILON<sp/>1e-9</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="structwall__3d__offload__data" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="16" refid="structwall__3d__offload__data_1a5db0c2f711e3ea4edf7587b23552e337" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structwall__3d__offload__data_1a5db0c2f711e3ea4edf7587b23552e337" kindref="member">n</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="17" refid="structwall__3d__offload__data_1ab5f7c4b4fe22ecceeeb7eb3470c37732" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structwall__3d__offload__data_1ab5f7c4b4fe22ecceeeb7eb3470c37732" kindref="member">xmin</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="18" refid="structwall__3d__offload__data_1a131100707d17d6845330ad68c4924482" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structwall__3d__offload__data_1a131100707d17d6845330ad68c4924482" kindref="member">xmax</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="19" refid="structwall__3d__offload__data_1a762fe1f362c10ed199bae816a05ff3fb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structwall__3d__offload__data_1a762fe1f362c10ed199bae816a05ff3fb" kindref="member">xgrid</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20" refid="structwall__3d__offload__data_1a70172c0f31cc2bec5516a40f7ee88a26" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structwall__3d__offload__data_1a70172c0f31cc2bec5516a40f7ee88a26" kindref="member">ymin</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="21" refid="structwall__3d__offload__data_1a603af391333ed4f2e1efec52a6e8123a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structwall__3d__offload__data_1a603af391333ed4f2e1efec52a6e8123a" kindref="member">ymax</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="22" refid="structwall__3d__offload__data_1a7fe19e0468ac52b538c5bdfecf4723f3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structwall__3d__offload__data_1a7fe19e0468ac52b538c5bdfecf4723f3" kindref="member">ygrid</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="23" refid="structwall__3d__offload__data_1aa92b773dc1747173e9e5ab5aa454d502" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structwall__3d__offload__data_1aa92b773dc1747173e9e5ab5aa454d502" kindref="member">zmin</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="24" refid="structwall__3d__offload__data_1af6aacee574c90782b2fa567e437dbc1d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structwall__3d__offload__data_1af6aacee574c90782b2fa567e437dbc1d" kindref="member">zmax</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="25" refid="structwall__3d__offload__data_1a85717fb05b2b77d5dbe0abbba8049944" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structwall__3d__offload__data_1a85717fb05b2b77d5dbe0abbba8049944" kindref="member">zgrid</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="26" refid="structwall__3d__offload__data_1a7cc50262fb55c9be8701430fbe5aceb3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structwall__3d__offload__data_1a7cc50262fb55c9be8701430fbe5aceb3" kindref="member">depth</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="27" refid="structwall__3d__offload__data_1a499de2aec1a086ea0ddc0b75792ec9b0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structwall__3d__offload__data_1a499de2aec1a086ea0ddc0b75792ec9b0" kindref="member">ngrid</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="30" refid="structwall__3d__offload__data_1a162c5452003696ae67f6fa4d520a47bb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structwall__3d__offload__data_1a162c5452003696ae67f6fa4d520a47bb" kindref="member">offload_array_length</ref>;<sp/></highlight></codeline>
+<codeline lineno="31" refid="structwall__3d__offload__data_1a3cbfeda67d335c40ed4b07123e30db66" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structwall__3d__offload__data_1a3cbfeda67d335c40ed4b07123e30db66" kindref="member">int_offload_array_length</ref>;<sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}<sp/><ref refid="structwall__3d__offload__data" kindref="compound">wall_3d_offload_data</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="structwall__3d__data" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="38" refid="structwall__3d__data_1ad7d1e0e0b8e007c938dc2582e21340c9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structwall__3d__data_1ad7d1e0e0b8e007c938dc2582e21340c9" kindref="member">n</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="39" refid="structwall__3d__data_1ac502c13a835229255dd2b2b0cb6b1dbb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structwall__3d__data_1ac502c13a835229255dd2b2b0cb6b1dbb" kindref="member">xmin</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="40" refid="structwall__3d__data_1a66d628c46a42c0855703221988068545" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structwall__3d__data_1a66d628c46a42c0855703221988068545" kindref="member">xmax</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="41" refid="structwall__3d__data_1acd32806d73777f6996d354d17f07a1c7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structwall__3d__data_1acd32806d73777f6996d354d17f07a1c7" kindref="member">xgrid</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="42" refid="structwall__3d__data_1a8c8315c16d3199a871578b355aa354de" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structwall__3d__data_1a8c8315c16d3199a871578b355aa354de" kindref="member">ymin</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="43" refid="structwall__3d__data_1affa6b79632ceedf844a363299d279d82" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structwall__3d__data_1affa6b79632ceedf844a363299d279d82" kindref="member">ymax</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="44" refid="structwall__3d__data_1ad941384278cd5e303a0c8c8014cd1809" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structwall__3d__data_1ad941384278cd5e303a0c8c8014cd1809" kindref="member">ygrid</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="45" refid="structwall__3d__data_1a7e32a916ae37edc0ce97e0a442d89285" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structwall__3d__data_1a7e32a916ae37edc0ce97e0a442d89285" kindref="member">zmin</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="46" refid="structwall__3d__data_1a580b7b7a1c91c80f84695adf64f7224b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structwall__3d__data_1a580b7b7a1c91c80f84695adf64f7224b" kindref="member">zmax</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="47" refid="structwall__3d__data_1a1377e8bbf4dcd493a0dea857f7ae49a3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structwall__3d__data_1a1377e8bbf4dcd493a0dea857f7ae49a3" kindref="member">zgrid</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="48" refid="structwall__3d__data_1ab14fe3a751726d918f1055cdc83d2c2e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structwall__3d__data_1ab14fe3a751726d918f1055cdc83d2c2e" kindref="member">depth</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="49" refid="structwall__3d__data_1a56272e9a4693f5bd0de1eb8abdf247c9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structwall__3d__data_1a56272e9a4693f5bd0de1eb8abdf247c9" kindref="member">ngrid</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="51" refid="structwall__3d__data_1ac59066949768bc4f90e0125eb564b2c9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/><ref refid="structwall__3d__data_1ac59066949768bc4f90e0125eb564b2c9" kindref="member">wall_tris</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="52" refid="structwall__3d__data_1a96fd0ecb77494d0d02fed1c539cc3915" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structwall__3d__data_1a96fd0ecb77494d0d02fed1c539cc3915" kindref="member">tree_array_size</ref>;<sp/></highlight></codeline>
+<codeline lineno="62" refid="structwall__3d__data_1a508d0fbec2de22d81ff959585f32ce7b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/><ref refid="structwall__3d__data_1a508d0fbec2de22d81ff959585f32ce7b" kindref="member">tree_array</ref>;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">}<sp/><ref refid="structwall__3d__data" kindref="compound">wall_3d_data</ref>;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="wall__3d_8h_1a95776be277218fa57c28c4b7f2154eca" kindref="member">wall_3d_init_offload</ref>(<ref refid="structwall__3d__offload__data" kindref="compound">wall_3d_offload_data</ref>*<sp/>offload_data,</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>**<sp/>offload_array,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">**<sp/>int_offload_array);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="wall__3d_8h_1abd94f5ab151031ee4dd86e757557c3c9" kindref="member">wall_3d_free_offload</ref>(<ref refid="structwall__3d__offload__data" kindref="compound">wall_3d_offload_data</ref>*<sp/>offload_data,</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>**<sp/>offload_array,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">**<sp/>int_offload_array);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="wall__3d_8h_1a8be479b0ea3f33d12754ed2d0f21e1b0" kindref="member">wall_3d_init_octree</ref>(<ref refid="structwall__3d__offload__data" kindref="compound">wall_3d_offload_data</ref>*<sp/>w,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>offload_array,</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">**<sp/>int_offload_array);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>declare<sp/>target</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="wall__3d_8h_1a497356fffb82793491c87d8d375761e3" kindref="member">wall_3d_init</ref>(<ref refid="structwall__3d__data" kindref="compound">wall_3d_data</ref>*<sp/>w,<sp/><ref refid="structwall__3d__offload__data" kindref="compound">wall_3d_offload_data</ref>*<sp/>offload_data,</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>offload_array,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>int_offload_array);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>declare<sp/>simd<sp/>uniform(w)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="wall__3d_8h_1a2390e48b32304e750b4459d1e230f71d" kindref="member">wall_3d_hit_wall</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r1,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>phi1,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z1,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r2,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>phi2,</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z2,<sp/><ref refid="structwall__3d__data" kindref="compound">wall_3d_data</ref>*<sp/>w,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>w_coll);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>declare<sp/>simd<sp/>uniform(w)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="wall__3d_8h_1a5bef5f929d02f48ef539c3b751f59fb3" kindref="member">wall_3d_hit_wall_full</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r1,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>phi1,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z1,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r2,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>phi2,</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z2,<sp/><ref refid="structwall__3d__data" kindref="compound">wall_3d_data</ref>*<sp/>w,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>w_coll);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>declare<sp/>simd</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="wall__3d_8h_1a64ae89b58068702c9e084b80cd78fd1b" kindref="member">wall_3d_tri_collision</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>q1[3],<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>q2[3],<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>t1[3],<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>t2[3],</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>t3[3]);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="wall__3d_8h_1a1420772005932496348e1ce1fbb06587" kindref="member">wall_3d_init_tree</ref>(<ref refid="structwall__3d__data" kindref="compound">wall_3d_data</ref>*<sp/>w,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>offload_array);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="wall__3d_8h_1a10ecf6ad1ca68351067111cf6dfdec9b" kindref="member">wall_3d_tri_in_cube</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>t1[3],<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>t2[3],<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>t3[3],<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>bb1[3],</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>bb2[3]);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="wall__3d_8h_1ae7d0f1f8ac2ab55fa76ba1dd377f689d" kindref="member">wall_3d_quad_collision</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>q1[3],<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>q2[3],<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>t1[3],<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>t2[3],</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>t3[3],<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>t4[3]);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>end<sp/>declare<sp/>target</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="wall/wall_3d.h"/>
+  </compounddef>
+</doxygen>

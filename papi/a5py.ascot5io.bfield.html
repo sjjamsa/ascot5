@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>bfield &mdash; ASCOT5 5.5 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/sg_gallery.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=b689823a"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="efield" href="a5py.ascot5io.efield.html" />
+    <link rel="prev" title="ascot5io" href="a5py.ascot5io.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html">
+            
+              <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Running Simulations</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../running.html">Installing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../running.html#simulations">Simulations</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Processing Data</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../processing.html">Data storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../processing.html#input-generation">Input generation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../processing.html#post-processing">Post-processing</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Simulating Physics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../teaching.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../teaching.html#physics-in-ascot5">Physics in ASCOT5</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Publications</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../publishing.html">Citing ASCOT5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../publishing.html#gallery">Gallery</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Code Development</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../developing.html">Coding style and practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developing.html#parallelization">Parallelization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developing.html#testing">Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developing.html#id2">C API</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="a5py.html">Python API</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="a5py.html#module-a5py"><code class="docutils literal notranslate"><span class="pre">a5py</span></code></a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="a5py.ascot5io.html"><code class="docutils literal notranslate"><span class="pre">ascot5io</span></code></a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">bfield</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.bfield.B_2DS"><code class="docutils literal notranslate"><span class="pre">B_2DS</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.bfield.B_2DS.convert_B_3DS"><code class="docutils literal notranslate"><span class="pre">B_2DS.convert_B_3DS()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.bfield.B_2DS.convert_B_GS"><code class="docutils literal notranslate"><span class="pre">B_2DS.convert_B_GS()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.bfield.B_2DS.read"><code class="docutils literal notranslate"><span class="pre">B_2DS.read()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.bfield.B_2DS.write_hdf5"><code class="docutils literal notranslate"><span class="pre">B_2DS.write_hdf5()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.bfield.B_2DS.write_hdf5_dummy"><code class="docutils literal notranslate"><span class="pre">B_2DS.write_hdf5_dummy()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.bfield.B_3DS"><code class="docutils literal notranslate"><span class="pre">B_3DS</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.bfield.B_3DS.convert_B_GS"><code class="docutils literal notranslate"><span class="pre">B_3DS.convert_B_GS()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.bfield.B_3DS.read"><code class="docutils literal notranslate"><span class="pre">B_3DS.read()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.bfield.B_3DS.write_hdf5"><code class="docutils literal notranslate"><span class="pre">B_3DS.write_hdf5()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.bfield.B_3DS.write_hdf5_dummy"><code class="docutils literal notranslate"><span class="pre">B_3DS.write_hdf5_dummy()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.bfield.B_STS"><code class="docutils literal notranslate"><span class="pre">B_STS</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.bfield.B_STS.convert_B_GS"><code class="docutils literal notranslate"><span class="pre">B_STS.convert_B_GS()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.bfield.B_STS.read"><code class="docutils literal notranslate"><span class="pre">B_STS.read()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.bfield.B_STS.write_hdf5"><code class="docutils literal notranslate"><span class="pre">B_STS.write_hdf5()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.bfield.B_STS.write_hdf5_dummy"><code class="docutils literal notranslate"><span class="pre">B_STS.write_hdf5_dummy()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.bfield.B_GS"><code class="docutils literal notranslate"><span class="pre">B_GS</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.bfield.B_GS.read"><code class="docutils literal notranslate"><span class="pre">B_GS.read()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.bfield.B_GS.write_hdf5"><code class="docutils literal notranslate"><span class="pre">B_GS.write_hdf5()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.bfield.B_GS.write_hdf5_dummy"><code class="docutils literal notranslate"><span class="pre">B_GS.write_hdf5_dummy()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.bfield.B_TC"><code class="docutils literal notranslate"><span class="pre">B_TC</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.bfield.B_TC.read"><code class="docutils literal notranslate"><span class="pre">B_TC.read()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.bfield.B_TC.write_hdf5"><code class="docutils literal notranslate"><span class="pre">B_TC.write_hdf5()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.bfield.B_TC.write_hdf5_dummy"><code class="docutils literal notranslate"><span class="pre">B_TC.write_hdf5_dummy()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.efield.html"><code class="docutils literal notranslate"><span class="pre">efield</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.plasma.html"><code class="docutils literal notranslate"><span class="pre">plasma</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.marker.html"><code class="docutils literal notranslate"><span class="pre">marker</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.wall.html"><code class="docutils literal notranslate"><span class="pre">wall</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.neutral.html"><code class="docutils literal notranslate"><span class="pre">neutral</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.boozer.html"><code class="docutils literal notranslate"><span class="pre">boozer</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.mhd.html"><code class="docutils literal notranslate"><span class="pre">mhd</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.nbi.html"><code class="docutils literal notranslate"><span class="pre">nbi</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.options.html"><code class="docutils literal notranslate"><span class="pre">options</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.coreio.html"><code class="docutils literal notranslate"><span class="pre">CoreIO</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.html#a5py.ascot5io.Ascot5IO"><code class="docutils literal notranslate"><span class="pre">Ascot5IO</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.html#a5py.ascot5io.RunGroup"><code class="docutils literal notranslate"><span class="pre">RunGroup</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.html#a5py.ascot5io.InputGroup"><code class="docutils literal notranslate"><span class="pre">InputGroup</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.ascotpy.html"><code class="docutils literal notranslate"><span class="pre">ascotpy</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.templates.html"><code class="docutils literal notranslate"><span class="pre">templates</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.physlib.html"><code class="docutils literal notranslate"><span class="pre">physlib</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.routines.html"><code class="docutils literal notranslate"><span class="pre">routines</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.gui.html"><code class="docutils literal notranslate"><span class="pre">a5py.gui</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.html#a5py.exceptions.AscotIOException"><code class="docutils literal notranslate"><span class="pre">AscotIOException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.html#a5py.exceptions.AscotInitException"><code class="docutils literal notranslate"><span class="pre">AscotInitException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.html#a5py.exceptions.AscotNoDataException"><code class="docutils literal notranslate"><span class="pre">AscotNoDataException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.html#a5py.exceptions.AscotUnitWarning"><code class="docutils literal notranslate"><span class="pre">AscotUnitWarning</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="a5py.html#ascot"><code class="docutils literal notranslate"><span class="pre">Ascot</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ASCOT5</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="a5py.html">Python API</a></li>
+          <li class="breadcrumb-item"><a href="a5py.ascot5io.html"><code class="docutils literal notranslate"><span class="pre">ascot5io</span></code></a></li>
+      <li class="breadcrumb-item active"><code class="docutils literal notranslate"><span class="pre">bfield</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/papi/a5py.ascot5io.bfield.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-a5py.ascot5io.bfield">
+<span id="bfield"></span><h1><code class="docutils literal notranslate"><span class="pre">bfield</span></code><a class="headerlink" href="#module-a5py.ascot5io.bfield" title="Link to this heading"></a></h1>
+<p>Magnetic field input.</p>
+<p>Magnetic field is present in every simulation and plays for an important role
+in accuracy of the results. High-fidelity magnetic field is essential. Most of
+the time magnetic field is the most memory-intensive input (and also most of
+the CPU time is spent interpolating it).</p>
+<p>The poloidal flux psi is also used as a radial coordinate in simulations e.g. to
+interpolate 1D data. More precisely,
+rho = sqrt( (psi - psi0) / ( psi1 - psi0 ) ), where psi0 is psi on axis and psi1
+is psi on separatrix, is used. Note that psi0 and psi1 must be provided
+explicitly in all magnetic field inputs. It is a good idea to include some
+padding to psi0, as otherwise rho might have a complex value near separatrix
+(which leads to markers being aborted there) if the given psi0 differs from the
+actual extrema of the interpolation scheme.</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#a5py.ascot5io.bfield.B_2DS" title="a5py.ascot5io.bfield.B_2DS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">a5py.ascot5io.bfield.B_2DS</span></code></a></p></td>
+<td><p>Axisymmetric tokamak field interpolated with splines.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#a5py.ascot5io.bfield.B_3DS" title="a5py.ascot5io.bfield.B_3DS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">a5py.ascot5io.bfield.B_3DS</span></code></a></p></td>
+<td><p>Non-axisymmetric tokamak field.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#a5py.ascot5io.bfield.B_STS" title="a5py.ascot5io.bfield.B_STS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">a5py.ascot5io.bfield.B_STS</span></code></a></p></td>
+<td><p>Stellarator magnetic field.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#a5py.ascot5io.bfield.B_GS" title="a5py.ascot5io.bfield.B_GS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">a5py.ascot5io.bfield.B_GS</span></code></a></p></td>
+<td><p>Analytical tokamak field.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#a5py.ascot5io.bfield.B_TC" title="a5py.ascot5io.bfield.B_TC"><code class="xref py py-obj docutils literal notranslate"><span class="pre">a5py.ascot5io.bfield.B_TC</span></code></a></p></td>
+<td><p>Magnetic field in Cartesian basis for testing purposes.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt class="sig sig-object py" id="a5py.ascot5io.bfield.B_2DS">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">a5py.ascot5io.bfield.</span></span><span class="sig-name descname"><span class="pre">B_2DS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.bfield.B_2DS" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="a5py.ascot5io.coreio.html#a5py.ascot5io.coreio.treedata.DataGroup" title="a5py.ascot5io.coreio.treedata.DataGroup"><code class="xref py py-class docutils literal notranslate"><span class="pre">DataGroup</span></code></a></p>
+<p>Axisymmetric tokamak field interpolated with splines.</p>
+<p>This field is suitable for simulations where toroidal ripple or other
+3D perturbations are not relevant (for MHD one can use the dedicated input).
+Using axisymmetric field is <strong>much</strong> faster than 3D fields, so using this
+input when applicable is strongly recommended.</p>
+<p>The input consists of BR, Bphi, Bz, and psi tabulated on an uniform
+(R,z) grid which are interpolated with cubic splines in simulation.
+During the simulation, the total BR (and Bz) are computed as a sum of input
+BR (Bz) and the component calculated from the gradient of psi. In other
+words, the equilibrium BR and Bz are already contained in psi so in most
+cases the input BR and Bz should be set to zero. If for some reason psi has
+a poor quality, it can be scaled to an insignificant value and the field can
+be provided explicitly in BR and Bz. However, in such case the field is no
+longer divergence-free.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.bfield.B_2DS.convert_B_3DS">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">convert_B_3DS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.bfield.B_2DS.convert_B_3DS" title="Link to this definition"></a></dt>
+<dd><p>Convert <a class="reference internal" href="#a5py.ascot5io.bfield.B_3DS" title="a5py.ascot5io.bfield.B_3DS"><code class="xref py py-class docutils literal notranslate"><span class="pre">B_3DS</span></code></a> input to <cite>B_2DS</cite> input.</p>
+<p>This function takes a toroidal average of Bphi and sets BR and Bz to
+zero.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>**kwargs</strong></dt><dd><p>Arguments passed to <a class="reference internal" href="#a5py.ascot5io.bfield.B_3DS.write_hdf5" title="a5py.ascot5io.bfield.B_3DS.write_hdf5"><code class="xref py py-meth docutils literal notranslate"><span class="pre">B_3DS.write_hdf5()</span></code></a> excluding <code class="docutils literal notranslate"><span class="pre">fn</span></code> and
+<code class="docutils literal notranslate"><span class="pre">desc</span></code>.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>out</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a></span></dt><dd><p><a class="reference internal" href="#a5py.ascot5io.bfield.B_3DS" title="a5py.ascot5io.bfield.B_3DS"><code class="xref py py-class docutils literal notranslate"><span class="pre">B_3DS</span></code></a> converted as an input for <a class="reference internal" href="#a5py.ascot5io.bfield.B_2DS.write_hdf5" title="a5py.ascot5io.bfield.B_2DS.write_hdf5"><code class="xref py py-meth docutils literal notranslate"><span class="pre">write_hdf5()</span></code></a>.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.bfield.B_2DS.convert_B_GS">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">convert_B_GS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rmin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rmax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zmin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zmax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nz</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.bfield.B_2DS.convert_B_GS" title="Link to this definition"></a></dt>
+<dd><p>Convert <a class="reference internal" href="#a5py.ascot5io.bfield.B_GS" title="a5py.ascot5io.bfield.B_GS"><code class="xref py py-class docutils literal notranslate"><span class="pre">B_GS</span></code></a> input to <cite>B_2DS</cite> input.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>rmin</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>R grid min edge [m].</p>
+</dd>
+<dt><strong>rmax</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>R grid max edge [m].</p>
+</dd>
+<dt><strong>nr</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Number of R grid points.</p>
+</dd>
+<dt><strong>zmin</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>z grid min edge [m].</p>
+</dd>
+<dt><strong>zmax</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>z grid max edge [m].</p>
+</dd>
+<dt><strong>nz</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Number of z grid points.</p>
+</dd>
+<dt><strong>**kwargs</strong></dt><dd><p>Arguments passed to <a class="reference internal" href="#a5py.ascot5io.bfield.B_GS.write_hdf5" title="a5py.ascot5io.bfield.B_GS.write_hdf5"><code class="xref py py-meth docutils literal notranslate"><span class="pre">B_GS.write_hdf5()</span></code></a> excluding <code class="docutils literal notranslate"><span class="pre">fn</span></code> and
+<code class="docutils literal notranslate"><span class="pre">desc</span></code>.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>out</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a></span></dt><dd><p><a class="reference internal" href="#a5py.ascot5io.bfield.B_GS" title="a5py.ascot5io.bfield.B_GS"><code class="xref py py-class docutils literal notranslate"><span class="pre">B_GS</span></code></a> converted as an input for <a class="reference internal" href="#a5py.ascot5io.bfield.B_2DS.write_hdf5" title="a5py.ascot5io.bfield.B_2DS.write_hdf5"><code class="xref py py-meth docutils literal notranslate"><span class="pre">write_hdf5()</span></code></a>.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.bfield.B_2DS.read">
+<span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.bfield.B_2DS.read" title="Link to this definition"></a></dt>
+<dd><p>Read data from HDF5 file.</p>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>data</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a></span></dt><dd><p>Data read from HDF5 stored in the same format as is passed to
+<a class="reference internal" href="#a5py.ascot5io.bfield.B_2DS.write_hdf5" title="a5py.ascot5io.bfield.B_2DS.write_hdf5"><code class="xref py py-meth docutils literal notranslate"><span class="pre">write_hdf5()</span></code></a>.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.bfield.B_2DS.write_hdf5">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">write_hdf5</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rmin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rmax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zmin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zmax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nz</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axisr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axisz</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psi0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psi1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">br</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bphi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bz</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">desc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.bfield.B_2DS.write_hdf5" title="Link to this definition"></a></dt>
+<dd><p>Write input data to the HDF5 file.</p>
+<p>Note that br and bz should not include the equilibrium component of the
+magnetic field as that is calculated from psi by ASCOT5 during the
+simulation.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>fn</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Full path to the HDF5 file.</p>
+</dd>
+<dt><strong>rmin</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>R grid min edge [m].</p>
+</dd>
+<dt><strong>rmax</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>R grid max edge [m].</p>
+</dd>
+<dt><strong>nr</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Number of R grid points.</p>
+</dd>
+<dt><strong>zmin</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>z grid min edge [m].</p>
+</dd>
+<dt><strong>zmax</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>z grid max edge [m].</p>
+</dd>
+<dt><strong>nz</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Number of z grid points.</p>
+</dd>
+<dt><strong>axisr</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>Magnetic axis R coordinate [m].</p>
+</dd>
+<dt><strong>axisz</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>Magnetic axis z coordinate [m].</p>
+</dd>
+<dt><strong>psi0</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>On-axis poloidal flux value [Vs/m].</p>
+</dd>
+<dt><strong>psi1</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>Separatrix poloidal flux value [Vs/m].</p>
+</dd>
+<dt><strong>psi</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">nr</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">nz</span></code>)</span></dt><dd><p>Poloidal flux values on the Rz grid [Vs/m].</p>
+</dd>
+<dt><strong>br</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a> (nr,nz)</span></dt><dd><p>Magnetic field R component (excl. equilibrium comp.) on Rz grid [T].</p>
+</dd>
+<dt><strong>bphi</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a> (nr,nz)</span></dt><dd><p>Magnetic field phi component on Rz grid [T].</p>
+</dd>
+<dt><strong>bz</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a> (nr,nz)</span></dt><dd><p>Magnetic field z component (excl. equilibrium comp.) onRz grid [T].</p>
+</dd>
+<dt><strong>desc</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Input description.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>name</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Name, i.e. “&lt;type&gt;_&lt;qid&gt;”, of the new input that was written.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ValueError</span></code></a></dt><dd><p>If inputs were not consistent.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.bfield.B_2DS.write_hdf5_dummy">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">write_hdf5_dummy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.bfield.B_2DS.write_hdf5_dummy" title="Link to this definition"></a></dt>
+<dd><p>Write dummy data that has correct format and is valid, but can be
+non-sensical.</p>
+<p>This method is intended for testing purposes or to provide data whose
+presence is needed but which is not actually used in simulation.</p>
+<p>The dummy output is an ITER-like but circular equilibrium.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>fn</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Full path to the HDF5 file.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>name</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Name, i.e. “&lt;type&gt;_&lt;qid&gt;”, of the new input that was written.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="a5py.ascot5io.bfield.B_3DS">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">a5py.ascot5io.bfield.</span></span><span class="sig-name descname"><span class="pre">B_3DS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.bfield.B_3DS" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="a5py.ascot5io.coreio.html#a5py.ascot5io.coreio.treedata.DataGroup" title="a5py.ascot5io.coreio.treedata.DataGroup"><code class="xref py py-class docutils literal notranslate"><span class="pre">DataGroup</span></code></a></p>
+<p>Non-axisymmetric tokamak field.</p>
+<p>The input consists of BR, Bphi, and Bz tabulated on an uniform cylindrical
+grid and psi tabulated on (R,z) grid. Data is interpolated with cubic
+splines during the simulation, and the total BR (and Bz) are computed as
+a sum of input BR (Bz) and the component calculated from the gradient of
+psi. In other words, the equilibrium BR and Bz are already contained in psi
+so BR and Bz should only contain the components from 3D perturbation.</p>
+<p>This input is suitable for artificial 3D perturbations. For MHD, consider
+the dedicated input.</p>
+<p>Since this input interpolates BR and Bz with splines, the resulting B is
+not divergence free. This can be amended by using a dense grid for magnetic
+field evaluation. Note however that it can become memory-intensive.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.bfield.B_3DS.convert_B_GS">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">convert_B_GS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rmin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rmax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zmin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zmax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nz</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phimin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phimax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nphi</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.bfield.B_3DS.convert_B_GS" title="Link to this definition"></a></dt>
+<dd><p>Convert <a class="reference internal" href="#a5py.ascot5io.bfield.B_GS" title="a5py.ascot5io.bfield.B_GS"><code class="xref py py-class docutils literal notranslate"><span class="pre">B_GS</span></code></a> input to <cite>B_3DS</cite> input.</p>
+<p>The resulting field is far from being divergence-free as the
+perturbation BR and Bz components are omitted.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>rmin</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>Magnetic field data R grid min edge [m].</p>
+</dd>
+<dt><strong>rmax</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>Magnetic field data R grid max edge [m].</p>
+</dd>
+<dt><strong>nr</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Number of R grid points in magnetic field data.</p>
+</dd>
+<dt><strong>zmin</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>Magnetic field data z grid min edge [m].</p>
+</dd>
+<dt><strong>zmax</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>Magnetic field data z grid max edge [m].</p>
+</dd>
+<dt><strong>nz</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Number of z grid points in magnetic field data.</p>
+</dd>
+<dt><strong>phimin</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>Beginning of the toroidal period [deg].</p>
+</dd>
+<dt><strong>phimax</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>End of the toroidal period [deg].</p>
+</dd>
+<dt><strong>nphi</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Number of phi grid points in magnetic field data.</p>
+</dd>
+<dt><strong>**kwargs</strong></dt><dd><p>Arguments passed to <a class="reference internal" href="#a5py.ascot5io.bfield.B_GS.write_hdf5" title="a5py.ascot5io.bfield.B_GS.write_hdf5"><code class="xref py py-meth docutils literal notranslate"><span class="pre">B_GS.write_hdf5()</span></code></a> excluding <code class="docutils literal notranslate"><span class="pre">fn</span></code> and
+<code class="docutils literal notranslate"><span class="pre">desc</span></code>.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>out</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a></span></dt><dd><p><a class="reference internal" href="#a5py.ascot5io.bfield.B_GS" title="a5py.ascot5io.bfield.B_GS"><code class="xref py py-class docutils literal notranslate"><span class="pre">B_GS</span></code></a> converted as an input for <a class="reference internal" href="#a5py.ascot5io.bfield.B_3DS.write_hdf5" title="a5py.ascot5io.bfield.B_3DS.write_hdf5"><code class="xref py py-meth docutils literal notranslate"><span class="pre">write_hdf5()</span></code></a>.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.bfield.B_3DS.read">
+<span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.bfield.B_3DS.read" title="Link to this definition"></a></dt>
+<dd><p>Read data from HDF5 file.</p>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>data</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a></span></dt><dd><p>Data read from HDF5 stored in the same format as is passed to
+<a class="reference internal" href="#a5py.ascot5io.bfield.B_3DS.write_hdf5" title="a5py.ascot5io.bfield.B_3DS.write_hdf5"><code class="xref py py-meth docutils literal notranslate"><span class="pre">write_hdf5()</span></code></a>.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.bfield.B_3DS.write_hdf5">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">write_hdf5</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b_rmin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b_rmax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b_nr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b_zmin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b_zmax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b_nz</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b_phimin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b_phimax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b_nphi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axisr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axisz</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psi0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psi1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">br</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bphi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bz</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psi_rmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psi_rmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psi_nr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psi_zmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psi_zmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psi_nz</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">desc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.bfield.B_3DS.write_hdf5" title="Link to this definition"></a></dt>
+<dd><p>Write input data to the HDF5 file.</p>
+<p>It is possible to use different (R,z) grids for psi and magnetic field
+components by giving the (R,z)-grid for psi separately. 3D data can be
+memory intensive which necessitates sparser grid for B components, but
+psi can still be evaluated on a dense grid.</p>
+<p>The toroidal angle phi is treated as a periodic coordinate, meaning
+<code class="docutils literal notranslate"><span class="pre">A(phi=phimin)</span> <span class="pre">==</span> <span class="pre">A(phi=phimax)</span></code>. However, the phi grid, where input
+arrays are tabulated, is <code class="docutils literal notranslate"><span class="pre">linspace(phimin,</span> <span class="pre">phimax,</span> <span class="pre">nphi+1)[:-1]</span></code>
+to avoid storing duplicate data.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>fn</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Full path to the HDF5 file.</p>
+</dd>
+<dt><strong>b_rmin</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>Magnetic field data R grid min edge [m].</p>
+</dd>
+<dt><strong>b_rmax</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>Magnetic field data R grid max edge [m].</p>
+</dd>
+<dt><strong>b_nr</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Number of R grid points in magnetic field data.</p>
+</dd>
+<dt><strong>b_zmin</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>Magnetic field data z grid min edge [m].</p>
+</dd>
+<dt><strong>b_zmax</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>Magnetic field data z grid max edge [m].</p>
+</dd>
+<dt><strong>b_nz</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Number of z grid points in magnetic field data.</p>
+</dd>
+<dt><strong>b_phimin</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>Beginning of the toroidal period [deg].</p>
+</dd>
+<dt><strong>b_phimax</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>End of the toroidal period [deg].</p>
+</dd>
+<dt><strong>b_nphi</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Number of phi grid points in magnetic field data.</p>
+</dd>
+<dt><strong>axisr</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>Magnetic axis R coordinate [m].</p>
+</dd>
+<dt><strong>axisz</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>Magnetic axis z coordinate [m].</p>
+</dd>
+<dt><strong>psi0</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>On-axis poloidal flux value [Vs/m].</p>
+</dd>
+<dt><strong>psi1</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>Separatrix poloidal flux value [Vs/m].</p>
+</dd>
+<dt><strong>psi</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">nr</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">nz</span></code>)</span></dt><dd><p>Poloidal flux values on the Rz grid [Vs/m].</p>
+</dd>
+<dt><strong>br</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a> (nr,nphi,nz)</span></dt><dd><p>Magnetic field R component (excl. equilibrium comp.) on Rz grid [T].</p>
+</dd>
+<dt><strong>bphi</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a> (nr,nphi,nz)</span></dt><dd><p>Magnetic field phi component on Rz grid [T].</p>
+</dd>
+<dt><strong>bz</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a> (nr,nphi,nz)</span></dt><dd><p>Magnetic field z component (excl. equilibrium comp.) onRz grid [T].</p>
+</dd>
+<dt><strong>psi_rmin</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Psi data R grid min edge [m].</p>
+</dd>
+<dt><strong>psi_rmax</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Psi data R grid max edge [m].</p>
+</dd>
+<dt><strong>psi_nr</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Number of R grid points in psi data.</p>
+</dd>
+<dt><strong>psi_zmin</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Psi data z grid min edge [m].</p>
+</dd>
+<dt><strong>psi_zmax</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Psi data z grid max edge [m].</p>
+</dd>
+<dt><strong>psi_nz</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Number of z grid points in psi data.</p>
+</dd>
+<dt><strong>desc</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Input description.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>name</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Name, i.e. “&lt;type&gt;_&lt;qid&gt;”, of the new input that was written.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ValueError</span></code></a></dt><dd><p>If inputs were not consistent.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.bfield.B_3DS.write_hdf5_dummy">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">write_hdf5_dummy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.bfield.B_3DS.write_hdf5_dummy" title="Link to this definition"></a></dt>
+<dd><p>Write dummy data that has correct format and is valid, but can be
+non-sensical.</p>
+<p>This method is intended for testing purposes or to provide data whose
+presence is needed but which is not actually used in simulation.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>fn</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Full path to the HDF5 file.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>name</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Name, i.e. “&lt;type&gt;_&lt;qid&gt;”, of the new input that was written.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="a5py.ascot5io.bfield.B_STS">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">a5py.ascot5io.bfield.</span></span><span class="sig-name descname"><span class="pre">B_STS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.bfield.B_STS" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="a5py.ascot5io.coreio.html#a5py.ascot5io.coreio.treedata.DataGroup" title="a5py.ascot5io.coreio.treedata.DataGroup"><code class="xref py py-class docutils literal notranslate"><span class="pre">DataGroup</span></code></a></p>
+<p>Stellarator magnetic field.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.bfield.B_STS.convert_B_GS">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">convert_B_GS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">R0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B_phi0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psi_mult</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psi_coeff</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Rmin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Rmax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nR</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zmin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zmax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nz</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phimin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phimax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nphi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psi0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raxis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zaxis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">desc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.bfield.B_STS.convert_B_GS" title="Link to this definition"></a></dt>
+<dd><p>Convert <a class="reference internal" href="#a5py.ascot5io.bfield.B_GS" title="a5py.ascot5io.bfield.B_GS"><code class="xref py py-class docutils literal notranslate"><span class="pre">B_GS</span></code></a> input to <cite>B_STS</cite> input.</p>
+<p>The resulting field is far from being divergence-free as the
+perturbation BR and Bz components are omitted.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>R0, z0</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">real</span></code></span></dt><dd><p>Major axis Rz-coordinates.</p>
+</dd>
+<dt><strong>B_phi0</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">real</span></code></span></dt><dd><p>Toroidal field at axis.</p>
+</dd>
+<dt><strong>psi_mult</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">real</span></code></span></dt><dd><p>Scaling factor for psi.</p>
+</dd>
+<dt><strong>psi_coeff</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">real</span></code> 13 <code class="xref py py-obj docutils literal notranslate"><span class="pre">x</span></code> 1 <a class="reference external" href="https://numpy.org/doc/stable/reference/index.html#module-numpy" title="(in NumPy v1.26)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy</span></code></a> <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.26)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">array</span></code></a></span></dt><dd><p>Coefficients defining psi.</p>
+</dd>
+<dt><strong>Rmin, Rmax, zmin, zmax, phimin, phimax</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">real</span></code></span></dt><dd><p>Edges of the uniform Rphiz-grid.</p>
+</dd>
+<dt><strong>nR, nz, nphi</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Number of Rphiz-grid points.</p>
+</dd>
+<dt><strong>psi0</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code> &lt;br&gt;</span></dt><dd><p>Poloidal flux at magnetic axis.</p>
+</dd>
+<dt><strong>raxis</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code> &lt;br&gt;</span></dt><dd><p>Magnetic axis R coordinate [m].</p>
+</dd>
+<dt><strong>zaxis</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code> &lt;br&gt;</span></dt><dd><p>Magnetic axis z coordinate [m].</p>
+</dd>
+<dt><strong>**kwargs</strong></dt><dd><p>Arguments passed to <a class="reference internal" href="#a5py.ascot5io.bfield.B_GS.write_hdf5" title="a5py.ascot5io.bfield.B_GS.write_hdf5"><code class="xref py py-meth docutils literal notranslate"><span class="pre">B_GS.write_hdf5()</span></code></a> excluding <code class="docutils literal notranslate"><span class="pre">fn</span></code> and
+<code class="docutils literal notranslate"><span class="pre">desc</span></code>.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>out</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a></span></dt><dd><p><a class="reference internal" href="#a5py.ascot5io.bfield.B_GS" title="a5py.ascot5io.bfield.B_GS"><code class="xref py py-class docutils literal notranslate"><span class="pre">B_GS</span></code></a> converted as an input for <a class="reference internal" href="#a5py.ascot5io.bfield.B_STS.write_hdf5" title="a5py.ascot5io.bfield.B_STS.write_hdf5"><code class="xref py py-meth docutils literal notranslate"><span class="pre">write_hdf5()</span></code></a>.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.bfield.B_STS.read">
+<span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.bfield.B_STS.read" title="Link to this definition"></a></dt>
+<dd><p>Read data from HDF5 file.</p>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>data</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a></span></dt><dd><p>Data read from HDF5 stored in the same format as is passed to
+<a class="reference internal" href="#a5py.ascot5io.bfield.B_STS.write_hdf5" title="a5py.ascot5io.bfield.B_STS.write_hdf5"><code class="xref py py-meth docutils literal notranslate"><span class="pre">write_hdf5()</span></code></a>.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.bfield.B_STS.write_hdf5">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">write_hdf5</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b_rmin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b_rmax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b_nr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b_zmin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b_zmax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b_nz</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b_phimin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b_phimax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b_nphi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psi0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psi1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">br</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bphi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bz</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis_phimin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis_phimax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis_nphi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axisr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axisz</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psi_rmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psi_rmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psi_nr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psi_zmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psi_zmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psi_nz</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psi_phimin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psi_phimax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psi_nphi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">desc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.bfield.B_STS.write_hdf5" title="Link to this definition"></a></dt>
+<dd><p>Write input data to the HDF5 file.</p>
+<p>It is possible to use different (R,z) grids for psi and magnetic field
+components by giving the (R,z)-grid for psi separately. 3D data can be
+memory intensive which necessitates sparser grid for B components, but
+psi can still be evaluated on a dense grid.</p>
+<p>The toroidal angle phi is treated as a periodic coordinate, meaning
+<code class="docutils literal notranslate"><span class="pre">A(phi=phimin)</span> <span class="pre">==</span> <span class="pre">A(phi=phimax)</span></code>. However, the phi grid, where input
+arrays are tabulated, is <code class="docutils literal notranslate"><span class="pre">linspace(phimin,</span> <span class="pre">phimax,</span> <span class="pre">nphi+1)[:-1]</span></code>
+to avoid storing duplicate data.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>fn</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Full path to the HDF5 file.</p>
+</dd>
+<dt><strong>b_rmin</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>Magnetic field data R grid min edge [m].</p>
+</dd>
+<dt><strong>b_rmax</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>Magnetic field data R grid max edge [m].</p>
+</dd>
+<dt><strong>b_nr</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Number of R grid points in magnetic field data.</p>
+</dd>
+<dt><strong>b_zmin</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>Magnetic field data z grid min edge [m].</p>
+</dd>
+<dt><strong>b_zmax</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>Magnetic field data z grid max edge [m].</p>
+</dd>
+<dt><strong>b_nz</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Number of z grid points in magnetic field data.</p>
+</dd>
+<dt><strong>b_phimin</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>Beginning of the toroidal period [deg].</p>
+</dd>
+<dt><strong>b_phimax</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>End of the toroidal period [deg].</p>
+</dd>
+<dt><strong>b_nphi</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Number of phi grid points in magnetic field data.</p>
+</dd>
+<dt><strong>axis_phimin</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>Magnetic axis phi grid min value [deg].</p>
+</dd>
+<dt><strong>axis_phimax</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>Magnetic axis phi grid max value [deg].</p>
+</dd>
+<dt><strong>axis_nphi</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>Number of points in magnetic axis phi grid.</p>
+</dd>
+<dt><strong>axisr</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>Magnetic axis R coordinates on axis phi grid [m].</p>
+</dd>
+<dt><strong>axisz</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>Magnetic axis z coordinates on axis phi grid [m].</p>
+</dd>
+<dt><strong>psi0</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>On-axis poloidal flux value [Vs/m].</p>
+</dd>
+<dt><strong>psi1</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>Separatrix poloidal flux value [Vs/m].</p>
+</dd>
+<dt><strong>psi</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a> (psi_nr,psi_nphi,psi_nz)</span></dt><dd><p>Poloidal flux values on the Rz grid [Vs/m].</p>
+</dd>
+<dt><strong>br</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a> (b_nr,b_nphi,b_nz)</span></dt><dd><p>Magnetic field R component (excl. equilibrium comp.) on Rz grid [T].</p>
+</dd>
+<dt><strong>bphi</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a> (b_nr,b_nphi,b_nz)</span></dt><dd><p>Magnetic field phi component on Rz grid [T].</p>
+</dd>
+<dt><strong>bz</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a> (b_nr,b_nphi,b_nz)</span></dt><dd><p>Magnetic field z component (excl. equilibrium comp.) onRz grid [T].</p>
+</dd>
+<dt><strong>psi_rmin</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Psi data R grid min edge [m].</p>
+</dd>
+<dt><strong>psi_rmax</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Psi data R grid max edge [m].</p>
+</dd>
+<dt><strong>psi_nr</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Number of R grid points in psi data.</p>
+</dd>
+<dt><strong>psi_zmin</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Psi data z grid min edge [m].</p>
+</dd>
+<dt><strong>psi_zmax</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Psi data z grid max edge [m].</p>
+</dd>
+<dt><strong>psi_nz</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Number of z grid points in psi data.</p>
+</dd>
+<dt><strong>psi_phimin</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Psi data beginning of the toroidal period.</p>
+</dd>
+<dt><strong>psi_phimax</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Psi data end of the toroidal period.</p>
+</dd>
+<dt><strong>psi_nphi</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Number of phi grid points in psi data.</p>
+</dd>
+<dt><strong>desc</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Input description.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>name</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Name, i.e. “&lt;type&gt;_&lt;qid&gt;”, of the new input that was written.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ValueError</span></code></a></dt><dd><p>If inputs were not consistent.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.bfield.B_STS.write_hdf5_dummy">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">write_hdf5_dummy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.bfield.B_STS.write_hdf5_dummy" title="Link to this definition"></a></dt>
+<dd><p>Write dummy data that has correct format and is valid, but can be
+non-sensical.</p>
+<p>This method is intended for testing purposes or to provide data whose
+presence is needed but which is not actually used in simulation.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>fn</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Full path to the HDF5 file.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>name</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Name, i.e. “&lt;type&gt;_&lt;qid&gt;”, of the new input that was written.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="a5py.ascot5io.bfield.B_GS">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">a5py.ascot5io.bfield.</span></span><span class="sig-name descname"><span class="pre">B_GS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.bfield.B_GS" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="a5py.ascot5io.coreio.html#a5py.ascot5io.coreio.treedata.DataGroup" title="a5py.ascot5io.coreio.treedata.DataGroup"><code class="xref py py-class docutils literal notranslate"><span class="pre">DataGroup</span></code></a></p>
+<p>Analytical tokamak field.</p>
+<p>This field can either be axisymmetric or it can include a ripple-like
+perturbation. The field is very fast to interpolate and it is not memory
+intensive. However, it is still intended mostly for testing purposes.</p>
+<p>The axisymmetric field is divergence-free whereas the 3D field is not
+as it included only the toroidal component of the perturbation.</p>
+<p>See:
+A.J. Cerfon, J.P. Freidberg. “One size fits all” analytic solutions to
+the Grad-Shafranov equation. Physics of Plasmas 17 (3) (2010) 032502.
+<a class="reference external" href="http://scitation.aip.org/content/aip/journal/pop/17/3/10.1063/1.3328818">http://scitation.aip.org/content/aip/journal/pop/17/3/10.1063/1.3328818</a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.bfield.B_GS.read">
+<span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.bfield.B_GS.read" title="Link to this definition"></a></dt>
+<dd><p>Read data from HDF5 file.</p>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>data</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a></span></dt><dd><p>Data read from HDF5 stored in the same format as is passed to
+<a class="reference internal" href="#a5py.ascot5io.bfield.B_GS.write_hdf5" title="a5py.ascot5io.bfield.B_GS.write_hdf5"><code class="xref py py-meth docutils literal notranslate"><span class="pre">write_hdf5()</span></code></a>.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.bfield.B_GS.write_hdf5">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">write_hdf5</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bphi0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psimult</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coefficients</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psi0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psi1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raxis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zaxis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nripple</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.05</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">desc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.bfield.B_GS.write_hdf5" title="Link to this definition"></a></dt>
+<dd><p>Write input data to the HDF5 file.</p>
+<p>If psi0 is None, magnetic axis location is found numerically and psi0
+value is evaluated at that point. The analytical field is defined by
+assuming midplane is at z=0, but it is moved to z=z0 here.</p>
+<p>Setting number of toroidal field coils to non-zero makes the field 3D.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>fn</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Full path to the HDF5 file.</p>
+</dd>
+<dt><strong>r0</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>Major radius R coordinate [m].</p>
+</dd>
+<dt><strong>z0</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>Distance by which midplane is moved from z=0 plane [m].</p>
+</dd>
+<dt><strong>bphi0</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>Toroidal field at axis [T].</p>
+</dd>
+<dt><strong>psimult</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>Scaling factor for psi.</p>
+</dd>
+<dt><strong>coefficients</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a> (13,1)</span></dt><dd><p>Coefficients defining psi [c0, c1, …, c11, A].</p>
+</dd>
+<dt><strong>psi0</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Poloidal flux at magnetic axis.</p>
+</dd>
+<dt><strong>psi1</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Poloidal flux at the separatrix.</p>
+</dd>
+<dt><strong>raxis</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Magnetic axis R coordinate [m].</p>
+</dd>
+<dt><strong>zaxis</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Magnetic axis z coordinate [m].</p>
+</dd>
+<dt><strong>nripple</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Number of TF coils.</p>
+</dd>
+<dt><strong>a0</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Minor radius. [m]</p>
+</dd>
+<dt><strong>alpha0</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Ripple penetration.</p>
+</dd>
+<dt><strong>delta0</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Ripple (maximum) strength.</p>
+</dd>
+<dt><strong>desc</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Input description.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>name</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Name, i.e. “&lt;type&gt;_&lt;qid&gt;”, of the new input that was written.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ValueError</span></code></a></dt><dd><p>If inputs were not consistent.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.bfield.B_GS.write_hdf5_dummy">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">write_hdf5_dummy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.bfield.B_GS.write_hdf5_dummy" title="Link to this definition"></a></dt>
+<dd><p>Write dummy data that has correct format and is valid, but can be
+non-sensical.</p>
+<p>This method is intended for testing purposes or to provide data whose
+presence is needed but which is not actually used in simulation.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>fn</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Full path to the HDF5 file.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>name</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Name, i.e. “&lt;type&gt;_&lt;qid&gt;”, of the new input that was written.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="a5py.ascot5io.bfield.B_TC">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">a5py.ascot5io.bfield.</span></span><span class="sig-name descname"><span class="pre">B_TC</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.bfield.B_TC" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="a5py.ascot5io.coreio.html#a5py.ascot5io.coreio.treedata.DataGroup" title="a5py.ascot5io.coreio.treedata.DataGroup"><code class="xref py py-class docutils literal notranslate"><span class="pre">DataGroup</span></code></a></p>
+<p>Magnetic field in Cartesian basis for testing purposes.</p>
+<p>This input defines the magnetic field vector on the Cartesian basis, and
+uses constant Jacobian to make the field non-uniform if needed. This field
+is only used to test the validity of the orbit-integrators.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.bfield.B_TC.read">
+<span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.bfield.B_TC.read" title="Link to this definition"></a></dt>
+<dd><p>Read data from HDF5 file.</p>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>data</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a></span></dt><dd><p>Data read from HDF5 stored in the same format as is passed to
+<a class="reference internal" href="#a5py.ascot5io.bfield.B_TC.write_hdf5" title="a5py.ascot5io.bfield.B_TC.write_hdf5"><code class="xref py py-meth docutils literal notranslate"><span class="pre">write_hdf5()</span></code></a>.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.bfield.B_TC.write_hdf5">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">write_hdf5</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bxyz</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jacobian</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rhoval</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psival</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axisr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axisz</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">desc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.bfield.B_TC.write_hdf5" title="Link to this definition"></a></dt>
+<dd><p>Write input data to the HDF5 file.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>fn</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Full path to the HDF5 file.</p>
+</dd>
+<dt><strong>bxyz</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a> (3,1)</span></dt><dd><p>Magnetic field in cartesian coordinates at origo.</p>
+</dd>
+<dt><strong>jacobian</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a> (3,3)</span></dt><dd><p>Magnetic field Jacobian, jacobian[i,j] = dB_i/dx_j.</p>
+</dd>
+<dt><strong>rhoval: float</strong></dt><dd><p>Constant rho value.</p>
+</dd>
+<dt><strong>psival: float, optional</strong></dt><dd><p>Constant psi value. If None, same as rhoval.</p>
+</dd>
+<dt><strong>axisr: float, optional</strong></dt><dd><p>Magnetic axis R coordinate.</p>
+</dd>
+<dt><strong>axisz: real, optional</strong></dt><dd><p>Magnetic axis z coordinate.</p>
+</dd>
+<dt><strong>desc</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Input description.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>name</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Name, i.e. “&lt;type&gt;_&lt;qid&gt;”, of the new input that was written.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ValueError</span></code></a></dt><dd><p>If inputs were not consistent.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.bfield.B_TC.write_hdf5_dummy">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">write_hdf5_dummy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.bfield.B_TC.write_hdf5_dummy" title="Link to this definition"></a></dt>
+<dd><p>Write dummy data that has correct format and is valid, but can be
+non-sensical.</p>
+<p>This method is intended for testing purposes or to provide data whose
+presence is needed but which is not actually used in simulation.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>fn</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Full path to the HDF5 file.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>name</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Name, i.e. “&lt;type&gt;_&lt;qid&gt;”, of the new input that was written.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="a5py.ascot5io.html" class="btn btn-neutral float-left" title="ascot5io" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="a5py.ascot5io.efield.html" class="btn btn-neutral float-right" title="efield" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Ascot Group.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

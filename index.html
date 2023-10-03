@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ASCOT5 &mdash; ASCOT5 5.5 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sg_gallery.css" type="text/css" />
+      <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=b689823a"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Installing" href="running.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#">
+            
+              <img src="_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Running Simulations</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="running.html">Installing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="running.html#simulations">Simulations</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Processing Data</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="processing.html">Data storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="processing.html#input-generation">Input generation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="processing.html#post-processing">Post-processing</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Simulating Physics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="teaching.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="teaching.html#physics-in-ascot5">Physics in ASCOT5</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Publications</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="publishing.html">Citing ASCOT5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="publishing.html#gallery">Gallery</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Code Development</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="developing.html">Coding style and practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developing.html#parallelization">Parallelization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developing.html#testing">Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developing.html#id2">C API</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="papi/a5py.html">Python API</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">ASCOT5</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">ASCOT5</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ascot5">
+<h1>ASCOT5<a class="headerlink" href="#ascot5" title="Link to this heading"></a></h1>
+<p><a class="reference external" href="https://github.com/ascot4fusion/ascot5">https://github.com/ascot4fusion/ascot5</a></p>
+<p><a class="reference external" href="https://arxiv.org/abs/1908.02482/">ASCOT5</a> is a test-particle orbit-following code for solving minority species’ distribution functions, transport, and losses in tokamaks and stellarators.
+For questions related to the code or physics, please join our <a class="reference external" href="http://ascot-workspace.slack.com/">Slack channel</a>.</p>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<section id="getting-started">
+<h2>Getting started<a class="headerlink" href="#getting-started" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Follow the <a class="reference internal" href="running.html#installing"><span class="std std-ref">installation</span></a> instructions and <a class="reference internal" href="running.html#compiling"><span class="std std-ref">compile</span></a> the code.</p></li>
+<li><p>Have some quality time by going through <a class="reference internal" href="tutorials/tutorial.html"><span class="std std-ref">the introductory simulation</span></a>.</p></li>
+<li><p>Familiarize yourself on how to generate <a class="reference internal" href="processing.html#preprocessing"><span class="std std-ref">inputs</span></a> that you need, execute <a class="reference internal" href="running.html#simulations"><span class="std std-ref">simulations</span></a>, and post-process <a class="reference internal" href="processing.html#postprocessing"><span class="std std-ref">the results</span></a>.
+Here <a class="reference internal" href="teaching.html#examples"><span class="std std-ref">the examples</span></a> and <a class="reference internal" href="teaching.html#physics"><span class="std std-ref">the physics</span></a> documentation as well as <a class="reference internal" href="papi/a5py.html"><span class="std std-ref">the Python API</span></a> are good sources of help.</p></li>
+<li><p>At some point you might also want to <a class="reference internal" href="publishing.html#citing"><span class="std std-ref">publish</span></a> your work or <a class="reference internal" href="developing.html#codingstyle"><span class="std std-ref">contribute</span></a> to the code.</p></li>
+</ol>
+</section>
+<section id="features">
+<h2>Features<a class="headerlink" href="#features" title="Link to this heading"></a></h2>
+<p><strong>ASCOT5</strong> is a test-particle orbit-following code for computing particle orbits in 3D geometry.
+The output includes particle orbits, phase-space distributions, transport coefficients, and wall loads. ASCOT5 is frequently applied to study fast ions, impurities, neutrals, and runaway electrons in tokamaks and stellarators.
+Particle orbits are either solved fully, i.e. including the gyro-motion, or in a reduced picture where only the guiding-center trajectory is traced.
+The code is extensively parallelized and optimized to support simulations with more than ten million markers.</p>
+<p>The code is implemented in C and consists of a main program and a library.
+Simulation input and output is stored in HDF5 format.
+All pre- and post-processing is done via the Python interface <strong>a5py</strong>.
+In addition the repository also contain several codes that supplement the orbit-following simulations.</p>
+<p>The repository is maintained by <a class="reference external" href="https://www.aalto.fi/en/department-of-applied-physics/particle-orbit-simulations-ascot">Aalto University</a> and <a class="reference external" href="https://www.vttresearch.com/en/ourservices/future-nuclear#fusion-reactor-research">VTT Technical Research Centre of Finland</a>.</p>
+<p><strong>ASCOT5:</strong></p>
+<ul class="simple">
+<li><p>Can trace full gyro-orbits, guiding centers, field-lines, and neutrals.</p></li>
+<li><p>Supports 3D tokamak and stellarator magnetic fields.</p></li>
+<li><p>Supports 3D wall model and evaluation of particle loads on the wall.</p></li>
+<li><p>Simulations assume test-particle approximation (no feedback from markers to backgrounds) but otherwise any type of particles can be traced.
+- Mainly used to study fast ions, impurities and runaway electrons.</p></li>
+<li><p>Physics include Coulomb collisions and charge-exchange reactions.</p></li>
+<li><p>Simulations may include fast ion response to MHD.</p></li>
+<li><p>Output consists of various distributions (1D-6D), marker orbits, wall loads/FILD signals, and transport coefficients.</p></li>
+</ul>
+<p><strong>BBNBI5</strong></p>
+<ul class="simple">
+<li><p>Calculates beam birth profile and shinethrough from NBI geometry.</p></li>
+<li><p>Can provides a NBI source for ASCOT5 slowing-down simulations.</p></li>
+</ul>
+<p><strong>AFSI</strong></p>
+<ul class="simple">
+<li><p>Calculates fusion product source from thermal plasma and fast ion slowing-down distributions (as computed by ASCOT5).
+For fusion neutronics, this can be combined with <a class="reference external" href="https://serpent.vtt.fi/serpent/">Serpent</a>.</p></li>
+</ul>
+<p><strong>BioSaw</strong></p>
+<ul class="simple">
+<li><p>Calculates magnetic field based on a coil geometry.</p></li>
+<li><p>Can provide a 3D field for ASCOT5 simulations.</p></li>
+</ul>
+<p><strong>BMC</strong></p>
+<ul class="simple">
+<li><p>Backward Monte-Carlo simulation tool that can be thought as a time-reversed ASCOT5.</p></li>
+<li><p>Effective tool for estimating FILD signals and wall loads on small but critical components.</p></li>
+<li><p>Not yet fully complete.</p></li>
+</ul>
+</section>
+<section id="faq-and-troubleshooting">
+<h2>FAQ and Troubleshooting<a class="headerlink" href="#faq-and-troubleshooting" title="Link to this heading"></a></h2>
+<p><strong>I’m receiving a fatal error when opening the input file in Python or in GUI</strong></p>
+<ul class="simple">
+<li><p>There might be compatibility issues if the file was made with an older version of ASCOT5 that you are currently using.
+These can be solved by running the script <code class="docutils literal notranslate"><span class="pre">a5update</span> <span class="pre">ascot.h5</span></code> which generates a copy <code class="docutils literal notranslate"><span class="pre">ascot_&lt;current</span> <span class="pre">version&gt;.h5</span></code> where the data has been updated to new format.
+Note that it might not always be possible to enforce the backwards compatibility on results so rerunning the simulation might be necessary.</p></li>
+</ul>
+<p><strong>How long does it take to run a simulation and how many markers I need</strong></p>
+<ul class="simple">
+<li><p>See <a class="reference internal" href="running.html#exampleruntimes"><span class="std std-ref">this table</span></a> for examples.
+Typically guiding-center simulations are faster than gyro-orbit because GC can use larger time-step.
+This is somewhat balanced by the fact that a single GC time-step is more expensive to perform.
+Therefore, there is roughly a factor of ten difference between required CPU time but this can vary.
+Using 3D magnetic field instead of 2D is the single most expensive choice in terms of CPU time.
+As for markers, the rule of thumb is that 10k - 100k markers are sufficient to get a good estimate on losses and distributions, but more than 1 million might be needed to estimate wall loads accurately.
+For wall loads the important factors are the size of the wall triangles and how the markers were sampled.
+Always perform some kind of convergence scan or otherwise estimate the Monte Carlo error.</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="running.html" class="btn btn-neutral float-right" title="Installing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Ascot Group.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

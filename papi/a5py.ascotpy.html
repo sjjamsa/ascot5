@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ascotpy &mdash; ASCOT5 5.5 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/sg_gallery.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=b689823a"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="templates" href="a5py.templates.html" />
+    <link rel="prev" title="CoreIO" href="a5py.ascot5io.coreio.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html">
+            
+              <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Running Simulations</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../running.html">Installing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../running.html#simulations">Simulations</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Processing Data</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../processing.html">Data storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../processing.html#input-generation">Input generation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../processing.html#post-processing">Post-processing</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Simulating Physics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../teaching.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../teaching.html#physics-in-ascot5">Physics in ASCOT5</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Publications</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../publishing.html">Citing ASCOT5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../publishing.html#gallery">Gallery</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Code Development</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../developing.html">Coding style and practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developing.html#parallelization">Parallelization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developing.html#testing">Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developing.html#id2">C API</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="a5py.html">Python API</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="a5py.html#module-a5py"><code class="docutils literal notranslate"><span class="pre">a5py</span></code></a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="a5py.ascot5io.html"><code class="docutils literal notranslate"><span class="pre">ascot5io</span></code></a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">ascotpy</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#a5py.ascotpy.Ascotpy"><code class="docutils literal notranslate"><span class="pre">Ascotpy</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascotpy.Ascotpy.DUMMY_QID"><code class="docutils literal notranslate"><span class="pre">Ascotpy.DUMMY_QID</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascotpy.Ascotpy.get_plasmaquantities"><code class="docutils literal notranslate"><span class="pre">Ascotpy.get_plasmaquantities()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascotpy.Ascotpy.input_eval"><code class="docutils literal notranslate"><span class="pre">Ascotpy.input_eval()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascotpy.Ascotpy.input_eval_list"><code class="docutils literal notranslate"><span class="pre">Ascotpy.input_eval_list()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascotpy.Ascotpy.input_eval_mhdalphafromphi"><code class="docutils literal notranslate"><span class="pre">Ascotpy.input_eval_mhdalphafromphi()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascotpy.Ascotpy.input_eval_orbitboundaries"><code class="docutils literal notranslate"><span class="pre">Ascotpy.input_eval_orbitboundaries()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascotpy.Ascotpy.input_eval_ripple"><code class="docutils literal notranslate"><span class="pre">Ascotpy.input_eval_ripple()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascotpy.Ascotpy.input_eval_safetyfactor"><code class="docutils literal notranslate"><span class="pre">Ascotpy.input_eval_safetyfactor()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascotpy.Ascotpy.input_initialized"><code class="docutils literal notranslate"><span class="pre">Ascotpy.input_initialized()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascotpy.Ascotpy.input_plotrz"><code class="docutils literal notranslate"><span class="pre">Ascotpy.input_plotrz()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascotpy.Ascotpy.input_plotseparatrix"><code class="docutils literal notranslate"><span class="pre">Ascotpy.input_plotseparatrix()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascotpy.Ascotpy.input_rhovolume"><code class="docutils literal notranslate"><span class="pre">Ascotpy.input_rhovolume()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.templates.html"><code class="docutils literal notranslate"><span class="pre">templates</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.physlib.html"><code class="docutils literal notranslate"><span class="pre">physlib</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.routines.html"><code class="docutils literal notranslate"><span class="pre">routines</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.gui.html"><code class="docutils literal notranslate"><span class="pre">a5py.gui</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.html#a5py.exceptions.AscotIOException"><code class="docutils literal notranslate"><span class="pre">AscotIOException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.html#a5py.exceptions.AscotInitException"><code class="docutils literal notranslate"><span class="pre">AscotInitException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.html#a5py.exceptions.AscotNoDataException"><code class="docutils literal notranslate"><span class="pre">AscotNoDataException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.html#a5py.exceptions.AscotUnitWarning"><code class="docutils literal notranslate"><span class="pre">AscotUnitWarning</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="a5py.html#ascot"><code class="docutils literal notranslate"><span class="pre">Ascot</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ASCOT5</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="a5py.html">Python API</a></li>
+      <li class="breadcrumb-item active"><code class="docutils literal notranslate"><span class="pre">ascotpy</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/papi/a5py.ascotpy.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-a5py.ascotpy">
+<span id="ascotpy"></span><h1><code class="docutils literal notranslate"><span class="pre">ascotpy</span></code><a class="headerlink" href="#module-a5py.ascotpy" title="Link to this heading"></a></h1>
+<p>Python interface to libascot.so.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="a5py.ascotpy.Ascotpy">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">a5py.ascotpy.</span></span><span class="sig-name descname"><span class="pre">Ascotpy</span></span><a class="headerlink" href="#a5py.ascotpy.Ascotpy" title="Link to this definition"></a></dt>
+<dd><p>Class with methods to initialize and access the data via Python.</p>
+<p>This class will be inherited by Ascot class. Here we hide all the dirty
+implementation of the libascot.so interface in private methods and
+attributes so that the Ascot front is clean for the users.</p>
+<p>MPI parallelism has not been tested.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>_sim</strong></dt><dd><p>Simulation offload data struct.</p>
+</dd>
+<dt><strong>_offload_ready</strong></dt><dd><p>Flag indicating if inputs are packed.</p>
+</dd>
+<dt><strong>_nmrk</strong></dt><dd><p>Number of markers currently in the marker array.</p>
+</dd>
+<dt><strong>_inistate</strong></dt><dd><p>Marker input array for interactive simulations.</p>
+</dd>
+<dt><strong>_endstate</strong></dt><dd><p>Marker output array for interactive simulations.</p>
+</dd>
+<dt><strong>_diag_occupied</strong></dt><dd><p>Flag indicating if diagnostics array contains data.</p>
+</dd>
+<dt><strong>_diag_offload_array</strong></dt><dd><p>Diagnostics data offload array.</p>
+</dd>
+<dt><strong>_offload_array</strong></dt><dd><p>Offload array containing the input data when this instance is packed.</p>
+</dd>
+<dt><strong>_int_offload_array</strong></dt><dd><p>Offload array for integers containing the input data when this instance
+is packed.</p>
+</dd>
+<dt><strong>_bfield_offload_array</strong></dt><dd><p>Offload data for the magnetic field input.</p>
+</dd>
+<dt><strong>_efield_offload_array</strong></dt><dd><p>Offload data for the electric field input.</p>
+</dd>
+<dt><strong>_plasma_offload_array</strong></dt><dd><p>Offload data for the plasma input.</p>
+</dd>
+<dt><strong>_neutral_offload_array</strong></dt><dd><p>Offload data for the neutral input.</p>
+</dd>
+<dt><strong>_wall_offload_array</strong></dt><dd><p>Offload data for the wall (float) input.</p>
+</dd>
+<dt><strong>_wall_int_offload_array</strong></dt><dd><p>Offload data for the wall (int) input.</p>
+</dd>
+<dt><strong>_boozer_offload_array</strong></dt><dd><p>Offload data for the Boozer input.</p>
+</dd>
+<dt><strong>_mhd_offload_array</strong></dt><dd><p>Offload data for the MHD input.</p>
+</dd>
+<dt><strong>_asigma_offload_array</strong></dt><dd><p>Offload data for the atomic data input.</p>
+</dd>
+<dt><strong>_nbi_offload_array</strong></dt><dd><p>Offload data for the neutral beam injector data input.</p>
+</dd>
+<dt><strong>_mpi_root</strong></dt><dd><p>Rank of the root MPI process.</p>
+</dd>
+<dt><strong>_mpi_rank</strong></dt><dd><p>Rank of this MPI process.</p>
+</dd>
+<dt><strong>_mpi_size</strong></dt><dd><p>Number of MPI processes.</p>
+</dd>
+<dt><strong>_mute</strong></dt><dd><p>Mute output from libascot.so: “yes” - stdout and stderr both muted,
+“no” - output is not muted, “err” - stderr is printed.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="a5py.ascotpy.Ascotpy.DUMMY_QID">
+<span class="sig-name descname"><span class="pre">DUMMY_QID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">b''</span></em><a class="headerlink" href="#a5py.ascotpy.Ascotpy.DUMMY_QID" title="Link to this definition"></a></dt>
+<dd><p>Flag to use in _sim.qid_* to indicate that the input is not initialized.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascotpy.Ascotpy.get_plasmaquantities">
+<span class="sig-name descname"><span class="pre">get_plasmaquantities</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascotpy.Ascotpy.get_plasmaquantities" title="Link to this definition"></a></dt>
+<dd><p>Return species present in plasma input.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascotpy.Ascotpy.input_eval">
+<span class="sig-name descname"><span class="pre">input_eval</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">qnt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascotpy.Ascotpy.input_eval" title="Link to this definition"></a></dt>
+<dd><p>Evaluate input quantities at given coordinates.</p>
+<p>This method uses ASCOT5 C-routines for evaluating inputs exactly as
+they are evaluated during a simulation. See <a class="reference internal" href="#a5py.ascotpy.Ascotpy.input_eval_list" title="a5py.ascotpy.Ascotpy.input_eval_list"><code class="xref py py-meth docutils literal notranslate"><span class="pre">input_eval_list()</span></code></a> for
+a complete list of available input and derived quantities.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>r</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a></span></dt><dd><p>R coordinates where data is evaluated.</p>
+</dd>
+<dt><strong>phi</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a></span></dt><dd><p>phi coordinates where data is evaluated.</p>
+</dd>
+<dt><strong>z</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a></span></dt><dd><p>z coordinates where data is evaluated.</p>
+</dd>
+<dt><strong>t</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a></span></dt><dd><p>Time coordinates where data is evaluated.</p>
+</dd>
+<dt><strong>*qnt</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Names of evaluated quantities.</p>
+</dd>
+<dt><strong>grid</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Treat input coordinates as abscissae and return the evaluated
+quantities on a grid instead.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>val</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a> (n,) <code class="xref py py-obj docutils literal notranslate"><span class="pre">or</span></code> (nr,nphi,nz,nt)</span></dt><dd><p>Quantity evaluated in each queried point.</p>
+<p>NaN is returned at those points where the evaluation failed.</p>
+<p>4D matrix is returned when grid=``True``.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#AssertionError" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AssertionError</span></code></a></dt><dd><p>If required data has not been initialized.</p>
+</dd>
+<dt><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#RuntimeError" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RuntimeError</span></code></a></dt><dd><p>If evaluation in libascot.so failed.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascotpy.Ascotpy.input_eval_list">
+<span class="sig-name descname"><span class="pre">input_eval_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">show</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascotpy.Ascotpy.input_eval_list" title="Link to this definition"></a></dt>
+<dd><p>Return quantities that can be evaluated from inputs.</p>
+<p>The returned quantities are those that can be evaluated from the inputs
+with <cite>input_eval</cite> method. Units are not listed as that function returns
+quantities with units included.</p>
+<p>The number ion species in plasma input is not fixed so “ni” refers to
+i’th plasma species as listed by <cite>input_getplasmaspecies</cite> (index starts
+from 1).</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>show</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Print output.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>quantities</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a> [<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>]</span></dt><dd><p>Name of each quantity and a short description.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascotpy.Ascotpy.input_eval_mhdalphafromphi">
+<span class="sig-name descname"><span class="pre">input_eval_mhdalphafromphi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nrho</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reverse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascotpy.Ascotpy.input_eval_mhdalphafromphi" title="Link to this definition"></a></dt>
+<dd><p>Evaluate magnetic potential from electric potential assuming that
+Epar = 0.</p>
+<p>This function can be used to verify that the MHD modes were porperly
+imported. Note the Epar=0 condition though.</p>
+<p>alphanm’ = (n*q - m) * phinm / (g*q + I)</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>rgrid</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a>, (nr,)</span></dt><dd></dd>
+<dt><strong>zgrid</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a>, (nz,)</span></dt><dd></dd>
+<dt><strong>phi</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascotpy.Ascotpy.input_eval_orbitboundaries">
+<span class="sig-name descname"><span class="pre">input_eval_orbitboundaries</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mugrid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ptorgrid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ekin</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascotpy.Ascotpy.input_eval_orbitboundaries" title="Link to this definition"></a></dt>
+<dd><p>Plot boundaries of different orbit topologies in (mu, ekin)
+phase-space when energy is fixed.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>mugrid</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a></span></dt><dd><p>Grid for the magnetic moment abscissa.</p>
+</dd>
+<dt><strong>ptorgrid</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a></span></dt><dd><p>Grid for the the canonical toroidal angular momentum abscissa.</p>
+</dd>
+<dt><strong>ekin</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>Particle energy.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascotpy.Ascotpy.input_eval_ripple">
+<span class="sig-name descname"><span class="pre">input_eval_ripple</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rgrid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zgrid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rlarmor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rho0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">unyt_quantity(1.,</span> <span class="pre">'dimensionless')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">theta0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">unyt_quantity(0,</span> <span class="pre">'rad')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">unyt_quantity(0,</span> <span class="pre">'s')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nphi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">362</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axes1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axes2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascotpy.Ascotpy.input_eval_ripple" title="Link to this definition"></a></dt>
+<dd><p>Evaluate various ripple quantities.</p>
+<p>The variation of toroidal field strength as a function of toroidal angle
+is called the toroidal field (TF) ripple. The TF ripple can lead to
+ripple-induced losses provided that i) the particle is trapped in
+a ripple well in which case it is promptly lost or ii) the ripple causes
+particle motion to become stochastic which leads to radial diffusion.</p>
+<p>This function evaluates the quantities relevant for ripple transport.
+Note that <code class="docutils literal notranslate"><span class="pre">deltacrit</span></code> and <code class="docutils literal notranslate"><span class="pre">ripplewell</span></code> are approximate quantities
+based on analytical estimates.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>rgrid</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a></span></dt><dd><p>R points where <code class="docutils literal notranslate"><span class="pre">delta</span></code>, <code class="docutils literal notranslate"><span class="pre">deltacrit</span></code>, and <code class="docutils literal notranslate"><span class="pre">ripplewell</span></code> are
+evaluated.</p>
+</dd>
+<dt><strong>zgrid</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a></span></dt><dd><p>z points where <code class="docutils literal notranslate"><span class="pre">delta</span></code>, <code class="docutils literal notranslate"><span class="pre">deltacrit</span></code>, and <code class="docutils literal notranslate"><span class="pre">ripplewell</span></code> are
+evaluated.</p>
+</dd>
+<dt><strong>rlarmor</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a> or <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>)</span></dt><dd><p>Larmor radius of the test particle or tuple with
+(species, charge, energy).</p>
+</dd>
+<dt><strong>rho0</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Radial coordinate where <code class="docutils literal notranslate"><span class="pre">amplitude</span></code> is evaluated.</p>
+</dd>
+<dt><strong>theta0</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Poloidal coordinate where <code class="docutils literal notranslate"><span class="pre">amplitude</span></code> is evaluated.</p>
+</dd>
+<dt><strong>t</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Time instance for time-dependent fields.</p>
+</dd>
+<dt><strong>nphi</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Number of toroidal grid points in ripple evaluation.</p>
+<p>There is probably never a need to change this number.</p>
+</dd>
+<dt><strong>plot</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>If True, the evaluated quantities are also plotted.</p>
+</dd>
+<dt><strong>axes1</strong><span class="classifier">, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Axes for plotting <code class="docutils literal notranslate"><span class="pre">amplitude</span></code> if <code class="docutils literal notranslate"><span class="pre">plot</span></code> = True.</p>
+</dd>
+<dt><strong>axes2</strong><span class="classifier">, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Axes for plotting <code class="docutils literal notranslate"><span class="pre">delta</span></code>, <code class="docutils literal notranslate"><span class="pre">deltacrit</span></code>, and <code class="docutils literal notranslate"><span class="pre">ripplewell</span></code> if
+<code class="docutils literal notranslate"><span class="pre">plot</span></code> = True.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>phigrid</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a>, (<code class="xref py py-obj docutils literal notranslate"><span class="pre">nphi</span></code>)</span></dt><dd><p>Toroidal grid [-2, 362] where <code class="docutils literal notranslate"><span class="pre">amplitude</span></code> is given.</p>
+<p>This grid is not limited to [0,360] as usual so that one can also
+use it to spot any discontinuities in field if the input was poorly
+constructed.</p>
+</dd>
+<dt><strong>amplitude</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a>, (nphi,)</span></dt><dd><p>Variation in toroidal field strength, i.e.
+Bphi(phi) - Bphi_axisymmetric.</p>
+</dd>
+<dt><strong>delta</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a>, (nr,nz)</span></dt><dd><p>Ripple magnitude defined as  (Bmax-Bmin) / (Bmax+Bmin), where Bmax
+and Bmin are toroidal extrema of Bphi.</p>
+</dd>
+<dt><strong>deltacrit</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a>, (nr,nz)</span></dt><dd><p>Critical ripple magnitude.</p>
+<p>Particles are subject to stochastic ripple diffusion when
+<code class="docutils literal notranslate"><span class="pre">deltacrit</span></code> &lt; 1.</p>
+</dd>
+<dt><strong>ripplewell</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a>, (nr,nz)</span></dt><dd><p>Ripple well parameter.</p>
+<p>Particles are bound to be ripple-trapped when <code class="docutils literal notranslate"><span class="pre">ripplewell</span></code> &lt; 1.
+However, this does not necessarily mean that the particle is lost as
+it may escape the well when ripple-trapping causes it to drift
+outwards. As particles that are ripple-trapped drift vertically,
+a good indication that a trapped particle will be lost if the ripple
+well region covers everything vertically below/above that point.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascotpy.Ascotpy.input_eval_safetyfactor">
+<span class="sig-name descname"><span class="pre">input_eval_safetyfactor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rho</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascotpy.Ascotpy.input_eval_safetyfactor" title="Link to this definition"></a></dt>
+<dd><p>Evaluate safety factor and associated quantities.</p>
+<p>This function most likely works for tokamaks only.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>rho</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a>, (n,)</span></dt><dd><p>Radial positions where the safety factor is evaluated.</p>
+<p>Note that evaluating it near the axis or exactly at the separatrix
+may yield mess.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>qprof</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a>, (n,)</span></dt><dd><p>Safety factor.</p>
+</dd>
+<dt><strong>Iprof</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a>, (n,)</span></dt><dd><p>Toroidal current term which, when multiplied with mu0/2, gives the
+enclosed toroidal current.</p>
+</dd>
+<dt><strong>gprof</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a>, (n,)</span></dt><dd><p>This is just R * Bphi which is constant since Bphi ~ 1/R.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascotpy.Ascotpy.input_initialized">
+<span class="sig-name descname"><span class="pre">input_initialized</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascotpy.Ascotpy.input_initialized" title="Link to this definition"></a></dt>
+<dd><p>Get inputs that are currently initialized.</p>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>outputs</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a> [<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>]</span></dt><dd><p>Name of the input parent groups that are initialized and QID of the
+initialized input.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascotpy.Ascotpy.input_plotrz">
+<span class="sig-name descname"><span class="pre">input_plotrz</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qnt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">unyt_quantity(0,</span> <span class="pre">'degree')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">unyt_quantity(0,</span> <span class="pre">'s')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[None,</span> <span class="pre">None]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascotpy.Ascotpy.input_plotrz" title="Link to this definition"></a></dt>
+<dd><p>Plot input quantity on a (R, z) plane at given coordinates.</p>
+<p>To plot quantity on a logarithmic scale (base 10), add “log” in
+the name of the quantity e.g. “log ne”.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>r</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a> (nr,)</span></dt><dd><p>R abscissa where data is evaluated and plotted.</p>
+</dd>
+<dt><strong>z</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a> (nz,)</span></dt><dd><p>z abscissa where data is evaluated and plotted.</p>
+</dd>
+<dt><strong>qnt</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Name of the plotted quantity.</p>
+</dd>
+<dt><strong>phi</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Toroidal coordinate where data is evaluated.</p>
+</dd>
+<dt><strong>t</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Time coordinate where data is evaluated.</p>
+</dd>
+<dt><strong>clim</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a> [<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>], <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Minimum and maximum color range values.</p>
+</dd>
+<dt><strong>axes</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.8.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>The axes where figure is plotted or otherwise new figure is created.</p>
+</dd>
+<dt><strong>cax</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.8.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>The color bar axes or otherwise taken from the main axes.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascotpy.Ascotpy.input_plotseparatrix">
+<span class="sig-name descname"><span class="pre">input_plotseparatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">phi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">unyt_quantity(0,</span> <span class="pre">'degree')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">unyt_quantity(0,</span> <span class="pre">'s')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rlim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[unyt_quantity(0.1,</span> <span class="pre">'m'),</span> <span class="pre">unyt_quantity(20,</span> <span class="pre">'m')]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zlim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[unyt_quantity(-10,</span> <span class="pre">'m'),</span> <span class="pre">unyt_quantity(10,</span> <span class="pre">'m')]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascotpy.Ascotpy.input_plotseparatrix" title="Link to this definition"></a></dt>
+<dd><p>Plot separatrix on (R,z) plane.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascotpy.Ascotpy.input_rhovolume">
+<span class="sig-name descname"><span class="pre">input_rhovolume</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nrho</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ntheta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">360</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nphi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'mc'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">unyt_quantity(0,</span> <span class="pre">'s')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_area</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_coords</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascotpy.Ascotpy.input_rhovolume" title="Link to this definition"></a></dt>
+<dd><p>Evaluate flux surface volumes.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>nrho</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Number of radial grid edges between [0, 1].</p>
+</dd>
+<dt><strong>ntheta</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Number of poloidal grid edges.</p>
+</dd>
+<dt><strong>nphi</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Number of toroidal grid edges.</p>
+</dd>
+<dt><strong>method</strong><span class="classifier">{“prism”, “mc”}, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Method used to evaluate the volumes.</p>
+<p>“prism” divides the volume into structured 3D grid consisting of
+triangular prims where the triangular plane is poloidal and one
+of the vertices is at magnetic axis while the other two are along
+a given flux surface. The volume is the estimated as a sum of these
+prisms.</p>
+<p>“mc” divides the volume into toroidal sectors of same size, and on
+each sector fins the separatrix bounding box. Bounding box is
+assumed to be fixed along the sector and markers are randomly
+sampled within it. The volumes are then estimated via the Monte
+Carlo method.</p>
+</dd>
+<dt><strong>tol</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>If relative difference in volume in subsequent iterations falls
+below this value, the algorithm finishes.</p>
+</dd>
+<dt><strong>t</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Time slice when the volumes are computed.</p>
+</dd>
+<dt><strong>return_area</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Return also the area on (R, z) plane.</p>
+</dd>
+<dt><strong>return_coords</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Return also the (R, phi, z) coordinates for grid center points.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>volume</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a> (nrho-1, ntheta-1, nphi-1)</span></dt><dd><p>Volume of each bin.</p>
+</dd>
+<dt><strong>area</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a> (nrho-1, ntheta-1, nphi-1)</span></dt><dd><p>Area of the poloidal cross section of each bin if
+<code class="docutils literal notranslate"><span class="pre">return_area=True</span></code>.</p>
+</dd>
+<dt><strong>r</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a> (nrho-1, ntheta-1, nphi-1)</span></dt><dd><p>R coordinates of bin centers if <code class="docutils literal notranslate"><span class="pre">return_coords=True</span></code>.</p>
+</dd>
+<dt><strong>p</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a> (nrho-1, ntheta-1, nphi-1)</span></dt><dd><p>phi coordinates of bin centers if <code class="docutils literal notranslate"><span class="pre">return_coords=True</span></code>.</p>
+</dd>
+<dt><strong>z</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a> (nrho-1, ntheta-1, nphi-1)</span></dt><dd><p>z coordinates of bin centers if <code class="docutils literal notranslate"><span class="pre">return_coords=True</span></code>.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="a5py.ascot5io.coreio.html" class="btn btn-neutral float-left" title="CoreIO" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="a5py.templates.html" class="btn btn-neutral float-right" title="templates" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Ascot Group.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

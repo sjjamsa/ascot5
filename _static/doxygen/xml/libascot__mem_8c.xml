@@ -1,0 +1,340 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="libascot__mem_8c" kind="file" language="C++">
+    <compoundname>libascot_mem.c</compoundname>
+    <includes local="no">stdlib.h</includes>
+    <includes refid="libascot__mem_8h" local="yes">libascot_mem.h</includes>
+    <includes refid="particle_8h" local="yes">particle.h</includes>
+    <incdepgraph>
+      <node id="4">
+        <label>particle.h</label>
+        <link refid="particle_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>../spline/interp.h</label>
+        <link refid="interp_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>Bfield/B_GS.h</label>
+        <link refid="B__GS_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stdlib.h</label>
+      </node>
+      <node id="1">
+        <label>libascot_mem.c</label>
+        <link refid="libascot__mem_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>libascot_mem.h</label>
+        <link refid="libascot__mem_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>omp.h</label>
+      </node>
+      <node id="8">
+        <label>B_field.h</label>
+        <link refid="B__field_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>Efield/E_1DS.h</label>
+        <link refid="E__1DS_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>error.h</label>
+        <link refid="error_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>E_field.h</label>
+        <link refid="E__field_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>time.h</label>
+      </node>
+      <node id="18">
+        <label>Bfield/B_TC.h</label>
+        <link refid="B__TC_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>../linint/linint.h</label>
+        <link refid="linint_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>Bfield/B_2DS.h</label>
+        <link refid="B__2DS_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>Efield/E_TC.h</label>
+        <link refid="E__TC_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>Bfield/B_3DS.h</label>
+        <link refid="B__3DS_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>math.h</label>
+        <link refid="math_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>stdio.h</label>
+      </node>
+      <node id="16">
+        <label>Bfield/B_STS.h</label>
+        <link refid="B__STS_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>ascot5.h</label>
+        <link refid="ascot5_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="libascot__mem_8c_1a4812222d06926f4f165b3c1c57a348be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structinput__particle" kindref="compound">input_particle</ref> *</type>
+        <definition>input_particle* libascot_allocate_input_particles</definition>
+        <argsstring>(int nmrk)</argsstring>
+        <name>libascot_allocate_input_particles</name>
+        <param>
+          <type>int</type>
+          <declname>nmrk</declname>
+        </param>
+        <briefdescription>
+<para>A routine to allocate an array of input particles. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nmrk</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of markers for which space is allocated</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>pointer to the allocated array </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libascot_mem.c" line="16" column="16" bodyfile="libascot_mem.c" bodystart="16" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="libascot__mem_8c_1ab6751fcf95f79463e922c89924a62fe9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structparticle__state" kindref="compound">particle_state</ref> *</type>
+        <definition>particle_state* libascot_allocate_particle_states</definition>
+        <argsstring>(int nmrk)</argsstring>
+        <name>libascot_allocate_particle_states</name>
+        <param>
+          <type>int</type>
+          <declname>nmrk</declname>
+        </param>
+        <briefdescription>
+<para>A routine to allocate an array of particle states. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nmrk</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of markers for which space is allocated</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>pointer to the allocated array </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libascot_mem.c" line="27" column="16" bodyfile="libascot_mem.c" bodystart="27" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="libascot__mem_8c_1ab4f958181ecb0281e9609c7d91423ab0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+        <definition>real* libascot_allocate_reals</definition>
+        <argsstring>(size_t size)</argsstring>
+        <name>libascot_allocate_reals</name>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>A routine to allocate an array of reals. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of the array</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>pointer to the allocated array </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libascot_mem.c" line="38" column="6" bodyfile="libascot_mem.c" bodystart="38" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="libascot__mem_8c_1ad8e525127d56aad37780cf3144db78c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void libascot_deallocate</definition>
+        <argsstring>(void *arr)</argsstring>
+        <name>libascot_deallocate</name>
+        <param>
+          <type>void *</type>
+          <declname>arr</declname>
+        </param>
+        <briefdescription>
+<para>A wrapper to C stdlib free() </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>arr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>array to be freed </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libascot_mem.c" line="48" column="6" bodyfile="libascot_mem.c" bodystart="48" bodyend="50"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Provides memory de/allocation routines for the libascot. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="libascot__mem_8h" kindref="compound">libascot_mem.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="particle_8h" kindref="compound">particle.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="libascot__mem_8c_1a4812222d06926f4f165b3c1c57a348be" refkind="member"><highlight class="normal"><ref refid="structinput__particle" kindref="compound">input_particle</ref>*<sp/><ref refid="libascot__mem_8c_1a4812222d06926f4f165b3c1c57a348be" kindref="member">libascot_allocate_input_particles</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nmrk)<sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="structinput__particle" kindref="compound">input_particle</ref>*)<sp/>malloc(nmrk<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structinput__particle" kindref="compound">input_particle</ref>)<sp/>);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="libascot__mem_8c_1ab6751fcf95f79463e922c89924a62fe9" refkind="member"><highlight class="normal"><ref refid="structparticle__state" kindref="compound">particle_state</ref>*<sp/><ref refid="libascot__mem_8c_1ab6751fcf95f79463e922c89924a62fe9" kindref="member">libascot_allocate_particle_states</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nmrk)<sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="structparticle__state" kindref="compound">particle_state</ref>*)<sp/>malloc(nmrk<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structparticle__state" kindref="compound">particle_state</ref>)<sp/>);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="libascot__mem_8c_1ab4f958181ecb0281e9609c7d91423ab0" refkind="member"><highlight class="normal"><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/><ref refid="libascot__mem_8c_1ab4f958181ecb0281e9609c7d91423ab0" kindref="member">libascot_allocate_reals</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size)<sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>)<sp/>malloc(<sp/>size<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>)<sp/>);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="libascot__mem_8c_1ad8e525127d56aad37780cf3144db78c5" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="libascot__mem_8c_1ad8e525127d56aad37780cf3144db78c5" kindref="member">libascot_deallocate</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*arr)<sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>free(arr);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="libascot_mem.c"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,868 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="asigma__loc_8h" kind="file" language="C++">
+    <compoundname>asigma_loc.h</compoundname>
+    <includes refid="ascot5_8h" local="yes">../ascot5.h</includes>
+    <includes refid="error_8h" local="yes">../error.h</includes>
+    <includes refid="interp_8h" local="yes">../spline/interp.h</includes>
+    <includedby refid="asigma__loc_8c" local="yes">asigma/asigma_loc.c</includedby>
+    <includedby refid="asigma_8c" local="yes">asigma.c</includedby>
+    <includedby refid="asigma_8h" local="yes">asigma.h</includedby>
+    <includedby refid="hdf5__asigma_8c" local="yes">hdf5io/hdf5_asigma.c</includedby>
+    <incdepgraph>
+      <node id="8">
+        <label>../spline/interp.h</label>
+        <link refid="interp_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>asigma/asigma_loc.h</label>
+        <link refid="asigma__loc_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>omp.h</label>
+      </node>
+      <node id="5">
+        <label>../error.h</label>
+        <link refid="error_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>time.h</label>
+      </node>
+      <node id="6">
+        <label>math.h</label>
+        <link refid="math_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>stdio.h</label>
+      </node>
+      <node id="2">
+        <label>../ascot5.h</label>
+        <link refid="ascot5_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="26">
+        <label>simulate/simulate_ml_adaptive.c</label>
+        <link refid="simulate__ml__adaptive_8c"/>
+      </node>
+      <node id="36">
+        <label>simulate/simulate_ml_adaptive.h</label>
+        <link refid="simulate__ml__adaptive_8h"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>diag.c</label>
+        <link refid="diag_8c"/>
+      </node>
+      <node id="27">
+        <label>simulate.c</label>
+        <link refid="simulate_8c"/>
+      </node>
+      <node id="12">
+        <label>simulate.h</label>
+        <link refid="simulate_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>simulate/simulate_fo_fixed.c</label>
+        <link refid="simulate__fo__fixed_8c"/>
+      </node>
+      <node id="33">
+        <label>simulate/simulate_fo_fixed.h</label>
+        <link refid="simulate__fo__fixed_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>simulate/simulate_gc_fixed.c</label>
+        <link refid="simulate__gc__fixed_8c"/>
+      </node>
+      <node id="15">
+        <label>ascot5_main.c</label>
+        <link refid="ascot5__main_8c"/>
+      </node>
+      <node id="35">
+        <label>simulate/simulate_gc_fixed.h</label>
+        <link refid="simulate__gc__fixed_8h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>ascot5_main.h</label>
+        <link refid="ascot5__main_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>asigma.c</label>
+        <link refid="asigma_8c"/>
+      </node>
+      <node id="4">
+        <label>asigma.h</label>
+        <link refid="asigma_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>endcond.c</label>
+        <link refid="endcond_8c"/>
+      </node>
+      <node id="22">
+        <label>endcond.h</label>
+        <link refid="endcond_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>simulate/atomic.c</label>
+        <link refid="atomic_8c"/>
+      </node>
+      <node id="2">
+        <label>asigma/asigma_loc.c</label>
+        <link refid="asigma__loc_8c"/>
+      </node>
+      <node id="10">
+        <label>simulate/atomic.h</label>
+        <link refid="atomic_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>asigma/asigma_loc.h</label>
+        <link refid="asigma__loc_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>afsi.c</label>
+        <link refid="afsi_8c"/>
+      </node>
+      <node id="14">
+        <label>afsi.h</label>
+        <link refid="afsi_8h_source"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>diag/diag_orb.c</label>
+        <link refid="diag__orb_8c"/>
+      </node>
+      <node id="5">
+        <label>hdf5io/hdf5_asigma.c</label>
+        <link refid="hdf5__asigma_8c"/>
+      </node>
+      <node id="6">
+        <label>hdf5io/hdf5_asigma.h</label>
+        <link refid="hdf5__asigma_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>hdf5io/hdf5_options.c</label>
+        <link refid="hdf5__options_8c"/>
+      </node>
+      <node id="29">
+        <label>hdf5io/hdf5_options.h</label>
+        <link refid="hdf5__options_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>hdf5io/hdf5_orbit.c</label>
+        <link refid="hdf5__orbit_8c"/>
+      </node>
+      <node id="24">
+        <label>simulate/simulate_gc_adaptive.c</label>
+        <link refid="simulate__gc__adaptive_8c"/>
+      </node>
+      <node id="34">
+        <label>simulate/simulate_gc_adaptive.h</label>
+        <link refid="simulate__gc__adaptive_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>mpi_interface.c</label>
+        <link refid="mpi__interface_8c"/>
+      </node>
+      <node id="32">
+        <label>mpi_interface.h</label>
+        <link refid="mpi__interface_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>libascot.c</label>
+        <link refid="libascot_8c"/>
+      </node>
+      <node id="7">
+        <label>hdf5_interface.c</label>
+        <link refid="hdf5__interface_8c"/>
+      </node>
+      <node id="28">
+        <label>hdf5_interface.h</label>
+        <link refid="hdf5__interface_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>diag/diag_transcoef.c</label>
+        <link refid="diag__transcoef_8c"/>
+      </node>
+      <node id="17">
+        <label>bbnbi5.c</label>
+        <link refid="bbnbi5_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structasigma__loc__offload__data" prot="public">asigma_loc_offload_data</innerclass>
+    <innerclass refid="structasigma__loc__data" prot="public">asigma_loc_data</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="asigma__loc_8h_1ad6ae96a2cb0590cd50dfa7d4141177fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int asigma_loc_init_offload</definition>
+        <argsstring>(asigma_loc_offload_data *offload_data, real **offload_array)</argsstring>
+        <name>asigma_loc_init_offload</name>
+        <param>
+          <type><ref refid="structasigma__loc__offload__data" kindref="compound">asigma_loc_offload_data</ref> *</type>
+          <declname>offload_data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> **</type>
+          <declname>offload_array</declname>
+        </param>
+        <briefdescription>
+<para>Initialize local file atomic data and check inputs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Before calling this function, the offload struct is expected to be fully initialized.</para>
+<para>The offload array is expected to hold atomic data as [0] = znum for fast particle species [N_reac] = anum for fast particle species [2*N_reac] = znum for bulk particle species [3*N_reac] = anum for bulk particle species [4*N_reac] = reaction type [5*N_reac] = dimension of energy abscissa (N_E) [6*N_reac] = min value of energy abscissa [eV] [7*N_reac] = max value of energy abscissa [eV] [8*N_reac] = dimension of density abscissa (N_n) [9*N_reac] = min value of density abscissa [m^-3] [10*N_reac] = max value of density abscissa [m^-3] [11*N_reac] = dimension of temperature abscissa (N_T) [12*N_reac] = min value of temperature abscissa [eV] [13*N_reac] = max value of temperature abscissa [eV] [14*N_reac] = reaction probability data [(depends on reaction data type)] Each piece of data listed above is repeated for each reaction included. Hence the N_reac interval between the 14 first pieces of data. The memory space required for the last, reaction probability data, depends on the dimensionality of the abscissae. The memory requirement for the reaction data of the i_reac:th reaction is N_E[i_reac]*N_n[i_reac]*N_T[i_reac].</para>
+<para>This function initializes splines to atomic reaction data, thus increasing the length of the offload array, and prints some values as sanity checks.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>offload_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to pointer to offload array</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>zero if initialization success</para>
+</simplesect>
+<xrefsect id="todo_1_todo000001"><xreftitle>Todo</xreftitle><xrefdescription><para>In the part where the spline interpolations of the reaction data are initialized, it is assumed that, when there is one abscissa, it is energy, when there are two abscissae, they are, in order, energy and temperature, and, when there are three abscissae, they are, in order, energy, density and temperature. In the future, this may need to be made more general. For example, where we check the N:s, we can also extract and reorder the min:s and max:s depending on which N &gt; 1. </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="asigma/asigma_loc.h" line="44" column="5" bodyfile="asigma/asigma_loc.c" bodystart="64" bodyend="219" declfile="asigma/asigma_loc.h" declline="44" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="asigma__loc_8h_1a0a7a72ac7558be5dc0868c54e1de880c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void asigma_loc_free_offload</definition>
+        <argsstring>(asigma_loc_offload_data *offload_data, real **offload_array)</argsstring>
+        <name>asigma_loc_free_offload</name>
+        <param>
+          <type><ref refid="structasigma__loc__offload__data" kindref="compound">asigma_loc_offload_data</ref> *</type>
+          <declname>offload_data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> **</type>
+          <declname>offload_array</declname>
+        </param>
+        <briefdescription>
+<para>Free offload array and reset parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function deallocates the offload_array.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>offload_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to pointer to offload array </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="asigma/asigma_loc.h" line="46" column="6" bodyfile="asigma/asigma_loc.c" bodystart="229" bodyend="233" declfile="asigma/asigma_loc.h" declline="46" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="asigma__loc_8h_1a6b81320e02a2e9f940098fe4398b0751" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void asigma_loc_init</definition>
+        <argsstring>(asigma_loc_data *asgm_loc_data, asigma_loc_offload_data *offload_data, real *offload_array)</argsstring>
+        <name>asigma_loc_init</name>
+        <param>
+          <type><ref refid="structasigma__loc__data" kindref="compound">asigma_loc_data</ref> *</type>
+          <declname>asgm_loc_data</declname>
+        </param>
+        <param>
+          <type><ref refid="structasigma__loc__offload__data" kindref="compound">asigma_loc_offload_data</ref> *</type>
+          <declname>offload_data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>offload_array</declname>
+        </param>
+        <briefdescription>
+<para>Initialize atomic reaction data struct on target. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function copies atomic reaction data from the offload struct and the offload array to the struct on the target, and uses interpXDcomp_init_spline() functions to initialize the precalculated spline parameters of the reaction data in the spline structs within the data struct on the target.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>asgm_loc_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to data struct on target </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload array</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<xrefsect id="todo_1_todo000002"><xreftitle>Todo</xreftitle><xrefdescription><para>Should we change from using reac_avail flag to having in asgm_data only those reactions that are available and truly initialized? Actually, that is already done, reac_avail is a relic. However, we might want to use reac_avail for something. </para>
+<para>Can we avoid the excess memory usage currently resulting from allocating all three spline structs for each reaction? </para>
+<para>(Same as above in <ref refid="asigma__loc_8c_1ad6ae96a2cb0590cd50dfa7d4141177fb" kindref="member">asigma_loc_init_offload()</ref>) In the part where the spline interpolations of the reaction data are initialized, it is assumed that, when there is one abscissa, it is energy, when there are two abscissae, they are, in order, energy and temperature, and, when there are three abscissae, they are, in order, energy, density and temperature. In the future, this may need to be made more general. For example, where we check the N:s, we can also extract and reorder the min:s and max:s depending on which N &gt; 1. </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="asigma/asigma_loc.h" line="50" column="6" bodyfile="asigma/asigma_loc.c" bodystart="263" bodyend="375" declfile="asigma/asigma_loc.h" declline="50" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="asigma__loc_8h_1aa2f227311a33867c2430c1c32232f498" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref></type>
+        <definition>a5err asigma_loc_eval_sigma</definition>
+        <argsstring>(real *sigma, int z_1, int a_1, int z_2, int a_2, int reac_type, asigma_loc_data *asgm_loc_data, real E_coll_per_amu, int *enable_atomic)</argsstring>
+        <name>asigma_loc_eval_sigma</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>sigma</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>z_1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>a_1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>z_2</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>a_2</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>reac_type</declname>
+        </param>
+        <param>
+          <type><ref refid="structasigma__loc__data" kindref="compound">asigma_loc_data</ref> *</type>
+          <declname>asgm_loc_data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>E_coll_per_amu</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>enable_atomic</declname>
+        </param>
+        <briefdescription>
+<para>Evaluate atomic reaction cross-section. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function evaluates the cross-section (sigma) for the atomic reaction corresponding to the reaction identifiers given as parameters at the given mass-normalized collision energy.</para>
+<para>This is a SIMD function.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sigma</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to evaluated cross-section </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z_1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>atomic number of fast particle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>atomic mass number of fast particle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z_2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>atomic number of bulk particle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>atomic mass number of bulk particle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>reac_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>reaction type </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>asgm_loc_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to atomic data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>E_coll_per_amu</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>energy per amu corresponding to collision speed </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>enable_atomic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to atomic enable and functionality flag</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>zero if evaluation succeeded </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="asigma/asigma_loc.h" line="54" column="7" bodyfile="asigma/asigma_loc.c" bodystart="398" bodyend="460" declfile="asigma/asigma_loc.h" declline="54" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="asigma__loc_8h_1ae93bf78b3c379165625874f2bdb22106" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref></type>
+        <definition>a5err asigma_loc_eval_sigmav</definition>
+        <argsstring>(real *sigmav, int z_1, int a_1, real m_1, int z_2, int a_2, int reac_type, asigma_loc_data *asgm_loc_data, real E, real T_e, real T_0, real n_i, int *enable_atomic)</argsstring>
+        <name>asigma_loc_eval_sigmav</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>sigmav</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>z_1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>a_1</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>m_1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>z_2</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>a_2</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>reac_type</declname>
+        </param>
+        <param>
+          <type><ref refid="structasigma__loc__data" kindref="compound">asigma_loc_data</ref> *</type>
+          <declname>asgm_loc_data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>E</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>T_e</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>T_0</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>n_i</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>enable_atomic</declname>
+        </param>
+        <briefdescription>
+<para>Evaluate atomic reaction rate coefficient. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function evaluates the rate coefficient (&lt;sigma*v&gt;) for the atomic reaction corresponding to the reaction identifiers given as parameters at the given fast particle energy and bulk plasma conditions.</para>
+<para>This is a SIMD function.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sigmav</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to evaluated rate coefficient </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z_1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>atomic number of fast particle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>atomic mass number of fast particle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>m_1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>mass of fast particle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z_2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>atomic number of bulk particle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a_2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>atomic mass number of bulk particle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>reac_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>reaction type </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>asgm_loc_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to atomic data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>E</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>energy of fast particle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>T_e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>electron temperature of bulk plasma </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>T_0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>temperature of bulk neutrals </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n_i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ion density of bulk plasma </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>enable_atomic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to atomic enable and functionality flag</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>zero if evaluation succeeded</para>
+</simplesect>
+<xrefsect id="todo_1_todo000003"><xreftitle>Todo</xreftitle><xrefdescription><para>Is there a cleaner and more general way to handle the isotopic invariance of beam-stopping data? </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="asigma/asigma_loc.h" line="62" column="7" bodyfile="asigma/asigma_loc.c" bodystart="490" bodyend="584" declfile="asigma/asigma_loc.h" declline="62" declcolumn="7"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Header file for <ref refid="asigma__loc_8c" kindref="compound">asigma_loc.c</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>ASIGMALOCAL_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ASIGMALOCAL_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../ascot5.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../error.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../spline/interp.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="structasigma__loc__offload__data" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="16" refid="structasigma__loc__offload__data_1a48220f03c471d33ebfc49ddd1afa57c9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structasigma__loc__offload__data_1a48220f03c471d33ebfc49ddd1afa57c9" kindref="member">data_format</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="17" refid="structasigma__loc__offload__data_1abcd86fa331fd21558c29da51eacfd28c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structasigma__loc__offload__data_1abcd86fa331fd21558c29da51eacfd28c" kindref="member">N_reac</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="18" refid="structasigma__loc__offload__data_1ab14837a11f42a4ca604e150a5d8c195c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structasigma__loc__offload__data_1ab14837a11f42a4ca604e150a5d8c195c" kindref="member">offload_array_length</ref>;<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}<sp/><ref refid="structasigma__loc__offload__data" kindref="compound">asigma_loc_offload_data</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="structasigma__loc__data" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="30" refid="structasigma__loc__data_1afe9554ad14b644ee6ebf4d136d702c50" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structasigma__loc__data_1afe9554ad14b644ee6ebf4d136d702c50" kindref="member">N_reac</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="32" refid="structasigma__loc__data_1ad18acc332e54d28c3e806fcd7bc915aa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/><ref refid="structasigma__loc__data_1ad18acc332e54d28c3e806fcd7bc915aa" kindref="member">z_1</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="33" refid="structasigma__loc__data_1a9c01cfe371cfa8a6a7f5516793b151a0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/><ref refid="structasigma__loc__data_1a9c01cfe371cfa8a6a7f5516793b151a0" kindref="member">a_1</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="34" refid="structasigma__loc__data_1a42ef147c171ba45c4f35ff37cc8c647b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/><ref refid="structasigma__loc__data_1a42ef147c171ba45c4f35ff37cc8c647b" kindref="member">z_2</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="35" refid="structasigma__loc__data_1a97546bd7c86564ade9f3f35642b9e8ba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/><ref refid="structasigma__loc__data_1a97546bd7c86564ade9f3f35642b9e8ba" kindref="member">a_2</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="36" refid="structasigma__loc__data_1a7234618706ce60840783bd2dbfc7d72c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/><ref refid="structasigma__loc__data_1a7234618706ce60840783bd2dbfc7d72c" kindref="member">reac_type</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="37" refid="structasigma__loc__data_1ad8db627fb6f1eb3ecc81eb2f24e332aa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/><ref refid="structasigma__loc__data_1ad8db627fb6f1eb3ecc81eb2f24e332aa" kindref="member">reac_avail</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="39" refid="structasigma__loc__data_1a8de726464cd6122597629f1106c21afb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structinterp1D__data" kindref="compound">interp1D_data</ref>*<sp/><ref refid="structasigma__loc__data_1a8de726464cd6122597629f1106c21afb" kindref="member">sigma</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="40" refid="structasigma__loc__data_1a794c09c467ed081262f2c72d44cce023" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structinterp2D__data" kindref="compound">interp2D_data</ref>*<sp/><ref refid="structasigma__loc__data_1a794c09c467ed081262f2c72d44cce023" kindref="member">sigmav</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="41" refid="structasigma__loc__data_1a985cc8be821269272001b2a876e2eefb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structinterp3D__data" kindref="compound">interp3D_data</ref>*<sp/><ref refid="structasigma__loc__data_1a985cc8be821269272001b2a876e2eefb" kindref="member">BMSsigmav</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}<sp/><ref refid="structasigma__loc__data" kindref="compound">asigma_loc_data</ref>;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="asigma__loc_8h_1ad6ae96a2cb0590cd50dfa7d4141177fb" kindref="member">asigma_loc_init_offload</ref>(<ref refid="structasigma__loc__offload__data" kindref="compound">asigma_loc_offload_data</ref>*<sp/>offload_data,</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>**<sp/>offload_array);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="asigma__loc_8h_1a0a7a72ac7558be5dc0868c54e1de880c" kindref="member">asigma_loc_free_offload</ref>(<ref refid="structasigma__loc__offload__data" kindref="compound">asigma_loc_offload_data</ref>*<sp/>offload_data,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>**<sp/>offload_array);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>declare<sp/>target</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="asigma__loc_8h_1a6b81320e02a2e9f940098fe4398b0751" kindref="member">asigma_loc_init</ref>(<ref refid="structasigma__loc__data" kindref="compound">asigma_loc_data</ref>*<sp/>asgm_loc_data,</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structasigma__loc__offload__data" kindref="compound">asigma_loc_offload_data</ref>*<sp/>offload_data,</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>offload_array);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>declare<sp/>simd<sp/>uniform(asgm_loc_data)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref><sp/><ref refid="asigma__loc_8h_1aa2f227311a33867c2430c1c32232f498" kindref="member">asigma_loc_eval_sigma</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>sigma,</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>z_1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>a_1,</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>z_2,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>a_2,</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>reac_type,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structasigma__loc__data" kindref="compound">asigma_loc_data</ref>*<sp/>asgm_loc_data,</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>E_coll_per_amu,</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>enable_atomic);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>declare<sp/>simd<sp/>uniform(asgm_loc_data)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref><sp/><ref refid="asigma__loc_8h_1ae93bf78b3c379165625874f2bdb22106" kindref="member">asigma_loc_eval_sigmav</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>sigmav,</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>z_1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>a_1,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>m_1,</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>z_2,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>a_2,</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>reac_type,</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structasigma__loc__data" kindref="compound">asigma_loc_data</ref>*<sp/>asgm_loc_data,</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>E,</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>T_e,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>T_0,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>n_i,</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>enable_atomic);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>end<sp/>declare<sp/>target</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="asigma/asigma_loc.h"/>
+  </compounddef>
+</doxygen>

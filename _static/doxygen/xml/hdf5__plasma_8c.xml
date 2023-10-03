@@ -1,0 +1,812 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="hdf5__plasma_8c" kind="file" language="C++">
+    <compoundname>hdf5_plasma.c</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">hdf5.h</includes>
+    <includes local="no">hdf5_hl.h</includes>
+    <includes refid="ascot5_8h" local="yes">../ascot5.h</includes>
+    <includes refid="plasma_8h" local="yes">../plasma.h</includes>
+    <includes refid="plasma__1D_8h" local="yes">../plasma/plasma_1D.h</includes>
+    <includes refid="plasma__1Dt_8h" local="yes">../plasma/plasma_1Dt.h</includes>
+    <includes refid="plasma__1DS_8h" local="yes">../plasma/plasma_1DS.h</includes>
+    <includes refid="consts_8h" local="yes">../consts.h</includes>
+    <includes refid="hdf5__helpers_8h" local="yes">hdf5_helpers.h</includes>
+    <includes refid="hdf5__plasma_8h" local="yes">hdf5_plasma.h</includes>
+    <incdepgraph>
+      <node id="9">
+        <label>../plasma.h</label>
+        <link refid="plasma_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>../spline/interp.h</label>
+        <link refid="interp_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>plasma/plasma_1DS.h</label>
+        <link refid="plasma__1DS_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>stdlib.h</label>
+      </node>
+      <node id="5">
+        <label>hdf5_hl.h</label>
+      </node>
+      <node id="1">
+        <label>hdf5io/hdf5_plasma.c</label>
+        <link refid="hdf5__plasma_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>hdf5_plasma.h</label>
+        <link refid="hdf5__plasma_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>omp.h</label>
+      </node>
+      <node id="16">
+        <label>../consts.h</label>
+        <link refid="consts_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>hdf5_helpers.h</label>
+        <link refid="hdf5__helpers_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>plasma/plasma_1Dt.h</label>
+        <link refid="plasma__1Dt_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>error.h</label>
+        <link refid="error_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>hdf5.h</label>
+      </node>
+      <node id="12">
+        <label>plasma/plasma_1D.h</label>
+        <link refid="plasma__1D_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>time.h</label>
+      </node>
+      <node id="11">
+        <label>math.h</label>
+        <link refid="math_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+      </node>
+      <node id="6">
+        <label>../ascot5.h</label>
+        <link refid="ascot5_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="hdf5__plasma_8c_1a6dce046382902ddbab735ab26fc4742e" prot="public" static="no">
+        <name>PLSPATH</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro that is used to store paths to data groups </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hdf5io/hdf5_plasma.c" line="22" column="9" bodyfile="hdf5io/hdf5_plasma.c" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hdf5__plasma_8c_1a6dce046382902ddbab735ab26fc4742e" prot="public" static="no">
+        <name>PLSPATH</name>
+        <initializer>&quot;/plasma/plasma_1D_XXXXXXXXXX/&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro that is used to store paths to data groups </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hdf5io/hdf5_plasma.c" line="94" column="18" bodyfile="hdf5io/hdf5_plasma.c" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hdf5__plasma_8c_1a6dce046382902ddbab735ab26fc4742e" prot="public" static="no">
+        <name>PLSPATH</name>
+        <initializer>&quot;/plasma/plasma_1Dt_XXXXXXXXXX/&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro that is used to store paths to data groups </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hdf5io/hdf5_plasma.c" line="178" column="18" bodyfile="hdf5io/hdf5_plasma.c" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hdf5__plasma_8c_1a6dce046382902ddbab735ab26fc4742e" prot="public" static="no">
+        <name>PLSPATH</name>
+        <initializer>&quot;/plasma/plasma_1DS_XXXXXXXXXX/&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro that is used to store paths to data groups </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hdf5io/hdf5_plasma.c" line="308" column="18" bodyfile="hdf5io/hdf5_plasma.c" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="hdf5__plasma_8c_1a313e0903daa9b7b7d1e08806a7845650" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hdf5_plasma_read_1D</definition>
+        <argsstring>(hid_t f, plasma_1D_offload_data *offload_data, real **offload_array, char *qid)</argsstring>
+        <name>hdf5_plasma_read_1D</name>
+        <param>
+          <type>hid_t</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type><ref refid="structplasma__1D__offload__data" kindref="compound">plasma_1D_offload_data</ref> *</type>
+          <declname>offload_data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> **</type>
+          <declname>offload_array</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>qid</declname>
+        </param>
+        <briefdescription>
+<para>Read 1D plasma data from HDF5 file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>HDF5 file from which data is read </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload array </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>qid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>QID of the data</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Zero if reading succeeded </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hdf5io/hdf5_plasma.c" line="91" column="5" bodyfile="hdf5io/hdf5_plasma.c" bodystart="91" bodyend="163" declfile="hdf5io/hdf5_plasma.c" declline="24" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="hdf5__plasma_8c_1a2551a93cb03495d38c00db1dfc759093" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hdf5_plasma_read_1Dt</definition>
+        <argsstring>(hid_t f, plasma_1Dt_offload_data *offload_data, real **offload_array, char *qid)</argsstring>
+        <name>hdf5_plasma_read_1Dt</name>
+        <param>
+          <type>hid_t</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type><ref refid="structplasma__1Dt__offload__data" kindref="compound">plasma_1Dt_offload_data</ref> *</type>
+          <declname>offload_data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> **</type>
+          <declname>offload_array</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>qid</declname>
+        </param>
+        <briefdescription>
+<para>Read 1Dt plasma data from HDF5 file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>HDF5 file from which data is read </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload array </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>qid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>QID of the data</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Zero if reading succeeded </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hdf5io/hdf5_plasma.c" line="175" column="5" bodyfile="hdf5io/hdf5_plasma.c" bodystart="175" bodyend="289" declfile="hdf5io/hdf5_plasma.c" declline="26" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="hdf5__plasma_8c_1a6657a012869ab74121067d34438f012c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hdf5_plasma_read_1DS</definition>
+        <argsstring>(hid_t f, plasma_1DS_offload_data *offload_data, real **offload_array, char *qid)</argsstring>
+        <name>hdf5_plasma_read_1DS</name>
+        <param>
+          <type>hid_t</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type><ref refid="structplasma__1DS__offload__data" kindref="compound">plasma_1DS_offload_data</ref> *</type>
+          <declname>offload_data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> **</type>
+          <declname>offload_array</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>qid</declname>
+        </param>
+        <briefdescription>
+<para>Load plasma data from HDF5 file and prepare parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function reads the 1D plasma data from file f, fills the offload struct with parameters and allocates and fills the offload array.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>hdf5 file identifier </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to pointer to offload array </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>qid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>QID of the data</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>zero on success </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hdf5io/hdf5_plasma.c" line="304" column="5" bodyfile="hdf5io/hdf5_plasma.c" bodystart="304" bodyend="379" declfile="hdf5io/hdf5_plasma.c" declline="28" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="hdf5__plasma_8c_1ad8bfdb8b3ef6c0633caa03f6c7f28646" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hdf5_plasma_init_offload</definition>
+        <argsstring>(hid_t f, plasma_offload_data *offload_data, real **offload_array, char *qid)</argsstring>
+        <name>hdf5_plasma_init_offload</name>
+        <param>
+          <type>hid_t</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type><ref refid="structplasma__offload__data" kindref="compound">plasma_offload_data</ref> *</type>
+          <declname>offload_data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> **</type>
+          <declname>offload_array</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>qid</declname>
+        </param>
+        <briefdescription>
+<para>Read plasma data from HDF5 file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function reads plasma data with given qid while also initializing offload data and allocating and filling offload array. The file is opened and closed outside this function.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>HDF5 file from which data is read </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload array </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>qid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>QID of the data</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Zero if reading and initialization of data succeeded </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hdf5io/hdf5_plasma.c" line="44" column="5" bodyfile="hdf5io/hdf5_plasma.c" bodystart="44" bodyend="79"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Module for reading plasma input from HDF5 file. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Plasma data must be read by calling <ref refid="hdf5__plasma_8c_1ad8bfdb8b3ef6c0633caa03f6c7f28646" kindref="member">hdf5_plasma_init_offload()</ref> contained in this module. This module contains reading routines for all plasma data types. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hdf5.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hdf5_hl.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../ascot5.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../plasma.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../plasma/plasma_1D.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../plasma/plasma_1Dt.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../plasma/plasma_1DS.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../consts.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hdf5__helpers_8h" kindref="compound">hdf5_helpers.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hdf5__plasma_8h" kindref="compound">hdf5_plasma.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="hdf5__plasma_8c_1a6dce046382902ddbab735ab26fc4742e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PLSPATH<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hdf5__plasma_8c_1a313e0903daa9b7b7d1e08806a7845650" kindref="member">hdf5_plasma_read_1D</ref>(hid_t<sp/>f,<sp/><ref refid="structplasma__1D__offload__data" kindref="compound">plasma_1D_offload_data</ref>*<sp/>offload_data,</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>**<sp/>offload_array,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>qid);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hdf5__plasma_8c_1a2551a93cb03495d38c00db1dfc759093" kindref="member">hdf5_plasma_read_1Dt</ref>(hid_t<sp/>f,<sp/><ref refid="structplasma__1Dt__offload__data" kindref="compound">plasma_1Dt_offload_data</ref>*<sp/>offload_data,</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>**<sp/>offload_array,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>qid);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hdf5__plasma_8c_1a6657a012869ab74121067d34438f012c" kindref="member">hdf5_plasma_read_1DS</ref>(hid_t<sp/>f,<sp/><ref refid="structplasma__1DS__offload__data" kindref="compound">plasma_1DS_offload_data</ref>*<sp/>offload_data,</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>**<sp/>offload_array,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>qid);</highlight></codeline>
+<codeline lineno="44" refid="hdf5__plasma_8c_1ad8bfdb8b3ef6c0633caa03f6c7f28646" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hdf5__plasma_8c_1ad8bfdb8b3ef6c0633caa03f6c7f28646" kindref="member">hdf5_plasma_init_offload</ref>(hid_t<sp/>f,<sp/><ref refid="structplasma__offload__data" kindref="compound">plasma_offload_data</ref>*<sp/>offload_data,</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>**<sp/>offload_array,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>qid)<sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>path[256];</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>err<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Read<sp/>data<sp/>the<sp/>QID<sp/>corresponds<sp/>to<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hdf5__helpers_8c_1ab43ae79d4f8e8d83bf098da8a0054a72" kindref="member">hdf5_gen_path</ref>(</highlight><highlight class="stringliteral">&quot;/plasma/plasma_1D_XXXXXXXXXX&quot;</highlight><highlight class="normal">,<sp/>qid,<sp/>path);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="hdf5__helpers_8c_1a3b6edfba63099574025bea60453da24b" kindref="member">hdf5_find_group</ref>(f,<sp/>path)<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structplasma__offload__data_1a606d83112093cf2266034efc79752058" kindref="member">type</ref><sp/>=<sp/><ref refid="plasma_8h_1aeac371b8350c40fe94429c0e2167df63a54c2babdad11cbb4387edd311a33cdd9" kindref="member">plasma_type_1D</ref>;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="hdf5__plasma_8c_1a313e0903daa9b7b7d1e08806a7845650" kindref="member">hdf5_plasma_read_1D</ref>(f,<sp/>&amp;(offload_data-&gt;<ref refid="structplasma__offload__data_1a400fcc19a992c82cb9cdfbe3273d8980" kindref="member">plasma_1D</ref>),</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_array,<sp/>qid);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hdf5__helpers_8c_1ab43ae79d4f8e8d83bf098da8a0054a72" kindref="member">hdf5_gen_path</ref>(</highlight><highlight class="stringliteral">&quot;/plasma/plasma_1Dt_XXXXXXXXXX&quot;</highlight><highlight class="normal">,<sp/>qid,<sp/>path);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="hdf5__helpers_8c_1a3b6edfba63099574025bea60453da24b" kindref="member">hdf5_find_group</ref>(f,<sp/>path)<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structplasma__offload__data_1a606d83112093cf2266034efc79752058" kindref="member">type</ref><sp/>=<sp/><ref refid="plasma_8h_1aeac371b8350c40fe94429c0e2167df63a94db976c67134607880fc4b4dd7c7c83" kindref="member">plasma_type_1Dt</ref>;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="hdf5__plasma_8c_1a2551a93cb03495d38c00db1dfc759093" kindref="member">hdf5_plasma_read_1Dt</ref>(f,<sp/>&amp;(offload_data-&gt;<ref refid="structplasma__offload__data_1a498b2116e000736408f306533ef157d6" kindref="member">plasma_1Dt</ref>),</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_array,<sp/>qid);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hdf5__helpers_8c_1ab43ae79d4f8e8d83bf098da8a0054a72" kindref="member">hdf5_gen_path</ref>(</highlight><highlight class="stringliteral">&quot;/plasma/plasma_1DS_XXXXXXXXXX&quot;</highlight><highlight class="normal">,<sp/>qid,<sp/>path);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="hdf5__helpers_8c_1a3b6edfba63099574025bea60453da24b" kindref="member">hdf5_find_group</ref>(f,<sp/>path)<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structplasma__offload__data_1a606d83112093cf2266034efc79752058" kindref="member">type</ref><sp/>=<sp/><ref refid="plasma_8h_1aeac371b8350c40fe94429c0e2167df63a9deee8c3bdb6207008fc838b1ddaed74" kindref="member">plasma_type_1DS</ref>;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="hdf5__plasma_8c_1a6657a012869ab74121067d34438f012c" kindref="member">hdf5_plasma_read_1DS</ref>(f,<sp/>&amp;(offload_data-&gt;<ref refid="structplasma__offload__data_1a078cdf266d24fea6a018ecaa13d70fa7" kindref="member">plasma_1DS</ref>),</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_array,<sp/>qid);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Initialize<sp/>if<sp/>data<sp/>was<sp/>read<sp/>succesfully<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!err)<sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="plasma_8c_1aa4b07a053504e5ae77ee0ed80338af05" kindref="member">plasma_init_offload</ref>(offload_data,<sp/>offload_array);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>err;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="hdf5__plasma_8c_1a313e0903daa9b7b7d1e08806a7845650" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hdf5__plasma_8c_1a313e0903daa9b7b7d1e08806a7845650" kindref="member">hdf5_plasma_read_1D</ref>(hid_t<sp/>f,<sp/><ref refid="structplasma__1D__offload__data" kindref="compound">plasma_1D_offload_data</ref>*<sp/>offload_data,</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>**<sp/>offload_array,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>qid)<sp/>{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#undef<sp/>PLSPATH</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>PLSPATH<sp/>&quot;/plasma/plasma_1D_XXXXXXXXXX/&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Read<sp/>rhogrid<sp/>size<sp/>and<sp/>number<sp/>of<sp/>species<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n_rho,<sp/>n_ions;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1ae78f9ef2bb986e45d4cca2861d97e1fd" kindref="member">hdf5_read_int</ref>(<ref refid="hdf5__plasma_8c_1a6dce046382902ddbab735ab26fc4742e" kindref="member">PLSPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;nion&quot;</highlight><highlight class="normal">,<sp/>&amp;n_ions,</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1ae78f9ef2bb986e45d4cca2861d97e1fd" kindref="member">hdf5_read_int</ref>(<ref refid="hdf5__plasma_8c_1a6dce046382902ddbab735ab26fc4742e" kindref="member">PLSPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;nrho&quot;</highlight><highlight class="normal">,<sp/><sp/>&amp;n_rho,</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structplasma__1D__offload__data_1abb0565d2b90563061e5b40414fff8029" kindref="member">n_species</ref><sp/>=<sp/>n_ions<sp/>+<sp/>1;<sp/></highlight><highlight class="comment">/*<sp/>Include<sp/>electrons<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structplasma__1D__offload__data_1a31148d6d2d3bc22a2d3a3bc464276a4b" kindref="member">n_rho</ref><sp/><sp/><sp/><sp/><sp/>=<sp/>n_rho;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Electron<sp/>charge<sp/>and<sp/>mass<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structplasma__1D__offload__data_1a63eb50a86b7b94292e03efbcf4764f62" kindref="member">charge</ref>[0]<sp/>=<sp/>-1<sp/>*<sp/><ref refid="consts_8h_1aa2d52037e91528e354a59fc909365f7c" kindref="member">CONST_E</ref>;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structplasma__1D__offload__data_1a956c6723c923aa05aff13e5b471600ad" kindref="member">mass</ref>[0]<sp/><sp/><sp/>=<sp/><ref refid="consts_8h_1a206d3d5b12456dfb6b7feb9a4fa12123" kindref="member">CONST_M_E</ref>;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Read<sp/>ion<sp/>species<sp/>information<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>temparr[<ref refid="ascot5_8h_1a9a9ccddfec36bf0f49a168a9dcb8f87e" kindref="member">MAX_SPECIES</ref>];</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1ae78f9ef2bb986e45d4cca2861d97e1fd" kindref="member">hdf5_read_int</ref>(<ref refid="hdf5__plasma_8c_1a6dce046382902ddbab735ab26fc4742e" kindref="member">PLSPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;znum&quot;</highlight><highlight class="normal">,<sp/>offload_data-&gt;<ref refid="structplasma__1D__offload__data_1a11869450f7d8ecf97ec5434a44308197" kindref="member">znum</ref>,</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1ae78f9ef2bb986e45d4cca2861d97e1fd" kindref="member">hdf5_read_int</ref>(<ref refid="hdf5__plasma_8c_1a6dce046382902ddbab735ab26fc4742e" kindref="member">PLSPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;anum&quot;</highlight><highlight class="normal">,<sp/>offload_data-&gt;<ref refid="structplasma__1D__offload__data_1ae42a145e1698fc8a8b19cde9eb125b8c" kindref="member">anum</ref>,</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1ae78f9ef2bb986e45d4cca2861d97e1fd" kindref="member">hdf5_read_int</ref>(<ref refid="hdf5__plasma_8c_1a6dce046382902ddbab735ab26fc4742e" kindref="member">PLSPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;charge&quot;</highlight><highlight class="normal">,<sp/>temparr,</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>n_ions;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structplasma__1D__offload__data_1a63eb50a86b7b94292e03efbcf4764f62" kindref="member">charge</ref>[i+1]<sp/>=<sp/>temparr[i]<sp/>*<sp/><ref refid="consts_8h_1aa2d52037e91528e354a59fc909365f7c" kindref="member">CONST_E</ref>;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1a43b9438fc244982ddff7dc58ea3b9ef9" kindref="member">hdf5_read_double</ref>(<ref refid="hdf5__plasma_8c_1a6dce046382902ddbab735ab26fc4742e" kindref="member">PLSPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;mass&quot;</highlight><highlight class="normal">,<sp/>&amp;(offload_data-&gt;<ref refid="structplasma__1D__offload__data_1a956c6723c923aa05aff13e5b471600ad" kindref="member">mass</ref>[1]),</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>n_ions;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structplasma__1D__offload__data_1a956c6723c923aa05aff13e5b471600ad" kindref="member">mass</ref>[i+1]<sp/>*=<sp/><ref refid="consts_8h_1a0042abe6b0fe12725d0b111347ab7964" kindref="member">CONST_U</ref>;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Allocate<sp/>space<sp/>for<sp/>rhogrid,<sp/>density<sp/>(for<sp/>each<sp/>species)<sp/>and</highlight></codeline>
+<codeline lineno="131"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temperature<sp/>(for<sp/>electrons<sp/>and<sp/>ions<sp/>-<sp/>all<sp/>ions<sp/>have<sp/>same<sp/>temperature)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structplasma__1D__offload__data_1ad331e9f479c37b96fa8f28c8f1736227" kindref="member">offload_array_length</ref><sp/>=</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>3*n_rho<sp/>+<sp/>offload_data-&gt;<ref refid="structplasma__1D__offload__data_1abb0565d2b90563061e5b40414fff8029" kindref="member">n_species</ref>*n_rho;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>*offload_array<sp/>=<sp/>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*)<sp/>malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>)</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>offload_data-&gt;<ref refid="structplasma__1D__offload__data_1ad331e9f479c37b96fa8f28c8f1736227" kindref="member">offload_array_length</ref>);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Pointers<sp/>to<sp/>beginning<sp/>of<sp/>different<sp/>data<sp/>series<sp/>to<sp/>make<sp/>code<sp/>more</highlight></codeline>
+<codeline lineno="138"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>readable<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>rho<sp/>=<sp/>&amp;(*offload_array)[0];</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>temp_e<sp/>=<sp/>&amp;(*offload_array)[n_rho];</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>temp_i<sp/>=<sp/>&amp;(*offload_array)[n_rho*2];</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>dens_e<sp/>=<sp/>&amp;(*offload_array)[n_rho*3];</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>dens_i<sp/>=<sp/>&amp;(*offload_array)[n_rho*4];</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Read<sp/>rhogrid,<sp/>densities,<sp/>and<sp/>temperatures<sp/>into<sp/>allocated<sp/>array<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1a43b9438fc244982ddff7dc58ea3b9ef9" kindref="member">hdf5_read_double</ref>(<ref refid="hdf5__plasma_8c_1a6dce046382902ddbab735ab26fc4742e" kindref="member">PLSPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;rho&quot;</highlight><highlight class="normal">,<sp/>rho,</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1a43b9438fc244982ddff7dc58ea3b9ef9" kindref="member">hdf5_read_double</ref>(<ref refid="hdf5__plasma_8c_1a6dce046382902ddbab735ab26fc4742e" kindref="member">PLSPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;etemperature&quot;</highlight><highlight class="normal">,<sp/>temp_e,</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1a43b9438fc244982ddff7dc58ea3b9ef9" kindref="member">hdf5_read_double</ref>(<ref refid="hdf5__plasma_8c_1a6dce046382902ddbab735ab26fc4742e" kindref="member">PLSPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;edensity&quot;</highlight><highlight class="normal">,<sp/>dens_e,</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1a43b9438fc244982ddff7dc58ea3b9ef9" kindref="member">hdf5_read_double</ref>(<ref refid="hdf5__plasma_8c_1a6dce046382902ddbab735ab26fc4742e" kindref="member">PLSPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;itemperature&quot;</highlight><highlight class="normal">,<sp/>temp_i,</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1a43b9438fc244982ddff7dc58ea3b9ef9" kindref="member">hdf5_read_double</ref>(<ref refid="hdf5__plasma_8c_1a6dce046382902ddbab735ab26fc4742e" kindref="member">PLSPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;idensity&quot;</highlight><highlight class="normal">,<sp/>dens_i,</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>n_rho;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp_e[i]<sp/>=<sp/>temp_e[i]<sp/>*<sp/><ref refid="consts_8h_1aa2d52037e91528e354a59fc909365f7c" kindref="member">CONST_E</ref>;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp_i[i]<sp/>=<sp/>temp_i[i]<sp/>*<sp/><ref refid="consts_8h_1aa2d52037e91528e354a59fc909365f7c" kindref="member">CONST_E</ref>;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175" refid="hdf5__plasma_8c_1a2551a93cb03495d38c00db1dfc759093" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hdf5__plasma_8c_1a2551a93cb03495d38c00db1dfc759093" kindref="member">hdf5_plasma_read_1Dt</ref>(hid_t<sp/>f,<sp/><ref refid="structplasma__1Dt__offload__data" kindref="compound">plasma_1Dt_offload_data</ref>*<sp/>offload_data,</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>**<sp/>offload_array,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>qid)<sp/>{</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#undef<sp/>PLSPATH</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>PLSPATH<sp/>&quot;/plasma/plasma_1Dt_XXXXXXXXXX/&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Read<sp/>rhogrid<sp/>size<sp/>and<sp/>number<sp/>of<sp/>species<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n_rho,<sp/>n_time,<sp/>n_ions,<sp/>n_species;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1ae78f9ef2bb986e45d4cca2861d97e1fd" kindref="member">hdf5_read_int</ref>(<ref refid="hdf5__plasma_8c_1a6dce046382902ddbab735ab26fc4742e" kindref="member">PLSPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;nion&quot;</highlight><highlight class="normal">,<sp/>&amp;n_ions,</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1ae78f9ef2bb986e45d4cca2861d97e1fd" kindref="member">hdf5_read_int</ref>(<ref refid="hdf5__plasma_8c_1a6dce046382902ddbab735ab26fc4742e" kindref="member">PLSPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;nrho&quot;</highlight><highlight class="normal">,<sp/><sp/>&amp;n_rho,</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1ae78f9ef2bb986e45d4cca2861d97e1fd" kindref="member">hdf5_read_int</ref>(<ref refid="hdf5__plasma_8c_1a6dce046382902ddbab735ab26fc4742e" kindref="member">PLSPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;ntime&quot;</highlight><highlight class="normal">,<sp/><sp/>&amp;n_time,</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>n_species<sp/>=<sp/>n_ions<sp/>+<sp/>1;<sp/></highlight><highlight class="comment">/*<sp/>Include<sp/>electrons<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structplasma__1Dt__offload__data_1a3d55f81de019f4f98d181c74aecfe292" kindref="member">n_species</ref><sp/>=<sp/>n_species;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structplasma__1Dt__offload__data_1a2b69a92564b9c484335d300cfe1ed680" kindref="member">n_rho</ref><sp/><sp/><sp/><sp/><sp/>=<sp/>n_rho;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structplasma__1Dt__offload__data_1a680763df18a515a6a5e3f6ba2ecc6eb0" kindref="member">n_time</ref><sp/><sp/><sp/><sp/><sp/>=<sp/>n_time;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Electron<sp/>charge<sp/>and<sp/>mass<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structplasma__1Dt__offload__data_1a8374282ed56154e7b0c136f7a646ed24" kindref="member">charge</ref>[0]<sp/>=<sp/>-1<sp/>*<sp/><ref refid="consts_8h_1aa2d52037e91528e354a59fc909365f7c" kindref="member">CONST_E</ref>;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structplasma__1Dt__offload__data_1a35e50cda53fb26d70da308bb8ab69b99" kindref="member">mass</ref>[0]<sp/><sp/><sp/>=<sp/><ref refid="consts_8h_1a206d3d5b12456dfb6b7feb9a4fa12123" kindref="member">CONST_M_E</ref>;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Read<sp/>ion<sp/>species<sp/>information<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>temparr[<ref refid="ascot5_8h_1a9a9ccddfec36bf0f49a168a9dcb8f87e" kindref="member">MAX_SPECIES</ref>];</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1ae78f9ef2bb986e45d4cca2861d97e1fd" kindref="member">hdf5_read_int</ref>(<ref refid="hdf5__plasma_8c_1a6dce046382902ddbab735ab26fc4742e" kindref="member">PLSPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;znum&quot;</highlight><highlight class="normal">,<sp/>offload_data-&gt;<ref refid="structplasma__1Dt__offload__data_1a27c4585abe6274685f74e9bc7f052ca4" kindref="member">znum</ref>,</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1ae78f9ef2bb986e45d4cca2861d97e1fd" kindref="member">hdf5_read_int</ref>(<ref refid="hdf5__plasma_8c_1a6dce046382902ddbab735ab26fc4742e" kindref="member">PLSPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;anum&quot;</highlight><highlight class="normal">,<sp/>offload_data-&gt;<ref refid="structplasma__1Dt__offload__data_1aa7857fcadb79cc40f6cfd59b947a5d67" kindref="member">anum</ref>,</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1ae78f9ef2bb986e45d4cca2861d97e1fd" kindref="member">hdf5_read_int</ref>(<ref refid="hdf5__plasma_8c_1a6dce046382902ddbab735ab26fc4742e" kindref="member">PLSPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;charge&quot;</highlight><highlight class="normal">,<sp/>temparr,</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>n_ions;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structplasma__1Dt__offload__data_1a8374282ed56154e7b0c136f7a646ed24" kindref="member">charge</ref>[i+1]<sp/>=<sp/>temparr[i]<sp/>*<sp/><ref refid="consts_8h_1aa2d52037e91528e354a59fc909365f7c" kindref="member">CONST_E</ref>;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1a43b9438fc244982ddff7dc58ea3b9ef9" kindref="member">hdf5_read_double</ref>(<ref refid="hdf5__plasma_8c_1a6dce046382902ddbab735ab26fc4742e" kindref="member">PLSPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;mass&quot;</highlight><highlight class="normal">,<sp/>&amp;(offload_data-&gt;<ref refid="structplasma__1Dt__offload__data_1a35e50cda53fb26d70da308bb8ab69b99" kindref="member">mass</ref>[1]),</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>n_ions;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structplasma__1Dt__offload__data_1a35e50cda53fb26d70da308bb8ab69b99" kindref="member">mass</ref>[i+1]<sp/>*=<sp/><ref refid="consts_8h_1a0042abe6b0fe12725d0b111347ab7964" kindref="member">CONST_U</ref>;</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Allocate<sp/>space<sp/>for<sp/>rhogrid,<sp/>density<sp/>(for<sp/>each<sp/>species)<sp/>and</highlight></codeline>
+<codeline lineno="219"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temperature<sp/>(for<sp/>electrons<sp/>and<sp/>ions<sp/>-<sp/>all<sp/>ions<sp/>have<sp/>same<sp/>temperature)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structplasma__1Dt__offload__data_1a51879af2fc78070ef12abb43e6f035b7" kindref="member">offload_array_length</ref><sp/>=</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n_rho<sp/>+<sp/>n_time<sp/>+<sp/>2*n_time*n_rho<sp/>+<sp/>n_time*offload_data-&gt;<ref refid="structplasma__1Dt__offload__data_1a3d55f81de019f4f98d181c74aecfe292" kindref="member">n_species</ref>*n_rho;</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/>*offload_array<sp/>=<sp/>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*)<sp/>malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>)</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>offload_data-&gt;<ref refid="structplasma__1Dt__offload__data_1a51879af2fc78070ef12abb43e6f035b7" kindref="member">offload_array_length</ref>);</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Pointers<sp/>to<sp/>beginning<sp/>of<sp/>different<sp/>data<sp/>series<sp/>to<sp/>make<sp/>code<sp/>more</highlight></codeline>
+<codeline lineno="226"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>readable<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>rho<sp/>=<sp/>&amp;(*offload_array)[0];</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>time<sp/>=<sp/>&amp;(*offload_array)[n_rho];</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>temp<sp/>=<sp/>&amp;(*offload_array)[n_rho+n_time];</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>dens<sp/>=<sp/>&amp;(*offload_array)[n_rho+n_time+n_time*n_rho*2];</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Read<sp/>rho<sp/>and<sp/>time<sp/>grids<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1a43b9438fc244982ddff7dc58ea3b9ef9" kindref="member">hdf5_read_double</ref>(<ref refid="hdf5__plasma_8c_1a6dce046382902ddbab735ab26fc4742e" kindref="member">PLSPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;rho&quot;</highlight><highlight class="normal">,<sp/>rho,</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1a43b9438fc244982ddff7dc58ea3b9ef9" kindref="member">hdf5_read_double</ref>(<ref refid="hdf5__plasma_8c_1a6dce046382902ddbab735ab26fc4742e" kindref="member">PLSPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;time&quot;</highlight><highlight class="normal">,<sp/>time,</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>read<sp/>electron<sp/>and<sp/>ion<sp/>temperature<sp/>data<sp/>into<sp/>temporary<sp/>arrays<sp/>and</highlight></codeline>
+<codeline lineno="239"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>rearrange<sp/>into<sp/>offload<sp/>array<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>temp_e_in<sp/>=<sp/>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*)<sp/>malloc(n_time*n_rho*</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>));</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>temp_i_in<sp/>=<sp/>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*)<sp/>malloc(n_time*n_rho*</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>));</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1a43b9438fc244982ddff7dc58ea3b9ef9" kindref="member">hdf5_read_double</ref>(<ref refid="hdf5__plasma_8c_1a6dce046382902ddbab735ab26fc4742e" kindref="member">PLSPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;etemperature&quot;</highlight><highlight class="normal">,<sp/>temp_e_in,</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1a43b9438fc244982ddff7dc58ea3b9ef9" kindref="member">hdf5_read_double</ref>(<ref refid="hdf5__plasma_8c_1a6dce046382902ddbab735ab26fc4742e" kindref="member">PLSPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;itemperature&quot;</highlight><highlight class="normal">,<sp/>temp_i_in,</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i_time<sp/>=<sp/>0;<sp/>i_time<sp/>&lt;<sp/>n_time;<sp/>i_time++)<sp/>{</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i_rho<sp/>=<sp/>0;<sp/>i_rho<sp/>&lt;<sp/>n_rho;<sp/>i_rho++)<sp/>{</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>electrons<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp[i_time*2*n_rho+i_rho]</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>temp_e_in[i_time*n_rho<sp/>+<sp/>i_rho]<sp/>*<sp/><ref refid="consts_8h_1aa2d52037e91528e354a59fc909365f7c" kindref="member">CONST_E</ref>;<sp/></highlight><highlight class="comment">/*<sp/>convert<sp/>to<sp/>J<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>ions<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp[i_time*2*n_rho+n_rho+i_rho]</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>temp_i_in[i_time*n_rho<sp/>+<sp/>i_rho]<sp/>*<sp/><ref refid="consts_8h_1aa2d52037e91528e354a59fc909365f7c" kindref="member">CONST_E</ref>;<sp/></highlight><highlight class="comment">/*<sp/>convert<sp/>to<sp/>J<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>read<sp/>electron<sp/>and<sp/>ion<sp/>densities<sp/>into<sp/>temporary<sp/>arrays<sp/>and<sp/>rearrange</highlight></codeline>
+<codeline lineno="261"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>data<sp/>into<sp/>offload<sp/>array<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>dens_e_in<sp/>=<sp/>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*)<sp/>malloc(n_time*n_rho*</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>));</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>dens_i_in<sp/>=<sp/>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*)<sp/>malloc(n_time*n_ions*n_rho*</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>));</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1a43b9438fc244982ddff7dc58ea3b9ef9" kindref="member">hdf5_read_double</ref>(<ref refid="hdf5__plasma_8c_1a6dce046382902ddbab735ab26fc4742e" kindref="member">PLSPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;edensity&quot;</highlight><highlight class="normal">,<sp/>dens_e_in,</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1a43b9438fc244982ddff7dc58ea3b9ef9" kindref="member">hdf5_read_double</ref>(<ref refid="hdf5__plasma_8c_1a6dce046382902ddbab735ab26fc4742e" kindref="member">PLSPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;idensity&quot;</highlight><highlight class="normal">,<sp/>dens_i_in,</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i_time<sp/>=<sp/>0;<sp/>i_time<sp/>&lt;<sp/>n_time;<sp/>i_time++)<sp/>{</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i_species<sp/>=<sp/>0;<sp/>i_species<sp/>&lt;<sp/>(n_ions+1);<sp/>i_species++)<sp/>{</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i_rho<sp/>=<sp/>0;<sp/>i_rho<sp/>&lt;<sp/>n_rho;<sp/>i_rho++)<sp/>{</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(i_species<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>electrons<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dens[i_time*n_species*n_rho+i_species*n_rho+i_rho]</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>dens_e_in[i_time*n_rho<sp/>+<sp/>i_rho];</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>ions<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dens[i_time*n_species*n_rho+i_species*n_rho+i_rho]</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>dens_i_in[i_time*(n_ions*n_rho)+(i_species-1)*n_rho</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>i_rho];</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="289"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"></highlight></codeline>
+<codeline lineno="304" refid="hdf5__plasma_8c_1a6657a012869ab74121067d34438f012c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hdf5__plasma_8c_1a6657a012869ab74121067d34438f012c" kindref="member">hdf5_plasma_read_1DS</ref>(hid_t<sp/>f,<sp/><ref refid="structplasma__1DS__offload__data" kindref="compound">plasma_1DS_offload_data</ref>*<sp/>offload_data,</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>**<sp/>offload_array,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>qid)<sp/>{</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"></highlight></codeline>
+<codeline lineno="307"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#undef<sp/>PLSPATH</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="308"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>PLSPATH<sp/>&quot;/plasma/plasma_1DS_XXXXXXXXXX/&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="309"><highlight class="normal"></highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Read<sp/>rhogrid<sp/>and<sp/>number<sp/>of<sp/>species<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n_rho,<sp/>n_ions;</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1ae78f9ef2bb986e45d4cca2861d97e1fd" kindref="member">hdf5_read_int</ref>(<ref refid="hdf5__plasma_8c_1a6dce046382902ddbab735ab26fc4742e" kindref="member">PLSPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;nion&quot;</highlight><highlight class="normal">,<sp/>&amp;n_ions,</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1ae78f9ef2bb986e45d4cca2861d97e1fd" kindref="member">hdf5_read_int</ref>(<ref refid="hdf5__plasma_8c_1a6dce046382902ddbab735ab26fc4742e" kindref="member">PLSPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;nrho&quot;</highlight><highlight class="normal">,<sp/><sp/>&amp;offload_data-&gt;<ref refid="structplasma__1DS__offload__data_1a1734879961efcf473d45ece28c69d439" kindref="member">n_rho</ref>,</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1a43b9438fc244982ddff7dc58ea3b9ef9" kindref="member">hdf5_read_double</ref>(<ref refid="hdf5__plasma_8c_1a6dce046382902ddbab735ab26fc4742e" kindref="member">PLSPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;rhomin&quot;</highlight><highlight class="normal">,<sp/><sp/>&amp;offload_data-&gt;<ref refid="structplasma__1DS__offload__data_1a124787a97212dee72ff6d63bdef7215a" kindref="member">rho_min</ref>,</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1a43b9438fc244982ddff7dc58ea3b9ef9" kindref="member">hdf5_read_double</ref>(<ref refid="hdf5__plasma_8c_1a6dce046382902ddbab735ab26fc4742e" kindref="member">PLSPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;rhomax&quot;</highlight><highlight class="normal">,<sp/><sp/>&amp;offload_data-&gt;<ref refid="structplasma__1DS__offload__data_1a79eb5c143210f28c5f3b53fb8e711526" kindref="member">rho_max</ref>,</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"></highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structplasma__1DS__offload__data_1ad82b7a97ccbb1e361af5c622de2ea7a3" kindref="member">n_species</ref><sp/>=<sp/>n_ions<sp/>+<sp/>1;<sp/></highlight><highlight class="comment">/*<sp/>Include<sp/>electrons<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/>n_rho<sp/>=<sp/>offload_data-&gt;<ref refid="structplasma__1DS__offload__data_1a1734879961efcf473d45ece28c69d439" kindref="member">n_rho</ref>;</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"></highlight></codeline>
+<codeline lineno="324"><highlight class="normal"></highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Electron<sp/>charge<sp/>and<sp/>mass<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structplasma__1DS__offload__data_1aeb51018ab200019a17593370fc78d319" kindref="member">charge</ref>[0]<sp/>=<sp/>-1<sp/>*<sp/><ref refid="consts_8h_1aa2d52037e91528e354a59fc909365f7c" kindref="member">CONST_E</ref>;</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structplasma__1DS__offload__data_1ace653a47f5d9ca400a3a2b08323ae2e3" kindref="member">mass</ref>[0]<sp/><sp/><sp/>=<sp/><ref refid="consts_8h_1a206d3d5b12456dfb6b7feb9a4fa12123" kindref="member">CONST_M_E</ref>;</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"></highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Read<sp/>ion<sp/>species<sp/>information<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>temparr[<ref refid="ascot5_8h_1a9a9ccddfec36bf0f49a168a9dcb8f87e" kindref="member">MAX_SPECIES</ref>];</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"></highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1ae78f9ef2bb986e45d4cca2861d97e1fd" kindref="member">hdf5_read_int</ref>(<ref refid="hdf5__plasma_8c_1a6dce046382902ddbab735ab26fc4742e" kindref="member">PLSPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;znum&quot;</highlight><highlight class="normal">,<sp/>offload_data-&gt;<ref refid="structplasma__1DS__offload__data_1a3ae3875f83cb399a4e22cde323183c13" kindref="member">znum</ref>,</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1ae78f9ef2bb986e45d4cca2861d97e1fd" kindref="member">hdf5_read_int</ref>(<ref refid="hdf5__plasma_8c_1a6dce046382902ddbab735ab26fc4742e" kindref="member">PLSPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;anum&quot;</highlight><highlight class="normal">,<sp/>offload_data-&gt;<ref refid="structplasma__1DS__offload__data_1ae55fd261b994b48e57aeb7d1c6e6117f" kindref="member">anum</ref>,</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"></highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1ae78f9ef2bb986e45d4cca2861d97e1fd" kindref="member">hdf5_read_int</ref>(<ref refid="hdf5__plasma_8c_1a6dce046382902ddbab735ab26fc4742e" kindref="member">PLSPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;charge&quot;</highlight><highlight class="normal">,<sp/>temparr,</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>n_ions;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structplasma__1DS__offload__data_1aeb51018ab200019a17593370fc78d319" kindref="member">charge</ref>[i+1]<sp/>=<sp/>temparr[i]<sp/>*<sp/><ref refid="consts_8h_1aa2d52037e91528e354a59fc909365f7c" kindref="member">CONST_E</ref>;</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"></highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1a43b9438fc244982ddff7dc58ea3b9ef9" kindref="member">hdf5_read_double</ref>(<ref refid="hdf5__plasma_8c_1a6dce046382902ddbab735ab26fc4742e" kindref="member">PLSPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;mass&quot;</highlight><highlight class="normal">,<sp/>&amp;(offload_data-&gt;<ref refid="structplasma__1DS__offload__data_1ace653a47f5d9ca400a3a2b08323ae2e3" kindref="member">mass</ref>[1]),</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>n_ions;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structplasma__1DS__offload__data_1ace653a47f5d9ca400a3a2b08323ae2e3" kindref="member">mass</ref>[i+1]<sp/>*=<sp/><ref refid="consts_8h_1a0042abe6b0fe12725d0b111347ab7964" kindref="member">CONST_U</ref>;</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"></highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Allocate<sp/>space<sp/>for<sp/>density<sp/>(for<sp/>each<sp/>species)<sp/>and</highlight></codeline>
+<codeline lineno="350"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temperature<sp/>(for<sp/>electrons<sp/>and<sp/>ions<sp/>-<sp/>all<sp/>ions<sp/>have<sp/>same<sp/>temperature)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structplasma__1DS__offload__data_1ab40802e96485450ac2e254a293b320d4" kindref="member">offload_array_length</ref><sp/>=</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2*n_rho<sp/>+<sp/>offload_data-&gt;<ref refid="structplasma__1DS__offload__data_1ad82b7a97ccbb1e361af5c622de2ea7a3" kindref="member">n_species</ref>*n_rho;</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/>*offload_array<sp/>=<sp/>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*)<sp/>malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>)</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>offload_data-&gt;<ref refid="structplasma__1DS__offload__data_1ab40802e96485450ac2e254a293b320d4" kindref="member">offload_array_length</ref>);</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"></highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Pointers<sp/>to<sp/>beginning<sp/>of<sp/>different<sp/>data<sp/>series<sp/>to<sp/>make<sp/>code<sp/>more</highlight></codeline>
+<codeline lineno="357"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>readable<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>temp_e<sp/>=<sp/>&amp;(*offload_array)[0];</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>temp_i<sp/>=<sp/>&amp;(*offload_array)[n_rho*1];</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>dens_e<sp/>=<sp/>&amp;(*offload_array)[n_rho*2];</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>dens_i<sp/>=<sp/>&amp;(*offload_array)[n_rho*3];</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"></highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Read<sp/>densities,<sp/>and<sp/>temperatures<sp/>into<sp/>allocated<sp/>array<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1a43b9438fc244982ddff7dc58ea3b9ef9" kindref="member">hdf5_read_double</ref>(<ref refid="hdf5__plasma_8c_1a6dce046382902ddbab735ab26fc4742e" kindref="member">PLSPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;etemperature&quot;</highlight><highlight class="normal">,<sp/>temp_e,</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1a43b9438fc244982ddff7dc58ea3b9ef9" kindref="member">hdf5_read_double</ref>(<ref refid="hdf5__plasma_8c_1a6dce046382902ddbab735ab26fc4742e" kindref="member">PLSPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;edensity&quot;</highlight><highlight class="normal">,<sp/>dens_e,</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1a43b9438fc244982ddff7dc58ea3b9ef9" kindref="member">hdf5_read_double</ref>(<ref refid="hdf5__plasma_8c_1a6dce046382902ddbab735ab26fc4742e" kindref="member">PLSPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;itemperature&quot;</highlight><highlight class="normal">,<sp/>temp_i,</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1a43b9438fc244982ddff7dc58ea3b9ef9" kindref="member">hdf5_read_double</ref>(<ref refid="hdf5__plasma_8c_1a6dce046382902ddbab735ab26fc4742e" kindref="member">PLSPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;idensity&quot;</highlight><highlight class="normal">,<sp/>dens_i,</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"></highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>n_rho;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp_e[i]<sp/>=<sp/>temp_e[i]<sp/>*<sp/><ref refid="consts_8h_1aa2d52037e91528e354a59fc909365f7c" kindref="member">CONST_E</ref>;</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp_i[i]<sp/>=<sp/>temp_i[i]<sp/>*<sp/><ref refid="consts_8h_1aa2d52037e91528e354a59fc909365f7c" kindref="member">CONST_E</ref>;</highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"></highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="379"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="hdf5io/hdf5_plasma.c"/>
+  </compounddef>
+</doxygen>

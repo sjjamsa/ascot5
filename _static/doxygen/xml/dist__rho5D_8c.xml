@@ -1,0 +1,746 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dist__rho5D_8c" kind="file" language="C++">
+    <compoundname>dist_rho5D.c</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes refid="math_8h" local="no">math.h</includes>
+    <includes refid="ascot5_8h" local="yes">../ascot5.h</includes>
+    <includes refid="consts_8h" local="yes">../consts.h</includes>
+    <includes refid="physlib_8h" local="yes">../physlib.h</includes>
+    <includes refid="dist__rho5D_8h" local="yes">dist_rho5D.h</includes>
+    <includes refid="particle_8h" local="yes">../particle.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>diag/dist_rho5D.c</label>
+        <link refid="dist__rho5D_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>dist_rho5D.h</label>
+        <link refid="dist__rho5D_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>../particle.h</label>
+        <link refid="particle_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>../spline/interp.h</label>
+        <link refid="interp_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>Bfield/B_GS.h</label>
+        <link refid="B__GS_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>stdlib.h</label>
+      </node>
+      <node id="6">
+        <label>omp.h</label>
+      </node>
+      <node id="8">
+        <label>../consts.h</label>
+        <link refid="consts_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>B_field.h</label>
+        <link refid="B__field_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>Efield/E_1DS.h</label>
+        <link refid="E__1DS_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>../physlib.h</label>
+        <link refid="physlib_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>error.h</label>
+        <link refid="error_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>E_field.h</label>
+        <link refid="E__field_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>time.h</label>
+      </node>
+      <node id="20">
+        <label>Bfield/B_TC.h</label>
+        <link refid="B__TC_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>../linint/linint.h</label>
+        <link refid="linint_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>Bfield/B_2DS.h</label>
+        <link refid="B__2DS_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>Efield/E_TC.h</label>
+        <link refid="E__TC_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>Bfield/B_3DS.h</label>
+        <link refid="B__3DS_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>math.h</label>
+        <link refid="math_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+      </node>
+      <node id="18">
+        <label>Bfield/B_STS.h</label>
+        <link refid="B__STS_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>ascot5.h</label>
+        <link refid="ascot5_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="dist__rho5D_8c_1a02e644aa081916bb992edcd44fb078f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned long</type>
+        <definition>unsigned long dist_rho5D_index</definition>
+        <argsstring>(int i_rho, int i_theta, int i_phi, int i_ppara, int i_pperp, int i_time, int i_q, int n_theta, int n_phi, int n_ppara, int n_pperp, int n_time, int n_q)</argsstring>
+        <name>dist_rho5D_index</name>
+        <param>
+          <type>int</type>
+          <declname>i_rho</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>i_theta</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>i_phi</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>i_ppara</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>i_pperp</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>i_time</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>i_q</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n_theta</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n_phi</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n_ppara</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n_pperp</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n_time</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n_q</declname>
+        </param>
+        <briefdescription>
+<para>Internal function calculating the index in the histogram array. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="diag/dist_rho5D.c" line="18" column="15" bodyfile="diag/dist_rho5D.c" bodystart="18" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="dist__rho5D_8c_1a24201f9d0b0d5d1196f4a0f3384fc173" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dist_rho5D_free_offload</definition>
+        <argsstring>(dist_rho5D_offload_data *offload_data)</argsstring>
+        <name>dist_rho5D_free_offload</name>
+        <param>
+          <type><ref refid="structdist__rho5D__offload__data" kindref="compound">dist_rho5D_offload_data</ref> *</type>
+          <declname>offload_data</declname>
+        </param>
+        <briefdescription>
+<para>Frees the offload data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>offload_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload data struct </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="diag/dist_rho5D.c" line="38" column="6" bodyfile="diag/dist_rho5D.c" bodystart="38" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="dist__rho5D_8c_1a7c6dec909849d0523a6fc0cb141db864" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dist_rho5D_init</definition>
+        <argsstring>(dist_rho5D_data *dist_data, dist_rho5D_offload_data *offload_data, real *offload_array)</argsstring>
+        <name>dist_rho5D_init</name>
+        <param>
+          <type><ref refid="structdist__rho5D__data" kindref="compound">dist_rho5D_data</ref> *</type>
+          <declname>dist_data</declname>
+        </param>
+        <param>
+          <type><ref refid="structdist__rho5D__offload__data" kindref="compound">dist_rho5D_offload_data</ref> *</type>
+          <declname>offload_data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>offload_array</declname>
+        </param>
+        <briefdescription>
+<para>Initializes distribution from offload data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dist_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to distribution data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to distribution offload data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>offload array </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="diag/dist_rho5D.c" line="63" column="6" bodyfile="diag/dist_rho5D.c" bodystart="63" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="dist__rho5D_8c_1ad465bf139fe6990120c779fff785f973" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dist_rho5D_update_fo</definition>
+        <argsstring>(dist_rho5D_data *dist, particle_simd_fo *p_f, particle_simd_fo *p_i)</argsstring>
+        <name>dist_rho5D_update_fo</name>
+        <param>
+          <type><ref refid="structdist__rho5D__data" kindref="compound">dist_rho5D_data</ref> *</type>
+          <declname>dist</declname>
+        </param>
+        <param>
+          <type><ref refid="structparticle__simd__fo" kindref="compound">particle_simd_fo</ref> *</type>
+          <declname>p_f</declname>
+        </param>
+        <param>
+          <type><ref refid="structparticle__simd__fo" kindref="compound">particle_simd_fo</ref> *</type>
+          <declname>p_i</declname>
+        </param>
+        <briefdescription>
+<para>Update the histogram from full-orbit particles. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function updates the histogram from the particle data. Bins are calculated as vector op and histogram is updates as an atomic operation to avoid race conditions.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dist</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to distribution parameter struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to SIMD particle struct at the end of current time step </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to SIMD particle struct at the start of current time step </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="diag/dist_rho5D.c" line="108" column="6" bodyfile="diag/dist_rho5D.c" bodystart="108" bodyend="203"/>
+      </memberdef>
+      <memberdef kind="function" id="dist__rho5D_8c_1a6fee10a74bc7bdc9e880a3aad56d0d2f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dist_rho5D_update_gc</definition>
+        <argsstring>(dist_rho5D_data *dist, particle_simd_gc *p_f, particle_simd_gc *p_i)</argsstring>
+        <name>dist_rho5D_update_gc</name>
+        <param>
+          <type><ref refid="structdist__rho5D__data" kindref="compound">dist_rho5D_data</ref> *</type>
+          <declname>dist</declname>
+        </param>
+        <param>
+          <type><ref refid="structparticle__simd__gc" kindref="compound">particle_simd_gc</ref> *</type>
+          <declname>p_f</declname>
+        </param>
+        <param>
+          <type><ref refid="structparticle__simd__gc" kindref="compound">particle_simd_gc</ref> *</type>
+          <declname>p_i</declname>
+        </param>
+        <briefdescription>
+<para>Update the histogram from guiding center markers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function updates the histogram from the marker data. Bins are calculated as vector op and histogram is updates as an atomic operation to avoid race conditions.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dist</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to distribution parameter struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to SIMD gc struct at the end of current time step </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to SIMD gc struct at the start of current time step </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="diag/dist_rho5D.c" line="216" column="6" bodyfile="diag/dist_rho5D.c" bodystart="216" bodyend="302"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Distribution collecting and processing functions. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="math_8h" kindref="compound">math.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../ascot5.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../consts.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../physlib.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="dist__rho5D_8h" kindref="compound">dist_rho5D.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../particle.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>declare<sp/>target</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="dist__rho5D_8c_1a02e644aa081916bb992edcd44fb078f4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="dist__rho5D_8c_1a02e644aa081916bb992edcd44fb078f4" kindref="member">dist_rho5D_index</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i_rho,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i_theta,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i_phi,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i_ppara,</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i_pperp,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i_time,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i_q,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n_theta,</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n_phi,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n_ppara,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n_pperp,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n_time,</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n_q)<sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>i_rho<sp/><sp/>*<sp/>(n_theta<sp/>*<sp/>n_phi<sp/>*<sp/>n_ppara<sp/>*<sp/>n_pperp<sp/>*<sp/>n_time<sp/>*<sp/>n_q)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>i_theta<sp/>*<sp/>(n_phi<sp/>*<sp/>n_ppara<sp/>*<sp/>n_pperp<sp/>*<sp/>n_time<sp/>*<sp/>n_q)</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>i_phi<sp/><sp/><sp/>*<sp/>(n_ppara<sp/>*<sp/>n_pperp<sp/>*<sp/>n_time<sp/>*<sp/>n_q)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>i_ppara<sp/>*<sp/>(n_pperp<sp/>*<sp/>n_time<sp/>*<sp/>n_q)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>i_pperp<sp/>*<sp/>(n_time<sp/>*<sp/>n_q)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>i_time<sp/><sp/>*<sp/>(n_q)</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>i_q;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>end<sp/>declare<sp/>target</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="dist__rho5D_8c_1a24201f9d0b0d5d1196f4a0f3384fc173" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dist__rho5D_8c_1a24201f9d0b0d5d1196f4a0f3384fc173" kindref="member">dist_rho5D_free_offload</ref>(<ref refid="structdist__rho5D__offload__data" kindref="compound">dist_rho5D_offload_data</ref>*<sp/>offload_data)<sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structdist__rho5D__offload__data_1a5729fc92313e4f766bf8d45ae9216d9a" kindref="member">n_rho</ref><sp/><sp/><sp/><sp/><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structdist__rho5D__offload__data_1a07c8f0e99647dab0082a3f68507345d2" kindref="member">min_rho</ref><sp/><sp/><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structdist__rho5D__offload__data_1a4a08028039219f001ef1658a31dad2b2" kindref="member">max_rho</ref><sp/><sp/><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structdist__rho5D__offload__data_1a86dac7be95994539aac309a226b2a30f" kindref="member">n_theta</ref><sp/><sp/><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structdist__rho5D__offload__data_1abd8b23b76c4e37d5e9fdf8dd32d0c4f5" kindref="member">min_theta</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structdist__rho5D__offload__data_1af697eaf9cec34160df4edbbbfbc3b11f" kindref="member">max_theta</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structdist__rho5D__offload__data_1a335980df7f29c080b6a2b19830e40b50" kindref="member">n_phi</ref><sp/><sp/><sp/><sp/><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structdist__rho5D__offload__data_1ae6c791ed6879a60eb234ff4aab00e8e5" kindref="member">min_phi</ref><sp/><sp/><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structdist__rho5D__offload__data_1a82b69e7744023b9fb35b224dfaa2d3ac" kindref="member">max_phi</ref><sp/><sp/><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structdist__rho5D__offload__data_1a488c833902fe84a74dcb358941ce88d6" kindref="member">n_ppara</ref><sp/><sp/><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structdist__rho5D__offload__data_1a48386f5ff63bbfbc7f07f64131c500c4" kindref="member">min_ppara</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structdist__rho5D__offload__data_1a82b0616495647953b955906dd9ef1e7d" kindref="member">max_ppara</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structdist__rho5D__offload__data_1a2f3893f49ccc9c8a41366e7e2d03b9ce" kindref="member">n_pperp</ref><sp/><sp/><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structdist__rho5D__offload__data_1a114af91bc5fe86d1efde2fa838c89636" kindref="member">min_pperp</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structdist__rho5D__offload__data_1ac1b1d118a6e19611d3d57909201d03a5" kindref="member">max_pperp</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="dist__rho5D_8c_1a7c6dec909849d0523a6fc0cb141db864" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dist__rho5D_8c_1a7c6dec909849d0523a6fc0cb141db864" kindref="member">dist_rho5D_init</ref>(<ref refid="structdist__rho5D__data" kindref="compound">dist_rho5D_data</ref>*<sp/>dist_data,</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structdist__rho5D__offload__data" kindref="compound">dist_rho5D_offload_data</ref>*<sp/>offload_data,</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>offload_array)<sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>dist_data-&gt;<ref refid="structdist__rho5D__data_1ad3e52ae3aebabe5d7eb39aac4e6efd8f" kindref="member">n_rho</ref><sp/><sp/><sp/><sp/><sp/>=<sp/>offload_data-&gt;<ref refid="structdist__rho5D__offload__data_1a5729fc92313e4f766bf8d45ae9216d9a" kindref="member">n_rho</ref>;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>dist_data-&gt;<ref refid="structdist__rho5D__data_1a492a369363f12794c9444ac0b607bc92" kindref="member">min_rho</ref><sp/><sp/><sp/>=<sp/>offload_data-&gt;<ref refid="structdist__rho5D__offload__data_1a07c8f0e99647dab0082a3f68507345d2" kindref="member">min_rho</ref>;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>dist_data-&gt;<ref refid="structdist__rho5D__data_1a9172dfae34a89e77ea4f7999926001c2" kindref="member">max_rho</ref><sp/><sp/><sp/>=<sp/>offload_data-&gt;<ref refid="structdist__rho5D__offload__data_1a4a08028039219f001ef1658a31dad2b2" kindref="member">max_rho</ref>;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>dist_data-&gt;<ref refid="structdist__rho5D__data_1ad919990e5701c8dd8c8055e84ce7e942" kindref="member">n_theta</ref><sp/><sp/><sp/>=<sp/>offload_data-&gt;<ref refid="structdist__rho5D__offload__data_1a86dac7be95994539aac309a226b2a30f" kindref="member">n_theta</ref>;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>dist_data-&gt;<ref refid="structdist__rho5D__data_1a48a465284ac78427acdcebb08be17c06" kindref="member">min_theta</ref><sp/>=<sp/>offload_data-&gt;<ref refid="structdist__rho5D__offload__data_1abd8b23b76c4e37d5e9fdf8dd32d0c4f5" kindref="member">min_theta</ref>;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>dist_data-&gt;<ref refid="structdist__rho5D__data_1a16ff06c1a099918bc8597eaffe40573a" kindref="member">max_theta</ref><sp/>=<sp/>offload_data-&gt;<ref refid="structdist__rho5D__offload__data_1af697eaf9cec34160df4edbbbfbc3b11f" kindref="member">max_theta</ref>;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>dist_data-&gt;<ref refid="structdist__rho5D__data_1a069249112cd58b612921898433b6d1db" kindref="member">n_phi</ref><sp/><sp/><sp/><sp/><sp/>=<sp/>offload_data-&gt;<ref refid="structdist__rho5D__offload__data_1a335980df7f29c080b6a2b19830e40b50" kindref="member">n_phi</ref>;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>dist_data-&gt;<ref refid="structdist__rho5D__data_1a59055ffc7eb66142b01befb73b835094" kindref="member">min_phi</ref><sp/><sp/><sp/>=<sp/>offload_data-&gt;<ref refid="structdist__rho5D__offload__data_1ae6c791ed6879a60eb234ff4aab00e8e5" kindref="member">min_phi</ref>;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>dist_data-&gt;<ref refid="structdist__rho5D__data_1a7a687e1b7f0e9f2058e33b03e09ff959" kindref="member">max_phi</ref><sp/><sp/><sp/>=<sp/>offload_data-&gt;<ref refid="structdist__rho5D__offload__data_1a82b69e7744023b9fb35b224dfaa2d3ac" kindref="member">max_phi</ref>;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>dist_data-&gt;<ref refid="structdist__rho5D__data_1a15acbfc931cbae352454b0a1188167fa" kindref="member">n_ppara</ref><sp/><sp/><sp/>=<sp/>offload_data-&gt;<ref refid="structdist__rho5D__offload__data_1a488c833902fe84a74dcb358941ce88d6" kindref="member">n_ppara</ref>;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>dist_data-&gt;<ref refid="structdist__rho5D__data_1adf24bdd877420a4294f3b8254f358b3b" kindref="member">min_ppara</ref><sp/>=<sp/>offload_data-&gt;<ref refid="structdist__rho5D__offload__data_1a48386f5ff63bbfbc7f07f64131c500c4" kindref="member">min_ppara</ref>;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>dist_data-&gt;<ref refid="structdist__rho5D__data_1a2c5ec98ba23a8cebfa31cb5b0a32f606" kindref="member">max_ppara</ref><sp/>=<sp/>offload_data-&gt;<ref refid="structdist__rho5D__offload__data_1a82b0616495647953b955906dd9ef1e7d" kindref="member">max_ppara</ref>;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>dist_data-&gt;<ref refid="structdist__rho5D__data_1a567840f6eff0e83838fe9c02b331e23d" kindref="member">n_pperp</ref><sp/><sp/><sp/>=<sp/>offload_data-&gt;<ref refid="structdist__rho5D__offload__data_1a2f3893f49ccc9c8a41366e7e2d03b9ce" kindref="member">n_pperp</ref>;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>dist_data-&gt;<ref refid="structdist__rho5D__data_1a4e353a25a22ab6f50a42842a6b4ff6ee" kindref="member">min_pperp</ref><sp/>=<sp/>offload_data-&gt;<ref refid="structdist__rho5D__offload__data_1a114af91bc5fe86d1efde2fa838c89636" kindref="member">min_pperp</ref>;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>dist_data-&gt;<ref refid="structdist__rho5D__data_1a79d494d0c188bdeb0673bd8b3b722218" kindref="member">max_pperp</ref><sp/>=<sp/>offload_data-&gt;<ref refid="structdist__rho5D__offload__data_1ac1b1d118a6e19611d3d57909201d03a5" kindref="member">max_pperp</ref>;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>dist_data-&gt;<ref refid="structdist__rho5D__data_1af826bacb132299d3356221ecf689b95f" kindref="member">n_time</ref><sp/><sp/><sp/><sp/>=<sp/>offload_data-&gt;<ref refid="structdist__rho5D__offload__data_1a2350944e35a04683e54a770d938013f0" kindref="member">n_time</ref>;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>dist_data-&gt;<ref refid="structdist__rho5D__data_1a1b8b3c00ba09d0e3d0aa3a90cbb4d2f2" kindref="member">min_time</ref><sp/><sp/>=<sp/>offload_data-&gt;<ref refid="structdist__rho5D__offload__data_1a7886b4a9526c269c628a51ebfb2b3399" kindref="member">min_time</ref>;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>dist_data-&gt;<ref refid="structdist__rho5D__data_1a2a99aa7585b2a20d4680ca4b8e91ef35" kindref="member">max_time</ref><sp/><sp/>=<sp/>offload_data-&gt;<ref refid="structdist__rho5D__offload__data_1a499d4d6b24261acae2368300429e576b" kindref="member">max_time</ref>;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>dist_data-&gt;<ref refid="structdist__rho5D__data_1ac6a8ae8a98af5dae1efcce863b26e714" kindref="member">n_q</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>offload_data-&gt;<ref refid="structdist__rho5D__offload__data_1a91ff0c7918fc424c4141f64654d2a69a" kindref="member">n_q</ref>;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>dist_data-&gt;<ref refid="structdist__rho5D__data_1aafd5e5f65576f77811e740328533b450" kindref="member">min_q</ref><sp/><sp/><sp/><sp/><sp/>=<sp/>offload_data-&gt;<ref refid="structdist__rho5D__offload__data_1a26766fb391a8f4d17e72dadbde250cc9" kindref="member">min_q</ref>;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>dist_data-&gt;<ref refid="structdist__rho5D__data_1ade36b7b74a52302e14367fd7fff9a50d" kindref="member">max_q</ref><sp/><sp/><sp/><sp/><sp/>=<sp/>offload_data-&gt;<ref refid="structdist__rho5D__offload__data_1aa17d2594c1d9a08203e005ff7eaa9541" kindref="member">max_q</ref>;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>dist_data-&gt;<ref refid="structdist__rho5D__data_1a96e08728cd1015f2e53b56e14103769e" kindref="member">histogram</ref><sp/>=<sp/>&amp;offload_array[0];</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108" refid="dist__rho5D_8c_1ad465bf139fe6990120c779fff785f973" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dist__rho5D_8c_1ad465bf139fe6990120c779fff785f973" kindref="member">dist_rho5D_update_fo</ref>(<ref refid="structdist__rho5D__data" kindref="compound">dist_rho5D_data</ref>*<sp/>dist,<sp/><ref refid="structparticle__simd__fo" kindref="compound">particle_simd_fo</ref>*<sp/>p_f,</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structparticle__simd__fo" kindref="compound">particle_simd_fo</ref>*<sp/>p_i)<sp/>{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>phi[<ref refid="ascot5_8h_1a6368ab06bbb536b220a367552186bbab" kindref="member">NSIMD</ref>];</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>theta[<ref refid="ascot5_8h_1a6368ab06bbb536b220a367552186bbab" kindref="member">NSIMD</ref>];</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>ppara[<ref refid="ascot5_8h_1a6368ab06bbb536b220a367552186bbab" kindref="member">NSIMD</ref>];</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>pperp[<ref refid="ascot5_8h_1a6368ab06bbb536b220a367552186bbab" kindref="member">NSIMD</ref>];</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i_rho[<ref refid="ascot5_8h_1a6368ab06bbb536b220a367552186bbab" kindref="member">NSIMD</ref>];</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i_theta[<ref refid="ascot5_8h_1a6368ab06bbb536b220a367552186bbab" kindref="member">NSIMD</ref>];</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i_phi[<ref refid="ascot5_8h_1a6368ab06bbb536b220a367552186bbab" kindref="member">NSIMD</ref>];</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i_ppara[<ref refid="ascot5_8h_1a6368ab06bbb536b220a367552186bbab" kindref="member">NSIMD</ref>];</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i_pperp[<ref refid="ascot5_8h_1a6368ab06bbb536b220a367552186bbab" kindref="member">NSIMD</ref>];</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i_time[<ref refid="ascot5_8h_1a6368ab06bbb536b220a367552186bbab" kindref="member">NSIMD</ref>];</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i_q[<ref refid="ascot5_8h_1a6368ab06bbb536b220a367552186bbab" kindref="member">NSIMD</ref>];</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ok[<ref refid="ascot5_8h_1a6368ab06bbb536b220a367552186bbab" kindref="member">NSIMD</ref>];</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>weight[<ref refid="ascot5_8h_1a6368ab06bbb536b220a367552186bbab" kindref="member">NSIMD</ref>];</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#pragma<sp/>omp<sp/>simd</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="ascot5_8h_1a6368ab06bbb536b220a367552186bbab" kindref="member">NSIMD</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(p_f-&gt;running[i])<sp/>{</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i_rho[i]<sp/>=<sp/>floor((p_f-&gt;rho[i]<sp/>-<sp/>dist-&gt;<ref refid="structdist__rho5D__data_1a492a369363f12794c9444ac0b607bc92" kindref="member">min_rho</ref>)</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/<sp/>((dist-&gt;<ref refid="structdist__rho5D__data_1a9172dfae34a89e77ea4f7999926001c2" kindref="member">max_rho</ref><sp/>-<sp/>dist-&gt;<ref refid="structdist__rho5D__data_1a492a369363f12794c9444ac0b607bc92" kindref="member">min_rho</ref>)/dist-&gt;<ref refid="structdist__rho5D__data_1ad3e52ae3aebabe5d7eb39aac4e6efd8f" kindref="member">n_rho</ref>));</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>phi[i]<sp/>=<sp/>fmod(p_f-&gt;phi[i],<sp/>2*<ref refid="consts_8h_1a02b01cde332fa86c92d54802cce7f3d2" kindref="member">CONST_PI</ref>);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(phi[i]<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>phi[i]<sp/>=<sp/>phi[i]<sp/>+<sp/>2*<ref refid="consts_8h_1a02b01cde332fa86c92d54802cce7f3d2" kindref="member">CONST_PI</ref>;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i_phi[i]<sp/>=<sp/>floor((phi[i]<sp/>-<sp/>dist-&gt;<ref refid="structdist__rho5D__data_1a59055ffc7eb66142b01befb73b835094" kindref="member">min_phi</ref>)</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/<sp/>((dist-&gt;<ref refid="structdist__rho5D__data_1a7a687e1b7f0e9f2058e33b03e09ff959" kindref="member">max_phi</ref><sp/>-<sp/>dist-&gt;<ref refid="structdist__rho5D__data_1a59055ffc7eb66142b01befb73b835094" kindref="member">min_phi</ref>)/dist-&gt;<ref refid="structdist__rho5D__data_1a069249112cd58b612921898433b6d1db" kindref="member">n_phi</ref>));</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>theta[i]<sp/>=<sp/>fmod(p_f-&gt;theta[i],<sp/>2*<ref refid="consts_8h_1a02b01cde332fa86c92d54802cce7f3d2" kindref="member">CONST_PI</ref>);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(theta[i]<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>theta[i]<sp/>=<sp/>theta[i]<sp/>+<sp/>2*<ref refid="consts_8h_1a02b01cde332fa86c92d54802cce7f3d2" kindref="member">CONST_PI</ref>;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i_theta[i]<sp/>=<sp/>floor((theta[i]<sp/>-<sp/>dist-&gt;<ref refid="structdist__rho5D__data_1a48a465284ac78427acdcebb08be17c06" kindref="member">min_theta</ref>)</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/<sp/>(<sp/>(dist-&gt;<ref refid="structdist__rho5D__data_1a16ff06c1a099918bc8597eaffe40573a" kindref="member">max_theta</ref><sp/>-<sp/>dist-&gt;<ref refid="structdist__rho5D__data_1a48a465284ac78427acdcebb08be17c06" kindref="member">min_theta</ref>)</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/<sp/>dist-&gt;<ref refid="structdist__rho5D__data_1ad919990e5701c8dd8c8055e84ce7e942" kindref="member">n_theta</ref>)<sp/>);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ppara[i]<sp/>=<sp/>(<sp/><sp/>p_f-&gt;p_r[i]<sp/><sp/><sp/>*<sp/>p_f-&gt;B_r[i]</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>p_f-&gt;p_phi[i]<sp/>*<sp/>p_f-&gt;B_phi[i]</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>p_f-&gt;p_z[i]<sp/><sp/><sp/>*<sp/>p_f-&gt;B_z[i])</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/<sp/>sqrt(<sp/><sp/>p_f-&gt;B_r[i]<sp/><sp/>*<sp/>p_f-&gt;B_r[i]</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>p_f-&gt;B_phi[i]*<sp/>p_f-&gt;B_phi[i]</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>p_f-&gt;B_z[i]<sp/><sp/>*<sp/>p_f-&gt;B_z[i]);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i_ppara[i]<sp/>=<sp/>floor((ppara[i]<sp/>-<sp/>dist-&gt;<ref refid="structdist__rho5D__data_1adf24bdd877420a4294f3b8254f358b3b" kindref="member">min_ppara</ref>)</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/<sp/>((dist-&gt;<ref refid="structdist__rho5D__data_1a2c5ec98ba23a8cebfa31cb5b0a32f606" kindref="member">max_ppara</ref><sp/>-<sp/>dist-&gt;<ref refid="structdist__rho5D__data_1adf24bdd877420a4294f3b8254f358b3b" kindref="member">min_ppara</ref>)</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/<sp/>dist-&gt;<ref refid="structdist__rho5D__data_1a15acbfc931cbae352454b0a1188167fa" kindref="member">n_ppara</ref>));</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pperp[i]<sp/>=<sp/>sqrt(</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p_f-&gt;p_r[i]<sp/><sp/><sp/>*<sp/>p_f-&gt;p_r[i]</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>p_f-&gt;p_phi[i]<sp/>*<sp/>p_f-&gt;p_phi[i]</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>p_f-&gt;p_z[i]<sp/><sp/><sp/>*<sp/>p_f-&gt;p_z[i]</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>ppara[i]<sp/>*<sp/>ppara[i]);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i_pperp[i]<sp/>=<sp/>floor((pperp[i]<sp/>-<sp/>dist-&gt;<ref refid="structdist__rho5D__data_1a4e353a25a22ab6f50a42842a6b4ff6ee" kindref="member">min_pperp</ref>)</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/<sp/>((dist-&gt;<ref refid="structdist__rho5D__data_1a79d494d0c188bdeb0673bd8b3b722218" kindref="member">max_pperp</ref><sp/>-<sp/>dist-&gt;<ref refid="structdist__rho5D__data_1a4e353a25a22ab6f50a42842a6b4ff6ee" kindref="member">min_pperp</ref>)</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/<sp/>dist-&gt;<ref refid="structdist__rho5D__data_1a567840f6eff0e83838fe9c02b331e23d" kindref="member">n_pperp</ref>));</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i_time[i]<sp/>=<sp/>floor((p_f-&gt;time[i]<sp/>-<sp/>dist-&gt;<ref refid="structdist__rho5D__data_1a1b8b3c00ba09d0e3d0aa3a90cbb4d2f2" kindref="member">min_time</ref>)</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/<sp/>((dist-&gt;<ref refid="structdist__rho5D__data_1a2a99aa7585b2a20d4680ca4b8e91ef35" kindref="member">max_time</ref><sp/>-<sp/>dist-&gt;<ref refid="structdist__rho5D__data_1a1b8b3c00ba09d0e3d0aa3a90cbb4d2f2" kindref="member">min_time</ref>)<sp/>/<sp/>dist-&gt;<ref refid="structdist__rho5D__data_1af826bacb132299d3356221ecf689b95f" kindref="member">n_time</ref>));</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i_q[i]<sp/>=<sp/>floor((p_f-&gt;charge[i]/<ref refid="consts_8h_1aa2d52037e91528e354a59fc909365f7c" kindref="member">CONST_E</ref><sp/>-<sp/>dist-&gt;<ref refid="structdist__rho5D__data_1aafd5e5f65576f77811e740328533b450" kindref="member">min_q</ref>)</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/<sp/>((dist-&gt;<ref refid="structdist__rho5D__data_1ade36b7b74a52302e14367fd7fff9a50d" kindref="member">max_q</ref><sp/>-<sp/>dist-&gt;<ref refid="structdist__rho5D__data_1aafd5e5f65576f77811e740328533b450" kindref="member">min_q</ref>)<sp/>/<sp/>dist-&gt;<ref refid="structdist__rho5D__data_1ac6a8ae8a98af5dae1efcce863b26e714" kindref="member">n_q</ref>));</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(i_rho[i]<sp/><sp/><sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>i_rho[i]<sp/><sp/><sp/>&lt;=<sp/>dist-&gt;<ref refid="structdist__rho5D__data_1ad3e52ae3aebabe5d7eb39aac4e6efd8f" kindref="member">n_rho</ref><sp/>-<sp/>1<sp/><sp/><sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i_phi[i]<sp/><sp/><sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>i_phi[i]<sp/><sp/><sp/>&lt;=<sp/>dist-&gt;<ref refid="structdist__rho5D__data_1a069249112cd58b612921898433b6d1db" kindref="member">n_phi</ref><sp/>-<sp/>1<sp/><sp/><sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i_theta[i]<sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>i_theta[i]<sp/>&lt;=<sp/>dist-&gt;<ref refid="structdist__rho5D__data_1ad919990e5701c8dd8c8055e84ce7e942" kindref="member">n_theta</ref><sp/>-<sp/>1<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i_ppara[i]<sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>i_ppara[i]<sp/>&lt;=<sp/>dist-&gt;<ref refid="structdist__rho5D__data_1a15acbfc931cbae352454b0a1188167fa" kindref="member">n_ppara</ref><sp/>-<sp/>1<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i_pperp[i]<sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>i_pperp[i]<sp/>&lt;=<sp/>dist-&gt;<ref refid="structdist__rho5D__data_1a567840f6eff0e83838fe9c02b331e23d" kindref="member">n_pperp</ref><sp/>-<sp/>1<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i_time[i]<sp/><sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>i_time[i]<sp/><sp/>&lt;=<sp/>dist-&gt;<ref refid="structdist__rho5D__data_1af826bacb132299d3356221ecf689b95f" kindref="member">n_time</ref><sp/>-<sp/>1<sp/><sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i_q[i]<sp/><sp/><sp/><sp/><sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>i_q[i]<sp/><sp/><sp/><sp/><sp/>&lt;=<sp/>dist-&gt;<ref refid="structdist__rho5D__data_1ac6a8ae8a98af5dae1efcce863b26e714" kindref="member">n_q</ref><sp/>-<sp/>1<sp/><sp/><sp/><sp/><sp/><sp/><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ok[i]<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>weight[i]<sp/>=<sp/>p_f-&gt;weight[i]<sp/>*<sp/>(p_f-&gt;time[i]<sp/>-<sp/>p_i-&gt;time[i]);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ok[i]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="ascot5_8h_1a6368ab06bbb536b220a367552186bbab" kindref="member">NSIMD</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(p_f-&gt;running[i]<sp/>&amp;&amp;<sp/>ok[i])<sp/>{</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>index<sp/>=<sp/><ref refid="dist__rho5D_8c_1a02e644aa081916bb992edcd44fb078f4" kindref="member">dist_rho5D_index</ref>(i_rho[i],<sp/>i_theta[i],</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i_phi[i],<sp/>i_ppara[i],</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i_pperp[i],<sp/>i_time[i],</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i_q[i],</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dist-&gt;<ref refid="structdist__rho5D__data_1ad919990e5701c8dd8c8055e84ce7e942" kindref="member">n_theta</ref>,<sp/>dist-&gt;<ref refid="structdist__rho5D__data_1a069249112cd58b612921898433b6d1db" kindref="member">n_phi</ref>,</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dist-&gt;<ref refid="structdist__rho5D__data_1a15acbfc931cbae352454b0a1188167fa" kindref="member">n_ppara</ref>,<sp/>dist-&gt;<ref refid="structdist__rho5D__data_1a567840f6eff0e83838fe9c02b331e23d" kindref="member">n_pperp</ref>,</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dist-&gt;<ref refid="structdist__rho5D__data_1af826bacb132299d3356221ecf689b95f" kindref="member">n_time</ref>,<sp/>dist-&gt;<ref refid="structdist__rho5D__data_1ac6a8ae8a98af5dae1efcce863b26e714" kindref="member">n_q</ref>);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#pragma<sp/>omp<sp/>atomic</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dist-&gt;<ref refid="structdist__rho5D__data_1a96e08728cd1015f2e53b56e14103769e" kindref="member">histogram</ref>[index]<sp/>+=<sp/>weight[i];</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="203"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216" refid="dist__rho5D_8c_1a6fee10a74bc7bdc9e880a3aad56d0d2f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dist__rho5D_8c_1a6fee10a74bc7bdc9e880a3aad56d0d2f" kindref="member">dist_rho5D_update_gc</ref>(<ref refid="structdist__rho5D__data" kindref="compound">dist_rho5D_data</ref>*<sp/>dist,<sp/><ref refid="structparticle__simd__gc" kindref="compound">particle_simd_gc</ref>*<sp/>p_f,</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structparticle__simd__gc" kindref="compound">particle_simd_gc</ref>*<sp/>p_i)<sp/>{</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>phi[<ref refid="ascot5_8h_1a6368ab06bbb536b220a367552186bbab" kindref="member">NSIMD</ref>];</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>theta[<ref refid="ascot5_8h_1a6368ab06bbb536b220a367552186bbab" kindref="member">NSIMD</ref>];</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>pperp[<ref refid="ascot5_8h_1a6368ab06bbb536b220a367552186bbab" kindref="member">NSIMD</ref>];</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i_rho[<ref refid="ascot5_8h_1a6368ab06bbb536b220a367552186bbab" kindref="member">NSIMD</ref>];</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i_phi[<ref refid="ascot5_8h_1a6368ab06bbb536b220a367552186bbab" kindref="member">NSIMD</ref>];</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i_theta[<ref refid="ascot5_8h_1a6368ab06bbb536b220a367552186bbab" kindref="member">NSIMD</ref>];</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i_ppara[<ref refid="ascot5_8h_1a6368ab06bbb536b220a367552186bbab" kindref="member">NSIMD</ref>];</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i_pperp[<ref refid="ascot5_8h_1a6368ab06bbb536b220a367552186bbab" kindref="member">NSIMD</ref>];</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i_time[<ref refid="ascot5_8h_1a6368ab06bbb536b220a367552186bbab" kindref="member">NSIMD</ref>];</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i_q[<ref refid="ascot5_8h_1a6368ab06bbb536b220a367552186bbab" kindref="member">NSIMD</ref>];</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ok[<ref refid="ascot5_8h_1a6368ab06bbb536b220a367552186bbab" kindref="member">NSIMD</ref>];</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>weight[<ref refid="ascot5_8h_1a6368ab06bbb536b220a367552186bbab" kindref="member">NSIMD</ref>];</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#pragma<sp/>omp<sp/>simd</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="ascot5_8h_1a6368ab06bbb536b220a367552186bbab" kindref="member">NSIMD</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(p_f-&gt;running[i])<sp/>{</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i_rho[i]<sp/>=<sp/>floor((p_f-&gt;rho[i]<sp/>-<sp/>dist-&gt;<ref refid="structdist__rho5D__data_1a492a369363f12794c9444ac0b607bc92" kindref="member">min_rho</ref>)</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/<sp/>((dist-&gt;<ref refid="structdist__rho5D__data_1a9172dfae34a89e77ea4f7999926001c2" kindref="member">max_rho</ref><sp/>-<sp/>dist-&gt;<ref refid="structdist__rho5D__data_1a492a369363f12794c9444ac0b607bc92" kindref="member">min_rho</ref>)/dist-&gt;<ref refid="structdist__rho5D__data_1ad3e52ae3aebabe5d7eb39aac4e6efd8f" kindref="member">n_rho</ref>));</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>phi[i]<sp/>=<sp/>fmod(p_f-&gt;phi[i],<sp/>2*<ref refid="consts_8h_1a02b01cde332fa86c92d54802cce7f3d2" kindref="member">CONST_PI</ref>);</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(phi[i]<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>phi[i]<sp/>=<sp/>phi[i]<sp/>+<sp/>2*<ref refid="consts_8h_1a02b01cde332fa86c92d54802cce7f3d2" kindref="member">CONST_PI</ref>;</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i_phi[i]<sp/>=<sp/>floor((phi[i]<sp/>-<sp/>dist-&gt;<ref refid="structdist__rho5D__data_1a59055ffc7eb66142b01befb73b835094" kindref="member">min_phi</ref>)</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/<sp/>((dist-&gt;<ref refid="structdist__rho5D__data_1a7a687e1b7f0e9f2058e33b03e09ff959" kindref="member">max_phi</ref><sp/>-<sp/>dist-&gt;<ref refid="structdist__rho5D__data_1a59055ffc7eb66142b01befb73b835094" kindref="member">min_phi</ref>)/dist-&gt;<ref refid="structdist__rho5D__data_1a069249112cd58b612921898433b6d1db" kindref="member">n_phi</ref>));</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>theta[i]<sp/>=<sp/>fmod(p_f-&gt;theta[i],<sp/>2*<ref refid="consts_8h_1a02b01cde332fa86c92d54802cce7f3d2" kindref="member">CONST_PI</ref>);</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(theta[i]<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>theta[i]<sp/>=<sp/>theta[i]<sp/>+<sp/>2*<ref refid="consts_8h_1a02b01cde332fa86c92d54802cce7f3d2" kindref="member">CONST_PI</ref>;</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i_theta[i]<sp/>=<sp/>floor((theta[i]<sp/>-<sp/>dist-&gt;<ref refid="structdist__rho5D__data_1a48a465284ac78427acdcebb08be17c06" kindref="member">min_theta</ref>)</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/<sp/>((dist-&gt;<ref refid="structdist__rho5D__data_1a16ff06c1a099918bc8597eaffe40573a" kindref="member">max_theta</ref><sp/>-<sp/>dist-&gt;<ref refid="structdist__rho5D__data_1a48a465284ac78427acdcebb08be17c06" kindref="member">min_theta</ref>)</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/<sp/>dist-&gt;<ref refid="structdist__rho5D__data_1ad919990e5701c8dd8c8055e84ce7e942" kindref="member">n_theta</ref>));</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i_ppara[i]<sp/>=<sp/>floor((p_f-&gt;ppar[i]<sp/>-<sp/>dist-&gt;<ref refid="structdist__rho5D__data_1adf24bdd877420a4294f3b8254f358b3b" kindref="member">min_ppara</ref>)</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/<sp/>((dist-&gt;<ref refid="structdist__rho5D__data_1a2c5ec98ba23a8cebfa31cb5b0a32f606" kindref="member">max_ppara</ref><sp/>-<sp/>dist-&gt;<ref refid="structdist__rho5D__data_1adf24bdd877420a4294f3b8254f358b3b" kindref="member">min_ppara</ref>)<sp/>/<sp/>dist-&gt;<ref refid="structdist__rho5D__data_1a15acbfc931cbae352454b0a1188167fa" kindref="member">n_ppara</ref>));</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pperp[i]<sp/>=<sp/>sqrt(2<sp/>*<sp/>sqrt(<sp/><sp/>p_f-&gt;B_r[i]<sp/><sp/><sp/>*<sp/>p_f-&gt;B_r[i]</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>p_f-&gt;B_phi[i]<sp/>*<sp/>p_f-&gt;B_phi[i]</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>p_f-&gt;B_z[i]<sp/><sp/><sp/>*<sp/>p_f-&gt;B_z[i]<sp/>)</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>p_f-&gt;mu[i]<sp/>*<sp/>p_f-&gt;mass[i]);</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i_pperp[i]<sp/>=<sp/>floor((pperp[i]<sp/>-<sp/>dist-&gt;<ref refid="structdist__rho5D__data_1a4e353a25a22ab6f50a42842a6b4ff6ee" kindref="member">min_pperp</ref>)</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/<sp/>((dist-&gt;<ref refid="structdist__rho5D__data_1a79d494d0c188bdeb0673bd8b3b722218" kindref="member">max_pperp</ref><sp/>-<sp/>dist-&gt;<ref refid="structdist__rho5D__data_1a4e353a25a22ab6f50a42842a6b4ff6ee" kindref="member">min_pperp</ref>)</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/<sp/>dist-&gt;<ref refid="structdist__rho5D__data_1a567840f6eff0e83838fe9c02b331e23d" kindref="member">n_pperp</ref>));</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i_time[i]<sp/>=<sp/>floor((p_f-&gt;time[i]<sp/>-<sp/>dist-&gt;<ref refid="structdist__rho5D__data_1a1b8b3c00ba09d0e3d0aa3a90cbb4d2f2" kindref="member">min_time</ref>)</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/<sp/>((dist-&gt;<ref refid="structdist__rho5D__data_1a2a99aa7585b2a20d4680ca4b8e91ef35" kindref="member">max_time</ref><sp/>-<sp/>dist-&gt;<ref refid="structdist__rho5D__data_1a1b8b3c00ba09d0e3d0aa3a90cbb4d2f2" kindref="member">min_time</ref>)<sp/>/<sp/>dist-&gt;<ref refid="structdist__rho5D__data_1af826bacb132299d3356221ecf689b95f" kindref="member">n_time</ref>));</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i_q[i]<sp/>=<sp/>floor((p_f-&gt;charge[i]/<ref refid="consts_8h_1aa2d52037e91528e354a59fc909365f7c" kindref="member">CONST_E</ref><sp/>-<sp/>dist-&gt;<ref refid="structdist__rho5D__data_1aafd5e5f65576f77811e740328533b450" kindref="member">min_q</ref>)</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/<sp/>((dist-&gt;<ref refid="structdist__rho5D__data_1ade36b7b74a52302e14367fd7fff9a50d" kindref="member">max_q</ref><sp/>-<sp/>dist-&gt;<ref refid="structdist__rho5D__data_1aafd5e5f65576f77811e740328533b450" kindref="member">min_q</ref>)<sp/>/<sp/>dist-&gt;<ref refid="structdist__rho5D__data_1ac6a8ae8a98af5dae1efcce863b26e714" kindref="member">n_q</ref>));</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(i_rho[i]<sp/><sp/><sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>i_rho[i]<sp/><sp/><sp/>&lt;=<sp/>dist-&gt;<ref refid="structdist__rho5D__data_1ad3e52ae3aebabe5d7eb39aac4e6efd8f" kindref="member">n_rho</ref><sp/>-<sp/>1<sp/><sp/><sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i_phi[i]<sp/><sp/><sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>i_phi[i]<sp/><sp/><sp/>&lt;=<sp/>dist-&gt;<ref refid="structdist__rho5D__data_1a069249112cd58b612921898433b6d1db" kindref="member">n_phi</ref><sp/>-<sp/>1<sp/><sp/><sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i_theta[i]<sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>i_theta[i]<sp/>&lt;=<sp/>dist-&gt;<ref refid="structdist__rho5D__data_1ad919990e5701c8dd8c8055e84ce7e942" kindref="member">n_theta</ref><sp/>-<sp/>1<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i_ppara[i]<sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>i_ppara[i]<sp/>&lt;=<sp/>dist-&gt;<ref refid="structdist__rho5D__data_1a15acbfc931cbae352454b0a1188167fa" kindref="member">n_ppara</ref><sp/>-<sp/>1<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i_pperp[i]<sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>i_pperp[i]<sp/>&lt;=<sp/>dist-&gt;<ref refid="structdist__rho5D__data_1a567840f6eff0e83838fe9c02b331e23d" kindref="member">n_pperp</ref><sp/>-<sp/>1<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i_time[i]<sp/><sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>i_time[i]<sp/><sp/>&lt;=<sp/>dist-&gt;<ref refid="structdist__rho5D__data_1af826bacb132299d3356221ecf689b95f" kindref="member">n_time</ref><sp/>-<sp/>1<sp/><sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i_q[i]<sp/><sp/><sp/><sp/><sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>i_q[i]<sp/><sp/><sp/><sp/><sp/>&lt;=<sp/>dist-&gt;<ref refid="structdist__rho5D__data_1ac6a8ae8a98af5dae1efcce863b26e714" kindref="member">n_q</ref><sp/>-<sp/>1<sp/><sp/><sp/><sp/><sp/><sp/><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ok[i]<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>weight[i]<sp/>=<sp/>p_f-&gt;weight[i]<sp/>*<sp/>(p_f-&gt;time[i]<sp/>-<sp/>p_i-&gt;time[i]);</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ok[i]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="ascot5_8h_1a6368ab06bbb536b220a367552186bbab" kindref="member">NSIMD</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(p_f-&gt;running[i]<sp/>&amp;&amp;<sp/>ok[i])<sp/>{</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>index<sp/>=<sp/><ref refid="dist__rho5D_8c_1a02e644aa081916bb992edcd44fb078f4" kindref="member">dist_rho5D_index</ref>(i_rho[i],<sp/>i_theta[i],</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i_phi[i],<sp/>i_ppara[i],</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i_pperp[i],<sp/>i_time[i],</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i_q[i],</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dist-&gt;<ref refid="structdist__rho5D__data_1ad919990e5701c8dd8c8055e84ce7e942" kindref="member">n_theta</ref>,<sp/>dist-&gt;<ref refid="structdist__rho5D__data_1a069249112cd58b612921898433b6d1db" kindref="member">n_phi</ref>,</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dist-&gt;<ref refid="structdist__rho5D__data_1a15acbfc931cbae352454b0a1188167fa" kindref="member">n_ppara</ref>,<sp/>dist-&gt;<ref refid="structdist__rho5D__data_1a567840f6eff0e83838fe9c02b331e23d" kindref="member">n_pperp</ref>,</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dist-&gt;<ref refid="structdist__rho5D__data_1af826bacb132299d3356221ecf689b95f" kindref="member">n_time</ref>,<sp/>dist-&gt;<ref refid="structdist__rho5D__data_1ac6a8ae8a98af5dae1efcce863b26e714" kindref="member">n_q</ref>);</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#pragma<sp/>omp<sp/>atomic</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dist-&gt;<ref refid="structdist__rho5D__data_1a96e08728cd1015f2e53b56e14103769e" kindref="member">histogram</ref>[index]<sp/>+=<sp/>weight[i];</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="302"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="diag/dist_rho5D.c"/>
+  </compounddef>
+</doxygen>

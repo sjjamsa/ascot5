@@ -1,0 +1,400 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="random_8c" kind="file" language="C++">
+    <compoundname>random.c</compoundname>
+    <includes local="no">stdlib.h</includes>
+    <includes refid="math_8h" local="no">math.h</includes>
+    <includes refid="consts_8h" local="yes">consts.h</includes>
+    <includes refid="random_8h" local="yes">random.h</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>stdlib.h</label>
+      </node>
+      <node id="5">
+        <label>omp.h</label>
+      </node>
+      <node id="7">
+        <label>consts.h</label>
+        <link refid="consts_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>random.c</label>
+        <link refid="random_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>random.h</label>
+        <link refid="random_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>time.h</label>
+      </node>
+      <node id="3">
+        <label>math.h</label>
+        <link refid="math_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>ascot5.h</label>
+        <link refid="ascot5_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="random_8c_1a78c99ffd76a7bb3c8c74db76207e9ab4" prot="public" static="no">
+        <name>_XOPEN_SOURCE</name>
+        <initializer>500</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>rand48 requires POSIX 1995 standard </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="random.c" line="159" column="9" bodyfile="random.c" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="random_8c_1a5915012629c25f9153523a691002397a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double random_drand48_normal</definition>
+        <argsstring>()</argsstring>
+        <name>random_drand48_normal</name>
+        <briefdescription>
+<para>Initialize random generator which uses the linear congruential algorithm and 48-bit integer arithmetic. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="random.c" line="171" column="8" bodyfile="random.c" bodystart="171" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="random_8c_1a493caa433deb23d640d1516abec6c119" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void random_drand48_uniform_simd</definition>
+        <argsstring>(int n, double *r)</argsstring>
+        <name>random_drand48_uniform_simd</name>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+<para>Vectorised sampling from uniform distribution. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Uses the linear congruential algorithm and 48-bit integer arithmetic.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of numbers to be sampled </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer where the values are stored </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="random.c" line="185" column="6" bodyfile="random.c" bodystart="185" bodyend="190"/>
+      </memberdef>
+      <memberdef kind="function" id="random_8c_1a9bc5e7951b06ca7dbd6fa570f9e38a36" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void random_drand48_normal_simd</definition>
+        <argsstring>(int n, double *r)</argsstring>
+        <name>random_drand48_normal_simd</name>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+<para>Vectorised sampling from normal distribution. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Uses the linear congruential algorithm and 48-bit integer arithmetic.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of numbers to be sampled </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer where the values are stored </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="random.c" line="200" column="6" bodyfile="random.c" bodystart="200" bodyend="242"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Random number generator interface. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(RANDOM_MKL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;mkl_vsl.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="random_8h" kindref="compound">random.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>random_mkl_init(<ref refid="random_8h_1a103c9e22750b3fbab1ce5060f56f5100" kindref="member">random_data</ref>*<sp/><ref refid="afsi_8c_1a1ea73a6198c64bba3f8809a2c97aff0f" kindref="member">rdata</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>seed)<sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>vslNewStream(&amp;<ref refid="afsi_8c_1a1ea73a6198c64bba3f8809a2c97aff0f" kindref="member">rdata</ref>-&gt;r,<sp/>RANDOM_MKL_RNG,<sp/>seed);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>random_mkl_uniform(<ref refid="random_8h_1a103c9e22750b3fbab1ce5060f56f5100" kindref="member">random_data</ref>*<sp/><ref refid="afsi_8c_1a1ea73a6198c64bba3f8809a2c97aff0f" kindref="member">rdata</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>vdRngUniform(VSL_RNG_METHOD_UNIFORM_STD,<sp/><ref refid="afsi_8c_1a1ea73a6198c64bba3f8809a2c97aff0f" kindref="member">rdata</ref>-&gt;r,<sp/>1,<sp/>&amp;r,<sp/>0.0,<sp/>1.0);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>r;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>random_mkl_normal(<ref refid="random_8h_1a103c9e22750b3fbab1ce5060f56f5100" kindref="member">random_data</ref>*<sp/><ref refid="afsi_8c_1a1ea73a6198c64bba3f8809a2c97aff0f" kindref="member">rdata</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>vdRngGaussian(VSL_RNG_METHOD_GAUSSIAN_BOXMULLER,<sp/><ref refid="afsi_8c_1a1ea73a6198c64bba3f8809a2c97aff0f" kindref="member">rdata</ref>-&gt;r,<sp/>1,<sp/>&amp;r,<sp/>0.0,<sp/>1.0);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>r;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>random_mkl_uniform_simd(<ref refid="random_8h_1a103c9e22750b3fbab1ce5060f56f5100" kindref="member">random_data</ref>*<sp/><ref refid="afsi_8c_1a1ea73a6198c64bba3f8809a2c97aff0f" kindref="member">rdata</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*<sp/>r)<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>vdRngUniform(VSL_RNG_METHOD_UNIFORM_STD,<sp/><ref refid="afsi_8c_1a1ea73a6198c64bba3f8809a2c97aff0f" kindref="member">rdata</ref>-&gt;r,<sp/>n,<sp/>r,<sp/>0.0,<sp/>1.0);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>random_mkl_normal_simd(<ref refid="random_8h_1a103c9e22750b3fbab1ce5060f56f5100" kindref="member">random_data</ref>*<sp/><ref refid="afsi_8c_1a1ea73a6198c64bba3f8809a2c97aff0f" kindref="member">rdata</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*<sp/>r)<sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>vdRngGaussian(VSL_RNG_METHOD_GAUSSIAN_BOXMULLER2,<sp/><ref refid="afsi_8c_1a1ea73a6198c64bba3f8809a2c97aff0f" kindref="member">rdata</ref>-&gt;r,<sp/>n,<sp/>r,<sp/>0.0,<sp/>1.0);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(RANDOM_GSL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gsl/gsl_rng.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="random_8h" kindref="compound">random.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>random_gsl_init(<ref refid="random_8h_1a103c9e22750b3fbab1ce5060f56f5100" kindref="member">random_data</ref>*<sp/><ref refid="afsi_8c_1a1ea73a6198c64bba3f8809a2c97aff0f" kindref="member">rdata</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>seed)<sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="afsi_8c_1a1ea73a6198c64bba3f8809a2c97aff0f" kindref="member">rdata</ref>-&gt;r<sp/>=<sp/>gsl_rng_alloc(gsl_rng_mt19937);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>gsl_rng_set(<ref refid="afsi_8c_1a1ea73a6198c64bba3f8809a2c97aff0f" kindref="member">rdata</ref>-&gt;r,<sp/>seed);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>random_gsl_uniform(<ref refid="random_8h_1a103c9e22750b3fbab1ce5060f56f5100" kindref="member">random_data</ref>*<sp/><ref refid="afsi_8c_1a1ea73a6198c64bba3f8809a2c97aff0f" kindref="member">rdata</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>gsl_rng_uniform(<ref refid="afsi_8c_1a1ea73a6198c64bba3f8809a2c97aff0f" kindref="member">rdata</ref>-&gt;r);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>random_gsl_normal(<ref refid="random_8h_1a103c9e22750b3fbab1ce5060f56f5100" kindref="member">random_data</ref>*<sp/><ref refid="afsi_8c_1a1ea73a6198c64bba3f8809a2c97aff0f" kindref="member">rdata</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>gsl_ran_gaussian(<ref refid="afsi_8c_1a1ea73a6198c64bba3f8809a2c97aff0f" kindref="member">rdata</ref>-&gt;r,<sp/>1.0);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>random_gsl_uniform_simd(<ref refid="random_8h_1a103c9e22750b3fbab1ce5060f56f5100" kindref="member">random_data</ref>*<sp/><ref refid="afsi_8c_1a1ea73a6198c64bba3f8809a2c97aff0f" kindref="member">rdata</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*<sp/>r)<sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#pragma<sp/>omp<sp/>simd</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>n;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>r[i]<sp/>=<sp/>gsl_rng_uniform(<ref refid="afsi_8c_1a1ea73a6198c64bba3f8809a2c97aff0f" kindref="member">rdata</ref>-&gt;r);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>random_gsl_normal_simd(<ref refid="random_8h_1a103c9e22750b3fbab1ce5060f56f5100" kindref="member">random_data</ref>*<sp/><ref refid="afsi_8c_1a1ea73a6198c64bba3f8809a2c97aff0f" kindref="member">rdata</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*<sp/>r)<sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#pragma<sp/>omp<sp/>simd</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>n;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>r[i]<sp/>=<sp/>gsl_ran_gaussian(<ref refid="afsi_8c_1a1ea73a6198c64bba3f8809a2c97aff0f" kindref="member">rdata</ref>-&gt;r,<sp/>1.0);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(RANDOM_LCG)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="math_8h" kindref="compound">math.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="consts_8h" kindref="compound">consts.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="random_8h" kindref="compound">random.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>random_lcg_init(<ref refid="random_8h_1a103c9e22750b3fbab1ce5060f56f5100" kindref="member">random_data</ref>*<sp/><ref refid="afsi_8c_1a1ea73a6198c64bba3f8809a2c97aff0f" kindref="member">rdata</ref>,<sp/>uint64_t<sp/>seed)<sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="afsi_8c_1a1ea73a6198c64bba3f8809a2c97aff0f" kindref="member">rdata</ref>-&gt;r<sp/>=<sp/>seed;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal">uint64_t<sp/>random_lcg_integer(<ref refid="random_8h_1a103c9e22750b3fbab1ce5060f56f5100" kindref="member">random_data</ref>*<sp/><ref refid="afsi_8c_1a1ea73a6198c64bba3f8809a2c97aff0f" kindref="member">rdata</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>parameters<sp/>from<sp/>https://nuclear.llnl.gov/CNP/rng/rngman/node4.html<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/>a<sp/>=<sp/>2862933555777941757;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/>b<sp/>=<sp/>3037000493;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="afsi_8c_1a1ea73a6198c64bba3f8809a2c97aff0f" kindref="member">rdata</ref>-&gt;r<sp/>=<sp/>(a<sp/>*<sp/><ref refid="afsi_8c_1a1ea73a6198c64bba3f8809a2c97aff0f" kindref="member">rdata</ref>-&gt;r<sp/>+<sp/>b);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="afsi_8c_1a1ea73a6198c64bba3f8809a2c97aff0f" kindref="member">rdata</ref>-&gt;r;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>random_lcg_uniform(<ref refid="random_8h_1a103c9e22750b3fbab1ce5060f56f5100" kindref="member">random_data</ref>*<sp/><ref refid="afsi_8c_1a1ea73a6198c64bba3f8809a2c97aff0f" kindref="member">rdata</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>random_lcg_uniform_simd(<ref refid="afsi_8c_1a1ea73a6198c64bba3f8809a2c97aff0f" kindref="member">rdata</ref>,<sp/>1,<sp/>&amp;r);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>r;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>random_lcg_normal(<ref refid="random_8h_1a103c9e22750b3fbab1ce5060f56f5100" kindref="member">random_data</ref>*<sp/><ref refid="afsi_8c_1a1ea73a6198c64bba3f8809a2c97aff0f" kindref="member">rdata</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>random_lcg_normal_simd(<ref refid="afsi_8c_1a1ea73a6198c64bba3f8809a2c97aff0f" kindref="member">rdata</ref>,<sp/>1,<sp/>&amp;r);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>r;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>random_lcg_uniform_simd(<ref refid="random_8h_1a103c9e22750b3fbab1ce5060f56f5100" kindref="member">random_data</ref>*<sp/><ref refid="afsi_8c_1a1ea73a6198c64bba3f8809a2c97aff0f" kindref="member">rdata</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*<sp/>r)<sp/>{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>SIMD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#pragma<sp/>omp<sp/>simd</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>n;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>r[i]<sp/>=<sp/>(double)<sp/>random_lcg_integer(<ref refid="afsi_8c_1a1ea73a6198c64bba3f8809a2c97aff0f" kindref="member">rdata</ref>)<sp/>/<sp/>UINT64_MAX;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>random_lcg_normal_simd(<ref refid="random_8h_1a103c9e22750b3fbab1ce5060f56f5100" kindref="member">random_data</ref>*<sp/><ref refid="afsi_8c_1a1ea73a6198c64bba3f8809a2c97aff0f" kindref="member">rdata</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*<sp/>r)<sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x1,<sp/>x2,<sp/>w;<sp/></highlight><highlight class="comment">/*<sp/>Helper<sp/>variables<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>isEven<sp/>=<sp/>(n+1)<sp/>%<sp/>2;<sp/></highlight><highlight class="comment">/*<sp/>Indicates<sp/>if<sp/>even<sp/>number<sp/>of<sp/>random<sp/>numbers<sp/>are</highlight></codeline>
+<codeline lineno="111"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>requested<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>A5_CCOL_USE_GEOBM<sp/>==<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>The<sp/>geometric<sp/>form<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>SIMD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#pragma<sp/>omp<sp/>simd</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>n;<sp/>i=i+2)<sp/>{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>w<sp/>=<sp/>2.0;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(<sp/>w<sp/>&gt;=<sp/>1.0<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x1<sp/>=<sp/>2*random_lcg_uniform(<ref refid="afsi_8c_1a1ea73a6198c64bba3f8809a2c97aff0f" kindref="member">rdata</ref>)-1;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x2<sp/>=<sp/>2*random_lcg_uniform(<ref refid="afsi_8c_1a1ea73a6198c64bba3f8809a2c97aff0f" kindref="member">rdata</ref>)-1;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>w<sp/>=<sp/>x1*x1<sp/>+<sp/>x2*x2;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>w<sp/>=<sp/>sqrt(<sp/>(-2<sp/>*<sp/>log(<sp/>w<sp/>)<sp/>)<sp/>/<sp/>w<sp/>);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>r[i]<sp/>=<sp/>x1<sp/>*<sp/>w;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">((i<sp/>&lt;<sp/>n-2)<sp/>||<sp/>(isEven<sp/>&gt;<sp/>0))<sp/>{</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>r[i+1]<sp/>=<sp/>x2<sp/>*<sp/>w;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>The<sp/>common<sp/>form<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>s;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>SIMD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#pragma<sp/>omp<sp/>simd</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>n;<sp/>i=i+2)<sp/>{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x1<sp/>=<sp/>random_lcg_uniform(<ref refid="afsi_8c_1a1ea73a6198c64bba3f8809a2c97aff0f" kindref="member">rdata</ref>);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x2<sp/>=<sp/>random_lcg_uniform(<ref refid="afsi_8c_1a1ea73a6198c64bba3f8809a2c97aff0f" kindref="member">rdata</ref>);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>w<sp/>=<sp/>sqrt(-2*log(x1));</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>s<sp/>=<sp/>cos(<ref refid="consts_8h_1a99afae74ef964a9048eb263452e6e158" kindref="member">CONST_2PI</ref>*x2);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>r[i]<sp/>=<sp/>w*s;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">((i<sp/>&lt;<sp/>n-2)<sp/>||<sp/>(isEven<sp/>&gt;<sp/>0)<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(x2<sp/>&lt;<sp/>0.5)<sp/>{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>r[i+1]<sp/>=<sp/>w*sqrt(1-s*s);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>r[i+1]<sp/>=<sp/>-w*sqrt(1-s*s);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight><highlight class="preprocessor">#else<sp/></highlight><highlight class="comment">/*<sp/>No<sp/>RNG<sp/>lib<sp/>defined,<sp/>use<sp/>drand48<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159" refid="random_8c_1a78c99ffd76a7bb3c8c74db76207e9ab4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_XOPEN_SOURCE<sp/>500<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="math_8h" kindref="compound">math.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="consts_8h" kindref="compound">consts.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="random_8h" kindref="compound">random.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171" refid="random_8c_1a5915012629c25f9153523a691002397a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="random_8c_1a5915012629c25f9153523a691002397a" kindref="member">random_drand48_normal</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="random_8c_1a9bc5e7951b06ca7dbd6fa570f9e38a36" kindref="member">random_drand48_normal_simd</ref>(1,<sp/>&amp;r);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>r;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185" refid="random_8c_1a493caa433deb23d640d1516abec6c119" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="random_8c_1a493caa433deb23d640d1516abec6c119" kindref="member">random_drand48_uniform_simd</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*<sp/>r)<sp/>{</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#pragma<sp/>omp<sp/>simd</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>n;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>r[i]<sp/>=<sp/>drand48();</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="190"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200" refid="random_8c_1a9bc5e7951b06ca7dbd6fa570f9e38a36" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="random_8c_1a9bc5e7951b06ca7dbd6fa570f9e38a36" kindref="member">random_drand48_normal_simd</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*<sp/>r)<sp/>{</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x1,<sp/>x2,<sp/>w;<sp/></highlight><highlight class="comment">/*<sp/>Helper<sp/>variables<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>isEven<sp/>=<sp/>(n+1)<sp/>%<sp/>2;<sp/></highlight><highlight class="comment">/*<sp/>Indicates<sp/>if<sp/>even<sp/>number<sp/>of<sp/>random<sp/>numbers</highlight></codeline>
+<codeline lineno="203"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>are<sp/>requested<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>A5_CCOL_USE_GEOBM<sp/>==<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>The<sp/>geometric<sp/>form<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#pragma<sp/>omp<sp/>simd</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>n;<sp/>i=i+2)<sp/>{</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>w<sp/>=<sp/>2.0;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(<sp/>w<sp/>&gt;=<sp/>1.0<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x1<sp/>=<sp/>2*drand48()-1;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x2<sp/>=<sp/>2*drand48()-1;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>w<sp/>=<sp/>x1*x1<sp/>+<sp/>x2*x2;</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>w<sp/>=<sp/>sqrt(<sp/>(-2<sp/>*<sp/>log(<sp/>w<sp/>)<sp/>)<sp/>/<sp/>w<sp/>);</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>r[i]<sp/>=<sp/>x1<sp/>*<sp/>w;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">((i<sp/>&lt;<sp/>n-2)<sp/>||<sp/>(isEven<sp/>&gt;<sp/>0))<sp/>{</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>r[i+1]<sp/>=<sp/>x2<sp/>*<sp/>w;</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>The<sp/>common<sp/>form<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>s;</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#pragma<sp/>omp<sp/>simd</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>n;<sp/>i=i+2)<sp/>{</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x1<sp/>=<sp/>drand48(<ref refid="afsi_8c_1a1ea73a6198c64bba3f8809a2c97aff0f" kindref="member">rdata</ref>);</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x2<sp/>=<sp/>drand48(<ref refid="afsi_8c_1a1ea73a6198c64bba3f8809a2c97aff0f" kindref="member">rdata</ref>);</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>w<sp/>=<sp/>sqrt(-2*log(x1));</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>s<sp/>=<sp/>cos(<ref refid="consts_8h_1a99afae74ef964a9048eb263452e6e158" kindref="member">CONST_2PI</ref>*x2);</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>r[i]<sp/>=<sp/>w*s;</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">((i<sp/>&lt;<sp/>n-2)<sp/>||<sp/>(isEven<sp/>&gt;<sp/>0)<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(x2<sp/>&lt;<sp/>0.5)<sp/>{</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>r[i+1]<sp/>=<sp/>w*sqrt(1-s*s);</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>r[i+1]<sp/>=<sp/>-w*sqrt(1-s*s);</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="random.c"/>
+  </compounddef>
+</doxygen>

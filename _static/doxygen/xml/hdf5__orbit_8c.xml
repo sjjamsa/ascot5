@@ -1,0 +1,1029 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="hdf5__orbit_8c" kind="file" language="C++">
+    <compoundname>hdf5_orbit.c</compoundname>
+    <includes local="no">string.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes refid="math_8h" local="no">math.h</includes>
+    <includes local="no">hdf5.h</includes>
+    <includes local="no">hdf5_hl.h</includes>
+    <includes refid="hdf5__helpers_8h" local="yes">hdf5_helpers.h</includes>
+    <includes refid="simulate_8h" local="yes">../simulate.h</includes>
+    <includes refid="particle_8h" local="yes">../particle.h</includes>
+    <includes refid="ascot5_8h" local="yes">../ascot5.h</includes>
+    <includes refid="diag__orb_8h" local="yes">../diag/diag_orb.h</includes>
+    <includes refid="consts_8h" local="yes">../consts.h</includes>
+    <includes refid="hdf5__orbit_8h" local="yes">hdf5_orbit.h</includes>
+    <incdepgraph>
+      <node id="47">
+        <label>diag/dist_rho5D.h</label>
+        <link refid="dist__rho5D_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>plasma.h</label>
+        <link refid="plasma_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>diag/dist_5D.h</label>
+        <link refid="dist__5D_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>particle.h</label>
+        <link refid="particle_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>diag.h</label>
+        <link refid="diag_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>../spline/interp.h</label>
+        <link refid="interp_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>../simulate.h</label>
+        <link refid="simulate_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>Bfield/B_GS.h</label>
+        <link refid="B__GS_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>wall.h</label>
+        <link refid="wall_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>asigma.h</label>
+        <link refid="asigma_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>plasma/plasma_1DS.h</label>
+        <link refid="plasma__1DS_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>mhd/mhd_nonstat.h</label>
+        <link refid="mhd__nonstat_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>stdlib.h</label>
+      </node>
+      <node id="53">
+        <label>simulate/mccc/mccc.h</label>
+        <link refid="mccc_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>asigma/asigma_loc.h</label>
+        <link refid="asigma__loc_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>nbi.h</label>
+        <link refid="nbi_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>hdf5_hl.h</label>
+      </node>
+      <node id="50">
+        <label>diag/diag_orb.h</label>
+        <link refid="diag__orb_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>omp.h</label>
+      </node>
+      <node id="55">
+        <label>../consts.h</label>
+        <link refid="consts_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>hdf5_helpers.h</label>
+        <link refid="hdf5__helpers_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="54">
+        <label>mccc_wiener.h</label>
+        <link refid="mccc__wiener_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>neutral/N0_3D.h</label>
+        <link refid="N0__3D_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>B_field.h</label>
+        <link refid="B__field_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>mhd/mhd_stat.h</label>
+        <link refid="mhd__stat_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>Efield/E_1DS.h</label>
+        <link refid="E__1DS_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>hdf5io/hdf5_orbit.c</label>
+        <link refid="hdf5__orbit_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+      </node>
+      <node id="56">
+        <label>hdf5_orbit.h</label>
+        <link refid="hdf5__orbit_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>neutral/N0_1D.h</label>
+        <link refid="N0__1D_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>plasma/plasma_1Dt.h</label>
+        <link refid="plasma__1Dt_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>string.h</label>
+      </node>
+      <node id="29">
+        <label>neutral.h</label>
+        <link refid="neutral_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>random.h</label>
+        <link refid="random_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>error.h</label>
+        <link refid="error_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="49">
+        <label>diag/dist_com.h</label>
+        <link refid="dist__com_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>hdf5.h</label>
+      </node>
+      <node id="51">
+        <label>diag/diag_transcoef.h</label>
+        <link refid="diag__transcoef_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>E_field.h</label>
+        <link refid="E__field_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>plasma/plasma_1D.h</label>
+        <link refid="plasma__1D_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>time.h</label>
+      </node>
+      <node id="21">
+        <label>Bfield/B_TC.h</label>
+        <link refid="B__TC_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>../linint/linint.h</label>
+        <link refid="linint_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>Bfield/B_2DS.h</label>
+        <link refid="B__2DS_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>mhd.h</label>
+        <link refid="mhd_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>Efield/E_TC.h</label>
+        <link refid="E__TC_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>boozer.h</label>
+        <link refid="boozer_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>Bfield/B_3DS.h</label>
+        <link refid="B__3DS_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>math.h</label>
+        <link refid="math_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>diag/dist_6D.h</label>
+        <link refid="dist__6D_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>wall/wall_3d.h</label>
+        <link refid="wall__3d_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="52">
+        <label>offload.h</label>
+        <link refid="offload_8h"/>
+      </node>
+      <node id="4">
+        <label>stdio.h</label>
+      </node>
+      <node id="48">
+        <label>diag/dist_rho6D.h</label>
+        <link refid="dist__rho6D_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>Bfield/B_STS.h</label>
+        <link refid="B__STS_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>wall/wall_2d.h</label>
+        <link refid="wall__2d_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>ascot5.h</label>
+        <link refid="ascot5_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hdf5_orbit_writeset</definition>
+        <argsstring>(hid_t group, const char *name, const char *unit, int type, int arraylength, real confac, integer *mask, integer size, real *orbits)</argsstring>
+        <name>hdf5_orbit_writeset</name>
+        <param>
+          <type>hid_t</type>
+          <declname>group</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>unit</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>arraylength</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>confac</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a865b01f4cbb6f2bb3270e094934d3263" kindref="member">integer</ref> *</type>
+          <declname>mask</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a865b01f4cbb6f2bb3270e094934d3263" kindref="member">integer</ref></type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>data</declname>
+          <defname>orbits</defname>
+        </param>
+        <briefdescription>
+<para>Helper function for writing orbit diagnostic datasets. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>group</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>HDF5 group where dataset is written </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name the data is wrote with </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>unit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>unit the the data is wrote with </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is data double (0), int (1), or integer (2) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>arraylength</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of the orbit data array </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>confac</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>unit conversion factor orbits is multiplied before writing </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>flag array indicating which elements in orbits array contain data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of data elements </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>orbits</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>orbit data array </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hdf5io/hdf5_orbit.c" line="233" column="6" bodyfile="hdf5io/hdf5_orbit.c" bodystart="233" bodyend="275" declfile="hdf5io/hdf5_orbit.c" declline="19" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="hdf5__orbit_8c_1a6b723fe23eb872ebe0324b778349e440" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hdf5_orbit_write</definition>
+        <argsstring>(hid_t f, char *path, diag_orb_offload_data *data, real *orbits)</argsstring>
+        <name>hdf5_orbit_write</name>
+        <param>
+          <type>hid_t</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type><ref refid="structdiag__orb__offload__data" kindref="compound">diag_orb_offload_data</ref> *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>orbits</declname>
+        </param>
+        <briefdescription>
+<para>Write orbit diagnostics data to a HDF5 file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>hdf5 file </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>path to group which is created here and where the data is stored </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>orbit diagnostics offload data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>orbits</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>array storing the orbit data (format same as in init() in <ref refid="diag__orb_8c" kindref="compound">diag_orb.c</ref>)</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>zero on success </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hdf5io/hdf5_orbit.c" line="34" column="5" bodyfile="hdf5io/hdf5_orbit.c" bodystart="34" bodyend="218"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Module for writing orbits diagnostics data to a HDF5 file. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="math_8h" kindref="compound">math.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hdf5.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hdf5_hl.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hdf5__helpers_8h" kindref="compound">hdf5_helpers.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../simulate.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../particle.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../ascot5.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../diag/diag_orb.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../consts.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hdf5__orbit_8h" kindref="compound">hdf5_orbit.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(hid_t<sp/>group,<sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>unit,</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>type,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>arraylength,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>confac,</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a865b01f4cbb6f2bb3270e094934d3263" kindref="member">integer</ref>*<sp/>mask,<sp/><ref refid="ascot5_8h_1a865b01f4cbb6f2bb3270e094934d3263" kindref="member">integer</ref><sp/>size,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>data);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="hdf5__orbit_8c_1a6b723fe23eb872ebe0324b778349e440" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hdf5__orbit_8c_1a6b723fe23eb872ebe0324b778349e440" kindref="member">hdf5_orbit_write</ref>(hid_t<sp/>f,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>path,<sp/><ref refid="structdiag__orb__offload__data" kindref="compound">diag_orb_offload_data</ref>*<sp/>data,</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>orbits)<sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>hid_t<sp/>group<sp/>=<sp/>H5Gcreate2(f,<sp/>path,<sp/>H5P_DEFAULT,<sp/>H5P_DEFAULT,<sp/>H5P_DEFAULT);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(group<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>arraylength<sp/>=<sp/>data-&gt;<ref refid="structdiag__orb__offload__data_1a9d439e4f64efefde32da8a3643caf137" kindref="member">Nmrk</ref>*data-&gt;<ref refid="structdiag__orb__offload__data_1a26e54630ba9ed82db45609eb56d17b15" kindref="member">Npnt</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>datasize<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a865b01f4cbb6f2bb3270e094934d3263" kindref="member">integer</ref>*<sp/>mask<sp/>=<sp/>malloc(arraylength*</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>));</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(<ref refid="ascot5_8h_1a865b01f4cbb6f2bb3270e094934d3263" kindref="member">integer</ref><sp/>i=0;<sp/>i<sp/>&lt;<sp/>arraylength;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask[i]<sp/>=<sp/>orbits[i]<sp/>&gt;<sp/>0;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(mask[i])<sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>datasize++;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>dtypef64<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>dtypei32<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>dtypei16<sp/>=<sp/>2;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(data-&gt;<ref refid="structdiag__orb__offload__data_1a095e1e9a845149a1748ae4b5b3f07592" kindref="member">record_mode</ref><sp/>==<sp/><ref refid="simulate_8h_1a61dadd085c1777f559549e05962b2c9ea11f071e38be84de6b29ac4882c2e024f" kindref="member">simulate_mode_fo</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;ids&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;1&quot;</highlight><highlight class="normal">,<sp/>dtypei32,<sp/>arraylength,<sp/>1,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*0]);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;mileage&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;s&quot;</highlight><highlight class="normal">,<sp/>dtypef64,<sp/>arraylength,<sp/>1,</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*1]);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;r&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;m&quot;</highlight><highlight class="normal">,<sp/>dtypef64,<sp/>arraylength,<sp/>1,</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*2]);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;phi&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;deg&quot;</highlight><highlight class="normal">,<sp/>dtypef64,<sp/>arraylength,</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>180.0/<ref refid="consts_8h_1a02b01cde332fa86c92d54802cce7f3d2" kindref="member">CONST_PI</ref>,</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*3]);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;z&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;m&quot;</highlight><highlight class="normal">,<sp/>dtypef64,<sp/>arraylength,<sp/>1,</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*4]);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;pr&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;kg*m/s&quot;</highlight><highlight class="normal">,<sp/>dtypef64,<sp/>arraylength,<sp/>1,</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*5]);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;pphi&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;kg*m/s&quot;</highlight><highlight class="normal">,<sp/>dtypef64,<sp/>arraylength,<sp/>1,</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*6]);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;pz&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;kg*m/s&quot;</highlight><highlight class="normal">,<sp/>dtypef64,<sp/>arraylength,<sp/>1,</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*7]);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;weight&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;1&quot;</highlight><highlight class="normal">,<sp/>dtypef64,<sp/>arraylength,<sp/>1,</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*8]);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;charge&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;e&quot;</highlight><highlight class="normal">,<sp/>dtypei16,<sp/>arraylength,</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1.0/<ref refid="consts_8h_1aa2d52037e91528e354a59fc909365f7c" kindref="member">CONST_E</ref>,</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*9]);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;rho&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;1&quot;</highlight><highlight class="normal">,<sp/>dtypef64,<sp/>arraylength,<sp/>1,</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*10]);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;theta&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;deg&quot;</highlight><highlight class="normal">,<sp/>dtypef64,<sp/>arraylength,</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>180.0/<ref refid="consts_8h_1a02b01cde332fa86c92d54802cce7f3d2" kindref="member">CONST_PI</ref>,</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*11]);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;br&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;T&quot;</highlight><highlight class="normal">,<sp/>dtypef64,<sp/>arraylength,<sp/>1,</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*12]);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;bphi&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;T&quot;</highlight><highlight class="normal">,<sp/>dtypef64,<sp/>arraylength,<sp/>1,</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*13]);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;bz&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;T&quot;</highlight><highlight class="normal">,<sp/>dtypef64,<sp/>arraylength,<sp/>1,</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*14]);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;simmode&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;1&quot;</highlight><highlight class="normal">,<sp/>dtypei32,<sp/>arraylength,<sp/>1,</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*15]);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(data-&gt;<ref refid="structdiag__orb__offload__data_1a095e1e9a845149a1748ae4b5b3f07592" kindref="member">record_mode</ref><sp/>==<sp/><ref refid="simulate_8h_1a61dadd085c1777f559549e05962b2c9eac0a6480e647e3fbeeea8a2bc4127e2a3" kindref="member">simulate_mode_gc</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;ids&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;1&quot;</highlight><highlight class="normal">,<sp/>dtypei32,<sp/>arraylength,<sp/>1,</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*0]);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;mileage&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;s&quot;</highlight><highlight class="normal">,<sp/>dtypef64,<sp/>arraylength,<sp/>1,</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*1]);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;r&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;m&quot;</highlight><highlight class="normal">,<sp/>dtypef64,<sp/>arraylength,<sp/>1,</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*2]);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;phi&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;deg&quot;</highlight><highlight class="normal">,<sp/>dtypef64,<sp/>arraylength,</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>180.0/<ref refid="consts_8h_1a02b01cde332fa86c92d54802cce7f3d2" kindref="member">CONST_PI</ref>,</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*3]);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;z&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;m&quot;</highlight><highlight class="normal">,<sp/>dtypef64,<sp/>arraylength,<sp/>1,</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*4]);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;ppar&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;kg*m/s&quot;</highlight><highlight class="normal">,<sp/>dtypef64,<sp/>arraylength,<sp/>1,</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*5]);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;mu&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;eV/T&quot;</highlight><highlight class="normal">,<sp/>dtypef64,<sp/>arraylength,</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1.0/<ref refid="consts_8h_1aa2d52037e91528e354a59fc909365f7c" kindref="member">CONST_E</ref>,</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*6]);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;zeta&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;rad&quot;</highlight><highlight class="normal">,<sp/>dtypef64,<sp/>arraylength,<sp/>1,</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*7]);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;weight&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;1&quot;</highlight><highlight class="normal">,<sp/>dtypef64,<sp/>arraylength,<sp/>1,</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*8]);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;charge&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;e&quot;</highlight><highlight class="normal">,<sp/>dtypei16,<sp/>arraylength,</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1.0/<ref refid="consts_8h_1aa2d52037e91528e354a59fc909365f7c" kindref="member">CONST_E</ref>,</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*9]);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;rho&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;1&quot;</highlight><highlight class="normal">,<sp/>dtypef64,<sp/>arraylength,<sp/>1,</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*10]);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;theta&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;deg&quot;</highlight><highlight class="normal">,<sp/>dtypef64,<sp/>arraylength,</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>180.0/<ref refid="consts_8h_1a02b01cde332fa86c92d54802cce7f3d2" kindref="member">CONST_PI</ref>,</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*11]);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;br&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;T&quot;</highlight><highlight class="normal">,<sp/>dtypef64,<sp/>arraylength,<sp/>1,</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*12]);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;bphi&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;T&quot;</highlight><highlight class="normal">,<sp/>dtypef64,<sp/>arraylength,<sp/>1,</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*13]);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;bz&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;T&quot;</highlight><highlight class="normal">,<sp/>dtypef64,<sp/>arraylength,<sp/>1,</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*14]);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;simmode&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;1&quot;</highlight><highlight class="normal">,<sp/>dtypei32,<sp/>arraylength,<sp/>1,</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*15]);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(data-&gt;<ref refid="structdiag__orb__offload__data_1a095e1e9a845149a1748ae4b5b3f07592" kindref="member">record_mode</ref><sp/>==<sp/><ref refid="simulate_8h_1a61dadd085c1777f559549e05962b2c9ea776d1e6a9397782eec6f44a14dec65c8" kindref="member">simulate_mode_ml</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;ids&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;1&quot;</highlight><highlight class="normal">,<sp/>dtypei32,<sp/>arraylength,<sp/>1,</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*0]);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;mileage&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;s&quot;</highlight><highlight class="normal">,<sp/>dtypef64,<sp/>arraylength,<sp/>1,</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*1]);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;r&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;m&quot;</highlight><highlight class="normal">,<sp/>dtypef64,<sp/>arraylength,<sp/>1,</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*2]);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;phi&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;deg&quot;</highlight><highlight class="normal">,<sp/>dtypef64,<sp/>arraylength,</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>180.0/<ref refid="consts_8h_1a02b01cde332fa86c92d54802cce7f3d2" kindref="member">CONST_PI</ref>,</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*3]);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;z&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;m&quot;</highlight><highlight class="normal">,<sp/>dtypef64,<sp/>arraylength,<sp/>1,</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*4]);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;rho&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;1&quot;</highlight><highlight class="normal">,<sp/>dtypef64,<sp/>arraylength,<sp/>1,</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*5]);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;theta&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;deg&quot;</highlight><highlight class="normal">,<sp/>dtypef64,<sp/>arraylength,</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>180.0/<ref refid="consts_8h_1a02b01cde332fa86c92d54802cce7f3d2" kindref="member">CONST_PI</ref>,</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*6]);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;br&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;T&quot;</highlight><highlight class="normal">,<sp/>dtypef64,<sp/>arraylength,<sp/>1,</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*7]);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;bphi&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;T&quot;</highlight><highlight class="normal">,<sp/>dtypef64,<sp/>arraylength,<sp/>1,</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*8]);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;bz&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;T&quot;</highlight><highlight class="normal">,<sp/>dtypef64,<sp/>arraylength,<sp/>1,</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*9]);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;simmode&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;1&quot;</highlight><highlight class="normal">,<sp/>dtypei32,<sp/>arraylength,<sp/>1,</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*10]);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(data-&gt;<ref refid="structdiag__orb__offload__data_1a095e1e9a845149a1748ae4b5b3f07592" kindref="member">record_mode</ref><sp/>==<sp/><ref refid="simulate_8h_1a61dadd085c1777f559549e05962b2c9eac788923fd31e2e061b73241d459e4590" kindref="member">simulate_mode_hybrid</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;ids&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;1&quot;</highlight><highlight class="normal">,<sp/>dtypei32,<sp/>arraylength,<sp/>1,</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*0]);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;mileage&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;s&quot;</highlight><highlight class="normal">,<sp/>dtypef64,<sp/>arraylength,<sp/>1,</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*1]);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;r&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;m&quot;</highlight><highlight class="normal">,<sp/>dtypef64,<sp/>arraylength,<sp/>1,</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*2]);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;phi&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;deg&quot;</highlight><highlight class="normal">,<sp/>dtypef64,<sp/>arraylength,</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>180.0/<ref refid="consts_8h_1a02b01cde332fa86c92d54802cce7f3d2" kindref="member">CONST_PI</ref>,</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*3]);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;z&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;m&quot;</highlight><highlight class="normal">,<sp/>dtypef64,<sp/>arraylength,<sp/>1,</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*4]);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;pr&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;kg*m/s&quot;</highlight><highlight class="normal">,<sp/>dtypef64,<sp/>arraylength,<sp/>1,</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*5]);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;pphi&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;kg*m/s&quot;</highlight><highlight class="normal">,<sp/>dtypef64,<sp/>arraylength,<sp/>1,</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*6]);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;pz&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;kg*m/s&quot;</highlight><highlight class="normal">,<sp/>dtypef64,<sp/>arraylength,<sp/>1,</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*7]);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;ppar&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;kg*m/s&quot;</highlight><highlight class="normal">,<sp/>dtypef64,<sp/>arraylength,<sp/>1,</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*8]);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;mu&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;eV/T&quot;</highlight><highlight class="normal">,<sp/>dtypef64,<sp/>arraylength,</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1.0/<ref refid="consts_8h_1aa2d52037e91528e354a59fc909365f7c" kindref="member">CONST_E</ref>,</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*9]);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;zeta&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;rad&quot;</highlight><highlight class="normal">,<sp/>dtypef64,<sp/>arraylength,<sp/>1,</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*10]);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;weight&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;1&quot;</highlight><highlight class="normal">,<sp/>dtypef64,<sp/>arraylength,<sp/>1,</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*11]);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;charge&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;e&quot;</highlight><highlight class="normal">,<sp/>dtypei16,<sp/>arraylength,</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1.0/<ref refid="consts_8h_1aa2d52037e91528e354a59fc909365f7c" kindref="member">CONST_E</ref>,</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*12]);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;rho&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;1&quot;</highlight><highlight class="normal">,<sp/>dtypef64,<sp/>arraylength,<sp/>1,</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*13]);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;theta&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;deg&quot;</highlight><highlight class="normal">,<sp/>dtypef64,<sp/>arraylength,</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>180.0/<ref refid="consts_8h_1a02b01cde332fa86c92d54802cce7f3d2" kindref="member">CONST_PI</ref>,</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*14]);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;br&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;T&quot;</highlight><highlight class="normal">,<sp/>dtypef64,<sp/>arraylength,<sp/>1,</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*15]);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;bphi&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;T&quot;</highlight><highlight class="normal">,<sp/>dtypef64,<sp/>arraylength,<sp/>1,</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*16]);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;bz&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;T&quot;</highlight><highlight class="normal">,<sp/>dtypef64,<sp/>arraylength,<sp/>1,</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*17]);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;simmode&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;1&quot;</highlight><highlight class="normal">,<sp/>dtypei32,<sp/>arraylength,<sp/>1,</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength*18]);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(data-&gt;<ref refid="structdiag__orb__offload__data_1a138f8d3b8528d0791e8d8fd1358584e0" kindref="member">mode</ref><sp/>==<sp/><ref refid="diag__orb_8h_1a07d8a8dfc606dbcbd5aa247273f82347" kindref="member">DIAG_ORB_POINCARE</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;pncrid&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;1&quot;</highlight><highlight class="normal">,<sp/>dtypei16,<sp/>arraylength,<sp/>1,</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength<sp/>*<sp/>data-&gt;<ref refid="structdiag__orb__offload__data_1ab2e46e37a9d0c3cb3035bd6556f7a26e" kindref="member">Nfld</ref>]);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(group,<sp/><sp/></highlight><highlight class="stringliteral">&quot;pncrdi&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;1&quot;</highlight><highlight class="normal">,<sp/>dtypei16,<sp/>arraylength,<sp/>1,</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mask,<sp/>datasize,<sp/>&amp;orbits[arraylength<sp/>*<sp/>(data-&gt;<ref refid="structdiag__orb__offload__data_1ab2e46e37a9d0c3cb3035bd6556f7a26e" kindref="member">Nfld</ref>+1)]);</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/>free(mask);</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/>H5Gclose<sp/>(group);</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233" refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="hdf5__orbit_8c_1a65c821896f939097b4039530b7d0de88" kindref="member">hdf5_orbit_writeset</ref>(hid_t<sp/>group,<sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>unit,</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>type,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>arraylength,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>confac,</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a865b01f4cbb6f2bb3270e094934d3263" kindref="member">integer</ref>*<sp/>mask,<sp/><ref refid="ascot5_8h_1a865b01f4cbb6f2bb3270e094934d3263" kindref="member">integer</ref><sp/>size,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>orbits)<sp/>{</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(type<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>data<sp/>=<sp/>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*)<sp/>malloc(size<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>));</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a865b01f4cbb6f2bb3270e094934d3263" kindref="member">integer</ref><sp/>j<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(<ref refid="ascot5_8h_1a865b01f4cbb6f2bb3270e094934d3263" kindref="member">integer</ref><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>arraylength;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(mask[i])<sp/>{</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data[j]<sp/>=<sp/>confac*orbits[i];</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>j++;</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__helpers_8c_1ab8f64c059ee0a1313e77b05e4de69e54" kindref="member">hdf5_write_extendible_dataset_double</ref>(group,<sp/>name,<sp/>size,<sp/>data);</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>H5LTset_attribute_string(group,<sp/>name,<sp/></highlight><highlight class="stringliteral">&quot;unit&quot;</highlight><highlight class="normal">,<sp/>unit);</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(data);</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(type<sp/>==<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>data<sp/>=<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*)<sp/>malloc(size<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a865b01f4cbb6f2bb3270e094934d3263" kindref="member">integer</ref><sp/>j<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(<ref refid="ascot5_8h_1a865b01f4cbb6f2bb3270e094934d3263" kindref="member">integer</ref><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>arraylength;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(mask[i])<sp/>{</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data[j]<sp/>=<sp/>(int)(confac*orbits[i]);</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>j++;</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__helpers_8c_1a4190689187d3e7220ab772c9ae0baa0f" kindref="member">hdf5_write_extendible_dataset_int</ref>(group,<sp/>name,<sp/>size,<sp/>data);</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>H5LTset_attribute_string(group,<sp/>name,<sp/></highlight><highlight class="stringliteral">&quot;unit&quot;</highlight><highlight class="normal">,<sp/>unit);</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(data);</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(type<sp/>==<sp/>2)<sp/>{</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a865b01f4cbb6f2bb3270e094934d3263" kindref="member">integer</ref>*<sp/>data<sp/>=<sp/>(<ref refid="ascot5_8h_1a865b01f4cbb6f2bb3270e094934d3263" kindref="member">integer</ref>*)<sp/>malloc(size<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="ascot5_8h_1a865b01f4cbb6f2bb3270e094934d3263" kindref="member">integer</ref>));</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a865b01f4cbb6f2bb3270e094934d3263" kindref="member">integer</ref><sp/>j<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(<ref refid="ascot5_8h_1a865b01f4cbb6f2bb3270e094934d3263" kindref="member">integer</ref><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>arraylength;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(mask[i])<sp/>{</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data[j]<sp/>=<sp/>(<ref refid="ascot5_8h_1a865b01f4cbb6f2bb3270e094934d3263" kindref="member">integer</ref>)(confac*orbits[i]);</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>j++;</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="hdf5__helpers_8c_1a3c0b1edd399d012cc00b5979567f1b05" kindref="member">hdf5_write_extendible_dataset_long</ref>(group,<sp/>name,<sp/>size,<sp/>data);</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>H5LTset_attribute_string(group,<sp/>name,<sp/></highlight><highlight class="stringliteral">&quot;unit&quot;</highlight><highlight class="normal">,<sp/>unit);</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(data);</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="275"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="hdf5io/hdf5_orbit.c"/>
+  </compounddef>
+</doxygen>

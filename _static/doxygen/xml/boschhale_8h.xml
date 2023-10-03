@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="boschhale_8h" kind="file" language="C++">
+    <compoundname>boschhale.h</compoundname>
+    <includes refid="ascot5_8h" local="yes">ascot5.h</includes>
+    <includedby refid="afsi_8c" local="yes">afsi.c</includedby>
+    <includedby refid="boschhale_8c" local="yes">boschhale.c</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>omp.h</label>
+      </node>
+      <node id="1">
+        <label>boschhale.h</label>
+        <link refid="boschhale_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>time.h</label>
+      </node>
+      <node id="2">
+        <label>ascot5.h</label>
+        <link refid="ascot5_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>afsi.c</label>
+        <link refid="afsi_8c"/>
+      </node>
+      <node id="3">
+        <label>boschhale.c</label>
+        <link refid="boschhale_8c"/>
+      </node>
+      <node id="1">
+        <label>boschhale.h</label>
+        <link refid="boschhale_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="boschhale_8h_1ac661ff628c7dc3e15954b09269dd1181" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+        <definition>real boschhale_sigma</definition>
+        <argsstring>(int reaction, real E)</argsstring>
+        <name>boschhale_sigma</name>
+        <param>
+          <type>int</type>
+          <declname>reaction</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>E</declname>
+        </param>
+        <briefdescription>
+<para>Estimate cross-section for a given fusion reaction. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Reaction indices:</para>
+<para>1 = T(d,n)^4He 2 = ^3He(d,p)^4He 3 = D(d,p)T 4 = D(d,n)^3He</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reaction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>reaction for which the cross-section is estimated. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>E</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ion energy [keV]. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>cross-section [m^2]. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="boschhale.h" line="10" column="6" bodyfile="boschhale.c" bodystart="26" bodyend="148" declfile="boschhale.h" declline="10" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="boschhale_8h_1a58548bf8e293b018c67773145bcefdb9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+        <definition>real boschhale_sigmav</definition>
+        <argsstring>(int reaction, real Ti)</argsstring>
+        <name>boschhale_sigmav</name>
+        <param>
+          <type>int</type>
+          <declname>reaction</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>Ti</declname>
+        </param>
+        <briefdescription>
+<para>Estimate reactivity for a given fusion reaction. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Reaction indices:</para>
+<para>1 = T(d,n)^4He 2 = ^3He(d,p)^4He 3 = D(d,p)T 4 = D(d,n)^3He</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reaction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>reaction for which the reactivity is estimated. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Ti</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ion temperature [keV]. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>reactivity. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="boschhale.h" line="11" column="6" bodyfile="boschhale.c" bodystart="164" bodyend="231" declfile="boschhale.h" declline="11" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Header file for boschdale.c. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>BOSCHHALE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BOSCHHALE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ascot5_8h" kindref="compound">ascot5.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="boschhale_8h_1ac661ff628c7dc3e15954b09269dd1181" kindref="member">boschhale_sigma</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>reaction,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>E);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="boschhale_8h_1a58548bf8e293b018c67773145bcefdb9" kindref="member">boschhale_sigmav</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>reaction,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>Ti);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="boschhale.h"/>
+  </compounddef>
+</doxygen>

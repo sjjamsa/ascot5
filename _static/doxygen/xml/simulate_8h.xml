@@ -1,0 +1,1195 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="simulate_8h" kind="file" language="C++">
+    <compoundname>simulate.h</compoundname>
+    <includes refid="ascot5_8h" local="yes">ascot5.h</includes>
+    <includes refid="B__field_8h" local="yes">B_field.h</includes>
+    <includes refid="E__field_8h" local="yes">E_field.h</includes>
+    <includes refid="plasma_8h" local="yes">plasma.h</includes>
+    <includes refid="neutral_8h" local="yes">neutral.h</includes>
+    <includes refid="wall_8h" local="yes">wall.h</includes>
+    <includes refid="boozer_8h" local="yes">boozer.h</includes>
+    <includes refid="mhd_8h" local="yes">mhd.h</includes>
+    <includes refid="asigma_8h" local="yes">asigma.h</includes>
+    <includes refid="nbi_8h" local="yes">nbi.h</includes>
+    <includes refid="diag_8h" local="yes">diag.h</includes>
+    <includes refid="offload_8h" local="yes">offload.h</includes>
+    <includes refid="random_8h" local="yes">random.h</includes>
+    <includes refid="mccc_8h" local="yes">simulate/mccc/mccc.h</includes>
+    <includedby refid="afsi_8c" local="yes">afsi.c</includedby>
+    <includedby refid="afsi_8h" local="yes">afsi.h</includedby>
+    <includedby refid="ascot5__main_8c" local="yes">ascot5_main.c</includedby>
+    <includedby refid="ascot5__main_8h" local="yes">ascot5_main.h</includedby>
+    <includedby refid="bbnbi5_8c" local="yes">bbnbi5.c</includedby>
+    <includedby refid="diag__orb_8c" local="yes">diag/diag_orb.c</includedby>
+    <includedby refid="diag__transcoef_8c" local="yes">diag/diag_transcoef.c</includedby>
+    <includedby refid="diag_8c" local="yes">diag.c</includedby>
+    <includedby refid="endcond_8c" local="yes">endcond.c</includedby>
+    <includedby refid="endcond_8h" local="yes">endcond.h</includedby>
+    <includedby refid="hdf5__interface_8c" local="yes">hdf5_interface.c</includedby>
+    <includedby refid="hdf5__interface_8h" local="yes">hdf5_interface.h</includedby>
+    <includedby refid="hdf5__options_8c" local="yes">hdf5io/hdf5_options.c</includedby>
+    <includedby refid="hdf5__options_8h" local="yes">hdf5io/hdf5_options.h</includedby>
+    <includedby refid="hdf5__orbit_8c" local="yes">hdf5io/hdf5_orbit.c</includedby>
+    <includedby refid="libascot_8c" local="yes">libascot.c</includedby>
+    <includedby refid="mpi__interface_8c" local="yes">mpi_interface.c</includedby>
+    <includedby refid="mpi__interface_8h" local="yes">mpi_interface.h</includedby>
+    <includedby refid="simulate__fo__fixed_8c" local="yes">simulate/simulate_fo_fixed.c</includedby>
+    <includedby refid="simulate__fo__fixed_8h" local="yes">simulate/simulate_fo_fixed.h</includedby>
+    <includedby refid="simulate__gc__adaptive_8c" local="yes">simulate/simulate_gc_adaptive.c</includedby>
+    <includedby refid="simulate__gc__adaptive_8h" local="yes">simulate/simulate_gc_adaptive.h</includedby>
+    <includedby refid="simulate__gc__fixed_8c" local="yes">simulate/simulate_gc_fixed.c</includedby>
+    <includedby refid="simulate__gc__fixed_8h" local="yes">simulate/simulate_gc_fixed.h</includedby>
+    <includedby refid="simulate__ml__adaptive_8c" local="yes">simulate/simulate_ml_adaptive.c</includedby>
+    <includedby refid="simulate__ml__adaptive_8h" local="yes">simulate/simulate_ml_adaptive.h</includedby>
+    <includedby refid="simulate_8c" local="yes">simulate.c</includedby>
+    <incdepgraph>
+      <node id="42">
+        <label>diag/dist_rho5D.h</label>
+        <link refid="dist__rho5D_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>plasma.h</label>
+        <link refid="plasma_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>diag/dist_5D.h</label>
+        <link refid="dist__5D_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>particle.h</label>
+        <link refid="particle_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>diag.h</label>
+        <link refid="diag_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>../spline/interp.h</label>
+        <link refid="interp_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>simulate.h</label>
+        <link refid="simulate_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>Bfield/B_GS.h</label>
+        <link refid="B__GS_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>wall.h</label>
+        <link refid="wall_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>asigma.h</label>
+        <link refid="asigma_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>plasma/plasma_1DS.h</label>
+        <link refid="plasma__1DS_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>mhd/mhd_nonstat.h</label>
+        <link refid="mhd__nonstat_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>stdlib.h</label>
+      </node>
+      <node id="48">
+        <label>simulate/mccc/mccc.h</label>
+        <link refid="mccc_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>asigma/asigma_loc.h</label>
+        <link refid="asigma__loc_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>nbi.h</label>
+        <link refid="nbi_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>diag/diag_orb.h</label>
+        <link refid="diag__orb_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>omp.h</label>
+      </node>
+      <node id="49">
+        <label>mccc_wiener.h</label>
+        <link refid="mccc__wiener_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>neutral/N0_3D.h</label>
+        <link refid="N0__3D_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>B_field.h</label>
+        <link refid="B__field_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>mhd/mhd_stat.h</label>
+        <link refid="mhd__stat_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>Efield/E_1DS.h</label>
+        <link refid="E__1DS_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>neutral/N0_1D.h</label>
+        <link refid="N0__1D_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>plasma/plasma_1Dt.h</label>
+        <link refid="plasma__1Dt_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>neutral.h</label>
+        <link refid="neutral_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>random.h</label>
+        <link refid="random_8h"/>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>error.h</label>
+        <link refid="error_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>diag/dist_com.h</label>
+        <link refid="dist__com_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>diag/diag_transcoef.h</label>
+        <link refid="diag__transcoef_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>E_field.h</label>
+        <link refid="E__field_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>plasma/plasma_1D.h</label>
+        <link refid="plasma__1D_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>time.h</label>
+      </node>
+      <node id="15">
+        <label>Bfield/B_TC.h</label>
+        <link refid="B__TC_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>../linint/linint.h</label>
+        <link refid="linint_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>Bfield/B_2DS.h</label>
+        <link refid="B__2DS_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>mhd.h</label>
+        <link refid="mhd_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>Efield/E_TC.h</label>
+        <link refid="E__TC_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>boozer.h</label>
+        <link refid="boozer_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>Bfield/B_3DS.h</label>
+        <link refid="B__3DS_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>math.h</label>
+        <link refid="math_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>diag/dist_6D.h</label>
+        <link refid="dist__6D_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>wall/wall_3d.h</label>
+        <link refid="wall__3d_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="47">
+        <label>offload.h</label>
+        <link refid="offload_8h"/>
+      </node>
+      <node id="8">
+        <label>stdio.h</label>
+      </node>
+      <node id="43">
+        <label>diag/dist_rho6D.h</label>
+        <link refid="dist__rho6D_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>Bfield/B_STS.h</label>
+        <link refid="B__STS_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>wall/wall_2d.h</label>
+        <link refid="wall__2d_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ascot5.h</label>
+        <link refid="ascot5_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="16">
+        <label>simulate/simulate_ml_adaptive.c</label>
+        <link refid="simulate__ml__adaptive_8c"/>
+      </node>
+      <node id="28">
+        <label>simulate/simulate_ml_adaptive.h</label>
+        <link refid="simulate__ml__adaptive_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>diag.c</label>
+        <link refid="diag_8c"/>
+      </node>
+      <node id="17">
+        <label>simulate.c</label>
+        <link refid="simulate_8c"/>
+      </node>
+      <node id="1">
+        <label>simulate.h</label>
+        <link refid="simulate_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>simulate/simulate_fo_fixed.c</label>
+        <link refid="simulate__fo__fixed_8c"/>
+      </node>
+      <node id="25">
+        <label>simulate/simulate_fo_fixed.h</label>
+        <link refid="simulate__fo__fixed_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>simulate/simulate_gc_fixed.c</label>
+        <link refid="simulate__gc__fixed_8c"/>
+      </node>
+      <node id="4">
+        <label>ascot5_main.c</label>
+        <link refid="ascot5__main_8c"/>
+      </node>
+      <node id="27">
+        <label>simulate/simulate_gc_fixed.h</label>
+        <link refid="simulate__gc__fixed_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>ascot5_main.h</label>
+        <link refid="ascot5__main_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>endcond.c</label>
+        <link refid="endcond_8c"/>
+      </node>
+      <node id="11">
+        <label>endcond.h</label>
+        <link refid="endcond_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>afsi.c</label>
+        <link refid="afsi_8c"/>
+      </node>
+      <node id="3">
+        <label>afsi.h</label>
+        <link refid="afsi_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>diag/diag_orb.c</label>
+        <link refid="diag__orb_8c"/>
+      </node>
+      <node id="12">
+        <label>hdf5io/hdf5_options.c</label>
+        <link refid="hdf5__options_8c"/>
+      </node>
+      <node id="21">
+        <label>hdf5io/hdf5_options.h</label>
+        <link refid="hdf5__options_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>hdf5io/hdf5_orbit.c</label>
+        <link refid="hdf5__orbit_8c"/>
+      </node>
+      <node id="14">
+        <label>simulate/simulate_gc_adaptive.c</label>
+        <link refid="simulate__gc__adaptive_8c"/>
+      </node>
+      <node id="26">
+        <label>simulate/simulate_gc_adaptive.h</label>
+        <link refid="simulate__gc__adaptive_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>mpi_interface.c</label>
+        <link refid="mpi__interface_8c"/>
+      </node>
+      <node id="24">
+        <label>mpi_interface.h</label>
+        <link refid="mpi__interface_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>libascot.c</label>
+        <link refid="libascot_8c"/>
+      </node>
+      <node id="18">
+        <label>hdf5_interface.c</label>
+        <link refid="hdf5__interface_8c"/>
+      </node>
+      <node id="19">
+        <label>hdf5_interface.h</label>
+        <link refid="hdf5__interface_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>diag/diag_transcoef.c</label>
+        <link refid="diag__transcoef_8c"/>
+      </node>
+      <node id="6">
+        <label>bbnbi5.c</label>
+        <link refid="bbnbi5_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structsim__offload__data" prot="public">sim_offload_data</innerclass>
+    <innerclass refid="structsim__data" prot="public">sim_data</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="simulate_8h_1a61dadd085c1777f559549e05962b2c9e" prot="public" static="no" strong="no">
+        <type></type>
+        <name>@5</name>
+        <enumvalue id="simulate_8h_1a61dadd085c1777f559549e05962b2c9ea11f071e38be84de6b29ac4882c2e024f" prot="public">
+          <name>simulate_mode_fo</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Models markers as particles using <ref refid="structparticle__simd__fo" kindref="compound">particle_simd_fo</ref> struct and <ref refid="simulate__fo__fixed_8c" kindref="compound">simulate_fo_fixed.c</ref> simulation loop <linebreak/>
+ </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="simulate_8h_1a61dadd085c1777f559549e05962b2c9eac0a6480e647e3fbeeea8a2bc4127e2a3" prot="public">
+          <name>simulate_mode_gc</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Models markers as guiding centers using <ref refid="structparticle__simd__gc" kindref="compound">particle_simd_gc</ref> struct and <ref refid="simulate__gc__fixed_8c" kindref="compound">simulate_gc_fixed.c</ref> or <ref refid="simulate__gc__adaptive_8c" kindref="compound">simulate_gc_adaptive.c</ref> simulation loops <linebreak/>
+ </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="simulate_8h_1a61dadd085c1777f559549e05962b2c9eac788923fd31e2e061b73241d459e4590" prot="public">
+          <name>simulate_mode_hybrid</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Models markers first like using simulate_mode_gc. Additional end condition is used for markers that get close to wall. After all markers are finished, simulation for markers that were close to the wall is continued with using simulate_mode_fo mode <linebreak/>
+ </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="simulate_8h_1a61dadd085c1777f559549e05962b2c9ea776d1e6a9397782eec6f44a14dec65c8" prot="public">
+          <name>simulate_mode_ml</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Models markers as field lines using <ref refid="structparticle__simd__ml" kindref="compound">particle_simd_ml</ref> struct and <ref refid="simulate__ml__adaptive_8c" kindref="compound">simulate_ml_adaptive.c</ref> simulation loop <linebreak/>
+ </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Simulaton modes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>These enums are used to determine which simulation mode will be executed. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="simulate.h" line="31" column="1" bodyfile="simulate.h" bodystart="31" bodyend="46"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="simulate_8h_1a0eb83ea67e77dffb1614c82865e0ddfa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void simulate_init_offload</definition>
+        <argsstring>(sim_offload_data *sim)</argsstring>
+        <name>simulate_init_offload</name>
+        <param>
+          <type><ref refid="structsim__offload__data" kindref="compound">sim_offload_data</ref> *</type>
+          <declname>sim</declname>
+        </param>
+        <briefdescription>
+<para>Initializes simulation settings. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function adjusts simulation settings, e.g. how physics are included, according to the given simulation data. This function should only be called once right after input data has been read.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sim</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>simulation offload struct which has all fields initialized </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="simulate.h" line="223" column="6" bodyfile="simulate.c" bodystart="327" bodyend="331" declfile="simulate.h" declline="223" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="simulate_8h_1a30d61fc32fe1448ab2a3abe49af56026" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sim_init</definition>
+        <argsstring>(sim_data *sim, sim_offload_data *sim_offload)</argsstring>
+        <name>sim_init</name>
+        <param>
+          <type><ref refid="structsim__data" kindref="compound">sim_data</ref> *</type>
+          <declname>sim</declname>
+        </param>
+        <param>
+          <type><ref refid="structsim__offload__data" kindref="compound">sim_offload_data</ref> *</type>
+          <declname>sim_offload</declname>
+          <defname>offload_data</defname>
+        </param>
+        <briefdescription>
+<para>Initialize simulation data struct on target. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function copies the simulation parameters from the offload struct to the struct on the target.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sim</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to data struct on target </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload data struct </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="simulate.h" line="226" column="6" bodyfile="simulate.c" bodystart="342" bodyend="381" declfile="simulate.h" declline="226" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="simulate_8h_1a731ec48c95f5641ae30d383ba7d5d387" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void simulate</definition>
+        <argsstring>(int id, int n_particles, particle_state *p, sim_offload_data *sim_offload, offload_package *offload_data, real *offload_array, int *int_offload_array, real *diag_offload_array)</argsstring>
+        <name>simulate</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n_particles</declname>
+        </param>
+        <param>
+          <type><ref refid="structparticle__state" kindref="compound">particle_state</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type><ref refid="structsim__offload__data" kindref="compound">sim_offload_data</ref> *</type>
+          <declname>sim_offload</declname>
+        </param>
+        <param>
+          <type><ref refid="structoffload__package" kindref="compound">offload_package</ref> *</type>
+          <declname>offload_data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>offload_array</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>int_offload_array</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>diag_offload_array</declname>
+        </param>
+        <briefdescription>
+<para>Execute marker simulation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This simulates markers using given inputs and options. All different types of simulations are initialized and run via this function.</para>
+<para>This function proceeds as follows:</para>
+<para><orderedlist>
+<listitem><para>Input offload data is unpacked and initialized by calling respective init functions.</para>
+</listitem><listitem><para>Meta data (e.g. random number generator) is initialized.</para>
+</listitem><listitem><para>Markers are put into simulation queue.</para>
+</listitem><listitem><para>Threads are spawned. One thread is dedicated for monitoring progress, if monitoring is active.</para>
+</listitem><listitem><para>Other threads execute marker simulation using the mode the user has chosen.</para>
+</listitem></orderedlist>
+<itemizedlist>
+<listitem><para>Process continues once all markers have been simulated and each thread has finished. Monitoring is also terminated.</para>
+</listitem></itemizedlist>
+<orderedlist>
+<listitem><para>(If hybrid mode is active) Markers with hybrid end condition active are placed on a new queue, and they have their end condition deactivated and they are simulated with <ref refid="simulate__fo__fixed_8c" kindref="compound">simulate_fo_fixed.c</ref> until they have met some other end condition. Threads are spawned and progress is monitored as previously.</para>
+</listitem><listitem><para>Simulation data is deallocated except for data that is mapped back to host.</para>
+</listitem><listitem><para>Execution returns to host where this function was called.</para>
+</listitem></orderedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>target id where this function is executed, zero if on host </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n_particles</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>total number of markers to be simulated </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to array storing all marker states to be simulated </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sim_offload</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to simulation offload data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the rest of the offload data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to input data offload array </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to input data int offload array </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>diag_offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to diagnostics offload array</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<xrefsect id="todo_1_todo000011"><xreftitle>Todo</xreftitle><xrefdescription><para>Reorganize this function so that it conforms to documentation. </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="simulate.h" line="227" column="6" bodyfile="simulate.c" bodystart="81" bodyend="316" declfile="simulate.h" declline="227" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Header file for <ref refid="simulate_8c" kindref="compound">simulate.c</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Contains declarations of simulation_offload_data and simulation_data structs. Also simulation mode enums are declared here. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SIMULATE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SIMULATE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ascot5_8h" kindref="compound">ascot5.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="B__field_8h" kindref="compound">B_field.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="E__field_8h" kindref="compound">E_field.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="plasma_8h" kindref="compound">plasma.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="neutral_8h" kindref="compound">neutral.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="wall_8h" kindref="compound">wall.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="boozer_8h" kindref="compound">boozer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mhd_8h" kindref="compound">mhd.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="asigma_8h" kindref="compound">asigma.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="nbi_8h" kindref="compound">nbi.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="diag_8h" kindref="compound">diag.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="offload_8h" kindref="compound">offload.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="random_8h" kindref="compound">random.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mccc_8h" kindref="compound">simulate/mccc/mccc.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="34" refid="simulate_8h_1a61dadd085c1777f559549e05962b2c9ea11f071e38be84de6b29ac4882c2e024f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="simulate_8h_1a61dadd085c1777f559549e05962b2c9ea11f071e38be84de6b29ac4882c2e024f" kindref="member">simulate_mode_fo</ref><sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="37" refid="simulate_8h_1a61dadd085c1777f559549e05962b2c9eac0a6480e647e3fbeeea8a2bc4127e2a3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="simulate_8h_1a61dadd085c1777f559549e05962b2c9eac0a6480e647e3fbeeea8a2bc4127e2a3" kindref="member">simulate_mode_gc</ref><sp/>=<sp/>2,</highlight></codeline>
+<codeline lineno="42" refid="simulate_8h_1a61dadd085c1777f559549e05962b2c9eac788923fd31e2e061b73241d459e4590" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="simulate_8h_1a61dadd085c1777f559549e05962b2c9eac788923fd31e2e061b73241d459e4590" kindref="member">simulate_mode_hybrid</ref><sp/>=<sp/>3,</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="simulate_8h_1a61dadd085c1777f559549e05962b2c9ea776d1e6a9397782eec6f44a14dec65c8" kindref="member">simulate_mode_ml</ref><sp/>=<sp/>4</highlight></codeline>
+<codeline lineno="46" refid="simulate_8h_1a61dadd085c1777f559549e05962b2c9ea776d1e6a9397782eec6f44a14dec65c8" refkind="member"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="structsim__offload__data" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Input<sp/>and<sp/>diagnostic<sp/>interface<sp/>offload<sp/>data<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="structsim__offload__data_1a29e77f5d2dac736ad887275f129c8315" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structB__field__offload__data" kindref="compound">B_field_offload_data</ref><sp/><ref refid="structsim__offload__data_1a29e77f5d2dac736ad887275f129c8315" kindref="member">B_offload_data</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="58" refid="structsim__offload__data_1ab45c1976d6cd42f0e43bd94489e612f3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structE__field__offload__data" kindref="compound">E_field_offload_data</ref><sp/><ref refid="structsim__offload__data_1ab45c1976d6cd42f0e43bd94489e612f3" kindref="member">E_offload_data</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="59" refid="structsim__offload__data_1a39c08464071ad4b579c0f97bfe29c4f4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structplasma__offload__data" kindref="compound">plasma_offload_data</ref><sp/><ref refid="structsim__offload__data_1a39c08464071ad4b579c0f97bfe29c4f4" kindref="member">plasma_offload_data</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="60" refid="structsim__offload__data_1a4ed21bf0af1ecc3fb6ef936597797aa1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structneutral__offload__data" kindref="compound">neutral_offload_data</ref><sp/><ref refid="structsim__offload__data_1a4ed21bf0af1ecc3fb6ef936597797aa1" kindref="member">neutral_offload_data</ref>;</highlight></codeline>
+<codeline lineno="61" refid="structsim__offload__data_1a8416582b3980844d6205fdfb3bcc5ba5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structwall__offload__data" kindref="compound">wall_offload_data</ref><sp/><ref refid="structsim__offload__data_1a8416582b3980844d6205fdfb3bcc5ba5" kindref="member">wall_offload_data</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="62" refid="structsim__offload__data_1a815775cd25ace27188ffe7203669770a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structboozer__offload__data" kindref="compound">boozer_offload_data</ref><sp/><ref refid="structsim__offload__data_1a815775cd25ace27188ffe7203669770a" kindref="member">boozer_offload_data</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="63" refid="structsim__offload__data_1a5131baa8f00abbb99494f82b3fe9a90c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmhd__offload__data" kindref="compound">mhd_offload_data</ref><sp/><ref refid="structsim__offload__data_1a5131baa8f00abbb99494f82b3fe9a90c" kindref="member">mhd_offload_data</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="64" refid="structsim__offload__data_1a711b5e59d9315621d1b077521d13b7f3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structasigma__offload__data" kindref="compound">asigma_offload_data</ref><sp/><ref refid="structsim__offload__data_1a711b5e59d9315621d1b077521d13b7f3" kindref="member">asigma_offload_data</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="65" refid="structsim__offload__data_1aa695a4be22ef1fb42a9b5ad46dd17366" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structnbi__offload__data" kindref="compound">nbi_offload_data</ref><sp/><ref refid="structsim__offload__data_1aa695a4be22ef1fb42a9b5ad46dd17366" kindref="member">nbi_offload_data</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="66" refid="structsim__offload__data_1ae442e5d90fb9269e3e6f9d5d06194385" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structdiag__offload__data" kindref="compound">diag_offload_data</ref><sp/><ref refid="structsim__offload__data_1ae442e5d90fb9269e3e6f9d5d06194385" kindref="member">diag_offload_data</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Options<sp/>-<sp/>general<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="structsim__offload__data_1a03d8acc6b66986f065846be123c27138" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structsim__offload__data_1a03d8acc6b66986f065846be123c27138" kindref="member">sim_mode</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="70" refid="structsim__offload__data_1a115a059f11d6010f2553c9c8a014c409" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structsim__offload__data_1a115a059f11d6010f2553c9c8a014c409" kindref="member">enable_ada</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="71" refid="structsim__offload__data_1a4196dea381c8d280ec45a5b650a352ce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structsim__offload__data_1a4196dea381c8d280ec45a5b650a352ce" kindref="member">record_mode</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Options<sp/>-<sp/>fixed<sp/>time-step<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="structsim__offload__data_1a6920c684402ce33c865ed37bc4cc1cf1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structsim__offload__data_1a6920c684402ce33c865ed37bc4cc1cf1" kindref="member">fix_usrdef_use</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="75" refid="structsim__offload__data_1abb17ba68c803b844578283cc21b69c2e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structsim__offload__data_1abb17ba68c803b844578283cc21b69c2e" kindref="member">fix_usrdef_val</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="76" refid="structsim__offload__data_1a178ee4c8ea7d9d4920b1db85580ee1a9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structsim__offload__data_1a178ee4c8ea7d9d4920b1db85580ee1a9" kindref="member">fix_gyrodef_nstep</ref>;<sp/></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Options<sp/>-<sp/>adaptive<sp/>time-step<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="structsim__offload__data_1aa700d5c6fe2480387723b7b7ee31358c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structsim__offload__data_1aa700d5c6fe2480387723b7b7ee31358c" kindref="member">ada_tol_orbfol</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="82" refid="structsim__offload__data_1a4957ea65e16eded864bac6583d61f782" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structsim__offload__data_1a4957ea65e16eded864bac6583d61f782" kindref="member">ada_tol_clmbcol</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="84" refid="structsim__offload__data_1af1a255f56c1148de709f66660e7f71c8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structsim__offload__data_1af1a255f56c1148de709f66660e7f71c8" kindref="member">ada_max_drho</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="86" refid="structsim__offload__data_1a26850f0f93ac52a2696598e00bd1eb40" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structsim__offload__data_1a26850f0f93ac52a2696598e00bd1eb40" kindref="member">ada_max_dphi</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Options<sp/>-<sp/>physics<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="structsim__offload__data_1ad440402741723c1b648a1795d68fb48f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structsim__offload__data_1ad440402741723c1b648a1795d68fb48f" kindref="member">enable_orbfol</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="91" refid="structsim__offload__data_1a2c398b110401b82cb7d157b4eff7dce2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structsim__offload__data_1a2c398b110401b82cb7d157b4eff7dce2" kindref="member">enable_clmbcol</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="92" refid="structsim__offload__data_1a214f86adf0ddbea6864c6b2de90c0b3a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structsim__offload__data_1a214f86adf0ddbea6864c6b2de90c0b3a" kindref="member">enable_mhd</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="93" refid="structsim__offload__data_1a75460f4053492382fc6f6d8a256b8cfc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structsim__offload__data_1a75460f4053492382fc6f6d8a256b8cfc" kindref="member">enable_atomic</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="95" refid="structsim__offload__data_1a633255067bad35ec7cf613e1ba5f3dc2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structsim__offload__data_1a633255067bad35ec7cf613e1ba5f3dc2" kindref="member">disable_gctransform</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="97" refid="structsim__offload__data_1ad92ec514b0a1a88b6cc917c5bbbb5b14" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structsim__offload__data_1ad92ec514b0a1a88b6cc917c5bbbb5b14" kindref="member">disable_energyccoll</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="99" refid="structsim__offload__data_1a4709acea10bf61ccab930c45f154bd80" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structsim__offload__data_1a4709acea10bf61ccab930c45f154bd80" kindref="member">disable_pitchccoll</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="101" refid="structsim__offload__data_1a14c6569947ca691c15b0805575149f3e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structsim__offload__data_1a14c6569947ca691c15b0805575149f3e" kindref="member">disable_gcdiffccoll</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="103" refid="structsim__offload__data_1a0e71ad74cb38a47fbd364469bab0110b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structsim__offload__data_1a0e71ad74cb38a47fbd364469bab0110b" kindref="member">reverse_time</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Options<sp/>-<sp/>end<sp/>conditions<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106" refid="structsim__offload__data_1ad54eeaa2ad63e977a15e20914221716a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structsim__offload__data_1ad54eeaa2ad63e977a15e20914221716a" kindref="member">endcond_active</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="107" refid="structsim__offload__data_1a93f4a7135a3523d611626014b22ab0f9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structsim__offload__data_1a93f4a7135a3523d611626014b22ab0f9" kindref="member">endcond_lim_simtime</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="108" refid="structsim__offload__data_1a2c621ca602356c550be51cd7e9752fd2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structsim__offload__data_1a2c621ca602356c550be51cd7e9752fd2" kindref="member">endcond_max_mileage</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="109" refid="structsim__offload__data_1ad9eb065c8cc569fc50278f9a9e72693d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structsim__offload__data_1ad9eb065c8cc569fc50278f9a9e72693d" kindref="member">endcond_max_cputime</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="110" refid="structsim__offload__data_1affb56d33c1e65349c647c3184e46ee99" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structsim__offload__data_1affb56d33c1e65349c647c3184e46ee99" kindref="member">endcond_min_rho</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="111" refid="structsim__offload__data_1a61000ac07a8e7ae365e763f4ca5b9e13" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structsim__offload__data_1a61000ac07a8e7ae365e763f4ca5b9e13" kindref="member">endcond_max_rho</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="112" refid="structsim__offload__data_1a29f8a52a10ec30279dc8b30b44d385e1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structsim__offload__data_1a29f8a52a10ec30279dc8b30b44d385e1" kindref="member">endcond_min_ekin</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="113" refid="structsim__offload__data_1a897d820fbcc7c26fcd0a8a97e07b801b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structsim__offload__data_1a897d820fbcc7c26fcd0a8a97e07b801b" kindref="member">endcond_min_thermal</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="115" refid="structsim__offload__data_1a6e1533776d180f49000a9df145c09e39" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structsim__offload__data_1a6e1533776d180f49000a9df145c09e39" kindref="member">endcond_max_tororb</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="116" refid="structsim__offload__data_1a850b59a3760c768ff9c4c452e313c29f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structsim__offload__data_1a850b59a3760c768ff9c4c452e313c29f" kindref="member">endcond_max_polorb</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="117" refid="structsim__offload__data_1a6afed4a31017e5b801149d2ee9324c67" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structsim__offload__data_1a6afed4a31017e5b801149d2ee9324c67" kindref="member">endcond_torandpol</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Metadata<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120" refid="structsim__offload__data_1a2ccd6d6cdbe704cfc768088a985167f1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>hdf5_in[256];<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="121" refid="structsim__offload__data_1ac3cf24680eca066bb68b8129e66e0448" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>hdf5_out[256];<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="122" refid="structsim__offload__data_1a3a6019d6aa6f6a24ef9cdf053255a6c8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>qid[256];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="123" refid="structsim__offload__data_1aded2db88e5bdfe9a891b6aa51fe219a2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>description[256];<sp/></highlight></codeline>
+<codeline lineno="125" refid="structsim__offload__data_1a409826e5528d891048ba7407d47f241f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structsim__offload__data_1a409826e5528d891048ba7407d47f241f" kindref="member">mpi_rank</ref>;<sp/></highlight></codeline>
+<codeline lineno="126" refid="structsim__offload__data_1ac1f001102767cad77961793f4b13fdcf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structsim__offload__data_1ac1f001102767cad77961793f4b13fdcf" kindref="member">mpi_size</ref>;<sp/></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>QIDs<sp/>for<sp/>inputs<sp/>if<sp/>the<sp/>active<sp/>inputs<sp/>are<sp/>not<sp/>used<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129" refid="structsim__offload__data_1a053daa31b30c3c30537909269005bf6e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>qid_options[256];<sp/></highlight></codeline>
+<codeline lineno="130" refid="structsim__offload__data_1aae29e9f86fd042e0ccba1564d763cf1b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>qid_bfield[256];<sp/><sp/></highlight></codeline>
+<codeline lineno="131" refid="structsim__offload__data_1ac07e99f3f47922148108186e7a9a3170" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>qid_efield[256];<sp/><sp/></highlight></codeline>
+<codeline lineno="132" refid="structsim__offload__data_1a5927694fc22aea95d5ca17dc43a1b87a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>qid_marker[256];<sp/><sp/></highlight></codeline>
+<codeline lineno="133" refid="structsim__offload__data_1a03d450ec32f3de1d1945cbac66bbcd37" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>qid_wall[256];<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="134" refid="structsim__offload__data_1ab5374be6666f1935779c9b745d414b2b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>qid_plasma[256];<sp/><sp/></highlight></codeline>
+<codeline lineno="135" refid="structsim__offload__data_1aabe3ec41fccd8140d725b44eaf8a1430" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>qid_neutral[256];<sp/></highlight></codeline>
+<codeline lineno="136" refid="structsim__offload__data_1a0d0d52eff6816e373731c980144a795b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>qid_boozer[256];<sp/><sp/></highlight></codeline>
+<codeline lineno="137" refid="structsim__offload__data_1a695e4f61adefa1dbbc38c44c8cc84bc5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>qid_mhd[256];<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="138" refid="structsim__offload__data_1ac0b1557246ad782681b1e923772d86a7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>qid_asigma[256];<sp/><sp/></highlight></codeline>
+<codeline lineno="139" refid="structsim__offload__data_1a56b2de5f696ad3a65f4fe3e572a08c35" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>qid_nbi[256];<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="141"><highlight class="normal">}<sp/><ref refid="structsim__offload__data" kindref="compound">sim_offload_data</ref>;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153" refid="structsim__data" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Input<sp/>and<sp/>diagnostic<sp/>interfaces<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155" refid="structsim__data_1ad59e70ae9a6134fffe18d07a74e18574" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structB__field__data" kindref="compound">B_field_data</ref><sp/><ref refid="structsim__data_1ad59e70ae9a6134fffe18d07a74e18574" kindref="member">B_data</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="156" refid="structsim__data_1a7fea2f2908b23bbdcbc7bb2f4cf552fe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structE__field__data" kindref="compound">E_field_data</ref><sp/><ref refid="structsim__data_1a7fea2f2908b23bbdcbc7bb2f4cf552fe" kindref="member">E_data</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="157" refid="structsim__data_1a49b02c00f00378f6d8ffb8923108400e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structplasma__data" kindref="compound">plasma_data</ref><sp/><ref refid="structsim__data_1a49b02c00f00378f6d8ffb8923108400e" kindref="member">plasma_data</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="158" refid="structsim__data_1ab1c83fe33821e5f53c31ce677f9cb904" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structneutral__data" kindref="compound">neutral_data</ref><sp/><ref refid="structsim__data_1ab1c83fe33821e5f53c31ce677f9cb904" kindref="member">neutral_data</ref>;<sp/></highlight></codeline>
+<codeline lineno="159" refid="structsim__data_1ae48c67f0a6347215dad669fc7ab1bfac" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structwall__data" kindref="compound">wall_data</ref><sp/><ref refid="structsim__data_1ae48c67f0a6347215dad669fc7ab1bfac" kindref="member">wall_data</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="160" refid="structsim__data_1abebb53f7f3034fb95ffd42d184911709" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structboozer__data" kindref="compound">boozer_data</ref><sp/><ref refid="structsim__data_1abebb53f7f3034fb95ffd42d184911709" kindref="member">boozer_data</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="161" refid="structsim__data_1a503121f3afc4a5e8cb17a89badf36f3e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmhd__data" kindref="compound">mhd_data</ref><sp/><ref refid="structsim__data_1a503121f3afc4a5e8cb17a89badf36f3e" kindref="member">mhd_data</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="162" refid="structsim__data_1af32ee5b223614c4ed225f3bf3b1bae47" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structasigma__data" kindref="compound">asigma_data</ref><sp/><ref refid="structsim__data_1af32ee5b223614c4ed225f3bf3b1bae47" kindref="member">asigma_data</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="163" refid="structsim__data_1afefa1efc21343540d70fefb220ccda68" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structnbi__data" kindref="compound">nbi_data</ref><sp/><ref refid="structsim__data_1afefa1efc21343540d70fefb220ccda68" kindref="member">nbi_data</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="164" refid="structsim__data_1afe5fab24de78050e35db8c64817465e2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structdiag__data" kindref="compound">diag_data</ref><sp/><ref refid="structsim__data_1afe5fab24de78050e35db8c64817465e2" kindref="member">diag_data</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Metadata<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167" refid="structsim__data_1ab0e50d50655c4eaebfa9d931e909c76a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="random_8h_1a103c9e22750b3fbab1ce5060f56f5100" kindref="member">random_data</ref><sp/><ref refid="structsim__data_1ab0e50d50655c4eaebfa9d931e909c76a" kindref="member">random_data</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="168" refid="structsim__data_1aab9969eeb73ce3c575f4c1b43af9c683" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmccc__data" kindref="compound">mccc_data</ref><sp/><ref refid="structsim__data_1aab9969eeb73ce3c575f4c1b43af9c683" kindref="member">mccc_data</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Options<sp/>-<sp/>general<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172" refid="structsim__data_1a2e2b06656ae8326ab26e5d1abeb2ef42" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structsim__data_1a2e2b06656ae8326ab26e5d1abeb2ef42" kindref="member">sim_mode</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="173" refid="structsim__data_1ad26f3deac6da6da40edf472accf858ea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structsim__data_1ad26f3deac6da6da40edf472accf858ea" kindref="member">enable_ada</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="174" refid="structsim__data_1a27309376dd94415443dec8af2b344456" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structsim__data_1a27309376dd94415443dec8af2b344456" kindref="member">record_mode</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Options<sp/>-<sp/>fixed<sp/>time-step<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177" refid="structsim__data_1a921c237b34337b9dc8d79cda3f81ea80" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structsim__data_1a921c237b34337b9dc8d79cda3f81ea80" kindref="member">fix_usrdef_use</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="178" refid="structsim__data_1a762206ad2960f1191ce359aeb6d3cd9b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structsim__data_1a762206ad2960f1191ce359aeb6d3cd9b" kindref="member">fix_usrdef_val</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="179" refid="structsim__data_1ab6d802c61cf00ab99b03c9662016ebd6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structsim__data_1ab6d802c61cf00ab99b03c9662016ebd6" kindref="member">fix_gyrodef_nstep</ref>;<sp/></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Options<sp/>-<sp/>adaptive<sp/>time-step<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183" refid="structsim__data_1afddd975cc70f4e8e7a7528ec9034768f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structsim__data_1afddd975cc70f4e8e7a7528ec9034768f" kindref="member">ada_tol_orbfol</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="185" refid="structsim__data_1a3c9e11f6d0592c1667061e648443c858" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structsim__data_1a3c9e11f6d0592c1667061e648443c858" kindref="member">ada_tol_clmbcol</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="187" refid="structsim__data_1a3a2db428880d7095b6388c97750d663f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structsim__data_1a3a2db428880d7095b6388c97750d663f" kindref="member">ada_max_drho</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="189" refid="structsim__data_1aee77bfedd1a81f4a47c3a2077796801d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structsim__data_1aee77bfedd1a81f4a47c3a2077796801d" kindref="member">ada_max_dphi</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Options<sp/>-<sp/>physics<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193" refid="structsim__data_1a0815418272a044ca73fd4dcd20d12aab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structsim__data_1a0815418272a044ca73fd4dcd20d12aab" kindref="member">enable_orbfol</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="194" refid="structsim__data_1af9edad0b9c7718f52ab7bb7e0b0e55af" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structsim__data_1af9edad0b9c7718f52ab7bb7e0b0e55af" kindref="member">enable_clmbcol</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="195" refid="structsim__data_1a85b4ea5c443ec3f475f970293b6fee7c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structsim__data_1a85b4ea5c443ec3f475f970293b6fee7c" kindref="member">enable_mhd</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="196" refid="structsim__data_1a53ec6b3651ec11ac083b25c635b58f1f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structsim__data_1a53ec6b3651ec11ac083b25c635b58f1f" kindref="member">enable_atomic</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="197" refid="structsim__data_1afc8f4e5df7944e00e47a7936587f90ed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structsim__data_1afc8f4e5df7944e00e47a7936587f90ed" kindref="member">disable_gctransform</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="199" refid="structsim__data_1a323929b1f43d1c9242a0aad5e1986e42" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structsim__data_1a323929b1f43d1c9242a0aad5e1986e42" kindref="member">disable_energyccoll</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="201" refid="structsim__data_1a8358f9117e35d1b60866b7256c85cbc0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structsim__data_1a8358f9117e35d1b60866b7256c85cbc0" kindref="member">disable_pitchccoll</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="203" refid="structsim__data_1a6363cbae957cc4a4efee03a013e9915b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structsim__data_1a6363cbae957cc4a4efee03a013e9915b" kindref="member">disable_gcdiffccoll</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="205" refid="structsim__data_1ae4fee01614e537fc2a2085079a5a56dd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structsim__data_1ae4fee01614e537fc2a2085079a5a56dd" kindref="member">reverse_time</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Options<sp/>-<sp/>end<sp/>conditions<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208" refid="structsim__data_1a8f315bd49069d01f8d9104fb7f79999b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structsim__data_1a8f315bd49069d01f8d9104fb7f79999b" kindref="member">endcond_active</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="209" refid="structsim__data_1acee4cee05723b173ff792cd7ab1621be" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structsim__data_1acee4cee05723b173ff792cd7ab1621be" kindref="member">endcond_lim_simtime</ref>;<sp/></highlight></codeline>
+<codeline lineno="210" refid="structsim__data_1a7586bc5f63976840373a6c348da68092" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structsim__data_1a7586bc5f63976840373a6c348da68092" kindref="member">endcond_max_mileage</ref>;<sp/></highlight></codeline>
+<codeline lineno="211" refid="structsim__data_1ab96e7e35484fefcf04f46dacf4019044" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structsim__data_1ab96e7e35484fefcf04f46dacf4019044" kindref="member">endcond_max_cputime</ref>;<sp/></highlight></codeline>
+<codeline lineno="212" refid="structsim__data_1acc4c16b8887426023fcf4bbfe4aba382" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structsim__data_1acc4c16b8887426023fcf4bbfe4aba382" kindref="member">endcond_min_rho</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="213" refid="structsim__data_1a179910ba60d3e1ffe038500d7fe88213" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structsim__data_1a179910ba60d3e1ffe038500d7fe88213" kindref="member">endcond_max_rho</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="214" refid="structsim__data_1a15cbc76019c8959e9bb051adc1e5daba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structsim__data_1a15cbc76019c8959e9bb051adc1e5daba" kindref="member">endcond_min_ekin</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="215" refid="structsim__data_1a68785668e3e5a7efdc1ee5b952fc7257" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structsim__data_1a68785668e3e5a7efdc1ee5b952fc7257" kindref="member">endcond_min_thermal</ref>;<sp/></highlight></codeline>
+<codeline lineno="217" refid="structsim__data_1a5093881ffcbded4fcda22c1f86f8f3b6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structsim__data_1a5093881ffcbded4fcda22c1f86f8f3b6" kindref="member">endcond_max_tororb</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="218" refid="structsim__data_1aacbfca513534f0925674a734e93eea1b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structsim__data_1aacbfca513534f0925674a734e93eea1b" kindref="member">endcond_max_polorb</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="219" refid="structsim__data_1a17456119044757d2dd1238d452b1dbe3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structsim__data_1a17456119044757d2dd1238d452b1dbe3" kindref="member">endcond_torandpol</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="221"><highlight class="normal">}<sp/><ref refid="structsim__data" kindref="compound">sim_data</ref>;</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="simulate_8h_1a0eb83ea67e77dffb1614c82865e0ddfa" kindref="member">simulate_init_offload</ref>(<ref refid="structsim__offload__data" kindref="compound">sim_offload_data</ref>*<sp/>sim);</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>declare<sp/>target</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="simulate_8h_1a30d61fc32fe1448ab2a3abe49af56026" kindref="member">sim_init</ref>(<ref refid="structsim__data" kindref="compound">sim_data</ref>*<sp/>sim,<sp/><ref refid="structsim__offload__data" kindref="compound">sim_offload_data</ref>*<sp/>sim_offload);</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="simulate_8h_1a731ec48c95f5641ae30d383ba7d5d387" kindref="member">simulate</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n_particles,<sp/><ref refid="structparticle__state" kindref="compound">particle_state</ref>*<sp/>p,</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsim__offload__data" kindref="compound">sim_offload_data</ref>*<sp/>sim_offload,</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structoffload__package" kindref="compound">offload_package</ref>*<sp/>offload_data,</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>offload_array,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>int_offload_array,</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>diag_offload_array);</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>end<sp/>declare<sp/>target</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="simulate.h"/>
+  </compounddef>
+</doxygen>

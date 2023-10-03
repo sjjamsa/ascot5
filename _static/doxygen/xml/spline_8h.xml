@@ -1,0 +1,245 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="spline_8h" kind="file" language="C++">
+    <compoundname>spline.h</compoundname>
+    <includes refid="ascot5_8h" local="yes">../ascot5.h</includes>
+    <includedby refid="interp1Dcomp_8c" local="yes">spline/interp1Dcomp.c</includedby>
+    <includedby refid="interp1Dexpl_8c" local="yes">spline/interp1Dexpl.c</includedby>
+    <includedby refid="interp2Dcomp_8c" local="yes">spline/interp2Dcomp.c</includedby>
+    <includedby refid="interp2Dexpl_8c" local="yes">spline/interp2Dexpl.c</includedby>
+    <includedby refid="interp3Dcomp_8c" local="yes">spline/interp3Dcomp.c</includedby>
+    <includedby refid="interp3Dexpl_8c" local="yes">spline/interp3Dexpl.c</includedby>
+    <includedby refid="splinecomp_8c" local="yes">spline/splinecomp.c</includedby>
+    <includedby refid="splineexpl_8c" local="yes">spline/splineexpl.c</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>omp.h</label>
+      </node>
+      <node id="4">
+        <label>time.h</label>
+      </node>
+      <node id="1">
+        <label>spline/spline.h</label>
+        <link refid="spline_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>../ascot5.h</label>
+        <link refid="ascot5_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="7">
+        <label>spline/interp3Dexpl.c</label>
+        <link refid="interp3Dexpl_8c"/>
+      </node>
+      <node id="5">
+        <label>spline/interp2Dexpl.c</label>
+        <link refid="interp2Dexpl_8c"/>
+      </node>
+      <node id="3">
+        <label>spline/interp1Dexpl.c</label>
+        <link refid="interp1Dexpl_8c"/>
+      </node>
+      <node id="6">
+        <label>spline/interp3Dcomp.c</label>
+        <link refid="interp3Dcomp_8c"/>
+      </node>
+      <node id="4">
+        <label>spline/interp2Dcomp.c</label>
+        <link refid="interp2Dcomp_8c"/>
+      </node>
+      <node id="2">
+        <label>spline/interp1Dcomp.c</label>
+        <link refid="interp1Dcomp_8c"/>
+      </node>
+      <node id="8">
+        <label>spline/splinecomp.c</label>
+        <link refid="splinecomp_8c"/>
+      </node>
+      <node id="1">
+        <label>spline/spline.h</label>
+        <link refid="spline_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>spline/splineexpl.c</label>
+        <link refid="splineexpl_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="spline_8h_1a3b47edd8e00024d5678be55e9c4fd237" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void splineexpl</definition>
+        <argsstring>(real *f, int n, int bc, real *c)</argsstring>
+        <name>splineexpl</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bc</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Calculate explicit cubic spline interpolation coefficients in 1D. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function calculates the explicit cubic interpolation coefficients for a 1D data set using one of two possible boundary conditions. Function returns a pointer to coefficient array.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>1D data to be interpolated </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of data points </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>boundary condition flag </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>array for coefficient storage, has length 4*n </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>NATURAL (Second derivative is zero at both ends)</para>
+<para>PERIODIC (Function has same value and derivatives at both ends)</para>
+        </inbodydescription>
+        <location file="spline/spline.h" line="10" column="6" bodyfile="spline/splineexpl.c" bodystart="22" bodyend="131" declfile="spline/spline.h" declline="10" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="spline_8h_1a080ba3923268c0bdd820b12025ce41f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void splinecomp</definition>
+        <argsstring>(real *f, int n, int bc, real *c)</argsstring>
+        <name>splinecomp</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bc</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Calculate compact cubic spline interpolation coefficients in 1D. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function calculates the compact cubic interpolation coefficients for a 1D data set using one of two possible boundary conditions. Function returns a pointer to the coefficient array.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>1D data to be interpolated </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of data points </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>boundary condition flag </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>array for coefficient storage, has length 2*n </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>NATURAL (Second derivative is zero at both ends)</para>
+<para>PERIODIC (Function has same value and derivatives at both ends)</para>
+        </inbodydescription>
+        <location file="spline/spline.h" line="11" column="6" bodyfile="spline/splinecomp.c" bodystart="22" bodyend="130" declfile="spline/spline.h" declline="11" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Header file for <ref refid="splineexpl_8c" kindref="compound">splineexpl.c</ref> and <ref refid="splinecomp_8c" kindref="compound">splinecomp.c</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SPLINE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPLINE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../ascot5.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>declare<sp/>target</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="spline_8h_1a3b47edd8e00024d5678be55e9c4fd237" kindref="member">splineexpl</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>f,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bc,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>c);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="spline_8h_1a080ba3923268c0bdd820b12025ce41f2" kindref="member">splinecomp</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>f,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bc,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>c);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>end<sp/>declare<sp/>target</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="spline/spline.h"/>
+  </compounddef>
+</doxygen>

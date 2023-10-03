@@ -1,0 +1,806 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="hdf5__helpers_8h" kind="file" language="C++">
+    <compoundname>hdf5_helpers.h</compoundname>
+    <includes local="no">hdf5.h</includes>
+    <includes refid="ascot5_8h" local="yes">../ascot5.h</includes>
+    <includedby refid="afsi_8c" local="yes">afsi.c</includedby>
+    <includedby refid="bbnbi5_8c" local="yes">bbnbi5.c</includedby>
+    <includedby refid="hdf5__interface_8c" local="yes">hdf5_interface.c</includedby>
+    <includedby refid="hdf5__asigma_8c" local="yes">hdf5io/hdf5_asigma.c</includedby>
+    <includedby refid="hdf5__bfield_8c" local="yes">hdf5io/hdf5_bfield.c</includedby>
+    <includedby refid="hdf5__boozer_8c" local="yes">hdf5io/hdf5_boozer.c</includedby>
+    <includedby refid="hdf5__dist_8c" local="yes">hdf5io/hdf5_dist.c</includedby>
+    <includedby refid="hdf5__efield_8c" local="yes">hdf5io/hdf5_efield.c</includedby>
+    <includedby refid="hdf5__marker_8c" local="yes">hdf5io/hdf5_marker.c</includedby>
+    <includedby refid="hdf5__mhd_8c" local="yes">hdf5io/hdf5_mhd.c</includedby>
+    <includedby refid="hdf5__nbi_8c" local="yes">hdf5io/hdf5_nbi.c</includedby>
+    <includedby refid="hdf5__neutral_8c" local="yes">hdf5io/hdf5_neutral.c</includedby>
+    <includedby refid="hdf5__options_8c" local="yes">hdf5io/hdf5_options.c</includedby>
+    <includedby refid="hdf5__orbit_8c" local="yes">hdf5io/hdf5_orbit.c</includedby>
+    <includedby refid="hdf5__plasma_8c" local="yes">hdf5io/hdf5_plasma.c</includedby>
+    <includedby refid="hdf5__state_8c" local="yes">hdf5io/hdf5_state.c</includedby>
+    <includedby refid="hdf5__transcoef_8c" local="yes">hdf5io/hdf5_transcoef.c</includedby>
+    <includedby refid="hdf5__wall_8c" local="yes">hdf5io/hdf5_wall.c</includedby>
+    <includedby refid="libascot_8c" local="yes">libascot.c</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>omp.h</label>
+      </node>
+      <node id="1">
+        <label>hdf5io/hdf5_helpers.h</label>
+        <link refid="hdf5__helpers_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hdf5.h</label>
+      </node>
+      <node id="5">
+        <label>time.h</label>
+      </node>
+      <node id="3">
+        <label>../ascot5.h</label>
+        <link refid="ascot5_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="10">
+        <label>hdf5io/hdf5_marker.c</label>
+        <link refid="hdf5__marker_8c"/>
+      </node>
+      <node id="8">
+        <label>hdf5io/hdf5_dist.c</label>
+        <link refid="hdf5__dist_8c"/>
+      </node>
+      <node id="2">
+        <label>afsi.c</label>
+        <link refid="afsi_8c"/>
+      </node>
+      <node id="18">
+        <label>hdf5io/hdf5_transcoef.c</label>
+        <link refid="hdf5__transcoef_8c"/>
+      </node>
+      <node id="19">
+        <label>hdf5io/hdf5_wall.c</label>
+        <link refid="hdf5__wall_8c"/>
+      </node>
+      <node id="5">
+        <label>hdf5io/hdf5_asigma.c</label>
+        <link refid="hdf5__asigma_8c"/>
+      </node>
+      <node id="16">
+        <label>hdf5io/hdf5_plasma.c</label>
+        <link refid="hdf5__plasma_8c"/>
+      </node>
+      <node id="1">
+        <label>hdf5io/hdf5_helpers.h</label>
+        <link refid="hdf5__helpers_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>hdf5io/hdf5_options.c</label>
+        <link refid="hdf5__options_8c"/>
+      </node>
+      <node id="11">
+        <label>hdf5io/hdf5_mhd.c</label>
+        <link refid="hdf5__mhd_8c"/>
+      </node>
+      <node id="15">
+        <label>hdf5io/hdf5_orbit.c</label>
+        <link refid="hdf5__orbit_8c"/>
+      </node>
+      <node id="20">
+        <label>libascot.c</label>
+        <link refid="libascot_8c"/>
+      </node>
+      <node id="4">
+        <label>hdf5_interface.c</label>
+        <link refid="hdf5__interface_8c"/>
+      </node>
+      <node id="13">
+        <label>hdf5io/hdf5_neutral.c</label>
+        <link refid="hdf5__neutral_8c"/>
+      </node>
+      <node id="3">
+        <label>bbnbi5.c</label>
+        <link refid="bbnbi5_8c"/>
+      </node>
+      <node id="12">
+        <label>hdf5io/hdf5_nbi.c</label>
+        <link refid="hdf5__nbi_8c"/>
+      </node>
+      <node id="17">
+        <label>hdf5io/hdf5_state.c</label>
+        <link refid="hdf5__state_8c"/>
+      </node>
+      <node id="7">
+        <label>hdf5io/hdf5_boozer.c</label>
+        <link refid="hdf5__boozer_8c"/>
+      </node>
+      <node id="9">
+        <label>hdf5io/hdf5_efield.c</label>
+        <link refid="hdf5__efield_8c"/>
+      </node>
+      <node id="6">
+        <label>hdf5io/hdf5_bfield.c</label>
+        <link refid="hdf5__bfield_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="hdf5__helpers_8h_1a96896104ec8205478725d5556a2293b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void hdf5_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>hdf5_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize hdf5, right now just disables automatic error messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hdf5io/hdf5_helpers.h" line="11" column="6" bodyfile="hdf5io/hdf5_helpers.c" bodystart="18" bodyend="20" declfile="hdf5io/hdf5_helpers.h" declline="11" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="hdf5__helpers_8h_1a513c532c74d7bd4b67a2bff995f2d035" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>hid_t</type>
+        <definition>hid_t hdf5_create</definition>
+        <argsstring>(const char *filename)</argsstring>
+        <name>hdf5_create</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Create an hdf5 file, fail if file exists. A negative value is returned on failure. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hdf5io/hdf5_helpers.h" line="12" column="7" bodyfile="hdf5io/hdf5_helpers.c" bodystart="26" bodyend="30" declfile="hdf5io/hdf5_helpers.h" declline="12" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="hdf5__helpers_8h_1ae738519932114db33526f43aaac618c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>hid_t</type>
+        <definition>hid_t hdf5_open</definition>
+        <argsstring>(const char *filename)</argsstring>
+        <name>hdf5_open</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Open a hdf5 file for reading and writing. A negative value is returned on failure. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hdf5io/hdf5_helpers.h" line="13" column="7" bodyfile="hdf5io/hdf5_helpers.c" bodystart="36" bodyend="40" declfile="hdf5io/hdf5_helpers.h" declline="13" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="hdf5__helpers_8h_1ab5b4abd94d6b4aef3f7887744ae29ae4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>hid_t</type>
+        <definition>hid_t hdf5_open_ro</definition>
+        <argsstring>(const char *filename)</argsstring>
+        <name>hdf5_open_ro</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Open a hdf5 file for read only. A negative value is returned on failure. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hdf5io/hdf5_helpers.h" line="14" column="7" bodyfile="hdf5io/hdf5_helpers.c" bodystart="46" bodyend="50" declfile="hdf5io/hdf5_helpers.h" declline="14" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="hdf5__helpers_8h_1a6a57d2832437c9de3c753c7be13b165b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>herr_t</type>
+        <definition>herr_t hdf5_close</definition>
+        <argsstring>(hid_t file_id)</argsstring>
+        <name>hdf5_close</name>
+        <param>
+          <type>hid_t</type>
+          <declname>file_id</declname>
+        </param>
+        <briefdescription>
+<para>Close access to given hdf5 file identifier. A negative value is returned on failure. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hdf5io/hdf5_helpers.h" line="15" column="8" bodyfile="hdf5io/hdf5_helpers.c" bodystart="56" bodyend="60" declfile="hdf5io/hdf5_helpers.h" declline="15" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="hdf5__helpers_8h_1a04a66d2b32f3c7d078a9407c7228a216" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>hid_t</type>
+        <definition>hid_t hdf5_create_group</definition>
+        <argsstring>(hid_t loc, const char *path)</argsstring>
+        <name>hdf5_create_group</name>
+        <param>
+          <type>hid_t</type>
+          <declname>loc</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>Create a group (with parent groups if necessary). Returns a handle to the group. Negative on failure. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hdf5io/hdf5_helpers.h" line="16" column="7" bodyfile="hdf5io/hdf5_helpers.c" bodystart="66" bodyend="94" declfile="hdf5io/hdf5_helpers.h" declline="16" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="hdf5__helpers_8h_1a3b6edfba63099574025bea60453da24b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>herr_t</type>
+        <definition>herr_t hdf5_find_group</definition>
+        <argsstring>(hid_t loc, const char *path)</argsstring>
+        <name>hdf5_find_group</name>
+        <param>
+          <type>hid_t</type>
+          <declname>loc</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>Checks if given group exists within given hdf5 file. Negative value is returned if the group doesn&apos;t exist. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hdf5io/hdf5_helpers.h" line="17" column="8" bodyfile="hdf5io/hdf5_helpers.c" bodystart="100" bodyend="102" declfile="hdf5io/hdf5_helpers.h" declline="17" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="hdf5__helpers_8h_1af45edbf1fd8a20d127bfd9588b9ebae8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* hdf5_generate_qid_path</definition>
+        <argsstring>(const char *original, char *qid, char *path)</argsstring>
+        <name>hdf5_generate_qid_path</name>
+        <param>
+          <type>const char *</type>
+          <declname>original</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>qid</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>Generate a valid path from a given template and qid. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Data in ASCOT5 HDF5 files is stored in groups, where each group is assigned a unique identifier. The paths are then in format such as &quot;bfield/B_2D-0123456789&quot;. This function turns a template e.g. &quot;bfield/B_2D-XXXXXXXXXX&quot; to a valid path. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hdf5io/hdf5_helpers.h" line="18" column="6" bodyfile="hdf5io/hdf5_helpers.c" bodystart="112" bodyend="121" declfile="hdf5io/hdf5_helpers.h" declline="18" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="hdf5__helpers_8h_1ab43ae79d4f8e8d83bf098da8a0054a72" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* hdf5_gen_path</definition>
+        <argsstring>(const char *original, char *qid, char *path)</argsstring>
+        <name>hdf5_gen_path</name>
+        <param>
+          <type>const char *</type>
+          <declname>original</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>qid</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>Generate a valid path from a given template and qid. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Data in ASCOT5 HDF5 files is stored in groups, where each group is assigned a unique identifier. The paths are then in format such as &quot;bfield/B_2D-0123456789&quot;. This function turns a template e.g. &quot;bfield/B_2D-XXXXXXXXXX&quot; to a valid path. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hdf5io/hdf5_helpers.h" line="19" column="6" bodyfile="hdf5io/hdf5_helpers.c" bodystart="131" bodyend="140" declfile="hdf5io/hdf5_helpers.h" declline="19" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="hdf5__helpers_8h_1a43b9438fc244982ddff7dc58ea3b9ef9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hdf5_read_double</definition>
+        <argsstring>(const char *var, real *ptr, hid_t file, char *qid, const char *errfile, int errline)</argsstring>
+        <name>hdf5_read_double</name>
+        <param>
+          <type>const char *</type>
+          <declname>var</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>hid_t</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>qid</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>errfile</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>errline</declname>
+        </param>
+        <briefdescription>
+<para>Read double-valued data from ASCOT5 HDF5 file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Datasets in ASCOT5 are located in the HDF5 file at paths that look like this: &quot;/options/opt-XXXXXXXXXX/dataset&quot;, where X&apos;s is the QID value that is used differentiate between inputs of same type. This function constructs the path for a given dummy path, dataset, and qid, reads the dataset, and writes error message if the dataset could not be read.</para>
+<para>This function reads data that has type double.</para>
+<para>The file is opened and closed outside of this function.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>var</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&quot;dummy&quot; (otherwise valid but with X&apos;s) path to variable </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer where data will be stored </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>HDF5 file </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>qid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>QID value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>errfile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>use macro <bold>FILE</bold> here to indicate the file this function was called </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>errline</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>use macro <bold>LINE</bold> here to indicate the line this function was called</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>zero if success </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hdf5io/hdf5_helpers.h" line="20" column="5" bodyfile="hdf5io/hdf5_helpers.c" bodystart="166" bodyend="175" declfile="hdf5io/hdf5_helpers.h" declline="20" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="hdf5__helpers_8h_1ae78f9ef2bb986e45d4cca2861d97e1fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hdf5_read_int</definition>
+        <argsstring>(const char *var, int *ptr, hid_t file, char *qid, const char *errfile, int errline)</argsstring>
+        <name>hdf5_read_int</name>
+        <param>
+          <type>const char *</type>
+          <declname>var</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>hid_t</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>qid</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>errfile</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>errline</declname>
+        </param>
+        <briefdescription>
+<para>Read int-valued data from ASCOT5 HDF5 file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Datasets in ASCOT5 are located in the HDF5 file at paths that look like this: &quot;/options/opt-XXXXXXXXXX/dataset&quot;, where X&apos;s is the QID value that is used differentiate between inputs of same type. This function constructs the path for a given dummy path, dataset, and qid, reads the dataset, and writes error message if the dataset could not be read.</para>
+<para>This function reads data that has type double.</para>
+<para>The file is opened and closed outside of this function.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>var</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&quot;dummy&quot; (otherwise valid but with X&apos;s) path to variable </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer where data will be stored </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>HDF5 file </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>qid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>QID value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>errfile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>use macro <bold>FILE</bold> here to indicate the file this function was called </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>errline</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>use macro <bold>LINE</bold> here to indicate the line this function was called</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>zero if success </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hdf5io/hdf5_helpers.h" line="22" column="5" bodyfile="hdf5io/hdf5_helpers.c" bodystart="201" bodyend="210" declfile="hdf5io/hdf5_helpers.h" declline="22" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="hdf5__helpers_8h_1a4dc165719c858d5f3937a69d3a9eca68" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hdf5_read_long</definition>
+        <argsstring>(const char *var, long *ptr, hid_t file, char *qid, const char *errfile, int errline)</argsstring>
+        <name>hdf5_read_long</name>
+        <param>
+          <type>const char *</type>
+          <declname>var</declname>
+        </param>
+        <param>
+          <type>long *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>hid_t</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>qid</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>errfile</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>errline</declname>
+        </param>
+        <briefdescription>
+<para>Read long-valued data from ASCOT5 HDF5 file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Datasets in ASCOT5 are located in the HDF5 file at paths that look like this: &quot;/options/opt-XXXXXXXXXX/dataset&quot;, where X&apos;s is the QID value that is used differentiate between inputs of same type. This function constructs the path for a given dummy path, dataset, and qid, reads the dataset, and writes error message if the dataset could not be read.</para>
+<para>This function reads data that has type double.</para>
+<para>The file is opened and closed outside of this function.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>var</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&quot;dummy&quot; (otherwise valid but with X&apos;s) path to variable </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer where data will be stored </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>HDF5 file </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>qid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>QID value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>errfile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>use macro <bold>FILE</bold> here to indicate the file this function was called </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>errline</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>use macro <bold>LINE</bold> here to indicate the line this function was called</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>zero if success </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hdf5io/hdf5_helpers.h" line="24" column="5" bodyfile="hdf5io/hdf5_helpers.c" bodystart="236" bodyend="245" declfile="hdf5io/hdf5_helpers.h" declline="24" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="hdf5__helpers_8h_1a2bad29ebd3986c3c3af247f9e2aa451c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>herr_t</type>
+        <definition>herr_t hdf5_write_string_attribute</definition>
+        <argsstring>(hid_t loc, const char *path, const char *attrname, const char *string)</argsstring>
+        <name>hdf5_write_string_attribute</name>
+        <param>
+          <type>hid_t</type>
+          <declname>loc</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>attrname</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>string</declname>
+        </param>
+        <briefdescription>
+<para>Write string attribute with null-padding. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>There is a H5LTset_attribute_string function but it writes strings as null-terminated. However, string attributes in ASCOT5 HDF5 file are assumed to be null-padded. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hdf5io/hdf5_helpers.h" line="26" column="9" bodyfile="hdf5io/hdf5_helpers.c" bodystart="254" bodyend="290" declfile="hdf5io/hdf5_helpers.h" declline="26" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="hdf5__helpers_8h_1ab8f64c059ee0a1313e77b05e4de69e54" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>herr_t</type>
+        <definition>herr_t hdf5_write_extendible_dataset_double</definition>
+        <argsstring>(hid_t group, const char *datasetname, int length, double *data)</argsstring>
+        <name>hdf5_write_extendible_dataset_double</name>
+        <param>
+          <type>hid_t</type>
+          <declname>group</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>datasetname</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Create and write to an extendible dataset for double data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hdf5io/hdf5_helpers.h" line="28" column="8" bodyfile="hdf5io/hdf5_helpers.c" bodystart="295" bodyend="323" declfile="hdf5io/hdf5_helpers.h" declline="28" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="hdf5__helpers_8h_1a3c0b1edd399d012cc00b5979567f1b05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>herr_t</type>
+        <definition>herr_t hdf5_write_extendible_dataset_long</definition>
+        <argsstring>(hid_t group, const char *datasetname, int length, long *data)</argsstring>
+        <name>hdf5_write_extendible_dataset_long</name>
+        <param>
+          <type>hid_t</type>
+          <declname>group</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>datasetname</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>long *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Create and write to an extendible dataset for long data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hdf5io/hdf5_helpers.h" line="31" column="8" bodyfile="hdf5io/hdf5_helpers.c" bodystart="329" bodyend="357" declfile="hdf5io/hdf5_helpers.h" declline="31" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="hdf5__helpers_8h_1a4190689187d3e7220ab772c9ae0baa0f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>herr_t</type>
+        <definition>herr_t hdf5_write_extendible_dataset_int</definition>
+        <argsstring>(hid_t group, const char *datasetname, int length, int *data)</argsstring>
+        <name>hdf5_write_extendible_dataset_int</name>
+        <param>
+          <type>hid_t</type>
+          <declname>group</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>datasetname</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Create and write to an extendible dataset int data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hdf5io/hdf5_helpers.h" line="34" column="8" bodyfile="hdf5io/hdf5_helpers.c" bodystart="362" bodyend="390" declfile="hdf5io/hdf5_helpers.h" declline="34" declcolumn="8"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Header file for <ref refid="hdf5__helpers_8h" kindref="compound">hdf5_helpers.h</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>HDF5_HELPERS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HDF5_HELPERS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hdf5.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../ascot5.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="hdf5__helpers_8h_1a96896104ec8205478725d5556a2293b9" kindref="member">hdf5_init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">hid_t<sp/><ref refid="hdf5__helpers_8h_1a513c532c74d7bd4b67a2bff995f2d035" kindref="member">hdf5_create</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>filename);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">hid_t<sp/><ref refid="hdf5__helpers_8h_1ae738519932114db33526f43aaac618c7" kindref="member">hdf5_open</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>filename);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">hid_t<sp/><ref refid="hdf5__helpers_8h_1ab5b4abd94d6b4aef3f7887744ae29ae4" kindref="member">hdf5_open_ro</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>filename);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">herr_t<sp/><ref refid="hdf5__helpers_8h_1a6a57d2832437c9de3c753c7be13b165b" kindref="member">hdf5_close</ref>(hid_t<sp/>file_id);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">hid_t<sp/><ref refid="hdf5__helpers_8h_1a04a66d2b32f3c7d078a9407c7228a216" kindref="member">hdf5_create_group</ref>(hid_t<sp/>loc,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>path);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">herr_t<sp/><ref refid="hdf5__helpers_8h_1a3b6edfba63099574025bea60453da24b" kindref="member">hdf5_find_group</ref>(hid_t<sp/>loc,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>path);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="hdf5__helpers_8h_1af45edbf1fd8a20d127bfd9588b9ebae8" kindref="member">hdf5_generate_qid_path</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>original,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>qid,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>path);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="hdf5__helpers_8h_1ab43ae79d4f8e8d83bf098da8a0054a72" kindref="member">hdf5_gen_path</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>original,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>qid,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>path);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hdf5__helpers_8h_1a43b9438fc244982ddff7dc58ea3b9ef9" kindref="member">hdf5_read_double</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>var,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>ptr,<sp/>hid_t<sp/>file,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>qid,</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>errfile,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>errline);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hdf5__helpers_8h_1ae78f9ef2bb986e45d4cca2861d97e1fd" kindref="member">hdf5_read_int</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>var,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>ptr,<sp/>hid_t<sp/>file,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>qid,</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>errfile,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>errline);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hdf5__helpers_8h_1a4dc165719c858d5f3937a69d3a9eca68" kindref="member">hdf5_read_long</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>var,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">*<sp/>ptr,<sp/>hid_t<sp/>file,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>qid,</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>errfile,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>errline);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">herr_t<sp/><sp/><ref refid="hdf5__helpers_8h_1a2bad29ebd3986c3c3af247f9e2aa451c" kindref="member">hdf5_write_string_attribute</ref>(hid_t<sp/>loc,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>path,</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>attrname,<sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">herr_t<sp/><ref refid="hdf5__helpers_8h_1ab8f64c059ee0a1313e77b05e4de69e54" kindref="member">hdf5_write_extendible_dataset_double</ref>(hid_t<sp/>group,</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>datasetname,</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>length,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*<sp/>data);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">herr_t<sp/><ref refid="hdf5__helpers_8h_1a3c0b1edd399d012cc00b5979567f1b05" kindref="member">hdf5_write_extendible_dataset_long</ref>(hid_t<sp/>group,</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>datasetname,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>length,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">*<sp/>data);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">herr_t<sp/><ref refid="hdf5__helpers_8h_1a4190689187d3e7220ab772c9ae0baa0f" kindref="member">hdf5_write_extendible_dataset_int</ref>(hid_t<sp/>group,</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>datasetname,</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>length,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>data);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="hdf5io/hdf5_helpers.h"/>
+  </compounddef>
+</doxygen>

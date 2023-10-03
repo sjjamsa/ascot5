@@ -1,0 +1,610 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="hdf5__mhd_8c" kind="file" language="C++">
+    <compoundname>hdf5_mhd.c</compoundname>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">hdf5.h</includes>
+    <includes local="no">hdf5_hl.h</includes>
+    <includes refid="ascot5_8h" local="yes">../ascot5.h</includes>
+    <includes refid="mhd_8h" local="yes">../mhd.h</includes>
+    <includes refid="mhd__stat_8h" local="yes">../mhd/mhd_stat.h</includes>
+    <includes refid="mhd__nonstat_8h" local="yes">../mhd/mhd_nonstat.h</includes>
+    <includes refid="hdf5__helpers_8h" local="yes">hdf5_helpers.h</includes>
+    <includes refid="hdf5__mhd_8h" local="yes">hdf5_mhd.h</includes>
+    <incdepgraph>
+      <node id="15">
+        <label>../spline/interp.h</label>
+        <link refid="interp_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>Bfield/B_GS.h</label>
+        <link refid="B__GS_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>mhd/mhd_nonstat.h</label>
+        <link refid="mhd__nonstat_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stdlib.h</label>
+      </node>
+      <node id="4">
+        <label>hdf5_hl.h</label>
+      </node>
+      <node id="6">
+        <label>omp.h</label>
+      </node>
+      <node id="23">
+        <label>hdf5_helpers.h</label>
+        <link refid="hdf5__helpers_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>B_field.h</label>
+        <link refid="B__field_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>mhd/mhd_stat.h</label>
+        <link refid="mhd__stat_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>hdf5io/hdf5_mhd.c</label>
+        <link refid="hdf5__mhd_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>hdf5_mhd.h</label>
+        <link refid="hdf5__mhd_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>error.h</label>
+        <link refid="error_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>hdf5.h</label>
+      </node>
+      <node id="7">
+        <label>time.h</label>
+      </node>
+      <node id="19">
+        <label>Bfield/B_TC.h</label>
+        <link refid="B__TC_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>../linint/linint.h</label>
+        <link refid="linint_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>Bfield/B_2DS.h</label>
+        <link refid="B__2DS_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>../mhd.h</label>
+        <link refid="mhd_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>boozer.h</label>
+        <link refid="boozer_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>Bfield/B_3DS.h</label>
+        <link refid="B__3DS_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>math.h</label>
+        <link refid="math_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>stdio.h</label>
+      </node>
+      <node id="17">
+        <label>Bfield/B_STS.h</label>
+        <link refid="B__STS_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>../ascot5.h</label>
+        <link refid="ascot5_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="hdf5__mhd_8c_1a7808d4bffc637c78cdc2375540bfdcc6" prot="public" static="no">
+        <name>MHDPATH</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro that is used to store paths to data groups </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hdf5io/hdf5_mhd.c" line="16" column="9" bodyfile="hdf5io/hdf5_mhd.c" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hdf5__mhd_8c_1a7808d4bffc637c78cdc2375540bfdcc6" prot="public" static="no">
+        <name>MHDPATH</name>
+        <initializer>&quot;/mhd/MHD_STAT_XXXXXXXXXX/&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro that is used to store paths to data groups </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hdf5io/hdf5_mhd.c" line="77" column="18" bodyfile="hdf5io/hdf5_mhd.c" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hdf5__mhd_8c_1a7808d4bffc637c78cdc2375540bfdcc6" prot="public" static="no">
+        <name>MHDPATH</name>
+        <initializer>&quot;/mhd/MHD_NONSTAT_XXXXXXXXXX/&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro that is used to store paths to data groups </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hdf5io/hdf5_mhd.c" line="125" column="18" bodyfile="hdf5io/hdf5_mhd.c" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="hdf5__mhd_8c_1a09f351f1cb65cd656e3109c32c158bf3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hdf5_mhd_read_stat</definition>
+        <argsstring>(hid_t f, mhd_stat_offload_data *offload_data, real **offload_array, char *qid)</argsstring>
+        <name>hdf5_mhd_read_stat</name>
+        <param>
+          <type>hid_t</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type><ref refid="structmhd__stat__offload__data" kindref="compound">mhd_stat_offload_data</ref> *</type>
+          <declname>offload_data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> **</type>
+          <declname>offload_array</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>qid</declname>
+        </param>
+        <briefdescription>
+<para>Read stationary MHD data from HDF5 file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>HDF5 file from which data is read </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload array </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>qid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>QID of the data</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Zero if reading succeeded </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hdf5io/hdf5_mhd.c" line="74" column="5" bodyfile="hdf5io/hdf5_mhd.c" bodystart="74" bodyend="110" declfile="hdf5io/hdf5_mhd.c" declline="18" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="hdf5__mhd_8c_1aa84f24f1df6cc119b34f8ae9c8361a49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hdf5_mhd_read_nonstat</definition>
+        <argsstring>(hid_t f, mhd_nonstat_offload_data *offload_data, real **offload_array, char *qid)</argsstring>
+        <name>hdf5_mhd_read_nonstat</name>
+        <param>
+          <type>hid_t</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type><ref refid="structmhd__nonstat__offload__data" kindref="compound">mhd_nonstat_offload_data</ref> *</type>
+          <declname>offload_data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> **</type>
+          <declname>offload_array</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>qid</declname>
+        </param>
+        <briefdescription>
+<para>Read nonstationary MHD data from HDF5 file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>HDF5 file from which data is read </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload array </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>qid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>QID of the data</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Zero if reading succeeded </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hdf5io/hdf5_mhd.c" line="122" column="5" bodyfile="hdf5io/hdf5_mhd.c" bodystart="122" bodyend="165" declfile="hdf5io/hdf5_mhd.c" declline="20" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="hdf5__mhd_8c_1a4292b4a6b443182676bf86600f10857f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hdf5_mhd_init_offload</definition>
+        <argsstring>(hid_t f, mhd_offload_data *offload_data, real **offload_array, char *qid)</argsstring>
+        <name>hdf5_mhd_init_offload</name>
+        <param>
+          <type>hid_t</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type><ref refid="structmhd__offload__data" kindref="compound">mhd_offload_data</ref> *</type>
+          <declname>offload_data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> **</type>
+          <declname>offload_array</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>qid</declname>
+        </param>
+        <briefdescription>
+<para>Initialize MHD offload data from HDF5 file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>HDF5 file identifier for a file which is opened and closed outside of this function </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload data struct which is initialized here </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload array which is allocated and initialized here </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>qid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>QID of the data that is to be read</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>zero if reading and initialization succeeded </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hdf5io/hdf5_mhd.c" line="35" column="5" bodyfile="hdf5io/hdf5_mhd.c" bodystart="35" bodyend="62"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Module for reading MHD data from HDF5 file. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hdf5.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hdf5_hl.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../ascot5.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../mhd.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../mhd/mhd_stat.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../mhd/mhd_nonstat.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hdf5__helpers_8h" kindref="compound">hdf5_helpers.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hdf5__mhd_8h" kindref="compound">hdf5_mhd.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="hdf5__mhd_8c_1a7808d4bffc637c78cdc2375540bfdcc6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MHDPATH<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hdf5__mhd_8c_1a09f351f1cb65cd656e3109c32c158bf3" kindref="member">hdf5_mhd_read_stat</ref>(hid_t<sp/>f,<sp/><ref refid="structmhd__stat__offload__data" kindref="compound">mhd_stat_offload_data</ref>*<sp/>offload_data,</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>**<sp/>offload_array,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>qid);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hdf5__mhd_8c_1aa84f24f1df6cc119b34f8ae9c8361a49" kindref="member">hdf5_mhd_read_nonstat</ref>(hid_t<sp/>f,<sp/><ref refid="structmhd__nonstat__offload__data" kindref="compound">mhd_nonstat_offload_data</ref>*<sp/>offload_data,</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>**<sp/>offload_array,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>qid);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="hdf5__mhd_8c_1a4292b4a6b443182676bf86600f10857f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hdf5__mhd_8c_1a4292b4a6b443182676bf86600f10857f" kindref="member">hdf5_mhd_init_offload</ref>(hid_t<sp/>f,<sp/><ref refid="structmhd__offload__data" kindref="compound">mhd_offload_data</ref>*<sp/>offload_data,</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>**<sp/>offload_array,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>qid)<sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>path[256];</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>err<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Read<sp/>data<sp/>the<sp/>QID<sp/>corresponds<sp/>to<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hdf5__helpers_8c_1ab43ae79d4f8e8d83bf098da8a0054a72" kindref="member">hdf5_gen_path</ref>(</highlight><highlight class="stringliteral">&quot;/mhd/MHD_STAT_XXXXXXXXXX&quot;</highlight><highlight class="normal">,<sp/>qid,<sp/>path);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>!<ref refid="hdf5__helpers_8c_1a3b6edfba63099574025bea60453da24b" kindref="member">hdf5_find_group</ref>(f,<sp/>path)<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structmhd__offload__data_1a211904f45beef67cee64c181999f2d0f" kindref="member">type</ref><sp/>=<sp/><ref refid="mhd_8h_1ab21aab0cb19764b60e853c7d2c0a4316a34cf1c1aa3179513ab9dd550ddb1ecba" kindref="member">mhd_type_stat</ref>;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="hdf5__mhd_8c_1a09f351f1cb65cd656e3109c32c158bf3" kindref="member">hdf5_mhd_read_stat</ref>(f,<sp/>&amp;(offload_data-&gt;<ref refid="structmhd__offload__data_1a8d47f8daef869f2206e2473a3fb44062" kindref="member">stat</ref>),</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_array,<sp/>qid);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hdf5__helpers_8c_1ab43ae79d4f8e8d83bf098da8a0054a72" kindref="member">hdf5_gen_path</ref>(</highlight><highlight class="stringliteral">&quot;/mhd/MHD_NONSTAT_XXXXXXXXXX&quot;</highlight><highlight class="normal">,<sp/>qid,<sp/>path);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>!<ref refid="hdf5__helpers_8c_1a3b6edfba63099574025bea60453da24b" kindref="member">hdf5_find_group</ref>(f,<sp/>path)<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structmhd__offload__data_1a211904f45beef67cee64c181999f2d0f" kindref="member">type</ref><sp/>=<sp/><ref refid="mhd_8h_1ab21aab0cb19764b60e853c7d2c0a4316aec758ad0eb94e9ba0ae3761ca4952a5d" kindref="member">mhd_type_nonstat</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="hdf5__mhd_8c_1aa84f24f1df6cc119b34f8ae9c8361a49" kindref="member">hdf5_mhd_read_nonstat</ref>(f,<sp/>&amp;(offload_data-&gt;<ref refid="structmhd__offload__data_1a868b2d6eec09361e9068b83cead2bcbd" kindref="member">nonstat</ref>),</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_array,<sp/>qid);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Initialize<sp/>if<sp/>data<sp/>was<sp/>read<sp/>succesfully<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!err)<sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="mhd_8c_1af3708acc9639d894ee7552974fd85055" kindref="member">mhd_init_offload</ref>(offload_data,<sp/>offload_array);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>err;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="hdf5__mhd_8c_1a09f351f1cb65cd656e3109c32c158bf3" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hdf5__mhd_8c_1a09f351f1cb65cd656e3109c32c158bf3" kindref="member">hdf5_mhd_read_stat</ref>(hid_t<sp/>f,<sp/><ref refid="structmhd__stat__offload__data" kindref="compound">mhd_stat_offload_data</ref>*<sp/>offload_data,</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>**<sp/>offload_array,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>qid)<sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#undef<sp/>MHDPATH</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>MHDPATH<sp/>&quot;/mhd/MHD_STAT_XXXXXXXXXX/&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Read<sp/>parameters.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1ae78f9ef2bb986e45d4cca2861d97e1fd" kindref="member">hdf5_read_int</ref>(<sp/><sp/><sp/><ref refid="hdf5__mhd_8c_1a7808d4bffc637c78cdc2375540bfdcc6" kindref="member">MHDPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;nmode&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/>&amp;(offload_data-&gt;<ref refid="structmhd__stat__offload__data_1aa8a9d50017bb2bd88b62ab51e3ff5c42" kindref="member">n_modes</ref>),</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1ae78f9ef2bb986e45d4cca2861d97e1fd" kindref="member">hdf5_read_int</ref>(<sp/><sp/><sp/><ref refid="hdf5__mhd_8c_1a7808d4bffc637c78cdc2375540bfdcc6" kindref="member">MHDPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;nrho&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;(offload_data-&gt;<ref refid="structmhd__stat__offload__data_1a883fce76ab3aba6a28c86391e86b26ae" kindref="member">nrho</ref>),</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1a43b9438fc244982ddff7dc58ea3b9ef9" kindref="member">hdf5_read_double</ref>(<ref refid="hdf5__mhd_8c_1a7808d4bffc637c78cdc2375540bfdcc6" kindref="member">MHDPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;rhomin&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/>&amp;(offload_data-&gt;<ref refid="structmhd__stat__offload__data_1aa5904b8b39ca9ab86989a90d969694e5" kindref="member">rho_min</ref>),</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1a43b9438fc244982ddff7dc58ea3b9ef9" kindref="member">hdf5_read_double</ref>(<ref refid="hdf5__mhd_8c_1a7808d4bffc637c78cdc2375540bfdcc6" kindref="member">MHDPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;rhomax&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/>&amp;(offload_data-&gt;<ref refid="structmhd__stat__offload__data_1ac0a9648e97ce29413f24b197cc212dc7" kindref="member">rho_max</ref>),</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1ae78f9ef2bb986e45d4cca2861d97e1fd" kindref="member">hdf5_read_int</ref>(<sp/><sp/><sp/><ref refid="hdf5__mhd_8c_1a7808d4bffc637c78cdc2375540bfdcc6" kindref="member">MHDPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;nmodes&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structmhd__stat__offload__data_1ac88d9d87e216a10764c7cf68f8d8c5d6" kindref="member">nmode</ref>,</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1ae78f9ef2bb986e45d4cca2861d97e1fd" kindref="member">hdf5_read_int</ref>(<sp/><sp/><sp/><ref refid="hdf5__mhd_8c_1a7808d4bffc637c78cdc2375540bfdcc6" kindref="member">MHDPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;mmodes&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structmhd__stat__offload__data_1aa4fad7b6132eb38469ebe6b6c8b18ad1" kindref="member">mmode</ref>,</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1a43b9438fc244982ddff7dc58ea3b9ef9" kindref="member">hdf5_read_double</ref>(<ref refid="hdf5__mhd_8c_1a7808d4bffc637c78cdc2375540bfdcc6" kindref="member">MHDPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;amplitude&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structmhd__stat__offload__data_1ae023c7e160d552e443bc7cd4a72a26f7" kindref="member">amplitude_nm</ref>,</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1a43b9438fc244982ddff7dc58ea3b9ef9" kindref="member">hdf5_read_double</ref>(<ref refid="hdf5__mhd_8c_1a7808d4bffc637c78cdc2375540bfdcc6" kindref="member">MHDPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;omega&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structmhd__stat__offload__data_1aed7450f5f047de388f95adefe39ac0ed" kindref="member">omega_nm</ref>,</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1a43b9438fc244982ddff7dc58ea3b9ef9" kindref="member">hdf5_read_double</ref>(<ref refid="hdf5__mhd_8c_1a7808d4bffc637c78cdc2375540bfdcc6" kindref="member">MHDPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;phase&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structmhd__stat__offload__data_1aace9659f6f2090e1ed9667a6d67f7f09" kindref="member">phase_nm</ref>,</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Allocate<sp/>offload<sp/>array<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>datasize<sp/>=<sp/>offload_data-&gt;<ref refid="structmhd__stat__offload__data_1a883fce76ab3aba6a28c86391e86b26ae" kindref="member">nrho</ref><sp/>*<sp/>offload_data-&gt;<ref refid="structmhd__stat__offload__data_1aa8a9d50017bb2bd88b62ab51e3ff5c42" kindref="member">n_modes</ref>;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>*offload_array<sp/>=<sp/>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*)<sp/>malloc(<sp/>2<sp/>*<sp/>datasize<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>)<sp/>);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Read<sp/>data<sp/>to<sp/>offload<sp/>array<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1a43b9438fc244982ddff7dc58ea3b9ef9" kindref="member">hdf5_read_double</ref>(<ref refid="hdf5__mhd_8c_1a7808d4bffc637c78cdc2375540bfdcc6" kindref="member">MHDPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;alpha&quot;</highlight><highlight class="normal">,<sp/>&amp;(*offload_array)[0],</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1a43b9438fc244982ddff7dc58ea3b9ef9" kindref="member">hdf5_read_double</ref>(<ref refid="hdf5__mhd_8c_1a7808d4bffc637c78cdc2375540bfdcc6" kindref="member">MHDPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;phi&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/>&amp;(*offload_array)[datasize],</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122" refid="hdf5__mhd_8c_1aa84f24f1df6cc119b34f8ae9c8361a49" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hdf5__mhd_8c_1aa84f24f1df6cc119b34f8ae9c8361a49" kindref="member">hdf5_mhd_read_nonstat</ref>(hid_t<sp/>f,<sp/><ref refid="structmhd__nonstat__offload__data" kindref="compound">mhd_nonstat_offload_data</ref>*<sp/>offload_data,</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>**<sp/>offload_array,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>qid)<sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#undef<sp/>MHDPATH</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>MHDPATH<sp/>&quot;/mhd/MHD_NONSTAT_XXXXXXXXXX/&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Read<sp/>parameters.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1ae78f9ef2bb986e45d4cca2861d97e1fd" kindref="member">hdf5_read_int</ref>(<sp/><sp/><sp/><ref refid="hdf5__mhd_8c_1a7808d4bffc637c78cdc2375540bfdcc6" kindref="member">MHDPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;nmode&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/>&amp;(offload_data-&gt;<ref refid="structmhd__nonstat__offload__data_1a2f3609e56e5f7d364f2d14e18525f337" kindref="member">n_modes</ref>),</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1ae78f9ef2bb986e45d4cca2861d97e1fd" kindref="member">hdf5_read_int</ref>(<sp/><sp/><sp/><ref refid="hdf5__mhd_8c_1a7808d4bffc637c78cdc2375540bfdcc6" kindref="member">MHDPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;nrho&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;(offload_data-&gt;<ref refid="structmhd__nonstat__offload__data_1a7ad64d0ade070f704fe485f6a20a3025" kindref="member">nrho</ref>),</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1a43b9438fc244982ddff7dc58ea3b9ef9" kindref="member">hdf5_read_double</ref>(<ref refid="hdf5__mhd_8c_1a7808d4bffc637c78cdc2375540bfdcc6" kindref="member">MHDPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;rhomin&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/>&amp;(offload_data-&gt;<ref refid="structmhd__nonstat__offload__data_1a74b392df337a12958ba95efce4d2e8d4" kindref="member">rho_min</ref>),</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1a43b9438fc244982ddff7dc58ea3b9ef9" kindref="member">hdf5_read_double</ref>(<ref refid="hdf5__mhd_8c_1a7808d4bffc637c78cdc2375540bfdcc6" kindref="member">MHDPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;rhomax&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/>&amp;(offload_data-&gt;<ref refid="structmhd__nonstat__offload__data_1a42d75e9e8b6c149a7183267d6a985a67" kindref="member">rho_max</ref>),</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1ae78f9ef2bb986e45d4cca2861d97e1fd" kindref="member">hdf5_read_int</ref>(<sp/><sp/><sp/><ref refid="hdf5__mhd_8c_1a7808d4bffc637c78cdc2375540bfdcc6" kindref="member">MHDPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;ntime&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/>&amp;(offload_data-&gt;<ref refid="structmhd__nonstat__offload__data_1a176e1a3d4f42d3fd5a9e315516e7c2cd" kindref="member">ntime</ref>),</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1a43b9438fc244982ddff7dc58ea3b9ef9" kindref="member">hdf5_read_double</ref>(<ref refid="hdf5__mhd_8c_1a7808d4bffc637c78cdc2375540bfdcc6" kindref="member">MHDPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;tmin&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;(offload_data-&gt;<ref refid="structmhd__nonstat__offload__data_1af8ecfc44a65b4b796183b1eee49e60e9" kindref="member">t_min</ref>),</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1a43b9438fc244982ddff7dc58ea3b9ef9" kindref="member">hdf5_read_double</ref>(<ref refid="hdf5__mhd_8c_1a7808d4bffc637c78cdc2375540bfdcc6" kindref="member">MHDPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;tmax&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;(offload_data-&gt;<ref refid="structmhd__nonstat__offload__data_1ab6dab4d4f5b942b571083815896d7641" kindref="member">t_max</ref>),</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1ae78f9ef2bb986e45d4cca2861d97e1fd" kindref="member">hdf5_read_int</ref>(<sp/><sp/><sp/><ref refid="hdf5__mhd_8c_1a7808d4bffc637c78cdc2375540bfdcc6" kindref="member">MHDPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;nmodes&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structmhd__nonstat__offload__data_1a739d160d1584fd291298c55627dda852" kindref="member">nmode</ref>,</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1ae78f9ef2bb986e45d4cca2861d97e1fd" kindref="member">hdf5_read_int</ref>(<sp/><sp/><sp/><ref refid="hdf5__mhd_8c_1a7808d4bffc637c78cdc2375540bfdcc6" kindref="member">MHDPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;mmodes&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structmhd__nonstat__offload__data_1ac2a01c0ab48b1f126fe2e0569b0d43f1" kindref="member">mmode</ref>,</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1a43b9438fc244982ddff7dc58ea3b9ef9" kindref="member">hdf5_read_double</ref>(<ref refid="hdf5__mhd_8c_1a7808d4bffc637c78cdc2375540bfdcc6" kindref="member">MHDPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;amplitude&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structmhd__nonstat__offload__data_1a913ccbd1a46ec19c87312c6f5d9e5fad" kindref="member">amplitude_nm</ref>,</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1a43b9438fc244982ddff7dc58ea3b9ef9" kindref="member">hdf5_read_double</ref>(<ref refid="hdf5__mhd_8c_1a7808d4bffc637c78cdc2375540bfdcc6" kindref="member">MHDPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;omega&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structmhd__nonstat__offload__data_1a6e371e86fbf537a01517cdaa645344f4" kindref="member">omega_nm</ref>,</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1a43b9438fc244982ddff7dc58ea3b9ef9" kindref="member">hdf5_read_double</ref>(<ref refid="hdf5__mhd_8c_1a7808d4bffc637c78cdc2375540bfdcc6" kindref="member">MHDPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;phase&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structmhd__nonstat__offload__data_1adfc25a738ddb98129106e5f0a9e4566a" kindref="member">phase_nm</ref>,</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Allocate<sp/>offload<sp/>array<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>datasize<sp/>=<sp/>offload_data-&gt;<ref refid="structmhd__nonstat__offload__data_1a7ad64d0ade070f704fe485f6a20a3025" kindref="member">nrho</ref><sp/>*<sp/>offload_data-&gt;<ref refid="structmhd__nonstat__offload__data_1a176e1a3d4f42d3fd5a9e315516e7c2cd" kindref="member">ntime</ref></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>offload_data-&gt;<ref refid="structmhd__nonstat__offload__data_1a2f3609e56e5f7d364f2d14e18525f337" kindref="member">n_modes</ref>;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>*offload_array<sp/>=<sp/>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*)<sp/>malloc(<sp/>2<sp/>*<sp/>datasize<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>)<sp/>);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Read<sp/>data<sp/>to<sp/>offload<sp/>array<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1a43b9438fc244982ddff7dc58ea3b9ef9" kindref="member">hdf5_read_double</ref>(<ref refid="hdf5__mhd_8c_1a7808d4bffc637c78cdc2375540bfdcc6" kindref="member">MHDPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;alpha&quot;</highlight><highlight class="normal">,<sp/>&amp;(*offload_array)[0],</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="hdf5__helpers_8c_1a43b9438fc244982ddff7dc58ea3b9ef9" kindref="member">hdf5_read_double</ref>(<ref refid="hdf5__mhd_8c_1a7808d4bffc637c78cdc2375540bfdcc6" kindref="member">MHDPATH</ref><sp/></highlight><highlight class="stringliteral">&quot;phi&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/>&amp;(*offload_array)[datasize],</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>qid,<sp/>__FILE__,<sp/>__LINE__)<sp/>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;}</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="hdf5io/hdf5_mhd.c"/>
+  </compounddef>
+</doxygen>

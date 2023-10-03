@@ -1,0 +1,764 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="physlib_8h" kind="file" language="C++">
+    <compoundname>physlib.h</compoundname>
+    <includes refid="math_8h" local="no">math.h</includes>
+    <includes refid="consts_8h" local="yes">consts.h</includes>
+    <includedby refid="dist__5D_8c" local="yes">diag/dist_5D.c</includedby>
+    <includedby refid="dist__6D_8c" local="yes">diag/dist_6D.c</includedby>
+    <includedby refid="dist__com_8c" local="yes">diag/dist_com.c</includedby>
+    <includedby refid="dist__rho5D_8c" local="yes">diag/dist_rho5D.c</includedby>
+    <includedby refid="dist__rho6D_8c" local="yes">diag/dist_rho6D.c</includedby>
+    <includedby refid="endcond_8c" local="yes">endcond.c</includedby>
+    <includedby refid="gctransform_8c" local="yes">gctransform.c</includedby>
+    <includedby refid="hdf5__state_8c" local="yes">hdf5io/hdf5_state.c</includedby>
+    <includedby refid="libascot_8c" local="yes">libascot.c</includedby>
+    <includedby refid="nbi_8c" local="yes">nbi.c</includedby>
+    <includedby refid="particle_8c" local="yes">particle.c</includedby>
+    <includedby refid="atomic_8c" local="yes">simulate/atomic.c</includedby>
+    <includedby refid="mccc__fo__euler_8c" local="yes">simulate/mccc/mccc_fo_euler.c</includedby>
+    <includedby refid="mccc__gc__euler_8c" local="yes">simulate/mccc/mccc_gc_euler.c</includedby>
+    <includedby refid="mccc__gc__milstein_8c" local="yes">simulate/mccc/mccc_gc_milstein.c</includedby>
+    <includedby refid="simulate__fo__fixed_8c" local="yes">simulate/simulate_fo_fixed.c</includedby>
+    <includedby refid="simulate__gc__adaptive_8c" local="yes">simulate/simulate_gc_adaptive.c</includedby>
+    <includedby refid="simulate__gc__fixed_8c" local="yes">simulate/simulate_gc_fixed.c</includedby>
+    <includedby refid="step__fo__vpa_8c" local="yes">simulate/step/step_fo_vpa.c</includedby>
+    <includedby refid="step__gceom_8h" local="yes">simulate/step/step_gceom.h</includedby>
+    <includedby refid="step__gceom__mhd_8h" local="yes">simulate/step/step_gceom_mhd.h</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>omp.h</label>
+      </node>
+      <node id="6">
+        <label>consts.h</label>
+        <link refid="consts_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>physlib.h</label>
+        <link refid="physlib_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>time.h</label>
+      </node>
+      <node id="2">
+        <label>math.h</label>
+        <link refid="math_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ascot5.h</label>
+        <link refid="ascot5_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="5">
+        <label>diag/dist_rho5D.c</label>
+        <link refid="dist__rho5D_8c"/>
+      </node>
+      <node id="2">
+        <label>diag/dist_5D.c</label>
+        <link refid="dist__5D_8c"/>
+      </node>
+      <node id="8">
+        <label>gctransform.c</label>
+        <link refid="gctransform_8c"/>
+      </node>
+      <node id="12">
+        <label>particle.c</label>
+        <link refid="particle_8c"/>
+      </node>
+      <node id="17">
+        <label>simulate/simulate_fo_fixed.c</label>
+        <link refid="simulate__fo__fixed_8c"/>
+      </node>
+      <node id="23">
+        <label>simulate/step/step_gc_rk4.c</label>
+        <link refid="step__gc__rk4_8c"/>
+      </node>
+      <node id="19">
+        <label>simulate/simulate_gc_fixed.c</label>
+        <link refid="simulate__gc__fixed_8c"/>
+      </node>
+      <node id="7">
+        <label>endcond.c</label>
+        <link refid="endcond_8c"/>
+      </node>
+      <node id="13">
+        <label>simulate/atomic.c</label>
+        <link refid="atomic_8c"/>
+      </node>
+      <node id="11">
+        <label>nbi.c</label>
+        <link refid="nbi_8c"/>
+      </node>
+      <node id="16">
+        <label>simulate/mccc/mccc_gc_milstein.c</label>
+        <link refid="mccc__gc__milstein_8c"/>
+      </node>
+      <node id="18">
+        <label>simulate/simulate_gc_adaptive.c</label>
+        <link refid="simulate__gc__adaptive_8c"/>
+      </node>
+      <node id="1">
+        <label>physlib.h</label>
+        <link refid="physlib_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>simulate/mccc/mccc_fo_euler.c</label>
+        <link refid="mccc__fo__euler_8c"/>
+      </node>
+      <node id="10">
+        <label>libascot.c</label>
+        <link refid="libascot_8c"/>
+      </node>
+      <node id="24">
+        <label>simulate/step/step_gceom_mhd.h</label>
+        <link refid="step__gceom__mhd_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>diag/dist_com.c</label>
+        <link refid="dist__com_8c"/>
+      </node>
+      <node id="21">
+        <label>simulate/step/step_gceom.h</label>
+        <link refid="step__gceom_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>simulate/step/step_gc_cashkarp.c</label>
+        <link refid="step__gc__cashkarp_8c"/>
+      </node>
+      <node id="15">
+        <label>simulate/mccc/mccc_gc_euler.c</label>
+        <link refid="mccc__gc__euler_8c"/>
+      </node>
+      <node id="3">
+        <label>diag/dist_6D.c</label>
+        <link refid="dist__6D_8c"/>
+      </node>
+      <node id="9">
+        <label>hdf5io/hdf5_state.c</label>
+        <link refid="hdf5__state_8c"/>
+      </node>
+      <node id="20">
+        <label>simulate/step/step_fo_vpa.c</label>
+        <link refid="step__fo__vpa_8c"/>
+      </node>
+      <node id="6">
+        <label>diag/dist_rho6D.c</label>
+        <link refid="dist__rho6D_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="physlib_8h_1ae912c3e48025bd66c3f2ec2228702941" prot="public" static="no">
+        <name>physlib_gamma_vnorm</name>
+        <param><defname>v</defname></param>
+        <initializer>        (                                        \
+        sqrt( 1.0 / ( (1.0 - v / <ref refid="consts_8h_1a48339a730ee12d23d732ee7ce96f0aa6" kindref="member">CONST_C</ref>) * (1.0 + v / <ref refid="consts_8h_1a48339a730ee12d23d732ee7ce96f0aa6" kindref="member">CONST_C</ref>) ) ) )</initializer>
+        <briefdescription>
+<para>Evaluate Lorentz factor from velocity norm. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><formula id="35">$ \gamma = \sqrt{\frac{1}{1-v^2/c^2}}$</formula></para>
+<para>where</para>
+<para><itemizedlist>
+<listitem><para><formula id="36">$v$</formula> is velocity norm [m/s] </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="physlib.h" line="21" column="9" bodyfile="physlib.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="physlib_8h_1a1b2b7d05d072c57d06872b73f0e53106" prot="public" static="no">
+        <name>physlib_gamma_pnorm</name>
+        <param><defname>m</defname></param>
+        <param><defname>p</defname></param>
+        <initializer>        (                  \
+        sqrt(1.0 + ( p * p ) / ( m * m * <ref refid="consts_8h_1ae427b19ef34c352c69b3e565d55427b7" kindref="member">CONST_C2</ref> ) ) )</initializer>
+        <briefdescription>
+<para>Evaluate Lorentz factor from momentum norm. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><formula id="37">$\gamma = \sqrt{1 + \left(\frac{p}{mc}\right)^2}$</formula></para>
+<para>where</para>
+<para><itemizedlist>
+<listitem><para><formula id="38">$m$</formula> is mass [kg]</para>
+</listitem><listitem><para><formula id="39">$p$</formula> is momentum norm [kg m/s] </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="physlib.h" line="34" column="9" bodyfile="physlib.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="physlib_8h_1a552c0f690cf27834a0327191cea75124" prot="public" static="no">
+        <name>physlib_gamma_vpar</name>
+        <param><defname>m</defname></param>
+        <param><defname>mu</defname></param>
+        <param><defname>vpar</defname></param>
+        <param><defname>B</defname></param>
+        <initializer>        (                            \
+        sqrt( ( 1.0 + (2.0 * mu * B) / ( m * <ref refid="consts_8h_1ae427b19ef34c352c69b3e565d55427b7" kindref="member">CONST_C2</ref> ) ) /             \
+              ( (1.0 - vpar / <ref refid="consts_8h_1a48339a730ee12d23d732ee7ce96f0aa6" kindref="member">CONST_C</ref>) * (1.0 + vpar / <ref refid="consts_8h_1a48339a730ee12d23d732ee7ce96f0aa6" kindref="member">CONST_C</ref>) ) ) )</initializer>
+        <briefdescription>
+<para>Evaluate Lorentz factor from parallel velocity. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><formula id="40">$\gamma = \sqrt{\frac{1 + (2\mu B/mc^2)}{1 - v_\parallel^2/c^2}}$</formula></para>
+<para>where</para>
+<para><itemizedlist>
+<listitem><para><formula id="38">$m$</formula> is mass [kg]</para>
+</listitem><listitem><para><formula id="41">$\mu$</formula> is magnetic moment [J/T]</para>
+</listitem><listitem><para><formula id="42">$v_\parallel$</formula> is parallel velocity [m/s]</para>
+</listitem><listitem><para><formula id="43">$B$</formula> is magnetic field norm [T] </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="physlib.h" line="49" column="9" bodyfile="physlib.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="physlib_8h_1a5c5afd982d0e4494ace0136fa51f32eb" prot="public" static="no">
+        <name>physlib_gamma_ppar</name>
+        <param><defname>m</defname></param>
+        <param><defname>mu</defname></param>
+        <param><defname>ppar</defname></param>
+        <param><defname>B</defname></param>
+        <initializer>        (             \
+        sqrt( 1.0 + 2 * mu * B / ( m * <ref refid="consts_8h_1ae427b19ef34c352c69b3e565d55427b7" kindref="member">CONST_C2</ref> ) +      \
+              ppar * ppar / ( m * m * <ref refid="consts_8h_1ae427b19ef34c352c69b3e565d55427b7" kindref="member">CONST_C2</ref> ) ) )</initializer>
+        <briefdescription>
+<para>Evaluate Lorentz factor from parallel momentum. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><formula id="44">$\gamma = \sqrt{1 + 2\mu B/mc^2 + (p_\parallel/mc)^2}$</formula></para>
+<para>where</para>
+<para><itemizedlist>
+<listitem><para><formula id="38">$m$</formula> is mass [kg]</para>
+</listitem><listitem><para><formula id="41">$\mu$</formula> is magnetic moment [J/T]</para>
+</listitem><listitem><para><formula id="45">$p_\parallel$</formula> is parallel momentum [kg m/s]</para>
+</listitem><listitem><para><formula id="43">$B$</formula> is magnetic field norm [T] </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="physlib.h" line="65" column="9" bodyfile="physlib.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="physlib_8h_1aabf44d46945dc9b5eb25b2578db6be63" prot="public" static="no">
+        <name>physlib_Ekin_gamma</name>
+        <param><defname>m</defname></param>
+        <param><defname>gamma</defname></param>
+        <initializer>( ( gamma - 1.0 ) * m * <ref refid="consts_8h_1ae427b19ef34c352c69b3e565d55427b7" kindref="member">CONST_C2</ref> )</initializer>
+        <briefdescription>
+<para>Evaluate kinetic energy [J] from Lorentz factor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><formula id="46">$E_\mathrm{kin}=(\gamma - 1) * m c^2$</formula></para>
+<para>where</para>
+<para><itemizedlist>
+<listitem><para><formula id="38">$m$</formula> is mass [kg]</para>
+</listitem><listitem><para><formula id="47">$\gamma$</formula> is the Lorentz factor </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="physlib.h" line="79" column="9" bodyfile="physlib.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="physlib_8h_1a96bd4545feafc9d5ca44643a673e7623" prot="public" static="no">
+        <name>physlib_gamma_Ekin</name>
+        <param><defname>m</defname></param>
+        <param><defname>ekin</defname></param>
+        <initializer>( ekin / ( m * <ref refid="consts_8h_1ae427b19ef34c352c69b3e565d55427b7" kindref="member">CONST_C2</ref> ) + 1.0 )</initializer>
+        <briefdescription>
+<para>Evaluate Lorentz factor from kinetic energy [J]. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><formula id="48">$\gamma = \frac{E_\mathrm{kin}}{m c^2} + 1$</formula></para>
+<para>where</para>
+<para><itemizedlist>
+<listitem><para><formula id="38">$m$</formula> is mass [kg]</para>
+</listitem><listitem><para><formula id="47">$\gamma$</formula> is the Lorentz factor </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="physlib.h" line="91" column="9" bodyfile="physlib.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="physlib_8h_1a58c44d7d5510f7af98dde627d1c175cf" prot="public" static="no">
+        <name>physlib_Ekin_pnorm</name>
+        <param><defname>m</defname></param>
+        <param><defname>p</defname></param>
+        <initializer>        (                              \
+        ( <ref refid="physlib_8h_1a1b2b7d05d072c57d06872b73f0e53106" kindref="member">physlib_gamma_pnorm</ref>(m, p) - 1.0 ) * m * <ref refid="consts_8h_1ae427b19ef34c352c69b3e565d55427b7" kindref="member">CONST_C2</ref> )</initializer>
+        <briefdescription>
+<para>Evaluate kinetic energy [J] from momentum norm. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><formula id="49">$E_\mathrm{kin}=(\gamma(p) - 1) * m c^2$</formula></para>
+<para>where</para>
+<para><itemizedlist>
+<listitem><para><formula id="38">$m$</formula> is mass [kg]</para>
+</listitem><listitem><para><formula id="39">$p$</formula> is momentum norm [kg m/s] </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="physlib.h" line="103" column="9" bodyfile="physlib.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="physlib_8h_1a4effc7b527d272099a3c288382a83527" prot="public" static="no">
+        <name>physlib_Ekin_ppar</name>
+        <param><defname>m</defname></param>
+        <param><defname>mu</defname></param>
+        <param><defname>ppar</defname></param>
+        <param><defname>B</defname></param>
+        <initializer>        (                             \
+        ( <ref refid="physlib_8h_1a5c5afd982d0e4494ace0136fa51f32eb" kindref="member">physlib_gamma_ppar</ref>(m, mu, ppar, B) - 1.0 ) * m * <ref refid="consts_8h_1ae427b19ef34c352c69b3e565d55427b7" kindref="member">CONST_C2</ref> )</initializer>
+        <briefdescription>
+<para>Evaluate kinetic energy [J] from parallel momentum. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><formula id="50">$E_\mathrm{kin}=(\gamma(m, \mu, p_\parallel, B) - 1) * m c^2$</formula></para>
+<para>where</para>
+<para><itemizedlist>
+<listitem><para><formula id="38">$m$</formula> is mass [kg]</para>
+</listitem><listitem><para><formula id="45">$p_\parallel$</formula> is parallel momentum [kg m/s] </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="physlib.h" line="116" column="9" bodyfile="physlib.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="physlib_8h_1a74d3a61ccc857b8f8d61c3a5649a3be9" prot="public" static="no">
+        <name>physlib_vnorm_pnorm</name>
+        <param><defname>m</defname></param>
+        <param><defname>p</defname></param>
+        <initializer>        (                  \
+        p / sqrt(m * m + ( p * p ) / <ref refid="consts_8h_1ae427b19ef34c352c69b3e565d55427b7" kindref="member">CONST_C2</ref> ) )</initializer>
+        <briefdescription>
+<para>Evaluate velocity norm [m/s] from momentum norm. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><formula id="51">$v = p/\gamma(p)m$</formula></para>
+<para>where</para>
+<para><itemizedlist>
+<listitem><para><formula id="38">$m$</formula> is mass [kg]</para>
+</listitem><listitem><para><formula id="39">$p$</formula> is momentum norm [kg m/s] </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="physlib.h" line="129" column="9" bodyfile="physlib.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="physlib_8h_1a5ae0cf161de621d87fa595a92cb4e42c" prot="public" static="no">
+        <name>physlib_pnorm_vnorm</name>
+        <param><defname>m</defname></param>
+        <param><defname>v</defname></param>
+        <initializer>        (                  \
+        m * v * <ref refid="physlib_8h_1ae912c3e48025bd66c3f2ec2228702941" kindref="member">physlib_gamma_vnorm</ref>(v) )</initializer>
+        <briefdescription>
+<para>Evaluate momentum norm [kg m/s] from velocity norm. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><formula id="52">$p = \gamma(v)mv$</formula></para>
+<para>where</para>
+<para><itemizedlist>
+<listitem><para><formula id="38">$m$</formula> is mass [kg]</para>
+</listitem><listitem><para><formula id="36">$v$</formula> is velocity norm [m/s] </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="physlib.h" line="142" column="9" bodyfile="physlib.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="physlib_8h_1aa1dbc69571399440e12326af0883b974" prot="public" static="no">
+        <name>physlib_gc_ppar</name>
+        <param><defname>p</defname></param>
+        <param><defname>xi</defname></param>
+        <initializer>( p * xi )</initializer>
+        <briefdescription>
+<para>Evaluate guiding center parallel momentum [kg m/s] from momentum norm and pitch. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><formula id="53">$p_\parallel = \xi p$</formula></para>
+<para>where</para>
+<para><itemizedlist>
+<listitem><para><formula id="39">$p$</formula> is momentum norm [kg m/s]</para>
+</listitem><listitem><para><formula id="54">$\xi$</formula> is pitch </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="physlib.h" line="155" column="9" bodyfile="physlib.h" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="physlib_8h_1abb58f0d726d24072d618b68721940d52" prot="public" static="no">
+        <name>physlib_gc_mu</name>
+        <param><defname>m</defname></param>
+        <param><defname>p</defname></param>
+        <param><defname>xi</defname></param>
+        <param><defname>B</defname></param>
+        <initializer>        (                    \
+        p * p * ( 1.0 - xi * xi ) / ( 2 * B * m ) )</initializer>
+        <briefdescription>
+<para>Evaluate guiding center magnetic moment [J/T] from momentum norm and pitch. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><formula id="55">$\mu = (1-\xi^2)p/(2mB)$</formula></para>
+<para>where</para>
+<para><itemizedlist>
+<listitem><para><formula id="38">$m$</formula> is mass [kg]</para>
+</listitem><listitem><para><formula id="39">$p$</formula> is momentum norm [kg m/s]</para>
+</listitem><listitem><para><formula id="54">$\xi$</formula> is pitch</para>
+</listitem><listitem><para><formula id="43">$B$</formula> is magnetic field norm [T] </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="physlib.h" line="169" column="9" bodyfile="physlib.h" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="physlib_8h_1ab804736d570a75ef4739050ec23682b5" prot="public" static="no">
+        <name>physlib_gc_p</name>
+        <param><defname>m</defname></param>
+        <param><defname>mu</defname></param>
+        <param><defname>ppar</defname></param>
+        <param><defname>B</defname></param>
+        <initializer>        ( \
+        m * <ref refid="consts_8h_1a48339a730ee12d23d732ee7ce96f0aa6" kindref="member">CONST_C</ref> * sqrt( pow( <ref refid="physlib_8h_1a5c5afd982d0e4494ace0136fa51f32eb" kindref="member">physlib_gamma_ppar</ref>(m, mu, ppar, B), 2) - 1 ) )</initializer>
+        <briefdescription>
+<para>Evaluate guiding center momentum norm [kg m/s] from parallel momentum and magnetic moment. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><formula id="56">$p = \sqrt{\gamma(m,\mu,p_\parallel,B)^2 - 1} m c$</formula></para>
+<para>where</para>
+<para><itemizedlist>
+<listitem><para><formula id="38">$m$</formula> is mass [kg]</para>
+</listitem><listitem><para><formula id="41">$\mu$</formula> is magnetic moment [J/T]</para>
+</listitem><listitem><para><formula id="45">$p_\parallel$</formula> is parallel momentum [kg m/s]</para>
+</listitem><listitem><para><formula id="43">$B$</formula> is magnetic field norm [T] </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="physlib.h" line="184" column="9" bodyfile="physlib.h" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="physlib_8h_1a353455270e42a17cb605e8d075054f88" prot="public" static="no">
+        <name>physlib_gc_xi</name>
+        <param><defname>m</defname></param>
+        <param><defname>mu</defname></param>
+        <param><defname>ppar</defname></param>
+        <param><defname>B</defname></param>
+        <initializer>        (                                 \
+        ppar / <ref refid="physlib_8h_1ab804736d570a75ef4739050ec23682b5" kindref="member">physlib_gc_p</ref>(m, mu, ppar, B) )</initializer>
+        <briefdescription>
+<para>Evaluate guiding center pitch from parallel momentum and magnetic moment. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><formula id="57">$\xi = p_\parallel / p(m,\mu,p_\parallel,B) $</formula></para>
+<para>where</para>
+<para><itemizedlist>
+<listitem><para><formula id="38">$m$</formula> is mass [kg]</para>
+</listitem><listitem><para><formula id="41">$\mu$</formula> is magnetic moment [J/T]</para>
+</listitem><listitem><para><formula id="45">$p_\parallel$</formula> is parallel momentum [kg m/s]</para>
+</listitem><listitem><para><formula id="43">$B$</formula> is magnetic field [T] </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="physlib.h" line="199" column="9" bodyfile="physlib.h" bodystart="199" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="physlib_8h_1a720009212dee7e413c9c49cb42cfc67c" prot="public" static="no">
+        <name>physlib_gyrolength_p</name>
+        <param><defname>q</defname></param>
+        <param><defname>p</defname></param>
+        <param><defname>B</defname></param>
+        <initializer>        (                              \
+        <ref refid="math_8h_1a212fc9c17be398b934456f0fa641541a" kindref="member">math_dot</ref>(p, B) / ( fabs(q) * <ref refid="math_8h_1a212fc9c17be398b934456f0fa641541a" kindref="member">math_dot</ref>(B, B) ) )</initializer>
+        <briefdescription>
+<para>Evaluate gyroradius [m] from momentum vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><formula id="58">$\rho_g = \frac{\mathbf{p}\cdot\mathbf{B}}{|q|B^2}$</formula></para>
+<para>where</para>
+<para><itemizedlist>
+<listitem><para><formula id="59">$q$</formula> is charge [C]</para>
+</listitem><listitem><para><formula id="60">$\mathbf{v}$</formula> is momentum vector [kg m/s]</para>
+</listitem><listitem><para><formula id="4">$\mathbf{B}$</formula> is magnetic field vector [T] </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="physlib.h" line="213" column="9" bodyfile="physlib.h" bodystart="213" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="physlib_8h_1ade75d696f2b87a5056bf013edbcfbc7f" prot="public" static="no">
+        <name>phys_gyrolength_ppar</name>
+        <param><defname>m</defname></param>
+        <param><defname>q</defname></param>
+        <param><defname>mu</defname></param>
+        <param><defname>ppar</defname></param>
+        <param><defname>B</defname></param>
+        <initializer>        (                   \
+        sqrt( 2 * m * mu *                                          \
+              <ref refid="physlib_8h_1a5c5afd982d0e4494ace0136fa51f32eb" kindref="member">physlib_gamma_ppar</ref>(m, mu, ppar, B) / B ) / fabs(q) )</initializer>
+        <briefdescription>
+<para>Evaluate gyroradius [m] from parallel momentum and magnetic moment. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><formula id="61">$\rho_g = \frac{1}{|q|}\sqrt{\frac{2\gamma(m, \mu, p_\parallel, B) m \mu} {B}}$</formula></para>
+<para>where</para>
+<para><itemizedlist>
+<listitem><para><formula id="38">$m$</formula> is mass [kg]</para>
+</listitem><listitem><para><formula id="59">$q$</formula> is charge [C]</para>
+</listitem><listitem><para><formula id="41">$\mu$</formula> is magnetic moment [J/T]</para>
+</listitem><listitem><para><formula id="45">$p_\parallel$</formula> is parallel momentum [kg m/s]</para>
+</listitem><listitem><para><formula id="43">$B$</formula> is magnetic field norm [T] </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="physlib.h" line="230" column="9" bodyfile="physlib.h" bodystart="230" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="physlib_8h_1a8768ea97b8bd673c07215a626851271f" prot="public" static="no">
+        <name>phys_gyrofreq_pnorm</name>
+        <param><defname>m</defname></param>
+        <param><defname>q</defname></param>
+        <param><defname>p</defname></param>
+        <param><defname>B</defname></param>
+        <initializer>        (               \
+        fabs(q) * B / ( m * <ref refid="physlib_8h_1a1b2b7d05d072c57d06872b73f0e53106" kindref="member">physlib_gamma_pnorm</ref>(m, p) ) )</initializer>
+        <briefdescription>
+<para>Evaluate gyrofrequency [rad/s] from momentum norm. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><formula id="62">$\omega_g = \frac{q B}{\gamma(p) m}$</formula></para>
+<para>where</para>
+<para><itemizedlist>
+<listitem><para><formula id="38">$m$</formula> is mass [kg]</para>
+</listitem><listitem><para><formula id="59">$q$</formula> is charge [C]</para>
+</listitem><listitem><para><formula id="39">$p$</formula> is momentum norm [kg m/s]</para>
+</listitem><listitem><para><formula id="43">$B$</formula> is magnetic field norm [T] </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="physlib.h" line="246" column="9" bodyfile="physlib.h" bodystart="246" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="physlib_8h_1ab08c7b3d99720b095326acabc815a037" prot="public" static="no">
+        <name>phys_gyrofreq_ppar</name>
+        <param><defname>m</defname></param>
+        <param><defname>q</defname></param>
+        <param><defname>mu</defname></param>
+        <param><defname>ppar</defname></param>
+        <param><defname>B</defname></param>
+        <initializer>        (                 \
+        fabs(q) * B / ( m * <ref refid="physlib_8h_1a5c5afd982d0e4494ace0136fa51f32eb" kindref="member">physlib_gamma_ppar</ref>(m, mu, ppar, B) ) )</initializer>
+        <briefdescription>
+<para>Evaluate gyrofrequency [rad/s] from parallel momentum and magnetic moment. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><formula id="63">$\omega_g = \frac{q B}{\gamma(m, \mu, p_\parallel, B) m}$</formula></para>
+<para>where</para>
+<para><itemizedlist>
+<listitem><para><formula id="38">$m$</formula> is mass [kg]</para>
+</listitem><listitem><para><formula id="59">$q$</formula> is charge [C]</para>
+</listitem><listitem><para><formula id="41">$\mu$</formula> is magnetic moment [J/T]</para>
+</listitem><listitem><para><formula id="45">$p_\parallel$</formula> is parallel momentum [kg m/s]</para>
+</listitem><listitem><para><formula id="43">$B$</formula> is magnetic field norm [T] </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="physlib.h" line="262" column="9" bodyfile="physlib.h" bodystart="262" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="physlib_8h_1a428d69ad94469359dbe6dcb31ac5d1f2" prot="public" static="no">
+        <name>phys_ptoroid_fo</name>
+        <param><defname>q</defname></param>
+        <param><defname>R</defname></param>
+        <param><defname>pphi</defname></param>
+        <param><defname>psi</defname></param>
+        <initializer>        ( \
+        R * pphi  +  q * psi )</initializer>
+        <briefdescription>
+<para>Evaluate toroidal canonical momentum for particle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="physlib.h" line="269" column="9" bodyfile="physlib.h" bodystart="269" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="physlib_8h_1a5eef8ba8eff2ff5f3f1805660402dfb2" prot="public" static="no">
+        <name>phys_ptoroid_gc</name>
+        <param><defname>q</defname></param>
+        <param><defname>R</defname></param>
+        <param><defname>ppar</defname></param>
+        <param><defname>psi</defname></param>
+        <param><defname>B</defname></param>
+        <param><defname>Bphi</defname></param>
+        <initializer>        (             \
+        ppar * R * (Bphi / B)  +  q * psi )</initializer>
+        <briefdescription>
+<para>Evaluate toroidal canonical momentum for guiding center. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="physlib.h" line="276" column="9" bodyfile="physlib.h" bodystart="276" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Methods to evaluate elementary physical quantities. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PHYSLIB_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PHYSLIB_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="math_8h" kindref="compound">math.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="math_8h" kindref="compound">math.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="consts_8h" kindref="compound">consts.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="physlib_8h_1ae912c3e48025bd66c3f2ec2228702941" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>physlib_gamma_vnorm(v)<sp/>(<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="22"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sqrt(<sp/>1.0<sp/>/<sp/>(<sp/>(1.0<sp/>-<sp/>v<sp/>/<sp/>CONST_C)<sp/>*<sp/>(1.0<sp/>+<sp/>v<sp/>/<sp/>CONST_C)<sp/>)<sp/>)<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="physlib_8h_1a1b2b7d05d072c57d06872b73f0e53106" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>physlib_gamma_pnorm(m,<sp/>p)<sp/>(<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="35"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sqrt(1.0<sp/>+<sp/>(<sp/>p<sp/>*<sp/>p<sp/>)<sp/>/<sp/>(<sp/>m<sp/>*<sp/>m<sp/>*<sp/>CONST_C2<sp/>)<sp/>)<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="physlib_8h_1a552c0f690cf27834a0327191cea75124" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>physlib_gamma_vpar(m,<sp/>mu,<sp/>vpar,<sp/>B)<sp/>(<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="50"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sqrt(<sp/>(<sp/>1.0<sp/>+<sp/>(2.0<sp/>*<sp/>mu<sp/>*<sp/>B)<sp/>/<sp/>(<sp/>m<sp/>*<sp/>CONST_C2<sp/>)<sp/>)<sp/>/<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="51"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<sp/>(1.0<sp/>-<sp/>vpar<sp/>/<sp/>CONST_C)<sp/>*<sp/>(1.0<sp/>+<sp/>vpar<sp/>/<sp/>CONST_C)<sp/>)<sp/>)<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="physlib_8h_1a5c5afd982d0e4494ace0136fa51f32eb" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>physlib_gamma_ppar(m,<sp/>mu,<sp/>ppar,<sp/>B)<sp/>(<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="66"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sqrt(<sp/>1.0<sp/>+<sp/>2<sp/>*<sp/>mu<sp/>*<sp/>B<sp/>/<sp/>(<sp/>m<sp/>*<sp/>CONST_C2<sp/>)<sp/>+<sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="67"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ppar<sp/>*<sp/>ppar<sp/>/<sp/>(<sp/>m<sp/>*<sp/>m<sp/>*<sp/>CONST_C2<sp/>)<sp/>)<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="physlib_8h_1aabf44d46945dc9b5eb25b2578db6be63" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>physlib_Ekin_gamma(m,<sp/>gamma)<sp/>(<sp/>(<sp/>gamma<sp/>-<sp/>1.0<sp/>)<sp/>*<sp/>m<sp/>*<sp/>CONST_C2<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="physlib_8h_1a96bd4545feafc9d5ca44643a673e7623" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>physlib_gamma_Ekin(m,<sp/>ekin)<sp/>(<sp/>ekin<sp/>/<sp/>(<sp/>m<sp/>*<sp/>CONST_C2<sp/>)<sp/>+<sp/>1.0<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103" refid="physlib_8h_1a58c44d7d5510f7af98dde627d1c175cf" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>physlib_Ekin_pnorm(m,<sp/>p)<sp/>(<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="104"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<sp/>physlib_gamma_pnorm(m,<sp/>p)<sp/>-<sp/>1.0<sp/>)<sp/>*<sp/>m<sp/>*<sp/>CONST_C2<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116" refid="physlib_8h_1a4effc7b527d272099a3c288382a83527" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>physlib_Ekin_ppar(m,<sp/>mu,<sp/>ppar,<sp/>B)<sp/>(<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="117"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<sp/>physlib_gamma_ppar(m,<sp/>mu,<sp/>ppar,<sp/>B)<sp/>-<sp/>1.0<sp/>)<sp/>*<sp/>m<sp/>*<sp/>CONST_C2<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129" refid="physlib_8h_1a74d3a61ccc857b8f8d61c3a5649a3be9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>physlib_vnorm_pnorm(m,<sp/>p)<sp/>(<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="130"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p<sp/>/<sp/>sqrt(m<sp/>*<sp/>m<sp/>+<sp/>(<sp/>p<sp/>*<sp/>p<sp/>)<sp/>/<sp/>CONST_C2<sp/>)<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142" refid="physlib_8h_1a5ae0cf161de621d87fa595a92cb4e42c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>physlib_pnorm_vnorm(m,<sp/>v)<sp/>(<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="143"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m<sp/>*<sp/>v<sp/>*<sp/>physlib_gamma_vnorm(v)<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155" refid="physlib_8h_1aa1dbc69571399440e12326af0883b974" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>physlib_gc_ppar(p,<sp/>xi)<sp/>(<sp/>p<sp/>*<sp/>xi<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169" refid="physlib_8h_1abb58f0d726d24072d618b68721940d52" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>physlib_gc_mu(m,<sp/>p,<sp/>xi,<sp/>B)<sp/>(<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="170"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p<sp/>*<sp/>p<sp/>*<sp/>(<sp/>1.0<sp/>-<sp/>xi<sp/>*<sp/>xi<sp/>)<sp/>/<sp/>(<sp/>2<sp/>*<sp/>B<sp/>*<sp/>m<sp/>)<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184" refid="physlib_8h_1ab804736d570a75ef4739050ec23682b5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>physlib_gc_p(m,<sp/>mu,<sp/>ppar,<sp/>B)<sp/>(<sp/>\</highlight></codeline>
+<codeline lineno="185"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m<sp/>*<sp/>CONST_C<sp/>*<sp/>sqrt(<sp/>pow(<sp/>physlib_gamma_ppar(m,<sp/>mu,<sp/>ppar,<sp/>B),<sp/>2)<sp/>-<sp/>1<sp/>)<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199" refid="physlib_8h_1a353455270e42a17cb605e8d075054f88" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>physlib_gc_xi(m,<sp/>mu,<sp/>ppar,<sp/>B)<sp/>(<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="200"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ppar<sp/>/<sp/>physlib_gc_p(m,<sp/>mu,<sp/>ppar,<sp/>B)<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213" refid="physlib_8h_1a720009212dee7e413c9c49cb42cfc67c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>physlib_gyrolength_p(q,<sp/>p,<sp/>B)<sp/>(<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="214"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>math_dot(p,<sp/>B)<sp/>/<sp/>(<sp/>fabs(q)<sp/>*<sp/>math_dot(B,<sp/>B)<sp/>)<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230" refid="physlib_8h_1ade75d696f2b87a5056bf013edbcfbc7f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>phys_gyrolength_ppar(m,<sp/>q,<sp/>mu,<sp/>ppar,<sp/>B)<sp/>(<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="231"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sqrt(<sp/>2<sp/>*<sp/>m<sp/>*<sp/>mu<sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="232"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>physlib_gamma_ppar(m,<sp/>mu,<sp/>ppar,<sp/>B)<sp/>/<sp/>B<sp/>)<sp/>/<sp/>fabs(q)<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246" refid="physlib_8h_1a8768ea97b8bd673c07215a626851271f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>phys_gyrofreq_pnorm(m,<sp/>q,<sp/>p,<sp/>B)<sp/>(<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="247"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fabs(q)<sp/>*<sp/>B<sp/>/<sp/>(<sp/>m<sp/>*<sp/>physlib_gamma_pnorm(m,<sp/>p)<sp/>)<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight></codeline>
+<codeline lineno="262" refid="physlib_8h_1ab08c7b3d99720b095326acabc815a037" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>phys_gyrofreq_ppar(m,<sp/>q,<sp/>mu,<sp/>ppar,<sp/>B)<sp/>(<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="263"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fabs(q)<sp/>*<sp/>B<sp/>/<sp/>(<sp/>m<sp/>*<sp/>physlib_gamma_ppar(m,<sp/>mu,<sp/>ppar,<sp/>B)<sp/>)<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight></codeline>
+<codeline lineno="269" refid="physlib_8h_1a428d69ad94469359dbe6dcb31ac5d1f2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>phys_ptoroid_fo(q,<sp/>R,<sp/>pphi,<sp/>psi)<sp/>(<sp/>\</highlight></codeline>
+<codeline lineno="270"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>R<sp/>*<sp/>pphi<sp/><sp/>+<sp/><sp/>q<sp/>*<sp/>psi<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="276" refid="physlib_8h_1a5eef8ba8eff2ff5f3f1805660402dfb2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>phys_ptoroid_gc(q,<sp/>R,<sp/>ppar,<sp/>psi,<sp/>B,<sp/>Bphi)<sp/>(<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="277"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ppar<sp/>*<sp/>R<sp/>*<sp/>(Bphi<sp/>/<sp/>B)<sp/><sp/>+<sp/><sp/>q<sp/>*<sp/>psi<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="physlib.h"/>
+  </compounddef>
+</doxygen>

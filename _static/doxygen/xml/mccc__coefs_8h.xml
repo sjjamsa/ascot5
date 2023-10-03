@@ -1,0 +1,909 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="mccc__coefs_8h" kind="file" language="C++">
+    <compoundname>mccc_coefs.h</compoundname>
+    <includes refid="math_8h" local="no">math.h</includes>
+    <includes refid="ascot5_8h" local="yes">../../ascot5.h</includes>
+    <includes refid="consts_8h" local="yes">../../consts.h</includes>
+    <includes refid="mccc_8h" local="yes">mccc.h</includes>
+    <includedby refid="libascot_8c" local="yes">libascot.c</includedby>
+    <includedby refid="mccc__fo__euler_8c" local="yes">simulate/mccc/mccc_fo_euler.c</includedby>
+    <includedby refid="mccc__gc__euler_8c" local="yes">simulate/mccc/mccc_gc_euler.c</includedby>
+    <includedby refid="mccc__gc__milstein_8c" local="yes">simulate/mccc/mccc_gc_milstein.c</includedby>
+    <incdepgraph>
+      <node id="18">
+        <label>../../plasma.h</label>
+        <link refid="plasma_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>../../particle.h</label>
+        <link refid="particle_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>../spline/interp.h</label>
+        <link refid="interp_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>Bfield/B_GS.h</label>
+        <link refid="B__GS_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>plasma/plasma_1DS.h</label>
+        <link refid="plasma__1DS_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>stdlib.h</label>
+      </node>
+      <node id="7">
+        <label>mccc.h</label>
+        <link refid="mccc_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>omp.h</label>
+      </node>
+      <node id="6">
+        <label>../../consts.h</label>
+        <link refid="consts_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>mccc_wiener.h</label>
+        <link refid="mccc__wiener_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>../../B_field.h</label>
+        <link refid="B__field_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>Efield/E_1DS.h</label>
+        <link refid="E__1DS_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>plasma/plasma_1Dt.h</label>
+        <link refid="plasma__1Dt_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>../../random.h</label>
+        <link refid="random_8h"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>error.h</label>
+        <link refid="error_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>E_field.h</label>
+        <link refid="E__field_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>simulate/mccc/mccc_coefs.h</label>
+        <link refid="mccc__coefs_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>plasma/plasma_1D.h</label>
+        <link refid="plasma__1D_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>time.h</label>
+      </node>
+      <node id="17">
+        <label>Bfield/B_TC.h</label>
+        <link refid="B__TC_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>../linint/linint.h</label>
+        <link refid="linint_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>Bfield/B_2DS.h</label>
+        <link refid="B__2DS_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>Efield/E_TC.h</label>
+        <link refid="E__TC_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>Bfield/B_3DS.h</label>
+        <link refid="B__3DS_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>math.h</label>
+        <link refid="math_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>stdio.h</label>
+      </node>
+      <node id="15">
+        <label>Bfield/B_STS.h</label>
+        <link refid="B__STS_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ascot5.h</label>
+        <link refid="ascot5_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="5">
+        <label>simulate/mccc/mccc_gc_milstein.c</label>
+        <link refid="mccc__gc__milstein_8c"/>
+      </node>
+      <node id="3">
+        <label>simulate/mccc/mccc_fo_euler.c</label>
+        <link refid="mccc__fo__euler_8c"/>
+      </node>
+      <node id="2">
+        <label>libascot.c</label>
+        <link refid="libascot_8c"/>
+      </node>
+      <node id="1">
+        <label>simulate/mccc/mccc_coefs.h</label>
+        <link refid="mccc__coefs_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>simulate/mccc/mccc_gc_euler.c</label>
+        <link refid="mccc__gc__euler_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="mccc__coefs_8h_1acf3ad2cc4d30b45c88841ff53f152681" prot="public" static="no">
+        <name>mccc_coefs_cab</name>
+        <param><defname>qa</defname></param>
+        <param><defname>qb</defname></param>
+        <param><defname>nb</defname></param>
+        <param><defname>clogab</defname></param>
+        <initializer>        (                            \
+        nb * qa*qa * qb*qb * clogab / ( 4 * <ref refid="consts_8h_1a02b01cde332fa86c92d54802cce7f3d2" kindref="member">CONST_PI</ref> * <ref refid="consts_8h_1a20089914a6ddfb8f5a40038bd72d3e9b" kindref="member">CONST_E0</ref>*<ref refid="consts_8h_1a20089914a6ddfb8f5a40038bd72d3e9b" kindref="member">CONST_E0</ref> ) )</initializer>
+        <briefdescription>
+<para>Evaluate collision parameter [kg^2 m^3 / s^4]. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><formula id="64">$c_{ab} = \frac{n_b q_a^2q_b^2 \ln\Lambda_{ab}}{4\pi\epsilon_0^2}$</formula></para>
+<para>where</para>
+<para><itemizedlist>
+<listitem><para><formula id="65">$q_a$</formula> is test particle charge [C]</para>
+</listitem><listitem><para><formula id="66">$q_b$</formula> is plasma species charge [C]</para>
+</listitem><listitem><para><formula id="67">$n_b$</formula> is plasma species density [m^-3]</para>
+</listitem><listitem><para><formula id="68">$\ln\Lambda_{ab}$</formula> is Coulomb logarithm. </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="simulate/mccc/mccc_coefs.h" line="25" column="9" bodyfile="simulate/mccc/mccc_coefs.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mccc__coefs_8h_1ad3b1e15f6eeb41f12dd463f62e7b714f" prot="public" static="no">
+        <name>mccc_coefs_Q</name>
+        <param><defname>ma</defname></param>
+        <param><defname>qa</defname></param>
+        <param><defname>mb</defname></param>
+        <param><defname>qb</defname></param>
+        <param><defname>nb</defname></param>
+        <param><defname>vb</defname></param>
+        <param><defname>clogab</defname></param>
+        <param><defname>mu0</defname></param>
+        <initializer>        (           \
+        -<ref refid="mccc__coefs_8h_1acf3ad2cc4d30b45c88841ff53f152681" kindref="member">mccc_coefs_cab</ref>(qa, qb, nb, clogab) * mu0 / ( ma * mb * vb*vb ) )</initializer>
+        <briefdescription>
+<para>Evaluate non-relativistic drag coefficient [m/s^2]. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><formula id="69">$Q =-c_{ab}(q_a,q_b,n_b,\ln\Lambda_{ab})\mu_0(v_a/v_b) / (m_a m_b v_b^2)$</formula></para>
+<para>where</para>
+<para><itemizedlist>
+<listitem><para><formula id="70">$m_a$</formula> is test particle mass [kg]</para>
+</listitem><listitem><para><formula id="65">$q_a$</formula> is test particle charge [C]</para>
+</listitem><listitem><para><formula id="71">$m_b$</formula> is plasma species mass [kg]</para>
+</listitem><listitem><para><formula id="66">$q_b$</formula> is plasma species charge [C]</para>
+</listitem><listitem><para><formula id="67">$n_b$</formula> is plasma species density [m^-3]</para>
+</listitem><listitem><para><formula id="72">$v_b$</formula> is plasma species thermal velocity [m/s]</para>
+</listitem><listitem><para><formula id="68">$\ln\Lambda_{ab}$</formula> is Coulomb logarithm. </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="simulate/mccc/mccc_coefs.h" line="43" column="9" bodyfile="simulate/mccc/mccc_coefs.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mccc__coefs_8h_1a1f48326262e34548c25d9c14d1737a13" prot="public" static="no">
+        <name>mccc_coefs_dQ</name>
+        <param><defname>ma</defname></param>
+        <param><defname>qa</defname></param>
+        <param><defname>mb</defname></param>
+        <param><defname>qb</defname></param>
+        <param><defname>nb</defname></param>
+        <param><defname>vb</defname></param>
+        <param><defname>clogab</defname></param>
+        <param><defname>dmu0</defname></param>
+        <initializer>        (           \
+        -<ref refid="mccc__coefs_8h_1acf3ad2cc4d30b45c88841ff53f152681" kindref="member">mccc_coefs_cab</ref>(qa, qb, nb, clogab) * dmu0 / ( ma * mb * vb*vb*vb ) )</initializer>
+        <briefdescription>
+<para>Evaluate derivative of non-relativistic drag coefficient [m/s^2]. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><formula id="73">$Q&apos;=-c_{ab}(q_a,q_b,n_b,\ln\Lambda_{ab})\mu_0&apos;(v_a/v_b) / (m_a m_b v_b^2)$</formula></para>
+<para>where</para>
+<para><itemizedlist>
+<listitem><para><formula id="70">$m_a$</formula> is test particle mass [kg]</para>
+</listitem><listitem><para><formula id="65">$q_a$</formula> is test particle charge [C]</para>
+</listitem><listitem><para><formula id="71">$m_b$</formula> is plasma species mass [kg]</para>
+</listitem><listitem><para><formula id="66">$q_b$</formula> is plasma species charge [C]</para>
+</listitem><listitem><para><formula id="67">$n_b$</formula> is plasma species density [m^-3]</para>
+</listitem><listitem><para><formula id="72">$v_b$</formula> is plasma species thermal velocity [m/s]</para>
+</listitem><listitem><para><formula id="68">$\ln\Lambda_{ab}$</formula> is Coulomb logarithm. </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="simulate/mccc/mccc_coefs.h" line="61" column="9" bodyfile="simulate/mccc/mccc_coefs.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mccc__coefs_8h_1a957111ac3031581cc5b6477211a9b755" prot="public" static="no">
+        <name>mccc_coefs_F</name>
+        <param><defname>ma</defname></param>
+        <param><defname>qa</defname></param>
+        <param><defname>mb</defname></param>
+        <param><defname>qb</defname></param>
+        <param><defname>nb</defname></param>
+        <param><defname>vb</defname></param>
+        <param><defname>clogab</defname></param>
+        <param><defname>mu0</defname></param>
+        <initializer>        (             \
+        -( 1/mb + 1/ma ) * <ref refid="mccc__coefs_8h_1acf3ad2cc4d30b45c88841ff53f152681" kindref="member">mccc_coefs_cab</ref>(qa, qb, nb, clogab) * mu0     \
+        / ( ma * vb*vb ) )</initializer>
+        <briefdescription>
+<para>Evaluate non-relativistic friction coefficient [m/s^2]. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><formula id="74">$F = -c_{ab}(q_a,q_b,n_b,\ln\Lambda_{ab})\left(m_a^{-1} + m_b^{-1}\right) \mu0(v_a/v_b) / (m_a v_b^2)$</formula></para>
+<para>where</para>
+<para><itemizedlist>
+<listitem><para><formula id="70">$m_a$</formula> is test particle mass [kg]</para>
+</listitem><listitem><para><formula id="65">$q_a$</formula> is test particle charge [C]</para>
+</listitem><listitem><para><formula id="71">$m_b$</formula> is plasma species mass [kg]</para>
+</listitem><listitem><para><formula id="66">$q_b$</formula> is plasma species charge [C]</para>
+</listitem><listitem><para><formula id="67">$n_b$</formula> is plasma species density [m^-3]</para>
+</listitem><listitem><para><formula id="72">$v_b$</formula> is plasma species thermal velocity [m/s]</para>
+</listitem><listitem><para><formula id="68">$\ln\Lambda_{ab}$</formula> is Coulomb logarithm. </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="simulate/mccc/mccc_coefs.h" line="80" column="9" bodyfile="simulate/mccc/mccc_coefs.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mccc__coefs_8h_1a03e8d917a2ba2a93c78b45d1efb20977" prot="public" static="no">
+        <name>mccc_coefs_Dpara</name>
+        <param><defname>ma</defname></param>
+        <param><defname>qa</defname></param>
+        <param><defname>va</defname></param>
+        <param><defname>qb</defname></param>
+        <param><defname>nb</defname></param>
+        <param><defname>vb</defname></param>
+        <param><defname>clogab</defname></param>
+        <param><defname>mu0</defname></param>
+        <initializer>        (         \
+        ( va &gt; 0 ) ?                                                    \
+        <ref refid="mccc__coefs_8h_1acf3ad2cc4d30b45c88841ff53f152681" kindref="member">mccc_coefs_cab</ref>(qa, qb, nb, clogab) * mu0 / ( 2 * ma*ma * va ) : \
+        <ref refid="mccc__coefs_8h_1acf3ad2cc4d30b45c88841ff53f152681" kindref="member">mccc_coefs_cab</ref>(qa, qb, nb, clogab) * 4                          \
+        / ( 6 * <ref refid="consts_8h_1abef5a0b9d1c1ade75b76e0b3bb8a08f9" kindref="member">CONST_SQRTPI</ref> * ma*ma * vb ) )</initializer>
+        <briefdescription>
+<para>Evaluate non-relativistic parallel diffusion coefficient [m^2/s^3]. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><formula id="75">$D_\parallel=c_{ab}(q_a,q_b,n_b,\ln\Lambda_{ab})\mu_0(v_a/v_b) /(2m_a^2v_a)$</formula></para>
+<para>or <formula id="76">$D_\parallel = 4c_{ab}(q_a,q_b,n_b,\ln\Lambda_{ab})/(6\sqrt{\pi}m_a^2vb) \;\mathrm{when}\; v_a=0$</formula></para>
+<para>where</para>
+<para><itemizedlist>
+<listitem><para><formula id="70">$m_a$</formula> is test particle mass [kg]</para>
+</listitem><listitem><para><formula id="65">$q_a$</formula> is test particle charge [C]</para>
+</listitem><listitem><para><formula id="77">$v_a$</formula> is test particle velocity [m/s]</para>
+</listitem><listitem><para><formula id="66">$q_b$</formula> is plasma species charge [C]</para>
+</listitem><listitem><para><formula id="67">$n_b$</formula> is plasma species density [m^-3]</para>
+</listitem><listitem><para><formula id="72">$v_b$</formula> is plasma species thermal velocity [m/s]</para>
+</listitem><listitem><para><formula id="68">$\ln\Lambda_{ab}$</formula> is Coulomb logarithm. </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="simulate/mccc/mccc_coefs.h" line="103" column="9" bodyfile="simulate/mccc/mccc_coefs.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mccc__coefs_8h_1a12f3307f94305bb0cc26764255b87556" prot="public" static="no">
+        <name>mccc_coefs_dDpara</name>
+        <param><defname>ma</defname></param>
+        <param><defname>qa</defname></param>
+        <param><defname>va</defname></param>
+        <param><defname>qb</defname></param>
+        <param><defname>nb</defname></param>
+        <param><defname>vb</defname></param>
+        <param><defname>clogab</defname></param>
+        <param><defname>mu0</defname></param>
+        <param><defname>dmu0</defname></param>
+        <initializer>        (  \
+        <ref refid="mccc__coefs_8h_1acf3ad2cc4d30b45c88841ff53f152681" kindref="member">mccc_coefs_cab</ref>(qa, qb, nb, clogab) * ( dmu0/vb - mu0/va )       \
+        / ( 2 * ma*ma * va ) )</initializer>
+        <briefdescription>
+<para>Evaluate derivative of non-relativistic parallel diffusion coefficient [m/s^2]. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><formula id="78">$D_\parallel&apos;=c_{ab}(q_a,q_b,n_b,\ln\Lambda_{ab})(\mu_0&apos;(v_a/v_b)/v_b - \mu(v_a/v_b)/v_a)/(2m_a^2v_a)$</formula></para>
+<para>where</para>
+<para><itemizedlist>
+<listitem><para><formula id="70">$m_a$</formula> is test particle mass [kg]</para>
+</listitem><listitem><para><formula id="65">$q_a$</formula> is test particle charge [C]</para>
+</listitem><listitem><para><formula id="77">$v_a$</formula> is test particle velocity [m/s]</para>
+</listitem><listitem><para><formula id="66">$q_b$</formula> is plasma species charge [C]</para>
+</listitem><listitem><para><formula id="67">$n_b$</formula> is plasma species density [m^-3]</para>
+</listitem><listitem><para><formula id="72">$v_b$</formula> is plasma species thermal velocity [m/s]</para>
+</listitem><listitem><para><formula id="68">$\ln\Lambda_{ab}$</formula> is Coulomb logarithm. </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="simulate/mccc/mccc_coefs.h" line="126" column="9" bodyfile="simulate/mccc/mccc_coefs.h" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mccc__coefs_8h_1a87360b4a1c9c6494d320f46fcb1713ec" prot="public" static="no">
+        <name>mccc_coefs_Dperp</name>
+        <param><defname>ma</defname></param>
+        <param><defname>qa</defname></param>
+        <param><defname>va</defname></param>
+        <param><defname>qb</defname></param>
+        <param><defname>nb</defname></param>
+        <param><defname>vb</defname></param>
+        <param><defname>clogab</defname></param>
+        <param><defname>mu1</defname></param>
+        <initializer>        (         \
+        ( va &gt; 0 ) ?                                                    \
+        <ref refid="mccc__coefs_8h_1acf3ad2cc4d30b45c88841ff53f152681" kindref="member">mccc_coefs_cab</ref>(qa, qb, nb, clogab) * mu1 / ( 2 * ma*ma * va ) : \
+        <ref refid="mccc__coefs_8h_1acf3ad2cc4d30b45c88841ff53f152681" kindref="member">mccc_coefs_cab</ref>(qa, qb, nb, clogab) * 4                          \
+        / ( 6 * <ref refid="consts_8h_1abef5a0b9d1c1ade75b76e0b3bb8a08f9" kindref="member">CONST_SQRTPI</ref> * ma*ma * vb ) )</initializer>
+        <briefdescription>
+<para>Evaluate non-relativistic perpendicular diffusion coefficient [m^2/s^3]. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><formula id="79">$D_\perp=c_{ab}(q_a,q_b,n_b,\ln\Lambda_{ab})\mu_1(v_a/v_b) /(2m_a^2v_a)$</formula></para>
+<para>or <formula id="80">$D_\perp = 4c_{ab}(q_a,q_b,n_b,\ln\Lambda_{ab})/(6\sqrt{\pi}m_a^2vb) \;\mathrm{when}\; v_a=0$</formula></para>
+<para>where</para>
+<para><itemizedlist>
+<listitem><para><formula id="70">$m_a$</formula> is test particle mass [kg]</para>
+</listitem><listitem><para><formula id="65">$q_a$</formula> is test particle charge [C]</para>
+</listitem><listitem><para><formula id="77">$v_a$</formula> is test particle velocity [m/s]</para>
+</listitem><listitem><para><formula id="66">$q_b$</formula> is plasma species charge [C]</para>
+</listitem><listitem><para><formula id="67">$n_b$</formula> is plasma species density [m^-3]</para>
+</listitem><listitem><para><formula id="72">$v_b$</formula> is plasma species thermal velocity [m/s]</para>
+</listitem><listitem><para><formula id="68">$\ln\Lambda_{ab}$</formula> is Coulomb logarithm. </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="simulate/mccc/mccc_coefs.h" line="150" column="9" bodyfile="simulate/mccc/mccc_coefs.h" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mccc__coefs_8h_1a2638a6960a5098a0ca52d0a0a939df19" prot="public" static="no">
+        <name>mccc_coefs_K</name>
+        <param><defname>va</defname></param>
+        <param><defname>Dpara</defname></param>
+        <param><defname>dDpara</defname></param>
+        <param><defname>Q</defname></param>
+        <initializer>        (    \
+        Q + dDpara + 2*Dpara / va )</initializer>
+        <briefdescription>
+<para>Evaluate guiding center drag coefficient [m/s^2]. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><formula id="81">$K = Q + D_\parallel&apos; + 2D_\parallel/va$</formula></para>
+<para>where</para>
+<para><itemizedlist>
+<listitem><para><formula id="77">$v_a$</formula> is test particle velocity [m/s]</para>
+</listitem><listitem><para><formula id="82">$D_parallel$</formula> is [1/s]</para>
+</listitem><listitem><para><formula id="83">$Q$</formula> is [m/s^2] </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="simulate/mccc/mccc_coefs.h" line="167" column="9" bodyfile="simulate/mccc/mccc_coefs.h" bodystart="167" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mccc__coefs_8h_1a94c28d2e79ae3319824fb93ae88ad301" prot="public" static="no">
+        <name>mccc_coefs_nu</name>
+        <param><defname>va</defname></param>
+        <param><defname>Dperp</defname></param>
+        <initializer>        (             \
+        2 * Dperp / ( va * va ) )</initializer>
+        <briefdescription>
+<para>Evaluate pitch collision frequency [1/s]. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><formula id="84">$\nu = 2D_\perp/v_a^2$</formula></para>
+<para>where</para>
+<para><itemizedlist>
+<listitem><para><formula id="77">$v_a$</formula> is test particle velocity [m/s]</para>
+</listitem><listitem><para><formula id="85">$D_perp$</formula> is [] </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="simulate/mccc/mccc_coefs.h" line="180" column="10" bodyfile="simulate/mccc/mccc_coefs.h" bodystart="180" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mccc__coefs_8h_1aa67920cd7d898bab088e1daca51a5865" prot="public" static="no">
+        <name>mccc_coefs_DX</name>
+        <param><defname>xi</defname></param>
+        <param><defname>Dpara</defname></param>
+        <param><defname>Dperp</defname></param>
+        <param><defname>gyrofreq</defname></param>
+        <initializer>        (              \
+        ( 0.5 * ( Dpara - Dperp ) * ( 1 - xi*xi ) + Dperp )      \
+        / (gyrofreq*gyrofreq) )</initializer>
+        <briefdescription>
+<para>Evaluate spatial diffusion coefficient [m^2/s]. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><formula id="86">$D_X = (\frac{1}{2}(D_\parallel-D_\perp)(1-\xi^2) + D_\perp)/\omega_g^2$</formula></para>
+<para>where</para>
+<para><itemizedlist>
+<listitem><para><formula id="87">$xi$</formula> is test particle pitch</para>
+</listitem><listitem><para><formula id="88">$D_\parallel$</formula> is parallel diffusion coefficient [m^2/s^3]</para>
+</listitem><listitem><para><formula id="85">$D_perp$</formula> is perpendicular diffusion coefficient [m^2/s^3]</para>
+</listitem><listitem><para><formula id="89">$\omega_g$</formula> is gyrofrequency [1/s] </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="simulate/mccc/mccc_coefs.h" line="195" column="9" bodyfile="simulate/mccc/mccc_coefs.h" bodystart="195" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="mccc__coefs_8h_1a1666b68a0d378fc649b9405f2fd4b953" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void mccc_coefs_clog</definition>
+        <argsstring>(real *clogab, real ma, real qa, real va, int nspec, const real *mb, const real *qb, const real *nb, const real *Tb)</argsstring>
+        <name>mccc_coefs_clog</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>clogab</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>ma</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>qa</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>va</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nspec</declname>
+        </param>
+        <param>
+          <type>const <ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>mb</declname>
+        </param>
+        <param>
+          <type>const <ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>qb</declname>
+        </param>
+        <param>
+          <type>const <ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>nb</declname>
+        </param>
+        <param>
+          <type>const <ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>Tb</declname>
+        </param>
+        <briefdescription>
+<para>Evaluate Coulomb logarithm. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Coulomb logarithm is evaluated separately with respect to each plasma species. It is calculated as a logarithm of the ratio of maximum and minimum impact parameters. Maximum impact parameter is the Debye length and minimum impact parameter is either classical particle radius or inverse of De Broglie wavelength.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>clogab</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>array where evaluated values for Coulomb logarithm are stored. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ma</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>test particle mass [kg] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>qa</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>test particle charge [C] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>va</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>test particle velocity [m/s] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nspec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of plasma species </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>plasma species masses [kg] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>qb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>plasma species charges [C] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>plasma species densities [m^-3] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Tb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>plasma species temperatures [J] </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="simulate/mccc/mccc_coefs.h" line="221" column="13" bodyfile="simulate/mccc/mccc_coefs.h" bodystart="221" bodyend="247"/>
+      </memberdef>
+      <memberdef kind="function" id="mccc__coefs_8h_1a72dabcea441072dce1811e09d1236cbd" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void mccc_coefs_mufun</definition>
+        <argsstring>(real mufun[3], real x, mccc_data *mdata)</argsstring>
+        <name>mccc_coefs_mufun</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>mufun</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="structmccc__data" kindref="compound">mccc_data</ref> *</type>
+          <declname>mdata</declname>
+        </param>
+        <briefdescription>
+<para>Evaluate special functions needed by collision coefficients. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function either evaluates the special functions directly or interpolates them from look-up table which should be initialized with <ref refid="mccc_8c_1ad455bb3ad490edc38bd5bb5f3b8df67a" kindref="member">mccc_init()</ref> before calling this function.</para>
+<para>Special functions are</para>
+<para><itemizedlist>
+<listitem><para>mufun[0] = <formula id="90">$\mu_0(x) = (\mathrm{erf}(x) -2 x \pi^{-1/2} e^{-x^2})/x^2$</formula></para>
+</listitem><listitem><para>mufun[1] = <formula id="91">$\mu_1(x) = \mathrm{erf}(x) - \frac{1}{2}\mu_0(x)$</formula></para>
+</listitem><listitem><para>mufun[2] = <formula id="92">$\mu_0&apos;(x)$</formula></para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mufun</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to array where values are stored </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>argument for the special functions </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to mccc data </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="simulate/mccc/mccc_coefs.h" line="267" column="13" bodyfile="simulate/mccc/mccc_coefs.h" bodystart="267" bodyend="286"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Routines to evaluate coefficients needed to evaluate collisions. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MCCC_COEFS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MCCC_COEFS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="math_8h" kindref="compound">math.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../ascot5.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../consts.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mccc_8h" kindref="compound">mccc.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="mccc__coefs_8h_1acf3ad2cc4d30b45c88841ff53f152681" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>mccc_coefs_cab(qa,<sp/>qb,<sp/>nb,<sp/>clogab)<sp/>(<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="26"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nb<sp/>*<sp/>qa*qa<sp/>*<sp/>qb*qb<sp/>*<sp/>clogab<sp/>/<sp/>(<sp/>4<sp/>*<sp/>CONST_PI<sp/>*<sp/>CONST_E0*CONST_E0<sp/>)<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="mccc__coefs_8h_1ad3b1e15f6eeb41f12dd463f62e7b714f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>mccc_coefs_Q(ma,<sp/>qa,<sp/>mb,<sp/>qb,<sp/>nb,<sp/>vb,<sp/>clogab,<sp/>mu0)<sp/>(<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="44"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-mccc_coefs_cab(qa,<sp/>qb,<sp/>nb,<sp/>clogab)<sp/>*<sp/>mu0<sp/>/<sp/>(<sp/>ma<sp/>*<sp/>mb<sp/>*<sp/>vb*vb<sp/>)<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="mccc__coefs_8h_1a1f48326262e34548c25d9c14d1737a13" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>mccc_coefs_dQ(ma,<sp/>qa,<sp/>mb,<sp/>qb,<sp/>nb,<sp/>vb,<sp/>clogab,<sp/>dmu0)<sp/>(<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="62"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-mccc_coefs_cab(qa,<sp/>qb,<sp/>nb,<sp/>clogab)<sp/>*<sp/>dmu0<sp/>/<sp/>(<sp/>ma<sp/>*<sp/>mb<sp/>*<sp/>vb*vb*vb<sp/>)<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="mccc__coefs_8h_1a957111ac3031581cc5b6477211a9b755" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>mccc_coefs_F(ma,<sp/>qa,<sp/>mb,<sp/>qb,<sp/>nb,<sp/>vb,<sp/>clogab,<sp/>mu0)<sp/>(<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="81"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-(<sp/>1/mb<sp/>+<sp/>1/ma<sp/>)<sp/>*<sp/>mccc_coefs_cab(qa,<sp/>qb,<sp/>nb,<sp/>clogab)<sp/>*<sp/>mu0<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="82"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/<sp/>(<sp/>ma<sp/>*<sp/>vb*vb<sp/>)<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103" refid="mccc__coefs_8h_1a03e8d917a2ba2a93c78b45d1efb20977" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>mccc_coefs_Dpara(ma,<sp/>qa,<sp/>va,<sp/>qb,<sp/>nb,<sp/>vb,<sp/>clogab,<sp/>mu0)<sp/>(<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="104"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<sp/>va<sp/>&gt;<sp/>0<sp/>)<sp/>?<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="105"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mccc_coefs_cab(qa,<sp/>qb,<sp/>nb,<sp/>clogab)<sp/>*<sp/>mu0<sp/>/<sp/>(<sp/>2<sp/>*<sp/>ma*ma<sp/>*<sp/>va<sp/>)<sp/>:<sp/>\</highlight></codeline>
+<codeline lineno="106"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mccc_coefs_cab(qa,<sp/>qb,<sp/>nb,<sp/>clogab)<sp/>*<sp/>4<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="107"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/<sp/>(<sp/>6<sp/>*<sp/>CONST_SQRTPI<sp/>*<sp/>ma*ma<sp/>*<sp/>vb<sp/>)<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126" refid="mccc__coefs_8h_1a12f3307f94305bb0cc26764255b87556" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>mccc_coefs_dDpara(ma,<sp/>qa,<sp/>va,<sp/>qb,<sp/>nb,<sp/>vb,<sp/>clogab,<sp/>mu0,<sp/>dmu0)<sp/>(<sp/><sp/>\</highlight></codeline>
+<codeline lineno="127"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mccc_coefs_cab(qa,<sp/>qb,<sp/>nb,<sp/>clogab)<sp/>*<sp/>(<sp/>dmu0/vb<sp/>-<sp/>mu0/va<sp/>)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="128"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/<sp/>(<sp/>2<sp/>*<sp/>ma*ma<sp/>*<sp/>va<sp/>)<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150" refid="mccc__coefs_8h_1a87360b4a1c9c6494d320f46fcb1713ec" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>mccc_coefs_Dperp(ma,<sp/>qa,<sp/>va,<sp/>qb,<sp/>nb,<sp/>vb,<sp/>clogab,<sp/>mu1)<sp/>(<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="151"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<sp/>va<sp/>&gt;<sp/>0<sp/>)<sp/>?<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="152"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mccc_coefs_cab(qa,<sp/>qb,<sp/>nb,<sp/>clogab)<sp/>*<sp/>mu1<sp/>/<sp/>(<sp/>2<sp/>*<sp/>ma*ma<sp/>*<sp/>va<sp/>)<sp/>:<sp/>\</highlight></codeline>
+<codeline lineno="153"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mccc_coefs_cab(qa,<sp/>qb,<sp/>nb,<sp/>clogab)<sp/>*<sp/>4<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="154"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/<sp/>(<sp/>6<sp/>*<sp/>CONST_SQRTPI<sp/>*<sp/>ma*ma<sp/>*<sp/>vb<sp/>)<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167" refid="mccc__coefs_8h_1a2638a6960a5098a0ca52d0a0a939df19" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>mccc_coefs_K(va,<sp/>Dpara,<sp/>dDpara,<sp/>Q)<sp/>(<sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="168"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Q<sp/>+<sp/>dDpara<sp/>+<sp/>2*Dpara<sp/>/<sp/>va<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180" refid="mccc__coefs_8h_1a94c28d2e79ae3319824fb93ae88ad301" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#define<sp/>mccc_coefs_nu(va,<sp/>Dperp)<sp/>(<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="181"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2<sp/>*<sp/>Dperp<sp/>/<sp/>(<sp/>va<sp/>*<sp/>va<sp/>)<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195" refid="mccc__coefs_8h_1aa67920cd7d898bab088e1daca51a5865" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>mccc_coefs_DX(xi,<sp/>Dpara,<sp/>Dperp,<sp/>gyrofreq)<sp/>(<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="196"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<sp/>0.5<sp/>*<sp/>(<sp/>Dpara<sp/>-<sp/>Dperp<sp/>)<sp/>*<sp/>(<sp/>1<sp/>-<sp/>xi*xi<sp/>)<sp/>+<sp/>Dperp<sp/>)<sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="197"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/<sp/>(gyrofreq*gyrofreq)<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>declare<sp/>target</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>declare<sp/>simd<sp/>uniform(nspec,<sp/>mb,<sp/>qb,<sp/>nb,<sp/>Tb)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="221" refid="mccc__coefs_8h_1a1666b68a0d378fc649b9405f2fd4b953" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="mccc__coefs_8h_1a1666b68a0d378fc649b9405f2fd4b953" kindref="member">mccc_coefs_clog</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>clogab,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>ma,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>qa,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>va,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nspec,</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>mb,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>qb,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>nb,</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>Tb)<sp/>{</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Evaluate<sp/>Debye<sp/>length<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>sum<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>nspec;<sp/>i++){</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sum<sp/>+=<sp/>nb[i]<sp/>*<sp/>qb[i]<sp/>*<sp/>qb[i]<sp/>/<sp/>Tb[i];</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>debyeLength<sp/>=<sp/>sqrt(<ref refid="consts_8h_1a20089914a6ddfb8f5a40038bd72d3e9b" kindref="member">CONST_E0</ref>/sum);</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Evaluate<sp/>classical<sp/>and<sp/>quantum<sp/>mechanical<sp/>impact<sp/>parameter.<sp/>The<sp/>one<sp/>*</highlight></codeline>
+<codeline lineno="233"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>that<sp/>is<sp/>larger<sp/>is<sp/>used<sp/>to<sp/>evaluate<sp/>Coulomb<sp/>logarithm.<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i<sp/>&lt;<sp/>nspec;<sp/>i++){</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>vbar<sp/>=<sp/>va<sp/>*<sp/>va<sp/>+<sp/>2<sp/>*<sp/>Tb[i]<sp/>/<sp/>mb[i];</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>mr<sp/><sp/><sp/>=<sp/>ma<sp/>*<sp/>mb[i]<sp/>/<sp/>(<sp/>ma<sp/>+<sp/>mb[i]<sp/>);</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>bcl<sp/><sp/>=<sp/>fabs(<sp/>qa<sp/>*<sp/>qb[i]<sp/>/<sp/>(<sp/>4*<ref refid="consts_8h_1a02b01cde332fa86c92d54802cce7f3d2" kindref="member">CONST_PI</ref>*<ref refid="consts_8h_1a20089914a6ddfb8f5a40038bd72d3e9b" kindref="member">CONST_E0</ref><sp/>*<sp/>mr<sp/>*<sp/>vbar<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>bqm<sp/><sp/>=<sp/>fabs(<sp/><ref refid="consts_8h_1aa551b6d49a678019207aa16e1fff107f" kindref="member">CONST_HBAR</ref><sp/>/<sp/>(<sp/>2<sp/>*<sp/>mr<sp/>*<sp/>sqrt(<sp/>vbar<sp/>)<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(bcl<sp/>&gt;<sp/>bqm){</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>clogab[i]<sp/>=<sp/>log(<sp/>debyeLength<sp/>/<sp/>bcl<sp/>);</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>clogab[i]<sp/>=<sp/>log(<sp/>debyeLength<sp/>/<sp/>bqm<sp/>);</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="247"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>declare<sp/>simd<sp/>uniform(mdata)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="267" refid="mccc__coefs_8h_1a72dabcea441072dce1811e09d1236cbd" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="mccc__coefs_8h_1a72dabcea441072dce1811e09d1236cbd" kindref="member">mccc_coefs_mufun</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>mufun[3],<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>x,<sp/><ref refid="structmccc__data" kindref="compound">mccc_data</ref>*<sp/>mdata)<sp/>{</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!mdata-&gt;<ref refid="structmccc__data_1a901b1637e9119ea5dff0a1c0315055b5" kindref="member">usetabulated</ref><sp/>&amp;&amp;<sp/>x!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>expm2x<sp/>=<sp/>exp(-x*x);</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>erfx<sp/><sp/><sp/>=<sp/>erf(x);</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mufun[0]<sp/>=<sp/>(<sp/>erfx<sp/>-<sp/>2<sp/>*<sp/>x<sp/>*<sp/>expm2x<sp/>/<sp/><ref refid="consts_8h_1abef5a0b9d1c1ade75b76e0b3bb8a08f9" kindref="member">CONST_SQRTPI</ref><sp/>)<sp/>/<sp/>(x*x);</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mufun[1]<sp/>=<sp/>erfx<sp/>-<sp/>0.5<sp/>*<sp/>mufun[0];</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mufun[2]<sp/>=<sp/>4<sp/>*<sp/>expm2x<sp/>/<sp/><ref refid="consts_8h_1abef5a0b9d1c1ade75b76e0b3bb8a08f9" kindref="member">CONST_SQRTPI</ref><sp/>-<sp/>2<sp/>*<sp/>mufun[0]<sp/>/<sp/>x;</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(mdata-&gt;<ref refid="structmccc__data_1a901b1637e9119ea5dff0a1c0315055b5" kindref="member">usetabulated</ref><sp/>&amp;&amp;<sp/>x<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>implement<sp/>me</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mufun[0]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mufun[1]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mufun[2]<sp/>=<sp/>4<sp/>/<sp/>(<sp/>3<sp/>*<sp/><ref refid="consts_8h_1abef5a0b9d1c1ade75b76e0b3bb8a08f9" kindref="member">CONST_SQRTPI</ref><sp/>);</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>end<sp/>declare<sp/>target</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="simulate/mccc/mccc_coefs.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Installing &mdash; ASCOT5 5.5 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sg_gallery.css" type="text/css" />
+      <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=b689823a"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Data storage" href="processing.html" />
+    <link rel="prev" title="ASCOT5" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html">
+            
+              <img src="_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Running Simulations</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#compiling-on-different-platforms">Compiling on different platforms</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#aalto-desktops">Aalto desktops</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#csc-fi-puhti">CSC.fi puhti</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#freia-ukaea-work-in-progress">Freia (UKAEA) (work in progress)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#iter-sdcc">ITER sdcc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lac8-at-tcv">Lac8 at TCV</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#marenostrum-wip">Marenostrum (WIP)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#marconi-knl">Marconi KNL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#marconi-m100-gpu">Marconi M100 (GPU)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#marconi-skl">Marconi SKL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mpcdf-cobra">MPCDF Cobra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mpcdf-raven">MPCDF Raven</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nersc-cori">NERSC Cori</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#osx-macports">OSX (Macports)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rat-at-rfx">RAT at RFX</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tok-cluster-at-aug">TOK-cluster at AUG</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#triton-aalto-fi">Triton.aalto.fi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vdiubuntu-aalto-fi">Vdiubuntu.aalto.fi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#settings-when-compiling">Settings when compiling</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#simulations">Simulations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#options">Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#batch-jobs">Batch jobs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Processing Data</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="processing.html">Data storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="processing.html#input-generation">Input generation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="processing.html#post-processing">Post-processing</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Simulating Physics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="teaching.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="teaching.html#physics-in-ascot5">Physics in ASCOT5</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Publications</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="publishing.html">Citing ASCOT5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="publishing.html#gallery">Gallery</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Code Development</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="developing.html">Coding style and practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developing.html#parallelization">Parallelization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developing.html#testing">Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developing.html#id2">C API</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="papi/a5py.html">Python API</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ASCOT5</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Installing</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/running.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="installing">
+<span id="id1"></span><h1>Installing<a class="headerlink" href="#installing" title="Link to this heading"></a></h1>
+<ol class="arabic">
+<li><p>Clone the repository.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:ascot4fusion/ascot5.git<span class="w"> </span>ascot5
+<span class="nb">cd</span><span class="w"> </span>ascot5
+</pre></div>
+</div>
+</li>
+<li><p>Compile the main simulation program <code class="docutils literal notranslate"><span class="pre">ascot5_main</span></code> and the library <code class="docutils literal notranslate"><span class="pre">libascot.so</span></code> (which is needed for post-processing but not for executing simulations).</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>ascot5_main
+make<span class="w"> </span>libascot
+</pre></div>
+</div>
+<p>Compiling requires <strong>C compiler</strong>, <strong>HDF5</strong>, <strong>OpenMP</strong> and <strong>MPI</strong> (optional).
+For postprocessing one needs <strong>Python 3</strong> and <strong>VTK</strong> (optional for 3D walls).
+See <a class="reference internal" href="#compiling"><span class="std std-ref">here</span></a> for tips on how to compile the code on different platforms.
+The binaries will be located in <code class="docutils literal notranslate"><span class="pre">build</span></code> folder.</p>
+</li>
+<li><p>Whenever there is a new release, you can update the code as:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>pull
+git<span class="w"> </span>checkout<span class="w"> </span>main
+make<span class="w"> </span>clean
+make<span class="w"> </span>ascot5_main
+make<span class="w"> </span>libascot
+</pre></div>
+</div>
+<p>Always use the branch <code class="docutils literal notranslate"><span class="pre">main</span></code> when running simulations unless you specifically need something from a feature branch.</p>
+</li>
+<li><p>Set up a virtual environment</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>..
+</pre></div>
+</div>
+<p>You can use either <code class="docutils literal notranslate"><span class="pre">virtualenv</span></code> (3rd party tool)</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>virtualenv<span class="w"> </span>-p<span class="w"> </span>python3<span class="w"> </span>--system-site-packages<span class="w"> </span>ascotenv
+<span class="nb">source</span><span class="w"> </span>ascotenv/bin/activate
+</pre></div>
+</div>
+<p>or <code class="docutils literal notranslate"><span class="pre">venv</span></code> (packs with Python 3)</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>--system-site-packages<span class="w"> </span>ascotenv
+<span class="nb">source</span><span class="w"> </span>ascotenv/bin/activate
+</pre></div>
+</div>
+<p>or Conda</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>--name<span class="w"> </span>ascotenv
+conda<span class="w"> </span>activate<span class="w"> </span>ascotenv
+</pre></div>
+</div>
+</li>
+<li><p>Install <code class="docutils literal notranslate"><span class="pre">a5py</span></code> Python package needed for input generation and post-processing.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>ascot5
+</pre></div>
+</div>
+<p>For developers, the extra packages required for generating the documentation are installed with</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>ascot5<span class="o">[</span>doc<span class="o">]</span>
+</pre></div>
+</div>
+<p>In addition Doxygen is needed.</p>
+</li>
+<li><p>(Optional) Edit your <cite>.bashrc</cite> and/or <cite>.bash_profile</cite></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>emacs<span class="w"> </span>-nw<span class="w"> </span>~/.bashrc
+</pre></div>
+</div>
+<p>Add the following lines (along with any <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">load</span></code> or <code class="docutils literal notranslate"><span class="pre">export</span></code> that was needed for the code to compile</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">module</span> <span class="n">loads</span> <span class="ow">and</span> <span class="n">exports</span> <span class="n">here</span><span class="o">&gt;</span>
+<span class="n">export</span> <span class="n">EDITOR</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">emacs</span> <span class="c1"># To use emacs when editing options</span>
+<span class="n">source</span> <span class="n">activate</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">ascot5env</span> <span class="c1"># If using venv or virtualenv</span>
+<span class="n">conda</span> <span class="n">activate</span> <span class="n">ascot5env</span> <span class="c1"># If using Conda</span>
+</pre></div>
+</div>
+<p>This will automatically activate ASCOT5 environment each time you open a terminal or login.</p>
+<p>Close the terminal (or log out) and the environment is set when you open a new one (or log in).</p>
+</li>
+<li><p>Test that ASCOT5 is working by running the <a class="reference internal" href="teaching.html#tutorial"><span class="std std-ref">tutorial</span></a>.</p></li>
+</ol>
+<section id="compiling-on-different-platforms">
+<span id="compiling"></span><h2>Compiling on different platforms<a class="headerlink" href="#compiling-on-different-platforms" title="Link to this heading"></a></h2>
+<p>Add your platform here!</p>
+<section id="aalto-desktops">
+<h3>Aalto desktops<a class="headerlink" href="#aalto-desktops" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pkcon<span class="w"> </span>install<span class="w"> </span>hdf5-helpers
+pkcon<span class="w"> </span>install<span class="w"> </span>libhdf5-dev
+pkcon<span class="w"> </span>install<span class="w"> </span>hdf5-tools
+make<span class="w"> </span>-j<span class="w"> </span>ascot5_main<span class="w"> </span><span class="nv">VERBOSE</span><span class="o">=</span><span class="m">1</span><span class="w"> </span><span class="nv">FLAGS</span><span class="o">=</span><span class="s2">&quot;-foffload=disable&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="csc-fi-puhti">
+<h3>CSC.fi puhti<a class="headerlink" href="#csc-fi-puhti" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>module<span class="w"> </span>load<span class="w"> </span>StdEnv<span class="w"> </span>intel/19.0.4<span class="w">  </span>hpcx-mpi/2.4.0<span class="w">  </span>intel-mkl/2019.0.4<span class="w">  </span>hdf5/1.10.4-mpi<span class="w"> </span>python-data
+
+make<span class="w"> </span>-j<span class="w"> </span>ascot5_main<span class="w"> </span><span class="nv">MPI</span><span class="o">=</span><span class="m">1</span><span class="w"> </span><span class="nv">VERBOSE</span><span class="o">=</span><span class="m">1</span>
+</pre></div>
+</div>
+<p>Alternatively:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>ascot5_main<span class="w"> </span><span class="nv">VERBOSE</span><span class="o">=</span><span class="m">2</span><span class="w"> </span><span class="nv">MPI</span><span class="o">=</span><span class="m">1</span><span class="w"> </span><span class="nv">FLAGS</span><span class="o">=</span><span class="s2">&quot;-qno-openmp-offload -diag-disable 3180 -vecabi=cmdtarget&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="freia-ukaea-work-in-progress">
+<h3>Freia (UKAEA) (work in progress)<a class="headerlink" href="#freia-ukaea-work-in-progress" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>ascot5_main<span class="w"> </span><span class="nv">MPI</span><span class="o">=</span><span class="m">0</span><span class="w"> </span><span class="nv">VERBOSE</span><span class="o">=</span><span class="m">1</span><span class="w"> </span><span class="nv">CC</span><span class="o">=</span>gcc
+</pre></div>
+</div>
+<p>For libascot, one user needed to revert to python/3.5.1 and command</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>libascot<span class="w"> </span><span class="nv">MPI</span><span class="o">=</span><span class="m">0</span><span class="w"> </span><span class="nv">VERBOSE</span><span class="o">=</span><span class="m">1</span>
+</pre></div>
+</div>
+</section>
+<section id="iter-sdcc">
+<h3>ITER sdcc<a class="headerlink" href="#iter-sdcc" title="Link to this heading"></a></h3>
+<p>Going with intel compilers.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>module<span class="w"> </span>load<span class="w"> </span>GCCcore/11.3.0<span class="w"> </span>zlib/1.2.12-GCCcore-11.3.0<span class="w"> </span>binutils/2.38-GCCcore-11.3.0<span class="w"> </span>intel-compilers/2022.1.0<span class="w"> </span>numactl/2.0.14-GCCcore-11.3.0<span class="w"> </span>UCX/1.12.1-GCCcore-11.3.0<span class="w"> </span>impi/2021.6.0-intel-compilers-2022.1.0<span class="w"> </span>iimpi/2022a<span class="w"> </span>Szip/2.1.1-GCCcore-11.3.0<span class="w"> </span>HDF5/1.13.1-iimpi-2022a
+
+make<span class="w"> </span>ascot5_main<span class="w"> </span><span class="nv">CC</span><span class="o">=</span>h5pcc<span class="w"> </span><span class="nv">FLAGS</span><span class="o">=</span>-qno-openmp-offload<span class="w"> </span>-diag-disable<span class="w"> </span><span class="m">3180</span>
+</pre></div>
+</div>
+</section>
+<section id="lac8-at-tcv">
+<h3>Lac8 at TCV<a class="headerlink" href="#lac8-at-tcv" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>ascot5_main<span class="w"> </span><span class="nv">CC</span><span class="o">=</span>h5cc<span class="w"> </span><span class="nv">MPI</span><span class="o">=</span><span class="m">0</span><span class="w"> </span><span class="nv">VERBOSE</span><span class="o">=</span><span class="m">2</span>
+</pre></div>
+</div>
+</section>
+<section id="marenostrum-wip">
+<h3>Marenostrum (WIP)<a class="headerlink" href="#marenostrum-wip" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>module<span class="w"> </span>load<span class="w"> </span>hdf5/1.8.19<span class="w"> </span>intel/2018.4<span class="w"> </span>impi/2018.4<span class="w"> </span>zlib<span class="w"> </span>szip/2.1.1
+
+make<span class="w"> </span>ascot5_main<span class="w"> </span><span class="nv">VERBOSE</span><span class="o">=</span><span class="m">2</span><span class="w"> </span><span class="nv">MPI</span><span class="o">=</span><span class="m">1</span><span class="w"> </span><span class="nv">FLAGS</span><span class="o">=</span><span class="s2">&quot;-qno-openmp-offload -diag-disable 3180 -xcommon-avx512 -vecabi=cmdtarget&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="marconi-knl">
+<h3>Marconi KNL<a class="headerlink" href="#marconi-knl" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>module<span class="w"> </span>load<span class="w"> </span>intel/pe-xe-2018--binary<span class="w"> </span>intelmpi/2018--binary<span class="w"> </span>szip/2.1--gnu--6.1.0<span class="w"> </span>zlib/1.2.8--gnu--6.1.0<span class="w"> </span>hdf5/1.8.18--intelmpi--2018--binary<span class="w"> </span>python/3.5.2
+make<span class="w"> </span>ascot5_main<span class="w"> </span><span class="nv">VERBOSE</span><span class="o">=</span><span class="m">2</span><span class="w"> </span><span class="nv">MPI</span><span class="o">=</span><span class="m">1</span><span class="w"> </span><span class="nv">FLAGS</span><span class="o">=</span><span class="s2">&quot;-qno-openmp-offload -diag-disable 3180 -xmic-avx512 -vecabi=cmdtarget&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="marconi-m100-gpu">
+<h3>Marconi M100 (GPU)<a class="headerlink" href="#marconi-m100-gpu" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>module<span class="w"> </span>load<span class="w"> </span>xl<span class="w"> </span>spectrum_mpi/10.3.1--binary<span class="w"> </span>gnu/8.4.0<span class="w"> </span>hdf5/1.12.0--spectrum_mpi--10.3.1--binary<span class="w"> </span>szip
+</pre></div>
+</div>
+</section>
+<section id="marconi-skl">
+<h3>Marconi SKL<a class="headerlink" href="#marconi-skl" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>module<span class="w"> </span>load<span class="w"> </span>intel/pe-xe-2020--binary<span class="w"> </span>intelmpi/2020--binary<span class="w"> </span>gnu/8.3.0<span class="w"> </span>zlib/1.2.11--gnu--8.3.0<span class="w"> </span>szip/2.1.1--gnu--8.3.0<span class="w">  </span>hdf5/1.12.2--intelmpi--2020--binary<span class="w"> </span>python/3.5.2
+make<span class="w"> </span>ascot5_main<span class="w"> </span><span class="nv">VERBOSE</span><span class="o">=</span><span class="m">2</span><span class="w"> </span><span class="nv">MPI</span><span class="o">=</span><span class="m">1</span><span class="w"> </span><span class="nv">FLAGS</span><span class="o">=</span><span class="s2">&quot;-qno-openmp-offload -diag-disable 3180 -xcommon-avx512 -vecabi=cmdtarget&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="mpcdf-cobra">
+<h3>MPCDF Cobra<a class="headerlink" href="#mpcdf-cobra" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>module<span class="w"> </span>load<span class="w"> </span>intel/19.1.3<span class="w"> </span>impi/2019.9<span class="w"> </span>git<span class="w"> </span>hdf5-mpi
+make<span class="w"> </span>ascot5_main<span class="w"> </span><span class="nv">MPI</span><span class="o">=</span><span class="m">1</span><span class="w"> </span><span class="nv">VERBOSE</span><span class="o">=</span><span class="m">1</span><span class="w"> </span><span class="nv">FLAGS</span><span class="o">=</span><span class="s2">&quot;-qno-openmp-offload -diag-disable 3180&quot;</span><span class="w"> </span><span class="nv">CC</span><span class="o">=</span>h5pcc
+</pre></div>
+</div>
+</section>
+<section id="mpcdf-raven">
+<h3>MPCDF Raven<a class="headerlink" href="#mpcdf-raven" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>module<span class="w"> </span>load<span class="w"> </span>intel/19.1.2<span class="w"> </span>impi/2019.8<span class="w"> </span>git<span class="w"> </span>hdf5-mpi<span class="w"> </span>anaconda/3/2020.02
+make<span class="w"> </span>ascot5_main<span class="w"> </span><span class="nv">MPI</span><span class="o">=</span><span class="m">1</span><span class="w"> </span><span class="nv">VERBOSE</span><span class="o">=</span><span class="m">1</span><span class="w"> </span><span class="nv">FLAGS</span><span class="o">=</span><span class="s2">&quot;-qno-openmp-offload -diag-disable 3180&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="nersc-cori">
+<h3>NERSC Cori<a class="headerlink" href="#nersc-cori" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>module<span class="w"> </span>load<span class="w"> </span>cray-hdf5-parallel
+<span class="nb">export</span><span class="w"> </span><span class="nv">PMI_NO_FORK</span><span class="o">=</span><span class="m">1</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">PMI_NO_PREINITIALIZE</span><span class="o">=</span><span class="m">1</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">HDF5_USE_FILE_LOCKING</span><span class="o">=</span>FALSE
+make<span class="w"> </span>ascot5_main<span class="w"> </span><span class="nv">CC</span><span class="o">=</span>h5cc<span class="w"> </span><span class="nv">VERBOSE</span><span class="o">=</span><span class="m">0</span><span class="w"> </span><span class="nv">MPI</span><span class="o">=</span><span class="m">1</span><span class="w"> </span><span class="nv">FLAGS</span><span class="o">=</span><span class="s2">&quot;-qno-openmp-offload –diag-disable 3180&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="osx-macports">
+<h3>OSX (Macports)<a class="headerlink" href="#osx-macports" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>port<span class="w"> </span>install<span class="w"> </span>gcc10
+port<span class="w"> </span>install<span class="w"> </span>openmpi-gcc10
+port<span class="w"> </span>install<span class="w"> </span>hdf5<span class="w"> </span>+gcc10<span class="w"> </span>+openmpi<span class="w"> </span>+hl
+</pre></div>
+</div>
+</section>
+<section id="rat-at-rfx">
+<h3>RAT at RFX<a class="headerlink" href="#rat-at-rfx" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>module<span class="w"> </span>load<span class="w"> </span>anaconda
+make<span class="w"> </span>ascot5_main<span class="w"> </span><span class="nv">MPI</span><span class="o">=</span><span class="m">0</span><span class="w"> </span><span class="nv">VERBOSE</span><span class="o">=</span><span class="m">1</span><span class="w"> </span><span class="nv">CC</span><span class="o">=</span>h5cc
+</pre></div>
+</div>
+</section>
+<section id="tok-cluster-at-aug">
+<h3>TOK-cluster at AUG<a class="headerlink" href="#tok-cluster-at-aug" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>module<span class="w"> </span>load<span class="w"> </span>intel/18.0.5<span class="w"> </span>impi/2018.4<span class="w"> </span>hdf5-mpi/1.8.21
+make<span class="w"> </span>-j<span class="w"> </span>ascot5_main<span class="w"> </span><span class="nv">MPI</span><span class="o">=</span><span class="m">0</span><span class="w"> </span><span class="nv">VERBOSE</span><span class="o">=</span><span class="m">1</span><span class="w"> </span><span class="nv">FLAGS</span><span class="o">=</span><span class="s2">&quot;-qno-openmp-offload -diag-disable 3180&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="triton-aalto-fi">
+<h3>Triton.aalto.fi<a class="headerlink" href="#triton-aalto-fi" title="Link to this heading"></a></h3>
+<p>For GCC:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>module<span class="w"> </span>load<span class="w"> </span>hdf5/1.10.7-openmpi
+make<span class="w"> </span>-j<span class="w"> </span>ascot5_main<span class="w"> </span><span class="nv">MPI</span><span class="o">=</span><span class="m">1</span><span class="w"> </span><span class="nv">VERBOSE</span><span class="o">=</span><span class="m">1</span>
+</pre></div>
+</div>
+<p>Makefile:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>-CFLAGS+=-O2 -lm -Wall -fopenmp -fPIC -std=c11 $(DEFINES) $(FLAGS)
++CFLAGS+=-O2 -lm -Wall -fopenmp -fPIC -std=c11 -lhdf5_hl $(DEFINES) $(FLAGS)
+-libascot.so: CFLAGS+=-shlib -fPIC -shared
++libascot.so: CFLAGS+=-fPIC -shared
+</pre></div>
+</div>
+<p>For Intel:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>module<span class="w"> </span>load<span class="w"> </span>intel-parallel-studio<span class="w"> </span>hdf5/1.10.2-openmpi
+<span class="nb">export</span><span class="w"> </span><span class="nv">OMPI_MPICC</span><span class="o">=</span>icc
+make<span class="w"> </span>ascot5_main<span class="w"> </span><span class="nv">VERBOSE</span><span class="o">=</span><span class="m">2</span><span class="w"> </span><span class="nv">MPI</span><span class="o">=</span><span class="m">1</span><span class="w"> </span><span class="nv">FLAGS</span><span class="o">=</span><span class="s2">&quot;-qno-openmp-offload -diag-disable 3180 -vecabi=cmdtarget&quot;</span>
+</pre></div>
+</div>
+<p>(add -xcommon-avx512 to optimize for skl/csl nodes)</p>
+</section>
+<section id="vdiubuntu-aalto-fi">
+<h3>Vdiubuntu.aalto.fi<a class="headerlink" href="#vdiubuntu-aalto-fi" title="Link to this heading"></a></h3>
+<p>Compiling libascot.so requires that you change Makefile as</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>libascot.so: libascot.o $(OBJS)
+- $(CC) $(CFLAGS) -o $@ $^
++ $(CC) $(CFLAGS) -o $@ $^ -lhdf5_hl -lhdf5
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>module<span class="w"> </span>load<span class="w"> </span>hdf5
+make<span class="w"> </span><span class="nv">VERBOSE</span><span class="o">=</span><span class="m">2</span><span class="w"> </span><span class="nv">MPI</span><span class="o">=</span><span class="m">0</span><span class="w"> </span>libascot.so<span class="w"> </span><span class="nv">CC</span><span class="o">=</span>gcc<span class="w"> </span><span class="nv">FLAGS</span><span class="o">=</span><span class="s2">&quot;-foffload=disable&quot;</span><span class="w"> </span>-j
+</pre></div>
+</div>
+</section>
+</section>
+<section id="settings-when-compiling">
+<span id="compilerflags"></span><h2>Settings when compiling<a class="headerlink" href="#settings-when-compiling" title="Link to this heading"></a></h2>
+<p>Some of the ASCOT5 options require recompiling the code.
+Parameters that can be given arguments for <code class="docutils literal notranslate"><span class="pre">make</span></code> are</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>-j<span class="w"> </span>ascot5_main<span class="w"> </span><span class="nv">NSIMD</span><span class="o">=</span><span class="m">16</span><span class="w"> </span><span class="nv">CC</span><span class="o">=</span>icc<span class="w"> </span><span class="nv">TARGET</span><span class="o">=</span><span class="m">1</span><span class="w"> </span><span class="nv">VERBOSE</span><span class="o">=</span><span class="m">1</span><span class="w"> </span><span class="nv">MPI</span><span class="o">=</span><span class="m">1</span><span class="w"> </span><span class="nv">NOGIT</span><span class="o">=</span><span class="m">1</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 83%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>NSIMD</p></td>
+<td><p>Number of particles in a group. These are processed simultaneously by each thread and the optimal number depends on the platform. If unsure, keep the default value.</p></td>
+</tr>
+<tr class="row-even"><td><p>CC</p></td>
+<td><p>Compiler.</p></td>
+</tr>
+<tr class="row-odd"><td><p>TARGET</p></td>
+<td><p>Offload computation to Xeon Phi accelerator.</p></td>
+</tr>
+<tr class="row-even"><td><p>VERBOSE</p></td>
+<td><p>Print increasing amounts of progress information. 0: No information except bare essentials. 1: Standard information; everything happening outside simulation loops is printed. 2: Extensive information; a record of simulation progress is written process-specific *.stdout file(s).</p></td>
+</tr>
+<tr class="row-odd"><td><p>MPI</p></td>
+<td><p>Enable MPI.</p></td>
+</tr>
+<tr class="row-even"><td><p>NOGIT</p></td>
+<td><p>Disable recording of repository status if Git is not available.</p></td>
+</tr>
+</tbody>
+</table>
+<p>Additional parameters can be found in <code class="docutils literal notranslate"><span class="pre">ascot5.h</span></code>, but there is rarely a need to change these.</p>
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.MAX_SPECIES">
+<span class="target" id="ascot5_8h_1a9a9ccddfec36bf0f49a168a9dcb8f87e"></span><span class="sig-name descname"><span class="n"><span class="pre">MAX_SPECIES</span></span></span><a class="headerlink" href="#c.MAX_SPECIES" title="Link to this definition"></a><br /></dt>
+<dd><p>Maximum number of plasma species. </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.MHD_MODES_MAX_NUM">
+<span class="target" id="ascot5_8h_1aa893572c471792048c35383230454d42"></span><span class="sig-name descname"><span class="n"><span class="pre">MHD_MODES_MAX_NUM</span></span></span><a class="headerlink" href="#c.MHD_MODES_MAX_NUM" title="Link to this definition"></a><br /></dt>
+<dd><p>Maximum number of MHD modes. </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.WIENERSLOTS">
+<span class="target" id="ascot5_8h_1a46ddf28f506f3779208377f9f354411c"></span><span class="sig-name descname"><span class="n"><span class="pre">WIENERSLOTS</span></span></span><a class="headerlink" href="#c.WIENERSLOTS" title="Link to this definition"></a><br /></dt>
+<dd><p>Maximum number of Wiener processes stored (effectively number of time step reductions) </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.A5_CCOL_USE_GEOBM">
+<span class="target" id="ascot5_8h_1a60071ed1742fb6fa3281caf13e9894c1"></span><span class="sig-name descname"><span class="n"><span class="pre">A5_CCOL_USE_GEOBM</span></span></span><a class="headerlink" href="#c.A5_CCOL_USE_GEOBM" title="Link to this definition"></a><br /></dt>
+<dd><p>Determine whether to use geometric method of Box-Muller to to generate normal random numbers. </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.A5_EXTREMELY_SMALL_TIMESTEP">
+<span class="target" id="ascot5_8h_1a8698a976bcff00b5d57ab81b673419fd"></span><span class="sig-name descname"><span class="n"><span class="pre">A5_EXTREMELY_SMALL_TIMESTEP</span></span></span><a class="headerlink" href="#c.A5_EXTREMELY_SMALL_TIMESTEP" title="Link to this definition"></a><br /></dt>
+<dd><p>If adaptive time step falls below this value, produce an error. </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.A5_PRINTPROGRESSINTERVAL">
+<span class="target" id="ascot5_8h_1ab1d1d43a47920467ef77f3a59580c214"></span><span class="sig-name descname"><span class="n"><span class="pre">A5_PRINTPROGRESSINTERVAL</span></span></span><a class="headerlink" href="#c.A5_PRINTPROGRESSINTERVAL" title="Link to this definition"></a><br /></dt>
+<dd><p>How often progress is being written (s) in the stdout file. </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.A5_WTIME">
+<span class="target" id="ascot5_8h_1aefd7cbec63dd718061c2d93c8a834490"></span><span class="sig-name descname"><span class="n"><span class="pre">A5_WTIME</span></span></span><a class="headerlink" href="#c.A5_WTIME" title="Link to this definition"></a><br /></dt>
+<dd><p>Wall time. </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.INTERP_SPL_EXPL">
+<span class="target" id="ascot5_8h_1a7e6ef2c1bed83eee525ee04b9067a806"></span><span class="sig-name descname"><span class="n"><span class="pre">INTERP_SPL_EXPL</span></span></span><a class="headerlink" href="#c.INTERP_SPL_EXPL" title="Link to this definition"></a><br /></dt>
+<dd><p>Choose whether magnetic field spline interpolation is done with an explicit (1) or compact (0) way. </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.A5_CCOL_USE_TABULATED">
+<span class="target" id="ascot5_8h_1a82233c5f080d17a4b135a594a5d4a4a5"></span><span class="sig-name descname"><span class="n"><span class="pre">A5_CCOL_USE_TABULATED</span></span></span><a class="headerlink" href="#c.A5_CCOL_USE_TABULATED" title="Link to this definition"></a><br /></dt>
+<dd><p>Choose whether to use tabulated values for collision coefficients. </p>
+</dd></dl>
+
+</section>
+</section>
+<section id="simulations">
+<span id="id2"></span><h1>Simulations<a class="headerlink" href="#simulations" title="Link to this heading"></a></h1>
+<section id="options">
+<span id="simulationoptions"></span><h2>Options<a class="headerlink" href="#options" title="Link to this heading"></a></h2>
+<p>Simulation options are listed below.
+Click on the parameter name for more details.
+Note that the first underscore does not belong in a parameter name and only appear here for technical reasons.</p>
+<p class="rubric">Simulation mode and time step</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._SIM_MODE" title="a5py.ascot5io.options.Opt._SIM_MODE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_SIM_MODE</span></code></a></p></td>
+<td><p>Simulation mode (1, 2, 3, 4)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._ENABLE_ADAPTIVE" title="a5py.ascot5io.options.Opt._ENABLE_ADAPTIVE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_ENABLE_ADAPTIVE</span></code></a></p></td>
+<td><p>Use adaptive time-step (0, 1)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._RECORD_MODE" title="a5py.ascot5io.options.Opt._RECORD_MODE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_RECORD_MODE</span></code></a></p></td>
+<td><p>Record GOs as GCs in diagnostics (0, 1)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._FIXEDSTEP_USE_USERDEFINED" title="a5py.ascot5io.options.Opt._FIXEDSTEP_USE_USERDEFINED"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_FIXEDSTEP_USE_USERDEFINED</span></code></a></p></td>
+<td><p>Define fixed time-step value explicitly (0,1)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._FIXEDSTEP_USERDEFINED" title="a5py.ascot5io.options.Opt._FIXEDSTEP_USERDEFINED"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_FIXEDSTEP_USERDEFINED</span></code></a></p></td>
+<td><p>User-defined time-step [s]</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._FIXEDSTEP_GYRODEFINED" title="a5py.ascot5io.options.Opt._FIXEDSTEP_GYRODEFINED"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_FIXEDSTEP_GYRODEFINED</span></code></a></p></td>
+<td><p>Time-step is 2pi / ( gyrofrequency * N ) where N is this parameter</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._ADAPTIVE_TOL_ORBIT" title="a5py.ascot5io.options.Opt._ADAPTIVE_TOL_ORBIT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_ADAPTIVE_TOL_ORBIT</span></code></a></p></td>
+<td><p>Relative error tolerance for orbit following in adaptive scheme</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._ADAPTIVE_TOL_CCOL" title="a5py.ascot5io.options.Opt._ADAPTIVE_TOL_CCOL"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_ADAPTIVE_TOL_CCOL</span></code></a></p></td>
+<td><p>Relative error tolerance for Coulomb collisions in adaptive scheme</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._ADAPTIVE_MAX_DRHO" title="a5py.ascot5io.options.Opt._ADAPTIVE_MAX_DRHO"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_ADAPTIVE_MAX_DRHO</span></code></a></p></td>
+<td><p>Maximum allowed change in rho during one time-step in adaptive scheme</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._ADAPTIVE_MAX_DPHI" title="a5py.ascot5io.options.Opt._ADAPTIVE_MAX_DPHI"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_ADAPTIVE_MAX_DPHI</span></code></a></p></td>
+<td><p>Maximum allowed change in phi during one time-step in adaptive scheme</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Simulation end conditions</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._ENDCOND_SIMTIMELIM" title="a5py.ascot5io.options.Opt._ENDCOND_SIMTIMELIM"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_ENDCOND_SIMTIMELIM</span></code></a></p></td>
+<td><p>Terminate when marker time passes ENDCOND_LIM_SIMTIME or when marker time has advanced ENDCOND_MAX_MILEAGE in a simulation</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._ENDCOND_CPUTIMELIM" title="a5py.ascot5io.options.Opt._ENDCOND_CPUTIMELIM"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_ENDCOND_CPUTIMELIM</span></code></a></p></td>
+<td><p>Terminate marker when the computer has spent ENDCOND_MAX_CPUTIME amount of real time to simulate it</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._ENDCOND_RHOLIM" title="a5py.ascot5io.options.Opt._ENDCOND_RHOLIM"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_ENDCOND_RHOLIM</span></code></a></p></td>
+<td><p>Terminate if marker goes outside given rho boundaries</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._ENDCOND_ENERGYLIM" title="a5py.ascot5io.options.Opt._ENDCOND_ENERGYLIM"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_ENDCOND_ENERGYLIM</span></code></a></p></td>
+<td><p>Terminate when marker energy is below a user-specified value</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._ENDCOND_WALLHIT" title="a5py.ascot5io.options.Opt._ENDCOND_WALLHIT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_ENDCOND_WALLHIT</span></code></a></p></td>
+<td><p>Terminate when marker intersects a wall element</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._ENDCOND_MAXORBS" title="a5py.ascot5io.options.Opt._ENDCOND_MAXORBS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_ENDCOND_MAXORBS</span></code></a></p></td>
+<td><p>Terminate when marker has completed user-specified number of orbits</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._ENDCOND_NEUTRALIZED" title="a5py.ascot5io.options.Opt._ENDCOND_NEUTRALIZED"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_ENDCOND_NEUTRALIZED</span></code></a></p></td>
+<td><p>Terminate when the marker becomes neutral</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._ENDCOND_IONIZED" title="a5py.ascot5io.options.Opt._ENDCOND_IONIZED"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_ENDCOND_IONIZED</span></code></a></p></td>
+<td><p>Terminate when the marker becomes ionized.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._ENDCOND_LIM_SIMTIME" title="a5py.ascot5io.options.Opt._ENDCOND_LIM_SIMTIME"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_ENDCOND_LIM_SIMTIME</span></code></a></p></td>
+<td><p>Time when the simulation stops [s]</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._ENDCOND_MAX_MILEAGE" title="a5py.ascot5io.options.Opt._ENDCOND_MAX_MILEAGE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_ENDCOND_MAX_MILEAGE</span></code></a></p></td>
+<td><p>The maximum amount of time this marker is simulated [s]</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._ENDCOND_MAX_CPUTIME" title="a5py.ascot5io.options.Opt._ENDCOND_MAX_CPUTIME"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_ENDCOND_MAX_CPUTIME</span></code></a></p></td>
+<td><p>Maximum cpu time per marker [s]</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._ENDCOND_MAX_RHO" title="a5py.ascot5io.options.Opt._ENDCOND_MAX_RHO"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_ENDCOND_MAX_RHO</span></code></a></p></td>
+<td><p>Maximum rho value</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._ENDCOND_MIN_RHO" title="a5py.ascot5io.options.Opt._ENDCOND_MIN_RHO"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_ENDCOND_MIN_RHO</span></code></a></p></td>
+<td><p>Minimum rho value</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._ENDCOND_MIN_ENERGY" title="a5py.ascot5io.options.Opt._ENDCOND_MIN_ENERGY"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_ENDCOND_MIN_ENERGY</span></code></a></p></td>
+<td><p>Minimum energy [eV]</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._ENDCOND_MIN_THERMAL" title="a5py.ascot5io.options.Opt._ENDCOND_MIN_THERMAL"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_ENDCOND_MIN_THERMAL</span></code></a></p></td>
+<td><p>Minimum energy limit is local ion thermal energy times this value</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._ENDCOND_MAX_TOROIDALORBS" title="a5py.ascot5io.options.Opt._ENDCOND_MAX_TOROIDALORBS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_ENDCOND_MAX_TOROIDALORBS</span></code></a></p></td>
+<td><p>Maximum number of toroidal orbits</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._ENDCOND_MAX_POLOIDALORBS" title="a5py.ascot5io.options.Opt._ENDCOND_MAX_POLOIDALORBS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_ENDCOND_MAX_POLOIDALORBS</span></code></a></p></td>
+<td><p>Maximum number of poloidal orbits</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Active physics</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._ENABLE_ORBIT_FOLLOWING" title="a5py.ascot5io.options.Opt._ENABLE_ORBIT_FOLLOWING"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_ENABLE_ORBIT_FOLLOWING</span></code></a></p></td>
+<td><p>Trace markers in an electromagnetic field</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._ENABLE_COULOMB_COLLISIONS" title="a5py.ascot5io.options.Opt._ENABLE_COULOMB_COLLISIONS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_ENABLE_COULOMB_COLLISIONS</span></code></a></p></td>
+<td><p>Markers experience Coulomb collisions with background plasma</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._ENABLE_MHD" title="a5py.ascot5io.options.Opt._ENABLE_MHD"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_ENABLE_MHD</span></code></a></p></td>
+<td><p>Include MHD perturbations to orbit-following</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._ENABLE_ATOMIC" title="a5py.ascot5io.options.Opt._ENABLE_ATOMIC"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_ENABLE_ATOMIC</span></code></a></p></td>
+<td><p>Markers can undergo atomic reactions with background plasma or neutrals</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._DISABLE_FIRSTORDER_GCTRANS" title="a5py.ascot5io.options.Opt._DISABLE_FIRSTORDER_GCTRANS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_DISABLE_FIRSTORDER_GCTRANS</span></code></a></p></td>
+<td><p>Disable first order guiding center transformation in velocity space</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._DISABLE_ENERGY_CCOLL" title="a5py.ascot5io.options.Opt._DISABLE_ENERGY_CCOLL"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_DISABLE_ENERGY_CCOLL</span></code></a></p></td>
+<td><p>Disable guiding center energy collisions</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._DISABLE_PITCH_CCOLL" title="a5py.ascot5io.options.Opt._DISABLE_PITCH_CCOLL"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_DISABLE_PITCH_CCOLL</span></code></a></p></td>
+<td><p>Disable guiding center pitch collisions</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._DISABLE_GCDIFF_CCOLL" title="a5py.ascot5io.options.Opt._DISABLE_GCDIFF_CCOLL"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_DISABLE_GCDIFF_CCOLL</span></code></a></p></td>
+<td><p>Disable guiding center spatial diffusion</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Distributions</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._ENABLE_DIST_5D" title="a5py.ascot5io.options.Opt._ENABLE_DIST_5D"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_ENABLE_DIST_5D</span></code></a></p></td>
+<td><p>Collect distribution histogram in [R, phi, z, ppa, ppe, t, q]</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._ENABLE_DIST_6D" title="a5py.ascot5io.options.Opt._ENABLE_DIST_6D"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_ENABLE_DIST_6D</span></code></a></p></td>
+<td><p>Collect distribution histogram in [R, phi, z, pR, pphi, pz, t, q]</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._ENABLE_DIST_RHO5D" title="a5py.ascot5io.options.Opt._ENABLE_DIST_RHO5D"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_ENABLE_DIST_RHO5D</span></code></a></p></td>
+<td><p>Collect distribution histogram in [rho, pol, phi, ppa, ppe, t, q]</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._ENABLE_DIST_RHO6D" title="a5py.ascot5io.options.Opt._ENABLE_DIST_RHO6D"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_ENABLE_DIST_RHO6D</span></code></a></p></td>
+<td><p>Collect distribution histogram in [rho, pol, phi, pR, pphi, pz, t, q]</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._DIST_MIN_R" title="a5py.ascot5io.options.Opt._DIST_MIN_R"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_DIST_MIN_R</span></code></a></p></td>
+<td><p>Minimum bin edge for R coordinate [m]</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._DIST_MAX_R" title="a5py.ascot5io.options.Opt._DIST_MAX_R"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_DIST_MAX_R</span></code></a></p></td>
+<td><p>Maximum bin edge for R coordinate [m]</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._DIST_NBIN_R" title="a5py.ascot5io.options.Opt._DIST_NBIN_R"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_DIST_NBIN_R</span></code></a></p></td>
+<td><p>Number of bins the interval [MIN_R, MAX_R] is divided to</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._DIST_MIN_PHI" title="a5py.ascot5io.options.Opt._DIST_MIN_PHI"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_DIST_MIN_PHI</span></code></a></p></td>
+<td><p>Minimum bin edge for phi coordinate [deg]</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._DIST_MAX_PHI" title="a5py.ascot5io.options.Opt._DIST_MAX_PHI"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_DIST_MAX_PHI</span></code></a></p></td>
+<td><p>Maximum bin edge for phi coordinate [deg]</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._DIST_NBIN_PHI" title="a5py.ascot5io.options.Opt._DIST_NBIN_PHI"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_DIST_NBIN_PHI</span></code></a></p></td>
+<td><p>Number of bins the interval [MIN_PHI, MAX_PHI] is divided to</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._DIST_MIN_Z" title="a5py.ascot5io.options.Opt._DIST_MIN_Z"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_DIST_MIN_Z</span></code></a></p></td>
+<td><p>Minimum bin edge for z coordinate [m]</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._DIST_MAX_Z" title="a5py.ascot5io.options.Opt._DIST_MAX_Z"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_DIST_MAX_Z</span></code></a></p></td>
+<td><p>Maximum bin edge for z coordinate [m]</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._DIST_NBIN_Z" title="a5py.ascot5io.options.Opt._DIST_NBIN_Z"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_DIST_NBIN_Z</span></code></a></p></td>
+<td><p>Number of bins the interval [MIN_Z, MAX_Z] is divided to</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._DIST_MIN_RHO" title="a5py.ascot5io.options.Opt._DIST_MIN_RHO"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_DIST_MIN_RHO</span></code></a></p></td>
+<td><p>Minimum bin edge for rho coordinate [1]</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._DIST_MAX_RHO" title="a5py.ascot5io.options.Opt._DIST_MAX_RHO"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_DIST_MAX_RHO</span></code></a></p></td>
+<td><p>Maximum bin edge for rho coordinate [1]</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._DIST_NBIN_RHO" title="a5py.ascot5io.options.Opt._DIST_NBIN_RHO"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_DIST_NBIN_RHO</span></code></a></p></td>
+<td><p>Number of bins the interval [MIN_RHO, MAX_RHO] is divided to</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._DIST_MIN_THETA" title="a5py.ascot5io.options.Opt._DIST_MIN_THETA"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_DIST_MIN_THETA</span></code></a></p></td>
+<td><p>Minimum bin edge for theta coordinate [deg]</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._DIST_MAX_THETA" title="a5py.ascot5io.options.Opt._DIST_MAX_THETA"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_DIST_MAX_THETA</span></code></a></p></td>
+<td><p>Maximum bin edge for theta coordinate [deg]</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._DIST_NBIN_THETA" title="a5py.ascot5io.options.Opt._DIST_NBIN_THETA"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_DIST_NBIN_THETA</span></code></a></p></td>
+<td><p>Number of bins the interval [MIN_THETA, MAX_THETA] is divided to</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._DIST_MIN_PPA" title="a5py.ascot5io.options.Opt._DIST_MIN_PPA"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_DIST_MIN_PPA</span></code></a></p></td>
+<td><p>Minimum bin edge for ppa coordinate [kg m/s]</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._DIST_MAX_PPA" title="a5py.ascot5io.options.Opt._DIST_MAX_PPA"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_DIST_MAX_PPA</span></code></a></p></td>
+<td><p>Maximum bin edge for ppa coordinate [kg m/s]</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._DIST_NBIN_PPA" title="a5py.ascot5io.options.Opt._DIST_NBIN_PPA"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_DIST_NBIN_PPA</span></code></a></p></td>
+<td><p>Number of bins the interval [MIN_PPA, MAX_PPA] is divided to</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._DIST_MIN_PPE" title="a5py.ascot5io.options.Opt._DIST_MIN_PPE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_DIST_MIN_PPE</span></code></a></p></td>
+<td><p>Minimum bin edge for ppe coordinate [kg m/s]</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._DIST_MAX_PPE" title="a5py.ascot5io.options.Opt._DIST_MAX_PPE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_DIST_MAX_PPE</span></code></a></p></td>
+<td><p>Maximum bin edge for ppe coordinate [kg m/s]</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._DIST_NBIN_PPE" title="a5py.ascot5io.options.Opt._DIST_NBIN_PPE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_DIST_NBIN_PPE</span></code></a></p></td>
+<td><p>Number of bins the interval [MIN_PPE, MAX_PPE] is divided to</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._DIST_MIN_PR" title="a5py.ascot5io.options.Opt._DIST_MIN_PR"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_DIST_MIN_PR</span></code></a></p></td>
+<td><p>Minimum bin edge for pR coordinate [kg m/s]</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._DIST_MAX_PR" title="a5py.ascot5io.options.Opt._DIST_MAX_PR"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_DIST_MAX_PR</span></code></a></p></td>
+<td><p>Maximum bin edge for pR coordinate [kg m/s]</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._DIST_NBIN_PR" title="a5py.ascot5io.options.Opt._DIST_NBIN_PR"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_DIST_NBIN_PR</span></code></a></p></td>
+<td><p>Number of bins the interval [MIN_PR, MAX_PR] is divided to</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._DIST_MIN_PPHI" title="a5py.ascot5io.options.Opt._DIST_MIN_PPHI"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_DIST_MIN_PPHI</span></code></a></p></td>
+<td><p>Minimum bin edge for pphi coordinate [kg m/s]</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._DIST_MAX_PPHI" title="a5py.ascot5io.options.Opt._DIST_MAX_PPHI"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_DIST_MAX_PPHI</span></code></a></p></td>
+<td><p>Maximum bin edge for pphi coordinate [kg m/s]</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._DIST_NBIN_PPHI" title="a5py.ascot5io.options.Opt._DIST_NBIN_PPHI"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_DIST_NBIN_PPHI</span></code></a></p></td>
+<td><p>Number of bins the interval [MIN_PPHI, MAX_PPHI] is divided to</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._DIST_MIN_PZ" title="a5py.ascot5io.options.Opt._DIST_MIN_PZ"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_DIST_MIN_PZ</span></code></a></p></td>
+<td><p>Minimum bin edge for pz coordinate [kg m/s]</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._DIST_MAX_PZ" title="a5py.ascot5io.options.Opt._DIST_MAX_PZ"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_DIST_MAX_PZ</span></code></a></p></td>
+<td><p>Maximum bin edge for pz coordinate [kg m/s]</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._DIST_NBIN_PZ" title="a5py.ascot5io.options.Opt._DIST_NBIN_PZ"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_DIST_NBIN_PZ</span></code></a></p></td>
+<td><p>Number of bins the interval [MIN_PZ, MAX_PZ] is divided to</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._DIST_MIN_TIME" title="a5py.ascot5io.options.Opt._DIST_MIN_TIME"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_DIST_MIN_TIME</span></code></a></p></td>
+<td><p>Minimum bin edge for time coordinate [s]</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._DIST_MAX_TIME" title="a5py.ascot5io.options.Opt._DIST_MAX_TIME"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_DIST_MAX_TIME</span></code></a></p></td>
+<td><p>Maximum bin edge for time coordinate [s]</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._DIST_NBIN_TIME" title="a5py.ascot5io.options.Opt._DIST_NBIN_TIME"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_DIST_NBIN_TIME</span></code></a></p></td>
+<td><p>Number of bins the interval [MIN_TIME, MAX_TIME] is divided to</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._DIST_MIN_CHARGE" title="a5py.ascot5io.options.Opt._DIST_MIN_CHARGE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_DIST_MIN_CHARGE</span></code></a></p></td>
+<td><p>Minimum bin edge for charge coordinate [e]</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._DIST_MAX_CHARGE" title="a5py.ascot5io.options.Opt._DIST_MAX_CHARGE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_DIST_MAX_CHARGE</span></code></a></p></td>
+<td><p>Maximum bin edge for charge coordinate [e]</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._DIST_NBIN_CHARGE" title="a5py.ascot5io.options.Opt._DIST_NBIN_CHARGE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_DIST_NBIN_CHARGE</span></code></a></p></td>
+<td><p>Number of bins the interval [MIN_CHARGE, MAX_CHARGE] is divided to</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Constant of motion distribution</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._ENABLE_DIST_COM" title="a5py.ascot5io.options.Opt._ENABLE_DIST_COM"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_ENABLE_DIST_COM</span></code></a></p></td>
+<td><p>Collect constant-of-motion distribution histogram [mu, Ekin, Ptor]</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._DIST_MIN_MU" title="a5py.ascot5io.options.Opt._DIST_MIN_MU"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_DIST_MIN_MU</span></code></a></p></td>
+<td><p>Minimum bin edge for the mu coordinate in COM-dist [J/T]</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._DIST_MAX_MU" title="a5py.ascot5io.options.Opt._DIST_MAX_MU"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_DIST_MAX_MU</span></code></a></p></td>
+<td><p>Maximum bin edge for the mu coordinate in COM-dist [J/T]</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._DIST_NBIN_MU" title="a5py.ascot5io.options.Opt._DIST_NBIN_MU"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_DIST_NBIN_MU</span></code></a></p></td>
+<td><p>Number of bins the interval [MIN_MU, MAX_MU] is divided to</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._DIST_MIN_EKIN" title="a5py.ascot5io.options.Opt._DIST_MIN_EKIN"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_DIST_MIN_EKIN</span></code></a></p></td>
+<td><p>Minimum bin edge for the energy coordinate [J]</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._DIST_MAX_EKIN" title="a5py.ascot5io.options.Opt._DIST_MAX_EKIN"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_DIST_MAX_EKIN</span></code></a></p></td>
+<td><p>Maximum bin edge for the energy coordinate [J]</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._DIST_NBIN_EKIN" title="a5py.ascot5io.options.Opt._DIST_NBIN_EKIN"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_DIST_NBIN_EKIN</span></code></a></p></td>
+<td><p>Number of bins the interval [MIN_EKIN, MAX_EKIN] is divided to</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._DIST_MIN_PTOR" title="a5py.ascot5io.options.Opt._DIST_MIN_PTOR"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_DIST_MIN_PTOR</span></code></a></p></td>
+<td><p>Minimum bin edge for the Ptor coordinate [kg m^2/s]</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._DIST_MAX_PTOR" title="a5py.ascot5io.options.Opt._DIST_MAX_PTOR"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_DIST_MAX_PTOR</span></code></a></p></td>
+<td><p>Maximum bin edge for the Ptor coordinate [kg m^2/s]</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._DIST_NBIN_PTOR" title="a5py.ascot5io.options.Opt._DIST_NBIN_PTOR"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_DIST_NBIN_PTOR</span></code></a></p></td>
+<td><p>Number of bins the interval [MIN_PTOR, MAX_PTOR] is divided to</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Recording marker trajectories</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._ENABLE_ORBITWRITE" title="a5py.ascot5io.options.Opt._ENABLE_ORBITWRITE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_ENABLE_ORBITWRITE</span></code></a></p></td>
+<td><p>Enable diagnostics that store marker orbit</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._ORBITWRITE_MODE" title="a5py.ascot5io.options.Opt._ORBITWRITE_MODE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_ORBITWRITE_MODE</span></code></a></p></td>
+<td><p>What kind of marker orbit diagnostics are collected</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._ORBITWRITE_NPOINT" title="a5py.ascot5io.options.Opt._ORBITWRITE_NPOINT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_ORBITWRITE_NPOINT</span></code></a></p></td>
+<td><p>Maximum number of points (per marker) to be written</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._ORBITWRITE_POLOIDALANGLES" title="a5py.ascot5io.options.Opt._ORBITWRITE_POLOIDALANGLES"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_ORBITWRITE_POLOIDALANGLES</span></code></a></p></td>
+<td><p>Poloidal angles of toroidal planes where toroidal plots are collected</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._ORBITWRITE_TOROIDALANGLES" title="a5py.ascot5io.options.Opt._ORBITWRITE_TOROIDALANGLES"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_ORBITWRITE_TOROIDALANGLES</span></code></a></p></td>
+<td><p>Toroidal angles of poloidal planes where poloidal plots are collected</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._ORBITWRITE_RADIALDISTANCES" title="a5py.ascot5io.options.Opt._ORBITWRITE_RADIALDISTANCES"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_ORBITWRITE_RADIALDISTANCES</span></code></a></p></td>
+<td><p>Minor radius coordinate where radial plots are collected</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._ORBITWRITE_INTERVAL" title="a5py.ascot5io.options.Opt._ORBITWRITE_INTERVAL"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_ORBITWRITE_INTERVAL</span></code></a></p></td>
+<td><p>Time interval for writing marker state [s]</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Transport coefficients</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._ENABLE_TRANSCOEF" title="a5py.ascot5io.options.Opt._ENABLE_TRANSCOEF"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_ENABLE_TRANSCOEF</span></code></a></p></td>
+<td><p>Enable evaluation of transport coefficients.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._TRANSCOEF_INTERVAL" title="a5py.ascot5io.options.Opt._TRANSCOEF_INTERVAL"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_TRANSCOEF_INTERVAL</span></code></a></p></td>
+<td><p>Time interval for recording data points</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._TRANSCOEF_NAVG" title="a5py.ascot5io.options.Opt._TRANSCOEF_NAVG"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_TRANSCOEF_NAVG</span></code></a></p></td>
+<td><p>Number of subsequent data points that are averaged before calculating coefficients to reduce noise.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt._TRANSCOEF_RECORDRHO" title="a5py.ascot5io.options.Opt._TRANSCOEF_RECORDRHO"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_TRANSCOEF_RECORDRHO</span></code></a></p></td>
+<td><p>Record coefficients in terms of normalized poloidal flux instead of meters.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="batch-jobs">
+<span id="batchjobs"></span><h2>Batch jobs<a class="headerlink" href="#batch-jobs" title="Link to this heading"></a></h2>
+<p>Use this script to run ASCOT5 in multiple nodes using MPI (MPI=1 when the code was compiled).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#!/bin/bash
+
+## Set required nodes and CPUs (number of processes == number of nodes)
+#SBATCH -N10 -n10 -c48
+
+#SBATCH -t 24:00:00
+#SBATCH -J ascot5
+
+#SBATCH -e %x.e%j
+#SBATCH -o %x.o%j
+
+export &lt;your exports&gt;
+module load &lt;your modules&gt;
+
+echo Job name $SLURM_JOB_NAME
+echo Job id $SLURM_JOB_ID
+
+# Some platforms require that the number of threads must be given explicitly
+# In those cases use (1-2) x number of CPUs (check which is faster)
+export OMP_NUM_THREADS=48
+
+INPUTFILE=ascot
+
+date
+export FOR_PRINT=$SLURM_JOB_ID.stdout
+mpirun ./ascot5_main --in=$INPUTFILE --d=&quot;YOURTAG Your description&quot;
+date
+</pre></div>
+</div>
+<p>Use this script to run ASCOT5 in multiple nodes without MPI (MPI=0 when the code was compiled).
+This results in multiple output files that you have to combine using the python tool <code class="docutils literal notranslate"><span class="pre">a5combine</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#!/bin/bash
+
+## How many jobs this run is divided into
+NJOBS=100
+
+## Name of the input file. Each output file begins with this name followed by
+## its &quot;mpi_rank&quot;
+INPUTFILE=ascot
+
+for i in $(seq 0 $(($NJOBS-1)))
+do
+filename=${RANDOM}
+cat &gt; $filename &lt;&lt; EOF
+#!/bin/bash
+
+## Use only single node and single process
+#SBATCH -N1 -n1 -c48
+
+#SBATCH -t 24:00:00
+#SBATCH -J ascot5
+
+#SBATCH -e ${i}.e%j
+#SBATCH -o ${i}.o%j
+
+export &lt;your exports&gt;
+module load &lt;your modules&gt;
+
+# Some platforms require that the number of threads must be given explicitly
+# In those cases use (1-2) x number of CPUs (check which is faster)
+export OMP_NUM_THREADS=96
+
+echo Job name $SLURM_JOB_NAME
+echo Job id $SLURM_JOB_ID
+
+date
+./ascot5_main --mpi_rank=$i --mpi_size=$NJOBS --in=$INPUTFILE --d=&quot;YOURTAG Your description&quot;
+date
+
+EOF
+
+sbatch $filename
+rm $filename
+echo $i
+## If multiple jobs are reading from the same file at the same time this can
+## cause problems in the system, so give system some time to breathe
+sleep 5s
+done
+</pre></div>
+</div>
+</section>
+<section id="examples">
+<span id="exampleruntimes"></span><h2>Examples<a class="headerlink" href="#examples" title="Link to this heading"></a></h2>
+<table class="docutils align-default" id="id3">
+<caption><span class="caption-text">Examples of simulation times and number of markers used</span><a class="headerlink" href="#id3" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 40%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Simulation</p></th>
+<th class="head"><p>Hardware</p></th>
+<th class="head"><p>Number of markers</p></th>
+<th class="head"><p>CPU time</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Alpha particle slowing-down in 3D ITER (Not real numbers!)</p></td>
+<td><p>Xeon-Phi, 10 nodes (MARCONI)</p></td>
+<td><p><span class="math notranslate nohighlight">\(1\times10^6\)</span></p></td>
+<td><p>24 h</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="ASCOT5" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="processing.html" class="btn btn-neutral float-right" title="Data storage" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Ascot Group.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

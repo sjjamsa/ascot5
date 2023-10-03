@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structmhd__offload__data" kind="struct" language="C++" prot="public">
+    <compoundname>mhd_offload_data</compoundname>
+    <includes refid="mhd_8h" local="no">mhd.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmhd__offload__data_1a211904f45beef67cee64c181999f2d0f" prot="public" static="no" mutable="no">
+        <type><ref refid="mhd_8h_1ab21aab0cb19764b60e853c7d2c0a4316" kindref="member">mhd_type</ref></type>
+        <definition>mhd_type mhd_offload_data::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>MHD type wrapped by this struct <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mhd.h" line="42" column="14" bodyfile="mhd.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmhd__offload__data_1a8d47f8daef869f2206e2473a3fb44062" prot="public" static="no" mutable="no">
+        <type><ref refid="structmhd__stat__offload__data" kindref="compound">mhd_stat_offload_data</ref></type>
+        <definition>mhd_stat_offload_data mhd_offload_data::stat</definition>
+        <argsstring></argsstring>
+        <name>stat</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Stat field or NULL if not active <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mhd.h" line="43" column="27" bodyfile="mhd.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmhd__offload__data_1a868b2d6eec09361e9068b83cead2bcbd" prot="public" static="no" mutable="no">
+        <type><ref refid="structmhd__nonstat__offload__data" kindref="compound">mhd_nonstat_offload_data</ref></type>
+        <definition>mhd_nonstat_offload_data mhd_offload_data::nonstat</definition>
+        <argsstring></argsstring>
+        <name>nonstat</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Nonstat field or NULL if not active </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mhd.h" line="44" column="30" bodyfile="mhd.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmhd__offload__data_1a6fdcee91b43e43f63c5171d9a0e659f9" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mhd_offload_data::offload_array_length</definition>
+        <argsstring></argsstring>
+        <name>offload_array_length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Allocated offload array length <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mhd.h" line="45" column="9" bodyfile="mhd.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>MHD offload data. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This struct holds data necessary for offloading. The struct is initialized in <ref refid="mhd_8c_1af3708acc9639d894ee7552974fd85055" kindref="member">mhd_init_offload()</ref>.</para>
+<para>The intended usage is that only single offload data is used at the time, and the type of the data is declared with the &quot;type&quot; field. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>mhd_stat_offload_data</label>
+        <link refid="structmhd__stat__offload__data"/>
+      </node>
+      <node id="3">
+        <label>mhd_nonstat_offload_data</label>
+        <link refid="structmhd__nonstat__offload__data"/>
+      </node>
+      <node id="1">
+        <label>mhd_offload_data</label>
+        <link refid="structmhd__offload__data"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>stat</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>nonstat</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="mhd.h" line="41" column="1" bodyfile="mhd.h" bodystart="41" bodyend="46"/>
+    <listofallmembers>
+      <member refid="structmhd__offload__data_1a868b2d6eec09361e9068b83cead2bcbd" prot="public" virt="non-virtual"><scope>mhd_offload_data</scope><name>nonstat</name></member>
+      <member refid="structmhd__offload__data_1a6fdcee91b43e43f63c5171d9a0e659f9" prot="public" virt="non-virtual"><scope>mhd_offload_data</scope><name>offload_array_length</name></member>
+      <member refid="structmhd__offload__data_1a8d47f8daef869f2206e2473a3fb44062" prot="public" virt="non-virtual"><scope>mhd_offload_data</scope><name>stat</name></member>
+      <member refid="structmhd__offload__data_1a211904f45beef67cee64c181999f2d0f" prot="public" virt="non-virtual"><scope>mhd_offload_data</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

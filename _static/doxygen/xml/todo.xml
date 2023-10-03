@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="todo" kind="page">
+    <compoundname>todo</compoundname>
+    <title>Todo List</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><variablelist>
+<varlistentry><term>Global <ref refid="asigma__loc_8h_1ae93bf78b3c379165625874f2bdb22106" kindref="member">asigma_loc_eval_sigmav</ref>  (real *sigmav, int z_1, int a_1, real m_1, int z_2, int a_2, int reac_type, <ref refid="structasigma__loc__data" kindref="compound">asigma_loc_data</ref> *asgm_loc_data, real E, real T_e, real T_0, real n_i, int *enable_atomic)</term></varlistentry>
+<listitem><para><anchor id="todo_1_todo000003"/>Is there a cleaner and more general way to handle the isotopic invariance of beam-stopping data?  </para>
+</listitem>
+<varlistentry><term>Global <ref refid="asigma__loc_8h_1a6b81320e02a2e9f940098fe4398b0751" kindref="member">asigma_loc_init</ref>  (<ref refid="structasigma__loc__data" kindref="compound">asigma_loc_data</ref> *asgm_loc_data, <ref refid="structasigma__loc__offload__data" kindref="compound">asigma_loc_offload_data</ref> *offload_data, real *offload_array)</term></varlistentry>
+<listitem><para><anchor id="todo_1_todo000002"/>Should we change from using reac_avail flag to having in asgm_data only those reactions that are available and truly initialized? Actually, that is already done, reac_avail is a relic. However, we might want to use reac_avail for something. </para>
+<para>Can we avoid the excess memory usage currently resulting from allocating all three spline structs for each reaction? </para>
+<para>(Same as above in <ref refid="asigma__loc_8c_1ad6ae96a2cb0590cd50dfa7d4141177fb" kindref="member">asigma_loc_init_offload()</ref>) In the part where the spline interpolations of the reaction data are initialized, it is assumed that, when there is one abscissa, it is energy, when there are two abscissae, they are, in order, energy and temperature, and, when there are three abscissae, they are, in order, energy, density and temperature. In the future, this may need to be made more general. For example, where we check the N:s, we can also extract and reorder the min:s and max:s depending on which N &gt; 1.  </para>
+</listitem>
+<varlistentry><term>Global <ref refid="asigma__loc_8h_1ad6ae96a2cb0590cd50dfa7d4141177fb" kindref="member">asigma_loc_init_offload</ref>  (<ref refid="structasigma__loc__offload__data" kindref="compound">asigma_loc_offload_data</ref> *offload_data, real **offload_array)</term></varlistentry>
+<listitem><para><anchor id="todo_1_todo000001"/>In the part where the spline interpolations of the reaction data are initialized, it is assumed that, when there is one abscissa, it is energy, when there are two abscissae, they are, in order, energy and temperature, and, when there are three abscissae, they are, in order, energy, density and temperature. In the future, this may need to be made more general. For example, where we check the N:s, we can also extract and reorder the min:s and max:s depending on which N &gt; 1.  </para>
+</listitem>
+<varlistentry><term>Global <ref refid="atomic_8c_1a5f5d5eae5bd9efd6b93a7ce404381f53" kindref="member">atomic_rates</ref>  (real *rate_eff_ion, real *rate_eff_rec, int z_1, int a_1, real m_1, const int *z_2, const int *a_2, const real *m_2, <ref refid="structasigma__data" kindref="compound">asigma_data</ref> *asigmadata, int q, real E, int N_pls_spec, int N_ntl_spec, real *T, real *T_0, real *n, real *n_0, int *enable_atomic)</term></varlistentry>
+<listitem><para><anchor id="todo_1_todo000010"/>Implement a more general algorithm for the determination of reaction rates based on charge state!  </para>
+</listitem>
+<varlistentry><term>File <ref refid="endcond_8c" kindref="compound">endcond.c</ref>  </term></varlistentry>
+<listitem><para><anchor id="todo_1_todo000004"/>Error checking would be a good idea  </para>
+</listitem>
+<varlistentry><term>Global <ref refid="endcond_8h_1a8ddc3ba1bf41f32411336ac50f70c870" kindref="member">endcond_check_gc</ref>  (<ref refid="structparticle__simd__gc" kindref="compound">particle_simd_gc</ref> *p_f, <ref refid="structparticle__simd__gc" kindref="compound">particle_simd_gc</ref> *p_i, <ref refid="structsim__data" kindref="compound">sim_data</ref> *sim)</term></varlistentry>
+<listitem><para><anchor id="todo_1_todo000005"/>Hybrid condition checks whether marker is over maximum rho limit. More smarter check is required.  </para>
+</listitem>
+<varlistentry><term>Global <ref refid="math_8h_1a3cdff9b5af7c4cc64bafa9765e112ca3" kindref="member">math_normal_rand</ref>  ()</term></varlistentry>
+<listitem><para><anchor id="todo_1_todo000006"/>Currently only one of the generated numbers is returned; a second independent variate is Y = v2 * sqrt(-2*log(s) / s) </para>
+<para>Try other random number generators such as those in Intel MKL  </para>
+</listitem>
+<varlistentry><term>Global <ref refid="mpi__interface_8h_1a267a2b3da8d744e8e43dff189b6875b8" kindref="member">mpi_gather_particlestate</ref>  (<ref refid="structparticle__state" kindref="compound">particle_state</ref> *ps, <ref refid="structparticle__state" kindref="compound">particle_state</ref> **psgathered, int *ngathered, int ntotal, int mpi_rank, int mpi_size, int mpi_root)</term></varlistentry>
+<listitem><para><anchor id="todo_1_todo000007"/>Could be done more cleanly with custom datatypes </para>
+</listitem>
+<varlistentry><term>Global <ref refid="particle_8h_1a8e96bcfc9c95b76f3c91663e34a43b01" kindref="member">particle_input_to_state</ref>  (<ref refid="structinput__particle" kindref="compound">input_particle</ref> *p, <ref refid="structparticle__state" kindref="compound">particle_state</ref> *ps, <ref refid="structB__field__data" kindref="compound">B_field_data</ref> *Bdata)</term></varlistentry>
+<listitem><para><anchor id="todo_1_todo000008"/>Parameter p can be a <ref refid="structparticle__state" kindref="compound">particle_state</ref> itself but this option is not dealt with </para>
+<para>This sets p-&gt;type = input_particle_type_s which is not in accordance with the documentation. </para>
+</listitem>
+<varlistentry><term>Global <ref refid="particle_8h_1aaa3116ddab1b53462a5c7d7c98dcf839" kindref="member">particle_state_to_ml</ref>  (<ref refid="structparticle__state" kindref="compound">particle_state</ref> *p, int i, <ref refid="structparticle__simd__ml" kindref="compound">particle_simd_ml</ref> *p_ml, int j, <ref refid="structB__field__data" kindref="compound">B_field_data</ref> *Bdata)</term></varlistentry>
+<listitem><para><anchor id="todo_1_todo000009"/>A minor thing but it would be better if guiding center position were used instead. This would require evaluation of the magnetic field. </para>
+</listitem>
+<varlistentry><term>Global <ref refid="simulate_8h_1a731ec48c95f5641ae30d383ba7d5d387" kindref="member">simulate</ref>  (int id, int n_particles, <ref refid="structparticle__state" kindref="compound">particle_state</ref> *p, <ref refid="structsim__offload__data" kindref="compound">sim_offload_data</ref> *sim_offload, <ref refid="structoffload__package" kindref="compound">offload_package</ref> *offload_data, real *offload_array, int *int_offload_array, real *diag_offload_array)</term></varlistentry>
+<listitem><para><anchor id="todo_1_todo000011"/>Reorganize this function so that it conforms to documentation.  </para>
+</listitem>
+<varlistentry><term>Global <ref refid="wall__2d_8h_1ae5498a77343a2e15ae59a07e4441c043" kindref="member">wall_2d_hit_wall</ref>  (real r1, real phi1, real z1, real r2, real phi2, real z2, <ref refid="structwall__2d__data" kindref="compound">wall_2d_data</ref> *w)</term></varlistentry>
+<listitem><para><anchor id="todo_1_todo000012"/>Right now this returns only a boolean wall for hit but not the wall ID </para>
+</listitem>
+</variablelist>
+</para>
+    </detaileddescription>
+    <location file="todo"/>
+  </compounddef>
+</doxygen>

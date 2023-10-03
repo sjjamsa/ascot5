@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structasigma__data" kind="struct" language="C++" prot="public">
+    <compoundname>asigma_data</compoundname>
+    <includes refid="asigma_8h" local="no">asigma.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structasigma__data_1a75426d22a3a03f3c627dc0612d68faea" prot="public" static="no" mutable="no">
+        <type><ref refid="asigma_8h_1ae46aca98722780bc5950aa6c1636282c" kindref="member">asigma_type</ref></type>
+        <definition>asigma_type asigma_data::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Atomic reaction data type wrapped by this struct </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="asigma.h" line="67" column="17" bodyfile="asigma.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structasigma__data_1a78e6881e1fe3408a81e933eba6a359a3" prot="public" static="no" mutable="no">
+        <type><ref refid="structasigma__loc__data" kindref="compound">asigma_loc_data</ref></type>
+        <definition>asigma_loc_data asigma_data::asigma_loc</definition>
+        <argsstring></argsstring>
+        <name>asigma_loc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Local-files data or NULL if not active </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="asigma.h" line="68" column="21" bodyfile="asigma.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Atomic reaction simulation data. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This struct holds data necessary for simulation. The struct is initialized from input data in <ref refid="asigma_8c_1abc316bf66d9864a848f4adeaad8db5b5" kindref="member">asigma_init()</ref>. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>asigma_loc_data</label>
+        <link refid="structasigma__loc__data"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>sigma</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>sigmav</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>BMSsigmav</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>asigma_data</label>
+        <link refid="structasigma__data"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>asigma_loc</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>interp2D_data</label>
+        <link refid="structinterp2D__data"/>
+      </node>
+      <node id="3">
+        <label>interp1D_data</label>
+        <link refid="structinterp1D__data"/>
+      </node>
+      <node id="5">
+        <label>interp3D_data</label>
+        <link refid="structinterp3D__data"/>
+      </node>
+    </collaborationgraph>
+    <location file="asigma.h" line="66" column="1" bodyfile="asigma.h" bodystart="66" bodyend="69"/>
+    <listofallmembers>
+      <member refid="structasigma__data_1a78e6881e1fe3408a81e933eba6a359a3" prot="public" virt="non-virtual"><scope>asigma_data</scope><name>asigma_loc</name></member>
+      <member refid="structasigma__data_1a75426d22a3a03f3c627dc0612d68faea" prot="public" virt="non-virtual"><scope>asigma_data</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

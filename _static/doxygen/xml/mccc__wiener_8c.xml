@@ -1,0 +1,433 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="mccc__wiener_8c" kind="file" language="C++">
+    <compoundname>mccc_wiener.c</compoundname>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes refid="math_8h" local="no">math.h</includes>
+    <includes refid="ascot5_8h" local="yes">../../ascot5.h</includes>
+    <includes refid="consts_8h" local="yes">../../consts.h</includes>
+    <includes refid="error_8h" local="yes">../../error.h</includes>
+    <includes refid="mccc__wiener_8h" local="yes">mccc_wiener.h</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>stdlib.h</label>
+      </node>
+      <node id="6">
+        <label>omp.h</label>
+      </node>
+      <node id="8">
+        <label>../../consts.h</label>
+        <link refid="consts_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>simulate/mccc/mccc_wiener.c</label>
+        <link refid="mccc__wiener_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>mccc_wiener.h</label>
+        <link refid="mccc__wiener_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>../../error.h</label>
+        <link refid="error_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>time.h</label>
+      </node>
+      <node id="4">
+        <label>math.h</label>
+        <link refid="math_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>stdio.h</label>
+      </node>
+      <node id="5">
+        <label>ascot5.h</label>
+        <link refid="ascot5_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="mccc__wiener_8c_1a78c99ffd76a7bb3c8c74db76207e9ab4" prot="public" static="no">
+        <name>_XOPEN_SOURCE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="simulate/mccc/mccc_wiener.c" line="9" column="9" bodyfile="simulate/mccc/mccc_wiener.c" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="mccc__wiener_8c_1a058066a132cb5de9a719527a4762ddd7" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int MCCC_EMPTY</definition>
+        <argsstring></argsstring>
+        <name>MCCC_EMPTY</name>
+        <initializer>= -1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indicates an empty slot in wiener array </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="simulate/mccc/mccc_wiener.c" line="19" column="11" bodyfile="simulate/mccc/mccc_wiener.c" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="mccc__wiener_8c_1ac825ff67a28db7289e1fec23ef065b51" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mccc_wiener_initialize</definition>
+        <argsstring>(mccc_wienarr *w, real initime)</argsstring>
+        <name>mccc_wiener_initialize</name>
+        <param>
+          <type><ref refid="structmccc__wienarr" kindref="compound">mccc_wienarr</ref> *</type>
+          <declname>w</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>initime</declname>
+        </param>
+        <briefdescription>
+<para>Initializes a struct that stores generated Wiener processes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>w</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Wiener struct to be initialized </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>initime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>time when a Wiener process begins </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="simulate/mccc/mccc_wiener.c" line="27" column="6" bodyfile="simulate/mccc/mccc_wiener.c" bodystart="27" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="mccc__wiener_8c_1a363f3dc483c4c3e16f61608c976890eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref></type>
+        <definition>a5err mccc_wiener_generate</definition>
+        <argsstring>(mccc_wienarr *w, real t, int *windex, real *rand5)</argsstring>
+        <name>mccc_wiener_generate</name>
+        <param>
+          <type><ref refid="structmccc__wienarr" kindref="compound">mccc_wienarr</ref> *</type>
+          <declname>w</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>windex</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>rand5</declname>
+        </param>
+        <briefdescription>
+<para>Generates a new Wiener process at a given time instant. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Generates a new Wiener process. The generated process is drawn from normal distribution unless there exists a Wiener process at future time-instance, in which case the process is created using the Brownian bridge.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>w</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>array that stores the Wiener processes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>time for which the new process will be generated </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>windex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>index of the generated Wiener process in the Wiener array </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rand5</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>array of 5 normal distributed random numbers</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>zero if generation succeeded </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="simulate/mccc/mccc_wiener.c" line="57" column="7" bodyfile="simulate/mccc/mccc_wiener.c" bodystart="57" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="mccc__wiener_8c_1a487b5950b867d86818835081eba4dc2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref></type>
+        <definition>a5err mccc_wiener_clean</definition>
+        <argsstring>(mccc_wienarr *w, real t)</argsstring>
+        <name>mccc_wiener_clean</name>
+        <param>
+          <type><ref refid="structmccc__wienarr" kindref="compound">mccc_wienarr</ref> *</type>
+          <declname>w</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Removes Wiener processes from the array that are no longer required. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Processes W(t&apos;) are redundant if t&apos; &lt; t, where t is the current simulation time. Note that W(t) should exist before W(t&apos;) are removed. This routine should be called each time when simulation time is advanced.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>w</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>array that stores the Wiener processes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>time for which the new process will be generated</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>zero if cleaning succeeded </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="simulate/mccc/mccc_wiener.c" line="164" column="7" bodyfile="simulate/mccc/mccc_wiener.c" bodystart="164" bodyend="201"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A module for handling Wiener processes. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>A module for handling Wiener processes. When adaptive time step is used (and steps are rejected), Wiener processes are generated using the so-called Brownian bridge. This module contains associated helper routines. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_XOPEN_SOURCE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="math_8h" kindref="compound">math.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../math.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../ascot5.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../consts.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../error.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mccc__wiener_8h" kindref="compound">mccc_wiener.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="mccc__wiener_8c_1a058066a132cb5de9a719527a4762ddd7" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="mccc__wiener_8c_1a058066a132cb5de9a719527a4762ddd7" kindref="member">MCCC_EMPTY</ref><sp/>=<sp/>-1;<sp/></highlight></codeline>
+<codeline lineno="27" refid="mccc__wiener_8c_1ac825ff67a28db7289e1fec23ef065b51" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="mccc__wiener_8c_1ac825ff67a28db7289e1fec23ef065b51" kindref="member">mccc_wiener_initialize</ref>(<ref refid="structmccc__wienarr" kindref="compound">mccc_wienarr</ref>*<sp/>w,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>initime){</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Initialize<sp/>position<sp/>instances<sp/>indicating<sp/>all<sp/>slots<sp/>are<sp/>empty<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;<ref refid="mccc__wiener_8h_1ac0ad628e4e7bc87c84907eb14c6b12eb" kindref="member">MCCC_NSLOTS</ref>;<sp/>i++){</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>w-&gt;<ref refid="structmccc__wienarr_1a73639944fc6841fe0e0b6d2820374d5d" kindref="member">nextslot</ref>[i]<sp/>=<sp/><ref refid="mccc__wiener_8c_1a058066a132cb5de9a719527a4762ddd7" kindref="member">MCCC_EMPTY</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>W(t_0)<sp/>=<sp/>0<sp/>by<sp/>the<sp/>definition<sp/>of<sp/>the<sp/>Wiener<sp/>process<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>w-&gt;<ref refid="structmccc__wienarr_1a73639944fc6841fe0e0b6d2820374d5d" kindref="member">nextslot</ref>[0]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>w-&gt;<ref refid="structmccc__wienarr_1a5a1c371ff622ed24da87d7186a398830" kindref="member">time</ref>[0]<sp/><sp/><sp/><sp/><sp/>=<sp/>initime;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="mccc__wiener_8h_1acb0a7d02be4ac0c43fcf20c3114721d9" kindref="member">MCCC_NDIM</ref>;<sp/>i++){</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>w-&gt;<ref refid="structmccc__wienarr_1ae050ff1864a057cb1fed0a0cc00203c2" kindref="member">wiener</ref>[i]<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="mccc__wiener_8c_1a363f3dc483c4c3e16f61608c976890eb" refkind="member"><highlight class="normal"><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref><sp/><ref refid="mccc__wiener_8c_1a363f3dc483c4c3e16f61608c976890eb" kindref="member">mccc_wiener_generate</ref>(<ref refid="structmccc__wienarr" kindref="compound">mccc_wienarr</ref>*<sp/>w,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>t,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>windex,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>rand5){</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref><sp/>err<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>eidx;<sp/></highlight><highlight class="comment">/*<sp/>Helper<sp/>variables<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>im,<sp/>ip;<sp/></highlight><highlight class="comment">/*<sp/>Indices<sp/>of<sp/>the<sp/>Wiener<sp/>processes<sp/>for<sp/>which<sp/>tm<sp/>&lt;<sp/>t<sp/>&lt;<sp/>tp<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>windex[0]<sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>im<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>ip<sp/>=<sp/>-1;<sp/></highlight><highlight class="comment">/*<sp/>There<sp/>isn&apos;t<sp/>necessarily<sp/>a<sp/>Wiener<sp/>process<sp/>tp<sp/>&gt;<sp/>t<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Find<sp/>im<sp/>and<sp/>ip<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>idx<sp/>=<sp/>0,<sp/>breakloop<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;<ref refid="mccc__wiener_8h_1ac0ad628e4e7bc87c84907eb14c6b12eb" kindref="member">MCCC_NSLOTS</ref>;<sp/>i++){</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!breakloop)<sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(w-&gt;<ref refid="structmccc__wienarr_1a73639944fc6841fe0e0b6d2820374d5d" kindref="member">nextslot</ref>[idx]<sp/>==<sp/>idx){</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Reached<sp/>last<sp/>process.<sp/>Break<sp/>loop<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>breakloop<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(w-&gt;<ref refid="structmccc__wienarr_1a5a1c371ff622ed24da87d7186a398830" kindref="member">time</ref>[idx]<sp/>==<sp/>t)<sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Process<sp/>already<sp/>exists<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>windex[0]<sp/>=<sp/>idx;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>breakloop<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(w-&gt;<ref refid="structmccc__wienarr_1a5a1c371ff622ed24da87d7186a398830" kindref="member">time</ref>[idx]<sp/>&lt;<sp/>t<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Process<sp/>i<sp/>for<sp/>which<sp/>t_i<sp/>&lt;<sp/>t<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>im<sp/>=<sp/>idx;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(w-&gt;<ref refid="structmccc__wienarr_1a5a1c371ff622ed24da87d7186a398830" kindref="member">time</ref>[w-&gt;<ref refid="structmccc__wienarr_1a73639944fc6841fe0e0b6d2820374d5d" kindref="member">nextslot</ref>[idx]]<sp/>&gt;<sp/>t)<sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Process<sp/>i<sp/>for<sp/>which<sp/>t_i<sp/>&gt;<sp/>t<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ip<sp/>=<sp/>w-&gt;<ref refid="structmccc__wienarr_1a73639944fc6841fe0e0b6d2820374d5d" kindref="member">nextslot</ref>[idx];</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>breakloop<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>idx<sp/>=<sp/>w-&gt;<ref refid="structmccc__wienarr_1a73639944fc6841fe0e0b6d2820374d5d" kindref="member">nextslot</ref>[idx];</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(windex[0]<sp/>==<sp/>-1)<sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Find<sp/>an<sp/>empty<sp/>slot<sp/>for<sp/>the<sp/>next<sp/>process<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>eidx<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;<ref refid="mccc__wiener_8h_1ac0ad628e4e7bc87c84907eb14c6b12eb" kindref="member">MCCC_NSLOTS</ref>;<sp/>i++){</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>w-&gt;<ref refid="structmccc__wienarr_1a73639944fc6841fe0e0b6d2820374d5d" kindref="member">nextslot</ref>[i]<sp/>==<sp/><ref refid="mccc__wiener_8c_1a058066a132cb5de9a719527a4762ddd7" kindref="member">MCCC_EMPTY</ref>){</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>eidx<sp/>=<sp/>i;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i<sp/>=<sp/><ref refid="mccc__wiener_8h_1ac0ad628e4e7bc87c84907eb14c6b12eb" kindref="member">MCCC_NSLOTS</ref>;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(eidx<sp/>==<sp/>0){</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>It<sp/>seems<sp/>that<sp/>we<sp/>have<sp/>exceeded<sp/>capacity<sp/>of<sp/>the<sp/>Wiener<sp/>array</highlight></codeline>
+<codeline lineno="105"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Produce<sp/>an<sp/>error.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="error_8h_1a580a0b8b4a823a26a00b2f83d9343bc4" kindref="member">error_raise</ref>(<ref refid="error_8h_1a6756b9f30781ed8ca8ce938e49ad9d92af300537933b249ab795b49f15b329791" kindref="member">ERR_WIENER_ARRAY</ref>,<sp/>__LINE__,<sp/><ref refid="error_8h_1a4e101179605aba551caa2576fd83a1dda256300477d2625bfe70f09e70bbd55aa" kindref="member">EF_MCCC_WIENER</ref>);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!err)<sp/>{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(ip<sp/>==<sp/>-1){</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>There<sp/>are<sp/>no<sp/>Wiener<sp/>processes<sp/>existing<sp/>for<sp/>tp<sp/>&gt;<sp/>t.<sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="112"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>The<sp/>generated<sp/>Wiener<sp/>process<sp/>then<sp/>has<sp/>a<sp/>mean<sp/>W(tm)<sp/>and<sp/>*</highlight></codeline>
+<codeline lineno="113"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>variance<sp/>t-tm.<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>w-&gt;<ref refid="structmccc__wienarr_1a73639944fc6841fe0e0b6d2820374d5d" kindref="member">nextslot</ref>[eidx]<sp/>=<sp/>eidx;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>w-&gt;<ref refid="structmccc__wienarr_1a5a1c371ff622ed24da87d7186a398830" kindref="member">time</ref>[eidx]<sp/><sp/><sp/><sp/><sp/>=<sp/>t;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;<ref refid="mccc__wiener_8h_1acb0a7d02be4ac0c43fcf20c3114721d9" kindref="member">MCCC_NDIM</ref>;<sp/>i++){</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>w-&gt;<ref refid="structmccc__wienarr_1ae050ff1864a057cb1fed0a0cc00203c2" kindref="member">wiener</ref>[i<sp/>+<sp/>eidx*<ref refid="mccc__wiener_8h_1acb0a7d02be4ac0c43fcf20c3114721d9" kindref="member">MCCC_NDIM</ref>]<sp/>=<sp/>w-&gt;<ref refid="structmccc__wienarr_1ae050ff1864a057cb1fed0a0cc00203c2" kindref="member">wiener</ref>[i<sp/>+<sp/>im*<ref refid="mccc__wiener_8h_1acb0a7d02be4ac0c43fcf20c3114721d9" kindref="member">MCCC_NDIM</ref>]</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>sqrt(t-w-&gt;<ref refid="structmccc__wienarr_1a5a1c371ff622ed24da87d7186a398830" kindref="member">time</ref>[im])*rand5[i];</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>windex[0]<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>eidx;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>w-&gt;<ref refid="structmccc__wienarr_1a73639944fc6841fe0e0b6d2820374d5d" kindref="member">nextslot</ref>[im]<sp/>=<sp/>eidx;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>A<sp/>Wiener<sp/>process<sp/>for<sp/>tp<sp/>&gt;<sp/>t<sp/>exist.<sp/>Generate<sp/>a<sp/>new<sp/>process</highlight></codeline>
+<codeline lineno="126"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>using<sp/>the<sp/>rules<sp/>set<sp/>by<sp/>the<sp/>Brownian<sp/>bridge.<sp/>The<sp/>rules<sp/>are:</highlight></codeline>
+<codeline lineno="127"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="128"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>mean<sp/>=<sp/>W(tm)<sp/>+<sp/>(<sp/>W(ip)-W(im)<sp/>)*(t-tm)/(tp-tm)</highlight></codeline>
+<codeline lineno="129"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>variance<sp/>=<sp/>(t-tm)*(tp-t)/(tp-tm)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>w-&gt;<ref refid="structmccc__wienarr_1a5a1c371ff622ed24da87d7186a398830" kindref="member">time</ref>[eidx]<sp/>=<sp/>t;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;<ref refid="mccc__wiener_8h_1acb0a7d02be4ac0c43fcf20c3114721d9" kindref="member">MCCC_NDIM</ref>;<sp/>i++){</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>w-&gt;<ref refid="structmccc__wienarr_1ae050ff1864a057cb1fed0a0cc00203c2" kindref="member">wiener</ref>[i+eidx*<ref refid="mccc__wiener_8h_1acb0a7d02be4ac0c43fcf20c3114721d9" kindref="member">MCCC_NDIM</ref>]<sp/>=</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>w-&gt;<ref refid="structmccc__wienarr_1ae050ff1864a057cb1fed0a0cc00203c2" kindref="member">wiener</ref>[i+im*<ref refid="mccc__wiener_8h_1acb0a7d02be4ac0c43fcf20c3114721d9" kindref="member">MCCC_NDIM</ref>]</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>(<sp/><sp/><sp/>w-&gt;<ref refid="structmccc__wienarr_1ae050ff1864a057cb1fed0a0cc00203c2" kindref="member">wiener</ref>[i<sp/>+<sp/>ip*<ref refid="mccc__wiener_8h_1acb0a7d02be4ac0c43fcf20c3114721d9" kindref="member">MCCC_NDIM</ref>]</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>w-&gt;<ref refid="structmccc__wienarr_1ae050ff1864a057cb1fed0a0cc00203c2" kindref="member">wiener</ref>[i<sp/>+<sp/>im*<ref refid="mccc__wiener_8h_1acb0a7d02be4ac0c43fcf20c3114721d9" kindref="member">MCCC_NDIM</ref>]<sp/>)</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>(<sp/>t<sp/>-<sp/>w-&gt;<ref refid="structmccc__wienarr_1a5a1c371ff622ed24da87d7186a398830" kindref="member">time</ref>[im]<sp/>)<sp/>/<sp/>(<sp/>w-&gt;<ref refid="structmccc__wienarr_1a5a1c371ff622ed24da87d7186a398830" kindref="member">time</ref>[ip]<sp/>-<sp/>w-&gt;<ref refid="structmccc__wienarr_1a5a1c371ff622ed24da87d7186a398830" kindref="member">time</ref>[im]<sp/>)</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>sqrt(<sp/>(<sp/>t<sp/>-<sp/>w-&gt;<ref refid="structmccc__wienarr_1a5a1c371ff622ed24da87d7186a398830" kindref="member">time</ref>[im]<sp/>)<sp/>*<sp/>(<sp/>w-&gt;<ref refid="structmccc__wienarr_1a5a1c371ff622ed24da87d7186a398830" kindref="member">time</ref>[ip]<sp/>-<sp/>t<sp/>)</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/<sp/>(<sp/>w-&gt;<ref refid="structmccc__wienarr_1a5a1c371ff622ed24da87d7186a398830" kindref="member">time</ref>[ip]<sp/>-<sp/>w-&gt;<ref refid="structmccc__wienarr_1a5a1c371ff622ed24da87d7186a398830" kindref="member">time</ref>[im]<sp/>)<sp/>)<sp/>*<sp/>rand5[i];</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Sort<sp/>new<sp/>wiener<sp/>process<sp/>to<sp/>its<sp/>correct<sp/>place<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>w-&gt;<ref refid="structmccc__wienarr_1a73639944fc6841fe0e0b6d2820374d5d" kindref="member">nextslot</ref>[eidx]<sp/>=<sp/>ip;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>w-&gt;<ref refid="structmccc__wienarr_1a73639944fc6841fe0e0b6d2820374d5d" kindref="member">nextslot</ref>[im]<sp/><sp/><sp/>=<sp/>eidx;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>windex[0]<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>eidx;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>err;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164" refid="mccc__wiener_8c_1a487b5950b867d86818835081eba4dc2a" refkind="member"><highlight class="normal"><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref><sp/><ref refid="mccc__wiener_8c_1a487b5950b867d86818835081eba4dc2a" kindref="member">mccc_wiener_clean</ref>(<ref refid="structmccc__wienarr" kindref="compound">mccc_wienarr</ref>*<sp/>w,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>t){</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref><sp/>err<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>idx,<sp/>nextidx;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Remove<sp/>processes<sp/>W(t_i)<sp/>until<sp/>ti<sp/>=<sp/>t<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>idx<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>ti<sp/>=<sp/>w-&gt;<ref refid="structmccc__wienarr_1a5a1c371ff622ed24da87d7186a398830" kindref="member">time</ref>[idx];</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(ti<sp/>&lt;<sp/>t){</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nextidx<sp/>=<sp/>w-&gt;<ref refid="structmccc__wienarr_1a73639944fc6841fe0e0b6d2820374d5d" kindref="member">nextslot</ref>[idx];</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(idx<sp/>==<sp/>nextidx){</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="error_8h_1a580a0b8b4a823a26a00b2f83d9343bc4" kindref="member">error_raise</ref>(<ref refid="error_8h_1a6756b9f30781ed8ca8ce938e49ad9d92af300537933b249ab795b49f15b329791" kindref="member">ERR_WIENER_ARRAY</ref>,<sp/>__LINE__,<sp/><ref refid="error_8h_1a4e101179605aba551caa2576fd83a1dda256300477d2625bfe70f09e70bbd55aa" kindref="member">EF_MCCC_WIENER</ref>);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t<sp/>=<sp/>ti;<sp/></highlight><highlight class="comment">//<sp/>Breaks<sp/>the<sp/>loop</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>w-&gt;<ref refid="structmccc__wienarr_1a73639944fc6841fe0e0b6d2820374d5d" kindref="member">nextslot</ref>[idx]<sp/>=<sp/><ref refid="mccc__wiener_8c_1a058066a132cb5de9a719527a4762ddd7" kindref="member">MCCC_EMPTY</ref>;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>idx<sp/>=<sp/>nextidx;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ti<sp/><sp/>=<sp/>w-&gt;<ref refid="structmccc__wienarr_1a5a1c371ff622ed24da87d7186a398830" kindref="member">time</ref>[idx];</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(idx!=0<sp/>&amp;&amp;<sp/>!err){</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Move<sp/>W(t)<sp/>process<sp/>as<sp/>the<sp/>first<sp/>one<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>w-&gt;<ref refid="structmccc__wienarr_1a73639944fc6841fe0e0b6d2820374d5d" kindref="member">nextslot</ref>[0]<sp/>=<sp/>w-&gt;<ref refid="structmccc__wienarr_1a73639944fc6841fe0e0b6d2820374d5d" kindref="member">nextslot</ref>[idx];</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>w-&gt;<ref refid="structmccc__wienarr_1a5a1c371ff622ed24da87d7186a398830" kindref="member">time</ref>[0]<sp/><sp/><sp/>=<sp/>w-&gt;<ref refid="structmccc__wienarr_1a5a1c371ff622ed24da87d7186a398830" kindref="member">time</ref>[idx];</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;<ref refid="mccc__wiener_8h_1acb0a7d02be4ac0c43fcf20c3114721d9" kindref="member">MCCC_NDIM</ref>;<sp/>i++){</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>w-&gt;<ref refid="structmccc__wienarr_1ae050ff1864a057cb1fed0a0cc00203c2" kindref="member">wiener</ref>[i]<sp/>=<sp/>w-&gt;<ref refid="structmccc__wienarr_1ae050ff1864a057cb1fed0a0cc00203c2" kindref="member">wiener</ref>[idx*<ref refid="mccc__wiener_8h_1acb0a7d02be4ac0c43fcf20c3114721d9" kindref="member">MCCC_NDIM</ref>+i];</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Check<sp/>if<sp/>the<sp/>process<sp/>is<sp/>also<sp/>the<sp/>last<sp/>one<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>w-&gt;<ref refid="structmccc__wienarr_1a73639944fc6841fe0e0b6d2820374d5d" kindref="member">nextslot</ref>[idx]<sp/>==<sp/>idx<sp/>){</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>w-&gt;<ref refid="structmccc__wienarr_1a73639944fc6841fe0e0b6d2820374d5d" kindref="member">nextslot</ref>[0]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>w-&gt;<ref refid="structmccc__wienarr_1a73639944fc6841fe0e0b6d2820374d5d" kindref="member">nextslot</ref>[idx]<sp/>=<sp/><ref refid="mccc__wiener_8c_1a058066a132cb5de9a719527a4762ddd7" kindref="member">MCCC_EMPTY</ref>;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>err;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="simulate/mccc/mccc_wiener.c"/>
+  </compounddef>
+</doxygen>

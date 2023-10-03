@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CoreIO &mdash; ASCOT5 5.5 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/sg_gallery.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=b689823a"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ascotpy" href="a5py.ascotpy.html" />
+    <link rel="prev" title="options" href="a5py.ascot5io.options.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html">
+            
+              <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Running Simulations</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../running.html">Installing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../running.html#simulations">Simulations</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Processing Data</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../processing.html">Data storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../processing.html#input-generation">Input generation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../processing.html#post-processing">Post-processing</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Simulating Physics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../teaching.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../teaching.html#physics-in-ascot5">Physics in ASCOT5</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Publications</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../publishing.html">Citing ASCOT5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../publishing.html#gallery">Gallery</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Code Development</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../developing.html">Coding style and practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developing.html#parallelization">Parallelization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developing.html#testing">Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developing.html#id2">C API</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="a5py.html">Python API</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="a5py.html#module-a5py"><code class="docutils literal notranslate"><span class="pre">a5py</span></code></a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="a5py.ascot5io.html"><code class="docutils literal notranslate"><span class="pre">ascot5io</span></code></a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.bfield.html"><code class="docutils literal notranslate"><span class="pre">bfield</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.efield.html"><code class="docutils literal notranslate"><span class="pre">efield</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.plasma.html"><code class="docutils literal notranslate"><span class="pre">plasma</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.marker.html"><code class="docutils literal notranslate"><span class="pre">marker</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.wall.html"><code class="docutils literal notranslate"><span class="pre">wall</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.neutral.html"><code class="docutils literal notranslate"><span class="pre">neutral</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.boozer.html"><code class="docutils literal notranslate"><span class="pre">boozer</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.mhd.html"><code class="docutils literal notranslate"><span class="pre">mhd</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.nbi.html"><code class="docutils literal notranslate"><span class="pre">nbi</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.options.html"><code class="docutils literal notranslate"><span class="pre">options</span></code></a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">CoreIO</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.coreio.treeview.InputNode"><code class="docutils literal notranslate"><span class="pre">InputNode</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.coreio.treeview.InputNode.destroy"><code class="docutils literal notranslate"><span class="pre">InputNode.destroy()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.coreio.treeview.InputNode.get_contents"><code class="docutils literal notranslate"><span class="pre">InputNode.get_contents()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.coreio.treeview.InputNode.ls"><code class="docutils literal notranslate"><span class="pre">InputNode.ls()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.coreio.treeview.ResultNode"><code class="docutils literal notranslate"><span class="pre">ResultNode</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.coreio.treeview.ResultNode.activate"><code class="docutils literal notranslate"><span class="pre">ResultNode.activate()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.coreio.treeview.ResultNode.destroy"><code class="docutils literal notranslate"><span class="pre">ResultNode.destroy()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.coreio.treeview.ResultNode.export"><code class="docutils literal notranslate"><span class="pre">ResultNode.export()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.coreio.treeview.ResultNode.get_contents"><code class="docutils literal notranslate"><span class="pre">ResultNode.get_contents()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.coreio.treeview.ResultNode.get_date"><code class="docutils literal notranslate"><span class="pre">ResultNode.get_date()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.coreio.treeview.ResultNode.get_desc"><code class="docutils literal notranslate"><span class="pre">ResultNode.get_desc()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.coreio.treeview.ResultNode.get_name"><code class="docutils literal notranslate"><span class="pre">ResultNode.get_name()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.coreio.treeview.ResultNode.get_qid"><code class="docutils literal notranslate"><span class="pre">ResultNode.get_qid()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.coreio.treeview.ResultNode.get_type"><code class="docutils literal notranslate"><span class="pre">ResultNode.get_type()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.coreio.treeview.ResultNode.ls"><code class="docutils literal notranslate"><span class="pre">ResultNode.ls()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.coreio.treeview.ResultNode.set_desc"><code class="docutils literal notranslate"><span class="pre">ResultNode.set_desc()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.coreio.treeview.RootNode"><code class="docutils literal notranslate"><span class="pre">RootNode</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.coreio.treeview.RootNode.destroy"><code class="docutils literal notranslate"><span class="pre">RootNode.destroy()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.coreio.treeview.RootNode.get_contents"><code class="docutils literal notranslate"><span class="pre">RootNode.get_contents()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.coreio.treeview.RootNode.get_runs"><code class="docutils literal notranslate"><span class="pre">RootNode.get_runs()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.coreio.treeview.RootNode.ls"><code class="docutils literal notranslate"><span class="pre">RootNode.ls()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.coreio.treedata.DataContainer"><code class="docutils literal notranslate"><span class="pre">DataContainer</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.coreio.treedata.DataGroup"><code class="docutils literal notranslate"><span class="pre">DataGroup</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.coreio.treedata.DataGroup.activate"><code class="docutils literal notranslate"><span class="pre">DataGroup.activate()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.coreio.treedata.DataGroup.destroy"><code class="docutils literal notranslate"><span class="pre">DataGroup.destroy()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.coreio.treedata.DataGroup.export"><code class="docutils literal notranslate"><span class="pre">DataGroup.export()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.coreio.treedata.DataGroup.get_date"><code class="docutils literal notranslate"><span class="pre">DataGroup.get_date()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.coreio.treedata.DataGroup.get_desc"><code class="docutils literal notranslate"><span class="pre">DataGroup.get_desc()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.coreio.treedata.DataGroup.get_name"><code class="docutils literal notranslate"><span class="pre">DataGroup.get_name()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.coreio.treedata.DataGroup.get_qid"><code class="docutils literal notranslate"><span class="pre">DataGroup.get_qid()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.coreio.treedata.DataGroup.get_type"><code class="docutils literal notranslate"><span class="pre">DataGroup.get_type()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.coreio.treedata.DataGroup.set_desc"><code class="docutils literal notranslate"><span class="pre">DataGroup.set_desc()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.coreio.fileapi.INPUTGROUPS"><code class="docutils literal notranslate"><span class="pre">INPUTGROUPS</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.coreio.fileapi.OUTPUTGROUPS"><code class="docutils literal notranslate"><span class="pre">OUTPUTGROUPS</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.coreio.fileapi.VERSION"><code class="docutils literal notranslate"><span class="pre">VERSION</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.coreio.fileapi.add_group"><code class="docutils literal notranslate"><span class="pre">add_group()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.coreio.fileapi.copy_group"><code class="docutils literal notranslate"><span class="pre">copy_group()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.coreio.fileapi.get_active"><code class="docutils literal notranslate"><span class="pre">get_active()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.coreio.fileapi.get_activeqid"><code class="docutils literal notranslate"><span class="pre">get_activeqid()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.coreio.fileapi.get_date"><code class="docutils literal notranslate"><span class="pre">get_date()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.coreio.fileapi.get_desc"><code class="docutils literal notranslate"><span class="pre">get_desc()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.coreio.fileapi.get_group"><code class="docutils literal notranslate"><span class="pre">get_group()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.coreio.fileapi.get_inputqids"><code class="docutils literal notranslate"><span class="pre">get_inputqids()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.coreio.fileapi.get_qid"><code class="docutils literal notranslate"><span class="pre">get_qid()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.coreio.fileapi.get_qids"><code class="docutils literal notranslate"><span class="pre">get_qids()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.coreio.fileapi.get_type"><code class="docutils literal notranslate"><span class="pre">get_type()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.coreio.fileapi.get_version"><code class="docutils literal notranslate"><span class="pre">get_version()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.coreio.fileapi.read_data"><code class="docutils literal notranslate"><span class="pre">read_data()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.coreio.fileapi.remove_group"><code class="docutils literal notranslate"><span class="pre">remove_group()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.coreio.fileapi.set_active"><code class="docutils literal notranslate"><span class="pre">set_active()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.coreio.fileapi.set_activeqid"><code class="docutils literal notranslate"><span class="pre">set_activeqid()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.coreio.fileapi.set_desc"><code class="docutils literal notranslate"><span class="pre">set_desc()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.coreio.fileapi.write_data"><code class="docutils literal notranslate"><span class="pre">write_data()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.html#a5py.ascot5io.Ascot5IO"><code class="docutils literal notranslate"><span class="pre">Ascot5IO</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.html#a5py.ascot5io.RunGroup"><code class="docutils literal notranslate"><span class="pre">RunGroup</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.html#a5py.ascot5io.InputGroup"><code class="docutils literal notranslate"><span class="pre">InputGroup</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.ascotpy.html"><code class="docutils literal notranslate"><span class="pre">ascotpy</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.templates.html"><code class="docutils literal notranslate"><span class="pre">templates</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.physlib.html"><code class="docutils literal notranslate"><span class="pre">physlib</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.routines.html"><code class="docutils literal notranslate"><span class="pre">routines</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.gui.html"><code class="docutils literal notranslate"><span class="pre">a5py.gui</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.html#a5py.exceptions.AscotIOException"><code class="docutils literal notranslate"><span class="pre">AscotIOException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.html#a5py.exceptions.AscotInitException"><code class="docutils literal notranslate"><span class="pre">AscotInitException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.html#a5py.exceptions.AscotNoDataException"><code class="docutils literal notranslate"><span class="pre">AscotNoDataException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.html#a5py.exceptions.AscotUnitWarning"><code class="docutils literal notranslate"><span class="pre">AscotUnitWarning</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="a5py.html#ascot"><code class="docutils literal notranslate"><span class="pre">Ascot</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ASCOT5</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="a5py.html">Python API</a></li>
+          <li class="breadcrumb-item"><a href="a5py.ascot5io.html"><code class="docutils literal notranslate"><span class="pre">ascot5io</span></code></a></li>
+      <li class="breadcrumb-item active"><code class="docutils literal notranslate"><span class="pre">CoreIO</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/papi/a5py.ascot5io.coreio.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-a5py.ascot5io.coreio">
+<span id="coreio"></span><h1><code class="docutils literal notranslate"><span class="pre">CoreIO</span></code><a class="headerlink" href="#module-a5py.ascot5io.coreio" title="Link to this heading"></a></h1>
+<p>Low level API for HDF5 data access and building the treeview.</p>
+<p id="module-a5py.ascot5io.coreio.treeview">Module for building the treeview that shows ASCOT5 HDF5 file contents.</p>
+<p>Treeview consists of nodes acting as containers for other nodes and data. The
+tree is spanned by the <cite>RootNode</cite>.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="a5py.ascot5io.coreio.treeview.InputNode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">a5py.ascot5io.coreio.treeview.</span></span><span class="sig-name descname"><span class="pre">InputNode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h5</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.coreio.treeview.InputNode" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">_ParentNode</span></code></p>
+<p>Node that represents an input parent group.</p>
+<p>Input parent groups are “bfield”, “efield”, etc. in the HDF5 file that can
+contain several input data groups.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.coreio.treeview.InputNode.destroy">
+<span class="sig-name descname"><span class="pre">destroy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">repack</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.coreio.treeview.InputNode.destroy" title="Link to this definition"></a></dt>
+<dd><p>Remove this group from the HDF5 file.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>repack</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>If True, repack the HDF5 file.</p>
+<p>Removing data from the HDF5 file only removes references to it and
+repacking is required to free the disk space. Repacking makes a copy
+of the HDF5 file and destroys the original, and it also requires
+3rd party tool <cite>h5repack</cite> which is why it’s use is optional here.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.coreio.treeview.InputNode.get_contents">
+<span class="sig-name descname"><span class="pre">get_contents</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.coreio.treeview.InputNode.get_contents" title="Link to this definition"></a></dt>
+<dd><p>Return metadata for all childs sorted by date.</p>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>qids</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>QIDs.</p>
+</dd>
+<dt><strong>dates</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Dates.</p>
+</dd>
+<dt><strong>descs</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Descriptions.</p>
+</dd>
+<dt><strong>types</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Data types.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.coreio.treeview.InputNode.ls">
+<span class="sig-name descname"><span class="pre">ls</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">show</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.coreio.treeview.InputNode.ls" title="Link to this definition"></a></dt>
+<dd><p>Get a string representation of the contents.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>show</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>If True, the contents are also printed on screen.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>contents</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Multiline string decorated with ANSI escape sequences that list
+all data groups within this node.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="a5py.ascot5io.coreio.treeview.ResultNode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">a5py.ascot5io.coreio.treeview.</span></span><span class="sig-name descname"><span class="pre">ResultNode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inputqids</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.coreio.treeview.ResultNode" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">_Node</span></code>, <a class="reference internal" href="#a5py.ascot5io.coreio.treedata.DataGroup" title="a5py.ascot5io.coreio.treedata.DataGroup"><code class="xref py py-class docutils literal notranslate"><span class="pre">DataGroup</span></code></a></p>
+<p>Node that represents a results group.</p>
+<p>Result groups contain the data groups containing simulation results. Result
+node has its own meta data (QID, etc.) and its children can only be
+referenced by name e.g. <cite>resultnode.inistate</cite>. Result node also stores QIDs
+of the input groups used to obtain that result.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.coreio.treeview.ResultNode.activate">
+<span class="sig-name descname"><span class="pre">activate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.coreio.treeview.ResultNode.activate" title="Link to this definition"></a></dt>
+<dd><p>Set this group as active.</p>
+<p>Active inputs are used when the simulation is run. Active groups are
+also used during post-processing.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.coreio.treeview.ResultNode.destroy">
+<span class="sig-name descname"><span class="pre">destroy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">repack</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.coreio.treeview.ResultNode.destroy" title="Link to this definition"></a></dt>
+<dd><p>Remove this group from the HDF5 file.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>repack</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>If True, repack the HDF5 file.</p>
+<p>Removing data from the HDF5 file only removes references to it and
+repacking is required to free the disk space. Repacking makes a copy
+of the HDF5 file and destroys the original, and it also requires
+3rd party tool <cite>h5repack</cite> which is why it’s use is optional here.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.coreio.treeview.ResultNode.export">
+<span class="sig-name descname"><span class="pre">export</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">newgroup</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.coreio.treeview.ResultNode.export" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.coreio.treeview.ResultNode.get_contents">
+<span class="sig-name descname"><span class="pre">get_contents</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.coreio.treeview.ResultNode.get_contents" title="Link to this definition"></a></dt>
+<dd><p>Return names of all childs.</p>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>names</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a> [<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>]</span></dt><dd><p>List of names.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.coreio.treeview.ResultNode.get_date">
+<span class="sig-name descname"><span class="pre">get_date</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.coreio.treeview.ResultNode.get_date" title="Link to this definition"></a></dt>
+<dd><p>Get the date when this group was created.</p>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>date</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>The date in YYYY-MM-DD hh:mm:ss format.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.coreio.treeview.ResultNode.get_desc">
+<span class="sig-name descname"><span class="pre">get_desc</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.coreio.treeview.ResultNode.get_desc" title="Link to this definition"></a></dt>
+<dd><p>Get this group’s description.</p>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>desc</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Documentation the user has used to describe this group.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.coreio.treeview.ResultNode.get_name">
+<span class="sig-name descname"><span class="pre">get_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.coreio.treeview.ResultNode.get_name" title="Link to this definition"></a></dt>
+<dd><p>Return name of this group.</p>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>name</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>The name of the group as “&lt;group type&gt;_&lt;group qid&gt;”.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.coreio.treeview.ResultNode.get_qid">
+<span class="sig-name descname"><span class="pre">get_qid</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.coreio.treeview.ResultNode.get_qid" title="Link to this definition"></a></dt>
+<dd><p>Get QID of this group.</p>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>qid</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>String with 10 characters containing numbers from 0-9 which is
+an unique identifier for this group.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.coreio.treeview.ResultNode.get_type">
+<span class="sig-name descname"><span class="pre">get_type</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.coreio.treeview.ResultNode.get_type" title="Link to this definition"></a></dt>
+<dd><p>Return type of this group.</p>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>gtype</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Group type.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.coreio.treeview.ResultNode.ls">
+<span class="sig-name descname"><span class="pre">ls</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">show</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.coreio.treeview.ResultNode.ls" title="Link to this definition"></a></dt>
+<dd><p>Get a string representation of the contents.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>show</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>If True, the contents are also printed on screen.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>contents</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Multiline string decorated with ANSI escape sequences that list
+this node’s meta data, all output data within this node, and inputs
+that were used.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.coreio.treeview.ResultNode.set_desc">
+<span class="sig-name descname"><span class="pre">set_desc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">desc</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.coreio.treeview.ResultNode.set_desc" title="Link to this definition"></a></dt>
+<dd><p>Set description for this group.</p>
+<p>Note that the first word in the description is this group’s tag which
+can be used to refer to this group.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>desc</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Short description for the user to document this group.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="a5py.ascot5io.coreio.treeview.RootNode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">a5py.ascot5io.coreio.treeview.</span></span><span class="sig-name descname"><span class="pre">RootNode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ascot</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.coreio.treeview.RootNode" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">_ParentNode</span></code></p>
+<p>The entry node for accessing data in the HDF5 file.</p>
+<p>The root node spawns the treeview creating all other nodes and data groups.</p>
+<dl class="field-list">
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>_ascot</strong><span class="classifier"><cite>Ascot</cite></span></dt><dd><p>The <cite>Ascot</cite> object whose HDF5 file is what this tree structure
+represents.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.coreio.treeview.RootNode.destroy">
+<span class="sig-name descname"><span class="pre">destroy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">repack</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.coreio.treeview.RootNode.destroy" title="Link to this definition"></a></dt>
+<dd><p>Remove all results from the HDF5 file.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>repack</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>If True, repack the HDF5 file.</p>
+<p>Removing data from the HDF5 file only removes references to it and
+repacking is required to free the disk space. Repacking makes a copy
+of the HDF5 file and destroys the original, and it also requires
+3rd party tool <cite>h5repack</cite> which is why it’s use is optional here.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.coreio.treeview.RootNode.get_contents">
+<span class="sig-name descname"><span class="pre">get_contents</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.coreio.treeview.RootNode.get_contents" title="Link to this definition"></a></dt>
+<dd><p>Return metadata for all childs sorted by date.</p>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>qids</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>QIDs.</p>
+</dd>
+<dt><strong>dates</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Dates.</p>
+</dd>
+<dt><strong>descs</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Descriptions.</p>
+</dd>
+<dt><strong>types</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Data types.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.coreio.treeview.RootNode.get_runs">
+<span class="sig-name descname"><span class="pre">get_runs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputqid</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.coreio.treeview.RootNode.get_runs" title="Link to this definition"></a></dt>
+<dd><p>Fetch QIDs of runs using given input.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>inputqid</strong><span class="classifier"><cite>qid</cite></span></dt><dd><p>QID of the input.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>qids</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a> [<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>]</span></dt><dd><p>List of run QIDs.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.coreio.treeview.RootNode.ls">
+<span class="sig-name descname"><span class="pre">ls</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">show</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.coreio.treeview.RootNode.ls" title="Link to this definition"></a></dt>
+<dd><p>Get a string representation of the contents.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>show</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>If True, the contents are also printed on screen.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>contents</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Multiline string decorated with ANSI escape sequences that list
+all results and their meta data and currently active inputs.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<p id="module-a5py.ascot5io.coreio.treedata">Abstract classes for objects containing data.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="a5py.ascot5io.coreio.treedata.DataContainer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">a5py.ascot5io.coreio.treedata.</span></span><span class="sig-name descname"><span class="pre">DataContainer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.coreio.treedata.DataContainer" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Interface for providing access to underlying HDF5 data.</p>
+<p>This class provides methods to change and access the raw data. The
+raw data is accessed (via <code class="xref py py-obj docutils literal notranslate"><span class="pre">h5py</span></code>) as</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">datacontainer</span> <span class="k">as</span> <span class="n">d</span><span class="p">:</span>
+    <span class="n">d</span><span class="p">[</span><span class="s2">&quot;data&quot;</span><span class="p">][:]</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">d</span></code> is the <code class="xref py py-obj docutils literal notranslate"><span class="pre">h5py.Group</span></code> corresponding to this container.</p>
+<dl class="field-list">
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>_root</strong><span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">RootNode</span></code></span></dt><dd><p>The rootnode this object belongs to.</p>
+</dd>
+<dt><strong>_path</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Path to this data within the HDF5 file.</p>
+</dd>
+<dt><strong>_opened</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a> [<code class="xref py py-obj docutils literal notranslate"><span class="pre">obj</span></code>]</span></dt><dd><p>List containing a single object, which is this data’s HDF5 group if
+the data is being accessed and <cite>None</cite> otherwise.</p>
+<p>We are storing single item list, instead of storing the item directly,
+since this class is inherited by <cite>Note</cite> objects whose attributes cannot
+be changed directly. However, if the attribute is a list, the contents
+of that list can be changed ;).</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="a5py.ascot5io.coreio.treedata.DataGroup">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">a5py.ascot5io.coreio.treedata.</span></span><span class="sig-name descname"><span class="pre">DataGroup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.coreio.treedata.DataGroup" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#a5py.ascot5io.coreio.treedata.DataContainer" title="a5py.ascot5io.coreio.treedata.DataContainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">DataContainer</span></code></a></p>
+<p>Data container that also has meta data (QID, date, description).</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.coreio.treedata.DataGroup.activate">
+<span class="sig-name descname"><span class="pre">activate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.coreio.treedata.DataGroup.activate" title="Link to this definition"></a></dt>
+<dd><p>Set this group as active.</p>
+<p>Active inputs are used when the simulation is run. Active groups are
+also used during post-processing.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.coreio.treedata.DataGroup.destroy">
+<span class="sig-name descname"><span class="pre">destroy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">repack</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.coreio.treedata.DataGroup.destroy" title="Link to this definition"></a></dt>
+<dd><p>Remove this group from the HDF5 file.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>repack</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>If True, repack the HDF5 file.</p>
+<p>Removing data from the HDF5 file only removes references to it and
+repacking is required to free the disk space. Repacking makes a copy
+of the HDF5 file and destroys the original, and it also requires
+3rd party tool <cite>h5repack</cite> which is why it’s use is optional here.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.coreio.treedata.DataGroup.export">
+<span class="sig-name descname"><span class="pre">export</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">newgroup</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.coreio.treedata.DataGroup.export" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.coreio.treedata.DataGroup.get_date">
+<span class="sig-name descname"><span class="pre">get_date</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.coreio.treedata.DataGroup.get_date" title="Link to this definition"></a></dt>
+<dd><p>Get the date when this group was created.</p>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>date</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>The date in YYYY-MM-DD hh:mm:ss format.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.coreio.treedata.DataGroup.get_desc">
+<span class="sig-name descname"><span class="pre">get_desc</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.coreio.treedata.DataGroup.get_desc" title="Link to this definition"></a></dt>
+<dd><p>Get this group’s description.</p>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>desc</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Documentation the user has used to describe this group.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.coreio.treedata.DataGroup.get_name">
+<span class="sig-name descname"><span class="pre">get_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.coreio.treedata.DataGroup.get_name" title="Link to this definition"></a></dt>
+<dd><p>Return name of this group.</p>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>name</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>The name of the group as “&lt;group type&gt;_&lt;group qid&gt;”.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.coreio.treedata.DataGroup.get_qid">
+<span class="sig-name descname"><span class="pre">get_qid</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.coreio.treedata.DataGroup.get_qid" title="Link to this definition"></a></dt>
+<dd><p>Get QID of this group.</p>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>qid</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>String with 10 characters containing numbers from 0-9 which is
+an unique identifier for this group.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.coreio.treedata.DataGroup.get_type">
+<span class="sig-name descname"><span class="pre">get_type</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.coreio.treedata.DataGroup.get_type" title="Link to this definition"></a></dt>
+<dd><p>Return type of this group.</p>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>gtype</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Group type.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.coreio.treedata.DataGroup.set_desc">
+<span class="sig-name descname"><span class="pre">set_desc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">desc</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.coreio.treedata.DataGroup.set_desc" title="Link to this definition"></a></dt>
+<dd><p>Set description for this group.</p>
+<p>Note that the first word in the description is this group’s tag which
+can be used to refer to this group.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>desc</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Short description for the user to document this group.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<p id="module-a5py.ascot5io.coreio.fileapi">Module for creating and modifying the HDF5 file and for accessing meta data.</p>
+<p>ASCOT5 HDF5 file is built as follows. At top level are parent groups, one (and
+only one) for each type of input (e.g. bfield for magnetic field input) and one
+parent group that contains all the results.</p>
+<p>Parent groups contain groups that hold the actual datasets. Single parent can
+have multiple groups e.g. bfield can store multiple magnetic field inputs.
+The result group is a different in a sense that it contains run groups, one
+for each simulation, which then contain the groups that store inistate,
+endstate, and whatever diagnostics were used. However, here we refer to the
+top level groups as parents, and the groups that are directly below them
+as data containers.</p>
+<p>A typical structure of a file can be like this:</p>
+<p>&gt; /
+&gt; /bfield
+&gt; /bfield/B_2DS_1234567890
+&gt; /bfield/B_2DS_2345678901
+&gt; /bfield/B_3DS_3456789012
+&gt; …
+&gt; &lt;other input groups&gt;
+&gt; …
+&gt; /results
+&gt; /results/run_4567890123
+&gt; /results/run_5678901234</p>
+<p>The number in group name is unique identifier (QID) which is generated when a
+group is created. It is generated from a 32 bit random integer and as such it
+is almost quaranteed to be unique.</p>
+<p>QID is used to determine which input group is active, i.e., to be used in
+a simulation, and to which run group the simulation results are written.
+QID of the active group is stored as an attribute (in a string format) in the
+parent. For the results parent this is the QID of the most recent run (unless
+manually changed). Run groups also store QIDs of all input fields used in that
+particular run.</p>
+<p>All groups also store date and time at which they where created and also a
+description field that user can modify at will (see ascot5.py).</p>
+<p>The groups should be created, removed, and their metadata accessed via this
+module. The actual datasets are accessed via corresponding modules. This module
+assumes the HDF5 file is open when these routines are called, and closed
+afterwards.</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="a5py.ascot5io.coreio.fileapi.INPUTGROUPS">
+<span class="sig-prename descclassname"><span class="pre">a5py.ascot5io.coreio.fileapi.</span></span><span class="sig-name descname"><span class="pre">INPUTGROUPS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['options',</span> <span class="pre">'bfield',</span> <span class="pre">'efield',</span> <span class="pre">'marker',</span> <span class="pre">'plasma',</span> <span class="pre">'neutral',</span> <span class="pre">'wall',</span> <span class="pre">'boozer',</span> <span class="pre">'mhd',</span> <span class="pre">'asigma',</span> <span class="pre">'nbi']</span></em><a class="headerlink" href="#a5py.ascot5io.coreio.fileapi.INPUTGROUPS" title="Link to this definition"></a></dt>
+<dd><p>Names of the input parent groups.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="a5py.ascot5io.coreio.fileapi.OUTPUTGROUPS">
+<span class="sig-prename descclassname"><span class="pre">a5py.ascot5io.coreio.fileapi.</span></span><span class="sig-name descname"><span class="pre">OUTPUTGROUPS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['inistate',</span> <span class="pre">'endstate',</span> <span class="pre">'dist5d',</span> <span class="pre">'distrho5d',</span> <span class="pre">'dist6d',</span> <span class="pre">'distrho6d',</span> <span class="pre">'orbit',</span> <span class="pre">'transcoef']</span></em><a class="headerlink" href="#a5py.ascot5io.coreio.fileapi.OUTPUTGROUPS" title="Link to this definition"></a></dt>
+<dd><p>Names of the output data containers in runs.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="a5py.ascot5io.coreio.fileapi.VERSION">
+<span class="sig-prename descclassname"><span class="pre">a5py.ascot5io.coreio.fileapi.</span></span><span class="sig-name descname"><span class="pre">VERSION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'5.5'</span></em><a class="headerlink" href="#a5py.ascot5io.coreio.fileapi.VERSION" title="Link to this definition"></a></dt>
+<dd><p>Current version of the code.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a5py.ascot5io.coreio.fileapi.add_group">
+<span class="sig-prename descclassname"><span class="pre">a5py.ascot5io.coreio.fileapi.</span></span><span class="sig-name descname"><span class="pre">add_group</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">desc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.coreio.fileapi.add_group" title="Link to this definition"></a></dt>
+<dd><p>Create a new group. A parent is created if need be.</p>
+<p>If parent is created, then this new group is set as active.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>f</strong><span class="classifier"><cite>h5py.File</cite></span></dt><dd><p>Open HDF5 file.</p>
+</dd>
+<dt><strong>parent</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> or <cite>h5py.Group</cite></span></dt><dd><p>Parent of the created group.</p>
+</dd>
+<dt><strong>group</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>The group name.</p>
+</dd>
+<dt><strong>desc</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Description for the group.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>newgroup</strong><span class="classifier"><cite>h5py.Group</cite></span></dt><dd><p>The new group.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a5py.ascot5io.coreio.fileapi.copy_group">
+<span class="sig-prename descclassname"><span class="pre">a5py.ascot5io.coreio.fileapi.</span></span><span class="sig-name descname"><span class="pre">copy_group</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ft</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">newgroup</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.coreio.fileapi.copy_group" title="Link to this definition"></a></dt>
+<dd><p>Copy group from one file to another. A parent is also created if need be.</p>
+<p>The new group is set as active if the parent on the target file has no other
+groups. The copied group retains its original QID and date of creation.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>fs</strong><span class="classifier"><cite>h5py.File</cite></span></dt><dd><p>File from which the group is copied.</p>
+</dd>
+<dt><strong>ft</strong><span class="classifier"><cite>h5py.File</cite></span></dt><dd><p>File to which the group is copied.</p>
+</dd>
+<dt><strong>group</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> <code class="xref py py-obj docutils literal notranslate"><span class="pre">pr</span></code> <cite>h5py.Group</cite></span></dt><dd><p>The group to be copied.</p>
+</dd>
+<dt><strong>newgroup</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Flag indicating if copied group should be given new QID and date.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>groupt</strong><span class="classifier"><cite>h5py.Group</cite></span></dt><dd><p>The new group which is a copy of group at ft.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">AscotNoDataException</span></code></dt><dd><p>Raised if the copied group cannot be found.</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">AscotIOException</span></code></dt><dd><p>Raised if the group already exists on the target file.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a5py.ascot5io.coreio.fileapi.get_active">
+<span class="sig-prename descclassname"><span class="pre">a5py.ascot5io.coreio.fileapi.</span></span><span class="sig-name descname"><span class="pre">get_active</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.coreio.fileapi.get_active" title="Link to this definition"></a></dt>
+<dd><p>Get active group.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>f</strong><span class="classifier"><cite>h5py.File</cite></span></dt><dd><p>Open HDF5 file.</p>
+</dd>
+<dt><strong>parent</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> or <cite>h5py.Group</cite></span></dt><dd><p>Group object or its name.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>group</strong><span class="classifier"><cite>h5py.Group</cite></span></dt><dd><p>The active group.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">AscotNoDataException</span></code></dt><dd><p>Raised if the parent or the active group does not exist.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a5py.ascot5io.coreio.fileapi.get_activeqid">
+<span class="sig-prename descclassname"><span class="pre">a5py.ascot5io.coreio.fileapi.</span></span><span class="sig-name descname"><span class="pre">get_activeqid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.coreio.fileapi.get_activeqid" title="Link to this definition"></a></dt>
+<dd><p>Get QID of the currently active group.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>f</strong><span class="classifier"><cite>h5py.File</cite></span></dt><dd><p>Open HDF5 file.</p>
+</dd>
+<dt><strong>parent</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> or <cite>h5py.Group</cite></span></dt><dd><p>Parent whose active group is sought.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>qid</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>QID string.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a5py.ascot5io.coreio.fileapi.get_date">
+<span class="sig-prename descclassname"><span class="pre">a5py.ascot5io.coreio.fileapi.</span></span><span class="sig-name descname"><span class="pre">get_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.coreio.fileapi.get_date" title="Link to this definition"></a></dt>
+<dd><p>Get date.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>f</strong><span class="classifier"><cite>h5py.File</cite></span></dt><dd><p>Open HDF5 file.</p>
+</dd>
+<dt><strong>group</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> or <cite>h5py.Group</cite></span></dt><dd><p>Group object or its name.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>date</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Date as a string in format YYYY-MM-DD hh:mm:ss.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">AscotNoDataException</span></code></dt><dd><p>Raised if group does not exist.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a5py.ascot5io.coreio.fileapi.get_desc">
+<span class="sig-prename descclassname"><span class="pre">a5py.ascot5io.coreio.fileapi.</span></span><span class="sig-name descname"><span class="pre">get_desc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.coreio.fileapi.get_desc" title="Link to this definition"></a></dt>
+<dd><p>Get group description.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>f</strong><span class="classifier"><cite>h5py.File</cite></span></dt><dd><p>Open HDF5 file.</p>
+</dd>
+<dt><strong>group</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> or <cite>h5py.Group</cite></span></dt><dd><p>Group object or its name.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>desc</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Description as a string.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">AscotNoDataException</span></code></dt><dd><p>Raised if group does not exist.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a5py.ascot5io.coreio.fileapi.get_group">
+<span class="sig-prename descclassname"><span class="pre">a5py.ascot5io.coreio.fileapi.</span></span><span class="sig-name descname"><span class="pre">get_group</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qid</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.coreio.fileapi.get_group" title="Link to this definition"></a></dt>
+<dd><p>Scan the file and return the group the QID corresponds to.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>f</strong><span class="classifier"><cite>h5py.File</cite></span></dt><dd><p>Open HDF5 file.</p>
+</dd>
+<dt><strong>qid</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>QID string.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>group</strong><span class="classifier"><cite>h5py.Group</cite></span></dt><dd><p>Group or None if the group was not present.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a5py.ascot5io.coreio.fileapi.get_inputqids">
+<span class="sig-prename descclassname"><span class="pre">a5py.ascot5io.coreio.fileapi.</span></span><span class="sig-name descname"><span class="pre">get_inputqids</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rungroup</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.coreio.fileapi.get_inputqids" title="Link to this definition"></a></dt>
+<dd><p>Get all QIDs that tell which input was used in the given run group.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>f</strong><span class="classifier"><cite>h5py.File</cite></span></dt><dd><p>Open HDF5 file.</p>
+</dd>
+<dt><strong>rungroup</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> or <cite>h5py.Group</cite></span></dt><dd><p>Either the run group object or its name.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>qids</strong><span class="classifier"><cite>collections.OrderedDict</cite> [<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>]</span></dt><dd><p>Ordered dictionary with “parent name” - “qid” value pairs with the order
+being same as in <cite>INPUTGROUPS</cite>.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">AscotNoDataException</span></code></dt><dd><p>Raised if run group does not exist.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a5py.ascot5io.coreio.fileapi.get_qid">
+<span class="sig-prename descclassname"><span class="pre">a5py.ascot5io.coreio.fileapi.</span></span><span class="sig-name descname"><span class="pre">get_qid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.coreio.fileapi.get_qid" title="Link to this definition"></a></dt>
+<dd><p>Get QID from a given group.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>group</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> or <cite>h5py.Group</cite></span></dt><dd><p>Group object or its name.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>qid</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>QID string.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">AscotNoDataException</span></code></dt><dd><p>Raised if group does not have a valid QID.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a5py.ascot5io.coreio.fileapi.get_qids">
+<span class="sig-prename descclassname"><span class="pre">a5py.ascot5io.coreio.fileapi.</span></span><span class="sig-name descname"><span class="pre">get_qids</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.coreio.fileapi.get_qids" title="Link to this definition"></a></dt>
+<dd><p>Get QIDs of all the groups that a given parent contains.</p>
+<p>The QIDs are returned as list of no specific order.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>f</strong><span class="classifier"><cite>h5py.File</cite></span></dt><dd><p>Open HDF5 file.</p>
+</dd>
+<dt><strong>parent</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> or <cite>h5py.Group</cite></span></dt><dd><p>Parent object or its name.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>qids</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a> [<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>]</span></dt><dd><p>A list of QID strings.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">AscotNoDataException</span></code></dt><dd><p>Raised if parent group does not exist.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a5py.ascot5io.coreio.fileapi.get_type">
+<span class="sig-prename descclassname"><span class="pre">a5py.ascot5io.coreio.fileapi.</span></span><span class="sig-name descname"><span class="pre">get_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.coreio.fileapi.get_type" title="Link to this definition"></a></dt>
+<dd><p>Get type from a given group or from its name.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>group</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> or <cite>h5py.Group</cite></span></dt><dd><p>Group object or its name.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>type</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Group’s type.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">AscotNoDataException</span></code></dt><dd><p>Raised if group does not have a valid type.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a5py.ascot5io.coreio.fileapi.get_version">
+<span class="sig-prename descclassname"><span class="pre">a5py.ascot5io.coreio.fileapi.</span></span><span class="sig-name descname"><span class="pre">get_version</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.coreio.fileapi.get_version" title="Link to this definition"></a></dt>
+<dd><p>Get input version.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>f</strong><span class="classifier"><cite>h5py.File</cite></span></dt><dd><p>Open HDF5 file.</p>
+</dd>
+<dt><strong>group</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> or <cite>h5py.Group</cite></span></dt><dd><p>Group object or its name.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>version</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Version as a string.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">AscotNoDataException</span></code></dt><dd><p>Raised if group does not exist.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a5py.ascot5io.coreio.fileapi.read_data">
+<span class="sig-prename descclassname"><span class="pre">a5py.ascot5io.coreio.fileapi.</span></span><span class="sig-name descname"><span class="pre">read_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.coreio.fileapi.read_data" title="Link to this definition"></a></dt>
+<dd><p>Read a dataset and add units if present.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>group</strong><span class="classifier"><cite>h5py.Group</cite></span></dt><dd><p>HDF5 group containing the dataset.</p>
+</dd>
+<dt><strong>name</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Name of the dataset.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>data</strong><span class="classifier"><cite>np.array</cite> or <cite>unyt.array</cite>, <cite>(N,)</cite></span></dt><dd><p>Dataset with units read from the dataset attribute “unit”.</p>
+<p>If dataset has no “unit” attribute, ordinary <cite>np.array</cite> is returned.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a5py.ascot5io.coreio.fileapi.remove_group">
+<span class="sig-prename descclassname"><span class="pre">a5py.ascot5io.coreio.fileapi.</span></span><span class="sig-name descname"><span class="pre">remove_group</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.coreio.fileapi.remove_group" title="Link to this definition"></a></dt>
+<dd><p>Remove a group.</p>
+<p>If this was an active group, a most recent group is set as an active
+instead. If no other groups exist the parent is also removed.</p>
+<p>Input groups are not removed if they have been used in an existing run.</p>
+<p>Note that to reclaim the disk space which the group occupied, one needs
+to call h5repack in a terminal.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>f</strong><span class="classifier"><cite>h5py.File</cite></span></dt><dd><p>Open HDF5 file.</p>
+</dd>
+<dt><strong>group</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> or <cite>h5py.Group</cite></span></dt><dd><p>The group to be removed.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">AscotNoDataException</span></code></dt><dd><p>Raised if group could not be found.</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">AscotIOException</span></code></dt><dd><p>Raised if the group is input used by a run.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a5py.ascot5io.coreio.fileapi.set_active">
+<span class="sig-prename descclassname"><span class="pre">a5py.ascot5io.coreio.fileapi.</span></span><span class="sig-name descname"><span class="pre">set_active</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.coreio.fileapi.set_active" title="Link to this definition"></a></dt>
+<dd><p>Set given group as active.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>f</strong><span class="classifier"><cite>h5py.File</cite></span></dt><dd><p>Open HDF5 file.</p>
+</dd>
+<dt><strong>group</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> or <cite>h5py.Group</cite></span></dt><dd><p>Group object or its name.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">AscotNoDataException</span></code></dt><dd><p>Raised if the group or its parent does not exist.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a5py.ascot5io.coreio.fileapi.set_activeqid">
+<span class="sig-prename descclassname"><span class="pre">a5py.ascot5io.coreio.fileapi.</span></span><span class="sig-name descname"><span class="pre">set_activeqid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qid</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.coreio.fileapi.set_activeqid" title="Link to this definition"></a></dt>
+<dd><p>Set a group with the given QID as the active one.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>f</strong><span class="classifier"><cite>h5py.File</cite></span></dt><dd><p>Open HDF5 file.</p>
+</dd>
+<dt><strong>qid</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>QID.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a5py.ascot5io.coreio.fileapi.set_desc">
+<span class="sig-prename descclassname"><span class="pre">a5py.ascot5io.coreio.fileapi.</span></span><span class="sig-name descname"><span class="pre">set_desc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">desc</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.coreio.fileapi.set_desc" title="Link to this definition"></a></dt>
+<dd><p>Set group description.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>f</strong><span class="classifier"><cite>h5py.File</cite></span></dt><dd><p>Open HDF5 file.</p>
+</dd>
+<dt><strong>group</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> or <cite>h5py.Group</cite></span></dt><dd><p>Group object or its name.</p>
+</dd>
+<dt><strong>desc</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Description as a string.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">AscotNoDataException</span></code></dt><dd><p>Raised if group does not exist.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="a5py.ascot5io.coreio.fileapi.write_data">
+<span class="sig-prename descclassname"><span class="pre">a5py.ascot5io.coreio.fileapi.</span></span><span class="sig-name descname"><span class="pre">write_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shape</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.coreio.fileapi.write_data" title="Link to this definition"></a></dt>
+<dd><p>Write a dataset.</p>
+<p>The shape of the written dataset is same as the input array.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>group</strong><span class="classifier"><cite>h5py.Group</cite></span></dt><dd><p>HDF5 group where the dataset will be written.</p>
+</dd>
+<dt><strong>name</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Name of the new dataset.</p>
+</dd>
+<dt><strong>data</strong><span class="classifier"><cite>np.array</cite></span></dt><dd><p>Data to be written.</p>
+</dd>
+<dt><strong>dtype</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Data type.</p>
+</dd>
+<dt><strong>unit</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Unit string if the data has units.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="a5py.ascot5io.options.html" class="btn btn-neutral float-left" title="options" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="a5py.ascotpy.html" class="btn btn-neutral float-right" title="ascotpy" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Ascot Group.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

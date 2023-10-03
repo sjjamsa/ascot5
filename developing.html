@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coding style and practices &mdash; ASCOT5 5.5 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sg_gallery.css" type="text/css" />
+      <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=b689823a"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Python API" href="papi/a5py.html" />
+    <link rel="prev" title="Citing ASCOT5" href="publishing.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html">
+            
+              <img src="_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Running Simulations</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="running.html">Installing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="running.html#simulations">Simulations</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Processing Data</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="processing.html">Data storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="processing.html#input-generation">Input generation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="processing.html#post-processing">Post-processing</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Simulating Physics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="teaching.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="teaching.html#physics-in-ascot5">Physics in ASCOT5</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Publications</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="publishing.html">Citing ASCOT5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="publishing.html#gallery">Gallery</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Code Development</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Coding style and practices</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#git-usage">Git usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#documentation">Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv414B_field_eval_BAL3E_4real4real4real4real4realP12B_field_data"><code class="docutils literal notranslate"><span class="pre">B_field_eval_B()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#parallelization">Parallelization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#testing">Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#id2">C API</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="papi/a5py.html">Python API</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ASCOT5</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Coding style and practices</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/developing.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="coding-style-and-practices">
+<span id="codingstyle"></span><h1>Coding style and practices<a class="headerlink" href="#coding-style-and-practices" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p>Indentation is 4 spaces.
+- OpenMP pragmas indented same as normal code
+- Compiler pragmas are not indented.</p></li>
+<li><p>Don’t use tabs.</p></li>
+<li><p>Stick to the 80-column rule.</p></li>
+</ul>
+<p>Copy paste these settings to your <code class="docutils literal notranslate"><span class="pre">~/.emacs</span></code> file to enforce the rules:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>;; Standard style for C
+(setq c-default-style &quot;linux&quot; c-basic-offset 4)
+;; Makes emacs save all backup files in this directory
+(setq backup-directory-alist `((&quot;.&quot; . &quot;~/.emacssaves&quot;)))
+;; Indent compiler pragmas
+(c-set-offset (quote cpp-macro) 0 nil)
+;; Add column marker at line 80
+(require &#39;whitespace)
+(setq whitespace-style &#39;(face empty tabs lines-tail trailing))
+(global-whitespace-mode t)
+;; Indent switch-case statements
+(c-set-offset &#39;case-label &#39;+)
+;; Kill all tabs
+(setq-default indent-tabs-mode nil)
+</pre></div>
+</div>
+<section id="git-usage">
+<h2>Git usage<a class="headerlink" href="#git-usage" title="Link to this heading"></a></h2>
+<p><a class="reference external" href="https://about.gitlab.com/images/press/git-cheat-sheet.pdf">Git usage</a></p>
+<ul class="simple">
+<li><p>For all features and bugs, set up an issue on the issue tracker.</p></li>
+<li><p>Create a new branch for the issue</p>
+<ul>
+<li><p>For a feature, name the branch as “feature/&lt;issue number&gt;_&lt;issue name&gt;” and branch from <code class="docutils literal notranslate"><span class="pre">develop</span></code>.</p></li>
+<li><p>For a bug, name the branch as “hotfix/&lt;issue number&gt;_&lt;issue name&gt;” and branch from <code class="docutils literal notranslate"><span class="pre">master</span></code> (unless of course the bug is present only in <code class="docutils literal notranslate"><span class="pre">develop</span></code>).</p></li>
+</ul>
+</li>
+<li><p>Automatic tests are run after each commit.</p>
+<ul>
+<li><p>See Testing</p></li>
+<li><p>You can review the process in GitLab at <code class="docutils literal notranslate"><span class="pre">CI/CD-&gt;Pipelines</span></code>.</p></li>
+<li><p>There is a “Download artifacts” button where you can access the output produced by the tests.</p></li>
+</ul>
+</li>
+<li><p>Only permitted developers can merge to <code class="docutils literal notranslate"><span class="pre">master</span></code> as each merge corresponds to a new version.</p></li>
+</ul>
+</section>
+<section id="documentation">
+<h2>Documentation<a class="headerlink" href="#documentation" title="Link to this heading"></a></h2>
+<p>The C code is documented with the help of Doxygen.
+Here’s a sample of how the code blocks should look:</p>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm">* @file thisfile.c</span>
+<span class="cm">* @brief This file contains an example documentation.</span>
+<span class="cm">*</span>
+<span class="cm">* Longer description.</span>
+<span class="cm">*</span>
+<span class="cm">* Doxygen has a Latex support if needed:</span>
+<span class="cm">* \f$ \gamma = \sqrt{\frac{1}{1-v^2/c^2}}\f$</span>
+<span class="cm">*</span>
+<span class="cm">*/</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">variable</span><span class="w"> </span><span class="cm">/**&lt; Variable documentation */</span>
+
+<span class="cm">/**</span>
+<span class="cm">* @brief Short description of the function.</span>
+<span class="cm">*</span>
+<span class="cm">* @param arg Description of the parameter and also units if applicable.</span>
+<span class="cm">*</span>
+<span class="cm">* @return Description of the return value.</span>
+<span class="cm">*/</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">myfun</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The Python docstrings must conform to the <a class="reference external" href="https://numpydoc.readthedocs.io/en/latest/format.html">numpydoc</a> guidelines.
+<a class="reference external" href="https://developer.lsst.io/python/numpydoc.html">This</a> is a very nice guide with examples of how the docstrings should look, here’s an example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sum</span><span class="p">(</span><span class="n">values</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Sum numbers in an array.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    values : iterable</span>
+<span class="sd">        Python iterable whose values are summed.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    sum : `float`</span>
+<span class="sd">        Sum of ``values``.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+<p>Generating documentation is a two step process.</p>
+<ol class="arabic">
+<li><p>In ascot5 folder, the Doxygen documentation from C source files is compiled as</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>doxygen<span class="w"> </span>Doxyfile
+</pre></div>
+</div>
+<p>The output consists of xml files stored in <code class="docutils literal notranslate"><span class="pre">docs/_static/xml</span></code> and equivalent html files in <code class="docutils literal notranslate"><span class="pre">docs/build/capi</span></code>.</p>
+</li>
+<li><p>The actual documentation (the one you are reading) is compiled with Sphinx.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>docs
+make<span class="w"> </span>clean<span class="w"> </span>html
+firefox<span class="w"> </span>build/index.html
+</pre></div>
+</div>
+</li>
+</ol>
+<p>Note however, that the documentation is generated automatically when the code is pushed to <code class="docutils literal notranslate"><span class="pre">master</span></code> and uploaded to GitLab pages.
+Therefore you only have to compile the documentation to check that your modifications look as you expect them to look.
+Only commit source files to the repository.</p>
+<p>The Doxygen output is linked to Sphinx via <a class="reference external" href="https://breathe.readthedocs.io/en/latest/">Breathe</a>.
+The xml files allow one to reference C documentation as (see the Breathe manual for all directives and their options):</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">doxygenfunction</span><span class="p">::</span> B_field_eval_B
+</pre></div>
+</div>
+<p>which produces this output:</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv414B_field_eval_BAL3E_4real4real4real4real4realP12B_field_data">
+<span class="target" id="B__field_8h_1af9d719b1f559e39fdeacfd8527af587c"></span><span class="n"><span class="pre">a5err</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">B_field_eval_B</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">real</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">B</span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">]</span></span>, <span class="n"><span class="pre">real</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">r</span></span>, <span class="n"><span class="pre">real</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">phi</span></span>, <span class="n"><span class="pre">real</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">z</span></span>, <span class="n"><span class="pre">real</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">t</span></span>, <span class="n"><span class="pre">B_field_data</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">Bdata</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv414B_field_eval_BAL3E_4real4real4real4real4realP12B_field_data" title="Link to this definition"></a><br /></dt>
+<dd><p>Evaluate magnetic field. </p>
+<p>This function evaluates the magnetic field at the given coordinates.</p>
+<p>The values are stored in the given array as:<ul class="simple">
+<li><p>B[0] = BR</p></li>
+<li><p>B[1] = Bphi</p></li>
+<li><p>B[2] = Bz</p></li>
+</ul>
+</p>
+<p>This is a SIMD function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>B</strong> – pointer to array where magnetic field values are stored </p></li>
+<li><p><strong>r</strong> – R coordinate [m] </p></li>
+<li><p><strong>phi</strong> – phi coordinate [deg] </p></li>
+<li><p><strong>z</strong> – z coordinate [m] </p></li>
+<li><p><strong>t</strong> – time coordinate [s] </p></li>
+<li><p><strong>Bdata</strong> – pointer to magnetic field data struct</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Non-zero a5err value if evaluation failed, zero otherwise </p>
+</dd>
+</dl>
+</dd></dl>
+
+<p>However, Breathe cannot automatically construct the whole C API (as Doxygen does), especially since we have documentation in both <code class="docutils literal notranslate"><span class="pre">.c</span></code> and <code class="docutils literal notranslate"><span class="pre">.h</span></code> files, which is why we must link to the Doxygen html files directly in C API.</p>
+<p>Python docstrings are referenced via <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html">autodoc</a>:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">automethod</span><span class="p">::</span> a5py.Ascot.input_eval
+   <span class="nc">:noindex:</span>
+</pre></div>
+</div>
+<p>which produces this output:</p>
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">Ascot.</span></span><span class="sig-name descname"><span class="pre">input_eval</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">qnt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Evaluate input quantities at given coordinates.</p>
+<p>This method uses ASCOT5 C-routines for evaluating inputs exactly as
+they are evaluated during a simulation. See <a class="reference internal" href="papi/a5py.html#a5py.Ascot.input_eval_list" title="a5py.Ascot.input_eval_list"><code class="xref py py-meth docutils literal notranslate"><span class="pre">input_eval_list()</span></code></a> for
+a complete list of available input and derived quantities.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>r</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a></span></dt><dd><p>R coordinates where data is evaluated.</p>
+</dd>
+<dt><strong>phi</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a></span></dt><dd><p>phi coordinates where data is evaluated.</p>
+</dd>
+<dt><strong>z</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a></span></dt><dd><p>z coordinates where data is evaluated.</p>
+</dd>
+<dt><strong>t</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a></span></dt><dd><p>Time coordinates where data is evaluated.</p>
+</dd>
+<dt><strong>*qnt</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Names of evaluated quantities.</p>
+</dd>
+<dt><strong>grid</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Treat input coordinates as abscissae and return the evaluated
+quantities on a grid instead.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>val</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a> (n,) <code class="xref py py-obj docutils literal notranslate"><span class="pre">or</span></code> (nr,nphi,nz,nt)</span></dt><dd><p>Quantity evaluated in each queried point.</p>
+<p>NaN is returned at those points where the evaluation failed.</p>
+<p>4D matrix is returned when grid=``True``.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#AssertionError" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AssertionError</span></code></a></dt><dd><p>If required data has not been initialized.</p>
+</dd>
+<dt><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#RuntimeError" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RuntimeError</span></code></a></dt><dd><p>If evaluation in libascot.so failed.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+<section id="parallelization">
+<h1>Parallelization<a class="headerlink" href="#parallelization" title="Link to this heading"></a></h1>
+<p>TODO</p>
+</section>
+<section id="testing">
+<h1>Testing<a class="headerlink" href="#testing" title="Link to this heading"></a></h1>
+<p>TODO</p>
+</section>
+<section id="id2">
+<h1><a class="reference external" href="_static/doxygen/index.html">C API</a><a class="headerlink" href="#id2" title="Link to this heading"></a></h1>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="publishing.html" class="btn btn-neutral float-left" title="Citing ASCOT5" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="papi/a5py.html" class="btn btn-neutral float-right" title="Python API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Ascot Group.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

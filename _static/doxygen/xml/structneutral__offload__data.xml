@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structneutral__offload__data" kind="struct" language="C++" prot="public">
+    <compoundname>neutral_offload_data</compoundname>
+    <includes refid="neutral_8h" local="no">neutral.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structneutral__offload__data_1ae80d1f0afe6b39246b3894cda447aa75" prot="public" static="no" mutable="no">
+        <type><ref refid="neutral_8h_1aa0a6ec56822b958a80136b5e4e52f90c" kindref="member">neutral_type</ref></type>
+        <definition>neutral_type neutral_offload_data::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Neutral data type wrapped by this struct </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="neutral.h" line="38" column="18" bodyfile="neutral.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structneutral__offload__data_1a44ac28149c0eb6e916786e140babf068" prot="public" static="no" mutable="no">
+        <type><ref refid="structN0__1D__offload__data" kindref="compound">N0_1D_offload_data</ref></type>
+        <definition>N0_1D_offload_data neutral_offload_data::N01D</definition>
+        <argsstring></argsstring>
+        <name>N01D</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>1D field or NULL if not active <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="neutral.h" line="39" column="24" bodyfile="neutral.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structneutral__offload__data_1aa654cf43d929b914aabf59069acd3bee" prot="public" static="no" mutable="no">
+        <type><ref refid="structN0__3D__offload__data" kindref="compound">N0_3D_offload_data</ref></type>
+        <definition>N0_3D_offload_data neutral_offload_data::N03D</definition>
+        <argsstring></argsstring>
+        <name>N03D</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>3D field or NULL if not active <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="neutral.h" line="40" column="24" bodyfile="neutral.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structneutral__offload__data_1a810393cd7efe91e792a4739ec8d5b07e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int neutral_offload_data::offload_array_length</definition>
+        <argsstring></argsstring>
+        <name>offload_array_length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Allocated offload array length <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="neutral.h" line="41" column="9" bodyfile="neutral.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Neutral offload data. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This struct holds data necessary for offloading. The struct is initialized in <ref refid="neutral_8c_1a03b2d5b4210a3fa7c4405c68008ec8a9" kindref="member">neutral_init_offload()</ref>.</para>
+<para>The intended usage is that only single offload data is used at the time, and the type of the data is declared with the &quot;type&quot; field. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>N0_1D_offload_data</label>
+        <link refid="structN0__1D__offload__data"/>
+      </node>
+      <node id="1">
+        <label>neutral_offload_data</label>
+        <link refid="structneutral__offload__data"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>N03D</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>N01D</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>N0_3D_offload_data</label>
+        <link refid="structN0__3D__offload__data"/>
+      </node>
+    </collaborationgraph>
+    <location file="neutral.h" line="37" column="1" bodyfile="neutral.h" bodystart="37" bodyend="42"/>
+    <listofallmembers>
+      <member refid="structneutral__offload__data_1a44ac28149c0eb6e916786e140babf068" prot="public" virt="non-virtual"><scope>neutral_offload_data</scope><name>N01D</name></member>
+      <member refid="structneutral__offload__data_1aa654cf43d929b914aabf59069acd3bee" prot="public" virt="non-virtual"><scope>neutral_offload_data</scope><name>N03D</name></member>
+      <member refid="structneutral__offload__data_1a810393cd7efe91e792a4739ec8d5b07e" prot="public" virt="non-virtual"><scope>neutral_offload_data</scope><name>offload_array_length</name></member>
+      <member refid="structneutral__offload__data_1ae80d1f0afe6b39246b3894cda447aa75" prot="public" virt="non-virtual"><scope>neutral_offload_data</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

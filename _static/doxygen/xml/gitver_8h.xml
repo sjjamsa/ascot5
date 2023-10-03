@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="gitver_8h" kind="file" language="C++">
+    <compoundname>gitver.h</compoundname>
+    <includedby refid="afsi_8c" local="yes">afsi.c</includedby>
+    <includedby refid="ascot5__main_8c" local="yes">ascot5_main.c</includedby>
+    <includedby refid="bbnbi5_8c" local="yes">bbnbi5.c</includedby>
+    <includedby refid="hdf5__interface_8c" local="yes">hdf5_interface.c</includedby>
+    <includedby refid="libascot_8c" local="yes">libascot.c</includedby>
+    <invincdepgraph>
+      <node id="3">
+        <label>ascot5_main.c</label>
+        <link refid="ascot5__main_8c"/>
+      </node>
+      <node id="1">
+        <label>gitver.h</label>
+        <link refid="gitver_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>afsi.c</label>
+        <link refid="afsi_8c"/>
+      </node>
+      <node id="6">
+        <label>libascot.c</label>
+        <link refid="libascot_8c"/>
+      </node>
+      <node id="5">
+        <label>hdf5_interface.c</label>
+        <link refid="hdf5__interface_8c"/>
+      </node>
+      <node id="4">
+        <label>bbnbi5.c</label>
+        <link refid="bbnbi5_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="gitver_8h_1a7ab819159b629e161680ad17069ce2d9" prot="public" static="no">
+        <name>GIT_BRANCH</name>
+        <initializer>&quot;feature/8-merging-python-and-c-repositories&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gitver.h" line="4" column="9" bodyfile="gitver.h" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="gitver_8h_1aef0b5124fcadf80db529fcb6df42808a" prot="public" static="no">
+        <name>GIT_VERSION</name>
+        <initializer>&quot;fca5521&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gitver.h" line="5" column="9" bodyfile="gitver.h" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>GITVER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GITVER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GIT_BRANCH<sp/>&quot;feature/8-merging-python-and-c-repositories&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GIT_VERSION<sp/>&quot;fca5521&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="gitver.h"/>
+  </compounddef>
+</doxygen>

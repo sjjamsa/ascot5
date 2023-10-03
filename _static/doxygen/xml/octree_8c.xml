@@ -1,0 +1,464 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="octree_8c" kind="file" language="C++">
+    <compoundname>octree.c</compoundname>
+    <includes local="no">stdlib.h</includes>
+    <includes refid="ascot5_8h" local="yes">ascot5.h</includes>
+    <includes refid="octree_8h" local="yes">octree.h</includes>
+    <includes refid="list_8h" local="yes">list.h</includes>
+    <includes refid="wall__3d_8h" local="yes">wall/wall_3d.h</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>stdlib.h</label>
+      </node>
+      <node id="4">
+        <label>omp.h</label>
+      </node>
+      <node id="1">
+        <label>octree.c</label>
+        <link refid="octree_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>octree.h</label>
+        <link refid="octree_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>time.h</label>
+      </node>
+      <node id="8">
+        <label>wall/wall_3d.h</label>
+        <link refid="wall__3d_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>list.h</label>
+        <link refid="list_8h"/>
+      </node>
+      <node id="3">
+        <label>ascot5.h</label>
+        <link refid="ascot5_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="octree_8c_1a63644b2d301b5599dff501129f610669" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void octree_create</definition>
+        <argsstring>(octree_node **node, real x_min, real x_max, real y_min, real y_max, real z_min, real z_max, int depth)</argsstring>
+        <name>octree_create</name>
+        <param>
+          <type><ref refid="structoctree__node" kindref="compound">octree_node</ref> **</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>x_min</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>x_max</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>y_min</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>y_max</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>z_min</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>z_max</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>depth</declname>
+        </param>
+        <briefdescription>
+<para>Create octree of given depth. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function creates recursively a complete octree hierarchy with given number of levels. Each node have bounding box asigned and there is a small overlap between the boxes to avoid numerical artifact where a point is exactly between two boxes but belongs to neither.</para>
+<para>The linked lists on leaf nodes are initialized.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to parent node from which the octree sprawls </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x_min</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>minimum x coordinate of the parent node </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x_max</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>maximum x coordinate of the parent node </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y_min</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>minimum y coordinate of the parent node </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y_max</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>maximum y coordinate of the parent node </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z_min</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>minimum z coordinate of the parent node </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z_max</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>maximum z coordinate of the parent node </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>depth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>levels of octree nodes to be created. If depth=1, this node will be a leaf node. Final volume will be 1/8^(depth-1) th of the initial volume. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="octree.c" line="46" column="6" bodyfile="octree.c" bodystart="46" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="octree_8c_1a5ebab3217beacb1201887631a364e75e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void octree_free</definition>
+        <argsstring>(octree_node **node)</argsstring>
+        <name>octree_free</name>
+        <param>
+          <type><ref refid="structoctree__node" kindref="compound">octree_node</ref> **</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+<para>Free octree node and all its child nodes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Deallocates node and its child node recursively. Linked lists are also freed.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to octree node </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="octree.c" line="91" column="6" bodyfile="octree.c" bodystart="91" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="octree_8c_1a32d0722050bcdd7588e9fb80566d3421" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void octree_add</definition>
+        <argsstring>(octree_node *node, real t1[3], real t2[3], real t3[3], int id)</argsstring>
+        <name>octree_add</name>
+        <param>
+          <type><ref refid="structoctree__node" kindref="compound">octree_node</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>t1</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>t2</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>t3</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Add triangle to the node(s) it belongs to. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function uses recursion to travel the octree and find all leaf nodes the given triangle belongs to.In other words, at each step this function determines the child node(s) the triangle belongs to and calls this function for that/those node(s).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>octree node to which or to which child nodes triangle is added to </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>triangle first vertex xyz coordinates </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>triangle second vertex xyz coordinates </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t3</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>triangle third vertex xyz coordinates </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>triangle id which is stored in the node(s) the triangle belongs to </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="octree.c" line="123" column="6" bodyfile="octree.c" bodystart="123" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="octree_8c_1a306a13544a6a82c24220688cef615839" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structlist__int__node" kindref="compound">list_int_node</ref> *</type>
+        <definition>list_int_node* octree_get</definition>
+        <argsstring>(octree_node *node, real p[3])</argsstring>
+        <name>octree_get</name>
+        <param>
+          <type><ref refid="structoctree__node" kindref="compound">octree_node</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>p</declname>
+          <array>[3]</array>
+        </param>
+        <briefdescription>
+<para>Get that leaf node&apos;s linked list the given coordinate belongs to. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function uses recursion to travel through the octree, determining at each step the correct branch to follow next until the leaf node is found. In other words, at each step this function determines the child node the point belongs to and calls this function for that node.</para>
+<para>The point is assumed to belong to the volume of the node used in the argument.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>octree node that is traversed </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>xyz coordinates of the point</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>linked list of the leaf node given point belongs to </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="octree.c" line="164" column="15" bodyfile="octree.c" bodystart="164" bodyend="194"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Simple octree for storing triangles. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>In octree each node branches to eight childnodes. Octree is used to repeatedly divide volume to eight boxes of equal size and volume until the volume in the leaf nodes is of desired size. Boxes are aligned to cartesian basis vectors.</para>
+<para>This particular octree is intended to be used to group 3D triangles so that a triangle is assigned to an octree node whose volume the triangle belongs to. A triangle belongs to a volume if even one of its vertices is in that volume. One triangle can therefore belong to several octree leaf nodes. Only leaf nodes store triangles.</para>
+<para>This module is used for an efficient collision check in 3D wall model. <simplesect kind="see"><para><ref refid="wall__3d_8c" kindref="compound">wall_3d.c</ref> </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ascot5_8h" kindref="compound">ascot5.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="octree_8h" kindref="compound">octree.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="list_8h" kindref="compound">list.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="wall__3d_8h" kindref="compound">wall/wall_3d.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="octree_8c_1a63644b2d301b5599dff501129f610669" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="octree_8c_1a63644b2d301b5599dff501129f610669" kindref="member">octree_create</ref>(<ref refid="structoctree__node" kindref="compound">octree_node</ref>**<sp/>node,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>x_min,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>x_max,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>y_min,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>y_max,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z_min,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z_max,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>depth)<sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structoctree__node" kindref="compound">octree_node</ref>*<sp/>n<sp/>=<sp/>(<ref refid="structoctree__node" kindref="compound">octree_node</ref>*)<sp/>malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structoctree__node" kindref="compound">octree_node</ref>));</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>(*node)<sp/>=<sp/>n;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>epsilon<sp/>=<sp/>1e-6;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>n-&gt;<ref refid="structoctree__node_1aee2ae825426068a21c0ccbb53a74b19e" kindref="member">bb1</ref>[0]<sp/>=<sp/>x_min<sp/>-<sp/>epsilon;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>n-&gt;<ref refid="structoctree__node_1ae5361d18f21865eedf17276d01f9b293" kindref="member">bb2</ref>[0]<sp/>=<sp/>x_max<sp/>+<sp/>epsilon;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>n-&gt;<ref refid="structoctree__node_1aee2ae825426068a21c0ccbb53a74b19e" kindref="member">bb1</ref>[1]<sp/>=<sp/>y_min<sp/>-<sp/>epsilon;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>n-&gt;<ref refid="structoctree__node_1ae5361d18f21865eedf17276d01f9b293" kindref="member">bb2</ref>[1]<sp/>=<sp/>y_max<sp/>+<sp/>epsilon;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>n-&gt;<ref refid="structoctree__node_1aee2ae825426068a21c0ccbb53a74b19e" kindref="member">bb1</ref>[2]<sp/>=<sp/>z_min<sp/>-<sp/>epsilon;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>n-&gt;<ref refid="structoctree__node_1ae5361d18f21865eedf17276d01f9b293" kindref="member">bb2</ref>[2]<sp/>=<sp/>z_max<sp/>+<sp/>epsilon;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>x<sp/>=<sp/>(x_max<sp/>+<sp/>x_min)<sp/>/<sp/>2;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>y<sp/>=<sp/>(y_max<sp/>+<sp/>y_min)<sp/>/<sp/>2;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z<sp/>=<sp/>(z_max<sp/>+<sp/>z_min)<sp/>/<sp/>2;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(depth<sp/>&gt;<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="octree_8c_1a63644b2d301b5599dff501129f610669" kindref="member">octree_create</ref>(&amp;(n-&gt;<ref refid="structoctree__node_1a911069e224e60ce175fbf39cb4758027" kindref="member">n000</ref>),<sp/>x_min,<sp/>x,<sp/>y_min,<sp/>y,<sp/>z_min,<sp/>z,<sp/>depth-1);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="octree_8c_1a63644b2d301b5599dff501129f610669" kindref="member">octree_create</ref>(&amp;(n-&gt;<ref refid="structoctree__node_1a22e9a3943b47110c176162bc57a97f7a" kindref="member">n100</ref>),<sp/>x,<sp/>x_max,<sp/>y_min,<sp/>y,<sp/>z_min,<sp/>z,<sp/>depth-1);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="octree_8c_1a63644b2d301b5599dff501129f610669" kindref="member">octree_create</ref>(&amp;(n-&gt;<ref refid="structoctree__node_1a7fb5eaad0555e9f7a690a41d14ba28fb" kindref="member">n010</ref>),<sp/>x_min,<sp/>x,<sp/>y,<sp/>y_max,<sp/>z_min,<sp/>z,<sp/>depth-1);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="octree_8c_1a63644b2d301b5599dff501129f610669" kindref="member">octree_create</ref>(&amp;(n-&gt;<ref refid="structoctree__node_1a5c52aeddf75c68eb523d678843d8b4a2" kindref="member">n110</ref>),<sp/>x,<sp/>x_max,<sp/>y,<sp/>y_max,<sp/>z_min,<sp/>z,<sp/>depth-1);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="octree_8c_1a63644b2d301b5599dff501129f610669" kindref="member">octree_create</ref>(&amp;(n-&gt;<ref refid="structoctree__node_1ac5f6ca553e03f7f0231cfa0cbf389973" kindref="member">n001</ref>),<sp/>x_min,<sp/>x,<sp/>y_min,<sp/>y,<sp/>z,<sp/>z_max,<sp/>depth-1);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="octree_8c_1a63644b2d301b5599dff501129f610669" kindref="member">octree_create</ref>(&amp;(n-&gt;<ref refid="structoctree__node_1a40b97a6730843e85bbe54d0100dfda23" kindref="member">n101</ref>),<sp/>x,<sp/>x_max,<sp/>y_min,<sp/>y,<sp/>z,<sp/>z_max,<sp/>depth-1);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="octree_8c_1a63644b2d301b5599dff501129f610669" kindref="member">octree_create</ref>(&amp;(n-&gt;<ref refid="structoctree__node_1acb0684d532942d932ec8d537bfb05dd7" kindref="member">n011</ref>),<sp/>x_min,<sp/>x,<sp/>y,<sp/>y_max,<sp/>z,<sp/>z_max,<sp/>depth-1);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="octree_8c_1a63644b2d301b5599dff501129f610669" kindref="member">octree_create</ref>(&amp;(n-&gt;<ref refid="structoctree__node_1a2c3b85d22ac7bd7dc32f54a965f4c6c0" kindref="member">n111</ref>),<sp/>x,<sp/>x_max,<sp/>y,<sp/>y_max,<sp/>z,<sp/>z_max,<sp/>depth-1);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n-&gt;<ref refid="structoctree__node_1ae1ca6ddb4989d9d1397602ef6ea9e9af" kindref="member">list</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n-&gt;<ref refid="structoctree__node_1a911069e224e60ce175fbf39cb4758027" kindref="member">n000</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n-&gt;<ref refid="structoctree__node_1a22e9a3943b47110c176162bc57a97f7a" kindref="member">n100</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n-&gt;<ref refid="structoctree__node_1a7fb5eaad0555e9f7a690a41d14ba28fb" kindref="member">n010</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n-&gt;<ref refid="structoctree__node_1a5c52aeddf75c68eb523d678843d8b4a2" kindref="member">n110</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n-&gt;<ref refid="structoctree__node_1ac5f6ca553e03f7f0231cfa0cbf389973" kindref="member">n001</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n-&gt;<ref refid="structoctree__node_1a40b97a6730843e85bbe54d0100dfda23" kindref="member">n101</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n-&gt;<ref refid="structoctree__node_1acb0684d532942d932ec8d537bfb05dd7" kindref="member">n011</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n-&gt;<ref refid="structoctree__node_1a2c3b85d22ac7bd7dc32f54a965f4c6c0" kindref="member">n111</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="list_8c_1a70697e3c4840b3fcf44b559461bcee95" kindref="member">list_int_create</ref>(&amp;(n-&gt;<ref refid="structoctree__node_1ae1ca6ddb4989d9d1397602ef6ea9e9af" kindref="member">list</ref>));</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="octree_8c_1a5ebab3217beacb1201887631a364e75e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="octree_8c_1a5ebab3217beacb1201887631a364e75e" kindref="member">octree_free</ref>(<ref refid="structoctree__node" kindref="compound">octree_node</ref>**<sp/>node)<sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">((*node)-&gt;n000<sp/>!=<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="octree_8c_1a5ebab3217beacb1201887631a364e75e" kindref="member">octree_free</ref>(<sp/>&amp;((*node)-&gt;n000)<sp/>);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="octree_8c_1a5ebab3217beacb1201887631a364e75e" kindref="member">octree_free</ref>(<sp/>&amp;((*node)-&gt;n100)<sp/>);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="octree_8c_1a5ebab3217beacb1201887631a364e75e" kindref="member">octree_free</ref>(<sp/>&amp;((*node)-&gt;n010)<sp/>);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="octree_8c_1a5ebab3217beacb1201887631a364e75e" kindref="member">octree_free</ref>(<sp/>&amp;((*node)-&gt;n110)<sp/>);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="octree_8c_1a5ebab3217beacb1201887631a364e75e" kindref="member">octree_free</ref>(<sp/>&amp;((*node)-&gt;n001)<sp/>);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="octree_8c_1a5ebab3217beacb1201887631a364e75e" kindref="member">octree_free</ref>(<sp/>&amp;((*node)-&gt;n101)<sp/>);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="octree_8c_1a5ebab3217beacb1201887631a364e75e" kindref="member">octree_free</ref>(<sp/>&amp;((*node)-&gt;n011)<sp/>);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="octree_8c_1a5ebab3217beacb1201887631a364e75e" kindref="member">octree_free</ref>(<sp/>&amp;((*node)-&gt;n111)<sp/>);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="list_8c_1a943d55eeecebb0294df81d701902d39d" kindref="member">list_int_free</ref>(<sp/>&amp;((*node)-&gt;list)<sp/>);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>free(*node);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>*node<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123" refid="octree_8c_1a32d0722050bcdd7588e9fb80566d3421" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="octree_8c_1a32d0722050bcdd7588e9fb80566d3421" kindref="member">octree_add</ref>(<ref refid="structoctree__node" kindref="compound">octree_node</ref>*<sp/>node,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>t1[3],<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>t2[3],<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>t3[3],<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(node-&gt;<ref refid="structoctree__node_1a911069e224e60ce175fbf39cb4758027" kindref="member">n000</ref><sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>leaf<sp/>node,<sp/>add<sp/>the<sp/>triangle<sp/>to<sp/>the<sp/>list<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="list_8c_1ab95c10f1bed735ac4b9a6a44165028ab" kindref="member">list_int_add</ref>(node-&gt;<ref refid="structoctree__node_1ae1ca6ddb4989d9d1397602ef6ea9e9af" kindref="member">list</ref>,<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="wall__3d_8c_1a10ecf6ad1ca68351067111cf6dfdec9b" kindref="member">wall_3d_tri_in_cube</ref>(t1,<sp/>t2,<sp/>t3,<sp/>node-&gt;<ref refid="structoctree__node_1a911069e224e60ce175fbf39cb4758027" kindref="member">n000</ref>-&gt;<ref refid="structoctree__node_1aee2ae825426068a21c0ccbb53a74b19e" kindref="member">bb1</ref>,<sp/>node-&gt;<ref refid="structoctree__node_1a911069e224e60ce175fbf39cb4758027" kindref="member">n000</ref>-&gt;<ref refid="structoctree__node_1ae5361d18f21865eedf17276d01f9b293" kindref="member">bb2</ref>)&gt;0)</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="octree_8c_1a32d0722050bcdd7588e9fb80566d3421" kindref="member">octree_add</ref>(node-&gt;<ref refid="structoctree__node_1a911069e224e60ce175fbf39cb4758027" kindref="member">n000</ref>,<sp/>t1,<sp/>t2,<sp/>t3,<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="wall__3d_8c_1a10ecf6ad1ca68351067111cf6dfdec9b" kindref="member">wall_3d_tri_in_cube</ref>(t1,<sp/>t2,<sp/>t3,<sp/>node-&gt;<ref refid="structoctree__node_1a22e9a3943b47110c176162bc57a97f7a" kindref="member">n100</ref>-&gt;<ref refid="structoctree__node_1aee2ae825426068a21c0ccbb53a74b19e" kindref="member">bb1</ref>,<sp/>node-&gt;<ref refid="structoctree__node_1a22e9a3943b47110c176162bc57a97f7a" kindref="member">n100</ref>-&gt;<ref refid="structoctree__node_1ae5361d18f21865eedf17276d01f9b293" kindref="member">bb2</ref>)&gt;0)</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="octree_8c_1a32d0722050bcdd7588e9fb80566d3421" kindref="member">octree_add</ref>(node-&gt;<ref refid="structoctree__node_1a22e9a3943b47110c176162bc57a97f7a" kindref="member">n100</ref>,<sp/>t1,<sp/>t2,<sp/>t3,<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="wall__3d_8c_1a10ecf6ad1ca68351067111cf6dfdec9b" kindref="member">wall_3d_tri_in_cube</ref>(t1,<sp/>t2,<sp/>t3,<sp/>node-&gt;<ref refid="structoctree__node_1a7fb5eaad0555e9f7a690a41d14ba28fb" kindref="member">n010</ref>-&gt;<ref refid="structoctree__node_1aee2ae825426068a21c0ccbb53a74b19e" kindref="member">bb1</ref>,<sp/>node-&gt;<ref refid="structoctree__node_1a7fb5eaad0555e9f7a690a41d14ba28fb" kindref="member">n010</ref>-&gt;<ref refid="structoctree__node_1ae5361d18f21865eedf17276d01f9b293" kindref="member">bb2</ref>)&gt;0)</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="octree_8c_1a32d0722050bcdd7588e9fb80566d3421" kindref="member">octree_add</ref>(node-&gt;<ref refid="structoctree__node_1a7fb5eaad0555e9f7a690a41d14ba28fb" kindref="member">n010</ref>,<sp/>t1,<sp/>t2,<sp/>t3,<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="wall__3d_8c_1a10ecf6ad1ca68351067111cf6dfdec9b" kindref="member">wall_3d_tri_in_cube</ref>(t1,<sp/>t2,<sp/>t3,<sp/>node-&gt;<ref refid="structoctree__node_1a5c52aeddf75c68eb523d678843d8b4a2" kindref="member">n110</ref>-&gt;<ref refid="structoctree__node_1aee2ae825426068a21c0ccbb53a74b19e" kindref="member">bb1</ref>,<sp/>node-&gt;<ref refid="structoctree__node_1a5c52aeddf75c68eb523d678843d8b4a2" kindref="member">n110</ref>-&gt;<ref refid="structoctree__node_1ae5361d18f21865eedf17276d01f9b293" kindref="member">bb2</ref>)&gt;0)</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="octree_8c_1a32d0722050bcdd7588e9fb80566d3421" kindref="member">octree_add</ref>(node-&gt;<ref refid="structoctree__node_1a5c52aeddf75c68eb523d678843d8b4a2" kindref="member">n110</ref>,<sp/>t1,<sp/>t2,<sp/>t3,<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="wall__3d_8c_1a10ecf6ad1ca68351067111cf6dfdec9b" kindref="member">wall_3d_tri_in_cube</ref>(t1,<sp/>t2,<sp/>t3,<sp/>node-&gt;<ref refid="structoctree__node_1ac5f6ca553e03f7f0231cfa0cbf389973" kindref="member">n001</ref>-&gt;<ref refid="structoctree__node_1aee2ae825426068a21c0ccbb53a74b19e" kindref="member">bb1</ref>,<sp/>node-&gt;<ref refid="structoctree__node_1ac5f6ca553e03f7f0231cfa0cbf389973" kindref="member">n001</ref>-&gt;<ref refid="structoctree__node_1ae5361d18f21865eedf17276d01f9b293" kindref="member">bb2</ref>)&gt;0)</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="octree_8c_1a32d0722050bcdd7588e9fb80566d3421" kindref="member">octree_add</ref>(node-&gt;<ref refid="structoctree__node_1ac5f6ca553e03f7f0231cfa0cbf389973" kindref="member">n001</ref>,<sp/>t1,<sp/>t2,<sp/>t3,<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="wall__3d_8c_1a10ecf6ad1ca68351067111cf6dfdec9b" kindref="member">wall_3d_tri_in_cube</ref>(t1,<sp/>t2,<sp/>t3,<sp/>node-&gt;<ref refid="structoctree__node_1a40b97a6730843e85bbe54d0100dfda23" kindref="member">n101</ref>-&gt;<ref refid="structoctree__node_1aee2ae825426068a21c0ccbb53a74b19e" kindref="member">bb1</ref>,<sp/>node-&gt;<ref refid="structoctree__node_1a40b97a6730843e85bbe54d0100dfda23" kindref="member">n101</ref>-&gt;<ref refid="structoctree__node_1ae5361d18f21865eedf17276d01f9b293" kindref="member">bb2</ref>)&gt;0)</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="octree_8c_1a32d0722050bcdd7588e9fb80566d3421" kindref="member">octree_add</ref>(node-&gt;<ref refid="structoctree__node_1a40b97a6730843e85bbe54d0100dfda23" kindref="member">n101</ref>,<sp/>t1,<sp/>t2,<sp/>t3,<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="wall__3d_8c_1a10ecf6ad1ca68351067111cf6dfdec9b" kindref="member">wall_3d_tri_in_cube</ref>(t1,<sp/>t2,<sp/>t3,<sp/>node-&gt;<ref refid="structoctree__node_1acb0684d532942d932ec8d537bfb05dd7" kindref="member">n011</ref>-&gt;<ref refid="structoctree__node_1aee2ae825426068a21c0ccbb53a74b19e" kindref="member">bb1</ref>,<sp/>node-&gt;<ref refid="structoctree__node_1acb0684d532942d932ec8d537bfb05dd7" kindref="member">n011</ref>-&gt;<ref refid="structoctree__node_1ae5361d18f21865eedf17276d01f9b293" kindref="member">bb2</ref>)&gt;0)</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="octree_8c_1a32d0722050bcdd7588e9fb80566d3421" kindref="member">octree_add</ref>(node-&gt;<ref refid="structoctree__node_1acb0684d532942d932ec8d537bfb05dd7" kindref="member">n011</ref>,<sp/>t1,<sp/>t2,<sp/>t3,<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="wall__3d_8c_1a10ecf6ad1ca68351067111cf6dfdec9b" kindref="member">wall_3d_tri_in_cube</ref>(t1,<sp/>t2,<sp/>t3,<sp/>node-&gt;<ref refid="structoctree__node_1a2c3b85d22ac7bd7dc32f54a965f4c6c0" kindref="member">n111</ref>-&gt;<ref refid="structoctree__node_1aee2ae825426068a21c0ccbb53a74b19e" kindref="member">bb1</ref>,<sp/>node-&gt;<ref refid="structoctree__node_1a2c3b85d22ac7bd7dc32f54a965f4c6c0" kindref="member">n111</ref>-&gt;<ref refid="structoctree__node_1ae5361d18f21865eedf17276d01f9b293" kindref="member">bb2</ref>)&gt;0)</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="octree_8c_1a32d0722050bcdd7588e9fb80566d3421" kindref="member">octree_add</ref>(node-&gt;<ref refid="structoctree__node_1a2c3b85d22ac7bd7dc32f54a965f4c6c0" kindref="member">n111</ref>,<sp/>t1,<sp/>t2,<sp/>t3,<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164" refid="octree_8c_1a306a13544a6a82c24220688cef615839" refkind="member"><highlight class="normal"><ref refid="structlist__int__node" kindref="compound">list_int_node</ref>*<sp/><ref refid="octree_8c_1a306a13544a6a82c24220688cef615839" kindref="member">octree_get</ref>(<ref refid="structoctree__node" kindref="compound">octree_node</ref>*<sp/>node,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>p[3])<sp/>{</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(node-&gt;<ref refid="structoctree__node_1a911069e224e60ce175fbf39cb4758027" kindref="member">n000</ref><sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>node-&gt;<ref refid="structoctree__node_1ae1ca6ddb4989d9d1397602ef6ea9e9af" kindref="member">list</ref>;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>x<sp/>=<sp/>(node-&gt;<ref refid="structoctree__node_1aee2ae825426068a21c0ccbb53a74b19e" kindref="member">bb1</ref>[0]<sp/>+<sp/>node-&gt;<ref refid="structoctree__node_1ae5361d18f21865eedf17276d01f9b293" kindref="member">bb2</ref>[0])<sp/>/<sp/>2;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>y<sp/>=<sp/>(node-&gt;<ref refid="structoctree__node_1aee2ae825426068a21c0ccbb53a74b19e" kindref="member">bb1</ref>[1]<sp/>+<sp/>node-&gt;<ref refid="structoctree__node_1ae5361d18f21865eedf17276d01f9b293" kindref="member">bb2</ref>[1])<sp/>/<sp/>2;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z<sp/>=<sp/>(node-&gt;<ref refid="structoctree__node_1aee2ae825426068a21c0ccbb53a74b19e" kindref="member">bb1</ref>[2]<sp/>+<sp/>node-&gt;<ref refid="structoctree__node_1ae5361d18f21865eedf17276d01f9b293" kindref="member">bb2</ref>[2])<sp/>/<sp/>2;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(p[0]<sp/>&lt;<sp/>x<sp/>&amp;&amp;<sp/>p[1]<sp/>&lt;<sp/>y<sp/>&amp;&amp;<sp/>p[2]<sp/>&lt;<sp/>z)</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="octree_8c_1a306a13544a6a82c24220688cef615839" kindref="member">octree_get</ref>(node-&gt;<ref refid="structoctree__node_1a911069e224e60ce175fbf39cb4758027" kindref="member">n000</ref>,<sp/>p);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(p[0]<sp/>&gt;<sp/>x<sp/>&amp;&amp;<sp/>p[1]<sp/>&lt;<sp/>y<sp/>&amp;&amp;<sp/>p[2]<sp/>&lt;<sp/>z)</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="octree_8c_1a306a13544a6a82c24220688cef615839" kindref="member">octree_get</ref>(node-&gt;<ref refid="structoctree__node_1a22e9a3943b47110c176162bc57a97f7a" kindref="member">n100</ref>,<sp/>p);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(p[0]<sp/>&lt;<sp/>x<sp/>&amp;&amp;<sp/>p[1]<sp/>&gt;<sp/>y<sp/>&amp;&amp;<sp/>p[2]<sp/>&lt;<sp/>z)</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="octree_8c_1a306a13544a6a82c24220688cef615839" kindref="member">octree_get</ref>(node-&gt;<ref refid="structoctree__node_1a7fb5eaad0555e9f7a690a41d14ba28fb" kindref="member">n010</ref>,<sp/>p);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(p[0]<sp/>&gt;<sp/>x<sp/>&amp;&amp;<sp/>p[1]<sp/>&gt;<sp/>y<sp/>&amp;&amp;<sp/>p[2]<sp/>&lt;<sp/>z)</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="octree_8c_1a306a13544a6a82c24220688cef615839" kindref="member">octree_get</ref>(node-&gt;<ref refid="structoctree__node_1a5c52aeddf75c68eb523d678843d8b4a2" kindref="member">n110</ref>,<sp/>p);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(p[0]<sp/>&lt;<sp/>x<sp/>&amp;&amp;<sp/>p[1]<sp/>&lt;<sp/>y<sp/>&amp;&amp;<sp/>p[2]<sp/>&gt;<sp/>z)</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="octree_8c_1a306a13544a6a82c24220688cef615839" kindref="member">octree_get</ref>(node-&gt;<ref refid="structoctree__node_1ac5f6ca553e03f7f0231cfa0cbf389973" kindref="member">n001</ref>,<sp/>p);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(p[0]<sp/>&gt;<sp/>x<sp/>&amp;&amp;<sp/>p[1]<sp/>&lt;<sp/>y<sp/>&amp;&amp;<sp/>p[2]<sp/>&gt;<sp/>z)</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="octree_8c_1a306a13544a6a82c24220688cef615839" kindref="member">octree_get</ref>(node-&gt;<ref refid="structoctree__node_1a40b97a6730843e85bbe54d0100dfda23" kindref="member">n101</ref>,<sp/>p);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(p[0]<sp/>&lt;<sp/>x<sp/>&amp;&amp;<sp/>p[1]<sp/>&gt;<sp/>y<sp/>&amp;&amp;<sp/>p[2]<sp/>&gt;<sp/>z)</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="octree_8c_1a306a13544a6a82c24220688cef615839" kindref="member">octree_get</ref>(node-&gt;<ref refid="structoctree__node_1acb0684d532942d932ec8d537bfb05dd7" kindref="member">n011</ref>,<sp/>p);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(p[0]<sp/>&gt;<sp/>x<sp/>&amp;&amp;<sp/>p[1]<sp/>&gt;<sp/>y<sp/>&amp;&amp;<sp/>p[2]<sp/>&gt;<sp/>z)</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="octree_8c_1a306a13544a6a82c24220688cef615839" kindref="member">octree_get</ref>(node-&gt;<ref refid="structoctree__node_1a2c3b85d22ac7bd7dc32f54a965f4c6c0" kindref="member">n111</ref>,<sp/>p);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>We<sp/>should<sp/>not<sp/>ever<sp/>get<sp/>here<sp/>but<sp/>this</highlight></codeline>
+<codeline lineno="192"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>supresses<sp/>compiler<sp/>warnings.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="octree.c"/>
+  </compounddef>
+</doxygen>

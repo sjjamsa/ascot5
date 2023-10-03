@@ -1,0 +1,257 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="list_8h" kind="file" language="C++">
+    <compoundname>list.h</compoundname>
+    <includedby refid="list_8c" local="yes">list.c</includedby>
+    <includedby refid="octree_8c" local="yes">octree.c</includedby>
+    <includedby refid="octree_8h" local="yes">octree.h</includedby>
+    <includedby refid="wall__3d_8c" local="yes">wall/wall_3d.c</includedby>
+    <invincdepgraph>
+      <node id="3">
+        <label>octree.c</label>
+        <link refid="octree_8c"/>
+      </node>
+      <node id="4">
+        <label>octree.h</label>
+        <link refid="octree_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>wall/wall_3d.c</label>
+        <link refid="wall__3d_8c"/>
+      </node>
+      <node id="2">
+        <label>list.c</label>
+        <link refid="list_8c"/>
+      </node>
+      <node id="1">
+        <label>list.h</label>
+        <link refid="list_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structlist__int__node" prot="public">list_int_node</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="list_8h_1ab693949cbe60753dea5fae3653186a29" prot="public" static="no">
+        <type>struct <ref refid="structlist__int__node" kindref="compound">list_int_node</ref></type>
+        <definition>typedef struct list_int_node list_int_node</definition>
+        <argsstring></argsstring>
+        <name>list_int_node</name>
+        <briefdescription>
+<para>Linked list node that stores int data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="list.h" line="14" column="15"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="list_8h_1a70697e3c4840b3fcf44b559461bcee95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void list_int_create</definition>
+        <argsstring>(list_int_node **list)</argsstring>
+        <name>list_int_create</name>
+        <param>
+          <type><ref refid="structlist__int__node" kindref="compound">list_int_node</ref> **</type>
+          <declname>list</declname>
+        </param>
+        <briefdescription>
+<para>Create an empty list. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>list</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the created list </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="list.h" line="17" column="6" bodyfile="list.c" bodystart="16" bodyend="21" declfile="list.h" declline="17" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="list_8h_1a943d55eeecebb0294df81d701902d39d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void list_int_free</definition>
+        <argsstring>(list_int_node **list)</argsstring>
+        <name>list_int_free</name>
+        <param>
+          <type><ref refid="structlist__int__node" kindref="compound">list_int_node</ref> **</type>
+          <declname>list</declname>
+        </param>
+        <briefdescription>
+<para>Deallocate this list and all lists it is linked to. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>list</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the list to be freed </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="list.h" line="18" column="6" bodyfile="list.c" bodystart="28" bodyend="40" declfile="list.h" declline="18" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="list_8h_1ab95c10f1bed735ac4b9a6a44165028ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void list_int_add</definition>
+        <argsstring>(list_int_node *list, int data)</argsstring>
+        <name>list_int_add</name>
+        <param>
+          <type><ref refid="structlist__int__node" kindref="compound">list_int_node</ref> *</type>
+          <declname>list</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Add new node to the end of the chain. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>list</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>list node to which new node is linked </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int value to be stored in the new node </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="list.h" line="19" column="6" bodyfile="list.c" bodystart="48" bodyend="59" declfile="list.h" declline="19" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="list_8h_1a9c9fa192f1ea90f504111ddc60a29bf6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int list_int_get</definition>
+        <argsstring>(list_int_node *list, int index)</argsstring>
+        <name>list_int_get</name>
+        <param>
+          <type><ref refid="structlist__int__node" kindref="compound">list_int_node</ref> *</type>
+          <declname>list</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve the data stored in a list node. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>list</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>list node </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>node index where data is retrieved, zero refers to current node</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the stored data </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="list.h" line="20" column="5" bodyfile="list.c" bodystart="69" bodyend="77" declfile="list.h" declline="20" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="list_8h_1a4933c31867750b9a47274aa813c0d1bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int list_int_size</definition>
+        <argsstring>(list_int_node *list)</argsstring>
+        <name>list_int_size</name>
+        <param>
+          <type><ref refid="structlist__int__node" kindref="compound">list_int_node</ref> *</type>
+          <declname>list</declname>
+        </param>
+        <briefdescription>
+<para>Get list size. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>list</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>list node</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>number of nodes this node is linked to </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="list.h" line="21" column="5" bodyfile="list.c" bodystart="86" bodyend="94" declfile="list.h" declline="21" declcolumn="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Header file for <ref refid="list_8c" kindref="compound">list.c</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>LIST_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LIST_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="structlist__int__node" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlist__int__node" kindref="compound">list_int_node</ref><sp/>{</highlight></codeline>
+<codeline lineno="12" refid="structlist__int__node_1a016ce2994af642f89740c0985faf3b93" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlist__int__node" kindref="compound">list_int_node</ref>*<sp/><ref refid="structlist__int__node_1a016ce2994af642f89740c0985faf3b93" kindref="member">next</ref>;<sp/></highlight></codeline>
+<codeline lineno="13" refid="structlist__int__node_1a4b43d923b3b7f56e73ac218d92e9bf1a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structlist__int__node_1a4b43d923b3b7f56e73ac218d92e9bf1a" kindref="member">data</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="14" refid="list_8h_1ab693949cbe60753dea5fae3653186a29" refkind="member"><highlight class="normal">}<sp/><ref refid="list_8h_1ab693949cbe60753dea5fae3653186a29" kindref="member">list_int_node</ref>;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>declare<sp/>target</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="list_8h_1a70697e3c4840b3fcf44b559461bcee95" kindref="member">list_int_create</ref>(<ref refid="structlist__int__node" kindref="compound">list_int_node</ref>**<sp/>list);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="list_8h_1a943d55eeecebb0294df81d701902d39d" kindref="member">list_int_free</ref>(<ref refid="structlist__int__node" kindref="compound">list_int_node</ref>**<sp/>list);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="list_8h_1ab95c10f1bed735ac4b9a6a44165028ab" kindref="member">list_int_add</ref>(<ref refid="structlist__int__node" kindref="compound">list_int_node</ref>*<sp/>list,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structlist__int__node_1a4b43d923b3b7f56e73ac218d92e9bf1a" kindref="member">data</ref>);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="list_8h_1a9c9fa192f1ea90f504111ddc60a29bf6" kindref="member">list_int_get</ref>(<ref refid="structlist__int__node" kindref="compound">list_int_node</ref>*<sp/>list,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="list_8h_1a4933c31867750b9a47274aa813c0d1bb" kindref="member">list_int_size</ref>(<ref refid="structlist__int__node" kindref="compound">list_int_node</ref>*<sp/>list);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>end<sp/>declare<sp/>target</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="list.h"/>
+  </compounddef>
+</doxygen>

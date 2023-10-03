@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tutorials &mdash; ASCOT5 5.5 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sg_gallery.css" type="text/css" />
+      <link rel="stylesheet" href="_static/nbsphinx-gallery.css" type="text/css" />
+      <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=b689823a"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Introduction" href="tutorials/tutorial.html" />
+    <link rel="prev" title="Data storage" href="processing.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html">
+            
+              <img src="_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Running Simulations</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="running.html">Installing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="running.html#simulations">Simulations</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Processing Data</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="processing.html">Data storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="processing.html#input-generation">Input generation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="processing.html#post-processing">Post-processing</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Simulating Physics</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Tutorials</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tutorials/tutorial.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials/poincaretutorial.html">Generating Poincaré plots</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#physics-in-ascot5">Physics in ASCOT5</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#coordinate-system">Coordinate system</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-big-picture">The Big Picture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#orbit-following">Orbit-following</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#field-line-tracing">Field-line-tracing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gyro-orbit-a-k-a-particle">Gyro-orbit a.k.a. particle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#guiding-center">Guiding-center</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#collisions">Collisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#wall-model">Wall model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#atomic-reactions">Atomic reactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#neutral-beam-injection">Neutral beam injection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fusion-source">Fusion source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#magnetic-field-interpolation">Magnetic field interpolation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#interaction-with-mhd-modes">Interaction with MHD modes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#mapping-to-straight-field-line-coordinates">Mapping to straight-field-line coordinates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#including-mhd-in-orbit-following">Including MHD in orbit-following</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#backward-monte-carlo">Backward Monte-Carlo</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Publications</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="publishing.html">Citing ASCOT5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="publishing.html#gallery">Gallery</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Code Development</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="developing.html">Coding style and practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developing.html#parallelization">Parallelization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developing.html#testing">Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developing.html#id2">C API</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="papi/a5py.html">Python API</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ASCOT5</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Tutorials</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/teaching.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="tutorials">
+<span id="tutorial"></span><h1>Tutorials<a class="headerlink" href="#tutorials" title="Link to this heading"></a></h1>
+<p>These tutorials are implemented as Jupyter notebooks meaning that, while appear as ordinary HTML documents here, you can also run then interactively.
+The notebooks are found in <code class="docutils literal notranslate"><span class="pre">doc/tutorials</span></code> folder in your cloned repository.
+To run them interactively, you need to have Jupyter installed and then configure it to use the virtual environment that you’ve created when installing ASCOT5.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">jupyter</span>
+<span class="n">ipython</span> <span class="n">kernel</span> <span class="n">install</span> <span class="o">--</span><span class="n">user</span> <span class="o">--</span><span class="n">name</span><span class="o">=</span><span class="n">ascotenv</span>
+</pre></div>
+</div>
+<p>Now you can run the examples interactively with e.g. VS Code, or even with your browser (remember to select the <code class="docutils literal notranslate"><span class="pre">ascotenv</span></code> kernel),</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span><span class="o">-</span><span class="n">notebook</span>
+</pre></div>
+</div>
+<p>or you can convert these examples to ordinary Python scripts and execute them (executing them in ipython terminal is advised as otherwise the plotted figures close immediately):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span><span class="o">-</span><span class="n">nbconvert</span> <span class="o">--</span><span class="n">to</span> <span class="n">python</span> <span class="o">&lt;</span><span class="n">name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">notebook</span> <span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span> <span class="n">tutorial</span><span class="o">.</span><span class="n">ipynb</span><span class="o">&gt;</span>
+<span class="n">python</span> <span class="n">tutorial</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p class="rubric" id="examples">Examples</p>
+<div class="toctree-wrapper compound">
+<div class="nbsphinx-gallery">
+<a class="reference internal" href="tutorials/tutorial.html">
+  <div><img alt="" src="./../figures/sparcre.png"></div>
+  <div>Introduction</div>
+</a>
+<a class="reference internal" href="tutorials/poincaretutorial.html">
+  <div><img alt="" src="./_static/nbsphinx-no-thumbnail.svg"></div>
+  <div>Generating Poincaré plots</div>
+</a>
+</div>
+</div>
+</section>
+<section id="physics-in-ascot5">
+<span id="physics"></span><h1>Physics in ASCOT5<a class="headerlink" href="#physics-in-ascot5" title="Link to this heading"></a></h1>
+<section id="coordinate-system">
+<h2>Coordinate system<a class="headerlink" href="#coordinate-system" title="Link to this heading"></a></h2>
+<p>The coordinate system ASCOT5 uses is <a class="reference external" href="https://www.sciencedirect.com/science/article/abs/pii/S0010465512002962">COCOS5</a> which is elaborated here.</p>
+<p>The cylindrical coordinates that are used are right-handed meaning:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Looking down from above the machine (i.e. from the direction of positive <span class="math notranslate nohighlight">\(z\)</span>), the toroidal angle phi, <span class="math notranslate nohighlight">\(\phi\)</span>, increases anti-clockwise.</p></li>
+<li><p>Toroidal field and plasma current are positive when they point in the same direction as <span class="math notranslate nohighlight">\(\hat{\phi}\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\phi=0\)</span> is on the positive <span class="math notranslate nohighlight">\(x\)</span>-axis at <span class="math notranslate nohighlight">\(y=0\)</span>.</p></li>
+</ul>
+</div></blockquote>
+<p>This means that in the usual <span class="math notranslate nohighlight">\((R,z)\)</span> cutoff picture where the doughnut is sliced at the right-hand side:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>One is looking at the direction of (positive) <span class="math notranslate nohighlight">\(\hat{\phi}\)</span>.</p></li>
+<li><p>Poloidal field points clockwise if the plasma current is positive.</p></li>
+</ul>
+</div></blockquote>
+<p>For reference, in the following machines we have:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>ITER: <span class="math notranslate nohighlight">\(B_\mathrm{phi}\)</span> is negative; <span class="math notranslate nohighlight">\(I_p\)</span> is positive and <span class="math notranslate nohighlight">\(B_\mathrm{pol}\)</span> points clockwise; NBIs are in same direction as <span class="math notranslate nohighlight">\(I_p\)</span>.</p></li>
+</ul>
+</div></blockquote>
+<p>In flux coordinates:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>The radial coordinate is rho, <span class="math notranslate nohighlight">\(\rho = \sqrt{(\Psi-\Psi_0) / (\Psi_1 - \Psi0)}\)</span>, where <span class="math notranslate nohighlight">\(\Psi\)</span> is the poloidal magnetic flux and <span class="math notranslate nohighlight">\(\Psi_0\)</span> and <span class="math notranslate nohighlight">\(\Psi_1\)</span> are the values on the axis and at the separatrix, respectively.</p></li>
+<li><p>In other words, <span class="math notranslate nohighlight">\(\rho=0\)</span> is the magnetic axis and <span class="math notranslate nohighlight">\(\rho=1\)</span> is the separatrix.</p></li>
+<li><p>The poloidal angle <span class="math notranslate nohighlight">\(\theta\)</span> is the geometrical one and positive <span class="math notranslate nohighlight">\(\hat{\theta}\)</span> points anti-clockwise when looking at the direction of positive <span class="math notranslate nohighlight">\(\hat{\phi}\)</span>.</p></li>
+<li><p>In other words, if <span class="math notranslate nohighlight">\(I_p\)</span> is positive then <span class="math notranslate nohighlight">\(\hat{\theta}\)</span> and <span class="math notranslate nohighlight">\(\hat{B}_\mathrm{pol}\)</span> point in opposite directions.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\theta = 0\)</span> at the outer mid-plane.</p></li>
+<li><p>Note that in the code <em>theta</em> refers to the Boozer poloidal angle and <em>pol</em> refers to the geometrical angle.</p></li>
+<li><p>For stellarators the poloidal angle we use is ill-defined since the magnetic axis is not a straight loop.</p></li>
+</ul>
+</div></blockquote>
+<p>For particle pitch there are different conventions, but we use <span class="math notranslate nohighlight">\(\xi=v_\parallel/v\)</span>.
+This means that <span class="math notranslate nohighlight">\(\xi=(-)1\)</span> corresponds to strongly (counter-)passing particle and <span class="math notranslate nohighlight">\(\xi=0\)</span> is a deeply trapped particle.</p>
+<p>Although not related to coordinate system, one of the conventions is that a “marker” refers to object that is simulated, “particle” to a physical particle (a marker multiplied by its weight), and “test particle” to an approximation where the particle under consideration does not affect the surrounding system.</p>
+</section>
+<section id="the-big-picture">
+<h2>The Big Picture<a class="headerlink" href="#the-big-picture" title="Link to this heading"></a></h2>
+<p>ASCOT5 is a tool that solves <em>the Fokker-Planck equation</em> for a test particle species <span class="math notranslate nohighlight">\(s\)</span>:</p>
+<div class="math notranslate nohighlight" id="fokker-planck">
+<span id="equation-fokker-planck"></span><span class="eqno">(1)<a class="headerlink" href="#fokker-planck" title="Link to this equation"></a></span>\[\frac{\partial }{\partial t}f(\mathbf{z},t)_s =
+-\frac{\partial }{\partial \mathbf{z}}\cdot \left[\mathbf{K}(\mathbf{z},t)f(\mathbf{z},t)_s\right]
++\frac{\partial^2}{\partial\mathbf{z}\partial\mathbf{z}}:\left[\mathbf{D}(\mathbf{z},t)f(\mathbf{z},t)_s\right].\]</div>
+<p>Here <span class="math notranslate nohighlight">\(f(\mathbf{z}, t)_s\)</span> is the distribution function to be solved, <span class="math notranslate nohighlight">\(\mathbf{z}\)</span> are the phase-space coordinates and <span class="math notranslate nohighlight">\(\mathbf{K}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{D}\)</span> are the Fokker-Planck advection and diffusion coefficients.</p>
+<p>The Fokker-Planck equation is not solved explicitly because we are apes and apes use brute force: the corresponding <em>Langevin equation</em></p>
+<div class="math notranslate nohighlight" id="langevin">
+<span id="equation-langevin"></span><span class="eqno">(2)<a class="headerlink" href="#langevin" title="Link to this equation"></a></span>\[d\mathbf{z} = \boldsymbol{\mu}(\mathbf{z},t)dt+ \boldsymbol{\sigma}(\mathbf{z},t)\cdot d\mathbf{W}\]</div>
+<p>is solved for a large number of markers instead.
+Here <span class="math notranslate nohighlight">\(\boldsymbol{\mu}=\mathbf{K}\)</span>, <span class="math notranslate nohighlight">\((1/2)\boldsymbol{\sigma}\boldsymbol{\sigma}^\intercal=\mathbf{D}\)</span>, and <span class="math notranslate nohighlight">\(\mathbf{W}\)</span> is the so-called <em>Wiener process</em>.
+(Those familiar with stochastic-differential equations may note that Eq. <a class="reference internal" href="#equation-langevin">(2)</a> is in Itô form which comes handy when implementing the collision operator).</p>
+<p>Eqs. <a class="reference internal" href="#equation-fokker-planck">(1)</a> and <a class="reference internal" href="#equation-langevin">(2)</a> are connected so that when a marker motion is governed by Eq. <a class="reference internal" href="#equation-langevin">(2)</a> then the distribution of those markers</p>
+<div class="math notranslate nohighlight" id="marker-distribution">
+<span id="equation-marker-distribution"></span><span class="eqno">(3)<a class="headerlink" href="#marker-distribution" title="Link to this equation"></a></span>\[f(\mathbf{z},t)_s\approx \sum_i^{N_\mathrm{markers}}w_i\delta(\mathbf{z}-\mathbf{z}_i(t)),\]</div>
+<p>where <span class="math notranslate nohighlight">\(w_i\)</span> are individual marker weights, is a solution to Eq. <a class="reference internal" href="#equation-fokker-planck">(1)</a>.</p>
+<p>This is in essence what ASCOT5 does.
+The code can output marker <em>ini- and endstates</em>, which are just <span class="math notranslate nohighlight">\(f(\mathbf{z},t=t_0)\)</span> and <span class="math notranslate nohighlight">\(f(\mathbf{z},t=t_f)\)</span>, <em>orbit trajectories</em>, which are solutions to Eq. <a class="reference internal" href="#equation-langevin">(2)</a>, and <em>distributions</em> that approximate the distribution function with discrete histograms as</p>
+<div class="math notranslate nohighlight" id="marker-histogram">
+<span id="equation-marker-histogram"></span><span class="eqno">(4)<a class="headerlink" href="#marker-histogram" title="Link to this equation"></a></span>\[f(z,t)\approx \sum_i\sum_{\alpha,\beta}\frac{f_{i,\alpha\beta}}{z_{\alpha+1}-z_\alpha}
+\boldsymbol{1}_{[z_\alpha\leq z &lt; z_{\alpha+1}]}\boldsymbol{1}_{[t_\beta\leq t &lt; t_{\beta+1}]},\]</div>
+<p>where <span class="math notranslate nohighlight">\(\boldsymbol{1}\)</span> is the indicator function, and <span class="math notranslate nohighlight">\(\alpha\)</span> and <span class="math notranslate nohighlight">\(\beta\)</span> are the histogram bin labels.
+Individual marker contribution to a histogram bin is calculated at each time-step as</p>
+<div class="math notranslate nohighlight" id="marker-contribution">
+<span id="equation-marker-contribution"></span><span class="eqno">(5)<a class="headerlink" href="#marker-contribution" title="Link to this equation"></a></span>\[f_{i,\alpha\beta,k+1} = f_{i,\alpha\beta,k} + w_i(t_{k+1}-t_k) \boldsymbol{1}_{[z_\alpha\leq z_i(t_{k+1}) &lt; z_{\alpha+1}]}\boldsymbol{1}_{[t_\beta\leq t_{k+1}&lt; t_{\beta+1}]}.\]</div>
+<p>ASCOT5 has two main limitations:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>It uses test-particle approximation.</p></li>
+<li><p>It assumes that the test particle population is produced by a constant source.</p></li>
+</ol>
+</div></blockquote>
+<p>The test-particle approximation means that there is no feedback from test particle population to the background plasma nor there are interactions between the test particles in simulation time.
+One can relax this approximation by running short simulations repeatedly and adjusting the background quantities between the simulations based on how the test particle population evolved.
+Note that this doesn’t mean that ASCOT5 is cabable of simulating minority species only: bulk plasma species can be simulated as long as one keeps these limitations in mind (e.g. estimating transport coefficients in steady-state plasma is fine).</p>
+<p>The other approximation affects how one should interpret the quantities where marker weights are involved, i.e. wall loads and distributions.
+The weight is not actually “how many physical particles this marker represents” but it is a particle flux and has units “particles/s”.
+This means that the wall loads are not in units of Joule but in units of Watts.
+Again for stead-state plasmas this works perfectly fine but one must be careful when studying transient phenomena.
+The distributions are steady-state distributions since every time a distribution is updated in a simulation, we place “weight * dt” in a bin corresponding to marker’s current position.
+This means that the resulting histogram has units of “particles”.
+Therefore one must be careful when interpreting distributions (or wall loads) in a simulation with an existing particle population that is not given by a constant source, e.g. runaway electrons in a disruption.</p>
+</section>
+<section id="orbit-following">
+<h2>Orbit-following<a class="headerlink" href="#orbit-following" title="Link to this heading"></a></h2>
+<p>Markers can be traced using one of the following three schemes:</p>
+<section id="field-line-tracing">
+<h3>Field-line-tracing<a class="headerlink" href="#field-line-tracing" title="Link to this heading"></a></h3>
+<p>Marker is assumed to have no mass and travelling at the speed of light along the magnetic field lines.
+The equation of motion is</p>
+<div class="math notranslate nohighlight" id="fieldline-equationsofmotion">
+<span id="equation-fieldline-equationsofmotion"></span><span class="eqno">(6)<a class="headerlink" href="#fieldline-equationsofmotion" title="Link to this equation"></a></span>\[\dot{\mathbf{x}} = c\hat{\mathbf{b}},\]</div>
+<p>which is solved with <a class="reference external" href="https://doi.org/10.1145/79505.79507">the Cash-Karp method</a> that uses an adaptive time-step.</p>
+</section>
+<section id="gyro-orbit-a-k-a-particle">
+<h3>Gyro-orbit a.k.a. particle<a class="headerlink" href="#gyro-orbit-a-k-a-particle" title="Link to this heading"></a></h3>
+<p>Marker is a physical particle and its whole gyro-motion is solved.
+The Hamiltonian of a charged particle in an electromagnetic field is</p>
+<div class="math notranslate nohighlight" id="gyro-hamiltonian">
+<span id="equation-gyro-hamiltonian"></span><span class="eqno">(7)<a class="headerlink" href="#gyro-hamiltonian" title="Link to this equation"></a></span>\[\mathcal{H}_\mathrm{prt} \equiv \gamma mc^2 +q \Phi,\]</div>
+<p>where <span class="math notranslate nohighlight">\(\Phi\)</span> is electric potential and <span class="math notranslate nohighlight">\(\gamma = 1/\sqrt{1-v^2/c^2}\)</span> or, equivalently <span class="math notranslate nohighlight">\(\gamma= \sqrt{1+(p/mc)^2}\)</span>, is <em>the Lorentz factor</em>, which relates particle kinetic energy to its rest mass as <span class="math notranslate nohighlight">\(\gamma=1+E_\mathrm{kin}/mc^2\)</span>.
+Hamiltonian dynamics yield the particle equations of motion:</p>
+<div class="math notranslate nohighlight" id="gyro-equationsofmotion">
+<span id="equation-gyro-equationsofmotion"></span><span class="eqno">(8)<a class="headerlink" href="#gyro-equationsofmotion" title="Link to this equation"></a></span>\[\begin{split} \dot{\mathbf{x}} &amp;= \frac{1}{\gamma m} \mathbf{p}\\
+ \dot{\mathbf{p}} &amp;= q\left(\mathbf{E}+\dot{\mathbf{x}}\times\mathbf{B}\right).\end{split}\]</div>
+<p>The numerical scheme used to solve these equations is <a class="reference external" href="https://doi.org/10.1063/1.4916570">the Volume-Preserving Algorithm (VPA)</a> which can be though as a relativistic variant of <em>the Boris scheme</em> since it preserves marker energy.
+Usually the time-step is small (a fraction of gyro time) when using this scheme, so take care not to set it too small as then the limited machine precision starts to accumulate error.
+This probably happens somewhere below <span class="math notranslate nohighlight">\(1\times10^{-12}\)</span> s.</p>
+<p>Note that this scheme is valid also when the marker charge is zero, and therefore it is used in the code when tracing neutrals.</p>
+</section>
+<section id="guiding-center">
+<h3>Guiding-center<a class="headerlink" href="#guiding-center" title="Link to this heading"></a></h3>
+<p>The gyro-orbit effects can be ignored to obtain faster simulations if:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Collecting guiding center distribution is sufficient.</p></li>
+<li><p>Wall loads doesn’t have to be exact.</p></li>
+<li><p>Magnetic field doesn’t vary <em>much</em> in time and space during a single gyro-orbit and therefore the magnetic moment is an adiabatic invariant.</p></li>
+</ul>
+</div></blockquote>
+<p>In this case one can use the guiding-center approximation.
+It is advised to approach a new study by first running both gyro-orbit and guiding-center simulations with limited number of markers to see if the guiding-center approximation is valid.
+Usually it is unless the machine is small or a spherical tokamak with strong magnetic field gradients.</p>
+<p>For the guiding center dynamics we employ non-canonical coordinates: guiding center position, <span class="math notranslate nohighlight">\(\mathbf{X}\)</span>, momentum component parallel to the magnetic field, <span class="math notranslate nohighlight">\(p_\parallel\)</span>, magnetic moment, <span class="math notranslate nohighlight">\(\mu\)</span>, and gyroangle, <span class="math notranslate nohighlight">\(\zeta\)</span>.
+The so-called <a class="reference external" href="https://doi.org/10.1017/S0022377815000744">guiding center transformation</a>, which is a coordinate transformation from particle phase space, <span class="math notranslate nohighlight">\(\mathbf{z}=(\mathbf{x},\mathbf{p})\)</span>, to guiding center phase space, <span class="math notranslate nohighlight">\(\mathbf{Z}=(\mathbf{X},p_\parallel,\mu,\zeta)\)</span>, is a near-identity transformation,</p>
+<div class="math notranslate nohighlight" id="gc-transformation">
+<span id="equation-gc-transformation"></span><span class="eqno">(9)<a class="headerlink" href="#gc-transformation" title="Link to this equation"></a></span>\[\begin{split}\mathbf{X}  &amp;= \mathbf{X}_0 + \epsilon\mathbf{X}_1 + \epsilon^2\mathbf{X}_2 + \ldots, \\
+p_\parallel &amp;= p_{\parallel,0} + \epsilon p_{\parallel,1} + \epsilon^2p_{\parallel,2} + \ldots,\\
+\mu         &amp;= \mu_0 + \epsilon\mu_1 + \epsilon^2\mu_2 + \ldots, \\
+\zeta       &amp;= \zeta_0 + \epsilon\zeta_1 + \epsilon^2\zeta_2 + \ldots,\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\epsilon\)</span> is a dimensionless ordering parameter which is used to group terms of similar size.
+The transformation from particle to guiding center coordinates is performed to the first order in ASCOT5.
+This can be adjusted from options, where the first order terms can be dropped, but this serves mainly one’s curiosity and not practical applications.</p>
+<p>The zeroth order terms in the transformation are</p>
+<div class="math notranslate nohighlight" id="gc-transformation0th">
+<span id="equation-gc-transformation0th"></span><span class="eqno">(10)<a class="headerlink" href="#gc-transformation0th" title="Link to this equation"></a></span>\[\begin{split}\mathbf{X}_0    &amp;= \mathbf{x},\\
+vp{\parallel,0} &amp;= \mathbf{p}\cdot\hat{\mathbf{b}},\\
+\mu_0           &amp;= \frac{p_\perp^2}{2mB},\\
+\zeta_0         &amp;= \arctan2(-\hat{\boldsymbol{\rho}}\cdot\hat{\mathbf{e}}_2, \hat{\boldsymbol{\rho}}\cdot\hat{\mathbf{e}}_1).\end{split}\]</div>
+<p>The zeroth order term of the gyroangle is somewhat arbitrary as it is defined by basis vectors <span class="math notranslate nohighlight">\(\hat{\mathbf{e}}_1\)</span> and <span class="math notranslate nohighlight">\(\hat{\mathbf{e}}_2\)</span>:</p>
+<div class="math notranslate nohighlight" id="gc-basisvectors">
+<span id="equation-gc-basisvectors"></span><span class="eqno">(11)<a class="headerlink" href="#gc-basisvectors" title="Link to this equation"></a></span>\[\begin{split}\hat{\boldsymbol{\rho}}  &amp;=  \cos\zeta_0 \hat{\mathbf{e}}_1 - \sin\zeta_0 \hat{\mathbf{e}}_2\\
+\hat{\boldsymbol{\perp}} &amp;= -\sin\zeta_0 \hat{\mathbf{e}}_1 - \cos\zeta_0 \hat{\mathbf{e}}_2.\end{split}\]</div>
+<p>These vectors can be chosen arbitrarily as long as <span class="math notranslate nohighlight">\((\hat{\mathbf{e}}_1,\;\hat{\mathbf{e}}_2,\;\hat{\mathbf{b}})\)</span> form an orthogonal right-handed system.
+Since <span class="math notranslate nohighlight">\(\hat{\mathbf{b}}\)</span> is fixed, we are free to choose <span class="math notranslate nohighlight">\(\hat{\mathbf{e}}_1\)</span>.
+For cylindrical coordinates in tokamaks, a suitable choice is <span class="math notranslate nohighlight">\(\hat{\mathbf{e}}_1 = \hat{\mathbf{b}}\times\hat{\mathbf{z}}\)</span> because there is always a toroidal field present.</p>
+<p>As for the first order terms, the first-order position-term is the gyro-vector</p>
+<div class="math notranslate nohighlight" id="gc-transformation1stpos">
+<span id="equation-gc-transformation1stpos"></span><span class="eqno">(12)<a class="headerlink" href="#gc-transformation1stpos" title="Link to this equation"></a></span>\[\mathbf{X}_1=\boldsymbol{\rho}_g
+\equiv \frac{1}{q}\sqrt{\frac{2m\mu_0}{B}}\hat{\mathbf{b}}\times\hat{\mathbf{v}},\]</div>
+<p>which is quite intuitive.
+The first-order momentum space terms are less so:</p>
+<div class="math notranslate nohighlight" id="gc-transformation1stmom">
+<span id="equation-gc-transformation1stmom"></span><span class="eqno">(13)<a class="headerlink" href="#gc-transformation1stmom" title="Link to this equation"></a></span>\[\begin{split}p_{\parallel,1} &amp;= -p_{\parallel,0}\boldsymbol{\rho}_g\cdot\boldsymbol{\kappa}+\frac{m\mu_0}{q}\left( \tau_B+ \mathbf{a}_1:\nabla\hat{\mathbf{b}}\right),\\
+\mu_1           &amp;= \boldsymbol{\rho}_g\cdot \left( \mu_0\nabla\ln B + \frac{p_{\parallel,0}}{mB}\boldsymbol{\kappa} \right)
+-\frac{\mu_0p_{\parallel,0}}{qB}\left( \tau_B + \mathbf{a}_1:\nabla\hat{\mathbf{b}} \right).\end{split}\]</div>
+<p>Here the dyadic is, <span class="math notranslate nohighlight">\(\mathbf{a}_1\equiv -\frac{1}{2}\left(\hat{\boldsymbol{\rho}}\hat{\boldsymbol{\perp}}+\hat{\boldsymbol{\perp}}\hat{\boldsymbol{\rho}}\right)\)</span>,
+where the vectors <span class="math notranslate nohighlight">\(\hat{\boldsymbol{\rho}}\)</span> and <span class="math notranslate nohighlight">\(\hat{\boldsymbol{\perp}}\)</span> form an orthogonal right-handed basis
+<span class="math notranslate nohighlight">\((\hat{\boldsymbol{\rho}},\hat{\boldsymbol{\perp}},\hat{\mathbf{b}})\)</span> and
+<span class="math notranslate nohighlight">\(\hat{\boldsymbol{\rho}}=\hat{\mathbf{b}}\times\hat{\mathbf{v}}\)</span>.
+The magnetic field torsion, <span class="math notranslate nohighlight">\(\tau_B= \hat{\mathbf{b}}\cdot \nabla\times\hat{\mathbf{b}}\)</span>,
+and the magnetic field twist, <span class="math notranslate nohighlight">\(\boldsymbol{\kappa} = \hat{\mathbf{b}}\cdot\nabla\hat{\mathbf{b}}\)</span>,
+are related by the relation, <span class="math notranslate nohighlight">\(\nabla\times\hat{\mathbf{b}} = \tau_B\hat{\mathbf{b}} + \hat{\mathbf{b}}\times\boldsymbol{\kappa}\)</span>.
+Finally, the first order gyroangle term is</p>
+<div class="math notranslate nohighlight" id="gc-transformation1stang">
+<span id="equation-gc-transformation1stang"></span><span class="eqno">(14)<a class="headerlink" href="#gc-transformation1stang" title="Link to this equation"></a></span>\[\zeta_1 = -\boldsymbol{\rho}_g\cdot\mathbf{R} + \frac{p_{\parallel,0}}{qB} \left(\mathbf{a}_2:\nabla\hat{\mathbf{b}}\right)
++ \frac{\rho_g}{B}\hat{\boldsymbol{\perp}}\cdot\left(\nabla B + \frac{p_{\parallel,0}^2}{2m\mu_0}\boldsymbol{\kappa}\right),\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{R}=\nabla\hat{\mathbf{e}}_1\cdot\hat{\mathbf{e}}_2\)</span> is the <em>Littlejohn’s gyrogauge vector</em> and</p>
+<div class="math notranslate nohighlight" id="gc-a2">
+<span id="equation-gc-a2"></span><span class="eqno">(15)<a class="headerlink" href="#gc-a2" title="Link to this equation"></a></span>\[\mathbf{a}_2\equiv \frac{1}{4}\left(\hat{\boldsymbol{\perp}}\hat{\boldsymbol{\perp}}-\hat{\boldsymbol{\rho}}\hat{\boldsymbol{\rho}}\right).\]</div>
+<p>Once the particle Hamiltonian has undergone the guiding-center transformation, it becomes the guiding center Hamiltonian</p>
+<div class="math notranslate nohighlight" id="gc-hamiltonian">
+<span id="equation-gc-hamiltonian"></span><span class="eqno">(16)<a class="headerlink" href="#gc-hamiltonian" title="Link to this equation"></a></span>\[\mathcal{H}_\mathrm{gc} \equiv \gamma mc^2 +q \Phi(\mathbf{X},t),\]</div>
+<p>where the Lorentz factor in the new coordinates is</p>
+<div class="math notranslate nohighlight" id="gc-gamma">
+<span id="equation-gc-gamma"></span><span class="eqno">(17)<a class="headerlink" href="#gc-gamma" title="Link to this equation"></a></span>\[\gamma = \sqrt{1 + (2/mc^2)\mu B(\mathbf{X},t) + (p_\parallel/mc)^2}.\]</div>
+<p>Note that the Hamiltonian does not depend on <span class="math notranslate nohighlight">\(\zeta\)</span>, which is as expected since the basis of the guiding center formalism is the decoupling of the gyro-motion, meaning guiding center dynamics must be independent of <span class="math notranslate nohighlight">\(\zeta\)</span>.
+However, the gyroangle can be included as one of the phase space coordinates, for which Hamiltonian dynamics give the following (first-order) <a class="reference external" href="http://dx.doi.org/10.1063/1.2773702">equations of motion</a></p>
+<div class="math notranslate nohighlight" id="gc-equationsofmotion">
+<span id="equation-gc-equationsofmotion"></span><span class="eqno">(18)<a class="headerlink" href="#gc-equationsofmotion" title="Link to this equation"></a></span>\[\begin{split}\dot{\mathbf{X}}         &amp;= \frac{p_\parallel}{\gamma m} \frac{\mathbf{B}^*}{B_\parallel^*} + \mathbf{E}^*\times\frac{\hat{\mathbf{b}}}{B_\parallel^*},\\
+\dot{p}_\parallel        &amp;= q\mathbf{E}^*\cdot\frac{\mathbf{B}^*}{B_\parallel^*},\\
+\dot{\boldsymbol{\mu}}   &amp;= 0,\\
+\dot{\boldsymbol{\zeta}} &amp;= \frac{qB}{\gamma m} + \dot{\mathbf{X}}\cdot\left(\mathbf{R} +\frac{\tau_B}{2}\hat{\mathbf{b}}\right),\end{split}\]</div>
+<p>with the effective fields being defined as</p>
+<div class="math notranslate nohighlight" id="gc-effbande">
+<span id="equation-gc-effbande"></span><span class="eqno">(19)<a class="headerlink" href="#gc-effbande" title="Link to this equation"></a></span>\[\begin{split}\mathbf{B}^*&amp;= \mathbf{B} + \frac{p_\parallel}{q}\nabla\times\hat{\mathbf{b}},\\
+\mathbf{E}^*&amp;= \mathbf{E} -\frac{1}{q}\left( \frac{mc^2\mu}{\gamma}\nabla B -p_\parallel\frac{\partial \hat{\mathbf{b}}}{\partial t} \right),\end{split}\]</div>
+<p>and <span class="math notranslate nohighlight">\(B^*_\parallel=\hat{\mathbf{b}}\cdot\mathbf{B}^*\)</span>.</p>
+<p>In the code, the guiding-center equations of motion can be solved with either RK4 (fixed time-step) or Cash-Karp (adaptive time-step).
+These methods don’t preserve the marker energy, but one can choose the time-step to bee small enough so that the resulting error is insignificant.</p>
+<p>Note that when tracing guiding centers, the gyro angle is not solved so this information is lost and the transformation back to particle coordinates effectively uses a random gyro angle.</p>
+</section>
+</section>
+<section id="collisions">
+<h2>Collisions<a class="headerlink" href="#collisions" title="Link to this heading"></a></h2>
+<p>The test particle collision operator is based on <em>the Landau collision operator</em>, which can be expressed in the form of a Fokker-Planck equation, and the corresponding Langevin equation is</p>
+<div class="math notranslate nohighlight" id="collision-particle">
+<span id="equation-collision-particle"></span><span class="eqno">(20)<a class="headerlink" href="#collision-particle" title="Link to this equation"></a></span>\[d\mathbf{p} = -K\mathbf{p}dt + \left(\sqrt{2D_\parallel}\hat{\mathbf{p}}\hat{\mathbf{p}}
++ \sqrt{2D_\perp}\left(\mathbf{I}-\hat{\mathbf{p}}\hat{\mathbf{p}}\right)\right)\cdot d\mathbf{W},\]</div>
+<p>where we have assumed that the background plasma is isotropic.
+By further assuming that the plasma is Maxwellian, the advection coefficient, parallel diffusion coefficient and perpendicular diffusion coefficient have the explicit forms</p>
+<div class="math notranslate nohighlight" id="collision-coefficients">
+<span id="equation-collision-coefficients"></span><span class="eqno">(21)<a class="headerlink" href="#collision-coefficients" title="Link to this equation"></a></span>\[\begin{split}K(v)           &amp;= \sum_b\left(1+\frac{m}{m_b}\right)\frac{2\Gamma_{b}}{m^2 v_b^2}\frac{G(v/v_b)}{v},\\
+D_\parallel(v) &amp;= \sum_b\frac{\Gamma_{b}}{v}G(v/v_b),\\
+D_\perp(v)     &amp;= \sum_b\frac{1}{2}\frac{\Gamma_{b}}{v}\left(\mathrm{erf}(v/v_b)-G(v/v_b)\right),\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\Gamma_{b}=n_bq^2q_b^2\ln\Lambda/4\pi\epsilon_0^2\)</span> (where <span class="math notranslate nohighlight">\(q\)</span> is charge, <span class="math notranslate nohighlight">\(\ln\Lambda\)</span> is the Coulomb logarithm and <span class="math notranslate nohighlight">\(\epsilon_0\)</span> is the vacuum permittivity) and the special functions <span class="math notranslate nohighlight">\(\mathrm{erf}(x)\)</span> and <span class="math notranslate nohighlight">\(G(x)\)</span> are the <em>error function</em>,</p>
+<div class="math notranslate nohighlight" id="errorfun">
+<span id="equation-errorfun"></span><span class="eqno">(22)<a class="headerlink" href="#errorfun" title="Link to this equation"></a></span>\[\mathrm{erf}(x) \equiv \frac{2}{\sqrt{\pi}}\int_0^x e^{-s^2} ds,\]</div>
+<p>and the <em>Chandrasekhar function</em>,</p>
+<div class="math notranslate nohighlight" id="chandrasekhar">
+<span id="equation-chandrasekhar"></span><span class="eqno">(23)<a class="headerlink" href="#chandrasekhar" title="Link to this equation"></a></span>\[G(x) = \frac{\mathrm{erf}(x)-\mathrm{erf}'(x)}{2x^2} = \frac{\mathrm{erf}(x)-\frac{2x}{\sqrt{\pi}} e^{-x^2}}{2x^2}.\]</div>
+<p>Note that the collision operator here is non-relativistic.
+A relativistic variant exists but hasn’t been implemented yet due to lack of interest.</p>
+<p>The collision operator above is used in the gyro-orbit simulations.
+The guiding-center test particle collision operator is given by three equations</p>
+<div class="math notranslate nohighlight" id="collision-gc">
+<span id="equation-collision-gc"></span><span class="eqno">(24)<a class="headerlink" href="#collision-gc" title="Link to this equation"></a></span>\[\begin{split}dp          &amp;= Q dt + \sqrt{2 D_\parallel} dW_p,\\
+d\xi        &amp;= -\xi \nu dt + \sqrt{(1-\xi^2)\nu}dW_\xi, \\
+d\mathbf{X} &amp;= \sqrt{2 D_\mathbf{X}}(\mathbf{I}-\hat{\mathbf{b}}\hat{\mathbf{b}})\cdot d\mathbf{W}_\mathbf{X},\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(W_p\)</span>, <span class="math notranslate nohighlight">\(W_\xi\)</span>, and <span class="math notranslate nohighlight">\(\mathbf{W}_\mathbf{X}\)</span> are independent Wiener processes.
+The pitch collision frequency <span class="math notranslate nohighlight">\(\nu=\frac{2D_\perp}{p^2}\)</span> must be much smaller than the gyro-motion or otherwise the guiding-center approximation is broken by the collisions.
+The drag term is given by</p>
+<div class="math notranslate nohighlight" id="collision-q">
+<span id="equation-collision-q"></span><span class="eqno">(25)<a class="headerlink" href="#collision-q" title="Link to this equation"></a></span>\[Q=-Fp+\frac{\partial D_\parallel}{\partial p} +2\frac{D_\parallel}{p},\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight" id="collision-f">
+<span id="equation-collision-f"></span><span class="eqno">(26)<a class="headerlink" href="#collision-f" title="Link to this equation"></a></span>\[F=\sum_b\frac{2\Gamma_{b}}{m^2 v_b^2}\frac{G(v/v_b)}{v}.\]</div>
+<p>The spatial diffusion coefficient corresponding to the classical diffusion is</p>
+<div class="math notranslate nohighlight" id="collision-dx">
+<span id="equation-collision-dx"></span><span class="eqno">(27)<a class="headerlink" href="#collision-dx" title="Link to this equation"></a></span>\[D_\mathbf{X} = \left[(D_\parallel - D_\perp)\frac{1-\xi^2}{2} + D_\perp\right]\frac{c^2}{\omega_g}.\]</div>
+<p>The guiding center collision operator is obtained by transforming the particle Fokker-Planck equation to the guiding-center phase-space and performing gyro-averaging for the result.
+Therefore collisions make the gyro angle intractable in guiding center simulations.
+Furthermore, the guiding center collision operator uses a different set of momentum coordinates, <span class="math notranslate nohighlight">\((p,\xi)\)</span>, than what is used in the orbit-following, <span class="math notranslate nohighlight">\((p_\parallel,\mu)\)</span>.
+This is because the collision operator cannot be diagonalized (which is desired for the numerical implementation) in the latter set of coordinates.
+Note that in the code it is possible to toggle individual components in the guiding-center collision operator, which is useful e.g. if one wishes to isolate the effects of the pitch angle scattering on particle transport.</p>
+<p>The collisions are applied separately in the code right after the orbit-step has been taken.
+Physics-wise these should be evaluated simultaneously with the deterministic motion due to the Lorentz force residing inside the advection coefficient <span class="math notranslate nohighlight">\(\mathrm{K}\)</span>, but for practical applications this is not feasible.
+This is because the orbit-integration requires a high-order numerical scheme whereas those schemes does not exist or they are overly complicated in case of stochastic differential equations.</p>
+<p>The collisions in the particle picture are solved with the Euler-Maruyama method (a SDE version of the Euler method),</p>
+<div class="math notranslate nohighlight" id="eulermaruyama">
+<span id="equation-eulermaruyama"></span><span class="eqno">(28)<a class="headerlink" href="#eulermaruyama" title="Link to this equation"></a></span>\[\mathbf{p}^{k+1} = \mathbf{p}^k - K\mathbf{p}^k\Delta t
++ \sqrt{2D_\parallel\Delta t}(\hat{\mathbf{p}}\cdot\boldsymbol{\beta})\hat{\mathbf{p}},
++ \sqrt{2D_\perp\Delta t}(\boldsymbol{\beta}-(\hat{\mathbf{p}}\cdot\boldsymbol{\beta})\hat{\mathbf{p}}).\]</div>
+<p>Here <span class="math notranslate nohighlight">\(\boldsymbol{\beta}\)</span> is a random vector whose values are sampled from the Normal distribution.
+In the guiding center picture, the collisions are resolved with the Euler-Maruyama methdon when a fixed time-step is used.
+For the adaptive step it is necessary to use a higher-order method, for which we have chosen the Milstein method,</p>
+<div class="math notranslate nohighlight" id="milstein">
+<span id="equation-milstein"></span><span class="eqno">(29)<a class="headerlink" href="#milstein" title="Link to this equation"></a></span>\[\begin{split}p^{k+1} &amp;= p^k + Q \Delta t + \sqrt{2 D_\parallel } \Delta W_p
++ \frac{1}{2} \frac{\partial D_\parallel}{\partial p} \left((\Delta W_p)^2 - \Delta t\right), \\
+\xi^{k+1} &amp;= \xi^k - \xi\nu\Delta t + \sqrt{(1-\xi^2)\nu}W_\xi
+- \frac{1}{2} \xi \nu \left((\Delta W_\xi)^2 - \Delta t\right).\end{split}\]</div>
+<p>The spatial component is still resolved with the Euler-Maruyama method.</p>
+<p>If a time-step is rejected, it is not enough to simply repeat the time-step with a smaller <span class="math notranslate nohighlight">\(\Delta t\)</span>.
+This is because we have already realized a value for the Wiener process <span class="math notranslate nohighlight">\(W(t)\)</span>.
+Those values must be stored because if we have an interval <span class="math notranslate nohighlight">\([t0, t1]\)</span> where Wiener processes has been realized on both ends, the values on the interval are not normally distributed with zero mean and variance $Delta t$.
+Instead the mean and the variance are given by the so-called Brownian bridge:</p>
+<div class="math notranslate nohighlight" id="brownianbridge">
+<span id="equation-brownianbridge"></span><span class="eqno">(30)<a class="headerlink" href="#brownianbridge" title="Link to this equation"></a></span>\[\begin{split}E[W(t)]   &amp;= W(t_0)+(W(t_1)-W(t_0))\frac{t-t_0}{t_1-t_0}, \\
+Var[W(t)] &amp;= \frac{(t-t_0)(t_1-t)}{t_1-t_0}.\end{split}\]</div>
+<p>In other words, whenever a time-step is rejected, the generated Wiener process is stored and used to generate new values until the simulation passes that moment.</p>
+<p>Finally, the collision operator have to deal with pitch being limited to range <span class="math notranslate nohighlight">\([-1,1]\)</span> and the guiding center collision coefficients diverging at <span class="math notranslate nohighlight">\(p=0\)</span>.
+These are dealt with by using reflecting boundary conditions for pitch and for momentum at some small value of <span class="math notranslate nohighlight">\(p\)</span> (a fraction of thermal momentum).</p>
+</section>
+<section id="wall-model">
+<h2>Wall model<a class="headerlink" href="#wall-model" title="Link to this heading"></a></h2>
+<p>Wall model is either 2D contour or 3D mesh consisting of triangles.
+If a straight line from marker initial position (at the beginning of the time-step) to its final position intersects the contour or one of the wall elements, a collision with the wall is recorded and simulation for that marker is terminated.</p>
+<p>The collision algorithm in 2D is straight-forward: the wall is assumed to form a closed loop (and this is enforced by the code) and on each time-step <a class="reference external" href="https://www.engr.colostate.edu/~dga/documents/papers/point_in_polygon.pdf">a winding number</a> is calculated to determine if the marker is inside the wall polygon or not.
+If the marker is outside, an algorithm is used to find which wall element the marker intersected.</p>
+<p>In 3D, the bounding box of the wall model is divided along the axes into eight identical boxes which are then successively divided into smaller and smaller boxes for a fixed number of times.
+This so-called <a class="reference external" href="https://en.wikipedia.org/wiki/Octree">octree</a> structure is used in the simulation to perform collision checks only with the elements that are in the same box as the marker.
+The intersection between the line segment and the wall triangle is found with <a class="reference external" href="https://en.wikipedia.org/wiki/M%C3%B6ller%E2%80%93Trumbore_intersection_algorithm">the Möller–Trumbore algorithm</a>.</p>
+</section>
+<section id="atomic-reactions">
+<h2>Atomic reactions<a class="headerlink" href="#atomic-reactions" title="Link to this heading"></a></h2>
+<p>Currently atomic reactions are only available when using the gyro-orbit simulation mode.</p>
+<p>TBD</p>
+</section>
+<section id="neutral-beam-injection">
+<h2>Neutral beam injection<a class="headerlink" href="#neutral-beam-injection" title="Link to this heading"></a></h2>
+<p>Neutral markers are generated from the injector geometry using the beamlet-based model.
+Ballistic trajectories of the neutral markers are then traced until i) the marker is ionized ii) the marker has intersected the wall.</p>
+<p>WIP</p>
+</section>
+<section id="fusion-source">
+<h2>Fusion source<a class="headerlink" href="#fusion-source" title="Link to this heading"></a></h2>
+<p>TBD</p>
+</section>
+<section id="magnetic-field-interpolation">
+<h2>Magnetic field interpolation<a class="headerlink" href="#magnetic-field-interpolation" title="Link to this heading"></a></h2>
+<p>ASCOT5 uses modular inputs meaning that there are no specific way that inputs are interpolated during the simulation and new schemes can be included with tolerable effort.
+However, the magnetic field data has huge impact on how accurate are the results are and how fast are the the simulations.
+Therefore we review the magnetic field interpolation schemes here.
+See here for details on other inputs.</p>
+<p>One of the input types is the analytical representation of a tokamak field, which is fast and super-accurate, but rarely useful.
+More commonly used input is the axisymmetric tokamak field, where the field is interpolated in two parts.
+First the equilibrium component is evaluated from the poloidal flux <span class="math notranslate nohighlight">\(psi\)</span>,</p>
+<div class="math notranslate nohighlight" id="b2ds">
+<span id="equation-b2ds"></span><span class="eqno">(31)<a class="headerlink" href="#b2ds" title="Link to this equation"></a></span>\[\begin{split}B_R &amp;= -\frac{1}{R}\frac{\partial\psi}{\partial z},\\
+B_z &amp;=  \frac{1}{R}\frac{\partial\psi}{\partial R},\end{split}\]</div>
+<p>and then we include <span class="math notranslate nohighlight">\(B_\mathrm{phi}\)</span> by interpolating values tabulated in <span class="math notranslate nohighlight">\((R,z)\)</span> grid with cubic splines.
+It is also possible to include tabulated values of <span class="math notranslate nohighlight">\(B_R\)</span> and <span class="math notranslate nohighlight">\(B_z\)</span> and sum those with Eq. <a class="reference internal" href="#equation-b2ds">(31)</a>, but this is rarely used as usually the poloidal field is completely defined by <span class="math notranslate nohighlight">\(psi\)</span>.
+One possible use case is when <span class="math notranslate nohighlight">\(psi\)</span> is of poor quality and it is scaled so that it doesn’t contribute to <span class="math notranslate nohighlight">\(\mathbf{B}_\mathrm{pol}\)</span> (but it can still be used to evaluate <span class="math notranslate nohighlight">\(\rho\)</span>), and the field is completely interpolated from the tabulated values of <span class="math notranslate nohighlight">\(\mathbf{B}\)</span>.</p>
+<p>In 3D, the magnetic field evaluation works in a similar fashion except now <span class="math notranslate nohighlight">\(\mathbf{B}\)</span> is tabulated in <span class="math notranslate nohighlight">\((R,\phi,z)\)</span> grid and <span class="math notranslate nohighlight">\(B_R\)</span> and <span class="math notranslate nohighlight">\(B_z\)</span> are usually non-zero as they contain the perturbation components.</p>
+</section>
+<section id="interaction-with-mhd-modes">
+<h2>Interaction with MHD modes<a class="headerlink" href="#interaction-with-mhd-modes" title="Link to this heading"></a></h2>
+<p>In the simulation it is possible to introduce EM-perturbations <span class="math notranslate nohighlight">\(\tilde{\mathbf{A}} = \alpha\mathbf{B}\)</span> and <span class="math notranslate nohighlight">\(\tilde{\Phi}\)</span> of the form</p>
+<div class="math notranslate nohighlight" id="mhd-alphaphidefinition">
+<span id="equation-mhd-alphaphidefinition"></span><span class="eqno">(32)<a class="headerlink" href="#mhd-alphaphidefinition" title="Link to this equation"></a></span>\[\begin{split}\alpha       &amp;= \sum_{nm} \lambda_{nm} \alpha_{nm}(\rho, t) \cos\left(n\zeta-m\theta-\omega_{nm}t\right),\\
+\tilde{\Phi} &amp;= \sum_{nm} \lambda_{nm} \Phi_{nm}(\rho, t)   \cos\left(n\zeta-m\theta-\omega_{nm}t\right),\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(n\)</span> is toroidal mode number, <span class="math notranslate nohighlight">\(m\)</span> is poloidal mode number, <span class="math notranslate nohighlight">\(\omega_{nm}\)</span> is mode frequency, and <span class="math notranslate nohighlight">\(\alpha_{nm}\)</span> and <span class="math notranslate nohighlight">\(\Phi_{nm}\)</span> are mode eigenfunctions that may or may not depend on time.
+The mode amplitude <span class="math notranslate nohighlight">\(\lambda_{nm}\)</span> is a scaling factor used to adjust <span class="math notranslate nohighlight">\(\tilde{B}/B\)</span> to a desired value.
+The perturbations are evaluated in straight-field line coordinates <span class="math notranslate nohighlight">\((\psi(\rho),\theta,\zeta)\)</span>, which are discussed separately below.</p>
+<section id="mapping-to-straight-field-line-coordinates">
+<h3>Mapping to straight-field-line coordinates<a class="headerlink" href="#mapping-to-straight-field-line-coordinates" title="Link to this heading"></a></h3>
+<p>During the simulation, the marker cylindrical coordinates are mapped to straight-field line coordinates if the MHD perturbations are enabled.
+This mapping is implemented only for stationary tokamak fields and we further assume that the field is axisymmetric (but these can be used in non-axisymmetric fields as well).
+Our choice of the coordinate system are the Boozer coordinates <span class="math notranslate nohighlight">\((\psi,\theta,\zeta)\)</span>, where <span class="math notranslate nohighlight">\(\psi\)</span> is the poloidal flux, <span class="math notranslate nohighlight">\(\theta\)</span> is the Boozer poloidal angle which points in same direction as the geometrical poloidal angle <span class="math notranslate nohighlight">\(\theta_\mathrm{geo}\)</span> (counter-clockwise when looking at the same direction as positive <span class="math notranslate nohighlight">\(\hat{\phi}\)</span>, and <span class="math notranslate nohighlight">\(\zeta = \phi - \nu\)</span> is the Boozer toroidal angle with the same positive direction as the cylindrical toroidal angle.
+Both Boozer angular coordinates have the periodicity of <span class="math notranslate nohighlight">\(2\pi\)</span>.
+To faciliate the mapping in run-time, we precalculate <span class="math notranslate nohighlight">\(\theta(\rho,\theta_\mathrm{geo})\)</span> and <span class="math notranslate nohighlight">\(\nu(\rho,\theta)\)</span> in an uniform grid and use the tabulated values together with the cubic-spline interpolation to perform the mapping.</p>
+<p>The computation of <span class="math notranslate nohighlight">\(\theta\)</span> and <span class="math notranslate nohighlight">\(\nu\)</span> is based on <a class="reference external" href="https://youjunhu.github.io/research_notes/tokamak_equilibrium.pdf">these notes</a> and is performed as follows.
+First we find an equicontour of <span class="math notranslate nohighlight">\(\psi\)</span> on the <span class="math notranslate nohighlight">\((R,z)\)</span> plane.
+This process might fail near the axis or very close to the separatrix, which is why it is possible to set limits <span class="math notranslate nohighlight">\([\rho_\mathrm{min},\rho_\mathrm{max}]\)</span> where the Boozer coordinates are defined.</p>
+<p>The coordinate transformation requires the calculation of the Boozer Jacobian,</p>
+<div class="math notranslate nohighlight" id="boozer-jacobian">
+<span id="equation-boozer-jacobian"></span><span class="eqno">(33)<a class="headerlink" href="#boozer-jacobian" title="Link to this equation"></a></span>\[J = \frac{I+qg}{B^2},\]</div>
+<p>where <span class="math notranslate nohighlight">\(q(\psi)\)</span> is the safety factor, <span class="math notranslate nohighlight">\(g=RB_\mathrm{phi}\)</span>, and <span class="math notranslate nohighlight">\(I(\psi)\)</span> is toroidal current function that is related to enclosed plasma current as <span class="math notranslate nohighlight">\(I_p(\psi) = (2\pi/\mu_0)I(\psi)\)</span>, where <span class="math notranslate nohighlight">\(\mu_0\)</span> is the magnetic constant.
+The safetu factor and the toroidal current function are evaluated using line integrals, where the integration starts from the outer mid-plane and proceeds in the same direction as <span class="math notranslate nohighlight">\(\hat{\theta}_\mathrm{geo}\)</span>:</p>
+<div class="math notranslate nohighlight" id="boozer-iqg">
+<span id="equation-boozer-iqg"></span><span class="eqno">(34)<a class="headerlink" href="#boozer-iqg" title="Link to this equation"></a></span>\[\begin{split}q &amp;= \frac{1}{2\pi}\oint  \mathbf{B}_\mathrm{pol}\cdot d\mathbf{l},\\
+I &amp;= \frac{1}{2\pi}\oint \frac{g}{R^2B^2_\mathrm{pol}} \mathbf{B}_\mathrm{pol}\cdot d\mathbf{l}.\end{split}\]</div>
+<p>Now the Boozer poloidal angle can be evaluated as</p>
+<div class="math notranslate nohighlight" id="boozer-theta">
+<span id="equation-boozer-theta"></span><span class="eqno">(35)<a class="headerlink" href="#boozer-theta" title="Link to this equation"></a></span>\[\theta(\psi,\theta_\mathrm{geo}) = \frac{1}{2\pi}\int_0^{\theta_\mathrm{geo}} \frac{1}{JB^2_\mathrm{pol}}  \mathbf{B}_\mathrm{pol}\cdot d\mathbf{l},\]</div>
+<p>and the Boozer toroidal angle with</p>
+<div class="math notranslate nohighlight" id="boozer-nu">
+<span id="equation-boozer-nu"></span><span class="eqno">(36)<a class="headerlink" href="#boozer-nu" title="Link to this equation"></a></span>\[\nu(\psi,\theta) = -\frac{1}{2\pi}\int_0^\theta \frac{g}{R^2B^2_\mathrm{pol}} \mathbf{B}_\mathrm{pol} + q\theta\]</div>
+<p>where q is the local safety factor.</p>
+<p>The accuracy of the transformation can be assessed by verifying that <span class="math notranslate nohighlight">\(JB^2\)</span> is a flux surface function and <span class="math notranslate nohighlight">\(\mathbf{B}\)</span> is correct when these are evaluated using the Boozer coordinates:</p>
+<div class="math notranslate nohighlight" id="boozer-bvec">
+<span id="equation-boozer-bvec"></span><span class="eqno">(37)<a class="headerlink" href="#boozer-bvec" title="Link to this equation"></a></span>\[\begin{split}\mathbf{B} &amp;= q\nabla\theta\times\nabla\psi + \nabla\psi\times\nabla\zeta, \\
+J^{-1}     &amp;= \nabla\theta\times\nabla\zeta\cdot\nabla\psi.\end{split}\]</div>
+</section>
+<section id="including-mhd-in-orbit-following">
+<h3>Including MHD in orbit-following<a class="headerlink" href="#including-mhd-in-orbit-following" title="Link to this heading"></a></h3>
+<p>The perturbation is included in simulations when calculating the orbit-following part.
+In gyro-orbit and field lines simulations, the pertubation components <span class="math notranslate nohighlight">\(\tilde{\mathbf{B}}\)</span> and <span class="math notranslate nohighlight">\(\tilde{\mathbf{E}}\)</span> are computed and directly added to the background field when solving the equations of motion.
+Note that in the field-line simulations, the time is frozen so that the modes are not rotating and constructing field-line Poincaré plots show a snapshot of the field structure.</p>
+<p>For the guiding center simulations, the perturbation is included by modifying the effective potentials, Eq. <a class="reference internal" href="#equation-gc-effbande">(19)</a>:</p>
+<div class="math notranslate nohighlight" id="mhd-effbande">
+<span id="equation-mhd-effbande"></span><span class="eqno">(38)<a class="headerlink" href="#mhd-effbande" title="Link to this equation"></a></span>\[\begin{split}\mathbf{B}^{**}&amp;= \mathbf{B}^{ *} + \nabla\times(\alpha\mathbf{B}), \\
+\mathbf{E}^{**}&amp;= \mathbf{E}^{ *} - \frac{\partial \alpha\mathbf{B}}{\partial t} - \nabla\tilde{\Phi}\end{split}\]</div>
+<p>If the modes are rapidly rotating so that the electrons are able to balance any electric field parallel to the field lines, we have a condition <span class="math notranslate nohighlight">\(E_\parallel=0\)</span> which makes the magnetic and electric perturbations co-dependent:</p>
+<div class="math notranslate nohighlight" id="mhd-alphafromphi">
+<span id="equation-mhd-alphafromphi"></span><span class="eqno">(39)<a class="headerlink" href="#mhd-alphafromphi" title="Link to this equation"></a></span>\[\omega_{nm}\alpha_{nm} = \frac{nq - m}{I+gq}\Phi_{nm}.\]</div>
+<p>This is not enforced in the code so ensuring it is user’s responsibility.</p>
+<p>Another useful property is the conservation of</p>
+<div class="math notranslate nohighlight" id="mhd-h">
+<span id="equation-mhd-h"></span><span class="eqno">(40)<a class="headerlink" href="#mhd-h" title="Link to this equation"></a></span>\[K = H - \omega_n P / n,\]</div>
+<p>where <span class="math notranslate nohighlight">\(H\)</span> is the Hamiltonian and <span class="math notranslate nohighlight">\(P\)</span> canonical angular toroidal momentum.</p>
+</section>
+</section>
+<section id="backward-monte-carlo">
+<h2>Backward Monte-Carlo<a class="headerlink" href="#backward-monte-carlo" title="Link to this heading"></a></h2>
+<p>This section is not done yet, but you can find the reference <a class="reference external" href="https://iopscience.iop.org/article/10.1088/1741-4326/ac3a1b">here</a>.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="processing.html" class="btn btn-neutral float-left" title="Data storage" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="tutorials/tutorial.html" class="btn btn-neutral float-right" title="Introduction" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Ascot Group.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

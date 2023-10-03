@@ -1,0 +1,1092 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="B__GS_8c" kind="file" language="C++">
+    <compoundname>B_GS.c</compoundname>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes refid="math_8h" local="no">math.h</includes>
+    <includes refid="ascot5_8h" local="yes">../ascot5.h</includes>
+    <includes refid="consts_8h" local="yes">../consts.h</includes>
+    <includes refid="print_8h" local="yes">../print.h</includes>
+    <includes refid="error_8h" local="yes">../error.h</includes>
+    <includes refid="B__GS_8h" local="yes">B_GS.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>Bfield/B_GS.c</label>
+        <link refid="B__GS_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>B_GS.h</label>
+        <link refid="B__GS_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stdlib.h</label>
+      </node>
+      <node id="6">
+        <label>omp.h</label>
+      </node>
+      <node id="8">
+        <label>../consts.h</label>
+        <link refid="consts_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>../error.h</label>
+        <link refid="error_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>time.h</label>
+      </node>
+      <node id="4">
+        <label>math.h</label>
+        <link refid="math_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>stdio.h</label>
+      </node>
+      <node id="9">
+        <label>../print.h</label>
+        <link refid="print_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>ascot5.h</label>
+        <link refid="ascot5_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="B__GS_8c_1acff473136a0a436d863018e5f38ee596" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int B_GS_init_offload</definition>
+        <argsstring>(B_GS_offload_data *offload_data, real **offload_array)</argsstring>
+        <name>B_GS_init_offload</name>
+        <param>
+          <type><ref refid="structB__GS__offload__data" kindref="compound">B_GS_offload_data</ref> *</type>
+          <declname>offload_data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> **</type>
+          <declname>offload_array</declname>
+        </param>
+        <briefdescription>
+<para>Initialize magnetic field offload data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The offload data struct is very simple and contains only the necessary fields which are all initialized when the data is read (except B_GS.offload_array_length). The offload array is not required at all. Therefore, this function only sets the offload_array_length to zero, assigns a NULL pointer to offload_array, and prints sanity checks so that user may verify that data was initialized succesfully.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>offload_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload array</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>zero to indicate success </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bfield/B_GS.c" line="91" column="5" bodyfile="Bfield/B_GS.c" bodystart="91" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="B__GS_8c_1aa16073904d31d2c02cc9417bf06ca71c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void B_GS_free_offload</definition>
+        <argsstring>(B_GS_offload_data *offload_data, real **offload_array)</argsstring>
+        <name>B_GS_free_offload</name>
+        <param>
+          <type><ref refid="structB__GS__offload__data" kindref="compound">B_GS_offload_data</ref> *</type>
+          <declname>offload_data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> **</type>
+          <declname>offload_array</declname>
+        </param>
+        <briefdescription>
+<para>Free offload array. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>offload_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to pointer to offload array </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bfield/B_GS.c" line="131" column="6" bodyfile="Bfield/B_GS.c" bodystart="131" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="B__GS_8c_1a21d761b61c95291e7c8df63bee726e3f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void B_GS_init</definition>
+        <argsstring>(B_GS_data *Bdata, B_GS_offload_data *offload_data, real *offload_array)</argsstring>
+        <name>B_GS_init</name>
+        <param>
+          <type><ref refid="structB__GS__data" kindref="compound">B_GS_data</ref> *</type>
+          <declname>Bdata</declname>
+        </param>
+        <param>
+          <type><ref refid="structB__GS__offload__data" kindref="compound">B_GS_offload_data</ref> *</type>
+          <declname>offload_data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>offload_array</declname>
+        </param>
+        <briefdescription>
+<para>Initialize magnetic field data struct on target. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Bdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to data struct on target </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>offload array </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bfield/B_GS.c" line="144" column="6" bodyfile="Bfield/B_GS.c" bodystart="144" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="B__GS_8c_1a33e019b4f05632836ec69715c988d406" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref></type>
+        <definition>a5err B_GS_eval_psi</definition>
+        <argsstring>(real *psi, real r, real phi, real z, B_GS_data *Bdata)</argsstring>
+        <name>B_GS_eval_psi</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>psi</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>phi</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type><ref refid="structB__GS__data" kindref="compound">B_GS_data</ref> *</type>
+          <declname>Bdata</declname>
+        </param>
+        <briefdescription>
+<para>Evaluate poloidal flux psi. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>psi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer where psi [V*s*m^-1] value will be stored </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>R coordinate [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>phi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>phi coordinate [rad] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>z coordinate [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Bdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to magnetic field data struct</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>zero to indicate success </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bfield/B_GS.c" line="174" column="7" bodyfile="Bfield/B_GS.c" bodystart="174" bodyend="214"/>
+      </memberdef>
+      <memberdef kind="function" id="B__GS_8c_1ab6d19c0c87844118bd02db019a78566e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref></type>
+        <definition>a5err B_GS_eval_psi_dpsi</definition>
+        <argsstring>(real psi_dpsi[4], real r, real phi, real z, B_GS_data *Bdata)</argsstring>
+        <name>B_GS_eval_psi_dpsi</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>psi_dpsi</declname>
+          <array>[4]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>phi</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type><ref refid="structB__GS__data" kindref="compound">B_GS_data</ref> *</type>
+          <declname>Bdata</declname>
+        </param>
+        <briefdescription>
+<para>Evaluate poloidal flux psi and its derivatives. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>psi_dpsi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer for storing psi [V*s*m^-1] and its derivatives </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>R coordinate [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>phi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>phi coordinate [rad] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>z coordinate [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Bdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to magnetic field data struct</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>zero to indicate success </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bfield/B_GS.c" line="227" column="7" bodyfile="Bfield/B_GS.c" bodystart="227" bodyend="283"/>
+      </memberdef>
+      <memberdef kind="function" id="B__GS_8c_1aaed1e4b9331e94b2ebcea1859fabf92b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref></type>
+        <definition>a5err B_GS_eval_rho_drho</definition>
+        <argsstring>(real rho_drho[4], real r, real phi, real z, B_GS_data *Bdata)</argsstring>
+        <name>B_GS_eval_rho_drho</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>rho_drho</declname>
+          <array>[4]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>phi</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type><ref refid="structB__GS__data" kindref="compound">B_GS_data</ref> *</type>
+          <declname>Bdata</declname>
+        </param>
+        <briefdescription>
+<para>Evaluate normalized poloidal flux rho and its derivatives. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rho_drho</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer where rho and its derivatives will be stored </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>R coordinate [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>phi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>phi coordinate [rad] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>z coordinate [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Bdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to magnetic field data struct</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>zero to indicate success </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bfield/B_GS.c" line="296" column="7" bodyfile="Bfield/B_GS.c" bodystart="296" bodyend="314"/>
+      </memberdef>
+      <memberdef kind="function" id="B__GS_8c_1a52e303d3851a693317243f80114bbea2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref></type>
+        <definition>a5err B_GS_eval_B</definition>
+        <argsstring>(real B[3], real r, real phi, real z, B_GS_data *Bdata)</argsstring>
+        <name>B_GS_eval_B</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>B</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>phi</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type><ref refid="structB__GS__data" kindref="compound">B_GS_data</ref> *</type>
+          <declname>Bdata</declname>
+        </param>
+        <briefdescription>
+<para>Evaluate magnetic field. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>B</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to array where magnetic field values are stored </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>R coordinate [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>phi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>phi coordinate [deg] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>z coordinate [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Bdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to magnetic field data struct</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>zero to indicate success </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bfield/B_GS.c" line="327" column="7" bodyfile="Bfield/B_GS.c" bodystart="327" bodyend="393"/>
+      </memberdef>
+      <memberdef kind="function" id="B__GS_8c_1a6619ede1977dc97229e00d3826f46a8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref></type>
+        <definition>a5err B_GS_eval_B_dB</definition>
+        <argsstring>(real B_dB[12], real r, real phi, real z, B_GS_data *Bdata)</argsstring>
+        <name>B_GS_eval_B_dB</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>B_dB</declname>
+          <array>[12]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>phi</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type><ref refid="structB__GS__data" kindref="compound">B_GS_data</ref> *</type>
+          <declname>Bdata</declname>
+        </param>
+        <briefdescription>
+<para>Evaluate magnetic field and its derivatives. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>B_dB</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to array where the field and its derivatives are stored </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>R coordinate [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>phi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>phi coordinate [deg] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>z coordinate [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Bdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to magnetic field data struct</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>zero to indicate success </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bfield/B_GS.c" line="406" column="7" bodyfile="Bfield/B_GS.c" bodystart="406" bodyend="547"/>
+      </memberdef>
+      <memberdef kind="function" id="B__GS_8c_1a867b0d8e0fe8f279a3e7708d0d240a48" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref></type>
+        <definition>a5err B_GS_get_axis_rz</definition>
+        <argsstring>(real rz[2], B_GS_data *Bdata)</argsstring>
+        <name>B_GS_get_axis_rz</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>rz</declname>
+          <array>[2]</array>
+        </param>
+        <param>
+          <type><ref refid="structB__GS__data" kindref="compound">B_GS_data</ref> *</type>
+          <declname>Bdata</declname>
+        </param>
+        <briefdescription>
+<para>Return magnetic axis R-coordinate. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer where axis R and z [m] values will be stored </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Bdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to magnetic field data struct</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Zero a5err value as this function can&apos;t fail. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bfield/B_GS.c" line="557" column="7" bodyfile="Bfield/B_GS.c" bodystart="557" bodyend="562"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Analytic magnetic field. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This module implements a toroidal magnetic field based on an analytical solution to the Grad-Shafranov equation [1].</para>
+<para>In this model, the poloidal flux psi is calculated as</para>
+<para><formula id="12">\begin{align*} \psi(R,Z) = &amp;\psi_c [(1-A) (r^4/8) \\ &amp;+ A (r^2\log(r)/2) \\ &amp;+ c_0 \\ &amp;+ c_1 (r^2) \\ &amp;+ c_2 (r^2\log(r) - z^2) \\ &amp;+ c_3 (r^4 - 4r^2z^2) \\ &amp;+ c_4 (3r^4\log(r) - 9r^2z^2 - 12r^2\log(r)z^2 + 2z^4) \\ &amp;+ c_5 (r^6 - 12r^4z^2 + 8r^2z^4) \\ &amp;+ c_6 (8z^6 - 140r^2z^4 - 120r^2\log(r)z^4 + 180r^4\log(r)z^2 + 75r^4z^2 - 15r^6\log(r)) \\ &amp;+ c_7 (z) \\ &amp;+ c_8 (zr^2) \\ &amp;+ c_9 (z^3 - 3zr^2\log(r)) \\ &amp;+ c_{10} (3zr^4 - 4z^3r^2) \\ &amp;+ c_{12} (8z^5 - 45zr^4 - 80z^3r^2\log(r) + 60zr^4\log(r)) ] \end{align*}</formula></para>
+<para>where <formula id="13">$c_i$</formula> and <formula id="14">$A$</formula> are pre-calculated coefficients which can be chosen so that realistic equilibria resembling different machines are produced. The equilibrium can be non-symmetric with respect to magnetic plane, and can have zero, one, or two X-points. <formula id="15">$\psi_c$</formula> is a scaling constant, and <formula id="16">$r = R/R_0$</formula> <formula id="17">$z = Z/R_0$</formula>. From <formula id="7">$\psi$</formula> the poloidal magnetic field components can be evaluated from Grad-Shafranov relations</para>
+<para><formula id="8">\begin{align*} B_R &amp;= -\frac{1}{R}\frac{\partial\psi}{\partial z}\\ B_z &amp;= \frac{1}{R}\frac{\partial\psi}{\partial R} \end{align*}</formula></para>
+<para>and toroidal field is evaluated as</para>
+<para><formula id="18">\begin{equation*} B_\phi = \frac{B_0R_0}{R} \end{equation*}</formula></para>
+<para>This module also includes the possibility to have an analytical model for toroidal field ripple, which is used if ripple period <formula id="19">$N&gt;0$</formula>. The rippled toroidal field is</para>
+<para><formula id="20">\begin{equation*} \tilde{B}_\phi = B_\phi( 1 + \delta\cos(N\phi) ) \end{equation*}</formula></para>
+<para>where <formula id="21">\begin{equation*} \delta = \delta_0 \frac{r&apos;}{a_0}^{\alpha_0} e^{-\theta^2} \end{equation*}</formula></para>
+<para>and <formula id="22">$\theta = \arctan(Z - z_0, R- R_0)$</formula> and <formula id="23">$r&apos; = \sqrt{(R-R_0)^2 + (Z-Z_0)^2}$</formula>.</para>
+<para>[1] A.J. Cerfon, J.P. Freidberg. &quot;One size fits all&quot; analytic solutions to the Grad-Shafranov equation. Physics of Plasmas 17 (3) (2010) 032502. <ulink url="http://scitation.aip.org/content/aip/journal/pop/17/3/10.1063/1.3328818">http://scitation.aip.org/content/aip/journal/pop/17/3/10.1063/1.3328818</ulink> </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="math_8h" kindref="compound">math.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../ascot5.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../consts.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../print.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../error.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="B__GS_8h" kindref="compound">B_GS.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="B__GS_8c_1acff473136a0a436d863018e5f38ee596" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="B__GS_8c_1acff473136a0a436d863018e5f38ee596" kindref="member">B_GS_init_offload</ref>(<ref refid="structB__GS__offload__data" kindref="compound">B_GS_offload_data</ref>*<sp/>offload_data,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>**<sp/>offload_array)<sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structB__GS__offload__data_1acb9ac0f80150230ce2868d83c44b890a" kindref="member">offload_array_length</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Evaluate<sp/>psi<sp/>and<sp/>magnetic<sp/>field<sp/>on<sp/>axis<sp/>for<sp/>checks<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref><sp/>err<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structB__GS__data" kindref="compound">B_GS_data</ref><sp/>Bdata;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="B__GS_8c_1a21d761b61c95291e7c8df63bee726e3f" kindref="member">B_GS_init</ref>(&amp;Bdata,<sp/>offload_data,<sp/>*offload_array);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>psival[1],<sp/>Bval[3];</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="B__GS_8c_1a33e019b4f05632836ec69715c988d406" kindref="member">B_GS_eval_psi</ref>(psival,<sp/>offload_data-&gt;<ref refid="structB__GS__offload__data_1a560f02509917897a23a2c7454ff98e39" kindref="member">raxis</ref>,<sp/>0,<sp/>offload_data-&gt;<ref refid="structB__GS__offload__data_1a14257fe4a3ec14f19c04137eff848d2c" kindref="member">zaxis</ref>,</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;Bdata);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="B__GS_8c_1a52e303d3851a693317243f80114bbea2" kindref="member">B_GS_eval_B</ref>(Bval,<sp/>offload_data-&gt;<ref refid="structB__GS__offload__data_1a560f02509917897a23a2c7454ff98e39" kindref="member">raxis</ref>,<sp/>0,<sp/>offload_data-&gt;<ref refid="structB__GS__offload__data_1a14257fe4a3ec14f19c04137eff848d2c" kindref="member">zaxis</ref>,</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;Bdata);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(err)<sp/>{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="print_8h_1ae9242d843e65413a3e5dba7129c75101" kindref="member">print_err</ref>(</highlight><highlight class="stringliteral">&quot;Error:<sp/>Initialization<sp/>failed.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>err;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Print<sp/>some<sp/>sanity<sp/>check<sp/>on<sp/>data<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="print_8h_1a8520c71eb5db223009e5079e420bc398" kindref="member">print_out</ref>(VERBOSE_IO,</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;\nAnalytical<sp/>tokamak<sp/>magnetic<sp/>field<sp/>(B_GS)\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Psi<sp/>at<sp/>magnetic<sp/>axis<sp/>(%1.3f<sp/>m,<sp/>%1.3f<sp/>m)\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;%3.3f<sp/>(evaluated)\n%3.3f<sp/>(given)\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Magnetic<sp/>field<sp/>on<sp/>axis:\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;B_R<sp/>=<sp/>%3.3f<sp/>B_phi<sp/>=<sp/>%3.3f<sp/>B_z<sp/>=<sp/>%3.3f\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Number<sp/>of<sp/>toroidal<sp/>field<sp/>coils<sp/>%d\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structB__GS__offload__data_1a560f02509917897a23a2c7454ff98e39" kindref="member">raxis</ref>,<sp/>offload_data-&gt;<ref refid="structB__GS__offload__data_1a14257fe4a3ec14f19c04137eff848d2c" kindref="member">zaxis</ref>,</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>psival[0],<sp/>offload_data-&gt;<ref refid="structB__GS__offload__data_1a873fe0b5c43721cef4a38f3f7ca61cb6" kindref="member">psi0</ref>,</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Bval[0],<sp/>Bval[1],<sp/>Bval[2],</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structB__GS__offload__data_1a746cc31f79ba83dcb954c5692805cb7e" kindref="member">Nripple</ref>);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131" refid="B__GS_8c_1aa16073904d31d2c02cc9417bf06ca71c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="B__GS_8c_1aa16073904d31d2c02cc9417bf06ca71c" kindref="member">B_GS_free_offload</ref>(<ref refid="structB__GS__offload__data" kindref="compound">B_GS_offload_data</ref>*<sp/>offload_data,</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>**<sp/>offload_array)<sp/>{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>free(*offload_array);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>*offload_array<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144" refid="B__GS_8c_1a21d761b61c95291e7c8df63bee726e3f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="B__GS_8c_1a21d761b61c95291e7c8df63bee726e3f" kindref="member">B_GS_init</ref>(<ref refid="structB__GS__data" kindref="compound">B_GS_data</ref>*<sp/>Bdata,<sp/><ref refid="structB__GS__offload__data" kindref="compound">B_GS_offload_data</ref>*<sp/>offload_data,</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>offload_array)<sp/>{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>Bdata-&gt;<ref refid="structB__GS__data_1a67fa495740de90e35d35e95578ffc178" kindref="member">R0</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>offload_data-&gt;<ref refid="structB__GS__offload__data_1a041ad89f5def8ecb46d162b6b9e73979" kindref="member">R0</ref>;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>Bdata-&gt;<ref refid="structB__GS__data_1a3d7e3f477929f7454679263b759ac045" kindref="member">z0</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>offload_data-&gt;<ref refid="structB__GS__offload__data_1ace4414d263db7616dd2522e8f77daf99" kindref="member">z0</ref>;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>Bdata-&gt;<ref refid="structB__GS__data_1a2b395816c067636ac92ce1e8e3b07aa0" kindref="member">raxis</ref><sp/><sp/><sp/><sp/><sp/>=<sp/>offload_data-&gt;<ref refid="structB__GS__offload__data_1a560f02509917897a23a2c7454ff98e39" kindref="member">raxis</ref>;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>Bdata-&gt;<ref refid="structB__GS__data_1a81a50dc9782683985f0876638fb05e4e" kindref="member">zaxis</ref><sp/><sp/><sp/><sp/><sp/>=<sp/>offload_data-&gt;<ref refid="structB__GS__offload__data_1a14257fe4a3ec14f19c04137eff848d2c" kindref="member">zaxis</ref>;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>Bdata-&gt;<ref refid="structB__GS__data_1a0ede8a139ec10950da20ea13af3fe2b4" kindref="member">B_phi0</ref><sp/><sp/><sp/><sp/>=<sp/>offload_data-&gt;<ref refid="structB__GS__offload__data_1a9cfbc39ec3c2f2aea55d65a8bb4803f4" kindref="member">B_phi0</ref>;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>Bdata-&gt;<ref refid="structB__GS__data_1a8e777a9a53d33d4fc8db2327311c042c" kindref="member">psi0</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>offload_data-&gt;<ref refid="structB__GS__offload__data_1a873fe0b5c43721cef4a38f3f7ca61cb6" kindref="member">psi0</ref>;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>Bdata-&gt;<ref refid="structB__GS__data_1a78a0c3b8bb9a249fe5e9e20b72ebf66e" kindref="member">psi1</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>offload_data-&gt;<ref refid="structB__GS__offload__data_1ab2a068ad8597909dcc5333a45cf0956b" kindref="member">psi1</ref>;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>Bdata-&gt;<ref refid="structB__GS__data_1a047a09870db4af357a969d7261df382e" kindref="member">psi_mult</ref><sp/><sp/>=<sp/>offload_data-&gt;<ref refid="structB__GS__offload__data_1ab3812dfa194334368866f57eb1e342d1" kindref="member">psi_mult</ref>;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>Bdata-&gt;<ref refid="structB__GS__data_1ac07afd11dae69bf8cc468a9ec3fcb0de" kindref="member">Nripple</ref><sp/><sp/><sp/>=<sp/>offload_data-&gt;<ref refid="structB__GS__offload__data_1a746cc31f79ba83dcb954c5692805cb7e" kindref="member">Nripple</ref>;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>Bdata-&gt;<ref refid="structB__GS__data_1a0c799fcb8c32c23d713ad20a9040f496" kindref="member">a0</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>offload_data-&gt;<ref refid="structB__GS__offload__data_1a65347b8e34dc804eb2fe2bf3b2dadbc3" kindref="member">a0</ref>;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>Bdata-&gt;<ref refid="structB__GS__data_1a125e3b104303e57994b91776cb1c06cf" kindref="member">delta0</ref><sp/><sp/><sp/><sp/>=<sp/>offload_data-&gt;<ref refid="structB__GS__offload__data_1a9e3a2ed81351660f78e3c4cc7fd05cd5" kindref="member">delta0</ref>;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>Bdata-&gt;<ref refid="structB__GS__data_1a97e457db6cec9f1cdb9ccb239a62d7ae" kindref="member">alpha0</ref><sp/><sp/><sp/><sp/>=<sp/>offload_data-&gt;<ref refid="structB__GS__offload__data_1af7e6b14c9e1cf474efdcb0ba7920b3e8" kindref="member">alpha0</ref>;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>Bdata-&gt;<ref refid="structB__GS__data_1a500e1828c8a17414fd886df0bf061ff2" kindref="member">psi_coeff</ref><sp/>=<sp/>offload_data-&gt;<ref refid="structB__GS__offload__data_1a9e84645df1f0da69aabda41aeb74bbd1" kindref="member">psi_coeff</ref>;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174" refid="B__GS_8c_1a33e019b4f05632836ec69715c988d406" refkind="member"><highlight class="normal"><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref><sp/><ref refid="B__GS_8c_1a33e019b4f05632836ec69715c988d406" kindref="member">B_GS_eval_psi</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>psi,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>phi,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z,</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structB__GS__data" kindref="compound">B_GS_data</ref>*<sp/>Bdata)<sp/>{</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Normalize<sp/>the<sp/>coordinates<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>z<sp/>-=<sp/>Bdata-&gt;<ref refid="structB__GS__data_1a3d7e3f477929f7454679263b759ac045" kindref="member">z0</ref>;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>r<sp/>/=<sp/>Bdata-&gt;<ref refid="structB__GS__data_1a67fa495740de90e35d35e95578ffc178" kindref="member">R0</ref>;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>z<sp/>/=<sp/>Bdata-&gt;<ref refid="structB__GS__data_1a67fa495740de90e35d35e95578ffc178" kindref="member">R0</ref>;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>C<sp/>=<sp/>Bdata-&gt;<ref refid="structB__GS__data_1a500e1828c8a17414fd886df0bf061ff2" kindref="member">psi_coeff</ref>;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Precalculated<sp/>terms<sp/>used<sp/>in<sp/>the<sp/>components<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r2<sp/>=<sp/>r*r;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r3<sp/>=<sp/>r2*r;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r4<sp/>=<sp/>r3*r;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r5<sp/>=<sp/>r4*r;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>r6<sp/>=<sp/>r5*r;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>z2<sp/>=<sp/>z*z;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>z3<sp/>=<sp/>z2*z;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>z4<sp/>=<sp/>z3*z;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>z5<sp/>=<sp/>z4*z;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>z6<sp/>=<sp/>z5*z;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>logr<sp/>=<sp/>log(r);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/>psi[0]<sp/>=<sp/>Bdata-&gt;<ref refid="structB__GS__data_1a047a09870db4af357a969d7261df382e" kindref="member">psi_mult</ref><sp/>*<sp/>(</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1-C[12])<sp/>*<sp/>(r4/8)</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[12]<sp/>*<sp/>(r2*logr/2)</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[0]<sp/><sp/>*<sp/>(1)</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[1]<sp/><sp/>*<sp/>(r2)</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[2]<sp/><sp/>*<sp/>(r2*logr<sp/>-<sp/>z2)</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[3]<sp/><sp/>*<sp/>(r4<sp/>-<sp/>4*r2*z2)</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[4]<sp/><sp/>*<sp/>(3*r4*logr<sp/>-<sp/>9*r2*z2<sp/>-<sp/>12*r2*logr*z2<sp/>+<sp/>2*z4)</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[5]<sp/><sp/>*<sp/>(r6<sp/>-<sp/>12*r4*z2<sp/>+<sp/>8*r2*z4)</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[6]<sp/><sp/>*<sp/>(8*z6<sp/>-<sp/>140*r2*z4<sp/>-<sp/>120*r2*logr*z4<sp/>+<sp/>180*r4*logr*z2</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>75*r4*z2<sp/>-<sp/>15*r6*logr)</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[7]<sp/><sp/>*<sp/>(z)</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[8]<sp/><sp/>*<sp/>(z*r2)</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[9]<sp/><sp/>*<sp/>(z3<sp/>-<sp/>3*z*r2*logr)</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[10]<sp/>*<sp/>(3*z*r4<sp/>-<sp/>4*z3*r2)</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[11]<sp/>*<sp/>(8*z5<sp/>-<sp/>45*z*r4<sp/>-<sp/>80*z3*r2*logr<sp/>+<sp/>60*z*r4*logr)<sp/>);</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="214"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227" refid="B__GS_8c_1ab6d19c0c87844118bd02db019a78566e" refkind="member"><highlight class="normal"><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref><sp/><ref refid="B__GS_8c_1ab6d19c0c87844118bd02db019a78566e" kindref="member">B_GS_eval_psi_dpsi</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>psi_dpsi[4],<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>phi,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z,</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structB__GS__data" kindref="compound">B_GS_data</ref>*<sp/>Bdata)<sp/>{</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>psi<sp/>value<sp/>itself<sp/>we<sp/>can<sp/>get<sp/>from<sp/>here</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="B__GS_8c_1a33e019b4f05632836ec69715c988d406" kindref="member">B_GS_eval_psi</ref>(&amp;(psi_dpsi[0]),<sp/>r,<sp/>phi,<sp/>z,<sp/>Bdata);</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Normalize<sp/>the<sp/>coordinates<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/>z<sp/>-=<sp/>Bdata-&gt;<ref refid="structB__GS__data_1a3d7e3f477929f7454679263b759ac045" kindref="member">z0</ref>;</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/>r<sp/>/=<sp/>Bdata-&gt;<ref refid="structB__GS__data_1a67fa495740de90e35d35e95578ffc178" kindref="member">R0</ref>;</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/>z<sp/>/=<sp/>Bdata-&gt;<ref refid="structB__GS__data_1a67fa495740de90e35d35e95578ffc178" kindref="member">R0</ref>;</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>C<sp/>=<sp/>Bdata-&gt;<ref refid="structB__GS__data_1a500e1828c8a17414fd886df0bf061ff2" kindref="member">psi_coeff</ref>;</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Precalculated<sp/>terms<sp/>used<sp/>in<sp/>the<sp/>components<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r2<sp/>=<sp/>r*r;</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r3<sp/>=<sp/>r2*r;</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r4<sp/>=<sp/>r3*r;</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r5<sp/>=<sp/>r4*r;</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z2<sp/>=<sp/>z*z;</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z3<sp/>=<sp/>z2*z;</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z4<sp/>=<sp/>z3*z;</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z5<sp/>=<sp/>z4*z;</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>logr<sp/>=<sp/>log(r);</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/>psi_dpsi[1]<sp/>=<sp/>(<sp/>Bdata-&gt;<ref refid="structB__GS__data_1a047a09870db4af357a969d7261df382e" kindref="member">psi_mult</ref><sp/>/<sp/>(r<sp/>*<sp/>Bdata-&gt;<ref refid="structB__GS__data_1a67fa495740de90e35d35e95578ffc178" kindref="member">R0</ref>)<sp/>)<sp/>*</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<sp/>(1-C[12])<sp/>*<sp/>(r3/2)</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[12]<sp/>*<sp/>(r/2<sp/>+<sp/>r*logr)</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[1]<sp/><sp/>*<sp/>(2*r)</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[2]<sp/><sp/>*<sp/>(2*r*logr<sp/>+<sp/>r)</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[3]<sp/><sp/>*<sp/>(4*r3<sp/>-<sp/>8*r*z2)</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[4]<sp/><sp/>*<sp/>(12*r3*logr<sp/>+<sp/>3*r3<sp/>-<sp/>30*r*z2<sp/>-<sp/>24*r*logr*z2)</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[5]<sp/><sp/>*<sp/>(6*r5<sp/>-<sp/>48*r3*z2<sp/>+<sp/>16*r*z4)</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[6]<sp/><sp/>*<sp/>(-400*r*z4<sp/>-240*r*logr*z4<sp/>+<sp/>720*r3*logr*z2<sp/>+<sp/>480*r3*z2</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-90*r5*logr<sp/>-<sp/>15*r5)</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[8]<sp/><sp/>*<sp/>(2*z*r)</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[9]<sp/><sp/>*<sp/>(-6*z*r*logr<sp/>-<sp/>3*z*r)</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[10]<sp/>*<sp/>(12*z*r3<sp/>-<sp/>8*z3*r)</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[11]<sp/>*<sp/>(-120*z*r3-160*z3*r*logr-80*z3*r+240*z*r3*logr)<sp/>);</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/>psi_dpsi[2]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/>psi_dpsi[3]<sp/>=</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<sp/>Bdata-&gt;<ref refid="structB__GS__data_1a047a09870db4af357a969d7261df382e" kindref="member">psi_mult</ref><sp/>/<sp/>(r<sp/>*<sp/>Bdata-&gt;<ref refid="structB__GS__data_1a67fa495740de90e35d35e95578ffc178" kindref="member">R0</ref>)<sp/>)<sp/>*</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<sp/>C[2]<sp/><sp/>*<sp/>(-2*z)</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[3]<sp/><sp/>*<sp/>(-8*r2*z)</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[4]<sp/><sp/>*<sp/>(-18*r2*z<sp/>-<sp/>24*r2*logr*z<sp/>+<sp/>8*z3)</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[5]<sp/><sp/>*<sp/>(-24*r4*z<sp/>+<sp/>32*r2*z3)</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[6]<sp/><sp/>*<sp/>(48*z5<sp/>-<sp/>560*r2*z3<sp/>-<sp/>480*r2*logr*z3<sp/>+360*r4*logr*z</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>150*r4*z)</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[7]<sp/><sp/>*<sp/>(1)</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[8]<sp/><sp/>*<sp/>(r2)</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[9]<sp/><sp/>*<sp/>(3*z2<sp/>-<sp/>3*r2*logr)</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[10]<sp/>*<sp/>(3*r4<sp/>-<sp/>12*z2*r2)</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[11]<sp/>*<sp/>(40*z4<sp/>-<sp/>45*r4<sp/>-<sp/>240*z2*r2*logr<sp/>+<sp/>60*r4*logr)<sp/>);</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="283"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"></highlight></codeline>
+<codeline lineno="296" refid="B__GS_8c_1aaed1e4b9331e94b2ebcea1859fabf92b" refkind="member"><highlight class="normal"><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref><sp/><ref refid="B__GS_8c_1aaed1e4b9331e94b2ebcea1859fabf92b" kindref="member">B_GS_eval_rho_drho</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>rho_drho[4],<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>phi,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z,</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structB__GS__data" kindref="compound">B_GS_data</ref>*<sp/>Bdata)<sp/>{</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>psi_dpsi[4];</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="B__GS_8c_1ab6d19c0c87844118bd02db019a78566e" kindref="member">B_GS_eval_psi_dpsi</ref>(psi_dpsi,<sp/>r,<sp/>phi,<sp/>z,<sp/>Bdata);</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"></highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Check<sp/>that<sp/>the<sp/>values<sp/>seem<sp/>valid<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>delta<sp/>=<sp/>Bdata-&gt;<ref refid="structB__GS__data_1a78a0c3b8bb9a249fe5e9e20b72ebf66e" kindref="member">psi1</ref><sp/>-<sp/>Bdata-&gt;<ref refid="structB__GS__data_1a8e777a9a53d33d4fc8db2327311c042c" kindref="member">psi0</ref>;</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>(psi_dpsi[0]<sp/>-<sp/>Bdata-&gt;<ref refid="structB__GS__data_1a8e777a9a53d33d4fc8db2327311c042c" kindref="member">psi0</ref>)<sp/>/<sp/>delta<sp/>&lt;<sp/>0<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="error_8h_1a580a0b8b4a823a26a00b2f83d9343bc4" kindref="member">error_raise</ref>(<sp/><ref refid="error_8h_1a6756b9f30781ed8ca8ce938e49ad9d92afd37c4badd68d8e161fa0676fd11eb4c" kindref="member">ERR_INPUT_UNPHYSICAL</ref>,<sp/>__LINE__,<sp/><ref refid="error_8h_1a4e101179605aba551caa2576fd83a1dda29da4623453fcac4ff6bf5d870b473d6" kindref="member">EF_B_GS</ref><sp/>);</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"></highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/>rho_drho[0]<sp/>=<sp/>sqrt(<sp/>(psi_dpsi[0]<sp/>-<sp/>Bdata-&gt;<ref refid="structB__GS__data_1a8e777a9a53d33d4fc8db2327311c042c" kindref="member">psi0</ref>)<sp/>/<sp/>delta<sp/>);</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/>rho_drho[1]<sp/>=<sp/>psi_dpsi[1]<sp/>/<sp/>(2*delta*rho_drho[0]);</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/>rho_drho[2]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/>rho_drho[3]<sp/>=<sp/>psi_dpsi[3]<sp/>/<sp/>(2*delta*rho_drho[0]);</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"></highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="314"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"></highlight></codeline>
+<codeline lineno="327" refid="B__GS_8c_1a52e303d3851a693317243f80114bbea2" refkind="member"><highlight class="normal"><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref><sp/><ref refid="B__GS_8c_1a52e303d3851a693317243f80114bbea2" kindref="member">B_GS_eval_B</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>B[3],<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>phi,</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z,<sp/><ref refid="structB__GS__data" kindref="compound">B_GS_data</ref>*<sp/>Bdata)<sp/>{</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Normalize<sp/>the<sp/>coordinates<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/>z<sp/>-=<sp/>Bdata-&gt;<ref refid="structB__GS__data_1a3d7e3f477929f7454679263b759ac045" kindref="member">z0</ref>;</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/>r<sp/>/=<sp/>Bdata-&gt;<ref refid="structB__GS__data_1a67fa495740de90e35d35e95578ffc178" kindref="member">R0</ref>;</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/>z<sp/>/=<sp/>Bdata-&gt;<ref refid="structB__GS__data_1a67fa495740de90e35d35e95578ffc178" kindref="member">R0</ref>;</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"></highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>C<sp/>=<sp/>Bdata-&gt;<ref refid="structB__GS__data_1a500e1828c8a17414fd886df0bf061ff2" kindref="member">psi_coeff</ref>;</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"></highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Precalculated<sp/>terms<sp/>used<sp/>in<sp/>the<sp/>components<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r2<sp/>=<sp/>r*r;</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r3<sp/>=<sp/>r2*r;</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r4<sp/>=<sp/>r3*r;</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r5<sp/>=<sp/>r4*r;</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z2<sp/>=<sp/>z*z;</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z3<sp/>=<sp/>z2*z;</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z4<sp/>=<sp/>z3*z;</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z5<sp/>=<sp/>z4*z;</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>logr<sp/>=<sp/>log(r);</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"></highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>r<sp/>field<sp/>component<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/>B[0]<sp/>=<sp/><sp/><sp/>C[2]<sp/><sp/>*<sp/>(-2*z)</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[3]<sp/><sp/>*<sp/>(-8*r2*z)</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[4]<sp/><sp/>*<sp/>(-18*r2*z<sp/>-<sp/>24*r2*logr*z<sp/>+<sp/>8*z3)</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[5]<sp/><sp/>*<sp/>(-24*r4*z<sp/>+<sp/>32*r2*z3)</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[6]<sp/><sp/>*<sp/>(48*z5<sp/>-<sp/>560*r2*z3<sp/>-<sp/>480*r2*logr*z3<sp/>+360*r4*logr*z</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>150*r4*z)</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[7]<sp/><sp/>*<sp/>(1)</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[8]<sp/><sp/>*<sp/>(r2)</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[9]<sp/><sp/>*<sp/>(3*z2<sp/>-<sp/>3*r2*logr)</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[10]<sp/>*<sp/>(3*r4<sp/>-<sp/>12*z2*r2)</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[11]<sp/>*<sp/>(40*z4<sp/>-<sp/>45*r4<sp/>-<sp/>240*z2*r2*logr<sp/>+<sp/>60*r4*logr);</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/>B[0]<sp/>*=<sp/>-Bdata-&gt;<ref refid="structB__GS__data_1a047a09870db4af357a969d7261df382e" kindref="member">psi_mult</ref><sp/>/<sp/>(r<sp/>*<sp/>Bdata-&gt;<ref refid="structB__GS__data_1a67fa495740de90e35d35e95578ffc178" kindref="member">R0</ref><sp/>*<sp/>Bdata-&gt;<ref refid="structB__GS__data_1a67fa495740de90e35d35e95578ffc178" kindref="member">R0</ref>);</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"></highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>phi<sp/>field<sp/>component<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/>B[1]<sp/>=<sp/>Bdata-&gt;<ref refid="structB__GS__data_1a0ede8a139ec10950da20ea13af3fe2b4" kindref="member">B_phi0</ref><sp/>/<sp/>r;</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"></highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>z<sp/>field<sp/>component<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/>B[2]<sp/>=<sp/>(1-C[12])<sp/>*<sp/>(r3/2)</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[12]<sp/>*<sp/>(r/2<sp/>+<sp/>r*logr)</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[1]<sp/><sp/>*<sp/>(2*r)</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[2]<sp/><sp/>*<sp/>(2*r*logr<sp/>+<sp/>r)</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[3]<sp/><sp/>*<sp/>(4*r3<sp/>-<sp/>8*r*z2)</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[4]<sp/><sp/>*<sp/>(12*r3*logr<sp/>+<sp/>3*r3<sp/>-<sp/>30*r*z2<sp/>-<sp/>24*r*logr*z2)</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[5]<sp/><sp/>*<sp/>(6*r5<sp/>-<sp/>48*r3*z2<sp/>+<sp/>16*r*z4)</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[6]<sp/><sp/>*<sp/>(-400*r*z4<sp/>-240*r*logr*z4<sp/>+<sp/>720*r3*logr*z2<sp/>+<sp/>480*r3*z2</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-90*r5*logr<sp/>-<sp/>15*r5)</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[8]<sp/><sp/>*<sp/>(2*z*r)</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[9]<sp/><sp/>*<sp/>(-6*z*r*logr<sp/>-<sp/>3*z*r)</highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[10]<sp/>*<sp/>(12*z*r3<sp/>-<sp/>8*z3*r)</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[11]<sp/>*<sp/>(-120*z*r3-160*z3*r*logr-80*z3*r+240*z*r3*logr);</highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/>B[2]<sp/>*=<sp/>Bdata-&gt;<ref refid="structB__GS__data_1a047a09870db4af357a969d7261df382e" kindref="member">psi_mult</ref><sp/>/<sp/>(r<sp/>*<sp/>Bdata-&gt;<ref refid="structB__GS__data_1a67fa495740de90e35d35e95578ffc178" kindref="member">R0</ref><sp/>*<sp/>Bdata-&gt;<ref refid="structB__GS__data_1a67fa495740de90e35d35e95578ffc178" kindref="member">R0</ref>);</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"></highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Ripple<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(Bdata-&gt;<ref refid="structB__GS__data_1ac07afd11dae69bf8cc468a9ec3fcb0de" kindref="member">Nripple</ref><sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="382"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>r<sp/>*=<sp/>Bdata-&gt;<ref refid="structB__GS__data_1a67fa495740de90e35d35e95578ffc178" kindref="member">R0</ref>;</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>z<sp/>*=<sp/>Bdata-&gt;<ref refid="structB__GS__data_1a67fa495740de90e35d35e95578ffc178" kindref="member">R0</ref>;</highlight></codeline>
+<codeline lineno="384"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>radius<sp/>=<sp/>sqrt(<sp/>(<sp/>r<sp/>-<sp/>Bdata-&gt;<ref refid="structB__GS__data_1a67fa495740de90e35d35e95578ffc178" kindref="member">R0</ref><sp/>)<sp/>*<sp/>(<sp/>r<sp/>-<sp/>Bdata-&gt;<ref refid="structB__GS__data_1a67fa495740de90e35d35e95578ffc178" kindref="member">R0</ref><sp/>)</highlight></codeline>
+<codeline lineno="385"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>(<sp/>z<sp/>-<sp/>Bdata-&gt;<ref refid="structB__GS__data_1a3d7e3f477929f7454679263b759ac045" kindref="member">z0</ref><sp/>)<sp/>*<sp/>(<sp/>z<sp/>-<sp/>Bdata-&gt;<ref refid="structB__GS__data_1a3d7e3f477929f7454679263b759ac045" kindref="member">z0</ref><sp/>));</highlight></codeline>
+<codeline lineno="386"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>theta<sp/>=<sp/>atan2(<sp/>z<sp/>-<sp/>Bdata-&gt;<ref refid="structB__GS__data_1a3d7e3f477929f7454679263b759ac045" kindref="member">z0</ref>,<sp/>r<sp/>-<sp/>Bdata-&gt;<ref refid="structB__GS__data_1a67fa495740de90e35d35e95578ffc178" kindref="member">R0</ref><sp/>);</highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>delta<sp/>=<sp/>Bdata-&gt;<ref refid="structB__GS__data_1a125e3b104303e57994b91776cb1c06cf" kindref="member">delta0</ref><sp/>*<sp/>exp(-0.5*theta*theta)</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>pow(<sp/>radius<sp/>/<sp/>Bdata-&gt;<ref refid="structB__GS__data_1a0c799fcb8c32c23d713ad20a9040f496" kindref="member">a0</ref>,<sp/>Bdata-&gt;<ref refid="structB__GS__data_1a97e457db6cec9f1cdb9ccb239a62d7ae" kindref="member">alpha0</ref><sp/>);</highlight></codeline>
+<codeline lineno="389"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>B[1]<sp/>=<sp/>B[1]<sp/>*<sp/>(<sp/>1<sp/>+<sp/>delta<sp/>*<sp/>cos(Bdata-&gt;<ref refid="structB__GS__data_1ac07afd11dae69bf8cc468a9ec3fcb0de" kindref="member">Nripple</ref><sp/>*<sp/>phi)<sp/>);</highlight></codeline>
+<codeline lineno="390"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="391"><highlight class="normal"></highlight></codeline>
+<codeline lineno="392"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="393"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="394"><highlight class="normal"></highlight></codeline>
+<codeline lineno="406" refid="B__GS_8c_1a6619ede1977dc97229e00d3826f46a8a" refkind="member"><highlight class="normal"><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref><sp/><ref refid="B__GS_8c_1a6619ede1977dc97229e00d3826f46a8a" kindref="member">B_GS_eval_B_dB</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>B_dB[12],<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>phi,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z,</highlight></codeline>
+<codeline lineno="407"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structB__GS__data" kindref="compound">B_GS_data</ref>*<sp/>Bdata)<sp/>{</highlight></codeline>
+<codeline lineno="408"><highlight class="normal"></highlight></codeline>
+<codeline lineno="409"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>C<sp/>=<sp/>Bdata-&gt;<ref refid="structB__GS__data_1a500e1828c8a17414fd886df0bf061ff2" kindref="member">psi_coeff</ref>;</highlight></codeline>
+<codeline lineno="410"><highlight class="normal"></highlight></codeline>
+<codeline lineno="411"><highlight class="normal"><sp/><sp/><sp/><sp/>z<sp/>-=<sp/>Bdata-&gt;<ref refid="structB__GS__data_1a3d7e3f477929f7454679263b759ac045" kindref="member">z0</ref>;</highlight></codeline>
+<codeline lineno="412"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>R0<sp/>=<sp/>Bdata-&gt;<ref refid="structB__GS__data_1a67fa495740de90e35d35e95578ffc178" kindref="member">R0</ref>;</highlight></codeline>
+<codeline lineno="413"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z0<sp/>=<sp/>Bdata-&gt;<ref refid="structB__GS__data_1a3d7e3f477929f7454679263b759ac045" kindref="member">z0</ref>;</highlight></codeline>
+<codeline lineno="414"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>B_phi0<sp/>=<sp/>Bdata-&gt;<ref refid="structB__GS__data_1a0ede8a139ec10950da20ea13af3fe2b4" kindref="member">B_phi0</ref>;</highlight></codeline>
+<codeline lineno="415"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>psi_mult<sp/>=<sp/>Bdata-&gt;<ref refid="structB__GS__data_1a047a09870db4af357a969d7261df382e" kindref="member">psi_mult</ref>;</highlight></codeline>
+<codeline lineno="416"><highlight class="normal"></highlight></codeline>
+<codeline lineno="417"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Precalculated<sp/>terms<sp/>used<sp/>in<sp/>the<sp/>components<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="418"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r2<sp/>=<sp/>r*r;</highlight></codeline>
+<codeline lineno="419"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r3<sp/>=<sp/>r2*r;</highlight></codeline>
+<codeline lineno="420"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r4<sp/>=<sp/>r3*r;</highlight></codeline>
+<codeline lineno="421"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r5<sp/>=<sp/>r4*r;</highlight></codeline>
+<codeline lineno="422"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z2<sp/>=<sp/>z*z;</highlight></codeline>
+<codeline lineno="423"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z3<sp/>=<sp/>z2*z;</highlight></codeline>
+<codeline lineno="424"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z4<sp/>=<sp/>z3*z;</highlight></codeline>
+<codeline lineno="425"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z5<sp/>=<sp/>z4*z;</highlight></codeline>
+<codeline lineno="426"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>logr<sp/>=<sp/>log(r/R0);</highlight></codeline>
+<codeline lineno="427"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>R02<sp/>=<sp/>R0*R0;</highlight></codeline>
+<codeline lineno="428"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>R03<sp/>=<sp/>R02*R0;</highlight></codeline>
+<codeline lineno="429"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>R04<sp/>=<sp/>R03*R0;</highlight></codeline>
+<codeline lineno="430"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>R05<sp/>=<sp/>R04*R0;</highlight></codeline>
+<codeline lineno="431"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>R06<sp/>=<sp/>R05*R0;</highlight></codeline>
+<codeline lineno="432"><highlight class="normal"></highlight></codeline>
+<codeline lineno="433"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>r<sp/>field<sp/>component<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="434"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>B0<sp/>=<sp/><sp/><sp/>C[2]<sp/><sp/>*<sp/>(-2*z)<sp/>/<sp/>R02</highlight></codeline>
+<codeline lineno="435"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[3]<sp/><sp/>*<sp/>(-8*r2*z)<sp/>/<sp/>R04</highlight></codeline>
+<codeline lineno="436"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[4]<sp/><sp/>*<sp/>(-18*r2*z<sp/>-<sp/>24*r2*logr*z<sp/>+<sp/>8*z3)<sp/>/<sp/>R04</highlight></codeline>
+<codeline lineno="437"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[5]<sp/><sp/>*<sp/>(-24*r4*z<sp/>+<sp/>32*r2*z3)<sp/>/<sp/>R06</highlight></codeline>
+<codeline lineno="438"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[6]<sp/><sp/>*<sp/>(48*z5<sp/>-<sp/>560*r2*z3<sp/>-<sp/>480*r2*logr*z3<sp/>+360*r4*logr*z</highlight></codeline>
+<codeline lineno="439"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>150*r4*z)<sp/>/<sp/>R06</highlight></codeline>
+<codeline lineno="440"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[7]<sp/><sp/>*<sp/>(1)<sp/>/<sp/>R0</highlight></codeline>
+<codeline lineno="441"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[8]<sp/><sp/>*<sp/>(r2)<sp/>/<sp/>R03</highlight></codeline>
+<codeline lineno="442"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[9]<sp/><sp/>*<sp/>(3*z2<sp/>-<sp/>3*r2*logr)<sp/>/<sp/>R03</highlight></codeline>
+<codeline lineno="443"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[10]<sp/>*<sp/>(3*r4<sp/>-<sp/>12*z2*r2)<sp/>/<sp/>R05</highlight></codeline>
+<codeline lineno="444"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[11]<sp/>*<sp/>(40*z4<sp/>-<sp/>45*r4<sp/>-<sp/>240*z2*r2*logr<sp/>+<sp/>60*r4*logr)<sp/>/<sp/>R05;</highlight></codeline>
+<codeline lineno="445"><highlight class="normal"><sp/><sp/><sp/><sp/>B0<sp/>*=<sp/>-psi_mult<sp/>/<sp/>r;</highlight></codeline>
+<codeline lineno="446"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>B1<sp/>=<sp/><sp/><sp/>C[3]<sp/><sp/>*<sp/>(-16*r*z)<sp/>/<sp/>R04</highlight></codeline>
+<codeline lineno="447"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[4]<sp/><sp/>*<sp/>(-60*r*z<sp/>-<sp/>48*r*logr*z)<sp/>/<sp/>R04</highlight></codeline>
+<codeline lineno="448"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[5]<sp/><sp/>*<sp/>(-96*r3*z<sp/><sp/>+<sp/>64*r*z3)<sp/>/<sp/>R06</highlight></codeline>
+<codeline lineno="449"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[6]<sp/><sp/>*<sp/>(-1600*r*z3<sp/>-<sp/>960*r*logr*z3<sp/>+1440*r3*logr*z</highlight></codeline>
+<codeline lineno="450"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>960*r3*z)<sp/>/<sp/>R06</highlight></codeline>
+<codeline lineno="451"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[8]<sp/><sp/>*<sp/>(2*r)<sp/>/<sp/>R03</highlight></codeline>
+<codeline lineno="452"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[9]<sp/><sp/>*<sp/>(-6*r*logr<sp/>-<sp/>3*r)<sp/>/<sp/>R03</highlight></codeline>
+<codeline lineno="453"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[10]<sp/>*<sp/>(12*r3<sp/>-<sp/>24*z2*r)<sp/>/<sp/>R05</highlight></codeline>
+<codeline lineno="454"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[11]<sp/>*<sp/>(-120*r3<sp/>-<sp/>480*z2*r*logr<sp/>-240*z2*r<sp/>+240*r3*logr)/R05;</highlight></codeline>
+<codeline lineno="455"><highlight class="normal"><sp/><sp/><sp/><sp/>B1<sp/>=<sp/>-B0<sp/>/<sp/>r<sp/>-<sp/>B1<sp/>*<sp/>psi_mult<sp/>/<sp/>r;</highlight></codeline>
+<codeline lineno="456"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>B2<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="457"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>B3<sp/>=<sp/><sp/><sp/>C[2]<sp/><sp/>*<sp/>(-2)<sp/>/<sp/>R02</highlight></codeline>
+<codeline lineno="458"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[3]<sp/><sp/>*<sp/>(-8*r2)<sp/>/<sp/>R04</highlight></codeline>
+<codeline lineno="459"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[4]<sp/><sp/>*<sp/>(-18*r2<sp/>-<sp/>24*r2*logr<sp/>+<sp/>24*z2)<sp/>/<sp/>R04</highlight></codeline>
+<codeline lineno="460"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[5]<sp/><sp/>*<sp/>(-24*r4<sp/>+<sp/>96*r2*z2)<sp/>/<sp/>R06</highlight></codeline>
+<codeline lineno="461"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[6]<sp/><sp/>*<sp/>(240*z4<sp/>-<sp/>1680*r2*z2<sp/>-<sp/>1440*r2*logr*z2<sp/>+<sp/>360*r4*logr</highlight></codeline>
+<codeline lineno="462"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>150*r4)<sp/>/<sp/>R06</highlight></codeline>
+<codeline lineno="463"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[9]<sp/><sp/>*<sp/>(6*z)<sp/>/<sp/>R03</highlight></codeline>
+<codeline lineno="464"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[10]<sp/>*<sp/>(-24*z*r2)<sp/>/<sp/>R05</highlight></codeline>
+<codeline lineno="465"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[11]<sp/>*<sp/>(160*z3<sp/>-<sp/>480*z*r2*logr)<sp/>/<sp/>R05;</highlight></codeline>
+<codeline lineno="466"><highlight class="normal"><sp/><sp/><sp/><sp/>B3<sp/>*=<sp/>-psi_mult<sp/>/<sp/>r;</highlight></codeline>
+<codeline lineno="467"><highlight class="normal"></highlight></codeline>
+<codeline lineno="468"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>phi<sp/>field<sp/>component<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="469"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>B4<sp/>=<sp/>B_phi0<sp/>*<sp/>R0<sp/>/<sp/>r;</highlight></codeline>
+<codeline lineno="470"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>B5<sp/>=<sp/>-B_phi0<sp/>*<sp/>R0<sp/>/<sp/>r2;</highlight></codeline>
+<codeline lineno="471"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>B6<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="472"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>B7<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="473"><highlight class="normal"></highlight></codeline>
+<codeline lineno="474"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>z<sp/>field<sp/>component<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="475"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>B8<sp/>=<sp/>(1-C[12])<sp/>*<sp/>(r3/2)<sp/>/<sp/>R04</highlight></codeline>
+<codeline lineno="476"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[12]<sp/>*<sp/>(r/2<sp/>+<sp/>r*logr)<sp/>/<sp/>R02</highlight></codeline>
+<codeline lineno="477"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[1]<sp/><sp/>*<sp/>(2*r)<sp/>/<sp/>R02</highlight></codeline>
+<codeline lineno="478"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[2]<sp/><sp/>*<sp/>(2*r*logr<sp/>+<sp/>r)<sp/>/<sp/>R02</highlight></codeline>
+<codeline lineno="479"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[3]<sp/><sp/>*<sp/>(4*r3<sp/>-<sp/>8*r*z2)<sp/>/<sp/>R04</highlight></codeline>
+<codeline lineno="480"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[4]<sp/><sp/>*<sp/>(12*r3*logr<sp/>+<sp/>3*r3<sp/>-<sp/>30*r*z2<sp/>-<sp/>24*r*logr*z2)<sp/>/<sp/>R04</highlight></codeline>
+<codeline lineno="481"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[5]<sp/><sp/>*<sp/>(6*r5<sp/>-<sp/>48*r3*z2<sp/>+<sp/>16*r*z4)<sp/>/<sp/>R06</highlight></codeline>
+<codeline lineno="482"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[6]<sp/><sp/>*<sp/>(-400*r*z4<sp/>-240*r*logr*z4<sp/>+<sp/>720*r3*logr*z2<sp/>+<sp/>480*r3*z2</highlight></codeline>
+<codeline lineno="483"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-90*r5*logr<sp/>-<sp/>15*r5)<sp/>/<sp/>R06</highlight></codeline>
+<codeline lineno="484"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[8]<sp/><sp/>*<sp/>(2*z*r)<sp/>/<sp/>R03</highlight></codeline>
+<codeline lineno="485"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[9]<sp/><sp/>*<sp/>(-6*z*r*logr<sp/>-<sp/>3*z*r)<sp/>/<sp/>R03</highlight></codeline>
+<codeline lineno="486"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[10]<sp/>*<sp/>(12*z*r3<sp/>-<sp/>8*z3*r)<sp/>/<sp/>R05</highlight></codeline>
+<codeline lineno="487"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[11]<sp/>*<sp/>(-120*z*r3-160*z3*r*logr-80*z3*r+240*z*r3*logr)<sp/>/<sp/>R05;</highlight></codeline>
+<codeline lineno="488"><highlight class="normal"><sp/><sp/><sp/><sp/>B8<sp/>*=<sp/>psi_mult<sp/>/<sp/>r;</highlight></codeline>
+<codeline lineno="489"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>B9<sp/>=<sp/>(1-C[12])<sp/>*<sp/>(3*r2/2)<sp/>/<sp/>R04</highlight></codeline>
+<codeline lineno="490"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[12]<sp/>*<sp/>(1.5<sp/>+<sp/>logr)<sp/>/<sp/>R02</highlight></codeline>
+<codeline lineno="491"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[1]<sp/><sp/>*<sp/>(2)<sp/>/<sp/>R02</highlight></codeline>
+<codeline lineno="492"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[2]<sp/><sp/>*<sp/>(2*logr<sp/>+<sp/>3)<sp/>/<sp/>R02</highlight></codeline>
+<codeline lineno="493"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[3]<sp/><sp/>*<sp/>(12*r2<sp/>-<sp/>8*z2)<sp/>/<sp/>R04</highlight></codeline>
+<codeline lineno="494"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[4]<sp/><sp/>*<sp/>(36*r2*logr<sp/>+<sp/>21*r2<sp/>-<sp/>54*z2<sp/>-<sp/>24*logr*z2)<sp/>/<sp/>R04</highlight></codeline>
+<codeline lineno="495"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[5]<sp/><sp/>*<sp/>(30*r4<sp/>-<sp/>144*r2*z2<sp/>+<sp/>16*z4)<sp/>/<sp/>R06</highlight></codeline>
+<codeline lineno="496"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[6]<sp/><sp/>*<sp/>(-640*z4<sp/>-<sp/>240*logr*z4<sp/>+<sp/>2160*r2*logr*z2<sp/>+<sp/>2160*r2*z2</highlight></codeline>
+<codeline lineno="497"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-450*r4*logr<sp/>-165*r4)<sp/>/<sp/>R06</highlight></codeline>
+<codeline lineno="498"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[8]<sp/><sp/>*<sp/>(2*z)<sp/>/<sp/>R03</highlight></codeline>
+<codeline lineno="499"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[9]<sp/><sp/>*<sp/>(-6*z*logr<sp/>-<sp/>9*z)<sp/>/<sp/>R03</highlight></codeline>
+<codeline lineno="500"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[10]<sp/>*<sp/>(36*z*r2<sp/>-<sp/>8*z3)<sp/>/<sp/>R05</highlight></codeline>
+<codeline lineno="501"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>C[11]<sp/>*<sp/>(-120*z*r2<sp/>-<sp/>160*z3*logr<sp/>-240*z3<sp/>+720*z*r2*logr)/R05;</highlight></codeline>
+<codeline lineno="502"><highlight class="normal"><sp/><sp/><sp/><sp/>B9<sp/>=<sp/>B9<sp/>*<sp/>psi_mult<sp/>/<sp/>r<sp/>-<sp/>B8<sp/>/<sp/>r;</highlight></codeline>
+<codeline lineno="503"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>B10<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="504"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>B11<sp/>=<sp/>-B1<sp/>-<sp/>B0<sp/>/<sp/>r;</highlight></codeline>
+<codeline lineno="505"><highlight class="normal"></highlight></codeline>
+<codeline lineno="506"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Ripple<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="507"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(Bdata-&gt;<ref refid="structB__GS__data_1ac07afd11dae69bf8cc468a9ec3fcb0de" kindref="member">Nripple</ref><sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="508"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>radius<sp/>=<sp/>sqrt(<sp/>(<sp/>r<sp/>-<sp/>R0<sp/>)<sp/>*<sp/>(<sp/>r<sp/>-<sp/>R0<sp/>)</highlight></codeline>
+<codeline lineno="509"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>(<sp/>z<sp/>-<sp/>z0<sp/>)<sp/>*<sp/>(<sp/>z<sp/>-<sp/>z0<sp/>));</highlight></codeline>
+<codeline lineno="510"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>theta<sp/>=<sp/>atan2(<sp/>z<sp/>-<sp/>z0,<sp/>r<sp/>-<sp/>R0<sp/>);</highlight></codeline>
+<codeline lineno="511"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>delta<sp/>=<sp/>Bdata-&gt;<ref refid="structB__GS__data_1a125e3b104303e57994b91776cb1c06cf" kindref="member">delta0</ref><sp/>*<sp/>exp(-0.5*theta*theta)</highlight></codeline>
+<codeline lineno="512"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>pow(<sp/>radius<sp/>/<sp/>Bdata-&gt;<ref refid="structB__GS__data_1a0c799fcb8c32c23d713ad20a9040f496" kindref="member">a0</ref>,<sp/>Bdata-&gt;<ref refid="structB__GS__data_1a97e457db6cec9f1cdb9ccb239a62d7ae" kindref="member">alpha0</ref><sp/>);</highlight></codeline>
+<codeline lineno="513"><highlight class="normal"></highlight></codeline>
+<codeline lineno="514"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>Bphi<sp/>=<sp/>B4;</highlight></codeline>
+<codeline lineno="515"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>Bpert<sp/>=<sp/>Bphi<sp/>*<sp/>delta<sp/>*<sp/>cos(Bdata-&gt;<ref refid="structB__GS__data_1ac07afd11dae69bf8cc468a9ec3fcb0de" kindref="member">Nripple</ref><sp/>*<sp/>phi);</highlight></codeline>
+<codeline lineno="516"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>B4<sp/>+=<sp/>Bpert;</highlight></codeline>
+<codeline lineno="517"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>B6<sp/>+=<sp/>-<sp/>Bphi<sp/>*<sp/>delta<sp/>*<sp/>Bdata-&gt;<ref refid="structB__GS__data_1ac07afd11dae69bf8cc468a9ec3fcb0de" kindref="member">Nripple</ref><sp/>*<sp/>sin(Bdata-&gt;<ref refid="structB__GS__data_1ac07afd11dae69bf8cc468a9ec3fcb0de" kindref="member">Nripple</ref><sp/>*<sp/>phi);</highlight></codeline>
+<codeline lineno="518"><highlight class="normal"></highlight></codeline>
+<codeline lineno="519"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>dBpertdR<sp/>=<sp/>Bpert<sp/>*<sp/>(</highlight></codeline>
+<codeline lineno="520"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<sp/>(r<sp/>-<sp/>R0)<sp/>/radius)<sp/>*<sp/>(<sp/>Bdata-&gt;<ref refid="structB__GS__data_1a97e457db6cec9f1cdb9ccb239a62d7ae" kindref="member">alpha0</ref><sp/>/<sp/>radius<sp/>)</highlight></codeline>
+<codeline lineno="521"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>(<sp/>(z<sp/>-<sp/>z0)<sp/>/(radius*radius)<sp/>)<sp/>*<sp/>theta</highlight></codeline>
+<codeline lineno="522"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="523"><highlight class="normal"></highlight></codeline>
+<codeline lineno="524"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>dBpertdz<sp/>=<sp/>Bpert<sp/>*<sp/>(</highlight></codeline>
+<codeline lineno="525"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<sp/>(z<sp/>-<sp/>z0)<sp/>/radius)<sp/>*<sp/>(<sp/>Bdata-&gt;<ref refid="structB__GS__data_1a97e457db6cec9f1cdb9ccb239a62d7ae" kindref="member">alpha0</ref><sp/>/<sp/>radius<sp/>)</highlight></codeline>
+<codeline lineno="526"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>(<sp/>(r<sp/>-<sp/>R0)<sp/>/(radius*radius)<sp/>)<sp/>*<sp/>theta</highlight></codeline>
+<codeline lineno="527"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="528"><highlight class="normal"></highlight></codeline>
+<codeline lineno="529"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>B5<sp/>+=<sp/>B5<sp/>*<sp/>Bpert<sp/>/<sp/>Bphi<sp/>+<sp/>dBpertdR;</highlight></codeline>
+<codeline lineno="530"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>B7<sp/>+=<sp/>dBpertdz;</highlight></codeline>
+<codeline lineno="531"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="532"><highlight class="normal"></highlight></codeline>
+<codeline lineno="533"><highlight class="normal"><sp/><sp/><sp/><sp/>B_dB[0]<sp/>=<sp/>B0;</highlight></codeline>
+<codeline lineno="534"><highlight class="normal"><sp/><sp/><sp/><sp/>B_dB[1]<sp/>=<sp/>B1;</highlight></codeline>
+<codeline lineno="535"><highlight class="normal"><sp/><sp/><sp/><sp/>B_dB[2]<sp/>=<sp/>B2;</highlight></codeline>
+<codeline lineno="536"><highlight class="normal"><sp/><sp/><sp/><sp/>B_dB[3]<sp/>=<sp/>B3;</highlight></codeline>
+<codeline lineno="537"><highlight class="normal"><sp/><sp/><sp/><sp/>B_dB[4]<sp/>=<sp/>B4;</highlight></codeline>
+<codeline lineno="538"><highlight class="normal"><sp/><sp/><sp/><sp/>B_dB[5]<sp/>=<sp/>B5;</highlight></codeline>
+<codeline lineno="539"><highlight class="normal"><sp/><sp/><sp/><sp/>B_dB[6]<sp/>=<sp/>B6;</highlight></codeline>
+<codeline lineno="540"><highlight class="normal"><sp/><sp/><sp/><sp/>B_dB[7]<sp/>=<sp/>B7;</highlight></codeline>
+<codeline lineno="541"><highlight class="normal"><sp/><sp/><sp/><sp/>B_dB[8]<sp/>=<sp/>B8;</highlight></codeline>
+<codeline lineno="542"><highlight class="normal"><sp/><sp/><sp/><sp/>B_dB[9]<sp/>=<sp/>B9;</highlight></codeline>
+<codeline lineno="543"><highlight class="normal"><sp/><sp/><sp/><sp/>B_dB[10]<sp/>=<sp/>B10;</highlight></codeline>
+<codeline lineno="544"><highlight class="normal"><sp/><sp/><sp/><sp/>B_dB[11]<sp/>=<sp/>B11;</highlight></codeline>
+<codeline lineno="545"><highlight class="normal"></highlight></codeline>
+<codeline lineno="546"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="547"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="548"><highlight class="normal"></highlight></codeline>
+<codeline lineno="557" refid="B__GS_8c_1a867b0d8e0fe8f279a3e7708d0d240a48" refkind="member"><highlight class="normal"><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref><sp/><ref refid="B__GS_8c_1a867b0d8e0fe8f279a3e7708d0d240a48" kindref="member">B_GS_get_axis_rz</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>rz[2],<sp/><ref refid="structB__GS__data" kindref="compound">B_GS_data</ref>*<sp/>Bdata)<sp/>{</highlight></codeline>
+<codeline lineno="558"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref><sp/>err<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="559"><highlight class="normal"><sp/><sp/><sp/><sp/>rz[0]<sp/>=<sp/>Bdata-&gt;<ref refid="structB__GS__data_1a2b395816c067636ac92ce1e8e3b07aa0" kindref="member">raxis</ref>;</highlight></codeline>
+<codeline lineno="560"><highlight class="normal"><sp/><sp/><sp/><sp/>rz[1]<sp/>=<sp/>Bdata-&gt;<ref refid="structB__GS__data_1a81a50dc9782683985f0876638fb05e4e" kindref="member">zaxis</ref>;</highlight></codeline>
+<codeline lineno="561"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>err;</highlight></codeline>
+<codeline lineno="562"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="Bfield/B_GS.c"/>
+  </compounddef>
+</doxygen>

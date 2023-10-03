@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['c_219',['c',['../structlinint1D__data.html#ab1c63a2e5eb32a27973aed4e79d92b98',1,'linint1D_data::c()'],['../structlinint2D__data.html#af6ee26c2ab6276ebdf8290b78a80e144',1,'linint2D_data::c()'],['../structlinint3D__data.html#ad5bbdbaccac5c21cecc15bdd7dc561e6',1,'linint3D_data::c()'],['../structinterp1D__data.html#acb5e93fb5726eb28b6ab7f1042c92e9c',1,'interp1D_data::c()'],['../structinterp2D__data.html#afc41212c933ef49a950e1060fc1fb33e',1,'interp2D_data::c()'],['../structinterp3D__data.html#a93478ac1340ac73db5f27261b687439b',1,'interp3D_data::c()']]],
+  ['charge_220',['charge',['../structplasma__1Dt__offload__data.html#a8374282ed56154e7b0c136f7a646ed24',1,'plasma_1Dt_offload_data::charge()'],['../structplasma__1Dt__data.html#a8e638103bdf1e4ae2b82a8c93eaa3b8c',1,'plasma_1Dt_data::charge()'],['../structplasma__1DS__data.html#a75bf23261df3940a30066f19e6d81f67',1,'plasma_1DS_data::charge()'],['../structplasma__1DS__offload__data.html#aeb51018ab200019a17593370fc78d319',1,'plasma_1DS_offload_data::charge()'],['../structplasma__1D__data.html#a4094377451002ba5231ba7dcc3c2e334',1,'plasma_1D_data::charge()'],['../structparticle__gc.html#aaddba727735c95bba3fad26a957cd081',1,'particle_gc::charge()'],['../structparticle.html#a1b606e67922db122be89a7af32648714',1,'particle::charge()'],['../structparticle__state.html#a23139c51384acefa9689e370bb471bb9',1,'particle_state::charge()'],['../structplasma__1D__offload__data.html#a63eb50a86b7b94292e03efbcf4764f62',1,'plasma_1D_offload_data::charge()'],['../structdiag__orb__data.html#ad6b2a88ef1ca9cf911064918b3f2ae69',1,'diag_orb_data::charge()']]],
+  ['const_5f2pi_221',['CONST_2PI',['../consts_8h.html#a99afae74ef964a9048eb263452e6e158',1,'consts.h']]],
+  ['const_5fc_222',['CONST_C',['../consts_8h.html#a48339a730ee12d23d732ee7ce96f0aa6',1,'consts.h']]],
+  ['const_5fc2_223',['CONST_C2',['../consts_8h.html#ae427b19ef34c352c69b3e565d55427b7',1,'consts.h']]],
+  ['const_5fe_224',['CONST_E',['../consts_8h.html#aa2d52037e91528e354a59fc909365f7c',1,'consts.h']]],
+  ['const_5fe0_225',['CONST_E0',['../consts_8h.html#a20089914a6ddfb8f5a40038bd72d3e9b',1,'consts.h']]],
+  ['const_5fhbar_226',['CONST_HBAR',['../consts_8h.html#aa551b6d49a678019207aa16e1fff107f',1,'consts.h']]],
+  ['const_5fkb_227',['CONST_KB',['../consts_8h.html#ad156b50cceedcf435b0778f237f08c6e',1,'consts.h']]],
+  ['const_5fm_5fe_228',['CONST_M_E',['../consts_8h.html#a206d3d5b12456dfb6b7feb9a4fa12123',1,'consts.h']]],
+  ['const_5fmu0_229',['CONST_MU0',['../consts_8h.html#a9c29d8c5706b9847ad9fb8b9d6762489',1,'consts.h']]],
+  ['const_5fpi_230',['CONST_PI',['../consts_8h.html#a02b01cde332fa86c92d54802cce7f3d2',1,'consts.h']]],
+  ['const_5fsqrtpi_231',['CONST_SQRTPI',['../consts_8h.html#abef5a0b9d1c1ade75b76e0b3bb8a08f9',1,'consts.h']]],
+  ['const_5fu_232',['CONST_U',['../consts_8h.html#a0042abe6b0fe12725d0b111347ab7964',1,'consts.h']]],
+  ['consts_2eh_233',['consts.h',['../consts_8h.html',1,'']]],
+  ['cputime_234',['cputime',['../structparticle__state.html#aa396877576f7a3bcecfae0ddefa84b0c',1,'particle_state']]]
+];

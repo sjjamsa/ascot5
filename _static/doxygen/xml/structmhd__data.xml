@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structmhd__data" kind="struct" language="C++" prot="public">
+    <compoundname>mhd_data</compoundname>
+    <includes refid="mhd_8h" local="no">mhd.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmhd__data_1a347d449bf250c7c0b4dac59fe4f3b910" prot="public" static="no" mutable="no">
+        <type><ref refid="mhd_8h_1ab21aab0cb19764b60e853c7d2c0a4316" kindref="member">mhd_type</ref></type>
+        <definition>mhd_type mhd_data::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>MHD type wrapped by this struct <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mhd.h" line="58" column="14" bodyfile="mhd.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmhd__data_1a50864ab0f1a446927c5040d00b20e0e2" prot="public" static="no" mutable="no">
+        <type><ref refid="structmhd__stat__data" kindref="compound">mhd_stat_data</ref></type>
+        <definition>mhd_stat_data mhd_data::stat</definition>
+        <argsstring></argsstring>
+        <name>stat</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Stat field or NULL if not active <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mhd.h" line="59" column="19" bodyfile="mhd.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmhd__data_1a9c9b4bde21bd0cb33a2b41d32d975ebf" prot="public" static="no" mutable="no">
+        <type><ref refid="structmhd__nonstat__data" kindref="compound">mhd_nonstat_data</ref></type>
+        <definition>mhd_nonstat_data mhd_data::nonstat</definition>
+        <argsstring></argsstring>
+        <name>nonstat</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Nonstat field or NULL if not active </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mhd.h" line="60" column="22" bodyfile="mhd.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>MHD simulation data. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This struct holds data necessary for simulation. The struct is initialized from the <ref refid="structmhd__offload__data" kindref="compound">mhd_offload_data</ref> in <ref refid="mhd_8c_1a596d84c7af2ba49c7832c03e2f397c84" kindref="member">mhd_init()</ref>.</para>
+<para>The intended usage is that only single <ref refid="structmhd__data" kindref="compound">mhd_data</ref> is used at the time, and the type of the data is declared with the &quot;type&quot; field. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="5">
+        <label>interp2D_data</label>
+        <link refid="structinterp2D__data"/>
+      </node>
+      <node id="4">
+        <label>mhd_nonstat_data</label>
+        <link refid="structmhd__nonstat__data"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>alpha_nm</edgelabel>
+          <edgelabel>phi_nm</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>mhd_data</label>
+        <link refid="structmhd__data"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>stat</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>nonstat</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>mhd_stat_data</label>
+        <link refid="structmhd__stat__data"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>alpha_nm</edgelabel>
+          <edgelabel>phi_nm</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>interp1D_data</label>
+        <link refid="structinterp1D__data"/>
+      </node>
+    </collaborationgraph>
+    <location file="mhd.h" line="57" column="1" bodyfile="mhd.h" bodystart="57" bodyend="61"/>
+    <listofallmembers>
+      <member refid="structmhd__data_1a9c9b4bde21bd0cb33a2b41d32d975ebf" prot="public" virt="non-virtual"><scope>mhd_data</scope><name>nonstat</name></member>
+      <member refid="structmhd__data_1a50864ab0f1a446927c5040d00b20e0e2" prot="public" virt="non-virtual"><scope>mhd_data</scope><name>stat</name></member>
+      <member refid="structmhd__data_1a347d449bf250c7c0b4dac59fe4f3b910" prot="public" virt="non-virtual"><scope>mhd_data</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

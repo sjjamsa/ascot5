@@ -1,0 +1,191 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structB__field__data" kind="struct" language="C++" prot="public">
+    <compoundname>B_field_data</compoundname>
+    <includes refid="B__field_8h" local="no">B_field.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structB__field__data_1a5eaf6065b399089f080fd8110789201a" prot="public" static="no" mutable="no">
+        <type><ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6" kindref="member">B_field_type</ref></type>
+        <definition>B_field_type B_field_data::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Magnetic field type wrapped by this struct </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="B_field.h" line="63" column="18" bodyfile="B_field.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structB__field__data_1a998ad9cf3f1561f787601bbdec849810" prot="public" static="no" mutable="no">
+        <type><ref refid="structB__GS__data" kindref="compound">B_GS_data</ref></type>
+        <definition>B_GS_data B_field_data::BGS</definition>
+        <argsstring></argsstring>
+        <name>BGS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>GS field or NULL if not active <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="B_field.h" line="64" column="15" bodyfile="B_field.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structB__field__data_1a26126a3a3ac31c677af14da45ec6bb7f" prot="public" static="no" mutable="no">
+        <type><ref refid="structB__2DS__data" kindref="compound">B_2DS_data</ref></type>
+        <definition>B_2DS_data B_field_data::B2DS</definition>
+        <argsstring></argsstring>
+        <name>B2DS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>2DS field or NULL if not active <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="B_field.h" line="65" column="16" bodyfile="B_field.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structB__field__data_1a999c3aa9dc4ca032efd5b95179cba20a" prot="public" static="no" mutable="no">
+        <type><ref refid="structB__3DS__data" kindref="compound">B_3DS_data</ref></type>
+        <definition>B_3DS_data B_field_data::B3DS</definition>
+        <argsstring></argsstring>
+        <name>B3DS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>3DS field or NULL if not active <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="B_field.h" line="66" column="16" bodyfile="B_field.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structB__field__data_1a008fae4c7877895a76d13405e15273ed" prot="public" static="no" mutable="no">
+        <type><ref refid="structB__STS__data" kindref="compound">B_STS_data</ref></type>
+        <definition>B_STS_data B_field_data::BSTS</definition>
+        <argsstring></argsstring>
+        <name>BSTS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>STS field or NULL if not active <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="B_field.h" line="67" column="16" bodyfile="B_field.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structB__field__data_1a04b89c7bacbe0e9708d5b16bc40624d4" prot="public" static="no" mutable="no">
+        <type><ref refid="structB__TC__data" kindref="compound">B_TC_data</ref></type>
+        <definition>B_TC_data B_field_data::BTC</definition>
+        <argsstring></argsstring>
+        <name>BTC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TC field or NULL if not active <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="B_field.h" line="68" column="15" bodyfile="B_field.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Magnetic field simulation data. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This struct holds data necessary for simulation. The struct is initialized from the <ref refid="structB__field__offload__data" kindref="compound">B_field_offload_data</ref> in <ref refid="B__field_8c_1ad85ceaa2570aa7a5395ec20e400f4b9b" kindref="member">B_field_init()</ref>.</para>
+<para>The intended usage is that only single <ref refid="structB__field__data" kindref="compound">B_field_data</ref> is used at the time, and the type of the data is declared with the &quot;type&quot; field. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>B_field_data</label>
+        <link refid="structB__field__data"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>BGS</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>BSTS</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>BTC</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>B3DS</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>B2DS</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>B_STS_data</label>
+        <link refid="structB__STS__data"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>axis_r</edgelabel>
+          <edgelabel>axis_z</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>B_phi</edgelabel>
+          <edgelabel>B_r</edgelabel>
+          <edgelabel>B_z</edgelabel>
+          <edgelabel>psi</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>B_TC_data</label>
+        <link refid="structB__TC__data"/>
+      </node>
+      <node id="8">
+        <label>interp2D_data</label>
+        <link refid="structinterp2D__data"/>
+      </node>
+      <node id="2">
+        <label>B_GS_data</label>
+        <link refid="structB__GS__data"/>
+      </node>
+      <node id="4">
+        <label>linint1D_data</label>
+        <link refid="structlinint1D__data"/>
+      </node>
+      <node id="9">
+        <label>B_2DS_data</label>
+        <link refid="structB__2DS__data"/>
+        <childnode refid="8" relation="usage">
+          <edgelabel>B_phi</edgelabel>
+          <edgelabel>B_r</edgelabel>
+          <edgelabel>B_z</edgelabel>
+          <edgelabel>psi</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>B_3DS_data</label>
+        <link refid="structB__3DS__data"/>
+        <childnode refid="8" relation="usage">
+          <edgelabel>psi</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>B_phi</edgelabel>
+          <edgelabel>B_r</edgelabel>
+          <edgelabel>B_z</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>interp3D_data</label>
+        <link refid="structinterp3D__data"/>
+      </node>
+    </collaborationgraph>
+    <location file="B_field.h" line="62" column="1" bodyfile="B_field.h" bodystart="62" bodyend="69"/>
+    <listofallmembers>
+      <member refid="structB__field__data_1a26126a3a3ac31c677af14da45ec6bb7f" prot="public" virt="non-virtual"><scope>B_field_data</scope><name>B2DS</name></member>
+      <member refid="structB__field__data_1a999c3aa9dc4ca032efd5b95179cba20a" prot="public" virt="non-virtual"><scope>B_field_data</scope><name>B3DS</name></member>
+      <member refid="structB__field__data_1a998ad9cf3f1561f787601bbdec849810" prot="public" virt="non-virtual"><scope>B_field_data</scope><name>BGS</name></member>
+      <member refid="structB__field__data_1a008fae4c7877895a76d13405e15273ed" prot="public" virt="non-virtual"><scope>B_field_data</scope><name>BSTS</name></member>
+      <member refid="structB__field__data_1a04b89c7bacbe0e9708d5b16bc40624d4" prot="public" virt="non-virtual"><scope>B_field_data</scope><name>BTC</name></member>
+      <member refid="structB__field__data_1a5eaf6065b399089f080fd8110789201a" prot="public" virt="non-virtual"><scope>B_field_data</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

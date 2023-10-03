@@ -1,0 +1,999 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="endcond_8h" kind="file" language="C++">
+    <compoundname>endcond.h</compoundname>
+    <includes refid="particle_8h" local="yes">particle.h</includes>
+    <includes refid="simulate_8h" local="yes">simulate.h</includes>
+    <includedby refid="ascot5__main_8c" local="yes">ascot5_main.c</includedby>
+    <includedby refid="endcond_8c" local="yes">endcond.c</includedby>
+    <includedby refid="hdf5__options_8c" local="yes">hdf5io/hdf5_options.c</includedby>
+    <includedby refid="simulate__fo__fixed_8c" local="yes">simulate/simulate_fo_fixed.c</includedby>
+    <includedby refid="simulate__gc__adaptive_8c" local="yes">simulate/simulate_gc_adaptive.c</includedby>
+    <includedby refid="simulate__gc__fixed_8c" local="yes">simulate/simulate_gc_fixed.c</includedby>
+    <includedby refid="simulate__ml__adaptive_8c" local="yes">simulate/simulate_ml_adaptive.c</includedby>
+    <includedby refid="simulate_8c" local="yes">simulate.c</includedby>
+    <incdepgraph>
+      <node id="43">
+        <label>diag/dist_rho5D.h</label>
+        <link refid="dist__rho5D_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>plasma.h</label>
+        <link refid="plasma_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>diag/dist_5D.h</label>
+        <link refid="dist__5D_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>particle.h</label>
+        <link refid="particle_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>diag.h</label>
+        <link refid="diag_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>../spline/interp.h</label>
+        <link refid="interp_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>simulate.h</label>
+        <link refid="simulate_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>Bfield/B_GS.h</label>
+        <link refid="B__GS_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>wall.h</label>
+        <link refid="wall_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>asigma.h</label>
+        <link refid="asigma_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>plasma/plasma_1DS.h</label>
+        <link refid="plasma__1DS_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>mhd/mhd_nonstat.h</label>
+        <link refid="mhd__nonstat_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>endcond.h</label>
+        <link refid="endcond_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>stdlib.h</label>
+      </node>
+      <node id="49">
+        <label>simulate/mccc/mccc.h</label>
+        <link refid="mccc_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>asigma/asigma_loc.h</label>
+        <link refid="asigma__loc_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>nbi.h</label>
+        <link refid="nbi_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>diag/diag_orb.h</label>
+        <link refid="diag__orb_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>omp.h</label>
+      </node>
+      <node id="50">
+        <label>mccc_wiener.h</label>
+        <link refid="mccc__wiener_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>neutral/N0_3D.h</label>
+        <link refid="N0__3D_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>B_field.h</label>
+        <link refid="B__field_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>mhd/mhd_stat.h</label>
+        <link refid="mhd__stat_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>Efield/E_1DS.h</label>
+        <link refid="E__1DS_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>neutral/N0_1D.h</label>
+        <link refid="N0__1D_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>plasma/plasma_1Dt.h</label>
+        <link refid="plasma__1Dt_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>neutral.h</label>
+        <link refid="neutral_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>random.h</label>
+        <link refid="random_8h"/>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>error.h</label>
+        <link refid="error_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>diag/dist_com.h</label>
+        <link refid="dist__com_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="47">
+        <label>diag/diag_transcoef.h</label>
+        <link refid="diag__transcoef_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>E_field.h</label>
+        <link refid="E__field_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>plasma/plasma_1D.h</label>
+        <link refid="plasma__1D_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>time.h</label>
+      </node>
+      <node id="16">
+        <label>Bfield/B_TC.h</label>
+        <link refid="B__TC_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>../linint/linint.h</label>
+        <link refid="linint_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>Bfield/B_2DS.h</label>
+        <link refid="B__2DS_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>mhd.h</label>
+        <link refid="mhd_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>Efield/E_TC.h</label>
+        <link refid="E__TC_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>boozer.h</label>
+        <link refid="boozer_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>Bfield/B_3DS.h</label>
+        <link refid="B__3DS_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>math.h</label>
+        <link refid="math_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>diag/dist_6D.h</label>
+        <link refid="dist__6D_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>wall/wall_3d.h</label>
+        <link refid="wall__3d_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="48">
+        <label>offload.h</label>
+        <link refid="offload_8h"/>
+      </node>
+      <node id="9">
+        <label>stdio.h</label>
+      </node>
+      <node id="44">
+        <label>diag/dist_rho6D.h</label>
+        <link refid="dist__rho6D_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>Bfield/B_STS.h</label>
+        <link refid="B__STS_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>wall/wall_2d.h</label>
+        <link refid="wall__2d_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ascot5.h</label>
+        <link refid="ascot5_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="8">
+        <label>simulate/simulate_ml_adaptive.c</label>
+        <link refid="simulate__ml__adaptive_8c"/>
+      </node>
+      <node id="9">
+        <label>simulate.c</label>
+        <link refid="simulate_8c"/>
+      </node>
+      <node id="5">
+        <label>simulate/simulate_fo_fixed.c</label>
+        <link refid="simulate__fo__fixed_8c"/>
+      </node>
+      <node id="7">
+        <label>simulate/simulate_gc_fixed.c</label>
+        <link refid="simulate__gc__fixed_8c"/>
+      </node>
+      <node id="2">
+        <label>ascot5_main.c</label>
+        <link refid="ascot5__main_8c"/>
+      </node>
+      <node id="3">
+        <label>endcond.c</label>
+        <link refid="endcond_8c"/>
+      </node>
+      <node id="1">
+        <label>endcond.h</label>
+        <link refid="endcond_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>hdf5io/hdf5_options.c</label>
+        <link refid="hdf5__options_8c"/>
+      </node>
+      <node id="6">
+        <label>simulate/simulate_gc_adaptive.c</label>
+        <link refid="simulate__gc__adaptive_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="endcond_8h_1a06fc87d81c62e9abb8790b6e5713c55b" prot="public" static="no" strong="no">
+        <type></type>
+        <name>@0</name>
+        <enumvalue id="endcond_8h_1a06fc87d81c62e9abb8790b6e5713c55ba82c772647d344ba36792142a0b310f6a" prot="public">
+          <name>endcond_tlim</name>
+          <initializer>= 0x1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Simulation time limit <linebreak/>
+ </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="endcond_8h_1a06fc87d81c62e9abb8790b6e5713c55ba5ce628247b7400f909163b603234ed5b" prot="public">
+          <name>endcond_emin</name>
+          <initializer>= 0x2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Minimum energy <linebreak/>
+ </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="endcond_8h_1a06fc87d81c62e9abb8790b6e5713c55ba11c66725f3f20165b4c279a56d9b3a01" prot="public">
+          <name>endcond_therm</name>
+          <initializer>= 0x4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Thermalized <linebreak/>
+ </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="endcond_8h_1a06fc87d81c62e9abb8790b6e5713c55bac55ce885845756d3e353e73f115d834d" prot="public">
+          <name>endcond_wall</name>
+          <initializer>= 0x8</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Wall collision <linebreak/>
+ </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="endcond_8h_1a06fc87d81c62e9abb8790b6e5713c55ba755151d8e31b13a3fbedb79dbebd8a3b" prot="public">
+          <name>endcond_rhomin</name>
+          <initializer>= 0x10</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Minimum rho <linebreak/>
+ </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="endcond_8h_1a06fc87d81c62e9abb8790b6e5713c55bac2709ca1030251dd75371b44aa706ae1" prot="public">
+          <name>endcond_rhomax</name>
+          <initializer>= 0x20</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Maximum rho <linebreak/>
+ </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="endcond_8h_1a06fc87d81c62e9abb8790b6e5713c55bac091afd37d6afa32b92b3fde215ec29c" prot="public">
+          <name>endcond_polmax</name>
+          <initializer>= 0x40</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Poloidal limit <linebreak/>
+ </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="endcond_8h_1a06fc87d81c62e9abb8790b6e5713c55ba21659f3489abb455bbf8d56db58bf4ed" prot="public">
+          <name>endcond_tormax</name>
+          <initializer>= 0x80</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Toroidal limit <linebreak/>
+ </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="endcond_8h_1a06fc87d81c62e9abb8790b6e5713c55baac9dc460563df255e9b6467956953a52" prot="public">
+          <name>endcond_cpumax</name>
+          <initializer>= 0x100</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Wall time exceeded <linebreak/>
+ </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="endcond_8h_1a06fc87d81c62e9abb8790b6e5713c55badaef13bc27c51d9dc5c9798c99de056a" prot="public">
+          <name>endcond_hybrid</name>
+          <initializer>= 0x200</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Hybrid mode condition <linebreak/>
+ </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="endcond_8h_1a06fc87d81c62e9abb8790b6e5713c55ba8e9c69c104e75369d730339a3f9db79e" prot="public">
+          <name>endcond_neutr</name>
+          <initializer>= 0x400</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Neutralized <linebreak/>
+ </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="endcond_8h_1a06fc87d81c62e9abb8790b6e5713c55baf7f561791b46d08365da19cc574c8ca0" prot="public">
+          <name>endcond_ioniz</name>
+          <initializer>= 0x800</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Ionized <linebreak/>
+ </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Marker end condition bit masks. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>These bit masks are used to mark specific end condition as being active. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="endcond.h" line="18" column="1" bodyfile="endcond.h" bodystart="18" bodyend="32"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="endcond_8h_1a8ddc3ba1bf41f32411336ac50f70c870" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void endcond_check_gc</definition>
+        <argsstring>(particle_simd_gc *p_f, particle_simd_gc *p_i, sim_data *sim)</argsstring>
+        <name>endcond_check_gc</name>
+        <param>
+          <type><ref refid="structparticle__simd__gc" kindref="compound">particle_simd_gc</ref> *</type>
+          <declname>p_f</declname>
+        </param>
+        <param>
+          <type><ref refid="structparticle__simd__gc" kindref="compound">particle_simd_gc</ref> *</type>
+          <declname>p_i</declname>
+        </param>
+        <param>
+          <type><ref refid="structsim__data" kindref="compound">sim_data</ref> *</type>
+          <declname>sim</declname>
+        </param>
+        <briefdescription>
+<para>Check end conditions for GC markers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The end conditions are checked for all markers within the SIMD marker struct.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to SIMD struct storing marker states at the end of current time-step </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to SIMD struct storing marker states at the beginning of current time-step </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sim</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to simulation data struct</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<xrefsect id="todo_1_todo000005"><xreftitle>Todo</xreftitle><xrefdescription><para>Hybrid condition checks whether marker is over maximum rho limit. More smarter check is required. </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="endcond.h" line="35" column="6" bodyfile="endcond.c" bodystart="267" bodyend="427" declfile="endcond.h" declline="35" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="endcond_8h_1ace360fdebed253a8425f2dee08be587c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void endcond_check_fo</definition>
+        <argsstring>(particle_simd_fo *p_f, particle_simd_fo *p_i, sim_data *sim)</argsstring>
+        <name>endcond_check_fo</name>
+        <param>
+          <type><ref refid="structparticle__simd__fo" kindref="compound">particle_simd_fo</ref> *</type>
+          <declname>p_f</declname>
+        </param>
+        <param>
+          <type><ref refid="structparticle__simd__fo" kindref="compound">particle_simd_fo</ref> *</type>
+          <declname>p_i</declname>
+        </param>
+        <param>
+          <type><ref refid="structsim__data" kindref="compound">sim_data</ref> *</type>
+          <declname>sim</declname>
+        </param>
+        <briefdescription>
+<para>Check end conditions for FO markers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The end conditions are checked for all markers within the SIMD marker struct.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to SIMD struct storing marker states at the end of current time-step </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to SIMD struct storing marker states at the beginning of current time-step </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sim</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to simulation data struct </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="endcond.h" line="37" column="6" bodyfile="endcond.c" bodystart="73" bodyend="251" declfile="endcond.h" declline="37" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="endcond_8h_1ad49fff3b8dc52868a0eb44e2ccd6132a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void endcond_check_ml</definition>
+        <argsstring>(particle_simd_ml *p_f, particle_simd_ml *p_i, sim_data *sim)</argsstring>
+        <name>endcond_check_ml</name>
+        <param>
+          <type><ref refid="structparticle__simd__ml" kindref="compound">particle_simd_ml</ref> *</type>
+          <declname>p_f</declname>
+        </param>
+        <param>
+          <type><ref refid="structparticle__simd__ml" kindref="compound">particle_simd_ml</ref> *</type>
+          <declname>p_i</declname>
+        </param>
+        <param>
+          <type><ref refid="structsim__data" kindref="compound">sim_data</ref> *</type>
+          <declname>sim</declname>
+        </param>
+        <briefdescription>
+<para>Check end conditions for ML markers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The end conditions are checked for all markers within the SIMD marker struct.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to SIMD struct storing marker states at the end of current time-step </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to SIMD struct storing marker states at the beginning of current time-step </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sim</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to simulation data struct </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="endcond.h" line="39" column="6" bodyfile="endcond.c" bodystart="440" bodyend="531" declfile="endcond.h" declline="39" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="endcond_8h_1a305250a33bad6aa88ef074a81755f9d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void endcond_parse</definition>
+        <argsstring>(int endcond, int *endconds)</argsstring>
+        <name>endcond_parse</name>
+        <param>
+          <type>int</type>
+          <declname>endcond</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>endconds</declname>
+        </param>
+        <briefdescription>
+<para>Split endcond to an array of end conditions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function splits the bit array end condition to an array where the active end conditions are presented by numbers. Number for each end condition are defined in this function.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>endcond</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>bit array representing marker end conditions </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>endconds</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>integer array large enough to hold all end conditions </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="endcond.h" line="43" column="6" bodyfile="endcond.c" bodystart="543" bodyend="558" declfile="endcond.h" declline="43" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="endcond_8h_1af61d05ad7e7b74f37b20effb5c2e2b9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void endcond_parse2str</definition>
+        <argsstring>(int endcond, char *str)</argsstring>
+        <name>endcond_parse2str</name>
+        <param>
+          <type>int</type>
+          <declname>endcond</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+<para>Represent end condition in human-readable format. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function takes end condition represented as integer, as given by <ref refid="endcond_8c_1a305250a33bad6aa88ef074a81755f9d5" kindref="member">endcond_parse()</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>endcond</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>end condition integer representation </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>end condition as human-readable string </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="endcond.h" line="44" column="6" bodyfile="endcond.c" bodystart="569" bodyend="611" declfile="endcond.h" declline="44" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Header file for <ref refid="endcond_8c" kindref="compound">endcond.c</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Contains a list declaring all end conditions. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>ENDCOND_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ENDCOND_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="particle_8h" kindref="compound">particle.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="simulate_8h" kindref="compound">simulate.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="19" refid="endcond_8h_1a06fc87d81c62e9abb8790b6e5713c55ba82c772647d344ba36792142a0b310f6a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="endcond_8h_1a06fc87d81c62e9abb8790b6e5713c55ba82c772647d344ba36792142a0b310f6a" kindref="member">endcond_tlim</ref><sp/><sp/><sp/>=<sp/>0x1,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20" refid="endcond_8h_1a06fc87d81c62e9abb8790b6e5713c55ba5ce628247b7400f909163b603234ed5b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="endcond_8h_1a06fc87d81c62e9abb8790b6e5713c55ba5ce628247b7400f909163b603234ed5b" kindref="member">endcond_emin</ref><sp/><sp/><sp/>=<sp/>0x2,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="21" refid="endcond_8h_1a06fc87d81c62e9abb8790b6e5713c55ba11c66725f3f20165b4c279a56d9b3a01" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="endcond_8h_1a06fc87d81c62e9abb8790b6e5713c55ba11c66725f3f20165b4c279a56d9b3a01" kindref="member">endcond_therm</ref><sp/><sp/>=<sp/>0x4,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="22" refid="endcond_8h_1a06fc87d81c62e9abb8790b6e5713c55bac55ce885845756d3e353e73f115d834d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="endcond_8h_1a06fc87d81c62e9abb8790b6e5713c55bac55ce885845756d3e353e73f115d834d" kindref="member">endcond_wall</ref><sp/><sp/><sp/>=<sp/>0x8,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="23" refid="endcond_8h_1a06fc87d81c62e9abb8790b6e5713c55ba755151d8e31b13a3fbedb79dbebd8a3b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="endcond_8h_1a06fc87d81c62e9abb8790b6e5713c55ba755151d8e31b13a3fbedb79dbebd8a3b" kindref="member">endcond_rhomin</ref><sp/>=<sp/>0x10,<sp/><sp/></highlight></codeline>
+<codeline lineno="24" refid="endcond_8h_1a06fc87d81c62e9abb8790b6e5713c55bac2709ca1030251dd75371b44aa706ae1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="endcond_8h_1a06fc87d81c62e9abb8790b6e5713c55bac2709ca1030251dd75371b44aa706ae1" kindref="member">endcond_rhomax</ref><sp/>=<sp/>0x20,<sp/><sp/></highlight></codeline>
+<codeline lineno="25" refid="endcond_8h_1a06fc87d81c62e9abb8790b6e5713c55bac091afd37d6afa32b92b3fde215ec29c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="endcond_8h_1a06fc87d81c62e9abb8790b6e5713c55bac091afd37d6afa32b92b3fde215ec29c" kindref="member">endcond_polmax</ref><sp/>=<sp/>0x40,<sp/><sp/></highlight></codeline>
+<codeline lineno="26" refid="endcond_8h_1a06fc87d81c62e9abb8790b6e5713c55ba21659f3489abb455bbf8d56db58bf4ed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="endcond_8h_1a06fc87d81c62e9abb8790b6e5713c55ba21659f3489abb455bbf8d56db58bf4ed" kindref="member">endcond_tormax</ref><sp/>=<sp/>0x80,<sp/><sp/></highlight></codeline>
+<codeline lineno="27" refid="endcond_8h_1a06fc87d81c62e9abb8790b6e5713c55baac9dc460563df255e9b6467956953a52" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="endcond_8h_1a06fc87d81c62e9abb8790b6e5713c55baac9dc460563df255e9b6467956953a52" kindref="member">endcond_cpumax</ref><sp/>=<sp/>0x100,<sp/></highlight></codeline>
+<codeline lineno="28" refid="endcond_8h_1a06fc87d81c62e9abb8790b6e5713c55badaef13bc27c51d9dc5c9798c99de056a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="endcond_8h_1a06fc87d81c62e9abb8790b6e5713c55badaef13bc27c51d9dc5c9798c99de056a" kindref="member">endcond_hybrid</ref><sp/>=<sp/>0x200,<sp/></highlight></codeline>
+<codeline lineno="29" refid="endcond_8h_1a06fc87d81c62e9abb8790b6e5713c55ba8e9c69c104e75369d730339a3f9db79e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="endcond_8h_1a06fc87d81c62e9abb8790b6e5713c55ba8e9c69c104e75369d730339a3f9db79e" kindref="member">endcond_neutr</ref><sp/><sp/>=<sp/>0x400,<sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="endcond_8h_1a06fc87d81c62e9abb8790b6e5713c55baf7f561791b46d08365da19cc574c8ca0" kindref="member">endcond_ioniz</ref><sp/><sp/>=<sp/>0x800<sp/><sp/></highlight></codeline>
+<codeline lineno="32" refid="endcond_8h_1a06fc87d81c62e9abb8790b6e5713c55baf7f561791b46d08365da19cc574c8ca0" refkind="member"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>declare<sp/>target</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="endcond_8h_1a8ddc3ba1bf41f32411336ac50f70c870" kindref="member">endcond_check_gc</ref>(<ref refid="structparticle__simd__gc" kindref="compound">particle_simd_gc</ref>*<sp/>p_f,<sp/><ref refid="structparticle__simd__gc" kindref="compound">particle_simd_gc</ref>*<sp/>p_i,</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsim__data" kindref="compound">sim_data</ref>*<sp/>sim);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="endcond_8h_1ace360fdebed253a8425f2dee08be587c" kindref="member">endcond_check_fo</ref>(<ref refid="structparticle__simd__fo" kindref="compound">particle_simd_fo</ref>*<sp/>p_f,<sp/><ref refid="structparticle__simd__fo" kindref="compound">particle_simd_fo</ref>*<sp/>p_i,</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsim__data" kindref="compound">sim_data</ref>*<sp/>sim);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="endcond_8h_1ad49fff3b8dc52868a0eb44e2ccd6132a" kindref="member">endcond_check_ml</ref>(<ref refid="structparticle__simd__ml" kindref="compound">particle_simd_ml</ref>*<sp/>p_f,<sp/><ref refid="structparticle__simd__ml" kindref="compound">particle_simd_ml</ref>*<sp/>p_i,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsim__data" kindref="compound">sim_data</ref>*<sp/>sim);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>end<sp/>declare<sp/>target</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="endcond_8h_1a305250a33bad6aa88ef074a81755f9d5" kindref="member">endcond_parse</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>endcond,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>endconds);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="endcond_8h_1af61d05ad7e7b74f37b20effb5c2e2b9e" kindref="member">endcond_parse2str</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>endcond,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>str);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="endcond.h"/>
+  </compounddef>
+</doxygen>

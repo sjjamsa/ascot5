@@ -1,0 +1,875 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="hdf5__dist_8c" kind="file" language="C++">
+    <compoundname>hdf5_dist.c</compoundname>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">hdf5.h</includes>
+    <includes refid="ascot5_8h" local="yes">../ascot5.h</includes>
+    <includes refid="dist__5D_8h" local="yes">../diag/dist_5D.h</includes>
+    <includes refid="dist__6D_8h" local="yes">../diag/dist_6D.h</includes>
+    <includes refid="dist__rho5D_8h" local="yes">../diag/dist_rho5D.h</includes>
+    <includes refid="dist__rho6D_8h" local="yes">../diag/dist_rho6D.h</includes>
+    <includes refid="dist__com_8h" local="yes">../diag/dist_com.h</includes>
+    <includes refid="math_8h" local="yes">../math.h</includes>
+    <includes refid="consts_8h" local="yes">../consts.h</includes>
+    <includes refid="hdf5__histogram_8h" local="yes">hdf5_histogram.h</includes>
+    <includes refid="hdf5__helpers_8h" local="yes">hdf5_helpers.h</includes>
+    <includes refid="hdf5__dist_8h" local="yes">hdf5_dist.h</includes>
+    <incdepgraph>
+      <node id="24">
+        <label>../diag/dist_rho5D.h</label>
+        <link refid="dist__rho5D_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>../diag/dist_5D.h</label>
+        <link refid="dist__5D_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>../particle.h</label>
+        <link refid="particle_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>../spline/interp.h</label>
+        <link refid="interp_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>Bfield/B_GS.h</label>
+        <link refid="B__GS_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stdlib.h</label>
+      </node>
+      <node id="1">
+        <label>hdf5io/hdf5_dist.c</label>
+        <link refid="hdf5__dist_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>hdf5_dist.h</label>
+        <link refid="hdf5__dist_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>omp.h</label>
+      </node>
+      <node id="27">
+        <label>../consts.h</label>
+        <link refid="consts_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>hdf5_helpers.h</label>
+        <link refid="hdf5__helpers_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>B_field.h</label>
+        <link refid="B__field_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>hdf5_histogram.h</label>
+        <link refid="hdf5__histogram_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>Efield/E_1DS.h</label>
+        <link refid="E__1DS_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>error.h</label>
+        <link refid="error_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>../diag/dist_com.h</label>
+        <link refid="dist__com_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>hdf5.h</label>
+      </node>
+      <node id="20">
+        <label>E_field.h</label>
+        <link refid="E__field_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>time.h</label>
+      </node>
+      <node id="19">
+        <label>Bfield/B_TC.h</label>
+        <link refid="B__TC_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>../linint/linint.h</label>
+        <link refid="linint_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>Bfield/B_2DS.h</label>
+        <link refid="B__2DS_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>Efield/E_TC.h</label>
+        <link refid="E__TC_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>Bfield/B_3DS.h</label>
+        <link refid="B__3DS_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>math.h</label>
+        <link refid="math_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>../diag/dist_6D.h</label>
+        <link refid="dist__6D_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>stdio.h</label>
+      </node>
+      <node id="25">
+        <label>../diag/dist_rho6D.h</label>
+        <link refid="dist__rho6D_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>Bfield/B_STS.h</label>
+        <link refid="B__STS_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>../ascot5.h</label>
+        <link refid="ascot5_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="hdf5__dist_8c_1accefbd2c3a3bc64b7915d3326b375ecb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hdf5_dist_write_5D</definition>
+        <argsstring>(hid_t f, char *path, dist_5D_offload_data *dist, real *hist)</argsstring>
+        <name>hdf5_dist_write_5D</name>
+        <param>
+          <type>hid_t</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type><ref refid="structdist__5D__offload__data" kindref="compound">dist_5D_offload_data</ref> *</type>
+          <declname>dist</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>hist</declname>
+        </param>
+        <briefdescription>
+<para>Write 5D distribution to an existing result group. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="hdf5__dist_8h_source" kindref="compound">hdf5_dist.h</ref></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>HDF5 file id </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>path to group which is created here and where the data is stored </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dist</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to distribution data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hist</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to distribution data </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hdf5io/hdf5_dist.c" line="27" column="5" bodyfile="hdf5io/hdf5_dist.c" bodystart="27" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="hdf5__dist_8c_1a020f0bae472aad76a1bb1c38965650dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hdf5_dist_write_6D</definition>
+        <argsstring>(hid_t f, char *path, dist_6D_offload_data *dist, real *hist)</argsstring>
+        <name>hdf5_dist_write_6D</name>
+        <param>
+          <type>hid_t</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type><ref refid="structdist__6D__offload__data" kindref="compound">dist_6D_offload_data</ref> *</type>
+          <declname>dist</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>hist</declname>
+        </param>
+        <briefdescription>
+<para>Write 6D distribution to an existing result group. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>HDF5 file id </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>path to group which is created here and where the data is stored </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dist</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to distribution data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hist</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to distribution data </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hdf5io/hdf5_dist.c" line="82" column="5" bodyfile="hdf5io/hdf5_dist.c" bodystart="82" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="hdf5__dist_8c_1a082bd9da44642ec15fe2297a6857d0dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hdf5_dist_write_rho5D</definition>
+        <argsstring>(hid_t f, char *path, dist_rho5D_offload_data *dist, real *hist)</argsstring>
+        <name>hdf5_dist_write_rho5D</name>
+        <param>
+          <type>hid_t</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type><ref refid="structdist__rho5D__offload__data" kindref="compound">dist_rho5D_offload_data</ref> *</type>
+          <declname>dist</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>hist</declname>
+        </param>
+        <briefdescription>
+<para>Write rho 5D distribution to an existing result group. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>HDF5 file id </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>path to group which is created here and where the data is stored </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dist</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to distribution data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hist</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to distribution data </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hdf5io/hdf5_dist.c" line="141" column="5" bodyfile="hdf5io/hdf5_dist.c" bodystart="141" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="hdf5__dist_8c_1a9a02225a8b6474f5840f616c119c4f95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hdf5_dist_write_rho6D</definition>
+        <argsstring>(hid_t f, char *path, dist_rho6D_offload_data *dist, real *hist)</argsstring>
+        <name>hdf5_dist_write_rho6D</name>
+        <param>
+          <type>hid_t</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type><ref refid="structdist__rho6D__offload__data" kindref="compound">dist_rho6D_offload_data</ref> *</type>
+          <declname>dist</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>hist</declname>
+        </param>
+        <briefdescription>
+<para>Write rho 6D distribution to an existing result group. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>HDF5 file id </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>path to group which is created here and where the data is stored </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dist</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to distribution data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hist</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to distribution data </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hdf5io/hdf5_dist.c" line="197" column="5" bodyfile="hdf5io/hdf5_dist.c" bodystart="197" bodyend="246"/>
+      </memberdef>
+      <memberdef kind="function" id="hdf5__dist_8c_1a7d614b58a0134eec622a1bacd75abdc1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hdf5_dist_write_COM</definition>
+        <argsstring>(hid_t f, char *path, dist_COM_offload_data *dist, real *hist)</argsstring>
+        <name>hdf5_dist_write_COM</name>
+        <param>
+          <type>hid_t</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type><ref refid="structdist__COM__offload__data" kindref="compound">dist_COM_offload_data</ref> *</type>
+          <declname>dist</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>hist</declname>
+        </param>
+        <briefdescription>
+<para>Write constants-of-motion distribution to an existing result group. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>HDF5 file id </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>path to group which is created here and where the data is stored </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dist</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to distribution data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hist</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to distribution data </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hdf5io/hdf5_dist.c" line="256" column="5" bodyfile="hdf5io/hdf5_dist.c" bodystart="256" bodyend="289"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Distribution HDF5 IO. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hdf5.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../ascot5.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../diag/dist_5D.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../diag/dist_6D.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../diag/dist_rho5D.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../diag/dist_rho6D.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../diag/dist_com.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../math.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../consts.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hdf5__histogram_8h" kindref="compound">hdf5_histogram.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hdf5__helpers_8h" kindref="compound">hdf5_helpers.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;hdf5_dist.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="hdf5__dist_8c_1accefbd2c3a3bc64b7915d3326b375ecb" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hdf5__dist_8c_1accefbd2c3a3bc64b7915d3326b375ecb" kindref="member">hdf5_dist_write_5D</ref>(hid_t<sp/>f,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>path,<sp/><ref refid="structdist__5D__offload__data" kindref="compound">dist_5D_offload_data</ref>*<sp/>dist,</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>hist)<sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>abscissa_dim<sp/>=<sp/>7;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ordinate_dim<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>abscissa_n_slots[7];</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_n_slots[0]<sp/>=<sp/>dist-&gt;<ref refid="structdist__5D__offload__data_1a3a4cf2862747e9526878fc6872aa0031" kindref="member">n_r</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_n_slots[1]<sp/>=<sp/>dist-&gt;<ref refid="structdist__5D__offload__data_1a4b4d47dcfd64dd5f62485b3639a8e0a8" kindref="member">n_phi</ref>;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_n_slots[2]<sp/>=<sp/>dist-&gt;<ref refid="structdist__5D__offload__data_1a35da14d74409c4e4e05f736202dd4bfe" kindref="member">n_z</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_n_slots[3]<sp/>=<sp/>dist-&gt;<ref refid="structdist__5D__offload__data_1a13905a27c3413aa064c852ba4a3c1330" kindref="member">n_ppara</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_n_slots[4]<sp/>=<sp/>dist-&gt;<ref refid="structdist__5D__offload__data_1aec2faec072adcd6eaf93e511a6b343c5" kindref="member">n_pperp</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_n_slots[5]<sp/>=<sp/>dist-&gt;<ref refid="structdist__5D__offload__data_1abec2d6748b7f9a08b900b4ee362da465" kindref="member">n_time</ref>;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_n_slots[6]<sp/>=<sp/>dist-&gt;<ref refid="structdist__5D__offload__data_1ad5462a6532aa2dfc348c193c478d805b" kindref="member">n_q</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>abscissa_min[7];</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_min[0]<sp/>=<sp/>dist-&gt;<ref refid="structdist__5D__offload__data_1a650be27cff551acab0a356e375e95914" kindref="member">min_r</ref>;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_min[1]<sp/>=<sp/><ref refid="math_8h_1a99307d8c1ae67cdea38938ac1fb5095d" kindref="member">math_rad2deg</ref>(dist-&gt;<ref refid="structdist__5D__offload__data_1a77f7d5f0d61e4c3d3b843da646d76007" kindref="member">min_phi</ref>);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_min[2]<sp/>=<sp/>dist-&gt;<ref refid="structdist__5D__offload__data_1a08c6333da74d9a2f835c00c2f2cac639" kindref="member">min_z</ref>;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_min[3]<sp/>=<sp/>dist-&gt;<ref refid="structdist__5D__offload__data_1a8d6c99b6fec35054cc036b4349dcab91" kindref="member">min_ppara</ref>;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_min[4]<sp/>=<sp/>dist-&gt;<ref refid="structdist__5D__offload__data_1aa645a6748c2137a42db00ec93bc53682" kindref="member">min_pperp</ref>;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_min[5]<sp/>=<sp/>dist-&gt;<ref refid="structdist__5D__offload__data_1ac28ec971133212656678d7d302f304fd" kindref="member">min_time</ref>;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_min[6]<sp/>=<sp/>dist-&gt;<ref refid="structdist__5D__offload__data_1a0545a9d8f0be9c00d16de1d69ab12189" kindref="member">min_q</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>abscissa_max[7];</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_max[0]<sp/>=<sp/>dist-&gt;<ref refid="structdist__5D__offload__data_1a00bfe77f5b7f949e38ed7225f57a5775" kindref="member">max_r</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_max[1]<sp/>=<sp/><ref refid="math_8h_1a99307d8c1ae67cdea38938ac1fb5095d" kindref="member">math_rad2deg</ref>(dist-&gt;<ref refid="structdist__5D__offload__data_1a57372c51cdfd2579b8875a144f856358" kindref="member">max_phi</ref>);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_max[2]<sp/>=<sp/>dist-&gt;<ref refid="structdist__5D__offload__data_1a3fcad184dd2cc56aa24d27c2abcfbc57" kindref="member">max_z</ref>;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_max[3]<sp/>=<sp/>dist-&gt;<ref refid="structdist__5D__offload__data_1a7b74c14cd8f4229e007c3a33160f4b5f" kindref="member">max_ppara</ref>;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_max[4]<sp/>=<sp/>dist-&gt;<ref refid="structdist__5D__offload__data_1aebda7473849744fb43ce4d0d255ebb75" kindref="member">max_pperp</ref>;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_max[5]<sp/>=<sp/>dist-&gt;<ref refid="structdist__5D__offload__data_1ac073bc748a79310ba3ddc59551eb1d18" kindref="member">max_time</ref>;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_max[6]<sp/>=<sp/>dist-&gt;<ref refid="structdist__5D__offload__data_1a64960bb514c6099ddbea965f02fbbf45" kindref="member">max_q</ref>;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>abscissa_names[]<sp/>=<sp/>{<sp/></highlight><highlight class="stringliteral">&quot;r&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;phi&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;z&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;ppar&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;pperp&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;time&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;charge&quot;</highlight><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>abscissa_units[]<sp/>=<sp/>{<sp/></highlight><highlight class="stringliteral">&quot;m&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;deg&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;m&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;kg*m/s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;kg*m/s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;e&quot;</highlight><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>ordinate_names[]<sp/>=<sp/>{<sp/></highlight><highlight class="stringliteral">&quot;distribution&quot;</highlight><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>ordinate_units[]<sp/>=<sp/>{<sp/></highlight><highlight class="stringliteral">&quot;s/(m^5*kg^2*deg*e)&quot;</highlight><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Create<sp/>a<sp/>group<sp/>for<sp/>this<sp/>distribution<sp/>and<sp/>write<sp/>the<sp/>data<sp/>in<sp/>it<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>retval<sp/>=<sp/><ref refid="hdf5__histogram_8c_1a0588017bb306f135bac18ff3a058138e" kindref="member">hdf5_histogram_write_uniform_double</ref>(</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>path,<sp/>abscissa_dim,<sp/>ordinate_dim,<sp/>abscissa_n_slots,<sp/>abscissa_min,</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>abscissa_max,<sp/>abscissa_units,<sp/>abscissa_names,<sp/>ordinate_units,</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ordinate_names,<sp/>hist);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>retval;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="hdf5__dist_8c_1a020f0bae472aad76a1bb1c38965650dc" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hdf5__dist_8c_1a020f0bae472aad76a1bb1c38965650dc" kindref="member">hdf5_dist_write_6D</ref>(hid_t<sp/>f,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>path,<sp/><ref refid="structdist__6D__offload__data" kindref="compound">dist_6D_offload_data</ref>*<sp/>dist,</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>hist)<sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>abscissa_dim<sp/>=<sp/>8;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ordinate_dim<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>abscissa_n_slots[8];</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_n_slots[0]<sp/>=<sp/>dist-&gt;<ref refid="structdist__6D__offload__data_1ae4cc22ca131c747a57843e41b0c2887b" kindref="member">n_r</ref>;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_n_slots[1]<sp/>=<sp/>dist-&gt;<ref refid="structdist__6D__offload__data_1ad8b1e56d6d59d6a88fd9bf58d7b7f972" kindref="member">n_phi</ref>;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_n_slots[2]<sp/>=<sp/>dist-&gt;<ref refid="structdist__6D__offload__data_1a875dbffcf0e35cba44d60a9f1561cc61" kindref="member">n_z</ref>;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_n_slots[3]<sp/>=<sp/>dist-&gt;<ref refid="structdist__6D__offload__data_1acdb3b4f79620dcb70f70091c6a43a40a" kindref="member">n_pr</ref>;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_n_slots[4]<sp/>=<sp/>dist-&gt;<ref refid="structdist__6D__offload__data_1af5ea03eb93a8e2d21bdb0651c51a6433" kindref="member">n_pphi</ref>;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_n_slots[5]<sp/>=<sp/>dist-&gt;<ref refid="structdist__6D__offload__data_1a70a07553fac59c0c44e7a5b81a09d971" kindref="member">n_pz</ref>;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_n_slots[6]<sp/>=<sp/>dist-&gt;<ref refid="structdist__6D__offload__data_1a6430347bdc5c63f3ef9c5f5de04e4763" kindref="member">n_time</ref>;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_n_slots[7]<sp/>=<sp/>dist-&gt;<ref refid="structdist__6D__offload__data_1a5ff7cc50aa86c861bd55e5d99d4c2636" kindref="member">n_q</ref>;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>abscissa_min[8];</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_min[0]<sp/>=<sp/>dist-&gt;<ref refid="structdist__6D__offload__data_1a55619d6770d6fa630a015df033b8c7ce" kindref="member">min_r</ref>;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_min[1]<sp/>=<sp/><ref refid="math_8h_1a99307d8c1ae67cdea38938ac1fb5095d" kindref="member">math_rad2deg</ref>(dist-&gt;<ref refid="structdist__6D__offload__data_1a688113e9a1943d1d1edcc122018a63d3" kindref="member">min_phi</ref>);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_min[2]<sp/>=<sp/>dist-&gt;<ref refid="structdist__6D__offload__data_1aace9e2773377b5dd8bafdd7804d3767d" kindref="member">min_z</ref>;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_min[3]<sp/>=<sp/>dist-&gt;<ref refid="structdist__6D__offload__data_1a4d5e60a37a571f9225e0474c19e6fa5b" kindref="member">min_pr</ref>;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_min[4]<sp/>=<sp/>dist-&gt;<ref refid="structdist__6D__offload__data_1a6baa658ff7beb0ed0c8cce0a2cffe37b" kindref="member">min_pphi</ref>;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_min[5]<sp/>=<sp/>dist-&gt;<ref refid="structdist__6D__offload__data_1ac5906238f04aa885074cd1cfc9840e4f" kindref="member">min_pz</ref>;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_min[6]<sp/>=<sp/>dist-&gt;<ref refid="structdist__6D__offload__data_1a102ae11c22bb5bd19866ce2f59484ff9" kindref="member">min_time</ref>;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_min[7]<sp/>=<sp/>dist-&gt;<ref refid="structdist__6D__offload__data_1a2bae3a1afaa73ddaf1f2867f5b53c10f" kindref="member">min_q</ref>;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>abscissa_max[8];</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_max[0]<sp/>=<sp/>dist-&gt;<ref refid="structdist__6D__offload__data_1a720c24a93baf86e4977ac37c8cbcd203" kindref="member">max_r</ref>;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_max[1]<sp/>=<sp/><ref refid="math_8h_1a99307d8c1ae67cdea38938ac1fb5095d" kindref="member">math_rad2deg</ref>(dist-&gt;<ref refid="structdist__6D__offload__data_1a841610be420bb54d2d9f66c2fffd60f9" kindref="member">max_phi</ref>);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_max[2]<sp/>=<sp/>dist-&gt;<ref refid="structdist__6D__offload__data_1a4af9369306de798b2ee9e66b7c735d2b" kindref="member">max_z</ref>;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_max[3]<sp/>=<sp/>dist-&gt;<ref refid="structdist__6D__offload__data_1a7dfaa367bdefa9247dc13557dd3fe532" kindref="member">max_pr</ref>;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_max[4]<sp/>=<sp/>dist-&gt;<ref refid="structdist__6D__offload__data_1a939ee795923b8f859d020e56ccc4047e" kindref="member">max_pphi</ref>;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_max[5]<sp/>=<sp/>dist-&gt;<ref refid="structdist__6D__offload__data_1a5cdd3c52e92392b9678c9dea98959b24" kindref="member">max_pz</ref>;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_max[6]<sp/>=<sp/>dist-&gt;<ref refid="structdist__6D__offload__data_1ae231549b379a9f38796b7a7a46c5c571" kindref="member">max_time</ref>;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_max[7]<sp/>=<sp/>dist-&gt;<ref refid="structdist__6D__offload__data_1a2da5bc9dd0dc0159bc8f361b89209413" kindref="member">max_q</ref>;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>abscissa_names[]<sp/>=<sp/>{<sp/></highlight><highlight class="stringliteral">&quot;r&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;phi&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;z&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;pr&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;pphi&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;pz&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;time&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;charge&quot;</highlight><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>abscissa_units[]<sp/>=<sp/>{<sp/></highlight><highlight class="stringliteral">&quot;m&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;deg&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;m&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;kg*m/s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;kg*m/s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;kg*m/s&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;e&quot;</highlight><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>ordinate_names[]<sp/>=<sp/>{<sp/></highlight><highlight class="stringliteral">&quot;distribution&quot;</highlight><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>ordinate_units[]<sp/>=<sp/>{<sp/></highlight><highlight class="stringliteral">&quot;s/(m^6*kg^3*deg*e)&quot;</highlight><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Create<sp/>a<sp/>group<sp/>for<sp/>this<sp/>distribution<sp/>and<sp/>write<sp/>the<sp/>data<sp/>in<sp/>it<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>retval<sp/>=<sp/><ref refid="hdf5__histogram_8c_1a0588017bb306f135bac18ff3a058138e" kindref="member">hdf5_histogram_write_uniform_double</ref>(</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>path,<sp/>abscissa_dim,<sp/>ordinate_dim,<sp/>abscissa_n_slots,<sp/>abscissa_min,</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>abscissa_max,<sp/>abscissa_units,<sp/>abscissa_names,<sp/>ordinate_units,</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ordinate_names,<sp/>hist);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>retval;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141" refid="hdf5__dist_8c_1a082bd9da44642ec15fe2297a6857d0dd" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hdf5__dist_8c_1a082bd9da44642ec15fe2297a6857d0dd" kindref="member">hdf5_dist_write_rho5D</ref>(hid_t<sp/>f,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>path,<sp/><ref refid="structdist__rho5D__offload__data" kindref="compound">dist_rho5D_offload_data</ref>*<sp/>dist,</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>hist)<sp/>{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>abscissa_dim<sp/>=<sp/>7;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ordinate_dim<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>abscissa_n_slots[7];</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_n_slots[0]<sp/>=<sp/>dist-&gt;<ref refid="structdist__rho5D__offload__data_1a5729fc92313e4f766bf8d45ae9216d9a" kindref="member">n_rho</ref>;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_n_slots[1]<sp/>=<sp/>dist-&gt;<ref refid="structdist__rho5D__offload__data_1a86dac7be95994539aac309a226b2a30f" kindref="member">n_theta</ref>;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_n_slots[2]<sp/>=<sp/>dist-&gt;<ref refid="structdist__rho5D__offload__data_1a335980df7f29c080b6a2b19830e40b50" kindref="member">n_phi</ref>;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_n_slots[3]<sp/>=<sp/>dist-&gt;<ref refid="structdist__rho5D__offload__data_1a488c833902fe84a74dcb358941ce88d6" kindref="member">n_ppara</ref>;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_n_slots[4]<sp/>=<sp/>dist-&gt;<ref refid="structdist__rho5D__offload__data_1a2f3893f49ccc9c8a41366e7e2d03b9ce" kindref="member">n_pperp</ref>;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_n_slots[5]<sp/>=<sp/>dist-&gt;<ref refid="structdist__rho5D__offload__data_1a2350944e35a04683e54a770d938013f0" kindref="member">n_time</ref>;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_n_slots[6]<sp/>=<sp/>dist-&gt;<ref refid="structdist__rho5D__offload__data_1a91ff0c7918fc424c4141f64654d2a69a" kindref="member">n_q</ref>;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>abscissa_min[7];</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_min[0]<sp/>=<sp/>dist-&gt;<ref refid="structdist__rho5D__offload__data_1a07c8f0e99647dab0082a3f68507345d2" kindref="member">min_rho</ref>;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_min[1]<sp/>=<sp/><ref refid="math_8h_1a99307d8c1ae67cdea38938ac1fb5095d" kindref="member">math_rad2deg</ref>(dist-&gt;<ref refid="structdist__rho5D__offload__data_1abd8b23b76c4e37d5e9fdf8dd32d0c4f5" kindref="member">min_theta</ref>);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_min[2]<sp/>=<sp/><ref refid="math_8h_1a99307d8c1ae67cdea38938ac1fb5095d" kindref="member">math_rad2deg</ref>(dist-&gt;<ref refid="structdist__rho5D__offload__data_1ae6c791ed6879a60eb234ff4aab00e8e5" kindref="member">min_phi</ref>);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_min[3]<sp/>=<sp/>dist-&gt;<ref refid="structdist__rho5D__offload__data_1a48386f5ff63bbfbc7f07f64131c500c4" kindref="member">min_ppara</ref>;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_min[4]<sp/>=<sp/>dist-&gt;<ref refid="structdist__rho5D__offload__data_1a114af91bc5fe86d1efde2fa838c89636" kindref="member">min_pperp</ref>;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_min[5]<sp/>=<sp/>dist-&gt;<ref refid="structdist__rho5D__offload__data_1a7886b4a9526c269c628a51ebfb2b3399" kindref="member">min_time</ref>;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_min[6]<sp/>=<sp/>dist-&gt;<ref refid="structdist__rho5D__offload__data_1a26766fb391a8f4d17e72dadbde250cc9" kindref="member">min_q</ref>;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>abscissa_max[7];</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_max[0]<sp/>=<sp/>dist-&gt;<ref refid="structdist__rho5D__offload__data_1a4a08028039219f001ef1658a31dad2b2" kindref="member">max_rho</ref>;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_max[1]<sp/>=<sp/><ref refid="math_8h_1a99307d8c1ae67cdea38938ac1fb5095d" kindref="member">math_rad2deg</ref>(dist-&gt;<ref refid="structdist__rho5D__offload__data_1af697eaf9cec34160df4edbbbfbc3b11f" kindref="member">max_theta</ref>);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_max[2]<sp/>=<sp/><ref refid="math_8h_1a99307d8c1ae67cdea38938ac1fb5095d" kindref="member">math_rad2deg</ref>(dist-&gt;<ref refid="structdist__rho5D__offload__data_1a82b69e7744023b9fb35b224dfaa2d3ac" kindref="member">max_phi</ref>);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_max[3]<sp/>=<sp/>dist-&gt;<ref refid="structdist__rho5D__offload__data_1a82b0616495647953b955906dd9ef1e7d" kindref="member">max_ppara</ref>;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_max[4]<sp/>=<sp/>dist-&gt;<ref refid="structdist__rho5D__offload__data_1ac1b1d118a6e19611d3d57909201d03a5" kindref="member">max_pperp</ref>;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_max[5]<sp/>=<sp/>dist-&gt;<ref refid="structdist__rho5D__offload__data_1a499d4d6b24261acae2368300429e576b" kindref="member">max_time</ref>;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_max[6]<sp/>=<sp/>dist-&gt;<ref refid="structdist__rho5D__offload__data_1aa17d2594c1d9a08203e005ff7eaa9541" kindref="member">max_q</ref>;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>abscissa_names[]<sp/>=<sp/>{<sp/></highlight><highlight class="stringliteral">&quot;rho&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;theta&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;phi&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;ppar&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;pperp&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;time&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;charge&quot;</highlight><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>abscissa_units[]<sp/>=<sp/>{<sp/></highlight><highlight class="stringliteral">&quot;1&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;deg&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;deg&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;kg*m/s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;kg*m/s&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;e&quot;</highlight><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>ordinate_names[]<sp/>=<sp/>{<sp/></highlight><highlight class="stringliteral">&quot;distribution&quot;</highlight><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>ordinate_units[]<sp/>=<sp/>{<sp/></highlight><highlight class="stringliteral">&quot;s/(m^2*kg^2*deg^2*e)&quot;</highlight><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Create<sp/>a<sp/>group<sp/>for<sp/>this<sp/>distribution<sp/>and<sp/>write<sp/>the<sp/>data<sp/>in<sp/>it<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>retval<sp/>=<sp/><ref refid="hdf5__histogram_8c_1a0588017bb306f135bac18ff3a058138e" kindref="member">hdf5_histogram_write_uniform_double</ref>(</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>path,<sp/>abscissa_dim,<sp/>ordinate_dim,<sp/>abscissa_n_slots,<sp/>abscissa_min,</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>abscissa_max,<sp/>abscissa_units,<sp/>abscissa_names,<sp/>ordinate_units,</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ordinate_names,<sp/>hist);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>retval;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197" refid="hdf5__dist_8c_1a9a02225a8b6474f5840f616c119c4f95" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hdf5__dist_8c_1a9a02225a8b6474f5840f616c119c4f95" kindref="member">hdf5_dist_write_rho6D</ref>(hid_t<sp/>f,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>path,<sp/><ref refid="structdist__rho6D__offload__data" kindref="compound">dist_rho6D_offload_data</ref>*<sp/>dist,</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>hist)<sp/>{</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>abscissa_dim<sp/>=<sp/>8;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ordinate_dim<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>abscissa_n_slots[8];</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_n_slots[0]<sp/>=<sp/>dist-&gt;<ref refid="structdist__rho6D__offload__data_1aa277d7c23a630d9e0b3560a7728c6573" kindref="member">n_rho</ref>;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_n_slots[1]<sp/>=<sp/>dist-&gt;<ref refid="structdist__rho6D__offload__data_1ac085b6f75b2c1d0a85f88e0fad3dc450" kindref="member">n_theta</ref>;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_n_slots[2]<sp/>=<sp/>dist-&gt;<ref refid="structdist__rho6D__offload__data_1adada4ed11a9fe6f34f6e2cd0567b5ed5" kindref="member">n_phi</ref>;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_n_slots[3]<sp/>=<sp/>dist-&gt;<ref refid="structdist__rho6D__offload__data_1af6320b429c9e94bee3d04cc25d5d7247" kindref="member">n_pr</ref>;</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_n_slots[4]<sp/>=<sp/>dist-&gt;<ref refid="structdist__rho6D__offload__data_1aacc6f348648643bf8e39f569c5ede00c" kindref="member">n_pphi</ref>;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_n_slots[5]<sp/>=<sp/>dist-&gt;<ref refid="structdist__rho6D__offload__data_1a03e6b1aec9b5fa5f9ab8148034bd984c" kindref="member">n_pz</ref>;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_n_slots[6]<sp/>=<sp/>dist-&gt;<ref refid="structdist__rho6D__offload__data_1af032038494d6076eb4f4ea8831a7f82e" kindref="member">n_time</ref>;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_n_slots[7]<sp/>=<sp/>dist-&gt;<ref refid="structdist__rho6D__offload__data_1a0cb41a1276dc60bebbce571a2cea4793" kindref="member">n_q</ref>;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>abscissa_min[8];</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_min[0]<sp/>=<sp/>dist-&gt;<ref refid="structdist__rho6D__offload__data_1acbe47e6dae7a1ccf93ca453e33e7cb29" kindref="member">min_rho</ref>;</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_min[1]<sp/>=<sp/><ref refid="math_8h_1a99307d8c1ae67cdea38938ac1fb5095d" kindref="member">math_rad2deg</ref>(dist-&gt;<ref refid="structdist__rho6D__offload__data_1a49d2a7466d07b955832dd68e4769a159" kindref="member">min_theta</ref>);</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_min[2]<sp/>=<sp/><ref refid="math_8h_1a99307d8c1ae67cdea38938ac1fb5095d" kindref="member">math_rad2deg</ref>(dist-&gt;<ref refid="structdist__rho6D__offload__data_1a3a1800548bb99947d575236461f3623b" kindref="member">min_phi</ref>);</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_min[3]<sp/>=<sp/>dist-&gt;<ref refid="structdist__rho6D__offload__data_1a28eea9f58bb1a3e029a2c0e9ba915e1e" kindref="member">min_pr</ref>;</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_min[4]<sp/>=<sp/>dist-&gt;<ref refid="structdist__rho6D__offload__data_1ad139211b6f5a9e7b5957c9cf04414897" kindref="member">min_pphi</ref>;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_min[5]<sp/>=<sp/>dist-&gt;<ref refid="structdist__rho6D__offload__data_1a76aab4c25ee0ceb50377666231fd4ef6" kindref="member">min_pz</ref>;</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_min[6]<sp/>=<sp/>dist-&gt;<ref refid="structdist__rho6D__offload__data_1ab348c6969ad9b6f53017595feccbdbed" kindref="member">min_time</ref>;</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_min[7]<sp/>=<sp/>dist-&gt;<ref refid="structdist__rho6D__offload__data_1a3fd6eed0f183a8edaf2098691b59dd59" kindref="member">min_q</ref>;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>abscissa_max[8];</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_max[0]<sp/>=<sp/>dist-&gt;<ref refid="structdist__rho6D__offload__data_1ac54bb184463bc269a4acac457c3ee7f1" kindref="member">max_rho</ref>;</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_max[1]<sp/>=<sp/><ref refid="math_8h_1a99307d8c1ae67cdea38938ac1fb5095d" kindref="member">math_rad2deg</ref>(dist-&gt;<ref refid="structdist__rho6D__offload__data_1ac848d17ea4a21bcbb54cd7e14aec35ec" kindref="member">max_theta</ref>);</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_max[2]<sp/>=<sp/><ref refid="math_8h_1a99307d8c1ae67cdea38938ac1fb5095d" kindref="member">math_rad2deg</ref>(dist-&gt;<ref refid="structdist__rho6D__offload__data_1a5dd424586ce925b4a7ac80d0385199ab" kindref="member">max_phi</ref>);</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_max[3]<sp/>=<sp/>dist-&gt;<ref refid="structdist__rho6D__offload__data_1ad2dcfdc061d443548b728bee38bab9ce" kindref="member">max_pr</ref>;</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_max[4]<sp/>=<sp/>dist-&gt;<ref refid="structdist__rho6D__offload__data_1a1ce4acbe2aa67c641919ca988ab088fe" kindref="member">max_pphi</ref>;</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_max[5]<sp/>=<sp/>dist-&gt;<ref refid="structdist__rho6D__offload__data_1a0af014b1fe53a9db1239163a427ffd5c" kindref="member">max_pz</ref>;</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_max[6]<sp/>=<sp/>dist-&gt;<ref refid="structdist__rho6D__offload__data_1ae143da1b9ec0078a8afe529f73f0bffa" kindref="member">max_time</ref>;</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_max[7]<sp/>=<sp/>dist-&gt;<ref refid="structdist__rho6D__offload__data_1a58a6c9a45bfd6d5f033171fb94789292" kindref="member">max_q</ref>;</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>abscissa_names[]<sp/>=<sp/>{<sp/></highlight><highlight class="stringliteral">&quot;rho&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;theta&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;phi&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;pr&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;pphi&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;pz&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;time&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;charge&quot;</highlight><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>abscissa_units[]<sp/>=<sp/>{<sp/></highlight><highlight class="stringliteral">&quot;1&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;deg&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;deg&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;kg*m/s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;kg*m/s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;kg*m/s&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;e&quot;</highlight><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>ordinate_names[]<sp/>=<sp/>{<sp/></highlight><highlight class="stringliteral">&quot;distribution&quot;</highlight><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>ordinate_units[]<sp/>=<sp/>{<sp/></highlight><highlight class="stringliteral">&quot;s^2/(m^3*kg^3*deg^2*e)&quot;</highlight><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Create<sp/>a<sp/>group<sp/>for<sp/>this<sp/>distribution<sp/>and<sp/>write<sp/>the<sp/>data<sp/>in<sp/>it<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>retval<sp/>=<sp/><ref refid="hdf5__histogram_8c_1a0588017bb306f135bac18ff3a058138e" kindref="member">hdf5_histogram_write_uniform_double</ref>(</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>path,<sp/>abscissa_dim,<sp/>ordinate_dim,<sp/>abscissa_n_slots,<sp/>abscissa_min,</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>abscissa_max,<sp/>abscissa_units,<sp/>abscissa_names,<sp/>ordinate_units,</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ordinate_names,<sp/>hist);</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>retval;</highlight></codeline>
+<codeline lineno="246"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256" refid="hdf5__dist_8c_1a7d614b58a0134eec622a1bacd75abdc1" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hdf5__dist_8c_1a7d614b58a0134eec622a1bacd75abdc1" kindref="member">hdf5_dist_write_COM</ref>(hid_t<sp/>f,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>path,<sp/><ref refid="structdist__COM__offload__data" kindref="compound">dist_COM_offload_data</ref>*<sp/>dist,</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>hist)<sp/>{</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>abscissa_dim<sp/>=<sp/>3;</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ordinate_dim<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>abscissa_n_slots[3];</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_n_slots[0]<sp/>=<sp/>dist-&gt;<ref refid="structdist__COM__offload__data_1a6f392eb71b5469e74365988d93cb261e" kindref="member">n_mu</ref>;</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_n_slots[1]<sp/>=<sp/>dist-&gt;<ref refid="structdist__COM__offload__data_1afb6ff76ded5e23f750f718ad13b74e6d" kindref="member">n_Ekin</ref>;</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_n_slots[2]<sp/>=<sp/>dist-&gt;<ref refid="structdist__COM__offload__data_1aba0a6dfaf56aa2f0eb2ff9ecbe2808f7" kindref="member">n_Ptor</ref>;</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>abscissa_min[3];</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_min[0]<sp/>=<sp/>dist-&gt;<ref refid="structdist__COM__offload__data_1ad5feee31973bab6db8b021cbb231858a" kindref="member">min_mu</ref><sp/><sp/><sp/>/<sp/><ref refid="consts_8h_1aa2d52037e91528e354a59fc909365f7c" kindref="member">CONST_E</ref>;</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_min[1]<sp/>=<sp/>dist-&gt;<ref refid="structdist__COM__offload__data_1a8b865bbc2d885bfc569393f8dabbebf5" kindref="member">min_Ekin</ref><sp/>/<sp/><ref refid="consts_8h_1aa2d52037e91528e354a59fc909365f7c" kindref="member">CONST_E</ref>;</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_min[2]<sp/>=<sp/>dist-&gt;<ref refid="structdist__COM__offload__data_1a1b4c1d09f67bccc5b6fe1a45da307ce8" kindref="member">min_Ptor</ref><sp/>/<sp/><ref refid="consts_8h_1aa2d52037e91528e354a59fc909365f7c" kindref="member">CONST_E</ref>;</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>abscissa_max[3];</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_max[0]<sp/>=<sp/>dist-&gt;<ref refid="structdist__COM__offload__data_1a1f9aba240106d278213eb106a9a091ab" kindref="member">max_mu</ref><sp/><sp/><sp/>/<sp/><ref refid="consts_8h_1aa2d52037e91528e354a59fc909365f7c" kindref="member">CONST_E</ref>;</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_max[1]<sp/>=<sp/>dist-&gt;<ref refid="structdist__COM__offload__data_1a147488439a0b3f7deb060f16c3d4f70b" kindref="member">max_Ekin</ref><sp/>/<sp/><ref refid="consts_8h_1aa2d52037e91528e354a59fc909365f7c" kindref="member">CONST_E</ref>;</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/>abscissa_max[2]<sp/>=<sp/>dist-&gt;<ref refid="structdist__COM__offload__data_1a65ef927c39e0832e0487f84e6aae58ea" kindref="member">max_Ptor</ref><sp/>/<sp/><ref refid="consts_8h_1aa2d52037e91528e354a59fc909365f7c" kindref="member">CONST_E</ref>;</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>abscissa_names[]<sp/>=<sp/>{<sp/></highlight><highlight class="stringliteral">&quot;mu&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;ekin&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;ptor&quot;</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>abscissa_units[]<sp/>=<sp/>{<sp/></highlight><highlight class="stringliteral">&quot;eV/T&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;eV&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;eV*s&quot;</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>ordinate_names[]<sp/>=<sp/>{<sp/></highlight><highlight class="stringliteral">&quot;distribution&quot;</highlight><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>ordinate_units[]<sp/>=<sp/>{<sp/></highlight><highlight class="stringliteral">&quot;T/(eV**3*s)&quot;</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Create<sp/>a<sp/>group<sp/>for<sp/>this<sp/>distribution<sp/>and<sp/>write<sp/>the<sp/>data<sp/>in<sp/>it<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>retval<sp/>=<sp/><ref refid="hdf5__histogram_8c_1a0588017bb306f135bac18ff3a058138e" kindref="member">hdf5_histogram_write_uniform_double</ref>(</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f,<sp/>path,<sp/>abscissa_dim,<sp/>ordinate_dim,<sp/>abscissa_n_slots,<sp/>abscissa_min,</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>abscissa_max,<sp/>abscissa_units,<sp/>abscissa_names,<sp/>ordinate_units,</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ordinate_names,<sp/>hist);</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>retval;</highlight></codeline>
+<codeline lineno="289"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="hdf5io/hdf5_dist.c"/>
+  </compounddef>
+</doxygen>

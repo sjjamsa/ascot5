@@ -1,0 +1,2981 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="ascot5_8h" kind="file" language="C++">
+    <compoundname>ascot5.h</compoundname>
+    <includes local="no">omp.h</includes>
+    <includes local="no">time.h</includes>
+    <includedby refid="afsi_8c" local="yes">afsi.c</includedby>
+    <includedby refid="afsi_8h" local="yes">afsi.h</includedby>
+    <includedby refid="ascot5__main_8c" local="yes">ascot5_main.c</includedby>
+    <includedby refid="ascot5__main_8h" local="yes">ascot5_main.h</includedby>
+    <includedby refid="asigma__loc_8c" local="yes">asigma/asigma_loc.c</includedby>
+    <includedby refid="asigma__loc_8h" local="yes">asigma/asigma_loc.h</includedby>
+    <includedby refid="asigma_8c" local="yes">asigma.c</includedby>
+    <includedby refid="asigma_8h" local="yes">asigma.h</includedby>
+    <includedby refid="B__field_8c" local="yes">B_field.c</includedby>
+    <includedby refid="B__field_8h" local="yes">B_field.h</includedby>
+    <includedby refid="bbnbi5_8c" local="yes">bbnbi5.c</includedby>
+    <includedby refid="B__2DS_8c" local="yes">Bfield/B_2DS.c</includedby>
+    <includedby refid="B__2DS_8h" local="yes">Bfield/B_2DS.h</includedby>
+    <includedby refid="B__3DS_8c" local="yes">Bfield/B_3DS.c</includedby>
+    <includedby refid="B__3DS_8h" local="yes">Bfield/B_3DS.h</includedby>
+    <includedby refid="B__GS_8c" local="yes">Bfield/B_GS.c</includedby>
+    <includedby refid="B__GS_8h" local="yes">Bfield/B_GS.h</includedby>
+    <includedby refid="B__STS_8c" local="yes">Bfield/B_STS.c</includedby>
+    <includedby refid="B__STS_8h" local="yes">Bfield/B_STS.h</includedby>
+    <includedby refid="B__TC_8c" local="yes">Bfield/B_TC.c</includedby>
+    <includedby refid="B__TC_8h" local="yes">Bfield/B_TC.h</includedby>
+    <includedby refid="biosaw_8c" local="yes">biosaw.c</includedby>
+    <includedby refid="biosaw_8h" local="yes">biosaw.h</includedby>
+    <includedby refid="boozer_8c" local="yes">boozer.c</includedby>
+    <includedby refid="boozer_8h" local="yes">boozer.h</includedby>
+    <includedby refid="boschhale_8c" local="yes">boschhale.c</includedby>
+    <includedby refid="boschhale_8h" local="yes">boschhale.h</includedby>
+    <includedby refid="consts_8h" local="yes">consts.h</includedby>
+    <includedby refid="diag__orb_8c" local="yes">diag/diag_orb.c</includedby>
+    <includedby refid="diag__transcoef_8c" local="yes">diag/diag_transcoef.c</includedby>
+    <includedby refid="diag__transcoef_8h" local="yes">diag/diag_transcoef.h</includedby>
+    <includedby refid="dist__5D_8c" local="yes">diag/dist_5D.c</includedby>
+    <includedby refid="dist__5D_8h" local="yes">diag/dist_5D.h</includedby>
+    <includedby refid="dist__6D_8c" local="yes">diag/dist_6D.c</includedby>
+    <includedby refid="dist__6D_8h" local="yes">diag/dist_6D.h</includedby>
+    <includedby refid="dist__com_8c" local="yes">diag/dist_com.c</includedby>
+    <includedby refid="dist__com_8h" local="yes">diag/dist_com.h</includedby>
+    <includedby refid="dist__rho5D_8c" local="yes">diag/dist_rho5D.c</includedby>
+    <includedby refid="dist__rho5D_8h" local="yes">diag/dist_rho5D.h</includedby>
+    <includedby refid="dist__rho6D_8c" local="yes">diag/dist_rho6D.c</includedby>
+    <includedby refid="dist__rho6D_8h" local="yes">diag/dist_rho6D.h</includedby>
+    <includedby refid="diag_8c" local="yes">diag.c</includedby>
+    <includedby refid="diag_8h" local="yes">diag.h</includedby>
+    <includedby refid="E__field_8c" local="yes">E_field.c</includedby>
+    <includedby refid="E__field_8h" local="yes">E_field.h</includedby>
+    <includedby refid="E__1DS_8c" local="yes">Efield/E_1DS.c</includedby>
+    <includedby refid="E__1DS_8h" local="yes">Efield/E_1DS.h</includedby>
+    <includedby refid="E__TC_8c" local="yes">Efield/E_TC.c</includedby>
+    <includedby refid="E__TC_8h" local="yes">Efield/E_TC.h</includedby>
+    <includedby refid="gctransform_8c" local="yes">gctransform.c</includedby>
+    <includedby refid="gctransform_8h" local="yes">gctransform.h</includedby>
+    <includedby refid="hdf5__interface_8c" local="yes">hdf5_interface.c</includedby>
+    <includedby refid="hdf5__interface_8h" local="yes">hdf5_interface.h</includedby>
+    <includedby refid="hdf5__asigma_8c" local="yes">hdf5io/hdf5_asigma.c</includedby>
+    <includedby refid="hdf5__asigma_8h" local="yes">hdf5io/hdf5_asigma.h</includedby>
+    <includedby refid="hdf5__bfield_8c" local="yes">hdf5io/hdf5_bfield.c</includedby>
+    <includedby refid="hdf5__bfield_8h" local="yes">hdf5io/hdf5_bfield.h</includedby>
+    <includedby refid="hdf5__boozer_8c" local="yes">hdf5io/hdf5_boozer.c</includedby>
+    <includedby refid="hdf5__boozer_8h" local="yes">hdf5io/hdf5_boozer.h</includedby>
+    <includedby refid="hdf5__dist_8c" local="yes">hdf5io/hdf5_dist.c</includedby>
+    <includedby refid="hdf5__dist_8h" local="yes">hdf5io/hdf5_dist.h</includedby>
+    <includedby refid="hdf5__efield_8c" local="yes">hdf5io/hdf5_efield.c</includedby>
+    <includedby refid="hdf5__helpers_8c" local="yes">hdf5io/hdf5_helpers.c</includedby>
+    <includedby refid="hdf5__helpers_8h" local="yes">hdf5io/hdf5_helpers.h</includedby>
+    <includedby refid="hdf5__mhd_8c" local="yes">hdf5io/hdf5_mhd.c</includedby>
+    <includedby refid="hdf5__nbi_8c" local="yes">hdf5io/hdf5_nbi.c</includedby>
+    <includedby refid="hdf5__nbi_8h" local="yes">hdf5io/hdf5_nbi.h</includedby>
+    <includedby refid="hdf5__neutral_8c" local="yes">hdf5io/hdf5_neutral.c</includedby>
+    <includedby refid="hdf5__neutral_8h" local="yes">hdf5io/hdf5_neutral.h</includedby>
+    <includedby refid="hdf5__options_8c" local="yes">hdf5io/hdf5_options.c</includedby>
+    <includedby refid="hdf5__orbit_8c" local="yes">hdf5io/hdf5_orbit.c</includedby>
+    <includedby refid="hdf5__orbit_8h" local="yes">hdf5io/hdf5_orbit.h</includedby>
+    <includedby refid="hdf5__plasma_8c" local="yes">hdf5io/hdf5_plasma.c</includedby>
+    <includedby refid="hdf5__plasma_8h" local="yes">hdf5io/hdf5_plasma.h</includedby>
+    <includedby refid="hdf5__state_8c" local="yes">hdf5io/hdf5_state.c</includedby>
+    <includedby refid="hdf5__transcoef_8c" local="yes">hdf5io/hdf5_transcoef.c</includedby>
+    <includedby refid="hdf5__transcoef_8h" local="yes">hdf5io/hdf5_transcoef.h</includedby>
+    <includedby refid="hdf5__wall_8h" local="yes">hdf5io/hdf5_wall.h</includedby>
+    <includedby refid="libascot_8c" local="yes">libascot.c</includedby>
+    <includedby refid="linint_8h" local="yes">linint/linint.h</includedby>
+    <includedby refid="linint1D_8c" local="yes">linint/linint1D.c</includedby>
+    <includedby refid="linint2D_8c" local="yes">linint/linint2D.c</includedby>
+    <includedby refid="linint3D_8c" local="yes">linint/linint3D.c</includedby>
+    <includedby refid="math_8c" local="yes">math.c</includedby>
+    <includedby refid="math_8h" local="yes">math.h</includedby>
+    <includedby refid="mhd__nonstat_8c" local="yes">mhd/mhd_nonstat.c</includedby>
+    <includedby refid="mhd__nonstat_8h" local="yes">mhd/mhd_nonstat.h</includedby>
+    <includedby refid="mhd__stat_8c" local="yes">mhd/mhd_stat.c</includedby>
+    <includedby refid="mhd__stat_8h" local="yes">mhd/mhd_stat.h</includedby>
+    <includedby refid="mhd_8c" local="yes">mhd.c</includedby>
+    <includedby refid="mhd_8h" local="yes">mhd.h</includedby>
+    <includedby refid="mpi__interface_8c" local="yes">mpi_interface.c</includedby>
+    <includedby refid="nbi_8c" local="yes">nbi.c</includedby>
+    <includedby refid="nbi_8h" local="yes">nbi.h</includedby>
+    <includedby refid="N0__1D_8c" local="yes">neutral/N0_1D.c</includedby>
+    <includedby refid="N0__1D_8h" local="yes">neutral/N0_1D.h</includedby>
+    <includedby refid="N0__3D_8c" local="yes">neutral/N0_3D.c</includedby>
+    <includedby refid="N0__3D_8h" local="yes">neutral/N0_3D.h</includedby>
+    <includedby refid="neutral_8c" local="yes">neutral.c</includedby>
+    <includedby refid="neutral_8h" local="yes">neutral.h</includedby>
+    <includedby refid="octree_8c" local="yes">octree.c</includedby>
+    <includedby refid="octree_8h" local="yes">octree.h</includedby>
+    <includedby refid="offload_8c" local="yes">offload.c</includedby>
+    <includedby refid="particle_8c" local="yes">particle.c</includedby>
+    <includedby refid="particle_8h" local="yes">particle.h</includedby>
+    <includedby refid="plasma__1D_8c" local="yes">plasma/plasma_1D.c</includedby>
+    <includedby refid="plasma__1D_8h" local="yes">plasma/plasma_1D.h</includedby>
+    <includedby refid="plasma__1DS_8c" local="yes">plasma/plasma_1DS.c</includedby>
+    <includedby refid="plasma__1DS_8h" local="yes">plasma/plasma_1DS.h</includedby>
+    <includedby refid="plasma__1Dt_8c" local="yes">plasma/plasma_1Dt.c</includedby>
+    <includedby refid="plasma__1Dt_8h" local="yes">plasma/plasma_1Dt.h</includedby>
+    <includedby refid="plasma_8c" local="yes">plasma.c</includedby>
+    <includedby refid="plasma_8h" local="yes">plasma.h</includedby>
+    <includedby refid="atomic_8c" local="yes">simulate/atomic.c</includedby>
+    <includedby refid="atomic_8h" local="yes">simulate/atomic.h</includedby>
+    <includedby refid="mccc_8h" local="yes">simulate/mccc/mccc.h</includedby>
+    <includedby refid="mccc__coefs_8h" local="yes">simulate/mccc/mccc_coefs.h</includedby>
+    <includedby refid="mccc__fo__euler_8c" local="yes">simulate/mccc/mccc_fo_euler.c</includedby>
+    <includedby refid="mccc__gc__euler_8c" local="yes">simulate/mccc/mccc_gc_euler.c</includedby>
+    <includedby refid="mccc__gc__milstein_8c" local="yes">simulate/mccc/mccc_gc_milstein.c</includedby>
+    <includedby refid="mccc__wiener_8c" local="yes">simulate/mccc/mccc_wiener.c</includedby>
+    <includedby refid="mccc__wiener_8h" local="yes">simulate/mccc/mccc_wiener.h</includedby>
+    <includedby refid="simulate__fo__fixed_8c" local="yes">simulate/simulate_fo_fixed.c</includedby>
+    <includedby refid="simulate__fo__fixed_8h" local="yes">simulate/simulate_fo_fixed.h</includedby>
+    <includedby refid="simulate__gc__adaptive_8c" local="yes">simulate/simulate_gc_adaptive.c</includedby>
+    <includedby refid="simulate__gc__adaptive_8h" local="yes">simulate/simulate_gc_adaptive.h</includedby>
+    <includedby refid="simulate__gc__fixed_8c" local="yes">simulate/simulate_gc_fixed.c</includedby>
+    <includedby refid="simulate__gc__fixed_8h" local="yes">simulate/simulate_gc_fixed.h</includedby>
+    <includedby refid="simulate__ml__adaptive_8c" local="yes">simulate/simulate_ml_adaptive.c</includedby>
+    <includedby refid="step__fo__vpa_8c" local="yes">simulate/step/step_fo_vpa.c</includedby>
+    <includedby refid="step__gc__cashkarp_8c" local="yes">simulate/step/step_gc_cashkarp.c</includedby>
+    <includedby refid="step__gc__rk4_8c" local="yes">simulate/step/step_gc_rk4.c</includedby>
+    <includedby refid="step__gc__rk4_8h" local="yes">simulate/step/step_gc_rk4.h</includedby>
+    <includedby refid="step__gceom_8h" local="yes">simulate/step/step_gceom.h</includedby>
+    <includedby refid="step__gceom__mhd_8h" local="yes">simulate/step/step_gceom_mhd.h</includedby>
+    <includedby refid="step__ml__cashkarp_8c" local="yes">simulate/step/step_ml_cashkarp.c</includedby>
+    <includedby refid="simulate_8h" local="yes">simulate.h</includedby>
+    <includedby refid="interp_8h" local="yes">spline/interp.h</includedby>
+    <includedby refid="interp1Dcomp_8c" local="yes">spline/interp1Dcomp.c</includedby>
+    <includedby refid="interp1Dexpl_8c" local="yes">spline/interp1Dexpl.c</includedby>
+    <includedby refid="interp2Dcomp_8c" local="yes">spline/interp2Dcomp.c</includedby>
+    <includedby refid="interp2Dexpl_8c" local="yes">spline/interp2Dexpl.c</includedby>
+    <includedby refid="interp3Dcomp_8c" local="yes">spline/interp3Dcomp.c</includedby>
+    <includedby refid="interp3Dexpl_8c" local="yes">spline/interp3Dexpl.c</includedby>
+    <includedby refid="spline_8h" local="yes">spline/spline.h</includedby>
+    <includedby refid="splinecomp_8c" local="yes">spline/splinecomp.c</includedby>
+    <includedby refid="splineexpl_8c" local="yes">spline/splineexpl.c</includedby>
+    <includedby refid="suzuki_8c" local="yes">suzuki.c</includedby>
+    <includedby refid="suzuki_8h" local="yes">suzuki.h</includedby>
+    <includedby refid="wall__2d_8c" local="yes">wall/wall_2d.c</includedby>
+    <includedby refid="wall__2d_8h" local="yes">wall/wall_2d.h</includedby>
+    <includedby refid="wall__3d_8c" local="yes">wall/wall_3d.c</includedby>
+    <includedby refid="wall__3d_8h" local="yes">wall/wall_3d.h</includedby>
+    <includedby refid="wall_8c" local="yes">wall.c</includedby>
+    <includedby refid="wall_8h" local="yes">wall.h</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>omp.h</label>
+      </node>
+      <node id="3">
+        <label>time.h</label>
+      </node>
+      <node id="1">
+        <label>ascot5.h</label>
+        <link refid="ascot5_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="84">
+        <label>diag/dist_rho5D.c</label>
+        <link refid="dist__rho5D_8c"/>
+      </node>
+      <node id="27">
+        <label>simulate/simulate_ml_adaptive.c</label>
+        <link refid="simulate__ml__adaptive_8c"/>
+      </node>
+      <node id="85">
+        <label>diag/dist_rho5D.h</label>
+        <link refid="dist__rho5D_8h"/>
+        <childnode refid="84" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>simulate/simulate_ml_adaptive.h</label>
+        <link refid="simulate__ml__adaptive_8h"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="135">
+        <label>suzuki.c</label>
+        <link refid="suzuki_8c"/>
+      </node>
+      <node id="169">
+        <label>suzuki.h</label>
+        <link refid="suzuki_8h"/>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="135" relation="include">
+        </childnode>
+      </node>
+      <node id="130">
+        <label>plasma.c</label>
+        <link refid="plasma_8c"/>
+      </node>
+      <node id="158">
+        <label>plasma.h</label>
+        <link refid="plasma_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="123" relation="include">
+        </childnode>
+        <childnode refid="141" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="130" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="94" relation="include">
+        </childnode>
+        <childnode refid="97" relation="include">
+        </childnode>
+        <childnode refid="98" relation="include">
+        </childnode>
+        <childnode refid="99" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="134">
+        <label>spline/interp3Dexpl.c</label>
+        <link refid="interp3Dexpl_8c"/>
+      </node>
+      <node id="80">
+        <label>diag/dist_5D.c</label>
+        <link refid="dist__5D_8c"/>
+      </node>
+      <node id="121">
+        <label>gctransform.c</label>
+        <link refid="gctransform_8c"/>
+      </node>
+      <node id="81">
+        <label>diag/dist_5D.h</label>
+        <link refid="dist__5D_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+      </node>
+      <node id="166">
+        <label>spline/interp2Dexpl.c</label>
+        <link refid="interp2Dexpl_8c"/>
+      </node>
+      <node id="136">
+        <label>gctransform.h</label>
+        <link refid="gctransform_8h"/>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="87" relation="include">
+        </childnode>
+        <childnode refid="121" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="164">
+        <label>spline/interp1Dexpl.c</label>
+        <link refid="interp1Dexpl_8c"/>
+      </node>
+      <node id="73">
+        <label>particle.c</label>
+        <link refid="particle_8c"/>
+      </node>
+      <node id="21">
+        <label>diag.c</label>
+        <link refid="diag_8c"/>
+      </node>
+      <node id="74">
+        <label>particle.h</label>
+        <link refid="particle_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="84" relation="include">
+        </childnode>
+        <childnode refid="85" relation="include">
+        </childnode>
+        <childnode refid="86" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="88" relation="include">
+        </childnode>
+        <childnode refid="89" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="90" relation="include">
+        </childnode>
+        <childnode refid="91" relation="include">
+        </childnode>
+        <childnode refid="92" relation="include">
+        </childnode>
+        <childnode refid="93" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="94" relation="include">
+        </childnode>
+        <childnode refid="97" relation="include">
+        </childnode>
+        <childnode refid="98" relation="include">
+        </childnode>
+        <childnode refid="99" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="62">
+        <label>diag.h</label>
+        <link refid="diag_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>simulate.c</label>
+        <link refid="simulate_8c"/>
+      </node>
+      <node id="162">
+        <label>spline/interp.h</label>
+        <link refid="interp_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="106" relation="include">
+        </childnode>
+        <childnode refid="107" relation="include">
+        </childnode>
+        <childnode refid="108" relation="include">
+        </childnode>
+        <childnode refid="109" relation="include">
+        </childnode>
+        <childnode refid="112" relation="include">
+        </childnode>
+        <childnode refid="113" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="100" relation="include">
+        </childnode>
+        <childnode refid="101" relation="include">
+        </childnode>
+        <childnode refid="143" relation="include">
+        </childnode>
+        <childnode refid="144" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="128" relation="include">
+        </childnode>
+        <childnode refid="159" relation="include">
+        </childnode>
+        <childnode refid="163" relation="include">
+        </childnode>
+        <childnode refid="164" relation="include">
+        </childnode>
+        <childnode refid="165" relation="include">
+        </childnode>
+        <childnode refid="166" relation="include">
+        </childnode>
+        <childnode refid="133" relation="include">
+        </childnode>
+        <childnode refid="134" relation="include">
+        </childnode>
+        <childnode refid="167" relation="include">
+        </childnode>
+        <childnode refid="168" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>simulate.h</label>
+        <link refid="simulate_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="133">
+        <label>spline/interp3Dcomp.c</label>
+        <link refid="interp3Dcomp_8c"/>
+      </node>
+      <node id="110">
+        <label>Bfield/B_GS.c</label>
+        <link refid="B__GS_8c"/>
+      </node>
+      <node id="16">
+        <label>simulate/simulate_fo_fixed.c</label>
+        <link refid="simulate__fo__fixed_8c"/>
+      </node>
+      <node id="111">
+        <label>Bfield/B_GS.h</label>
+        <link refid="B__GS_8h"/>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="110" relation="include">
+        </childnode>
+        <childnode refid="104" relation="include">
+        </childnode>
+        <childnode refid="105" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>simulate/simulate_fo_fixed.h</label>
+        <link refid="simulate__fo__fixed_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="55">
+        <label>simulate/step/step_gc_rk4.c</label>
+        <link refid="step__gc__rk4_8c"/>
+      </node>
+      <node id="172">
+        <label>wall.c</label>
+        <link refid="wall_8c"/>
+      </node>
+      <node id="165">
+        <label>spline/interp2Dcomp.c</label>
+        <link refid="interp2Dcomp_8c"/>
+      </node>
+      <node id="56">
+        <label>simulate/step/step_gc_rk4.h</label>
+        <link refid="step__gc__rk4_8h"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>simulate/simulate_gc_fixed.c</label>
+        <link refid="simulate__gc__fixed_8c"/>
+      </node>
+      <node id="4">
+        <label>ascot5_main.c</label>
+        <link refid="ascot5__main_8c"/>
+      </node>
+      <node id="178">
+        <label>wall.h</label>
+        <link refid="wall_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="139" relation="include">
+        </childnode>
+        <childnode refid="142" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="172" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>simulate/simulate_gc_fixed.h</label>
+        <link refid="simulate__gc__fixed_8h"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>ascot5_main.h</label>
+        <link refid="ascot5__main_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="163">
+        <label>spline/interp1Dcomp.c</label>
+        <link refid="interp1Dcomp_8c"/>
+      </node>
+      <node id="8">
+        <label>asigma.c</label>
+        <link refid="asigma_8c"/>
+      </node>
+      <node id="128">
+        <label>plasma/plasma_1DS.c</label>
+        <link refid="plasma__1DS_8c"/>
+      </node>
+      <node id="9">
+        <label>asigma.h</label>
+        <link refid="asigma_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="159">
+        <label>plasma/plasma_1DS.h</label>
+        <link refid="plasma__1DS_8h"/>
+        <childnode refid="123" relation="include">
+        </childnode>
+        <childnode refid="128" relation="include">
+        </childnode>
+        <childnode refid="130" relation="include">
+        </childnode>
+        <childnode refid="158" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>mhd/mhd_nonstat.c</label>
+        <link refid="mhd__nonstat_8c"/>
+      </node>
+      <node id="45">
+        <label>mhd/mhd_nonstat.h</label>
+        <link refid="mhd__nonstat_8h"/>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>endcond.c</label>
+        <link refid="endcond_8c"/>
+      </node>
+      <node id="23">
+        <label>endcond.h</label>
+        <link refid="endcond_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="95">
+        <label>simulate/mccc/mccc.c</label>
+        <link refid="mccc_8c"/>
+      </node>
+      <node id="94">
+        <label>simulate/mccc/mccc.h</label>
+        <link refid="mccc_8h"/>
+        <childnode refid="95" relation="include">
+        </childnode>
+        <childnode refid="96" relation="include">
+        </childnode>
+        <childnode refid="97" relation="include">
+        </childnode>
+        <childnode refid="98" relation="include">
+        </childnode>
+        <childnode refid="99" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>simulate/atomic.c</label>
+        <link refid="atomic_8c"/>
+      </node>
+      <node id="6">
+        <label>asigma/asigma_loc.c</label>
+        <link refid="asigma__loc_8c"/>
+      </node>
+      <node id="15">
+        <label>simulate/atomic.h</label>
+        <link refid="atomic_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>asigma/asigma_loc.h</label>
+        <link refid="asigma__loc_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="92">
+        <label>libascot_mem.c</label>
+        <link refid="libascot__mem_8c"/>
+      </node>
+      <node id="93">
+        <label>libascot_mem.h</label>
+        <link refid="libascot__mem_8h"/>
+        <childnode refid="92" relation="include">
+        </childnode>
+      </node>
+      <node id="88">
+        <label>hdf5io/hdf5_marker.c</label>
+        <link refid="hdf5__marker_8c"/>
+      </node>
+      <node id="89">
+        <label>hdf5io/hdf5_marker.h</label>
+        <link refid="hdf5__marker_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="88" relation="include">
+        </childnode>
+      </node>
+      <node id="67">
+        <label>hdf5io/hdf5_dist.c</label>
+        <link refid="hdf5__dist_8c"/>
+      </node>
+      <node id="68">
+        <label>hdf5io/hdf5_dist.h</label>
+        <link refid="hdf5__dist_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>afsi.c</label>
+        <link refid="afsi_8c"/>
+      </node>
+      <node id="78">
+        <label>hdf5io/hdf5_transcoef.c</label>
+        <link refid="hdf5__transcoef_8c"/>
+      </node>
+      <node id="63">
+        <label>nbi.c</label>
+        <link refid="nbi_8c"/>
+      </node>
+      <node id="3">
+        <label>afsi.h</label>
+        <link refid="afsi_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="79">
+        <label>hdf5io/hdf5_transcoef.h</label>
+        <link refid="hdf5__transcoef_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+      </node>
+      <node id="64">
+        <label>nbi.h</label>
+        <link refid="nbi_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="139">
+        <label>hdf5io/hdf5_wall.c</label>
+        <link refid="hdf5__wall_8c"/>
+      </node>
+      <node id="142">
+        <label>hdf5io/hdf5_wall.h</label>
+        <link refid="hdf5__wall_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="139" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>diag/diag_orb.c</label>
+        <link refid="diag__orb_8c"/>
+      </node>
+      <node id="75">
+        <label>diag/diag_orb.h</label>
+        <link refid="diag__orb_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>hdf5io/hdf5_asigma.c</label>
+        <link refid="hdf5__asigma_8c"/>
+      </node>
+      <node id="123">
+        <label>hdf5io/hdf5_plasma.c</label>
+        <link refid="hdf5__plasma_8c"/>
+      </node>
+      <node id="11">
+        <label>hdf5io/hdf5_asigma.h</label>
+        <link refid="hdf5__asigma_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="141">
+        <label>hdf5io/hdf5_plasma.h</label>
+        <link refid="hdf5__plasma_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="123" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="116">
+        <label>biosaw.c</label>
+        <link refid="biosaw_8c"/>
+      </node>
+      <node id="117">
+        <label>biosaw.h</label>
+        <link refid="biosaw_8h"/>
+        <childnode refid="116" relation="include">
+        </childnode>
+      </node>
+      <node id="137">
+        <label>hdf5io/hdf5_helpers.c</label>
+        <link refid="hdf5__helpers_8c"/>
+      </node>
+      <node id="120">
+        <label>consts.h</label>
+        <link refid="consts_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="110" relation="include">
+        </childnode>
+        <childnode refid="112" relation="include">
+        </childnode>
+        <childnode refid="116" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="84" relation="include">
+        </childnode>
+        <childnode refid="87" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="121" relation="include">
+        </childnode>
+        <childnode refid="104" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="88" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="122" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="123" relation="include">
+        </childnode>
+        <childnode refid="90" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="124" relation="include">
+        </childnode>
+        <childnode refid="127" relation="include">
+        </childnode>
+        <childnode refid="128" relation="include">
+        </childnode>
+        <childnode refid="129" relation="include">
+        </childnode>
+        <childnode refid="130" relation="include">
+        </childnode>
+        <childnode refid="131" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="96" relation="include">
+        </childnode>
+        <childnode refid="97" relation="include">
+        </childnode>
+        <childnode refid="98" relation="include">
+        </childnode>
+        <childnode refid="99" relation="include">
+        </childnode>
+        <childnode refid="132" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="126" relation="include">
+        </childnode>
+        <childnode refid="133" relation="include">
+        </childnode>
+        <childnode refid="134" relation="include">
+        </childnode>
+        <childnode refid="135" relation="include">
+        </childnode>
+      </node>
+      <node id="167">
+        <label>spline/splinecomp.c</label>
+        <link refid="splinecomp_8c"/>
+      </node>
+      <node id="138">
+        <label>hdf5io/hdf5_helpers.h</label>
+        <link refid="hdf5__helpers_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="104" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="88" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="122" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="123" relation="include">
+        </childnode>
+        <childnode refid="90" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="139" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="132">
+        <label>simulate/mccc/mccc_wiener.c</label>
+        <link refid="mccc__wiener_8c"/>
+      </node>
+      <node id="161">
+        <label>simulate/mccc/mccc_wiener.h</label>
+        <link refid="mccc__wiener_8h"/>
+        <childnode refid="94" relation="include">
+        </childnode>
+        <childnode refid="99" relation="include">
+        </childnode>
+        <childnode refid="132" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="151">
+        <label>neutral/N0_3D.c</label>
+        <link refid="N0__3D_8c"/>
+      </node>
+      <node id="99">
+        <label>simulate/mccc/mccc_gc_milstein.c</label>
+        <link refid="mccc__gc__milstein_8c"/>
+      </node>
+      <node id="152">
+        <label>neutral/N0_3D.h</label>
+        <link refid="N0__3D_8h"/>
+        <childnode refid="122" relation="include">
+        </childnode>
+        <childnode refid="140" relation="include">
+        </childnode>
+        <childnode refid="151" relation="include">
+        </childnode>
+        <childnode refid="149" relation="include">
+        </childnode>
+        <childnode refid="150" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>B_field.c</label>
+        <link refid="B__field_8c"/>
+      </node>
+      <node id="39">
+        <label>B_field.h</label>
+        <link refid="B__field_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="100" relation="include">
+        </childnode>
+        <childnode refid="101" relation="include">
+        </childnode>
+        <childnode refid="102" relation="include">
+        </childnode>
+        <childnode refid="103" relation="include">
+        </childnode>
+        <childnode refid="104" relation="include">
+        </childnode>
+        <childnode refid="105" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="94" relation="include">
+        </childnode>
+        <childnode refid="98" relation="include">
+        </childnode>
+        <childnode refid="99" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="50">
+        <label>mhd/mhd_stat.c</label>
+        <link refid="mhd__stat_8c"/>
+      </node>
+      <node id="24">
+        <label>hdf5io/hdf5_options.c</label>
+        <link refid="hdf5__options_8c"/>
+      </node>
+      <node id="59">
+        <label>mhd/mhd_stat.h</label>
+        <link refid="mhd__stat_8h"/>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+      </node>
+      <node id="144">
+        <label>linint/linint1D.c</label>
+        <link refid="linint1D_8c"/>
+      </node>
+      <node id="30">
+        <label>hdf5io/hdf5_options.h</label>
+        <link refid="hdf5__options_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="100">
+        <label>Efield/E_1DS.c</label>
+        <link refid="E__1DS_8c"/>
+      </node>
+      <node id="101">
+        <label>Efield/E_1DS.h</label>
+        <link refid="E__1DS_8h"/>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="100" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>hdf5io/hdf5_mhd.c</label>
+        <link refid="hdf5__mhd_8c"/>
+      </node>
+      <node id="31">
+        <label>hdf5io/hdf5_orbit.c</label>
+        <link refid="hdf5__orbit_8c"/>
+      </node>
+      <node id="47">
+        <label>hdf5io/hdf5_mhd.h</label>
+        <link refid="hdf5__mhd_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="145">
+        <label>linint/linint2D.c</label>
+        <link refid="linint2D_8c"/>
+      </node>
+      <node id="76">
+        <label>hdf5io/hdf5_orbit.h</label>
+        <link refid="hdf5__orbit_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="147">
+        <label>neutral/N0_1D.c</label>
+        <link refid="N0__1D_8c"/>
+      </node>
+      <node id="129">
+        <label>plasma/plasma_1Dt.c</label>
+        <link refid="plasma__1Dt_8c"/>
+      </node>
+      <node id="148">
+        <label>neutral/N0_1D.h</label>
+        <link refid="N0__1D_8h"/>
+        <childnode refid="122" relation="include">
+        </childnode>
+        <childnode refid="140" relation="include">
+        </childnode>
+        <childnode refid="147" relation="include">
+        </childnode>
+        <childnode refid="149" relation="include">
+        </childnode>
+        <childnode refid="150" relation="include">
+        </childnode>
+      </node>
+      <node id="160">
+        <label>plasma/plasma_1Dt.h</label>
+        <link refid="plasma__1Dt_8h"/>
+        <childnode refid="123" relation="include">
+        </childnode>
+        <childnode refid="129" relation="include">
+        </childnode>
+        <childnode refid="158" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>simulate/simulate_gc_adaptive.c</label>
+        <link refid="simulate__gc__adaptive_8c"/>
+      </node>
+      <node id="35">
+        <label>simulate/simulate_gc_adaptive.h</label>
+        <link refid="simulate__gc__adaptive_8h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="146">
+        <label>linint/linint3D.c</label>
+        <link refid="linint3D_8c"/>
+      </node>
+      <node id="124">
+        <label>physlib.h</label>
+        <link refid="physlib_8h"/>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="84" relation="include">
+        </childnode>
+        <childnode refid="87" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="121" relation="include">
+        </childnode>
+        <childnode refid="90" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="97" relation="include">
+        </childnode>
+        <childnode refid="98" relation="include">
+        </childnode>
+        <childnode refid="99" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="125" relation="include">
+        </childnode>
+        <childnode refid="126" relation="include">
+        </childnode>
+      </node>
+      <node id="149">
+        <label>neutral.c</label>
+        <link refid="neutral_8c"/>
+      </node>
+      <node id="150">
+        <label>neutral.h</label>
+        <link refid="neutral_8h"/>
+        <childnode refid="122" relation="include">
+        </childnode>
+        <childnode refid="140" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="149" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="97">
+        <label>simulate/mccc/mccc_fo_euler.c</label>
+        <link refid="mccc__fo__euler_8c"/>
+      </node>
+      <node id="131">
+        <label>random.c</label>
+        <link refid="random_8c"/>
+      </node>
+      <node id="32">
+        <label>mpi_interface.c</label>
+        <link refid="mpi__interface_8c"/>
+      </node>
+      <node id="33">
+        <label>mpi_interface.h</label>
+        <link refid="mpi__interface_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>libascot.c</label>
+        <link refid="libascot_8c"/>
+      </node>
+      <node id="173">
+        <label>octree.c</label>
+        <link refid="octree_8c"/>
+      </node>
+      <node id="174">
+        <label>octree.h</label>
+        <link refid="octree_8h"/>
+        <childnode refid="173" relation="include">
+        </childnode>
+        <childnode refid="171" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>hdf5_interface.c</label>
+        <link refid="hdf5__interface_8c"/>
+      </node>
+      <node id="29">
+        <label>hdf5_interface.h</label>
+        <link refid="hdf5__interface_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="126">
+        <label>simulate/step/step_gceom_mhd.h</label>
+        <link refid="step__gceom__mhd_8h"/>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+      </node>
+      <node id="57">
+        <label>simulate/step/step_ml_cashkarp.c</label>
+        <link refid="step__ml__cashkarp_8c"/>
+      </node>
+      <node id="58">
+        <label>simulate/step/step_ml_cashkarp.h</label>
+        <link refid="step__ml__cashkarp_8h"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+      </node>
+      <node id="155">
+        <label>error.c</label>
+        <link refid="error_8c"/>
+      </node>
+      <node id="156">
+        <label>error.h</label>
+        <link refid="error_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="106" relation="include">
+        </childnode>
+        <childnode refid="107" relation="include">
+        </childnode>
+        <childnode refid="108" relation="include">
+        </childnode>
+        <childnode refid="109" relation="include">
+        </childnode>
+        <childnode refid="110" relation="include">
+        </childnode>
+        <childnode refid="111" relation="include">
+        </childnode>
+        <childnode refid="112" relation="include">
+        </childnode>
+        <childnode refid="114" relation="include">
+        </childnode>
+        <childnode refid="115" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="100" relation="include">
+        </childnode>
+        <childnode refid="101" relation="include">
+        </childnode>
+        <childnode refid="102" relation="include">
+        </childnode>
+        <childnode refid="103" relation="include">
+        </childnode>
+        <childnode refid="155" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="147" relation="include">
+        </childnode>
+        <childnode refid="151" relation="include">
+        </childnode>
+        <childnode refid="149" relation="include">
+        </childnode>
+        <childnode refid="150" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="127" relation="include">
+        </childnode>
+        <childnode refid="157" relation="include">
+        </childnode>
+        <childnode refid="128" relation="include">
+        </childnode>
+        <childnode refid="159" relation="include">
+        </childnode>
+        <childnode refid="129" relation="include">
+        </childnode>
+        <childnode refid="160" relation="include">
+        </childnode>
+        <childnode refid="130" relation="include">
+        </childnode>
+        <childnode refid="158" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="97" relation="include">
+        </childnode>
+        <childnode refid="98" relation="include">
+        </childnode>
+        <childnode refid="99" relation="include">
+        </childnode>
+        <childnode refid="132" relation="include">
+        </childnode>
+        <childnode refid="161" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="162" relation="include">
+        </childnode>
+        <childnode refid="135" relation="include">
+        </childnode>
+        <childnode refid="169" relation="include">
+        </childnode>
+      </node>
+      <node id="122">
+        <label>hdf5io/hdf5_neutral.c</label>
+        <link refid="hdf5__neutral_8c"/>
+      </node>
+      <node id="140">
+        <label>hdf5io/hdf5_neutral.h</label>
+        <link refid="hdf5__neutral_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="122" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="61">
+        <label>diag/dist_com.c</label>
+        <link refid="dist__com_8c"/>
+      </node>
+      <node id="60">
+        <label>diag/dist_com.h</label>
+        <link refid="dist__com_8h"/>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>diag/diag_transcoef.c</label>
+        <link refid="diag__transcoef_8c"/>
+      </node>
+      <node id="69">
+        <label>E_field.c</label>
+        <link refid="E__field_8c"/>
+      </node>
+      <node id="77">
+        <label>diag/diag_transcoef.h</label>
+        <link refid="diag__transcoef_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+      </node>
+      <node id="125">
+        <label>simulate/step/step_gceom.h</label>
+        <link refid="step__gceom_8h"/>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+      </node>
+      <node id="70">
+        <label>E_field.h</label>
+        <link refid="E__field_8h"/>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="96">
+        <label>simulate/mccc/mccc_coefs.h</label>
+        <link refid="mccc__coefs_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="97" relation="include">
+        </childnode>
+        <childnode refid="98" relation="include">
+        </childnode>
+        <childnode refid="99" relation="include">
+        </childnode>
+      </node>
+      <node id="127">
+        <label>plasma/plasma_1D.c</label>
+        <link refid="plasma__1D_8c"/>
+      </node>
+      <node id="118">
+        <label>boschhale.c</label>
+        <link refid="boschhale_8c"/>
+      </node>
+      <node id="157">
+        <label>plasma/plasma_1D.h</label>
+        <link refid="plasma__1D_8h"/>
+        <childnode refid="123" relation="include">
+        </childnode>
+        <childnode refid="127" relation="include">
+        </childnode>
+        <childnode refid="130" relation="include">
+        </childnode>
+        <childnode refid="158" relation="include">
+        </childnode>
+      </node>
+      <node id="119">
+        <label>boschhale.h</label>
+        <link refid="boschhale_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="118" relation="include">
+        </childnode>
+      </node>
+      <node id="114">
+        <label>Bfield/B_TC.c</label>
+        <link refid="B__TC_8c"/>
+      </node>
+      <node id="115">
+        <label>Bfield/B_TC.h</label>
+        <link refid="B__TC_8h"/>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="114" relation="include">
+        </childnode>
+        <childnode refid="104" relation="include">
+        </childnode>
+        <childnode refid="105" relation="include">
+        </childnode>
+      </node>
+      <node id="143">
+        <label>linint/linint.h</label>
+        <link refid="linint_8h"/>
+        <childnode refid="112" relation="include">
+        </childnode>
+        <childnode refid="113" relation="include">
+        </childnode>
+        <childnode refid="144" relation="include">
+        </childnode>
+        <childnode refid="145" relation="include">
+        </childnode>
+        <childnode refid="146" relation="include">
+        </childnode>
+        <childnode refid="147" relation="include">
+        </childnode>
+        <childnode refid="148" relation="include">
+        </childnode>
+        <childnode refid="151" relation="include">
+        </childnode>
+        <childnode refid="152" relation="include">
+        </childnode>
+      </node>
+      <node id="176">
+        <label>spline/spline.h</label>
+        <link refid="spline_8h"/>
+        <childnode refid="163" relation="include">
+        </childnode>
+        <childnode refid="164" relation="include">
+        </childnode>
+        <childnode refid="165" relation="include">
+        </childnode>
+        <childnode refid="166" relation="include">
+        </childnode>
+        <childnode refid="133" relation="include">
+        </childnode>
+        <childnode refid="134" relation="include">
+        </childnode>
+        <childnode refid="167" relation="include">
+        </childnode>
+        <childnode refid="168" relation="include">
+        </childnode>
+      </node>
+      <node id="54">
+        <label>simulate/step/step_gc_cashkarp.c</label>
+        <link refid="step__gc__cashkarp_8c"/>
+      </node>
+      <node id="53">
+        <label>simulate/step/step_gc_cashkarp.h</label>
+        <link refid="step__gc__cashkarp_8h_source"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+      </node>
+      <node id="106">
+        <label>Bfield/B_2DS.c</label>
+        <link refid="B__2DS_8c"/>
+      </node>
+      <node id="48">
+        <label>mhd.c</label>
+        <link refid="mhd_8c"/>
+      </node>
+      <node id="107">
+        <label>Bfield/B_2DS.h</label>
+        <link refid="B__2DS_8h"/>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="106" relation="include">
+        </childnode>
+        <childnode refid="104" relation="include">
+        </childnode>
+        <childnode refid="105" relation="include">
+        </childnode>
+      </node>
+      <node id="49">
+        <label>mhd.h</label>
+        <link refid="mhd_8h"/>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>bbnbi5.c</label>
+        <link refid="bbnbi5_8c"/>
+      </node>
+      <node id="102">
+        <label>Efield/E_TC.c</label>
+        <link refid="E__TC_8c"/>
+      </node>
+      <node id="98">
+        <label>simulate/mccc/mccc_gc_euler.c</label>
+        <link refid="mccc__gc__euler_8c"/>
+      </node>
+      <node id="40">
+        <label>boozer.c</label>
+        <link refid="boozer_8c"/>
+      </node>
+      <node id="103">
+        <label>Efield/E_TC.h</label>
+        <link refid="E__TC_8h"/>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="102" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>boozer.h</label>
+        <link refid="boozer_8h"/>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="65">
+        <label>hdf5io/hdf5_nbi.c</label>
+        <link refid="hdf5__nbi_8c"/>
+      </node>
+      <node id="66">
+        <label>hdf5io/hdf5_nbi.h</label>
+        <link refid="hdf5__nbi_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+      </node>
+      <node id="108">
+        <label>Bfield/B_3DS.c</label>
+        <link refid="B__3DS_8c"/>
+      </node>
+      <node id="153">
+        <label>math.c</label>
+        <link refid="math_8c"/>
+      </node>
+      <node id="109">
+        <label>Bfield/B_3DS.h</label>
+        <link refid="B__3DS_8h"/>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="108" relation="include">
+        </childnode>
+        <childnode refid="104" relation="include">
+        </childnode>
+        <childnode refid="105" relation="include">
+        </childnode>
+      </node>
+      <node id="154">
+        <label>math.h</label>
+        <link refid="math_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="106" relation="include">
+        </childnode>
+        <childnode refid="108" relation="include">
+        </childnode>
+        <childnode refid="110" relation="include">
+        </childnode>
+        <childnode refid="112" relation="include">
+        </childnode>
+        <childnode refid="114" relation="include">
+        </childnode>
+        <childnode refid="116" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="118" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="84" relation="include">
+        </childnode>
+        <childnode refid="87" relation="include">
+        </childnode>
+        <childnode refid="102" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="155" relation="include">
+        </childnode>
+        <childnode refid="156" relation="include">
+        </childnode>
+        <childnode refid="121" relation="include">
+        </childnode>
+        <childnode refid="104" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="137" relation="include">
+        </childnode>
+        <childnode refid="88" relation="include">
+        </childnode>
+        <childnode refid="122" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="144" relation="include">
+        </childnode>
+        <childnode refid="145" relation="include">
+        </childnode>
+        <childnode refid="146" relation="include">
+        </childnode>
+        <childnode refid="153" relation="include">
+        </childnode>
+        <childnode refid="154" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="147" relation="include">
+        </childnode>
+        <childnode refid="151" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="124" relation="include">
+        </childnode>
+        <childnode refid="127" relation="include">
+        </childnode>
+        <childnode refid="128" relation="include">
+        </childnode>
+        <childnode refid="129" relation="include">
+        </childnode>
+        <childnode refid="131" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="95" relation="include">
+        </childnode>
+        <childnode refid="96" relation="include">
+        </childnode>
+        <childnode refid="97" relation="include">
+        </childnode>
+        <childnode refid="98" relation="include">
+        </childnode>
+        <childnode refid="99" relation="include">
+        </childnode>
+        <childnode refid="132" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="125" relation="include">
+        </childnode>
+        <childnode refid="126" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="163" relation="include">
+        </childnode>
+        <childnode refid="164" relation="include">
+        </childnode>
+        <childnode refid="165" relation="include">
+        </childnode>
+        <childnode refid="166" relation="include">
+        </childnode>
+        <childnode refid="133" relation="include">
+        </childnode>
+        <childnode refid="134" relation="include">
+        </childnode>
+        <childnode refid="135" relation="include">
+        </childnode>
+        <childnode refid="170" relation="include">
+        </childnode>
+        <childnode refid="171" relation="include">
+        </childnode>
+        <childnode refid="172" relation="include">
+        </childnode>
+      </node>
+      <node id="83">
+        <label>diag/dist_6D.c</label>
+        <link refid="dist__6D_8c"/>
+      </node>
+      <node id="82">
+        <label>diag/dist_6D.h</label>
+        <link refid="dist__6D_8h"/>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="90">
+        <label>hdf5io/hdf5_state.c</label>
+        <link refid="hdf5__state_8c"/>
+      </node>
+      <node id="91">
+        <label>hdf5io/hdf5_state.h</label>
+        <link refid="hdf5__state_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="90" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>hdf5io/hdf5_boozer.c</label>
+        <link refid="hdf5__boozer_8c"/>
+      </node>
+      <node id="168">
+        <label>spline/splineexpl.c</label>
+        <link refid="splineexpl_8c"/>
+      </node>
+      <node id="43">
+        <label>hdf5io/hdf5_boozer.h</label>
+        <link refid="hdf5__boozer_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="171">
+        <label>wall/wall_3d.c</label>
+        <link refid="wall__3d_8c"/>
+      </node>
+      <node id="179">
+        <label>wall/wall_3d.h</label>
+        <link refid="wall__3d_8h"/>
+        <childnode refid="139" relation="include">
+        </childnode>
+        <childnode refid="173" relation="include">
+        </childnode>
+        <childnode refid="171" relation="include">
+        </childnode>
+        <childnode refid="172" relation="include">
+        </childnode>
+        <childnode refid="178" relation="include">
+        </childnode>
+      </node>
+      <node id="175">
+        <label>offload.c</label>
+        <link refid="offload_8c"/>
+      </node>
+      <node id="51">
+        <label>simulate/step/step_fo_vpa.c</label>
+        <link refid="step__fo__vpa_8c"/>
+      </node>
+      <node id="52">
+        <label>simulate/step/step_fo_vpa.h</label>
+        <link refid="step__fo__vpa_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+      </node>
+      <node id="87">
+        <label>diag/dist_rho6D.c</label>
+        <link refid="dist__rho6D_8c"/>
+      </node>
+      <node id="112">
+        <label>Bfield/B_STS.c</label>
+        <link refid="B__STS_8c"/>
+      </node>
+      <node id="86">
+        <label>diag/dist_rho6D.h</label>
+        <link refid="dist__rho6D_8h"/>
+        <childnode refid="87" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="113">
+        <label>Bfield/B_STS.h</label>
+        <link refid="B__STS_8h"/>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="112" relation="include">
+        </childnode>
+        <childnode refid="104" relation="include">
+        </childnode>
+        <childnode refid="105" relation="include">
+        </childnode>
+      </node>
+      <node id="71">
+        <label>hdf5io/hdf5_efield.c</label>
+        <link refid="hdf5__efield_8c"/>
+      </node>
+      <node id="72">
+        <label>hdf5io/hdf5_efield.h</label>
+        <link refid="hdf5__efield_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="170">
+        <label>wall/wall_2d.c</label>
+        <link refid="wall__2d_8c"/>
+      </node>
+      <node id="177">
+        <label>wall/wall_2d.h</label>
+        <link refid="wall__2d_8h"/>
+        <childnode refid="139" relation="include">
+        </childnode>
+        <childnode refid="170" relation="include">
+        </childnode>
+        <childnode refid="172" relation="include">
+        </childnode>
+        <childnode refid="178" relation="include">
+        </childnode>
+      </node>
+      <node id="104">
+        <label>hdf5io/hdf5_bfield.c</label>
+        <link refid="hdf5__bfield_8c"/>
+      </node>
+      <node id="1">
+        <label>ascot5.h</label>
+        <link refid="ascot5_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="106" relation="include">
+        </childnode>
+        <childnode refid="107" relation="include">
+        </childnode>
+        <childnode refid="108" relation="include">
+        </childnode>
+        <childnode refid="109" relation="include">
+        </childnode>
+        <childnode refid="110" relation="include">
+        </childnode>
+        <childnode refid="111" relation="include">
+        </childnode>
+        <childnode refid="112" relation="include">
+        </childnode>
+        <childnode refid="113" relation="include">
+        </childnode>
+        <childnode refid="114" relation="include">
+        </childnode>
+        <childnode refid="115" relation="include">
+        </childnode>
+        <childnode refid="116" relation="include">
+        </childnode>
+        <childnode refid="117" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="118" relation="include">
+        </childnode>
+        <childnode refid="119" relation="include">
+        </childnode>
+        <childnode refid="120" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="84" relation="include">
+        </childnode>
+        <childnode refid="85" relation="include">
+        </childnode>
+        <childnode refid="87" relation="include">
+        </childnode>
+        <childnode refid="86" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="100" relation="include">
+        </childnode>
+        <childnode refid="101" relation="include">
+        </childnode>
+        <childnode refid="102" relation="include">
+        </childnode>
+        <childnode refid="103" relation="include">
+        </childnode>
+        <childnode refid="121" relation="include">
+        </childnode>
+        <childnode refid="136" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="104" relation="include">
+        </childnode>
+        <childnode refid="105" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="137" relation="include">
+        </childnode>
+        <childnode refid="138" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="122" relation="include">
+        </childnode>
+        <childnode refid="140" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="123" relation="include">
+        </childnode>
+        <childnode refid="141" relation="include">
+        </childnode>
+        <childnode refid="90" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+        <childnode refid="142" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="143" relation="include">
+        </childnode>
+        <childnode refid="144" relation="include">
+        </childnode>
+        <childnode refid="145" relation="include">
+        </childnode>
+        <childnode refid="146" relation="include">
+        </childnode>
+        <childnode refid="153" relation="include">
+        </childnode>
+        <childnode refid="154" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="147" relation="include">
+        </childnode>
+        <childnode refid="148" relation="include">
+        </childnode>
+        <childnode refid="151" relation="include">
+        </childnode>
+        <childnode refid="152" relation="include">
+        </childnode>
+        <childnode refid="149" relation="include">
+        </childnode>
+        <childnode refid="150" relation="include">
+        </childnode>
+        <childnode refid="173" relation="include">
+        </childnode>
+        <childnode refid="174" relation="include">
+        </childnode>
+        <childnode refid="175" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="127" relation="include">
+        </childnode>
+        <childnode refid="157" relation="include">
+        </childnode>
+        <childnode refid="128" relation="include">
+        </childnode>
+        <childnode refid="159" relation="include">
+        </childnode>
+        <childnode refid="129" relation="include">
+        </childnode>
+        <childnode refid="160" relation="include">
+        </childnode>
+        <childnode refid="130" relation="include">
+        </childnode>
+        <childnode refid="158" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="94" relation="include">
+        </childnode>
+        <childnode refid="96" relation="include">
+        </childnode>
+        <childnode refid="97" relation="include">
+        </childnode>
+        <childnode refid="98" relation="include">
+        </childnode>
+        <childnode refid="99" relation="include">
+        </childnode>
+        <childnode refid="132" relation="include">
+        </childnode>
+        <childnode refid="161" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="125" relation="include">
+        </childnode>
+        <childnode refid="126" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="162" relation="include">
+        </childnode>
+        <childnode refid="163" relation="include">
+        </childnode>
+        <childnode refid="164" relation="include">
+        </childnode>
+        <childnode refid="165" relation="include">
+        </childnode>
+        <childnode refid="166" relation="include">
+        </childnode>
+        <childnode refid="133" relation="include">
+        </childnode>
+        <childnode refid="134" relation="include">
+        </childnode>
+        <childnode refid="176" relation="include">
+        </childnode>
+        <childnode refid="167" relation="include">
+        </childnode>
+        <childnode refid="168" relation="include">
+        </childnode>
+        <childnode refid="135" relation="include">
+        </childnode>
+        <childnode refid="169" relation="include">
+        </childnode>
+        <childnode refid="170" relation="include">
+        </childnode>
+        <childnode refid="177" relation="include">
+        </childnode>
+        <childnode refid="171" relation="include">
+        </childnode>
+        <childnode refid="179" relation="include">
+        </childnode>
+        <childnode refid="172" relation="include">
+        </childnode>
+        <childnode refid="178" relation="include">
+        </childnode>
+      </node>
+      <node id="105">
+        <label>hdf5io/hdf5_bfield.h</label>
+        <link refid="hdf5__bfield_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="104" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="ascot5_8h_1a3fd722cd84b585b6103735728632ca34" prot="public" static="no">
+        <name>stringify</name>
+        <param><defname>...</defname></param>
+        <initializer>#__VA_ARGS__</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Stringify arguments </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ascot5.h" line="66" column="9" bodyfile="ascot5.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ascot5_8h_1a1aadca650bcd69cacfe2ba779f46615c" prot="public" static="no">
+        <name>str_macro</name>
+        <param><defname>c</defname></param>
+        <initializer><ref refid="ascot5_8h_1a3fd722cd84b585b6103735728632ca34" kindref="member">stringify</ref>(c)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Wrapper to stringify for converting compiler macros to strings </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ascot5.h" line="69" column="9" bodyfile="ascot5.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ascot5_8h_1af0eefd0261f11d27a7893463a1a21648" prot="public" static="no">
+        <name>__memalign__</name>
+        <initializer>__attribute__((aligned(64)))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is used to tell the compiler that we want a variable aligned to 64 bits for Xeon Phi; may not be always necessary </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ascot5.h" line="73" column="9" bodyfile="ascot5.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ascot5_8h_1a6368ab06bbb536b220a367552186bbab" prot="public" static="no">
+        <name>NSIMD</name>
+        <initializer>16</initializer>
+        <briefdescription>
+<para>Number of particles simulated simultaneously in a particle group operations. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ascot5.h" line="88" column="9" bodyfile="ascot5.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ascot5_8h_1a9a9ccddfec36bf0f49a168a9dcb8f87e" prot="public" static="no">
+        <name>MAX_SPECIES</name>
+        <initializer>8</initializer>
+        <briefdescription>
+<para>Maximum number of plasma species. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ascot5.h" line="92" column="9" bodyfile="ascot5.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ascot5_8h_1aa893572c471792048c35383230454d42" prot="public" static="no">
+        <name>MHD_MODES_MAX_NUM</name>
+        <initializer>512</initializer>
+        <briefdescription>
+<para>Maximum number of MHD modes. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ascot5.h" line="95" column="9" bodyfile="ascot5.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ascot5_8h_1a09caf7a570107ae78ad2aafcd12aa346" prot="public" static="no">
+        <name>NBI_MAX_DISTANCE</name>
+        <initializer>100</initializer>
+        <briefdescription>
+<para>Maximum distance BBNBI traces markers in meters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ascot5.h" line="98" column="9" bodyfile="ascot5.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ascot5_8h_1ab5608d7a206845bac35995099d5f2a13" prot="public" static="no">
+        <name>NBI_MAX_INJ</name>
+        <initializer>16</initializer>
+        <briefdescription>
+<para>Maximum number of NBI injectors. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ascot5.h" line="101" column="9" bodyfile="ascot5.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ascot5_8h_1a46ddf28f506f3779208377f9f354411c" prot="public" static="no">
+        <name>WIENERSLOTS</name>
+        <initializer>20</initializer>
+        <briefdescription>
+<para>Maximum number of Wiener processes stored (effectively number of time step reductions) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ascot5.h" line="105" column="9" bodyfile="ascot5.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ascot5_8h_1a60071ed1742fb6fa3281caf13e9894c1" prot="public" static="no">
+        <name>A5_CCOL_USE_GEOBM</name>
+        <initializer>1</initializer>
+        <briefdescription>
+<para>Determine whether to use geometric method of Box-Muller to to generate normal random numbers. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ascot5.h" line="109" column="9" bodyfile="ascot5.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ascot5_8h_1a8698a976bcff00b5d57ab81b673419fd" prot="public" static="no">
+        <name>A5_EXTREMELY_SMALL_TIMESTEP</name>
+        <initializer>1e-12</initializer>
+        <briefdescription>
+<para>If adaptive time step falls below this value, produce an error. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ascot5.h" line="112" column="9" bodyfile="ascot5.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ascot5_8h_1ab1d1d43a47920467ef77f3a59580c214" prot="public" static="no">
+        <name>A5_PRINTPROGRESSINTERVAL</name>
+        <initializer>20</initializer>
+        <briefdescription>
+<para>How often progress is being written (s) in the stdout file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ascot5.h" line="115" column="9" bodyfile="ascot5.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ascot5_8h_1aefd7cbec63dd718061c2d93c8a834490" prot="public" static="no">
+        <name>A5_WTIME</name>
+        <initializer>omp_get_wtime()</initializer>
+        <briefdescription>
+<para>Wall time. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ascot5.h" line="118" column="9" bodyfile="ascot5.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ascot5_8h_1a7e6ef2c1bed83eee525ee04b9067a806" prot="public" static="no">
+        <name>INTERP_SPL_EXPL</name>
+        <initializer>0</initializer>
+        <briefdescription>
+<para>Choose whether magnetic field spline interpolation is done with an explicit (1) or compact (0) way. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ascot5.h" line="122" column="9" bodyfile="ascot5.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ascot5_8h_1a82233c5f080d17a4b135a594a5d4a4a5" prot="public" static="no">
+        <name>A5_CCOL_USE_TABULATED</name>
+        <initializer>0</initializer>
+        <briefdescription>
+<para>Choose whether to use tabulated values for collision coefficients. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ascot5.h" line="125" column="9" bodyfile="ascot5.h" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ascot5_8h_1a53eb9b423a1b5d4478e2d8fca332e483" prot="public" static="no">
+        <name>WALL_OCTREE_DEPTH</name>
+        <initializer>7</initializer>
+        <briefdescription>
+<para>Default depth of octree struct. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ascot5.h" line="128" column="9" bodyfile="ascot5.h" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="ascot5_8h_1a865b01f4cbb6f2bb3270e094934d3263" prot="public" static="no">
+        <type>long</type>
+        <definition>typedef long integer</definition>
+        <argsstring></argsstring>
+        <name>integer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>We use a custom type real to represent floating point numbers; precision can be defined compile-time. Double precision integer </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ascot5.h" line="81" column="14" bodyfile="ascot5.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" prot="public" static="no">
+        <type>double</type>
+        <definition>typedef double real</definition>
+        <argsstring></argsstring>
+        <name>real</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Double precision float <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ascot5.h" line="82" column="16" bodyfile="ascot5.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Main header file for ASCOT5. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This header file defines general types and structs used widely by the program as well as any features dependent on compiler defined macros. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>ASCOT5_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ASCOT5_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;omp.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;time.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="ascot5_8h_1a3fd722cd84b585b6103735728632ca34" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>stringify(...)<sp/>#__VA_ARGS__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="ascot5_8h_1a1aadca650bcd69cacfe2ba779f46615c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>str_macro(c)<sp/>stringify(c)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="ascot5_8h_1af0eefd0261f11d27a7893463a1a21648" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__memalign__<sp/>__attribute__((aligned(64)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined<sp/>SINGLEPRECISION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ascot5_8h_1a865b01f4cbb6f2bb3270e094934d3263" kindref="member">integer</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="ascot5_8h_1a865b01f4cbb6f2bb3270e094934d3263" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="ascot5_8h_1a865b01f4cbb6f2bb3270e094934d3263" kindref="member">integer</ref>;<sp/></highlight></codeline>
+<codeline lineno="82" refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>NSIMD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="ascot5_8h_1a6368ab06bbb536b220a367552186bbab" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NSIMD<sp/>16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="ascot5_8h_1a9a9ccddfec36bf0f49a168a9dcb8f87e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAX_SPECIES<sp/>8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="ascot5_8h_1aa893572c471792048c35383230454d42" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MHD_MODES_MAX_NUM<sp/>512</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="ascot5_8h_1a09caf7a570107ae78ad2aafcd12aa346" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NBI_MAX_DISTANCE<sp/>100</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="ascot5_8h_1ab5608d7a206845bac35995099d5f2a13" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NBI_MAX_INJ<sp/>16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="ascot5_8h_1a46ddf28f506f3779208377f9f354411c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WIENERSLOTS<sp/>20</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109" refid="ascot5_8h_1a60071ed1742fb6fa3281caf13e9894c1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>A5_CCOL_USE_GEOBM<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112" refid="ascot5_8h_1a8698a976bcff00b5d57ab81b673419fd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>A5_EXTREMELY_SMALL_TIMESTEP<sp/>1e-12</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115" refid="ascot5_8h_1ab1d1d43a47920467ef77f3a59580c214" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>A5_PRINTPROGRESSINTERVAL<sp/>20</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118" refid="ascot5_8h_1aefd7cbec63dd718061c2d93c8a834490" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>A5_WTIME<sp/>omp_get_wtime()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122" refid="ascot5_8h_1a7e6ef2c1bed83eee525ee04b9067a806" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INTERP_SPL_EXPL<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125" refid="ascot5_8h_1a82233c5f080d17a4b135a594a5d4a4a5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>A5_CCOL_USE_TABULATED<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128" refid="ascot5_8h_1a53eb9b423a1b5d4478e2d8fca332e483" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WALL_OCTREE_DEPTH<sp/>7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="ascot5.h"/>
+  </compounddef>
+</doxygen>

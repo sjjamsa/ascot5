@@ -1,0 +1,282 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="linint1D_8c" kind="file" language="C++">
+    <compoundname>linint1D.c</compoundname>
+    <includes local="no">stdlib.h</includes>
+    <includes refid="math_8h" local="no">math.h</includes>
+    <includes refid="ascot5_8h" local="yes">../ascot5.h</includes>
+    <includes refid="interp_8h" local="yes">../spline/interp.h</includes>
+    <includes refid="linint_8h" local="yes">linint.h</includes>
+    <incdepgraph>
+      <node id="7">
+        <label>../spline/interp.h</label>
+        <link refid="interp_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stdlib.h</label>
+      </node>
+      <node id="5">
+        <label>omp.h</label>
+      </node>
+      <node id="1">
+        <label>linint/linint1D.c</label>
+        <link refid="linint1D_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>../error.h</label>
+        <link refid="error_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>time.h</label>
+      </node>
+      <node id="10">
+        <label>linint.h</label>
+        <link refid="linint_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>math.h</label>
+        <link refid="math_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>stdio.h</label>
+      </node>
+      <node id="4">
+        <label>ascot5.h</label>
+        <link refid="ascot5_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="linint1D_8c_1ab4fb21fa2a3c876b362eaf04cd958adb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linint1D_init</definition>
+        <argsstring>(linint1D_data *str, real *c, int n_x, int bc_x, real x_min, real x_max)</argsstring>
+        <name>linint1D_init</name>
+        <param>
+          <type><ref refid="structlinint1D__data" kindref="compound">linint1D_data</ref> *</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n_x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bc_x</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>x_min</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>x_max</declname>
+        </param>
+        <briefdescription>
+<para>Initialize linear interpolation struct for scalar 1D data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to struct to be initialized </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>array where data is stored </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of data points in the x direction </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bc_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>boundary condition for x axis </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x_min</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>minimum value of the x axis </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x_max</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>maximum value of the x axis </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="linint/linint1D.c" line="21" column="6" bodyfile="linint/linint1D.c" bodystart="21" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="linint1D_8c_1a834994323118f56778a9e30de045daa8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int linint1D_eval_f</definition>
+        <argsstring>(real *f, linint1D_data *str, real x)</argsstring>
+        <name>linint1D_eval_f</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type><ref refid="structlinint1D__data" kindref="compound">linint1D_data</ref> *</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+<para>Evaluate interpolated value of 1D scalar field. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function evaluates the interpolated value of a 1D scalar field using linear interpolation.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>variable in which to place the evaluated value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>data struct for data interpolation </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>x-coordinate</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>zero on success and one if x point is outside the grid. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>&lt; Normalized x coordinate in current cell</para>
+        </inbodydescription>
+        <location file="linint/linint1D.c" line="46" column="5" bodyfile="linint/linint1D.c" bodystart="46" bodyend="75"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Linear interpolation. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="math_8h" kindref="compound">math.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../ascot5.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../spline/interp.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="linint_8h" kindref="compound">linint.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="linint_8h_1ab4fb21fa2a3c876b362eaf04cd958adb" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="linint1D_8c_1ab4fb21fa2a3c876b362eaf04cd958adb" kindref="member">linint1D_init</ref>(<ref refid="structlinint1D__data" kindref="compound">linint1D_data</ref>*<sp/>str,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>c,</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n_x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bc_x,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>x_min,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>x_max)<sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>x_grid<sp/>=<sp/>(x_max<sp/>-<sp/>x_min)<sp/>/<sp/>(<sp/>n_x<sp/>-<sp/>1<sp/>*<sp/>(bc_x<sp/>==<sp/><ref refid="interp_8h_1a65e5120fbe667470941a6bd9258b97afa66bcb6506f4bbd571f4ba3bc80114cec" kindref="member">NATURALBC</ref>)<sp/>);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>str-&gt;<ref refid="structlinint1D__data_1a13ae390c940b3432ad6e049e4943546c" kindref="member">n_x</ref><sp/><sp/><sp/><sp/>=<sp/>n_x;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>str-&gt;<ref refid="structlinint1D__data_1a453f48c570fe2d77533c9d31b79e0011" kindref="member">bc_x</ref><sp/><sp/><sp/>=<sp/>bc_x;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>str-&gt;<ref refid="structlinint1D__data_1ab04ad1cca75a2c1bc85f50fb68020092" kindref="member">x_min</ref><sp/><sp/>=<sp/>x_min;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>str-&gt;<ref refid="structlinint1D__data_1aa495851c6bed2963e8e2d4a35cefe02f" kindref="member">x_max</ref><sp/><sp/>=<sp/>x_max;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>str-&gt;<ref refid="structlinint1D__data_1ac2d894695c504f67094d22d81010112d" kindref="member">x_grid</ref><sp/>=<sp/>x_grid;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>str-&gt;<ref refid="structlinint1D__data_1ab1c63a2e5eb32a27973aed4e79d92b98" kindref="member">c</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>c;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="linint_8h_1a834994323118f56778a9e30de045daa8" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="linint1D_8c_1a834994323118f56778a9e30de045daa8" kindref="member">linint1D_eval_f</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>f,<sp/><ref refid="structlinint1D__data" kindref="compound">linint1D_data</ref>*<sp/>str,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>x)<sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Make<sp/>sure<sp/>periodic<sp/>coordinates<sp/>are<sp/>within<sp/>[max,<sp/>min]<sp/>region.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(str-&gt;<ref refid="structlinint1D__data_1a453f48c570fe2d77533c9d31b79e0011" kindref="member">bc_x</ref><sp/>==<sp/><ref refid="interp_8h_1a65e5120fbe667470941a6bd9258b97afa8b66be978239727ccd08c3060d18f72e" kindref="member">PERIODICBC</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x<sp/>=<sp/>fmod(x<sp/>-<sp/>str-&gt;<ref refid="structlinint1D__data_1ab04ad1cca75a2c1bc85f50fb68020092" kindref="member">x_min</ref>,<sp/>str-&gt;<ref refid="structlinint1D__data_1aa495851c6bed2963e8e2d4a35cefe02f" kindref="member">x_max</ref><sp/>-<sp/>str-&gt;<ref refid="structlinint1D__data_1ab04ad1cca75a2c1bc85f50fb68020092" kindref="member">x_min</ref>)<sp/>+<sp/>str-&gt;<ref refid="structlinint1D__data_1ab04ad1cca75a2c1bc85f50fb68020092" kindref="member">x_min</ref>;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x<sp/>=<sp/>x<sp/>+<sp/>(x<sp/>&lt;<sp/>str-&gt;<ref refid="structlinint1D__data_1ab04ad1cca75a2c1bc85f50fb68020092" kindref="member">x_min</ref>)<sp/>*<sp/>(str-&gt;<ref refid="structlinint1D__data_1aa495851c6bed2963e8e2d4a35cefe02f" kindref="member">x_max</ref><sp/>-<sp/>str-&gt;<ref refid="structlinint1D__data_1ab04ad1cca75a2c1bc85f50fb68020092" kindref="member">x_min</ref>);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>index<sp/>for<sp/>x<sp/>variable<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i_x<sp/><sp/><sp/>=<sp/>(x-str-&gt;<ref refid="structlinint1D__data_1ab04ad1cca75a2c1bc85f50fb68020092" kindref="member">x_min</ref>)<sp/>/<sp/>str-&gt;<ref refid="structlinint1D__data_1ac2d894695c504f67094d22d81010112d" kindref="member">x_grid</ref>;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>dx<sp/>=<sp/>(<sp/>x<sp/>-<sp/>(str-&gt;<ref refid="structlinint1D__data_1ab04ad1cca75a2c1bc85f50fb68020092" kindref="member">x_min</ref><sp/>+<sp/>i_x*str-&gt;<ref refid="structlinint1D__data_1ac2d894695c504f67094d22d81010112d" kindref="member">x_grid</ref>))<sp/>/<sp/>str-&gt;<ref refid="structlinint1D__data_1ac2d894695c504f67094d22d81010112d" kindref="member">x_grid</ref>;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x1<sp/>=<sp/>1;<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Index<sp/>jump<sp/>one<sp/>x<sp/>forward<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>err<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Enforce<sp/>periodic<sp/>BC<sp/>or<sp/>check<sp/>that<sp/>the<sp/>coordinate<sp/>is<sp/>within<sp/>the<sp/>grid.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>str-&gt;<ref refid="structlinint1D__data_1a453f48c570fe2d77533c9d31b79e0011" kindref="member">bc_x</ref><sp/>==<sp/><ref refid="interp_8h_1a65e5120fbe667470941a6bd9258b97afa8b66be978239727ccd08c3060d18f72e" kindref="member">PERIODICBC</ref><sp/>&amp;&amp;<sp/>i_x<sp/>==<sp/>str-&gt;<ref refid="structlinint1D__data_1a13ae390c940b3432ad6e049e4943546c" kindref="member">n_x</ref>-1<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x1<sp/>=<sp/>-(str-&gt;<ref refid="structlinint1D__data_1a13ae390c940b3432ad6e049e4943546c" kindref="member">n_x</ref>-1)*x1;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>str-&gt;<ref refid="structlinint1D__data_1a453f48c570fe2d77533c9d31b79e0011" kindref="member">bc_x</ref><sp/>==<sp/><ref refid="interp_8h_1a65e5120fbe667470941a6bd9258b97afa66bcb6506f4bbd571f4ba3bc80114cec" kindref="member">NATURALBC</ref><sp/>&amp;&amp;<sp/>!(x<sp/>&gt;=<sp/>str-&gt;<ref refid="structlinint1D__data_1ab04ad1cca75a2c1bc85f50fb68020092" kindref="member">x_min</ref><sp/>&amp;&amp;<sp/>x<sp/>&lt;=<sp/>str-&gt;x_max)<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!err)<sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*f<sp/>=<sp/>str-&gt;<ref refid="structlinint1D__data_1ab1c63a2e5eb32a27973aed4e79d92b98" kindref="member">c</ref>[i_x]*(1<sp/>-<sp/>dx)<sp/>+<sp/>str-&gt;<ref refid="structlinint1D__data_1ab1c63a2e5eb32a27973aed4e79d92b98" kindref="member">c</ref>[i_x+x1]*dx;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>err;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="linint/linint1D.c"/>
+  </compounddef>
+</doxygen>

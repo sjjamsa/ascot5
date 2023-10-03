@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>options &mdash; ASCOT5 5.5 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/sg_gallery.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=b689823a"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="CoreIO" href="a5py.ascot5io.coreio.html" />
+    <link rel="prev" title="nbi" href="a5py.ascot5io.nbi.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html">
+            
+              <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Running Simulations</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../running.html">Installing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../running.html#simulations">Simulations</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Processing Data</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../processing.html">Data storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../processing.html#input-generation">Input generation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../processing.html#post-processing">Post-processing</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Simulating Physics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../teaching.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../teaching.html#physics-in-ascot5">Physics in ASCOT5</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Publications</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../publishing.html">Citing ASCOT5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../publishing.html#gallery">Gallery</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Code Development</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../developing.html">Coding style and practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developing.html#parallelization">Parallelization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developing.html#testing">Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developing.html#id2">C API</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="a5py.html">Python API</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="a5py.html#module-a5py"><code class="docutils literal notranslate"><span class="pre">a5py</span></code></a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="a5py.ascot5io.html"><code class="docutils literal notranslate"><span class="pre">ascot5io</span></code></a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.bfield.html"><code class="docutils literal notranslate"><span class="pre">bfield</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.efield.html"><code class="docutils literal notranslate"><span class="pre">efield</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.plasma.html"><code class="docutils literal notranslate"><span class="pre">plasma</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.marker.html"><code class="docutils literal notranslate"><span class="pre">marker</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.wall.html"><code class="docutils literal notranslate"><span class="pre">wall</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.neutral.html"><code class="docutils literal notranslate"><span class="pre">neutral</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.boozer.html"><code class="docutils literal notranslate"><span class="pre">boozer</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.mhd.html"><code class="docutils literal notranslate"><span class="pre">mhd</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.nbi.html"><code class="docutils literal notranslate"><span class="pre">nbi</span></code></a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">options</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.options.Opt"><code class="docutils literal notranslate"><span class="pre">Opt</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._SIM_MODE"><code class="docutils literal notranslate"><span class="pre">Opt._SIM_MODE</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._ENABLE_ADAPTIVE"><code class="docutils literal notranslate"><span class="pre">Opt._ENABLE_ADAPTIVE</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._RECORD_MODE"><code class="docutils literal notranslate"><span class="pre">Opt._RECORD_MODE</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._FIXEDSTEP_USE_USERDEFINED"><code class="docutils literal notranslate"><span class="pre">Opt._FIXEDSTEP_USE_USERDEFINED</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._FIXEDSTEP_USERDEFINED"><code class="docutils literal notranslate"><span class="pre">Opt._FIXEDSTEP_USERDEFINED</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._FIXEDSTEP_GYRODEFINED"><code class="docutils literal notranslate"><span class="pre">Opt._FIXEDSTEP_GYRODEFINED</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._ADAPTIVE_TOL_ORBIT"><code class="docutils literal notranslate"><span class="pre">Opt._ADAPTIVE_TOL_ORBIT</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._ADAPTIVE_TOL_CCOL"><code class="docutils literal notranslate"><span class="pre">Opt._ADAPTIVE_TOL_CCOL</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._ADAPTIVE_MAX_DRHO"><code class="docutils literal notranslate"><span class="pre">Opt._ADAPTIVE_MAX_DRHO</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._ADAPTIVE_MAX_DPHI"><code class="docutils literal notranslate"><span class="pre">Opt._ADAPTIVE_MAX_DPHI</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._ENDCOND_SIMTIMELIM"><code class="docutils literal notranslate"><span class="pre">Opt._ENDCOND_SIMTIMELIM</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._ENDCOND_CPUTIMELIM"><code class="docutils literal notranslate"><span class="pre">Opt._ENDCOND_CPUTIMELIM</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._ENDCOND_RHOLIM"><code class="docutils literal notranslate"><span class="pre">Opt._ENDCOND_RHOLIM</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._ENDCOND_ENERGYLIM"><code class="docutils literal notranslate"><span class="pre">Opt._ENDCOND_ENERGYLIM</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._ENDCOND_WALLHIT"><code class="docutils literal notranslate"><span class="pre">Opt._ENDCOND_WALLHIT</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._ENDCOND_MAXORBS"><code class="docutils literal notranslate"><span class="pre">Opt._ENDCOND_MAXORBS</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._ENDCOND_NEUTRALIZED"><code class="docutils literal notranslate"><span class="pre">Opt._ENDCOND_NEUTRALIZED</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._ENDCOND_IONIZED"><code class="docutils literal notranslate"><span class="pre">Opt._ENDCOND_IONIZED</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._ENDCOND_LIM_SIMTIME"><code class="docutils literal notranslate"><span class="pre">Opt._ENDCOND_LIM_SIMTIME</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._ENDCOND_MAX_MILEAGE"><code class="docutils literal notranslate"><span class="pre">Opt._ENDCOND_MAX_MILEAGE</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._ENDCOND_MAX_CPUTIME"><code class="docutils literal notranslate"><span class="pre">Opt._ENDCOND_MAX_CPUTIME</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._ENDCOND_MAX_RHO"><code class="docutils literal notranslate"><span class="pre">Opt._ENDCOND_MAX_RHO</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._ENDCOND_MIN_RHO"><code class="docutils literal notranslate"><span class="pre">Opt._ENDCOND_MIN_RHO</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._ENDCOND_MIN_ENERGY"><code class="docutils literal notranslate"><span class="pre">Opt._ENDCOND_MIN_ENERGY</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._ENDCOND_MIN_THERMAL"><code class="docutils literal notranslate"><span class="pre">Opt._ENDCOND_MIN_THERMAL</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._ENDCOND_MAX_TOROIDALORBS"><code class="docutils literal notranslate"><span class="pre">Opt._ENDCOND_MAX_TOROIDALORBS</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._ENDCOND_MAX_POLOIDALORBS"><code class="docutils literal notranslate"><span class="pre">Opt._ENDCOND_MAX_POLOIDALORBS</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._ENABLE_ORBIT_FOLLOWING"><code class="docutils literal notranslate"><span class="pre">Opt._ENABLE_ORBIT_FOLLOWING</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._ENABLE_COULOMB_COLLISIONS"><code class="docutils literal notranslate"><span class="pre">Opt._ENABLE_COULOMB_COLLISIONS</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._ENABLE_MHD"><code class="docutils literal notranslate"><span class="pre">Opt._ENABLE_MHD</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._ENABLE_ATOMIC"><code class="docutils literal notranslate"><span class="pre">Opt._ENABLE_ATOMIC</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._DISABLE_FIRSTORDER_GCTRANS"><code class="docutils literal notranslate"><span class="pre">Opt._DISABLE_FIRSTORDER_GCTRANS</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._DISABLE_ENERGY_CCOLL"><code class="docutils literal notranslate"><span class="pre">Opt._DISABLE_ENERGY_CCOLL</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._DISABLE_PITCH_CCOLL"><code class="docutils literal notranslate"><span class="pre">Opt._DISABLE_PITCH_CCOLL</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._DISABLE_GCDIFF_CCOLL"><code class="docutils literal notranslate"><span class="pre">Opt._DISABLE_GCDIFF_CCOLL</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._REVERSE_TIME"><code class="docutils literal notranslate"><span class="pre">Opt._REVERSE_TIME</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._ENABLE_DIST_5D"><code class="docutils literal notranslate"><span class="pre">Opt._ENABLE_DIST_5D</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._ENABLE_DIST_6D"><code class="docutils literal notranslate"><span class="pre">Opt._ENABLE_DIST_6D</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._ENABLE_DIST_RHO5D"><code class="docutils literal notranslate"><span class="pre">Opt._ENABLE_DIST_RHO5D</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._ENABLE_DIST_RHO6D"><code class="docutils literal notranslate"><span class="pre">Opt._ENABLE_DIST_RHO6D</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._DIST_MIN_R"><code class="docutils literal notranslate"><span class="pre">Opt._DIST_MIN_R</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._DIST_MAX_R"><code class="docutils literal notranslate"><span class="pre">Opt._DIST_MAX_R</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._DIST_NBIN_R"><code class="docutils literal notranslate"><span class="pre">Opt._DIST_NBIN_R</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._DIST_MIN_PHI"><code class="docutils literal notranslate"><span class="pre">Opt._DIST_MIN_PHI</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._DIST_MAX_PHI"><code class="docutils literal notranslate"><span class="pre">Opt._DIST_MAX_PHI</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._DIST_NBIN_PHI"><code class="docutils literal notranslate"><span class="pre">Opt._DIST_NBIN_PHI</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._DIST_MIN_Z"><code class="docutils literal notranslate"><span class="pre">Opt._DIST_MIN_Z</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._DIST_MAX_Z"><code class="docutils literal notranslate"><span class="pre">Opt._DIST_MAX_Z</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._DIST_NBIN_Z"><code class="docutils literal notranslate"><span class="pre">Opt._DIST_NBIN_Z</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._DIST_MIN_RHO"><code class="docutils literal notranslate"><span class="pre">Opt._DIST_MIN_RHO</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._DIST_MAX_RHO"><code class="docutils literal notranslate"><span class="pre">Opt._DIST_MAX_RHO</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._DIST_NBIN_RHO"><code class="docutils literal notranslate"><span class="pre">Opt._DIST_NBIN_RHO</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._DIST_MIN_THETA"><code class="docutils literal notranslate"><span class="pre">Opt._DIST_MIN_THETA</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._DIST_MAX_THETA"><code class="docutils literal notranslate"><span class="pre">Opt._DIST_MAX_THETA</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._DIST_NBIN_THETA"><code class="docutils literal notranslate"><span class="pre">Opt._DIST_NBIN_THETA</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._DIST_MIN_PPA"><code class="docutils literal notranslate"><span class="pre">Opt._DIST_MIN_PPA</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._DIST_MAX_PPA"><code class="docutils literal notranslate"><span class="pre">Opt._DIST_MAX_PPA</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._DIST_NBIN_PPA"><code class="docutils literal notranslate"><span class="pre">Opt._DIST_NBIN_PPA</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._DIST_MIN_PPE"><code class="docutils literal notranslate"><span class="pre">Opt._DIST_MIN_PPE</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._DIST_MAX_PPE"><code class="docutils literal notranslate"><span class="pre">Opt._DIST_MAX_PPE</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._DIST_NBIN_PPE"><code class="docutils literal notranslate"><span class="pre">Opt._DIST_NBIN_PPE</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._DIST_MIN_PR"><code class="docutils literal notranslate"><span class="pre">Opt._DIST_MIN_PR</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._DIST_MAX_PR"><code class="docutils literal notranslate"><span class="pre">Opt._DIST_MAX_PR</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._DIST_NBIN_PR"><code class="docutils literal notranslate"><span class="pre">Opt._DIST_NBIN_PR</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._DIST_MIN_PPHI"><code class="docutils literal notranslate"><span class="pre">Opt._DIST_MIN_PPHI</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._DIST_MAX_PPHI"><code class="docutils literal notranslate"><span class="pre">Opt._DIST_MAX_PPHI</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._DIST_NBIN_PPHI"><code class="docutils literal notranslate"><span class="pre">Opt._DIST_NBIN_PPHI</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._DIST_MIN_PZ"><code class="docutils literal notranslate"><span class="pre">Opt._DIST_MIN_PZ</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._DIST_MAX_PZ"><code class="docutils literal notranslate"><span class="pre">Opt._DIST_MAX_PZ</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._DIST_NBIN_PZ"><code class="docutils literal notranslate"><span class="pre">Opt._DIST_NBIN_PZ</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._DIST_MIN_TIME"><code class="docutils literal notranslate"><span class="pre">Opt._DIST_MIN_TIME</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._DIST_MAX_TIME"><code class="docutils literal notranslate"><span class="pre">Opt._DIST_MAX_TIME</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._DIST_NBIN_TIME"><code class="docutils literal notranslate"><span class="pre">Opt._DIST_NBIN_TIME</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._DIST_MIN_CHARGE"><code class="docutils literal notranslate"><span class="pre">Opt._DIST_MIN_CHARGE</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._DIST_MAX_CHARGE"><code class="docutils literal notranslate"><span class="pre">Opt._DIST_MAX_CHARGE</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._DIST_NBIN_CHARGE"><code class="docutils literal notranslate"><span class="pre">Opt._DIST_NBIN_CHARGE</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._ENABLE_DIST_COM"><code class="docutils literal notranslate"><span class="pre">Opt._ENABLE_DIST_COM</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._DIST_MIN_MU"><code class="docutils literal notranslate"><span class="pre">Opt._DIST_MIN_MU</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._DIST_MAX_MU"><code class="docutils literal notranslate"><span class="pre">Opt._DIST_MAX_MU</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._DIST_NBIN_MU"><code class="docutils literal notranslate"><span class="pre">Opt._DIST_NBIN_MU</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._DIST_MIN_EKIN"><code class="docutils literal notranslate"><span class="pre">Opt._DIST_MIN_EKIN</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._DIST_MAX_EKIN"><code class="docutils literal notranslate"><span class="pre">Opt._DIST_MAX_EKIN</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._DIST_NBIN_EKIN"><code class="docutils literal notranslate"><span class="pre">Opt._DIST_NBIN_EKIN</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._DIST_MIN_PTOR"><code class="docutils literal notranslate"><span class="pre">Opt._DIST_MIN_PTOR</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._DIST_MAX_PTOR"><code class="docutils literal notranslate"><span class="pre">Opt._DIST_MAX_PTOR</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._DIST_NBIN_PTOR"><code class="docutils literal notranslate"><span class="pre">Opt._DIST_NBIN_PTOR</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._ENABLE_ORBITWRITE"><code class="docutils literal notranslate"><span class="pre">Opt._ENABLE_ORBITWRITE</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._ORBITWRITE_MODE"><code class="docutils literal notranslate"><span class="pre">Opt._ORBITWRITE_MODE</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._ORBITWRITE_NPOINT"><code class="docutils literal notranslate"><span class="pre">Opt._ORBITWRITE_NPOINT</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._ORBITWRITE_POLOIDALANGLES"><code class="docutils literal notranslate"><span class="pre">Opt._ORBITWRITE_POLOIDALANGLES</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._ORBITWRITE_TOROIDALANGLES"><code class="docutils literal notranslate"><span class="pre">Opt._ORBITWRITE_TOROIDALANGLES</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._ORBITWRITE_RADIALDISTANCES"><code class="docutils literal notranslate"><span class="pre">Opt._ORBITWRITE_RADIALDISTANCES</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._ORBITWRITE_INTERVAL"><code class="docutils literal notranslate"><span class="pre">Opt._ORBITWRITE_INTERVAL</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._ENABLE_TRANSCOEF"><code class="docutils literal notranslate"><span class="pre">Opt._ENABLE_TRANSCOEF</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._TRANSCOEF_INTERVAL"><code class="docutils literal notranslate"><span class="pre">Opt._TRANSCOEF_INTERVAL</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._TRANSCOEF_NAVG"><code class="docutils literal notranslate"><span class="pre">Opt._TRANSCOEF_NAVG</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt._TRANSCOEF_RECORDRHO"><code class="docutils literal notranslate"><span class="pre">Opt._TRANSCOEF_RECORDRHO</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt.read"><code class="docutils literal notranslate"><span class="pre">Opt.read()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt.tostring"><code class="docutils literal notranslate"><span class="pre">Opt.tostring()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt.new"><code class="docutils literal notranslate"><span class="pre">Opt.new()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt.write_hdf5"><code class="docutils literal notranslate"><span class="pre">Opt.write_hdf5()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt.write_hdf5_dummy"><code class="docutils literal notranslate"><span class="pre">Opt.write_hdf5_dummy()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt.get_default"><code class="docutils literal notranslate"><span class="pre">Opt.get_default()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt.validate"><code class="docutils literal notranslate"><span class="pre">Opt.validate()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.options.Opt.convert_string"><code class="docutils literal notranslate"><span class="pre">Opt.convert_string()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.coreio.html"><code class="docutils literal notranslate"><span class="pre">CoreIO</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.html#a5py.ascot5io.Ascot5IO"><code class="docutils literal notranslate"><span class="pre">Ascot5IO</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.html#a5py.ascot5io.RunGroup"><code class="docutils literal notranslate"><span class="pre">RunGroup</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.html#a5py.ascot5io.InputGroup"><code class="docutils literal notranslate"><span class="pre">InputGroup</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.ascotpy.html"><code class="docutils literal notranslate"><span class="pre">ascotpy</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.templates.html"><code class="docutils literal notranslate"><span class="pre">templates</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.physlib.html"><code class="docutils literal notranslate"><span class="pre">physlib</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.routines.html"><code class="docutils literal notranslate"><span class="pre">routines</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.gui.html"><code class="docutils literal notranslate"><span class="pre">a5py.gui</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.html#a5py.exceptions.AscotIOException"><code class="docutils literal notranslate"><span class="pre">AscotIOException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.html#a5py.exceptions.AscotInitException"><code class="docutils literal notranslate"><span class="pre">AscotInitException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.html#a5py.exceptions.AscotNoDataException"><code class="docutils literal notranslate"><span class="pre">AscotNoDataException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.html#a5py.exceptions.AscotUnitWarning"><code class="docutils literal notranslate"><span class="pre">AscotUnitWarning</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="a5py.html#ascot"><code class="docutils literal notranslate"><span class="pre">Ascot</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ASCOT5</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="a5py.html">Python API</a></li>
+          <li class="breadcrumb-item"><a href="a5py.ascot5io.html"><code class="docutils literal notranslate"><span class="pre">ascot5io</span></code></a></li>
+      <li class="breadcrumb-item active"><code class="docutils literal notranslate"><span class="pre">options</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/papi/a5py.ascot5io.options.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-a5py.ascot5io.options">
+<span id="options"></span><h1><code class="docutils literal notranslate"><span class="pre">options</span></code><a class="headerlink" href="#module-a5py.ascot5io.options" title="Link to this heading"></a></h1>
+<p>Simulation options input.</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#a5py.ascot5io.options.Opt" title="a5py.ascot5io.options.Opt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">a5py.ascot5io.options.Opt</span></code></a></p></td>
+<td><p>Simulation options.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">a5py.ascot5io.options.</span></span><span class="sig-name descname"><span class="pre">Opt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.options.Opt" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="a5py.ascot5io.coreio.html#a5py.ascot5io.coreio.treedata.DataGroup" title="a5py.ascot5io.coreio.treedata.DataGroup"><code class="xref py py-class docutils literal notranslate"><span class="pre">DataGroup</span></code></a></p>
+<p>Simulation options.</p>
+<p>Option parameters and default values are defined with properties and
+getters. These should not be accessed directly or altered in any way. Use
+<a class="reference internal" href="#a5py.ascot5io.options.Opt.read" title="a5py.ascot5io.options.Opt.read"><code class="xref py py-meth docutils literal notranslate"><span class="pre">read()</span></code></a> to obtain options from the HDF5 file.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._SIM_MODE">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_SIM_MODE</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._SIM_MODE" title="Link to this definition"></a></dt>
+<dd><p>Simulation mode (1, 2, 3, 4)</p>
+<ul class="simple">
+<li><p>1 Gyro-orbit</p></li>
+<li><p>2 Guiding center</p></li>
+<li><p>3 Hybrid</p></li>
+<li><p>4 Magnetic field lines</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._ENABLE_ADAPTIVE">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_ENABLE_ADAPTIVE</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._ENABLE_ADAPTIVE" title="Link to this definition"></a></dt>
+<dd><p>Use adaptive time-step (0, 1)</p>
+<p>This option is used only if SIM_MODE = 2 or 3. Gyro-orbit
+simulations are always done with fixed time-step and magnetic field line
+simulations with adaptive time-step.</p>
+<ul class="simple">
+<li><p>0 Use fixed time-step</p></li>
+<li><p>1 Use adaptive time-step</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._RECORD_MODE">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_RECORD_MODE</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._RECORD_MODE" title="Link to this definition"></a></dt>
+<dd><p>Record GOs as GCs in diagnostics (0, 1)</p>
+<ul class="simple">
+<li><p>0 Record GOs as GOs</p></li>
+<li><p>1 Record GOs as GCs</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._FIXEDSTEP_USE_USERDEFINED">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_FIXEDSTEP_USE_USERDEFINED</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._FIXEDSTEP_USE_USERDEFINED" title="Link to this definition"></a></dt>
+<dd><p>Define fixed time-step value explicitly (0,1)</p>
+<p>Note: The adaptive scheme uses fixed time-step value as an initial step.</p>
+<ul class="simple">
+<li><p>0 Calculate time-step from FIXEDSTEP_NSTEPS_PER_GYROTIME</p></li>
+<li><p>1 Use opt.opt.FIXEDSTEP_USERDEFINED as a time-step</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._FIXEDSTEP_USERDEFINED">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_FIXEDSTEP_USERDEFINED</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._FIXEDSTEP_USERDEFINED" title="Link to this definition"></a></dt>
+<dd><p>User-defined time-step [s]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._FIXEDSTEP_GYRODEFINED">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_FIXEDSTEP_GYRODEFINED</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._FIXEDSTEP_GYRODEFINED" title="Link to this definition"></a></dt>
+<dd><p>Time-step is 2pi / ( gyrofrequency * N ) where N is this parameter</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._ADAPTIVE_TOL_ORBIT">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_ADAPTIVE_TOL_ORBIT</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._ADAPTIVE_TOL_ORBIT" title="Link to this definition"></a></dt>
+<dd><p>Relative error tolerance for orbit following in adaptive scheme</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._ADAPTIVE_TOL_CCOL">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_ADAPTIVE_TOL_CCOL</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._ADAPTIVE_TOL_CCOL" title="Link to this definition"></a></dt>
+<dd><p>Relative error tolerance for Coulomb collisions in adaptive scheme</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._ADAPTIVE_MAX_DRHO">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_ADAPTIVE_MAX_DRHO</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._ADAPTIVE_MAX_DRHO" title="Link to this definition"></a></dt>
+<dd><p>Maximum allowed change in rho during one time-step in adaptive scheme</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._ADAPTIVE_MAX_DPHI">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_ADAPTIVE_MAX_DPHI</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._ADAPTIVE_MAX_DPHI" title="Link to this definition"></a></dt>
+<dd><p>Maximum allowed change in phi during one time-step in adaptive scheme</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._ENDCOND_SIMTIMELIM">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_ENDCOND_SIMTIMELIM</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._ENDCOND_SIMTIMELIM" title="Link to this definition"></a></dt>
+<dd><p>Terminate when marker time passes ENDCOND_LIM_SIMTIME or when marker
+time has advanced ENDCOND_MAX_MILEAGE in a simulation</p>
+<p>Marker is terminated if t &gt; ENDCOND_MAX_MILEAGE or
+t0 + t &gt; ENDCOND_LIM_SIMTIME where t0 is marker’s initial time and t
+the time it has been simulated. Note that if time is reversed, the
+simulation is instead terminated when t0 + t &lt; ENDCOND_LIM_SIMTIME.
+See also ENDCOND_CPUTIMELIM.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._ENDCOND_CPUTIMELIM">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_ENDCOND_CPUTIMELIM</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._ENDCOND_CPUTIMELIM" title="Link to this definition"></a></dt>
+<dd><p>Terminate marker when the computer has spent ENDCOND_MAX_CPUTIME
+amount of real time to simulate it</p>
+<p>This limit should be rarely used  as its intended use is in debugging
+to stop markers stuck in a loop.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._ENDCOND_RHOLIM">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_ENDCOND_RHOLIM</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._ENDCOND_RHOLIM" title="Link to this definition"></a></dt>
+<dd><p>Terminate if marker goes outside given rho boundaries</p>
+<p>The boundaries are defined by ENDCOND_MAX_RHO and ENDCOND_MAX_RHO.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._ENDCOND_ENERGYLIM">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_ENDCOND_ENERGYLIM</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._ENDCOND_ENERGYLIM" title="Link to this definition"></a></dt>
+<dd><p>Terminate when marker energy is below a user-specified value</p>
+<p>The user specified values are ENDCOND_MIN_ENERGY and
+ENDCOND_MIN_ENERGY_TIMES_THERMAL. Marker is terminated when either
+of these limits is reached.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._ENDCOND_WALLHIT">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_ENDCOND_WALLHIT</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._ENDCOND_WALLHIT" title="Link to this definition"></a></dt>
+<dd><p>Terminate when marker intersects a wall element</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._ENDCOND_MAXORBS">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_ENDCOND_MAXORBS</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._ENDCOND_MAXORBS" title="Link to this definition"></a></dt>
+<dd><p>Terminate when marker has completed user-specified number of orbits</p>
+<p>Limit ENDCOND_MAX_TOROIDALORBS is used for a number of toroidal
+and ENDCOND_MAX_POLOIDALORBS for poloidal orbits.</p>
+<ul class="simple">
+<li><p>0 The end condition is not active.</p></li>
+<li><p>1 Marker is terminated when either of these limits is reached.</p></li>
+<li><p>2 Marker is terminated when both limits are reached.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._ENDCOND_NEUTRALIZED">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_ENDCOND_NEUTRALIZED</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._ENDCOND_NEUTRALIZED" title="Link to this definition"></a></dt>
+<dd><p>Terminate when the marker becomes neutral</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._ENDCOND_IONIZED">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_ENDCOND_IONIZED</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._ENDCOND_IONIZED" title="Link to this definition"></a></dt>
+<dd><p>Terminate when the marker becomes ionized.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._ENDCOND_LIM_SIMTIME">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_ENDCOND_LIM_SIMTIME</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._ENDCOND_LIM_SIMTIME" title="Link to this definition"></a></dt>
+<dd><p>Time when the simulation stops [s]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._ENDCOND_MAX_MILEAGE">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_ENDCOND_MAX_MILEAGE</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._ENDCOND_MAX_MILEAGE" title="Link to this definition"></a></dt>
+<dd><p>The maximum amount of time this marker is simulated [s]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._ENDCOND_MAX_CPUTIME">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_ENDCOND_MAX_CPUTIME</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._ENDCOND_MAX_CPUTIME" title="Link to this definition"></a></dt>
+<dd><p>Maximum cpu time per marker [s]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._ENDCOND_MAX_RHO">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_ENDCOND_MAX_RHO</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._ENDCOND_MAX_RHO" title="Link to this definition"></a></dt>
+<dd><p>Maximum rho value</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._ENDCOND_MIN_RHO">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_ENDCOND_MIN_RHO</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._ENDCOND_MIN_RHO" title="Link to this definition"></a></dt>
+<dd><p>Minimum rho value</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._ENDCOND_MIN_ENERGY">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_ENDCOND_MIN_ENERGY</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._ENDCOND_MIN_ENERGY" title="Link to this definition"></a></dt>
+<dd><p>Minimum energy [eV]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._ENDCOND_MIN_THERMAL">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_ENDCOND_MIN_THERMAL</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._ENDCOND_MIN_THERMAL" title="Link to this definition"></a></dt>
+<dd><p>Minimum energy limit is local ion thermal energy times this value</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._ENDCOND_MAX_TOROIDALORBS">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_ENDCOND_MAX_TOROIDALORBS</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._ENDCOND_MAX_TOROIDALORBS" title="Link to this definition"></a></dt>
+<dd><p>Maximum number of toroidal orbits</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._ENDCOND_MAX_POLOIDALORBS">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_ENDCOND_MAX_POLOIDALORBS</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._ENDCOND_MAX_POLOIDALORBS" title="Link to this definition"></a></dt>
+<dd><p>Maximum number of poloidal orbits</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._ENABLE_ORBIT_FOLLOWING">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_ENABLE_ORBIT_FOLLOWING</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._ENABLE_ORBIT_FOLLOWING" title="Link to this definition"></a></dt>
+<dd><p>Trace markers in an electromagnetic field</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._ENABLE_COULOMB_COLLISIONS">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_ENABLE_COULOMB_COLLISIONS</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._ENABLE_COULOMB_COLLISIONS" title="Link to this definition"></a></dt>
+<dd><p>Markers experience Coulomb collisions with background plasma</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._ENABLE_MHD">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_ENABLE_MHD</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._ENABLE_MHD" title="Link to this definition"></a></dt>
+<dd><p>Include MHD perturbations to orbit-following</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._ENABLE_ATOMIC">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_ENABLE_ATOMIC</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._ENABLE_ATOMIC" title="Link to this definition"></a></dt>
+<dd><p>Markers can undergo atomic reactions with background plasma
+or neutrals</p>
+<ul class="simple">
+<li><p>0 Atomic reactions are turned off.</p></li>
+<li><dl class="simple">
+<dt>1 Atomic reactions are on but marker is terminated when outside</dt><dd><p>the reaction data domain.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>2 Atomic reactions are on but they are ignored when marker is</dt><dd><p>outside the reaction data domain.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._DISABLE_FIRSTORDER_GCTRANS">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_DISABLE_FIRSTORDER_GCTRANS</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._DISABLE_FIRSTORDER_GCTRANS" title="Link to this definition"></a></dt>
+<dd><p>Disable first order guiding center transformation in velocity space</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._DISABLE_ENERGY_CCOLL">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_DISABLE_ENERGY_CCOLL</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._DISABLE_ENERGY_CCOLL" title="Link to this definition"></a></dt>
+<dd><p>Disable guiding center energy collisions</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._DISABLE_PITCH_CCOLL">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_DISABLE_PITCH_CCOLL</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._DISABLE_PITCH_CCOLL" title="Link to this definition"></a></dt>
+<dd><p>Disable guiding center pitch collisions</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._DISABLE_GCDIFF_CCOLL">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_DISABLE_GCDIFF_CCOLL</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._DISABLE_GCDIFF_CCOLL" title="Link to this definition"></a></dt>
+<dd><p>Disable guiding center spatial diffusion</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._REVERSE_TIME">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_REVERSE_TIME</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._REVERSE_TIME" title="Link to this definition"></a></dt>
+<dd><p>Trace markers backwards in time.</p>
+<p>Collision operator isn’t reversible so disable collisions if this
+option is used. Also when tracing markers, the simulation stops when
+marker time is below ENDCOND_LIM_SIMTIME.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._ENABLE_DIST_5D">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_ENABLE_DIST_5D</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._ENABLE_DIST_5D" title="Link to this definition"></a></dt>
+<dd><p>Collect distribution histogram in [R, phi, z, ppa, ppe, t, q]</p>
+<p>The coordinates are:</p>
+<ul class="simple">
+<li><p>R   major radius</p></li>
+<li><p>phi toroidal angle</p></li>
+<li><p>z   z-coordinate</p></li>
+<li><p>ppa momentum component parallel to magnetic field</p></li>
+<li><p>ppe momentum component perpendicular to magnetic field</p></li>
+<li><p>t   time</p></li>
+<li><p>q   charge</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._ENABLE_DIST_6D">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_ENABLE_DIST_6D</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._ENABLE_DIST_6D" title="Link to this definition"></a></dt>
+<dd><p>Collect distribution histogram in [R, phi, z, pR, pphi, pz, t, q]</p>
+<p>The coordinates are:</p>
+<ul class="simple">
+<li><p>R    major radius</p></li>
+<li><p>phi  toroidal angle</p></li>
+<li><p>z    z-coordinate</p></li>
+<li><p>pR   momentum R-component</p></li>
+<li><p>pphi momentum phi-component</p></li>
+<li><p>pz   momentum z-component</p></li>
+<li><p>t    time</p></li>
+<li><p>q    charge</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._ENABLE_DIST_RHO5D">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_ENABLE_DIST_RHO5D</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._ENABLE_DIST_RHO5D" title="Link to this definition"></a></dt>
+<dd><p>Collect distribution histogram in [rho, pol, phi, ppa, ppe, t, q]</p>
+<p>The coordinates are:</p>
+<ul class="simple">
+<li><p>rho  flux surface</p></li>
+<li><p>pol  poloidal angle</p></li>
+<li><p>phi  toroidal angle</p></li>
+<li><p>z    z-coordinate</p></li>
+<li><p>ppa  momentum component parallel to magnetic field</p></li>
+<li><p>ppe  momentum component perpendicular to magnetic field</p></li>
+<li><p>t    time</p></li>
+<li><p>q    charge</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._ENABLE_DIST_RHO6D">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_ENABLE_DIST_RHO6D</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._ENABLE_DIST_RHO6D" title="Link to this definition"></a></dt>
+<dd><p>Collect distribution histogram in [rho, pol, phi, pR, pphi, pz, t, q]</p>
+<p>The coordinates are:</p>
+<ul class="simple">
+<li><p>rho  flux surface</p></li>
+<li><p>pol  poloidal angle</p></li>
+<li><p>phi  toroidal angle</p></li>
+<li><p>z    z-coordinate</p></li>
+<li><p>pR   momentum R-component</p></li>
+<li><p>pphi momentum phi-component</p></li>
+<li><p>pz   momentum z-component</p></li>
+<li><p>t    time</p></li>
+<li><p>q    charge</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._DIST_MIN_R">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_DIST_MIN_R</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._DIST_MIN_R" title="Link to this definition"></a></dt>
+<dd><p>Minimum bin edge for R coordinate [m]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._DIST_MAX_R">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_DIST_MAX_R</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._DIST_MAX_R" title="Link to this definition"></a></dt>
+<dd><p>Maximum bin edge for R coordinate [m]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._DIST_NBIN_R">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_DIST_NBIN_R</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._DIST_NBIN_R" title="Link to this definition"></a></dt>
+<dd><p>Number of bins the interval [MIN_R, MAX_R] is divided to</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._DIST_MIN_PHI">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_DIST_MIN_PHI</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._DIST_MIN_PHI" title="Link to this definition"></a></dt>
+<dd><p>Minimum bin edge for phi coordinate [deg]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._DIST_MAX_PHI">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_DIST_MAX_PHI</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._DIST_MAX_PHI" title="Link to this definition"></a></dt>
+<dd><p>Maximum bin edge for phi coordinate [deg]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._DIST_NBIN_PHI">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_DIST_NBIN_PHI</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._DIST_NBIN_PHI" title="Link to this definition"></a></dt>
+<dd><p>Number of bins the interval [MIN_PHI, MAX_PHI] is divided to</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._DIST_MIN_Z">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_DIST_MIN_Z</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._DIST_MIN_Z" title="Link to this definition"></a></dt>
+<dd><p>Minimum bin edge for z coordinate [m]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._DIST_MAX_Z">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_DIST_MAX_Z</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._DIST_MAX_Z" title="Link to this definition"></a></dt>
+<dd><p>Maximum bin edge for z coordinate [m]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._DIST_NBIN_Z">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_DIST_NBIN_Z</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._DIST_NBIN_Z" title="Link to this definition"></a></dt>
+<dd><p>Number of bins the interval [MIN_Z, MAX_Z] is divided to</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._DIST_MIN_RHO">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_DIST_MIN_RHO</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._DIST_MIN_RHO" title="Link to this definition"></a></dt>
+<dd><p>Minimum bin edge for rho coordinate [1]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._DIST_MAX_RHO">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_DIST_MAX_RHO</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._DIST_MAX_RHO" title="Link to this definition"></a></dt>
+<dd><p>Maximum bin edge for rho coordinate [1]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._DIST_NBIN_RHO">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_DIST_NBIN_RHO</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._DIST_NBIN_RHO" title="Link to this definition"></a></dt>
+<dd><p>Number of bins the interval [MIN_RHO, MAX_RHO] is divided to</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._DIST_MIN_THETA">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_DIST_MIN_THETA</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._DIST_MIN_THETA" title="Link to this definition"></a></dt>
+<dd><p>Minimum bin edge for theta coordinate [deg]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._DIST_MAX_THETA">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_DIST_MAX_THETA</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._DIST_MAX_THETA" title="Link to this definition"></a></dt>
+<dd><p>Maximum bin edge for theta coordinate [deg]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._DIST_NBIN_THETA">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_DIST_NBIN_THETA</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._DIST_NBIN_THETA" title="Link to this definition"></a></dt>
+<dd><p>Number of bins the interval [MIN_THETA, MAX_THETA] is divided to</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._DIST_MIN_PPA">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_DIST_MIN_PPA</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._DIST_MIN_PPA" title="Link to this definition"></a></dt>
+<dd><p>Minimum bin edge for ppa coordinate [kg m/s]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._DIST_MAX_PPA">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_DIST_MAX_PPA</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._DIST_MAX_PPA" title="Link to this definition"></a></dt>
+<dd><p>Maximum bin edge for ppa coordinate [kg m/s]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._DIST_NBIN_PPA">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_DIST_NBIN_PPA</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._DIST_NBIN_PPA" title="Link to this definition"></a></dt>
+<dd><p>Number of bins the interval [MIN_PPA, MAX_PPA] is divided to</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._DIST_MIN_PPE">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_DIST_MIN_PPE</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._DIST_MIN_PPE" title="Link to this definition"></a></dt>
+<dd><p>Minimum bin edge for ppe coordinate [kg m/s]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._DIST_MAX_PPE">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_DIST_MAX_PPE</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._DIST_MAX_PPE" title="Link to this definition"></a></dt>
+<dd><p>Maximum bin edge for ppe coordinate [kg m/s]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._DIST_NBIN_PPE">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_DIST_NBIN_PPE</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._DIST_NBIN_PPE" title="Link to this definition"></a></dt>
+<dd><p>Number of bins the interval [MIN_PPE, MAX_PPE] is divided to</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._DIST_MIN_PR">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_DIST_MIN_PR</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._DIST_MIN_PR" title="Link to this definition"></a></dt>
+<dd><p>Minimum bin edge for pR coordinate [kg m/s]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._DIST_MAX_PR">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_DIST_MAX_PR</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._DIST_MAX_PR" title="Link to this definition"></a></dt>
+<dd><p>Maximum bin edge for pR coordinate [kg m/s]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._DIST_NBIN_PR">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_DIST_NBIN_PR</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._DIST_NBIN_PR" title="Link to this definition"></a></dt>
+<dd><p>Number of bins the interval [MIN_PR, MAX_PR] is divided to</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._DIST_MIN_PPHI">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_DIST_MIN_PPHI</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._DIST_MIN_PPHI" title="Link to this definition"></a></dt>
+<dd><p>Minimum bin edge for pphi coordinate [kg m/s]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._DIST_MAX_PPHI">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_DIST_MAX_PPHI</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._DIST_MAX_PPHI" title="Link to this definition"></a></dt>
+<dd><p>Maximum bin edge for pphi coordinate [kg m/s]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._DIST_NBIN_PPHI">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_DIST_NBIN_PPHI</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._DIST_NBIN_PPHI" title="Link to this definition"></a></dt>
+<dd><p>Number of bins the interval [MIN_PPHI, MAX_PPHI] is divided to</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._DIST_MIN_PZ">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_DIST_MIN_PZ</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._DIST_MIN_PZ" title="Link to this definition"></a></dt>
+<dd><p>Minimum bin edge for pz coordinate [kg m/s]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._DIST_MAX_PZ">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_DIST_MAX_PZ</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._DIST_MAX_PZ" title="Link to this definition"></a></dt>
+<dd><p>Maximum bin edge for pz coordinate [kg m/s]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._DIST_NBIN_PZ">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_DIST_NBIN_PZ</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._DIST_NBIN_PZ" title="Link to this definition"></a></dt>
+<dd><p>Number of bins the interval [MIN_PZ, MAX_PZ] is divided to</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._DIST_MIN_TIME">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_DIST_MIN_TIME</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._DIST_MIN_TIME" title="Link to this definition"></a></dt>
+<dd><p>Minimum bin edge for time coordinate [s]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._DIST_MAX_TIME">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_DIST_MAX_TIME</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._DIST_MAX_TIME" title="Link to this definition"></a></dt>
+<dd><p>Maximum bin edge for time coordinate [s]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._DIST_NBIN_TIME">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_DIST_NBIN_TIME</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._DIST_NBIN_TIME" title="Link to this definition"></a></dt>
+<dd><p>Number of bins the interval [MIN_TIME, MAX_TIME] is divided to</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._DIST_MIN_CHARGE">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_DIST_MIN_CHARGE</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._DIST_MIN_CHARGE" title="Link to this definition"></a></dt>
+<dd><p>Minimum bin edge for charge coordinate [e]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._DIST_MAX_CHARGE">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_DIST_MAX_CHARGE</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._DIST_MAX_CHARGE" title="Link to this definition"></a></dt>
+<dd><p>Maximum bin edge for charge coordinate [e]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._DIST_NBIN_CHARGE">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_DIST_NBIN_CHARGE</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._DIST_NBIN_CHARGE" title="Link to this definition"></a></dt>
+<dd><p>Number of bins the interval [MIN_CHARGE, MAX_CHARGE] is divided to</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._ENABLE_DIST_COM">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_ENABLE_DIST_COM</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._ENABLE_DIST_COM" title="Link to this definition"></a></dt>
+<dd><p>Collect constant-of-motion distribution histogram [mu, Ekin, Ptor]</p>
+<p>The coordinates are:</p>
+<ul class="simple">
+<li><p>mu   magnetic moment (first adiabatic invariant)</p></li>
+<li><p>Ekin kinetic energy</p></li>
+<li><p>Ptor canonical toroidal angular momentum</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._DIST_MIN_MU">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_DIST_MIN_MU</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._DIST_MIN_MU" title="Link to this definition"></a></dt>
+<dd><p>Minimum bin edge for the mu coordinate in COM-dist [J/T]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._DIST_MAX_MU">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_DIST_MAX_MU</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._DIST_MAX_MU" title="Link to this definition"></a></dt>
+<dd><p>Maximum bin edge for the mu coordinate in COM-dist [J/T]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._DIST_NBIN_MU">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_DIST_NBIN_MU</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._DIST_NBIN_MU" title="Link to this definition"></a></dt>
+<dd><p>Number of bins the interval [MIN_MU, MAX_MU] is divided to</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._DIST_MIN_EKIN">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_DIST_MIN_EKIN</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._DIST_MIN_EKIN" title="Link to this definition"></a></dt>
+<dd><p>Minimum bin edge for the energy coordinate [J]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._DIST_MAX_EKIN">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_DIST_MAX_EKIN</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._DIST_MAX_EKIN" title="Link to this definition"></a></dt>
+<dd><p>Maximum bin edge for the energy coordinate [J]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._DIST_NBIN_EKIN">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_DIST_NBIN_EKIN</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._DIST_NBIN_EKIN" title="Link to this definition"></a></dt>
+<dd><p>Number of bins the interval [MIN_EKIN, MAX_EKIN] is divided to</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._DIST_MIN_PTOR">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_DIST_MIN_PTOR</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._DIST_MIN_PTOR" title="Link to this definition"></a></dt>
+<dd><p>Minimum bin edge for the Ptor coordinate [kg m^2/s]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._DIST_MAX_PTOR">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_DIST_MAX_PTOR</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._DIST_MAX_PTOR" title="Link to this definition"></a></dt>
+<dd><p>Maximum bin edge for the Ptor coordinate [kg m^2/s]</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._DIST_NBIN_PTOR">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_DIST_NBIN_PTOR</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._DIST_NBIN_PTOR" title="Link to this definition"></a></dt>
+<dd><p>Number of bins the interval [MIN_PTOR, MAX_PTOR] is divided to</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._ENABLE_ORBITWRITE">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_ENABLE_ORBITWRITE</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._ENABLE_ORBITWRITE" title="Link to this definition"></a></dt>
+<dd><p>Enable diagnostics that store marker orbit</p>
+<ul class="simple">
+<li><p>0 Marker orbit diagnostics are not collected</p></li>
+<li><p>1 Marker orbit diagnostics are collected</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._ORBITWRITE_MODE">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_ORBITWRITE_MODE</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._ORBITWRITE_MODE" title="Link to this definition"></a></dt>
+<dd><p>What kind of marker orbit diagnostics are collected</p>
+<p>These are only used if ENABLE_ORBITWRITE is active.</p>
+<ul class="simple">
+<li><p>0 When marker crosses a plane (Poincare-plot)</p></li>
+<li><p>1 Between given time intervals</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._ORBITWRITE_NPOINT">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_ORBITWRITE_NPOINT</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._ORBITWRITE_NPOINT" title="Link to this definition"></a></dt>
+<dd><p>Maximum number of points (per marker) to be written</p>
+<p>If this number is exceeded when marker is being simulated, the oldest
+points will be replaced as long as the simulation continues. Thus,
+this parameter is effectively the number of marker’s last positions
+that are stored.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._ORBITWRITE_POLOIDALANGLES">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_ORBITWRITE_POLOIDALANGLES</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._ORBITWRITE_POLOIDALANGLES" title="Link to this definition"></a></dt>
+<dd><p>Poloidal angles of toroidal planes where toroidal plots are collected</p>
+<p>Used when ENABLE_ORBITWRITE = 1 and ORBITWRITE_MODE = 0.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._ORBITWRITE_TOROIDALANGLES">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_ORBITWRITE_TOROIDALANGLES</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._ORBITWRITE_TOROIDALANGLES" title="Link to this definition"></a></dt>
+<dd><p>Toroidal angles of poloidal planes where poloidal plots are collected</p>
+<p>Used when ENABLE_ORBITWRITE = 1 and ORBITWRITE_MODE = 0.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._ORBITWRITE_RADIALDISTANCES">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_ORBITWRITE_RADIALDISTANCES</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._ORBITWRITE_RADIALDISTANCES" title="Link to this definition"></a></dt>
+<dd><p>Minor radius coordinate where radial plots are collected</p>
+<p>Used when ENABLE_ORBITWRITE = 1 and ORBITWRITE_MODE = 0.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._ORBITWRITE_INTERVAL">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_ORBITWRITE_INTERVAL</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._ORBITWRITE_INTERVAL" title="Link to this definition"></a></dt>
+<dd><p>Time interval for writing marker state [s]</p>
+<p>Used when ENABLE_ORBITWRITE = 1 and ORBITWRITE_MODE = 1.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._ENABLE_TRANSCOEF">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_ENABLE_TRANSCOEF</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._ENABLE_TRANSCOEF" title="Link to this definition"></a></dt>
+<dd><p>Enable evaluation of transport coefficients.</p>
+<ul class="simple">
+<li><p>0 Transport coefficients are not collected</p></li>
+<li><p>1 Transport coefficients are collected</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._TRANSCOEF_INTERVAL">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_TRANSCOEF_INTERVAL</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._TRANSCOEF_INTERVAL" title="Link to this definition"></a></dt>
+<dd><p>Time interval for recording data points</p>
+<p>The data points are recorded (at the outer mid-plane crossing) if this
+interval has passed from the previous recording.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._TRANSCOEF_NAVG">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_TRANSCOEF_NAVG</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._TRANSCOEF_NAVG" title="Link to this definition"></a></dt>
+<dd><p>Number of subsequent data points that are averaged before calculating
+coefficients to reduce noise.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt._TRANSCOEF_RECORDRHO">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_TRANSCOEF_RECORDRHO</span></span><a class="headerlink" href="#a5py.ascot5io.options.Opt._TRANSCOEF_RECORDRHO" title="Link to this definition"></a></dt>
+<dd><p>Record coefficients in terms of normalized poloidal flux instead of
+meters.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt.read">
+<span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.options.Opt.read" title="Link to this definition"></a></dt>
+<dd><p>Read data from HDF5 file.</p>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>data</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a></span></dt><dd><p>Data read from HDF5 stored in the same format as is passed to
+<a class="reference internal" href="#a5py.ascot5io.options.Opt.write_hdf5" title="a5py.ascot5io.options.Opt.write_hdf5"><code class="xref py py-meth docutils literal notranslate"><span class="pre">write_hdf5()</span></code></a>.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">AscotIOException</span></code></dt><dd><p>If stored options were unviable.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt.tostring">
+<span class="sig-name descname"><span class="pre">tostring</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">descriptions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aslist</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.options.Opt.tostring" title="Link to this definition"></a></dt>
+<dd><p>Convert options to string representation.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>descriptions</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>If True, section headers and descriptions are added above
+the parameters to make options more readable.</p>
+</dd>
+<dt><strong>aslist</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Instead of line breaks, separate each line as a list item.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>opt</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a> [<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>]</span></dt><dd><p>String where option parameters are written on each line as
+“&lt;PARAMETER&gt; = &lt;VALUE&gt;”.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt.new">
+<span class="sig-name descname"><span class="pre">new</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">desc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.options.Opt.new" title="Link to this definition"></a></dt>
+<dd><p>Write new options with updated parameters.</p>
+<p>This method reads the current options, updates the given parameters,
+and writes the updated options as a new input.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>desc</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Input description.</p>
+</dd>
+<dt><strong>**kwargs</strong></dt><dd><p>&lt;name&gt; : &lt;value&gt; pairs for each options parameter that are updated.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>name</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Name, i.e. “&lt;type&gt;_&lt;qid&gt;”, of the new input that was written.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ValueError</span></code></a></dt><dd><p>If arguments contain unknown parameters.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt.write_hdf5">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">write_hdf5</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">desc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.options.Opt.write_hdf5" title="Link to this definition"></a></dt>
+<dd><p>Write input data to the HDF5 file.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>fn</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Full path to HDF5 file.</p>
+</dd>
+<dt><strong>desc</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Input description.</p>
+</dd>
+<dt><strong>**kwargs</strong></dt><dd><p>&lt;name&gt; : &lt;value&gt; pairs for each options parameter</p>
+<p>Hint: <a class="reference internal" href="#a5py.ascot5io.options.Opt.get_default" title="a5py.ascot5io.options.Opt.get_default"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_default()</span></code></a> generates a default options dictionary
+from which one can pick parameters to change.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>name</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Name, i.e. “&lt;type&gt;_&lt;qid&gt;”, of the new input that was written.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ValueError</span></code></a></dt><dd><p>If arguments contain unknown parameters or if there are parameters
+missing.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt.write_hdf5_dummy">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">write_hdf5_dummy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.options.Opt.write_hdf5_dummy" title="Link to this definition"></a></dt>
+<dd><p>Write dummy data that has correct format and is valid, but can be
+non-sensical.</p>
+<p>This method is intended for testing purposes or to provide data whose
+presence is needed but which is not actually used in simulation.</p>
+<p>The default options are written.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>fn</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Full path to the HDF5 file.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>name</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Name, i.e. “&lt;type&gt;_&lt;qid&gt;”, of the new input that was written.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt.get_default">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_default</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.options.Opt.get_default" title="Link to this definition"></a></dt>
+<dd><p>Get default option parameters.</p>
+<p>The default options have all “ENABLE” settings disabled. The default
+values are not suitable for any proper simulation.</p>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>options</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a></span></dt><dd><p>Default options in a format that can be passed to
+<a class="reference internal" href="#a5py.ascot5io.options.Opt.write_hdf5" title="a5py.ascot5io.options.Opt.write_hdf5"><code class="xref py py-meth docutils literal notranslate"><span class="pre">write_hdf5()</span></code></a>.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt.validate">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">validate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.options.Opt.validate" title="Link to this definition"></a></dt>
+<dd><p>Validate options and return names of faulty parameters.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.options.Opt.convert_string">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">convert_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lines</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.options.Opt.convert_string" title="Link to this definition"></a></dt>
+<dd><p>Converts a string to <a class="reference internal" href="#a5py.ascot5io.options.Opt" title="a5py.ascot5io.options.Opt"><code class="xref py py-class docutils literal notranslate"><span class="pre">Opt</span></code></a> input.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>lines</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> <code class="xref py py-obj docutils literal notranslate"><span class="pre">or</span></code> [<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>]</span></dt><dd><p>String with line breaks or list of strings where each item is
+a single line.</p>
+<p>Options are interpreted from a string assuming that the relevant
+lines have format “&lt;PARAMETER&gt; = &lt;VALUE&gt;” and nothing else.
+The parameter name must be in all uppercase. Lines that don’t start
+with a recognizable parameter are ignored.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>out</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a></span></dt><dd><p>String converted as an input for <a class="reference internal" href="#a5py.ascot5io.options.Opt.write_hdf5" title="a5py.ascot5io.options.Opt.write_hdf5"><code class="xref py py-meth docutils literal notranslate"><span class="pre">write_hdf5()</span></code></a>.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="a5py.ascot5io.nbi.html" class="btn btn-neutral float-left" title="nbi" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="a5py.ascot5io.coreio.html" class="btn btn-neutral float-right" title="CoreIO" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Ascot Group.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,657 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dist__com_8c" kind="file" language="C++">
+    <compoundname>dist_com.c</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes refid="math_8h" local="no">math.h</includes>
+    <includes refid="ascot5_8h" local="yes">../ascot5.h</includes>
+    <includes refid="consts_8h" local="yes">../consts.h</includes>
+    <includes refid="physlib_8h" local="yes">../physlib.h</includes>
+    <includes refid="particle_8h" local="yes">../particle.h</includes>
+    <includes refid="dist__com_8h" local="yes">dist_com.h</includes>
+    <incdepgraph>
+      <node id="10">
+        <label>../particle.h</label>
+        <link refid="particle_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>../spline/interp.h</label>
+        <link refid="interp_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>Bfield/B_GS.h</label>
+        <link refid="B__GS_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>stdlib.h</label>
+      </node>
+      <node id="6">
+        <label>omp.h</label>
+      </node>
+      <node id="8">
+        <label>../consts.h</label>
+        <link refid="consts_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>B_field.h</label>
+        <link refid="B__field_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>Efield/E_1DS.h</label>
+        <link refid="E__1DS_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>../physlib.h</label>
+        <link refid="physlib_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>error.h</label>
+        <link refid="error_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>diag/dist_com.c</label>
+        <link refid="dist__com_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>dist_com.h</label>
+        <link refid="dist__com_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>E_field.h</label>
+        <link refid="E__field_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>time.h</label>
+      </node>
+      <node id="19">
+        <label>Bfield/B_TC.h</label>
+        <link refid="B__TC_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>../linint/linint.h</label>
+        <link refid="linint_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>Bfield/B_2DS.h</label>
+        <link refid="B__2DS_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>Efield/E_TC.h</label>
+        <link refid="E__TC_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>Bfield/B_3DS.h</label>
+        <link refid="B__3DS_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>math.h</label>
+        <link refid="math_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+      </node>
+      <node id="17">
+        <label>Bfield/B_STS.h</label>
+        <link refid="B__STS_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>ascot5.h</label>
+        <link refid="ascot5_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="dist__com_8c_1a9107c1839cb6c0e0660f8f9154e8b12b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned long</type>
+        <definition>unsigned long dist_COM_index</definition>
+        <argsstring>(int i_mu, int i_Ekin, int i_Ptor, int n_mu, int n_Ekin, int n_Ptor)</argsstring>
+        <name>dist_COM_index</name>
+        <param>
+          <type>int</type>
+          <declname>i_mu</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>i_Ekin</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>i_Ptor</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n_mu</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n_Ekin</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n_Ptor</declname>
+        </param>
+        <briefdescription>
+<para>Internal function calculating the index in the histogram array. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="diag/dist_com.c" line="18" column="15" bodyfile="diag/dist_com.c" bodystart="18" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="dist__com_8c_1a53752a8f3e60eda3ca5ae5b213733ba7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dist_COM_free_offload</definition>
+        <argsstring>(dist_COM_offload_data *offload_data)</argsstring>
+        <name>dist_COM_free_offload</name>
+        <param>
+          <type><ref refid="structdist__COM__offload__data" kindref="compound">dist_COM_offload_data</ref> *</type>
+          <declname>offload_data</declname>
+        </param>
+        <briefdescription>
+<para>Frees the offload data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>offload_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload data struct </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="diag/dist_com.c" line="31" column="6" bodyfile="diag/dist_com.c" bodystart="31" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="dist__com_8c_1a87cd25d8368af9725df29f0583046596" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dist_COM_init</definition>
+        <argsstring>(dist_COM_data *dist_data, dist_COM_offload_data *offload_data, real *offload_array)</argsstring>
+        <name>dist_COM_init</name>
+        <param>
+          <type><ref refid="structdist__COM__data" kindref="compound">dist_COM_data</ref> *</type>
+          <declname>dist_data</declname>
+        </param>
+        <param>
+          <type><ref refid="structdist__COM__offload__data" kindref="compound">dist_COM_offload_data</ref> *</type>
+          <declname>offload_data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>offload_array</declname>
+        </param>
+        <briefdescription>
+<para>Initializes distribution from offload data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dist_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>offload array </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="diag/dist_com.c" line="50" column="6" bodyfile="diag/dist_com.c" bodystart="50" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="dist__com_8c_1a1bae36f974e97305f49fc663c5cae76c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dist_COM_update_fo</definition>
+        <argsstring>(dist_COM_data *dist, B_field_data *Bdata, particle_simd_fo *p_f, particle_simd_fo *p_i)</argsstring>
+        <name>dist_COM_update_fo</name>
+        <param>
+          <type><ref refid="structdist__COM__data" kindref="compound">dist_COM_data</ref> *</type>
+          <declname>dist</declname>
+        </param>
+        <param>
+          <type><ref refid="structB__field__data" kindref="compound">B_field_data</ref> *</type>
+          <declname>Bdata</declname>
+        </param>
+        <param>
+          <type><ref refid="structparticle__simd__fo" kindref="compound">particle_simd_fo</ref> *</type>
+          <declname>p_f</declname>
+        </param>
+        <param>
+          <type><ref refid="structparticle__simd__fo" kindref="compound">particle_simd_fo</ref> *</type>
+          <declname>p_i</declname>
+        </param>
+        <briefdescription>
+<para>Update the histogram from full-orbit markers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dist</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to distribution parameter struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Bdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to magnetic field data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to SIMD fo struct at the end of current time step </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to SIMD fo struct at the start of current time step </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="diag/dist_com.c" line="75" column="6" bodyfile="diag/dist_com.c" bodystart="75" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="dist__com_8c_1aef2605581d2132bc8986dc29595c1e21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dist_COM_update_gc</definition>
+        <argsstring>(dist_COM_data *dist, B_field_data *Bdata, particle_simd_gc *p_f, particle_simd_gc *p_i)</argsstring>
+        <name>dist_COM_update_gc</name>
+        <param>
+          <type><ref refid="structdist__COM__data" kindref="compound">dist_COM_data</ref> *</type>
+          <declname>dist</declname>
+        </param>
+        <param>
+          <type><ref refid="structB__field__data" kindref="compound">B_field_data</ref> *</type>
+          <declname>Bdata</declname>
+        </param>
+        <param>
+          <type><ref refid="structparticle__simd__gc" kindref="compound">particle_simd_gc</ref> *</type>
+          <declname>p_f</declname>
+        </param>
+        <param>
+          <type><ref refid="structparticle__simd__gc" kindref="compound">particle_simd_gc</ref> *</type>
+          <declname>p_i</declname>
+        </param>
+        <briefdescription>
+<para>Update the histogram from guiding center markers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function updates the histogram from the marker data. Bins are calculated as vector op and histogram is updates as an atomic operation to avoid race conditions.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dist</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to distribution parameter struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Bdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to magnetic field data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to SIMD gc struct at the end of current time step </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to SIMD gc struct at the start of current time step </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="diag/dist_com.c" line="157" column="6" bodyfile="diag/dist_com.c" bodystart="157" bodyend="214"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>COM-distribution collecting and processing functions. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="math_8h" kindref="compound">math.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../ascot5.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../consts.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../physlib.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../particle.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="dist__com_8h" kindref="compound">dist_com.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>declare<sp/>target</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="dist__com_8c_1a9107c1839cb6c0e0660f8f9154e8b12b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="dist__com_8c_1a9107c1839cb6c0e0660f8f9154e8b12b" kindref="member">dist_COM_index</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i_mu,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i_Ekin,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i_Ptor,</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n_mu,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n_Ekin,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n_Ptor)<sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>i_mu<sp/><sp/><sp/><sp/>*<sp/>(n_Ekin<sp/>*<sp/>n_Ptor)</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>i_Ekin<sp/><sp/><sp/>*<sp/>(n_Ptor)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>i_Ptor;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>end<sp/>declare<sp/>target</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="dist__com_8c_1a53752a8f3e60eda3ca5ae5b213733ba7" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dist__com_8c_1a53752a8f3e60eda3ca5ae5b213733ba7" kindref="member">dist_COM_free_offload</ref>(<ref refid="structdist__COM__offload__data" kindref="compound">dist_COM_offload_data</ref>*<sp/>offload_data)<sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structdist__COM__offload__data_1a6f392eb71b5469e74365988d93cb261e" kindref="member">n_mu</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structdist__COM__offload__data_1ad5feee31973bab6db8b021cbb231858a" kindref="member">min_mu</ref><sp/><sp/><sp/><sp/><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structdist__COM__offload__data_1a1f9aba240106d278213eb106a9a091ab" kindref="member">max_mu</ref><sp/><sp/><sp/><sp/><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structdist__COM__offload__data_1afb6ff76ded5e23f750f718ad13b74e6d" kindref="member">n_Ekin</ref><sp/><sp/><sp/><sp/><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structdist__COM__offload__data_1a8b865bbc2d885bfc569393f8dabbebf5" kindref="member">min_Ekin</ref><sp/><sp/><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structdist__COM__offload__data_1a147488439a0b3f7deb060f16c3d4f70b" kindref="member">max_Ekin</ref><sp/><sp/><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structdist__COM__offload__data_1aba0a6dfaf56aa2f0eb2ff9ecbe2808f7" kindref="member">n_Ptor</ref><sp/><sp/><sp/><sp/><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structdist__COM__offload__data_1a1b4c1d09f67bccc5b6fe1a45da307ce8" kindref="member">min_Ptor</ref><sp/><sp/><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structdist__COM__offload__data_1a65ef927c39e0832e0487f84e6aae58ea" kindref="member">max_Ptor</ref><sp/><sp/><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="dist__com_8c_1a87cd25d8368af9725df29f0583046596" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dist__com_8c_1a87cd25d8368af9725df29f0583046596" kindref="member">dist_COM_init</ref>(<ref refid="structdist__COM__data" kindref="compound">dist_COM_data</ref>*<sp/>dist_data,</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structdist__COM__offload__data" kindref="compound">dist_COM_offload_data</ref>*<sp/>offload_data,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>offload_array)<sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>dist_data-&gt;<ref refid="structdist__COM__data_1ad0ee764ecab0c554badaf1046182fb13" kindref="member">n_mu</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>offload_data-&gt;<ref refid="structdist__COM__offload__data_1a6f392eb71b5469e74365988d93cb261e" kindref="member">n_mu</ref>;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>dist_data-&gt;<ref refid="structdist__COM__data_1a8d8422e68c7c618ac003c7b96d749d2c" kindref="member">min_mu</ref><sp/><sp/><sp/><sp/><sp/>=<sp/>offload_data-&gt;<ref refid="structdist__COM__offload__data_1ad5feee31973bab6db8b021cbb231858a" kindref="member">min_mu</ref>;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>dist_data-&gt;<ref refid="structdist__COM__data_1a93a378d8fbbb1eabb875d8eb7ff4f34c" kindref="member">max_mu</ref><sp/><sp/><sp/><sp/><sp/>=<sp/>offload_data-&gt;<ref refid="structdist__COM__offload__data_1a1f9aba240106d278213eb106a9a091ab" kindref="member">max_mu</ref>;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>dist_data-&gt;<ref refid="structdist__COM__data_1a77ff60ba700c6a251c6c7b9b7fef6320" kindref="member">n_Ekin</ref><sp/><sp/><sp/><sp/><sp/>=<sp/>offload_data-&gt;<ref refid="structdist__COM__offload__data_1afb6ff76ded5e23f750f718ad13b74e6d" kindref="member">n_Ekin</ref>;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>dist_data-&gt;<ref refid="structdist__COM__data_1ac96bc1480a94f112a6c8ed7809aade05" kindref="member">min_Ekin</ref><sp/><sp/><sp/>=<sp/>offload_data-&gt;<ref refid="structdist__COM__offload__data_1a8b865bbc2d885bfc569393f8dabbebf5" kindref="member">min_Ekin</ref>;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>dist_data-&gt;<ref refid="structdist__COM__data_1ad2a56e98a94a490196032e9e9f9f20a9" kindref="member">max_Ekin</ref><sp/><sp/><sp/>=<sp/>offload_data-&gt;<ref refid="structdist__COM__offload__data_1a147488439a0b3f7deb060f16c3d4f70b" kindref="member">max_Ekin</ref>;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>dist_data-&gt;<ref refid="structdist__COM__data_1a264cf6a58eff4ebb6dd9180d45134d86" kindref="member">n_Ptor</ref><sp/><sp/><sp/><sp/><sp/>=<sp/>offload_data-&gt;<ref refid="structdist__COM__offload__data_1aba0a6dfaf56aa2f0eb2ff9ecbe2808f7" kindref="member">n_Ptor</ref>;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>dist_data-&gt;<ref refid="structdist__COM__data_1ac1f6dc3cb1ec227a05dd3737902b2953" kindref="member">min_Ptor</ref><sp/><sp/><sp/>=<sp/>offload_data-&gt;<ref refid="structdist__COM__offload__data_1a1b4c1d09f67bccc5b6fe1a45da307ce8" kindref="member">min_Ptor</ref>;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>dist_data-&gt;<ref refid="structdist__COM__data_1a189205b495caa2382c5c361a016d0347" kindref="member">max_Ptor</ref><sp/><sp/><sp/>=<sp/>offload_data-&gt;<ref refid="structdist__COM__offload__data_1a65ef927c39e0832e0487f84e6aae58ea" kindref="member">max_Ptor</ref>;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>dist_data-&gt;<ref refid="structdist__COM__data_1a4022f9939448058d259384cc2900bbbe" kindref="member">histogram</ref><sp/>=<sp/>&amp;offload_array[0];</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="dist__com_8c_1a1bae36f974e97305f49fc663c5cae76c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dist__com_8c_1a1bae36f974e97305f49fc663c5cae76c" kindref="member">dist_COM_update_fo</ref>(<ref refid="structdist__COM__data" kindref="compound">dist_COM_data</ref>*<sp/>dist,<sp/><ref refid="structB__field__data" kindref="compound">B_field_data</ref>*<sp/>Bdata,</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structparticle__simd__fo" kindref="compound">particle_simd_fo</ref>*<sp/>p_f,<sp/><ref refid="structparticle__simd__fo" kindref="compound">particle_simd_fo</ref>*<sp/>p_i)<sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>Ekin;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>Ptor;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>Bnorm;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>psi;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>mu;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>xi;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>pnorm;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>ppar;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i_mu[<ref refid="ascot5_8h_1a6368ab06bbb536b220a367552186bbab" kindref="member">NSIMD</ref>];</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i_Ekin[<ref refid="ascot5_8h_1a6368ab06bbb536b220a367552186bbab" kindref="member">NSIMD</ref>];</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i_Ptor[<ref refid="ascot5_8h_1a6368ab06bbb536b220a367552186bbab" kindref="member">NSIMD</ref>];</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ok[<ref refid="ascot5_8h_1a6368ab06bbb536b220a367552186bbab" kindref="member">NSIMD</ref>];</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>weight[<ref refid="ascot5_8h_1a6368ab06bbb536b220a367552186bbab" kindref="member">NSIMD</ref>];</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#pragma<sp/>omp<sp/>simd</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="ascot5_8h_1a6368ab06bbb536b220a367552186bbab" kindref="member">NSIMD</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(p_f-&gt;running[i])<sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="B__field_8c_1a48c1f881a5f7fc9bf2d04edadfc2becf" kindref="member">B_field_eval_psi</ref>(&amp;psi,<sp/>p_f-&gt;r[i],<sp/>p_f-&gt;phi[i],<sp/>p_f-&gt;z[i],</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p_f-&gt;time[i],<sp/>Bdata);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>B<sp/>[]<sp/>=<sp/>{p_f-&gt;B_r[i],<sp/>p_f-&gt;B_phi[i],<sp/>p_f-&gt;B_z[i]};</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Bnorm<sp/>=<sp/><ref refid="math_8h_1abd3175f6bee0adbe5ac6a37d856aa407" kindref="member">math_normc</ref>(p_f-&gt;B_r[i],<sp/>p_f-&gt;B_phi[i],<sp/>p_f-&gt;B_z[i]);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>p<sp/>[]<sp/>=<sp/>{p_f-&gt;p_r[i],<sp/>p_f-&gt;p_phi[i],<sp/>p_f-&gt;p_z[i]};</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pnorm<sp/>=<sp/><ref refid="math_8h_1abd3175f6bee0adbe5ac6a37d856aa407" kindref="member">math_normc</ref>(p_f-&gt;p_r[i],<sp/>p_f-&gt;p_phi[i],<sp/>p_f-&gt;p_z[i]);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ppar<sp/>=<sp/><ref refid="math_8h_1a212fc9c17be398b934456f0fa641541a" kindref="member">math_dot</ref>(p,<sp/>B)<sp/>/<sp/>Bnorm;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>xi<sp/>=<sp/>ppar<sp/>/<sp/>pnorm;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mu<sp/>=<sp/><ref refid="physlib_8h_1abb58f0d726d24072d618b68721940d52" kindref="member">physlib_gc_mu</ref>(p_f-&gt;mass[i],<sp/>pnorm,<sp/>xi,<sp/>Bnorm);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i_mu[i]<sp/>=<sp/>floor((mu<sp/>-<sp/>dist-&gt;<ref refid="structdist__COM__data_1a8d8422e68c7c618ac003c7b96d749d2c" kindref="member">min_mu</ref>)</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/<sp/>((dist-&gt;<ref refid="structdist__COM__data_1a93a378d8fbbb1eabb875d8eb7ff4f34c" kindref="member">max_mu</ref><sp/>-<sp/>dist-&gt;<ref refid="structdist__COM__data_1a8d8422e68c7c618ac003c7b96d749d2c" kindref="member">min_mu</ref>)/dist-&gt;<ref refid="structdist__COM__data_1ad0ee764ecab0c554badaf1046182fb13" kindref="member">n_mu</ref>));</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Ekin<sp/>=<sp/><ref refid="physlib_8h_1a58c44d7d5510f7af98dde627d1c175cf" kindref="member">physlib_Ekin_pnorm</ref>(p_f-&gt;mass[i],<sp/>pnorm);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i_Ekin[i]<sp/>=<sp/>floor((Ekin<sp/>-<sp/>dist-&gt;<ref refid="structdist__COM__data_1ac96bc1480a94f112a6c8ed7809aade05" kindref="member">min_Ekin</ref>)</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/<sp/>((dist-&gt;<ref refid="structdist__COM__data_1ad2a56e98a94a490196032e9e9f9f20a9" kindref="member">max_Ekin</ref><sp/>-<sp/>dist-&gt;<ref refid="structdist__COM__data_1ac96bc1480a94f112a6c8ed7809aade05" kindref="member">min_Ekin</ref>)<sp/>/<sp/>dist-&gt;<ref refid="structdist__COM__data_1a77ff60ba700c6a251c6c7b9b7fef6320" kindref="member">n_Ekin</ref>));</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Ptor<sp/>=<sp/><ref refid="physlib_8h_1a428d69ad94469359dbe6dcb31ac5d1f2" kindref="member">phys_ptoroid_fo</ref>(</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p_f-&gt;charge[i],<sp/>p_f-&gt;r[i],<sp/>p_f-&gt;p_phi[i],<sp/>psi);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i_Ptor[i]<sp/>=<sp/>floor((Ptor<sp/>-<sp/>dist-&gt;<ref refid="structdist__COM__data_1ac1f6dc3cb1ec227a05dd3737902b2953" kindref="member">min_Ptor</ref>)</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/<sp/>((dist-&gt;<ref refid="structdist__COM__data_1a189205b495caa2382c5c361a016d0347" kindref="member">max_Ptor</ref><sp/>-<sp/>dist-&gt;<ref refid="structdist__COM__data_1ac1f6dc3cb1ec227a05dd3737902b2953" kindref="member">min_Ptor</ref>)/dist-&gt;<ref refid="structdist__COM__data_1a264cf6a58eff4ebb6dd9180d45134d86" kindref="member">n_Ptor</ref>));</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(i_mu[i]<sp/><sp/><sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>i_mu[i]<sp/><sp/><sp/>&lt;=<sp/>dist-&gt;<ref refid="structdist__COM__data_1ad0ee764ecab0c554badaf1046182fb13" kindref="member">n_mu</ref><sp/>-<sp/>1<sp/><sp/><sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i_Ekin[i]<sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>i_Ekin[i]<sp/>&lt;=<sp/>dist-&gt;<ref refid="structdist__COM__data_1a77ff60ba700c6a251c6c7b9b7fef6320" kindref="member">n_Ekin</ref><sp/>-<sp/>1<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i_Ptor[i]<sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>i_Ptor[i]<sp/>&lt;=<sp/>dist-&gt;<ref refid="structdist__COM__data_1a264cf6a58eff4ebb6dd9180d45134d86" kindref="member">n_Ptor</ref><sp/>-<sp/>1<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ok[i]<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>weight[i]<sp/>=<sp/>p_f-&gt;weight[i]<sp/>*<sp/>(p_f-&gt;time[i]<sp/>-<sp/>p_i-&gt;time[i]);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ok[i]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="ascot5_8h_1a6368ab06bbb536b220a367552186bbab" kindref="member">NSIMD</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(p_f-&gt;running[i]<sp/>&amp;&amp;<sp/>ok[i])<sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>index<sp/>=<sp/><ref refid="dist__com_8c_1a9107c1839cb6c0e0660f8f9154e8b12b" kindref="member">dist_COM_index</ref>(i_mu[i],<sp/>i_Ekin[i],<sp/>i_Ptor[i],</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dist-&gt;<ref refid="structdist__COM__data_1ad0ee764ecab0c554badaf1046182fb13" kindref="member">n_mu</ref>,<sp/><sp/>dist-&gt;<ref refid="structdist__COM__data_1a77ff60ba700c6a251c6c7b9b7fef6320" kindref="member">n_Ekin</ref>,</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dist-&gt;<ref refid="structdist__COM__data_1a264cf6a58eff4ebb6dd9180d45134d86" kindref="member">n_Ptor</ref>);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#pragma<sp/>omp<sp/>atomic</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dist-&gt;<ref refid="structdist__COM__data_1a4022f9939448058d259384cc2900bbbe" kindref="member">histogram</ref>[index]<sp/>+=<sp/>weight[i];</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157" refid="dist__com_8c_1aef2605581d2132bc8986dc29595c1e21" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dist__com_8c_1aef2605581d2132bc8986dc29595c1e21" kindref="member">dist_COM_update_gc</ref>(<ref refid="structdist__COM__data" kindref="compound">dist_COM_data</ref>*<sp/>dist,<sp/><ref refid="structB__field__data" kindref="compound">B_field_data</ref>*<sp/>Bdata,</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structparticle__simd__gc" kindref="compound">particle_simd_gc</ref>*<sp/>p_f,<sp/><ref refid="structparticle__simd__gc" kindref="compound">particle_simd_gc</ref>*<sp/>p_i)<sp/>{</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>Ekin;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>Ptor;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>B;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>psi;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i_mu[<ref refid="ascot5_8h_1a6368ab06bbb536b220a367552186bbab" kindref="member">NSIMD</ref>];</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i_Ekin[<ref refid="ascot5_8h_1a6368ab06bbb536b220a367552186bbab" kindref="member">NSIMD</ref>];</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i_Ptor[<ref refid="ascot5_8h_1a6368ab06bbb536b220a367552186bbab" kindref="member">NSIMD</ref>];</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ok[<ref refid="ascot5_8h_1a6368ab06bbb536b220a367552186bbab" kindref="member">NSIMD</ref>];</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>weight[<ref refid="ascot5_8h_1a6368ab06bbb536b220a367552186bbab" kindref="member">NSIMD</ref>];</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#pragma<sp/>omp<sp/>simd</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="ascot5_8h_1a6368ab06bbb536b220a367552186bbab" kindref="member">NSIMD</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(p_f-&gt;running[i])<sp/>{</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="B__field_8c_1a48c1f881a5f7fc9bf2d04edadfc2becf" kindref="member">B_field_eval_psi</ref>(&amp;psi,<sp/>p_f-&gt;r[i],<sp/>p_f-&gt;phi[i],<sp/>p_f-&gt;z[i],</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p_f-&gt;time[i],<sp/>Bdata);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>B<sp/>=<sp/><ref refid="math_8h_1abd3175f6bee0adbe5ac6a37d856aa407" kindref="member">math_normc</ref>(p_f-&gt;B_r[i],<sp/>p_f-&gt;B_phi[i],<sp/>p_f-&gt;B_z[i]);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i_mu[i]<sp/>=<sp/>floor((p_f-&gt;mu[i]<sp/>-<sp/>dist-&gt;<ref refid="structdist__COM__data_1a8d8422e68c7c618ac003c7b96d749d2c" kindref="member">min_mu</ref>)</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/<sp/>((dist-&gt;<ref refid="structdist__COM__data_1a93a378d8fbbb1eabb875d8eb7ff4f34c" kindref="member">max_mu</ref><sp/>-<sp/>dist-&gt;<ref refid="structdist__COM__data_1a8d8422e68c7c618ac003c7b96d749d2c" kindref="member">min_mu</ref>)/dist-&gt;<ref refid="structdist__COM__data_1ad0ee764ecab0c554badaf1046182fb13" kindref="member">n_mu</ref>));</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Ekin<sp/>=<sp/><ref refid="physlib_8h_1a4effc7b527d272099a3c288382a83527" kindref="member">physlib_Ekin_ppar</ref>(p_f-&gt;mass[i],<sp/>p_f-&gt;mu[i],<sp/>p_f-&gt;ppar[i],<sp/>B);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i_Ekin[i]<sp/>=<sp/>floor((Ekin<sp/>-<sp/>dist-&gt;<ref refid="structdist__COM__data_1ac96bc1480a94f112a6c8ed7809aade05" kindref="member">min_Ekin</ref>)</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/<sp/>((dist-&gt;<ref refid="structdist__COM__data_1ad2a56e98a94a490196032e9e9f9f20a9" kindref="member">max_Ekin</ref><sp/>-<sp/>dist-&gt;<ref refid="structdist__COM__data_1ac96bc1480a94f112a6c8ed7809aade05" kindref="member">min_Ekin</ref>)<sp/>/<sp/>dist-&gt;<ref refid="structdist__COM__data_1a77ff60ba700c6a251c6c7b9b7fef6320" kindref="member">n_Ekin</ref>));</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Ptor<sp/>=<sp/><ref refid="physlib_8h_1a5eef8ba8eff2ff5f3f1805660402dfb2" kindref="member">phys_ptoroid_gc</ref>(p_f-&gt;charge[i],<sp/>p_f-&gt;r[i],<sp/>p_f-&gt;ppar[i],<sp/>psi,</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>B,<sp/>p_f-&gt;B_phi[i]);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i_Ptor[i]<sp/>=<sp/>floor((Ptor<sp/>-<sp/>dist-&gt;<ref refid="structdist__COM__data_1ac1f6dc3cb1ec227a05dd3737902b2953" kindref="member">min_Ptor</ref>)</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/<sp/>((dist-&gt;<ref refid="structdist__COM__data_1a189205b495caa2382c5c361a016d0347" kindref="member">max_Ptor</ref><sp/>-<sp/>dist-&gt;<ref refid="structdist__COM__data_1ac1f6dc3cb1ec227a05dd3737902b2953" kindref="member">min_Ptor</ref>)/dist-&gt;<ref refid="structdist__COM__data_1a264cf6a58eff4ebb6dd9180d45134d86" kindref="member">n_Ptor</ref>));</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(i_mu[i]<sp/><sp/><sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>i_mu[i]<sp/><sp/><sp/>&lt;=<sp/>dist-&gt;<ref refid="structdist__COM__data_1ad0ee764ecab0c554badaf1046182fb13" kindref="member">n_mu</ref><sp/>-<sp/>1<sp/><sp/><sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i_Ekin[i]<sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>i_Ekin[i]<sp/>&lt;=<sp/>dist-&gt;<ref refid="structdist__COM__data_1a77ff60ba700c6a251c6c7b9b7fef6320" kindref="member">n_Ekin</ref><sp/>-<sp/>1<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i_Ptor[i]<sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>i_Ptor[i]<sp/>&lt;=<sp/>dist-&gt;<ref refid="structdist__COM__data_1a264cf6a58eff4ebb6dd9180d45134d86" kindref="member">n_Ptor</ref><sp/>-<sp/>1<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ok[i]<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>weight[i]<sp/>=<sp/>p_f-&gt;weight[i]<sp/>*<sp/>(p_f-&gt;time[i]<sp/>-<sp/>p_i-&gt;time[i]);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ok[i]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="ascot5_8h_1a6368ab06bbb536b220a367552186bbab" kindref="member">NSIMD</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(p_f-&gt;running[i]<sp/>&amp;&amp;<sp/>ok[i])<sp/>{</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>index<sp/>=<sp/><ref refid="dist__com_8c_1a9107c1839cb6c0e0660f8f9154e8b12b" kindref="member">dist_COM_index</ref>(i_mu[i],<sp/>i_Ekin[i],<sp/>i_Ptor[i],</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dist-&gt;<ref refid="structdist__COM__data_1ad0ee764ecab0c554badaf1046182fb13" kindref="member">n_mu</ref>,<sp/><sp/>dist-&gt;<ref refid="structdist__COM__data_1a77ff60ba700c6a251c6c7b9b7fef6320" kindref="member">n_Ekin</ref>,</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dist-&gt;<ref refid="structdist__COM__data_1a264cf6a58eff4ebb6dd9180d45134d86" kindref="member">n_Ptor</ref>);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#pragma<sp/>omp<sp/>atomic</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dist-&gt;<ref refid="structdist__COM__data_1a4022f9939448058d259384cc2900bbbe" kindref="member">histogram</ref>[index]<sp/>+=<sp/>weight[i];</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="214"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="diag/dist_com.c"/>
+  </compounddef>
+</doxygen>

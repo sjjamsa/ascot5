@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structboozer__data" kind="struct" language="C++" prot="public">
+    <compoundname>boozer_data</compoundname>
+    <includes refid="boozer_8h" local="no">boozer.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structboozer__data_1add404b7052fab11e7ffbb73f38c8d9a3" prot="public" static="no" mutable="no">
+        <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+        <definition>real boozer_data::psi_min</definition>
+        <argsstring></argsstring>
+        <name>psi_min</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Minimum psi in other fields <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="boozer.h" line="30" column="10" bodyfile="boozer.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structboozer__data_1abf1100f454df4d86c820b7e2a6551bf1" prot="public" static="no" mutable="no">
+        <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+        <definition>real boozer_data::psi_max</definition>
+        <argsstring></argsstring>
+        <name>psi_max</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Maximum psi in other fields <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="boozer.h" line="31" column="10" bodyfile="boozer.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structboozer__data_1ae27f7d5d4c326335676db519fd3b991b" prot="public" static="no" mutable="no">
+        <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+        <definition>real* boozer_data::rs</definition>
+        <argsstring></argsstring>
+        <name>rs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>R points of outermost poloidal psi-surface contour, nrzs elements, the first and last points are the same <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="boozer.h" line="32" column="10" bodyfile="boozer.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structboozer__data_1afe8896c170f550e9dfe59048c70e0e64" prot="public" static="no" mutable="no">
+        <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+        <definition>real* boozer_data::zs</definition>
+        <argsstring></argsstring>
+        <name>zs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>z points of outermost poloidal psi-surface contour, nrzs elements, the first and last points are the same <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="boozer.h" line="34" column="10" bodyfile="boozer.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structboozer__data_1a2faabd9374d98f26d5d7ddc5a5ff6aa4" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int boozer_data::nrzs</definition>
+        <argsstring></argsstring>
+        <name>nrzs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>number of elements in rs and zs <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="boozer.h" line="36" column="10" bodyfile="boozer.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structboozer__data_1acc7332c7a8c105de87daf8bd319fed9c" prot="public" static="no" mutable="no">
+        <type><ref refid="structinterp2D__data" kindref="compound">interp2D_data</ref></type>
+        <definition>interp2D_data boozer_data::nu_psitheta</definition>
+        <argsstring></argsstring>
+        <name>nu_psitheta</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>the nu-function, phi=zeta+nu(psi,theta), with phi the cylindrical angle <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="boozer.h" line="37" column="19" bodyfile="boozer.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structboozer__data_1a3dc22161f8fce6139b7fb4d36d9ecece" prot="public" static="no" mutable="no">
+        <type><ref refid="structinterp2D__data" kindref="compound">interp2D_data</ref></type>
+        <definition>interp2D_data boozer_data::theta_psithetageom</definition>
+        <argsstring></argsstring>
+        <name>theta_psithetageom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>boozer_theta(psi,thetag) <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="boozer.h" line="39" column="19" bodyfile="boozer.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Boozer parameters on the target. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>boozer_data</label>
+        <link refid="structboozer__data"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>nu_psitheta</edgelabel>
+          <edgelabel>theta_psithetageom</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>interp2D_data</label>
+        <link refid="structinterp2D__data"/>
+      </node>
+    </collaborationgraph>
+    <location file="boozer.h" line="29" column="1" bodyfile="boozer.h" bodystart="29" bodyend="40"/>
+    <listofallmembers>
+      <member refid="structboozer__data_1a2faabd9374d98f26d5d7ddc5a5ff6aa4" prot="public" virt="non-virtual"><scope>boozer_data</scope><name>nrzs</name></member>
+      <member refid="structboozer__data_1acc7332c7a8c105de87daf8bd319fed9c" prot="public" virt="non-virtual"><scope>boozer_data</scope><name>nu_psitheta</name></member>
+      <member refid="structboozer__data_1abf1100f454df4d86c820b7e2a6551bf1" prot="public" virt="non-virtual"><scope>boozer_data</scope><name>psi_max</name></member>
+      <member refid="structboozer__data_1add404b7052fab11e7ffbb73f38c8d9a3" prot="public" virt="non-virtual"><scope>boozer_data</scope><name>psi_min</name></member>
+      <member refid="structboozer__data_1ae27f7d5d4c326335676db519fd3b991b" prot="public" virt="non-virtual"><scope>boozer_data</scope><name>rs</name></member>
+      <member refid="structboozer__data_1a3dc22161f8fce6139b7fb4d36d9ecece" prot="public" virt="non-virtual"><scope>boozer_data</scope><name>theta_psithetageom</name></member>
+      <member refid="structboozer__data_1afe8896c170f550e9dfe59048c70e0e64" prot="public" virt="non-virtual"><scope>boozer_data</scope><name>zs</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,528 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="interp1Dcomp_8c" kind="file" language="C++">
+    <compoundname>interp1Dcomp.c</compoundname>
+    <includes local="no">stdlib.h</includes>
+    <includes refid="math_8h" local="no">math.h</includes>
+    <includes refid="ascot5_8h" local="yes">../ascot5.h</includes>
+    <includes refid="interp_8h" local="yes">interp.h</includes>
+    <includes refid="spline_8h" local="yes">spline.h</includes>
+    <incdepgraph>
+      <node id="7">
+        <label>interp.h</label>
+        <link refid="interp_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>spline/interp1Dcomp.c</label>
+        <link refid="interp1Dcomp_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stdlib.h</label>
+      </node>
+      <node id="5">
+        <label>omp.h</label>
+      </node>
+      <node id="8">
+        <label>../error.h</label>
+        <link refid="error_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>time.h</label>
+      </node>
+      <node id="10">
+        <label>spline.h</label>
+        <link refid="spline_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>math.h</label>
+        <link refid="math_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>stdio.h</label>
+      </node>
+      <node id="4">
+        <label>ascot5.h</label>
+        <link refid="ascot5_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="interp1Dcomp_8c_1a6c87dd1ad481b5793feef24bb410ed42" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int interp1Dcomp_init_coeff</definition>
+        <argsstring>(real *c, real *f, int n_x, int bc_x, real x_min, real x_max)</argsstring>
+        <name>interp1Dcomp_init_coeff</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n_x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bc_x</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>x_min</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>x_max</declname>
+        </param>
+        <briefdescription>
+<para>Calculate cubic spline interpolation coefficients for scalar 1D data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function calculates the cubic spline interpolation coefficients and stores them in a pre-allocated array. Compact cofficients are calculated.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>allocated array of length n_x*2 to store the coefficients </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>1D data to be interpolated </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of data points in the x axis </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bc_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>boundary condition for the x axis </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x_min</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>minimum value of the x axis </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x_max</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>maximum value of the x axis </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="spline/interp1Dcomp.c" line="24" column="5" bodyfile="spline/interp1Dcomp.c" bodystart="24" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="interp1Dcomp_8c_1adc4f218db5d28d202df93de3764173be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void interp1Dcomp_init_spline</definition>
+        <argsstring>(interp1D_data *str, real *c, int n_x, int bc_x, real x_min, real x_max)</argsstring>
+        <name>interp1Dcomp_init_spline</name>
+        <param>
+          <type><ref refid="structinterp1D__data" kindref="compound">interp1D_data</ref> *</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n_x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bc_x</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>x_min</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>x_max</declname>
+        </param>
+        <briefdescription>
+<para>Initialize a cubic spline. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to spline to be initialized </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>array where coefficients are stored </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of data points in the x direction </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bc_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>boundary condition for x axis </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x_min</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>minimum value of the x axis </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x_max</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>maximum value of the x axis </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="spline/interp1Dcomp.c" line="67" column="6" bodyfile="spline/interp1Dcomp.c" bodystart="67" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="interp1Dcomp_8c_1a8538298c3cbac4c00412413259c3274f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref></type>
+        <definition>a5err interp1Dcomp_eval_f</definition>
+        <argsstring>(real *f, interp1D_data *str, real x)</argsstring>
+        <name>interp1Dcomp_eval_f</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type><ref refid="structinterp1D__data" kindref="compound">interp1D_data</ref> *</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+<para>Evaluate interpolated value of 1D scalar field. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function evaluates the interpolated value of a 1D scalar field using bicubic spline interpolation coefficients of the compact form.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>variable in which to place the evaluated value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>data struct for data interpolation </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>x-coordinate</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>zero on success and one if x point is outside the domain. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="spline/interp1Dcomp.c" line="96" column="7" bodyfile="spline/interp1Dcomp.c" bodystart="96" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="interp1Dcomp_8c_1ab427cc5f47adedb5e377b8ad9f96189f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref></type>
+        <definition>a5err interp1Dcomp_eval_df</definition>
+        <argsstring>(real *f_df, interp1D_data *str, real x)</argsstring>
+        <name>interp1Dcomp_eval_df</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>f_df</declname>
+        </param>
+        <param>
+          <type><ref refid="structinterp1D__data" kindref="compound">interp1D_data</ref> *</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+<para>Evaluate interpolated value of 1D and its 1st and 2nd derivatives. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function evaluates the interpolated value of a 1D scalar field and its 1st and 2nd derivatives using bicubic spline interpolation coefficients of the compact form.</para>
+<para>The evaluated values are returned in an array with following elements:<itemizedlist>
+<listitem><para>f_df[0] = f</para>
+</listitem><listitem><para>f_df[1] = f_x</para>
+</listitem><listitem><para>f_df[2] = f_xx</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f_df</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>array in which to place the evaluated values </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>data struct for data interpolation </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>x-coordinate</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>zero on success and one if (x,y) point is outside the grid. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>&lt; Normalized x coordinate in current cell</para>
+        </inbodydescription>
+        <location file="spline/interp1Dcomp.c" line="154" column="7" bodyfile="spline/interp1Dcomp.c" bodystart="154" bodyend="205"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Cubic spline interpolation in compact form. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="math_8h" kindref="compound">math.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../ascot5.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="interp_8h" kindref="compound">interp.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="spline_8h" kindref="compound">spline.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="interp_8h_1a6c87dd1ad481b5793feef24bb410ed42" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="interp1Dcomp_8c_1a6c87dd1ad481b5793feef24bb410ed42" kindref="member">interp1Dcomp_init_coeff</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>c,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>f,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n_x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bc_x,</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>x_min,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>x_max)<sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Check<sp/>boundary<sp/>condition<sp/>and<sp/>calculate<sp/>grid<sp/>interval.<sp/>Grid<sp/>interval</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>needed<sp/>because<sp/>we<sp/>use<sp/>normalized<sp/>grid<sp/>intervals.<sp/>For<sp/>periodic<sp/>boundary</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>condition,<sp/>grid<sp/>maximum<sp/>value<sp/>and<sp/>the<sp/>last<sp/>data<sp/>point<sp/>are<sp/>not<sp/>the<sp/>same.</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Take<sp/>this<sp/>into<sp/>account<sp/>in<sp/>grid<sp/>interval.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>x_grid;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(bc_x<sp/>==<sp/><ref refid="interp_8h_1a65e5120fbe667470941a6bd9258b97afa8b66be978239727ccd08c3060d18f72e" kindref="member">PERIODICBC</ref><sp/>||<sp/>bc_x<sp/>==<sp/><ref refid="interp_8h_1a65e5120fbe667470941a6bd9258b97afa66bcb6506f4bbd571f4ba3bc80114cec" kindref="member">NATURALBC</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x_grid<sp/>=<sp/>(x_max<sp/>-<sp/>x_min)<sp/>/<sp/>(<sp/>n_x<sp/>-<sp/>1<sp/>*<sp/>(bc_x<sp/>==<sp/><ref refid="interp_8h_1a65e5120fbe667470941a6bd9258b97afa66bcb6506f4bbd571f4ba3bc80114cec" kindref="member">NATURALBC</ref>)<sp/>);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(c<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Calculate<sp/>cubic<sp/>spline<sp/>coefficients,<sp/>i.e.<sp/>second<sp/>derivative.<sp/>For<sp/>each</highlight></codeline>
+<codeline lineno="44"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>grid<sp/>cell<sp/>i_x,<sp/>there<sp/>are<sp/>two<sp/>coefficients:<sp/>[f,<sp/>fxx].<sp/>Note<sp/>how<sp/>we<sp/>account</highlight></codeline>
+<codeline lineno="45"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>normalized<sp/>grid.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Cubic<sp/>spline<sp/>along<sp/>x,<sp/>using<sp/>f<sp/>values<sp/>to<sp/>get<sp/>fxx<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="spline_8h_1a080ba3923268c0bdd820b12025ce41f2" kindref="member">splinecomp</ref>(f,<sp/>n_x,<sp/>bc_x,<sp/>c);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i_x=0;<sp/>i_x&lt;n_x;<sp/>i_x++)<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Accounting<sp/>for<sp/>normalized<sp/>grid.<sp/>Affects<sp/>fxx,<sp/>but<sp/>not<sp/>f.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c[i_x*2<sp/>+<sp/>1]<sp/>=<sp/>c[i_x*2+1]<sp/>/<sp/>(x_grid*x_grid);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="interp_8h_1adc4f218db5d28d202df93de3764173be" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="interp1Dcomp_8c_1adc4f218db5d28d202df93de3764173be" kindref="member">interp1Dcomp_init_spline</ref>(<ref refid="structinterp1D__data" kindref="compound">interp1D_data</ref>*<sp/>str,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>c,</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n_x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bc_x,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>x_min,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>x_max)<sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Calculate<sp/>grid<sp/>interval.<sp/>For<sp/>periodic<sp/>boundary<sp/>condition,<sp/>grid<sp/>maximum</highlight></codeline>
+<codeline lineno="71"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>value<sp/>and<sp/>the<sp/>last<sp/>data<sp/>point<sp/>are<sp/>not<sp/>the<sp/>same.<sp/>Take<sp/>this<sp/>into<sp/>account</highlight></codeline>
+<codeline lineno="72"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>in<sp/>grid<sp/>interval.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>x_grid<sp/>=<sp/>(x_max<sp/>-<sp/>x_min)<sp/>/<sp/>(<sp/>n_x<sp/>-<sp/>1<sp/>*<sp/>(bc_x<sp/>==<sp/><ref refid="interp_8h_1a65e5120fbe667470941a6bd9258b97afa66bcb6506f4bbd571f4ba3bc80114cec" kindref="member">NATURALBC</ref>)<sp/>);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Initialize<sp/>the<sp/>interp1D_data<sp/>struct<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>str-&gt;<ref refid="structinterp1D__data_1aebc0758bbcc4410396b97fcbcfa50f1d" kindref="member">n_x</ref><sp/><sp/><sp/><sp/>=<sp/>n_x;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>str-&gt;<ref refid="structinterp1D__data_1aaf13a2d1d2fe888f1de96af247d13490" kindref="member">bc_x</ref><sp/><sp/><sp/>=<sp/>bc_x;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>str-&gt;<ref refid="structinterp1D__data_1a3d3444a909b74364c1b9f8060e7e9bbc" kindref="member">x_min</ref><sp/><sp/>=<sp/>x_min;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>str-&gt;<ref refid="structinterp1D__data_1a72a773aa0ecaf64e754ccc1e9c9a35de" kindref="member">x_max</ref><sp/><sp/>=<sp/>x_max;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>str-&gt;<ref refid="structinterp1D__data_1a823297276503ed68c35d9cba75381195" kindref="member">x_grid</ref><sp/>=<sp/>x_grid;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>str-&gt;<ref refid="structinterp1D__data_1acb5e93fb5726eb28b6ab7f1042c92e9c" kindref="member">c</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>c;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="interp_8h_1a8538298c3cbac4c00412413259c3274f" refkind="member"><highlight class="normal"><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref><sp/><ref refid="interp1Dcomp_8c_1a8538298c3cbac4c00412413259c3274f" kindref="member">interp1Dcomp_eval_f</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>f,<sp/><ref refid="structinterp1D__data" kindref="compound">interp1D_data</ref>*<sp/>str,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>x)<sp/>{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Make<sp/>sure<sp/>periodic<sp/>coordinates<sp/>are<sp/>within<sp/>[min,<sp/>max]<sp/>region.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(str-&gt;<ref refid="structinterp1D__data_1aaf13a2d1d2fe888f1de96af247d13490" kindref="member">bc_x</ref><sp/>==<sp/><ref refid="interp_8h_1a65e5120fbe667470941a6bd9258b97afa8b66be978239727ccd08c3060d18f72e" kindref="member">PERIODICBC</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x<sp/>=<sp/>fmod(x<sp/>-<sp/>str-&gt;<ref refid="structinterp1D__data_1a3d3444a909b74364c1b9f8060e7e9bbc" kindref="member">x_min</ref>,<sp/>str-&gt;<ref refid="structinterp1D__data_1a72a773aa0ecaf64e754ccc1e9c9a35de" kindref="member">x_max</ref><sp/>-<sp/>str-&gt;<ref refid="structinterp1D__data_1a3d3444a909b74364c1b9f8060e7e9bbc" kindref="member">x_min</ref>)<sp/>+<sp/>str-&gt;<ref refid="structinterp1D__data_1a3d3444a909b74364c1b9f8060e7e9bbc" kindref="member">x_min</ref>;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x<sp/>=<sp/>x<sp/>+<sp/>(x<sp/>&lt;<sp/>str-&gt;<ref refid="structinterp1D__data_1a3d3444a909b74364c1b9f8060e7e9bbc" kindref="member">x_min</ref>)<sp/>*<sp/>(str-&gt;<ref refid="structinterp1D__data_1a72a773aa0ecaf64e754ccc1e9c9a35de" kindref="member">x_max</ref><sp/>-<sp/>str-&gt;<ref refid="structinterp1D__data_1a3d3444a909b74364c1b9f8060e7e9bbc" kindref="member">x_min</ref>);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Index<sp/>for<sp/>x<sp/>variable.<sp/>The<sp/>-1<sp/>needed<sp/>at<sp/>exactly<sp/>grid<sp/>end.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i_x<sp/><sp/><sp/>=<sp/>(x-str-&gt;<ref refid="structinterp1D__data_1a3d3444a909b74364c1b9f8060e7e9bbc" kindref="member">x_min</ref>)<sp/>/<sp/>str-&gt;<ref refid="structinterp1D__data_1a823297276503ed68c35d9cba75381195" kindref="member">x_grid</ref><sp/>-<sp/>1*(x==str-&gt;<ref refid="structinterp1D__data_1a72a773aa0ecaf64e754ccc1e9c9a35de" kindref="member">x_max</ref>);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Normalized<sp/>x<sp/>coordinate<sp/>in<sp/>current<sp/>cell<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>dx<sp/><sp/><sp/>=<sp/>(<sp/>x<sp/>-<sp/>(str-&gt;<ref refid="structinterp1D__data_1a3d3444a909b74364c1b9f8060e7e9bbc" kindref="member">x_min</ref><sp/>+<sp/>i_x*str-&gt;<ref refid="structinterp1D__data_1a823297276503ed68c35d9cba75381195" kindref="member">x_grid</ref>)<sp/>)<sp/>/<sp/>str-&gt;<ref refid="structinterp1D__data_1a823297276503ed68c35d9cba75381195" kindref="member">x_grid</ref>;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Helper<sp/>varibles<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>dx3<sp/><sp/>=<sp/><sp/>dx<sp/>*<sp/>(dx*dx<sp/>-<sp/>1.0);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>dxi<sp/><sp/>=<sp/>1.0<sp/>-<sp/>dx;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>dxi3<sp/>=<sp/>dxi<sp/>*<sp/>(dxi*dxi<sp/>-<sp/>1.0);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>xg2<sp/><sp/>=<sp/>str-&gt;<ref refid="structinterp1D__data_1a823297276503ed68c35d9cba75381195" kindref="member">x_grid</ref>*str-&gt;<ref refid="structinterp1D__data_1a823297276503ed68c35d9cba75381195" kindref="member">x_grid</ref>;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n<sp/><sp/>=<sp/>i_x*2;<sp/></highlight><highlight class="comment">/*<sp/>Index<sp/>jump<sp/>to<sp/>cell<sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x1<sp/>=<sp/>2;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Index<sp/>jump<sp/>one<sp/>x<sp/>forward<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>err<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Enforce<sp/>periodic<sp/>BC<sp/>or<sp/>check<sp/>that<sp/>the<sp/>coordinate<sp/>is<sp/>within<sp/>the<sp/>grid.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>str-&gt;<ref refid="structinterp1D__data_1aaf13a2d1d2fe888f1de96af247d13490" kindref="member">bc_x</ref><sp/>==<sp/><ref refid="interp_8h_1a65e5120fbe667470941a6bd9258b97afa8b66be978239727ccd08c3060d18f72e" kindref="member">PERIODICBC</ref><sp/>&amp;&amp;<sp/>i_x<sp/>==<sp/>str-&gt;<ref refid="structinterp1D__data_1aebc0758bbcc4410396b97fcbcfa50f1d" kindref="member">n_x</ref>-1<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x1<sp/>=<sp/>-(str-&gt;<ref refid="structinterp1D__data_1aebc0758bbcc4410396b97fcbcfa50f1d" kindref="member">n_x</ref>-1)*x1;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>str-&gt;<ref refid="structinterp1D__data_1aaf13a2d1d2fe888f1de96af247d13490" kindref="member">bc_x</ref><sp/>==<sp/><ref refid="interp_8h_1a65e5120fbe667470941a6bd9258b97afa66bcb6506f4bbd571f4ba3bc80114cec" kindref="member">NATURALBC</ref><sp/>&amp;&amp;<sp/>!(x<sp/>&gt;=<sp/>str-&gt;<ref refid="structinterp1D__data_1a3d3444a909b74364c1b9f8060e7e9bbc" kindref="member">x_min</ref><sp/>&amp;&amp;<sp/>x<sp/>&lt;=<sp/>str-&gt;x_max)<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!err)<sp/>{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*f<sp/>=</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dxi<sp/>*str-&gt;<ref refid="structinterp1D__data_1acb5e93fb5726eb28b6ab7f1042c92e9c" kindref="member">c</ref>[n+0]+dx<sp/>*str-&gt;<ref refid="structinterp1D__data_1acb5e93fb5726eb28b6ab7f1042c92e9c" kindref="member">c</ref>[n+x1+0]</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+(xg2/6)*(dxi3*str-&gt;<ref refid="structinterp1D__data_1acb5e93fb5726eb28b6ab7f1042c92e9c" kindref="member">c</ref>[n+1]+dx3*str-&gt;<ref refid="structinterp1D__data_1acb5e93fb5726eb28b6ab7f1042c92e9c" kindref="member">c</ref>[n+x1+1]);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>err;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154" refid="interp_8h_1ab427cc5f47adedb5e377b8ad9f96189f" refkind="member"><highlight class="normal"><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref><sp/><ref refid="interp1Dcomp_8c_1ab427cc5f47adedb5e377b8ad9f96189f" kindref="member">interp1Dcomp_eval_df</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>f_df,<sp/><ref refid="structinterp1D__data" kindref="compound">interp1D_data</ref>*<sp/>str,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>x)<sp/>{</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Make<sp/>sure<sp/>periodic<sp/>coordinates<sp/>are<sp/>within<sp/>[min,<sp/>max]<sp/>region.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(str-&gt;<ref refid="structinterp1D__data_1aaf13a2d1d2fe888f1de96af247d13490" kindref="member">bc_x</ref><sp/>==<sp/><ref refid="interp_8h_1a65e5120fbe667470941a6bd9258b97afa8b66be978239727ccd08c3060d18f72e" kindref="member">PERIODICBC</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x<sp/>=<sp/>fmod(x<sp/>-<sp/>str-&gt;<ref refid="structinterp1D__data_1a3d3444a909b74364c1b9f8060e7e9bbc" kindref="member">x_min</ref>,<sp/>str-&gt;<ref refid="structinterp1D__data_1a72a773aa0ecaf64e754ccc1e9c9a35de" kindref="member">x_max</ref><sp/>-<sp/>str-&gt;<ref refid="structinterp1D__data_1a3d3444a909b74364c1b9f8060e7e9bbc" kindref="member">x_min</ref>)<sp/>+<sp/>str-&gt;<ref refid="structinterp1D__data_1a3d3444a909b74364c1b9f8060e7e9bbc" kindref="member">x_min</ref>;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x<sp/>=<sp/>x<sp/>+<sp/>(x<sp/>&lt;<sp/>str-&gt;<ref refid="structinterp1D__data_1a3d3444a909b74364c1b9f8060e7e9bbc" kindref="member">x_min</ref>)<sp/>*<sp/>(str-&gt;<ref refid="structinterp1D__data_1a72a773aa0ecaf64e754ccc1e9c9a35de" kindref="member">x_max</ref><sp/>-<sp/>str-&gt;<ref refid="structinterp1D__data_1a3d3444a909b74364c1b9f8060e7e9bbc" kindref="member">x_min</ref>);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i_x<sp/><sp/><sp/><sp/><sp/>=<sp/>(x<sp/>-<sp/>str-&gt;<ref refid="structinterp1D__data_1a3d3444a909b74364c1b9f8060e7e9bbc" kindref="member">x_min</ref>)<sp/>/<sp/>str-&gt;<ref refid="structinterp1D__data_1a823297276503ed68c35d9cba75381195" kindref="member">x_grid</ref><sp/>-<sp/>1*(x==str-&gt;<ref refid="structinterp1D__data_1a72a773aa0ecaf64e754ccc1e9c9a35de" kindref="member">x_max</ref>);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>dx<sp/><sp/><sp/><sp/><sp/>=<sp/>(<sp/>x<sp/>-<sp/>(str-&gt;<ref refid="structinterp1D__data_1a3d3444a909b74364c1b9f8060e7e9bbc" kindref="member">x_min</ref><sp/>+<sp/>i_x*str-&gt;<ref refid="structinterp1D__data_1a823297276503ed68c35d9cba75381195" kindref="member">x_grid</ref>)<sp/>)<sp/>/<sp/>str-&gt;<ref refid="structinterp1D__data_1a823297276503ed68c35d9cba75381195" kindref="member">x_grid</ref>;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Helper<sp/>varibles<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>dx3<sp/><sp/><sp/><sp/>=<sp/><sp/>dx<sp/>*<sp/>(dx*dx<sp/>-<sp/>1.0);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>dx3dx<sp/><sp/>=<sp/>3*dx*dx<sp/>-<sp/>1;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>dxi<sp/><sp/><sp/><sp/>=<sp/>1.0<sp/>-<sp/>dx;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>dxi3<sp/><sp/><sp/>=<sp/>dxi<sp/>*<sp/>(dxi*dxi<sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>dxi3dx<sp/>=<sp/>-3*dxi*dxi<sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>xg<sp/><sp/><sp/><sp/><sp/>=<sp/>str-&gt;<ref refid="structinterp1D__data_1a823297276503ed68c35d9cba75381195" kindref="member">x_grid</ref>;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>xg2<sp/><sp/><sp/><sp/>=<sp/>xg*xg;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>xgi<sp/><sp/><sp/><sp/>=<sp/>1.0<sp/>/<sp/>xg;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n<sp/><sp/>=<sp/>i_x*2;<sp/></highlight><highlight class="comment">/*<sp/>Index<sp/>jump<sp/>to<sp/>cell<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x1<sp/>=<sp/>2;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Index<sp/>jump<sp/>one<sp/>x<sp/>forward<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>err<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Enforce<sp/>periodic<sp/>BC<sp/>or<sp/>check<sp/>that<sp/>the<sp/>coordinate<sp/>is<sp/>within<sp/>the<sp/>grid.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>str-&gt;<ref refid="structinterp1D__data_1aaf13a2d1d2fe888f1de96af247d13490" kindref="member">bc_x</ref><sp/>==<sp/><ref refid="interp_8h_1a65e5120fbe667470941a6bd9258b97afa8b66be978239727ccd08c3060d18f72e" kindref="member">PERIODICBC</ref><sp/>&amp;&amp;<sp/>i_x<sp/>==<sp/>str-&gt;<ref refid="structinterp1D__data_1aebc0758bbcc4410396b97fcbcfa50f1d" kindref="member">n_x</ref>-1<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x1<sp/>=<sp/>-(str-&gt;<ref refid="structinterp1D__data_1aebc0758bbcc4410396b97fcbcfa50f1d" kindref="member">n_x</ref>-1)*x1;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>str-&gt;<ref refid="structinterp1D__data_1aaf13a2d1d2fe888f1de96af247d13490" kindref="member">bc_x</ref><sp/>==<sp/><ref refid="interp_8h_1a65e5120fbe667470941a6bd9258b97afa66bcb6506f4bbd571f4ba3bc80114cec" kindref="member">NATURALBC</ref><sp/>&amp;&amp;<sp/>!(x<sp/>&gt;=<sp/>str-&gt;<ref refid="structinterp1D__data_1a3d3444a909b74364c1b9f8060e7e9bbc" kindref="member">x_min</ref><sp/>&amp;&amp;<sp/>x<sp/>&lt;=<sp/>str-&gt;x_max)<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!err)<sp/>{</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>f<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f_df[0]<sp/>=</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dxi<sp/>*str-&gt;<ref refid="structinterp1D__data_1acb5e93fb5726eb28b6ab7f1042c92e9c" kindref="member">c</ref>[n+0]+dx<sp/>*str-&gt;<ref refid="structinterp1D__data_1acb5e93fb5726eb28b6ab7f1042c92e9c" kindref="member">c</ref>[n+x1+0]</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+(xg2/6)*(dxi3*str-&gt;<ref refid="structinterp1D__data_1acb5e93fb5726eb28b6ab7f1042c92e9c" kindref="member">c</ref>[n+1]+dx3*str-&gt;<ref refid="structinterp1D__data_1acb5e93fb5726eb28b6ab7f1042c92e9c" kindref="member">c</ref>[n+x1+1]);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>df/dx<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f_df[1]<sp/>=</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>xgi*(str-&gt;<ref refid="structinterp1D__data_1acb5e93fb5726eb28b6ab7f1042c92e9c" kindref="member">c</ref>[n+x1+0]-<sp/><sp/><sp/><sp/><sp/><sp/><sp/>str-&gt;<ref refid="structinterp1D__data_1acb5e93fb5726eb28b6ab7f1042c92e9c" kindref="member">c</ref>[n+0])</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+(xg/6)*(dx3dx*str-&gt;<ref refid="structinterp1D__data_1acb5e93fb5726eb28b6ab7f1042c92e9c" kindref="member">c</ref>[n+x1+1]+dxi3dx*str-&gt;<ref refid="structinterp1D__data_1acb5e93fb5726eb28b6ab7f1042c92e9c" kindref="member">c</ref>[n+1]);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>d2f/dx2<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f_df[2]<sp/>=<sp/>dxi*str-&gt;<ref refid="structinterp1D__data_1acb5e93fb5726eb28b6ab7f1042c92e9c" kindref="member">c</ref>[n+1]+dx*str-&gt;<ref refid="structinterp1D__data_1acb5e93fb5726eb28b6ab7f1042c92e9c" kindref="member">c</ref>[n+x1+1];</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>err;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="spline/interp1Dcomp.c"/>
+  </compounddef>
+</doxygen>

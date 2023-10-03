@@ -1,0 +1,918 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="mhd__stat_8c" kind="file" language="C++">
+    <compoundname>mhd_stat.c</compoundname>
+    <includes local="no">stdlib.h</includes>
+    <includes refid="ascot5_8h" local="yes">../ascot5.h</includes>
+    <includes refid="print_8h" local="yes">../print.h</includes>
+    <includes refid="error_8h" local="yes">../error.h</includes>
+    <includes refid="boozer_8h" local="yes">../boozer.h</includes>
+    <includes refid="interp_8h" local="yes">../spline/interp.h</includes>
+    <includes refid="B__field_8h" local="yes">../B_field.h</includes>
+    <includes refid="math_8h" local="yes">../math.h</includes>
+    <includes refid="mhd_8h" local="yes">../mhd.h</includes>
+    <includes refid="mhd__stat_8h" local="yes">mhd_stat.h</includes>
+    <incdepgraph>
+      <node id="14">
+        <label>../spline/interp.h</label>
+        <link refid="interp_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>Bfield/B_GS.h</label>
+        <link refid="B__GS_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>mhd/mhd_nonstat.h</label>
+        <link refid="mhd__nonstat_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stdlib.h</label>
+      </node>
+      <node id="4">
+        <label>omp.h</label>
+      </node>
+      <node id="11">
+        <label>B_field.h</label>
+        <link refid="B__field_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>mhd/mhd_stat.c</label>
+        <link refid="mhd__stat_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>mhd/mhd_stat.h</label>
+        <link refid="mhd__stat_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>../error.h</label>
+        <link refid="error_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>time.h</label>
+      </node>
+      <node id="18">
+        <label>Bfield/B_TC.h</label>
+        <link refid="B__TC_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>../linint/linint.h</label>
+        <link refid="linint_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>Bfield/B_2DS.h</label>
+        <link refid="B__2DS_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>../mhd.h</label>
+        <link refid="mhd_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>../boozer.h</label>
+        <link refid="boozer_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>Bfield/B_3DS.h</label>
+        <link refid="B__3DS_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>math.h</label>
+        <link refid="math_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>stdio.h</label>
+      </node>
+      <node id="16">
+        <label>Bfield/B_STS.h</label>
+        <link refid="B__STS_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>../print.h</label>
+        <link refid="print_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>../ascot5.h</label>
+        <link refid="ascot5_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="mhd__stat_8c_1ac5996ebe06a8c655fa616339b6bb69df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mhd_stat_init_offload</definition>
+        <argsstring>(mhd_stat_offload_data *offload_data, real **offload_array)</argsstring>
+        <name>mhd_stat_init_offload</name>
+        <param>
+          <type><ref refid="structmhd__stat__offload__data" kindref="compound">mhd_stat_offload_data</ref> *</type>
+          <declname>offload_data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> **</type>
+          <declname>offload_array</declname>
+        </param>
+        <briefdescription>
+<para>Load MHD data and prepare parameters for offload. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function fills the MHD offload struct with parameters and allocates and fills the offload array. Sets offload array length in the offload struct.</para>
+<para>It is assumed that the offload_data struct is completely filled before calling this function (except for the offload_array_length and rhogrid). Furthermore, offload array should contain following data:</para>
+<para><itemizedlist>
+<listitem><para>offload_array[j*nrho + i] : alpha(mode_j, rho_i).</para>
+</listitem><listitem><para>offload_array[n_modes*nrho + j*nrho + i] : phi(mode_j, rho_i).</para>
+</listitem></itemizedlist>
+</para>
+<para>1D splines are constructed here and stored to offload array which is reallocated.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>offload_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to pointer to offload array</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>zero if initialization succeeded. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mhd/mhd_stat.c" line="37" column="5" bodyfile="mhd/mhd_stat.c" bodystart="37" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="mhd__stat_8c_1a018676d10b4c1d541e99dd65b5e6825e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mhd_stat_free_offload</definition>
+        <argsstring>(mhd_stat_offload_data *offload_data, real **offload_array)</argsstring>
+        <name>mhd_stat_free_offload</name>
+        <param>
+          <type><ref refid="structmhd__stat__offload__data" kindref="compound">mhd_stat_offload_data</ref> *</type>
+          <declname>offload_data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> **</type>
+          <declname>offload_array</declname>
+        </param>
+        <briefdescription>
+<para>Free offload array. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>offload_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to pointer to offload array </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mhd/mhd_stat.c" line="100" column="6" bodyfile="mhd/mhd_stat.c" bodystart="100" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="mhd__stat_8c_1afe7453198ce750d0ddcd5cd69d2959c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mhd_stat_init</definition>
+        <argsstring>(mhd_stat_data *mhddata, mhd_stat_offload_data *offload_data, real *offload_array)</argsstring>
+        <name>mhd_stat_init</name>
+        <param>
+          <type><ref refid="structmhd__stat__data" kindref="compound">mhd_stat_data</ref> *</type>
+          <declname>mhddata</declname>
+        </param>
+        <param>
+          <type><ref refid="structmhd__stat__offload__data" kindref="compound">mhd_stat_offload_data</ref> *</type>
+          <declname>offload_data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>offload_array</declname>
+        </param>
+        <briefdescription>
+<para>Initialize MHD data struct on target. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mhddata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to data struct on target </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload array </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mhd/mhd_stat.c" line="112" column="6" bodyfile="mhd/mhd_stat.c" bodystart="112" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="mhd__stat_8c_1a942de062f19ef52b392c7298028d6952" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref></type>
+        <definition>a5err mhd_stat_eval</definition>
+        <argsstring>(real mhd_dmhd[10], real r, real phi, real z, real t, int includemode, boozer_data *boozerdata, mhd_stat_data *mhddata, B_field_data *Bdata)</argsstring>
+        <name>mhd_stat_eval</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>mhd_dmhd</declname>
+          <array>[10]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>phi</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>includemode</declname>
+        </param>
+        <param>
+          <type><ref refid="structboozer__data" kindref="compound">boozer_data</ref> *</type>
+          <declname>boozerdata</declname>
+        </param>
+        <param>
+          <type><ref refid="structmhd__stat__data" kindref="compound">mhd_stat_data</ref> *</type>
+          <declname>mhddata</declname>
+        </param>
+        <param>
+          <type><ref refid="structB__field__data" kindref="compound">B_field_data</ref> *</type>
+          <declname>Bdata</declname>
+        </param>
+        <briefdescription>
+<para>Evaluate the needed quantities from MHD mode for orbit following. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The quantities to be evaluated are alpha, phi, grad alpha, grad phi, partial t alpha, partial t phi</para>
+<para>The values are stored in the given array as:<itemizedlist>
+<listitem><para>mhd_dmhd[0] = alpha</para>
+</listitem><listitem><para>mhd_dmhd[1] = dalpha/dt</para>
+</listitem><listitem><para>mhd_dmhd[2] = grad alpha, r component</para>
+</listitem><listitem><para>mhd_dmhd[3] = grad alpha, phi component</para>
+</listitem><listitem><para>mhd_dmhd[4] = grad alpha, z component</para>
+</listitem><listitem><para>mhd_dmhd[5] = phi</para>
+</listitem><listitem><para>mhd_dmhd[6] = dphi/dt</para>
+</listitem><listitem><para>mhd_dmhd[7] = grad phi, r component</para>
+</listitem><listitem><para>mhd_dmhd[8] = grad phi, phi component</para>
+</listitem><listitem><para>mhd_dmhd[9] = grad phi, z component</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mhd_dmhd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>R coordinate [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>phi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>phi coordinate [rad] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>z coordinate [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>time coordinate [s] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>includemode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>mode number to include or MHD_INCLUDE_ALL </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>boozerdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to boozer data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mhddata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to mhd data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Bdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to magnetic field data</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Non-zero a5err value if evaluation failed, zero otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mhd/mhd_stat.c" line="174" column="7" bodyfile="mhd/mhd_stat.c" bodystart="174" bodyend="267"/>
+      </memberdef>
+      <memberdef kind="function" id="mhd__stat_8c_1a7d6428e4aefd0cf39446bb7c428f92bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref></type>
+        <definition>a5err mhd_stat_perturbations</definition>
+        <argsstring>(real pert_field[7], real r, real phi, real z, real t, int pertonly, int includemode, boozer_data *boozerdata, mhd_stat_data *mhddata, B_field_data *Bdata)</argsstring>
+        <name>mhd_stat_perturbations</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>pert_field</declname>
+          <array>[7]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>phi</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pertonly</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>includemode</declname>
+        </param>
+        <param>
+          <type><ref refid="structboozer__data" kindref="compound">boozer_data</ref> *</type>
+          <declname>boozerdata</declname>
+        </param>
+        <param>
+          <type><ref refid="structmhd__stat__data" kindref="compound">mhd_stat_data</ref> *</type>
+          <declname>mhddata</declname>
+        </param>
+        <param>
+          <type><ref refid="structB__field__data" kindref="compound">B_field_data</ref> *</type>
+          <declname>Bdata</declname>
+        </param>
+        <briefdescription>
+<para>Evaluate perturbed fields Btilde, Etilde and potential Phi explicitly. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The values are stored in the given array as<itemizedlist>
+<listitem><para>pert_field[0] = BtildeR</para>
+</listitem><listitem><para>pert_field[1] = BtildePhi</para>
+</listitem><listitem><para>pert_field[2] = BtildeZ</para>
+</listitem><listitem><para>pert_field[3] = EtildeR</para>
+</listitem><listitem><para>pert_field[4] = EtildePhi</para>
+</listitem><listitem><para>pert_field[5] = EtildeZ</para>
+</listitem><listitem><para>pert_field[6] = Phi</para>
+</listitem></itemizedlist>
+</para>
+<para>Only the perturbation values for the magnetic field are returned if pertonly=1, otherwise, the total perturbed field is returned. This is done to avoid double evaluation of the magnetic field e.g. in field line tracing. For electric field only the perturbation component is returned always.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pert_field</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>perturbation field components </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>R coordinate [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>phi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>phi coordinate [rad] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>z coordinate [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>time coordinate [s] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pertonly</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>flag whether to return the whole field or only perturbation </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>includemode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>mode number to include or MHD_INCLUDE_ALL </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>boozerdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to boozer data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mhddata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to mhd data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Bdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to magnetic field data</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Non-zero a5err value if evaluation failed, zero otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mhd/mhd_stat.c" line="299" column="7" bodyfile="mhd/mhd_stat.c" bodystart="299" bodyend="352"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>MHD module for stationary amplitudes (eigenmodes). </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../ascot5.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../print.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../error.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../boozer.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../spline/interp.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../B_field.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../math.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../mhd.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mhd__stat_8h" kindref="compound">mhd_stat.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="mhd__stat_8c_1ac5996ebe06a8c655fa616339b6bb69df" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="mhd__stat_8c_1ac5996ebe06a8c655fa616339b6bb69df" kindref="member">mhd_stat_init_offload</ref>(<ref refid="structmhd__stat__offload__data" kindref="compound">mhd_stat_offload_data</ref>*<sp/>offload_data,</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>**<sp/>offload_array)<sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Allocate<sp/>array<sp/>for<sp/>storing<sp/>1D<sp/>spline<sp/>coefficients<sp/>for<sp/>two<sp/>quantities</highlight></codeline>
+<codeline lineno="41"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>for<sp/>each<sp/>mode<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>coeff_array<sp/>=<sp/>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*)malloc(2<sp/>*<sp/>NSIZE_COMP1D<sp/>*<sp/>offload_data-&gt;<ref refid="structmhd__stat__offload__data_1aa8a9d50017bb2bd88b62ab51e3ff5c42" kindref="member">n_modes</ref></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>offload_data-&gt;<ref refid="structmhd__stat__offload__data_1a883fce76ab3aba6a28c86391e86b26ae" kindref="member">nrho</ref><sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>));</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Go<sp/>through<sp/>all<sp/>modes,<sp/>and<sp/>evaluate<sp/>and<sp/>store<sp/>coefficients<sp/>for<sp/>each<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>err<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>datasize<sp/>=<sp/>offload_data-&gt;<ref refid="structmhd__stat__offload__data_1a883fce76ab3aba6a28c86391e86b26ae" kindref="member">nrho</ref>;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n_modes<sp/><sp/>=<sp/>offload_data-&gt;<ref refid="structmhd__stat__offload__data_1aa8a9d50017bb2bd88b62ab51e3ff5c42" kindref="member">n_modes</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j=0;<sp/>j&lt;offload_data-&gt;<ref refid="structmhd__stat__offload__data_1aa8a9d50017bb2bd88b62ab51e3ff5c42" kindref="member">n_modes</ref>;<sp/>j++)<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>alpha_nm<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>+=<sp/><ref refid="interp_8h_1a6c87dd1ad481b5793feef24bb410ed42" kindref="member">interp1Dcomp_init_coeff</ref>(</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;coeff_array[NSIZE_COMP1D<sp/>*<sp/>datasize<sp/>*<sp/>j],</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;(*offload_array)[j*datasize],</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structmhd__stat__offload__data_1a883fce76ab3aba6a28c86391e86b26ae" kindref="member">nrho</ref>,</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="interp_8h_1a65e5120fbe667470941a6bd9258b97afa66bcb6506f4bbd571f4ba3bc80114cec" kindref="member">NATURALBC</ref>,</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structmhd__stat__offload__data_1aa5904b8b39ca9ab86989a90d969694e5" kindref="member">rho_min</ref>,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structmhd__stat__offload__data_1ac0a9648e97ce29413f24b197cc212dc7" kindref="member">rho_max</ref>);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>phi_nm<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>+=<sp/><ref refid="interp_8h_1a6c87dd1ad481b5793feef24bb410ed42" kindref="member">interp1Dcomp_init_coeff</ref>(</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;coeff_array[NSIZE_COMP1D<sp/>*<sp/>datasize<sp/>*<sp/>(n_modes<sp/>+<sp/>j)],</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;(*offload_array)[(n_modes<sp/>+<sp/>j)*datasize],</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structmhd__stat__offload__data_1a883fce76ab3aba6a28c86391e86b26ae" kindref="member">nrho</ref>,</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="interp_8h_1a65e5120fbe667470941a6bd9258b97afa66bcb6506f4bbd571f4ba3bc80114cec" kindref="member">NATURALBC</ref>,</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structmhd__stat__offload__data_1aa5904b8b39ca9ab86989a90d969694e5" kindref="member">rho_min</ref>,</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structmhd__stat__offload__data_1ac0a9648e97ce29413f24b197cc212dc7" kindref="member">rho_max</ref>);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>free(*offload_array);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>*offload_array<sp/>=<sp/>coeff_array;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structmhd__stat__offload__data_1abb6954ccd17eccc2b97121237d26849f" kindref="member">offload_array_length</ref><sp/>=<sp/>2<sp/>*<sp/>NSIZE_COMP1D</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>offload_data-&gt;<ref refid="structmhd__stat__offload__data_1aa8a9d50017bb2bd88b62ab51e3ff5c42" kindref="member">n_modes</ref><sp/>*<sp/>offload_data-&gt;<ref refid="structmhd__stat__offload__data_1a883fce76ab3aba6a28c86391e86b26ae" kindref="member">nrho</ref>;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Print<sp/>some<sp/>sanity<sp/>check<sp/>on<sp/>data<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="print_8h_1a8520c71eb5db223009e5079e420bc398" kindref="member">print_out</ref>(VERBOSE_IO,<sp/></highlight><highlight class="stringliteral">&quot;\nMHD<sp/>(stationary)<sp/>input\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="print_8h_1a8520c71eb5db223009e5079e420bc398" kindref="member">print_out</ref>(VERBOSE_IO,<sp/></highlight><highlight class="stringliteral">&quot;Grid:<sp/>nrho<sp/>=<sp/>%4.d<sp/>rhomin<sp/>=<sp/>%3.3f<sp/>rhomax<sp/>=<sp/>%3.3f\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structmhd__stat__offload__data_1a883fce76ab3aba6a28c86391e86b26ae" kindref="member">nrho</ref>,</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structmhd__stat__offload__data_1aa5904b8b39ca9ab86989a90d969694e5" kindref="member">rho_min</ref>,<sp/>offload_data-&gt;<ref refid="structmhd__stat__offload__data_1ac0a9648e97ce29413f24b197cc212dc7" kindref="member">rho_max</ref>);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="print_8h_1a8520c71eb5db223009e5079e420bc398" kindref="member">print_out</ref>(VERBOSE_IO,<sp/></highlight><highlight class="stringliteral">&quot;\nModes:\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j=0;<sp/>j&lt;n_modes;<sp/>j++)<sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="print_8h_1a8520c71eb5db223009e5079e420bc398" kindref="member">print_out</ref>(VERBOSE_IO,</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;(n,m)<sp/>=<sp/>(%2.d,%2.d)<sp/>Amplitude<sp/>=<sp/>%3.3g<sp/>Frequency<sp/>=<sp/>%3.3g&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>Phase<sp/>=<sp/>%3.3g\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structmhd__stat__offload__data_1ac88d9d87e216a10764c7cf68f8d8c5d6" kindref="member">nmode</ref>[j],<sp/>offload_data-&gt;<ref refid="structmhd__stat__offload__data_1aa4fad7b6132eb38469ebe6b6c8b18ad1" kindref="member">mmode</ref>[j],</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structmhd__stat__offload__data_1ae023c7e160d552e443bc7cd4a72a26f7" kindref="member">amplitude_nm</ref>[j],<sp/>offload_data-&gt;<ref refid="structmhd__stat__offload__data_1aed7450f5f047de388f95adefe39ac0ed" kindref="member">omega_nm</ref>[j],</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structmhd__stat__offload__data_1aace9659f6f2090e1ed9667a6d67f7f09" kindref="member">phase_nm</ref>[j]);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>err;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="mhd__stat_8c_1a018676d10b4c1d541e99dd65b5e6825e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="mhd__stat_8c_1a018676d10b4c1d541e99dd65b5e6825e" kindref="member">mhd_stat_free_offload</ref>(<ref refid="structmhd__stat__offload__data" kindref="compound">mhd_stat_offload_data</ref>*<sp/>offload_data,</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>**<sp/>offload_array)<sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>free(*offload_array);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112" refid="mhd__stat_8c_1afe7453198ce750d0ddcd5cd69d2959c9" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="mhd__stat_8c_1afe7453198ce750d0ddcd5cd69d2959c9" kindref="member">mhd_stat_init</ref>(<ref refid="structmhd__stat__data" kindref="compound">mhd_stat_data</ref>*<sp/>mhddata,<sp/><ref refid="structmhd__stat__offload__data" kindref="compound">mhd_stat_offload_data</ref>*<sp/>offload_data,</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>offload_array)<sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>mhddata-&gt;<ref refid="structmhd__stat__data_1adc48cc83de70a5fdb05d2ed7f03203c2" kindref="member">n_modes</ref><sp/>=<sp/>offload_data-&gt;<ref refid="structmhd__stat__offload__data_1aa8a9d50017bb2bd88b62ab51e3ff5c42" kindref="member">n_modes</ref>;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>mhddata-&gt;<ref refid="structmhd__stat__data_1ad4443d08e61d36f7c7d7c856fab50a0c" kindref="member">rho_min</ref><sp/>=<sp/>offload_data-&gt;<ref refid="structmhd__stat__offload__data_1aa5904b8b39ca9ab86989a90d969694e5" kindref="member">rho_min</ref>;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>mhddata-&gt;<ref refid="structmhd__stat__data_1a1de5086b2d5fadcaa39ea948937ece22" kindref="member">rho_max</ref><sp/>=<sp/>offload_data-&gt;<ref refid="structmhd__stat__offload__data_1ac0a9648e97ce29413f24b197cc212dc7" kindref="member">rho_max</ref>;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n_modes<sp/><sp/>=<sp/>offload_data-&gt;<ref refid="structmhd__stat__offload__data_1aa8a9d50017bb2bd88b62ab51e3ff5c42" kindref="member">n_modes</ref>;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>datasize<sp/>=<sp/>NSIZE_COMP1D<sp/>*<sp/>offload_data-&gt;<ref refid="structmhd__stat__offload__data_1a883fce76ab3aba6a28c86391e86b26ae" kindref="member">nrho</ref>;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j=0;<sp/>j&lt;mhddata-&gt;<ref refid="structmhd__stat__data_1adc48cc83de70a5fdb05d2ed7f03203c2" kindref="member">n_modes</ref>;<sp/>j++)<sp/>{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mhddata-&gt;<ref refid="structmhd__stat__data_1a90c72499bd8e4be37bec59f46e682738" kindref="member">nmode</ref>[j]<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>offload_data-&gt;<ref refid="structmhd__stat__offload__data_1ac88d9d87e216a10764c7cf68f8d8c5d6" kindref="member">nmode</ref>[j];</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mhddata-&gt;<ref refid="structmhd__stat__data_1a3fae4550f2667c0cf85a5780b1fe5116" kindref="member">mmode</ref>[j]<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>offload_data-&gt;<ref refid="structmhd__stat__offload__data_1aa4fad7b6132eb38469ebe6b6c8b18ad1" kindref="member">mmode</ref>[j];</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mhddata-&gt;<ref refid="structmhd__stat__data_1a319076f998df3295d6f1e56444ba50f4" kindref="member">amplitude_nm</ref>[j]<sp/>=<sp/>offload_data-&gt;<ref refid="structmhd__stat__offload__data_1ae023c7e160d552e443bc7cd4a72a26f7" kindref="member">amplitude_nm</ref>[j];</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mhddata-&gt;<ref refid="structmhd__stat__data_1ae8ed0c8228b3e73796baf4a7a7b10ba1" kindref="member">omega_nm</ref>[j]<sp/><sp/><sp/><sp/><sp/>=<sp/>offload_data-&gt;<ref refid="structmhd__stat__offload__data_1aed7450f5f047de388f95adefe39ac0ed" kindref="member">omega_nm</ref>[j];</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mhddata-&gt;<ref refid="structmhd__stat__data_1a64bba4355a78ae84d39aed87289b867a" kindref="member">phase_nm</ref>[j]<sp/><sp/><sp/><sp/><sp/>=<sp/>offload_data-&gt;<ref refid="structmhd__stat__offload__data_1aace9659f6f2090e1ed9667a6d67f7f09" kindref="member">phase_nm</ref>[j];</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="interp_8h_1adc4f218db5d28d202df93de3764173be" kindref="member">interp1Dcomp_init_spline</ref>(&amp;(mhddata-&gt;<ref refid="structmhd__stat__data_1ae97de019c3dbf3888a0e5f4b27979ff6" kindref="member">alpha_nm</ref>[j]),</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;(offload_array[j*datasize]),</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structmhd__stat__offload__data_1a883fce76ab3aba6a28c86391e86b26ae" kindref="member">nrho</ref>,</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="interp_8h_1a65e5120fbe667470941a6bd9258b97afa66bcb6506f4bbd571f4ba3bc80114cec" kindref="member">NATURALBC</ref>,</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structmhd__stat__offload__data_1aa5904b8b39ca9ab86989a90d969694e5" kindref="member">rho_min</ref>,<sp/>offload_data-&gt;<ref refid="structmhd__stat__offload__data_1ac0a9648e97ce29413f24b197cc212dc7" kindref="member">rho_max</ref>);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="interp_8h_1adc4f218db5d28d202df93de3764173be" kindref="member">interp1Dcomp_init_spline</ref>(&amp;(mhddata-&gt;<ref refid="structmhd__stat__data_1a8c88a603f842fc99f67bf5bf60070c2f" kindref="member">phi_nm</ref>[j]),</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;(offload_array[(n_modes<sp/>+<sp/>j)*datasize]),</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structmhd__stat__offload__data_1a883fce76ab3aba6a28c86391e86b26ae" kindref="member">nrho</ref>,</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="interp_8h_1a65e5120fbe667470941a6bd9258b97afa66bcb6506f4bbd571f4ba3bc80114cec" kindref="member">NATURALBC</ref>,</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structmhd__stat__offload__data_1aa5904b8b39ca9ab86989a90d969694e5" kindref="member">rho_min</ref>,<sp/>offload_data-&gt;<ref refid="structmhd__stat__offload__data_1ac0a9648e97ce29413f24b197cc212dc7" kindref="member">rho_max</ref>);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174" refid="mhd__stat_8c_1a942de062f19ef52b392c7298028d6952" refkind="member"><highlight class="normal"><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref><sp/><ref refid="mhd__stat_8c_1a942de062f19ef52b392c7298028d6952" kindref="member">mhd_stat_eval</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>mhd_dmhd[10],<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>phi,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>t,</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>includemode,<sp/><ref refid="structboozer__data" kindref="compound">boozer_data</ref>*<sp/>boozerdata,</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structmhd__stat__data" kindref="compound">mhd_stat_data</ref>*<sp/>mhddata,<sp/><ref refid="structB__field__data" kindref="compound">B_field_data</ref>*<sp/>Bdata)<sp/>{</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref><sp/>err<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>ptz[12];</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>isinside;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!err)<sp/>{</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="boozer_8c_1af9bf48108f9e23d46e7df46266d094ca" kindref="member">boozer_eval_psithetazeta</ref>(ptz,<sp/>&amp;isinside,<sp/>r,<sp/>phi,<sp/>z,<sp/>Bdata,</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>boozerdata);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>rho[2];</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!err<sp/>&amp;&amp;<sp/>isinside)<sp/>{</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="B__field_8c_1a3e0114363493349f81a78142e70f2bd4" kindref="member">B_field_eval_rho</ref>(rho,<sp/>ptz[0],<sp/>Bdata);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Initialize<sp/>values<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;10;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mhd_dmhd[i]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>interperr<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>mhddata-&gt;<ref refid="structmhd__stat__data_1adc48cc83de70a5fdb05d2ed7f03203c2" kindref="member">n_modes</ref>;<sp/>i++){</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>includemode<sp/>!=<sp/><ref refid="mhd_8h_1a95e3bd9666ff5d412346f507838ab568" kindref="member">MHD_INCLUDE_ALL</ref><sp/>&amp;&amp;<sp/>includemode<sp/>!=<sp/>i<sp/>)<sp/>{<sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Get<sp/>interpolated<sp/>values<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>a_da[3],<sp/>phi_dphi[3];</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>interperr<sp/>+=<sp/><ref refid="interp_8h_1ab427cc5f47adedb5e377b8ad9f96189f" kindref="member">interp1Dcomp_eval_df</ref>(a_da,<sp/>&amp;(mhddata-&gt;<ref refid="structmhd__stat__data_1ae97de019c3dbf3888a0e5f4b27979ff6" kindref="member">alpha_nm</ref>[i]),</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rho[0]);</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>interperr<sp/>+=<sp/><ref refid="interp_8h_1ab427cc5f47adedb5e377b8ad9f96189f" kindref="member">interp1Dcomp_eval_df</ref>(phi_dphi,<sp/>&amp;(mhddata-&gt;<ref refid="structmhd__stat__data_1a8c88a603f842fc99f67bf5bf60070c2f" kindref="member">phi_nm</ref>[i]),</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rho[0]);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>The<sp/>interpolation<sp/>returns<sp/>dx/drho<sp/>but<sp/>we<sp/>require<sp/>dx/dpsi.</highlight></codeline>
+<codeline lineno="207"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>The<sp/>second<sp/>order<sp/>derivatives<sp/>are<sp/>not<sp/>needed<sp/>anywhere<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a_da[1]<sp/><sp/><sp/><sp/><sp/>*=<sp/>rho[1];</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>phi_dphi[1]<sp/>*=<sp/>rho[1];</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>These<sp/>are<sp/>used<sp/>frequently,<sp/>so<sp/>store<sp/>them<sp/>in<sp/>separate<sp/>variables<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>mhdarg<sp/>=<sp/>mhddata-&gt;<ref refid="structmhd__stat__data_1a90c72499bd8e4be37bec59f46e682738" kindref="member">nmode</ref>[i]<sp/>*<sp/>ptz[8]</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>mhddata-&gt;<ref refid="structmhd__stat__data_1a3fae4550f2667c0cf85a5780b1fe5116" kindref="member">mmode</ref>[i]<sp/>*<sp/>ptz[4]</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>mhddata-&gt;<ref refid="structmhd__stat__data_1ae8ed0c8228b3e73796baf4a7a7b10ba1" kindref="member">omega_nm</ref>[i]<sp/>*<sp/>t</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>mhddata-&gt;<ref refid="structmhd__stat__data_1a64bba4355a78ae84d39aed87289b867a" kindref="member">phase_nm</ref>[i];</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>sinmhd<sp/>=<sp/>sin(mhdarg);</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>cosmhd<sp/>=<sp/>cos(mhdarg);</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Sum<sp/>over<sp/>modes<sp/>to<sp/>get<sp/>alpha,<sp/>phi<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mhd_dmhd[0]<sp/>+=<sp/><sp/><sp/><sp/><sp/>a_da[0]<sp/>*<sp/>mhddata-&gt;<ref refid="structmhd__stat__data_1a319076f998df3295d6f1e56444ba50f4" kindref="member">amplitude_nm</ref>[i]<sp/>*<sp/>cosmhd;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mhd_dmhd[5]<sp/>+=<sp/>phi_dphi[0]<sp/>*<sp/>mhddata-&gt;<ref refid="structmhd__stat__data_1a319076f998df3295d6f1e56444ba50f4" kindref="member">amplitude_nm</ref>[i]<sp/>*<sp/>cosmhd;</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Time<sp/>derivatives<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mhd_dmhd[1]<sp/>+=<sp/><sp/><sp/><sp/><sp/>a_da[0]<sp/>*<sp/>mhddata-&gt;<ref refid="structmhd__stat__data_1a319076f998df3295d6f1e56444ba50f4" kindref="member">amplitude_nm</ref>[i]</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>mhddata-&gt;<ref refid="structmhd__stat__data_1ae8ed0c8228b3e73796baf4a7a7b10ba1" kindref="member">omega_nm</ref>[i]<sp/>*<sp/>sinmhd;</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mhd_dmhd[6]<sp/>+=<sp/>phi_dphi[0]<sp/>*<sp/>mhddata-&gt;<ref refid="structmhd__stat__data_1a319076f998df3295d6f1e56444ba50f4" kindref="member">amplitude_nm</ref>[i]</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>mhddata-&gt;<ref refid="structmhd__stat__data_1ae8ed0c8228b3e73796baf4a7a7b10ba1" kindref="member">omega_nm</ref>[i]<sp/>*<sp/>sinmhd;</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>R<sp/>component<sp/>of<sp/>gradients<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mhd_dmhd[2]<sp/>+=<sp/>mhddata-&gt;<ref refid="structmhd__stat__data_1a319076f998df3295d6f1e56444ba50f4" kindref="member">amplitude_nm</ref>[i]</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>(<sp/><sp/>a_da[1]<sp/>*<sp/>ptz[1]<sp/>*<sp/>cosmhd</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>a_da[0]<sp/>*<sp/>mhddata-&gt;<ref refid="structmhd__stat__data_1a3fae4550f2667c0cf85a5780b1fe5116" kindref="member">mmode</ref>[i]<sp/>*<sp/>ptz[5]<sp/>*<sp/>sinmhd</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>a_da[0]<sp/>*<sp/>mhddata-&gt;<ref refid="structmhd__stat__data_1a90c72499bd8e4be37bec59f46e682738" kindref="member">nmode</ref>[i]<sp/>*<sp/>ptz[9]<sp/>*<sp/>sinmhd);</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mhd_dmhd[7]<sp/>+=<sp/>mhddata-&gt;<ref refid="structmhd__stat__data_1a319076f998df3295d6f1e56444ba50f4" kindref="member">amplitude_nm</ref>[i]</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>(<sp/><sp/><sp/>phi_dphi[1]<sp/>*<sp/>ptz[1]<sp/>*<sp/>cosmhd</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>phi_dphi[0]<sp/>*<sp/>mhddata-&gt;<ref refid="structmhd__stat__data_1a3fae4550f2667c0cf85a5780b1fe5116" kindref="member">mmode</ref>[i]<sp/>*<sp/>ptz[5]<sp/>*<sp/>sinmhd</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>phi_dphi[0]<sp/>*<sp/>mhddata-&gt;<ref refid="structmhd__stat__data_1a90c72499bd8e4be37bec59f46e682738" kindref="member">nmode</ref>[i]<sp/>*<sp/>ptz[9]<sp/>*<sp/>sinmhd);</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>phi<sp/>component<sp/>of<sp/>gradients<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mhd_dmhd[3]<sp/>+=<sp/>(1/r)<sp/>*<sp/>mhddata-&gt;<ref refid="structmhd__stat__data_1a319076f998df3295d6f1e56444ba50f4" kindref="member">amplitude_nm</ref>[i]</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>(<sp/><sp/>a_da[1]<sp/>*<sp/>ptz[2]<sp/>*<sp/>cosmhd</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>a_da[0]<sp/>*<sp/>mhddata-&gt;<ref refid="structmhd__stat__data_1a3fae4550f2667c0cf85a5780b1fe5116" kindref="member">mmode</ref>[i]<sp/>*<sp/>ptz[6]<sp/><sp/>*<sp/>sinmhd</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>a_da[0]<sp/>*<sp/>mhddata-&gt;<ref refid="structmhd__stat__data_1a90c72499bd8e4be37bec59f46e682738" kindref="member">nmode</ref>[i]<sp/>*<sp/>ptz[10]<sp/>*<sp/>sinmhd);</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mhd_dmhd[8]<sp/>+=<sp/>(1/r)<sp/>*<sp/>mhddata-&gt;<ref refid="structmhd__stat__data_1a319076f998df3295d6f1e56444ba50f4" kindref="member">amplitude_nm</ref>[i]</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>(<sp/><sp/><sp/>phi_dphi[1]<sp/>*<sp/>ptz[2]<sp/>*<sp/>cosmhd</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>phi_dphi[0]<sp/>*<sp/>mhddata-&gt;<ref refid="structmhd__stat__data_1a3fae4550f2667c0cf85a5780b1fe5116" kindref="member">mmode</ref>[i]<sp/>*<sp/>ptz[6]<sp/><sp/>*<sp/>sinmhd</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>phi_dphi[0]<sp/>*<sp/>mhddata-&gt;<ref refid="structmhd__stat__data_1a90c72499bd8e4be37bec59f46e682738" kindref="member">nmode</ref>[i]<sp/>*<sp/>ptz[10]<sp/>*<sp/>sinmhd);</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>z<sp/>component<sp/>of<sp/>gradients<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mhd_dmhd[4]<sp/>+=<sp/>mhddata-&gt;<ref refid="structmhd__stat__data_1a319076f998df3295d6f1e56444ba50f4" kindref="member">amplitude_nm</ref>[i]</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>(<sp/><sp/><sp/>a_da[1]<sp/>*<sp/>ptz[3]<sp/>*<sp/>cosmhd</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>a_da[0]<sp/>*<sp/>mhddata-&gt;<ref refid="structmhd__stat__data_1a3fae4550f2667c0cf85a5780b1fe5116" kindref="member">mmode</ref>[i]<sp/>*<sp/>ptz[7]<sp/><sp/>*<sp/>sinmhd</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>a_da[0]<sp/>*<sp/>mhddata-&gt;<ref refid="structmhd__stat__data_1a90c72499bd8e4be37bec59f46e682738" kindref="member">nmode</ref>[i]<sp/>*<sp/>ptz[11]<sp/>*<sp/>sinmhd);</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mhd_dmhd[9]<sp/>+=<sp/>mhddata-&gt;<ref refid="structmhd__stat__data_1a319076f998df3295d6f1e56444ba50f4" kindref="member">amplitude_nm</ref>[i]</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>(<sp/><sp/><sp/>phi_dphi[1]<sp/>*<sp/>ptz[3]<sp/>*<sp/>cosmhd</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>phi_dphi[0]<sp/>*<sp/>mhddata-&gt;<ref refid="structmhd__stat__data_1a3fae4550f2667c0cf85a5780b1fe5116" kindref="member">mmode</ref>[i]<sp/>*<sp/>ptz[7]<sp/><sp/>*<sp/>sinmhd</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>phi_dphi[0]<sp/>*<sp/>mhddata-&gt;<ref refid="structmhd__stat__data_1a90c72499bd8e4be37bec59f46e682738" kindref="member">nmode</ref>[i]<sp/>*<sp/>ptz[11]<sp/>*<sp/>sinmhd);</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Omit<sp/>evaluation<sp/>if<sp/>point<sp/>outside<sp/>the<sp/>boozer<sp/>or<sp/>mhd<sp/>grid.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!isinside<sp/>||<sp/>interperr)<sp/>{</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;10;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mhd_dmhd[i]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>err;</highlight></codeline>
+<codeline lineno="267"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="299" refid="mhd__stat_8c_1a7d6428e4aefd0cf39446bb7c428f92bd" refkind="member"><highlight class="normal"><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref><sp/><ref refid="mhd__stat_8c_1a7d6428e4aefd0cf39446bb7c428f92bd" kindref="member">mhd_stat_perturbations</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>pert_field[7],<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>phi,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z,</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>t,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pertonly,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>includemode,</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structboozer__data" kindref="compound">boozer_data</ref>*<sp/>boozerdata,<sp/><ref refid="structmhd__stat__data" kindref="compound">mhd_stat_data</ref>*<sp/>mhddata,</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structB__field__data" kindref="compound">B_field_data</ref>*<sp/>Bdata)<sp/>{</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref><sp/>err<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>mhd_dmhd[10];</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!err)<sp/>{</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="mhd__stat_8c_1a942de062f19ef52b392c7298028d6952" kindref="member">mhd_stat_eval</ref>(mhd_dmhd,<sp/>r,<sp/>phi,<sp/>z,<sp/>t,<sp/>includemode,<sp/>boozerdata,</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mhddata,<sp/>Bdata);</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/><sp/>see<sp/>example<sp/>of<sp/>curl<sp/>evaluation<sp/>in<sp/>step_gc_rk4.c,<sp/>ydot_gc*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>B_dB[15];</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!err)<sp/>{</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>err<sp/>=<sp/><ref refid="B__field_8c_1a90eee159b997ec948d58e1b760f7a555" kindref="member">B_field_eval_B_dB</ref>(B_dB,<sp/>r,<sp/>phi,<sp/>z,<sp/>t,<sp/>Bdata);</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"></highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!err)<sp/>{</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>B[3];</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>B[0]<sp/>=<sp/>B_dB[0];</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>B[1]<sp/>=<sp/>B_dB[4];</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>B[2]<sp/>=<sp/>B_dB[8];</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"></highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>curlB[3];</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>curlB[0]<sp/>=<sp/>B_dB[10]/r<sp/>-<sp/>B_dB[7];</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>curlB[1]<sp/>=<sp/>B_dB[3]<sp/>-<sp/>B_dB[9];</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>curlB[2]<sp/>=<sp/>(B[1]<sp/>-<sp/>B_dB[2])/r<sp/>+<sp/>B_dB[5];</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"></highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>gradalpha[3];</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gradalpha[0]<sp/>=<sp/>mhd_dmhd[2];</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gradalpha[1]<sp/>=<sp/>mhd_dmhd[3];</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gradalpha[2]<sp/>=<sp/>mhd_dmhd[4];</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"></highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>gradalphacrossB[3];</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"></highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="math_8h_1abe0d82787eb750e38e7fbb791c575084" kindref="member">math_cross</ref>(gradalpha,<sp/>B,<sp/>gradalphacrossB);</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"></highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pert_field[0]<sp/>=<sp/>mhd_dmhd[0]*curlB[0]<sp/>+<sp/>gradalphacrossB[0];</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pert_field[1]<sp/>=<sp/>mhd_dmhd[0]*curlB[1]<sp/>+<sp/>gradalphacrossB[1];</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pert_field[2]<sp/>=<sp/>mhd_dmhd[0]*curlB[2]<sp/>+<sp/>gradalphacrossB[2];</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"></highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pert_field[3]<sp/>=<sp/>-mhd_dmhd[7]<sp/>-<sp/>B[0]*mhd_dmhd[1];</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pert_field[4]<sp/>=<sp/>-mhd_dmhd[8]<sp/>-<sp/>B[1]*mhd_dmhd[1];</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pert_field[5]<sp/>=<sp/>-mhd_dmhd[9]<sp/>-<sp/>B[2]*mhd_dmhd[1];</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pert_field[6]<sp/>=<sp/>mhd_dmhd[5];</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"></highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!pertonly)<sp/>{</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pert_field[0]<sp/>+=<sp/>B[0];</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pert_field[1]<sp/>+=<sp/>B[1];</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pert_field[2]<sp/>+=<sp/>B[2];</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"></highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>err;</highlight></codeline>
+<codeline lineno="352"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="mhd/mhd_stat.c"/>
+  </compounddef>
+</doxygen>

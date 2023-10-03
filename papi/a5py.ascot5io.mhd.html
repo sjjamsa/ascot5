@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mhd &mdash; ASCOT5 5.5 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/sg_gallery.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=b689823a"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="nbi" href="a5py.ascot5io.nbi.html" />
+    <link rel="prev" title="boozer" href="a5py.ascot5io.boozer.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html">
+            
+              <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Running Simulations</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../running.html">Installing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../running.html#simulations">Simulations</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Processing Data</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../processing.html">Data storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../processing.html#input-generation">Input generation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../processing.html#post-processing">Post-processing</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Simulating Physics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../teaching.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../teaching.html#physics-in-ascot5">Physics in ASCOT5</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Publications</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../publishing.html">Citing ASCOT5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../publishing.html#gallery">Gallery</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Code Development</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../developing.html">Coding style and practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developing.html#parallelization">Parallelization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developing.html#testing">Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developing.html#id2">C API</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="a5py.html">Python API</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="a5py.html#module-a5py"><code class="docutils literal notranslate"><span class="pre">a5py</span></code></a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="a5py.ascot5io.html"><code class="docutils literal notranslate"><span class="pre">ascot5io</span></code></a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.bfield.html"><code class="docutils literal notranslate"><span class="pre">bfield</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.efield.html"><code class="docutils literal notranslate"><span class="pre">efield</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.plasma.html"><code class="docutils literal notranslate"><span class="pre">plasma</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.marker.html"><code class="docutils literal notranslate"><span class="pre">marker</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.wall.html"><code class="docutils literal notranslate"><span class="pre">wall</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.neutral.html"><code class="docutils literal notranslate"><span class="pre">neutral</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.boozer.html"><code class="docutils literal notranslate"><span class="pre">boozer</span></code></a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">mhd</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.mhd.MHD_STAT"><code class="docutils literal notranslate"><span class="pre">MHD_STAT</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.mhd.MHD_STAT.plot_amplitude"><code class="docutils literal notranslate"><span class="pre">MHD_STAT.plot_amplitude()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.mhd.MHD_STAT.read"><code class="docutils literal notranslate"><span class="pre">MHD_STAT.read()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.mhd.MHD_STAT.write_hdf5"><code class="docutils literal notranslate"><span class="pre">MHD_STAT.write_hdf5()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.mhd.MHD_STAT.write_hdf5_dummy"><code class="docutils literal notranslate"><span class="pre">MHD_STAT.write_hdf5_dummy()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.mhd.MHD_NONSTAT"><code class="docutils literal notranslate"><span class="pre">MHD_NONSTAT</span></code></a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.mhd.MHD_NONSTAT.plot_amplitude"><code class="docutils literal notranslate"><span class="pre">MHD_NONSTAT.plot_amplitude()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.mhd.MHD_NONSTAT.read"><code class="docutils literal notranslate"><span class="pre">MHD_NONSTAT.read()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.mhd.MHD_NONSTAT.write_hdf5"><code class="docutils literal notranslate"><span class="pre">MHD_NONSTAT.write_hdf5()</span></code></a></li>
+<li class="toctree-l6"><a class="reference internal" href="#a5py.ascot5io.mhd.MHD_NONSTAT.write_hdf5_dummy"><code class="docutils literal notranslate"><span class="pre">MHD_NONSTAT.write_hdf5_dummy()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.nbi.html"><code class="docutils literal notranslate"><span class="pre">nbi</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.options.html"><code class="docutils literal notranslate"><span class="pre">options</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.coreio.html"><code class="docutils literal notranslate"><span class="pre">CoreIO</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.html#a5py.ascot5io.Ascot5IO"><code class="docutils literal notranslate"><span class="pre">Ascot5IO</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.html#a5py.ascot5io.RunGroup"><code class="docutils literal notranslate"><span class="pre">RunGroup</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.html#a5py.ascot5io.InputGroup"><code class="docutils literal notranslate"><span class="pre">InputGroup</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.ascotpy.html"><code class="docutils literal notranslate"><span class="pre">ascotpy</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.templates.html"><code class="docutils literal notranslate"><span class="pre">templates</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.physlib.html"><code class="docutils literal notranslate"><span class="pre">physlib</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.routines.html"><code class="docutils literal notranslate"><span class="pre">routines</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.gui.html"><code class="docutils literal notranslate"><span class="pre">a5py.gui</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.html#a5py.exceptions.AscotIOException"><code class="docutils literal notranslate"><span class="pre">AscotIOException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.html#a5py.exceptions.AscotInitException"><code class="docutils literal notranslate"><span class="pre">AscotInitException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.html#a5py.exceptions.AscotNoDataException"><code class="docutils literal notranslate"><span class="pre">AscotNoDataException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.html#a5py.exceptions.AscotUnitWarning"><code class="docutils literal notranslate"><span class="pre">AscotUnitWarning</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="a5py.html#ascot"><code class="docutils literal notranslate"><span class="pre">Ascot</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ASCOT5</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="a5py.html">Python API</a></li>
+          <li class="breadcrumb-item"><a href="a5py.ascot5io.html"><code class="docutils literal notranslate"><span class="pre">ascot5io</span></code></a></li>
+      <li class="breadcrumb-item active"><code class="docutils literal notranslate"><span class="pre">mhd</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/papi/a5py.ascot5io.mhd.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-a5py.ascot5io.mhd">
+<span id="mhd"></span><h1><code class="docutils literal notranslate"><span class="pre">mhd</span></code><a class="headerlink" href="#module-a5py.ascot5io.mhd" title="Link to this heading"></a></h1>
+<p>Input containing MHD eigenmodes.</p>
+<p>This input is used in simulations studying particle response to MHD.</p>
+<p>Using this data in a simulation requires that boozer data, containing
+mapping between real-space and Boozer coordinates, is present.</p>
+<p>This module reads and writes both MHD_STAT and MHD_NONSTAT data. The only
+difference between these two is the time-dependency of the eigenfunctions,
+that is, does the mode amplitude (alpha or Phi) depend only on psi or psi
+and time. MHD_STAT assumes only psi dependency, making the interpolation
+<em>much</em> faster. So don’t use MHD_NONSTAT unless you really have to.</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#a5py.ascot5io.mhd.MHD_STAT" title="a5py.ascot5io.mhd.MHD_STAT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">a5py.ascot5io.mhd.MHD_STAT</span></code></a></p></td>
+<td><p>Stationary MHD eigenfunctions.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#a5py.ascot5io.mhd.MHD_NONSTAT" title="a5py.ascot5io.mhd.MHD_NONSTAT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">a5py.ascot5io.mhd.MHD_NONSTAT</span></code></a></p></td>
+<td><p>Time-dependent MHD eigenfunctions.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt class="sig sig-object py" id="a5py.ascot5io.mhd.MHD_STAT">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">a5py.ascot5io.mhd.</span></span><span class="sig-name descname"><span class="pre">MHD_STAT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.mhd.MHD_STAT" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="a5py.ascot5io.coreio.html#a5py.ascot5io.coreio.treedata.DataGroup" title="a5py.ascot5io.coreio.treedata.DataGroup"><code class="xref py py-class docutils literal notranslate"><span class="pre">DataGroup</span></code></a></p>
+<p>Stationary MHD eigenfunctions.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.mhd.MHD_STAT.plot_amplitude">
+<span class="sig-name descname"><span class="pre">plot_amplitude</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amplitude</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'alpha'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.mhd.MHD_STAT.plot_amplitude" title="Link to this definition"></a></dt>
+<dd><p>Plot radial profile of all (or given mode) amplitudes.</p>
+<p>For NONSTAT the profiles are shown at earliest time in dataset.
+TODO: Animate the NONSTAT to show profiles as a function of time.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><dl class="simple">
+<dt>amplitude<span class="classifier">str &lt;br&gt;</span></dt><dd><p>Which amplitude is plotted: “alpha” (magnetic) or “phi” (electric)</p>
+</dd>
+<dt>mode<span class="classifier">tuple(int,int) &lt;br&gt;</span></dt><dd><p>Mode (n,m) to be plotted or None to plot all modes.</p>
+</dd>
+<dt>ax<span class="classifier">axes &lt;br&gt;</span></dt><dd><p>Axes where plotting is done or None to create and show new fig.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.mhd.MHD_STAT.read">
+<span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.mhd.MHD_STAT.read" title="Link to this definition"></a></dt>
+<dd><p>Read data from HDF5 file.</p>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>data</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a></span></dt><dd><p>Data read from HDF5 stored in the same format as is passed to
+<a class="reference internal" href="#a5py.ascot5io.mhd.MHD_STAT.write_hdf5" title="a5py.ascot5io.mhd.MHD_STAT.write_hdf5"><code class="xref py py-meth docutils literal notranslate"><span class="pre">write_hdf5()</span></code></a>.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.mhd.MHD_STAT.write_hdf5">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">write_hdf5</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nmode</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nmodes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mmodes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amplitude</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">omega</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phase</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nrho</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rhomin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rhomax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">desc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.mhd.MHD_STAT.write_hdf5" title="Link to this definition"></a></dt>
+<dd><p>Write input data to the HDF5 file.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>fn</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Full path to the HDF5 file.</p>
+</dd>
+<dt><strong>nmode</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Number of modes.</p>
+</dd>
+<dt><strong>nmodes</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a> (nmode,)</span></dt><dd><p>Mode n (toroidal) numbers.</p>
+</dd>
+<dt><strong>mmodes</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a> (nmode,)</span></dt><dd><p>Mode m (poloidal) numbers.</p>
+</dd>
+<dt><strong>amplitude</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a> (nmode,)</span></dt><dd><p>Mode amplitudies.</p>
+</dd>
+<dt><strong>omega</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a> (nmode,)</span></dt><dd><p>Mode frequencies [rad/s].</p>
+</dd>
+<dt><strong>omega</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a> (nmode,)</span></dt><dd><p>Mode phases [rad].</p>
+</dd>
+<dt><strong>alpha</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">nrho</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">nmode</span></code>)</span></dt><dd><p>Magnetic perturbation eigenfunctions.</p>
+</dd>
+<dt><strong>phi</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">nrho</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">nmode</span></code>)</span></dt><dd><p>Electric perturbation eigenfunctions.</p>
+</dd>
+<dt><strong>nrho</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Number of rho grid points.</p>
+</dd>
+<dt><strong>rhomin</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>Minimum value in rho grid.</p>
+</dd>
+<dt><strong>rhomax</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>Maximum value in rho grid.</p>
+</dd>
+<dt><strong>desc</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Input’s description.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>name</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Name, i.e. “&lt;type&gt;_&lt;qid&gt;”, of the new input that was written.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ValueError</span></code></a></dt><dd><p>If inputs were not consistent.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.mhd.MHD_STAT.write_hdf5_dummy">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">write_hdf5_dummy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.mhd.MHD_STAT.write_hdf5_dummy" title="Link to this definition"></a></dt>
+<dd><p>Write dummy data that has correct format and is valid, but can be
+non-sensical.</p>
+<p>This method is intended for testing purposes or to provide data whose
+presence is needed but which is not actually used in simulation.</p>
+<p>This method writes two modes with constant eigenfunctions.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>fn</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Full path to the HDF5 file.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>name</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Name, i.e. “&lt;type&gt;_&lt;qid&gt;”, of the new input that was written.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="a5py.ascot5io.mhd.MHD_NONSTAT">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">a5py.ascot5io.mhd.</span></span><span class="sig-name descname"><span class="pre">MHD_NONSTAT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.mhd.MHD_NONSTAT" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="a5py.ascot5io.coreio.html#a5py.ascot5io.coreio.treedata.DataGroup" title="a5py.ascot5io.coreio.treedata.DataGroup"><code class="xref py py-class docutils literal notranslate"><span class="pre">DataGroup</span></code></a></p>
+<p>Time-dependent MHD eigenfunctions.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.mhd.MHD_NONSTAT.plot_amplitude">
+<span class="sig-name descname"><span class="pre">plot_amplitude</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amplitude</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'alpha'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.mhd.MHD_NONSTAT.plot_amplitude" title="Link to this definition"></a></dt>
+<dd><p>Plot radial profile of all (or given mode) amplitudes.</p>
+<p>For NONSTAT the profiles are shown at earliest time in dataset.
+TODO: Animate the NONSTAT to show profiles as a function of time.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><dl class="simple">
+<dt>amplitude<span class="classifier">str &lt;br&gt;</span></dt><dd><p>Which amplitude is plotted: “alpha” (magnetic) or “phi” (electric)</p>
+</dd>
+<dt>mode<span class="classifier">tuple(int,int) &lt;br&gt;</span></dt><dd><p>Mode (n,m) to be plotted or None to plot all modes.</p>
+</dd>
+<dt>ax<span class="classifier">axes &lt;br&gt;</span></dt><dd><p>Axes where plotting is done or None to create and show new fig.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.mhd.MHD_NONSTAT.read">
+<span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.mhd.MHD_NONSTAT.read" title="Link to this definition"></a></dt>
+<dd><p>Read data from HDF5 file.</p>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>data</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a></span></dt><dd><p>Data read from HDF5 stored in the same format as is passed to
+<a class="reference internal" href="#a5py.ascot5io.mhd.MHD_NONSTAT.write_hdf5" title="a5py.ascot5io.mhd.MHD_NONSTAT.write_hdf5"><code class="xref py py-meth docutils literal notranslate"><span class="pre">write_hdf5()</span></code></a>.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.mhd.MHD_NONSTAT.write_hdf5">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">write_hdf5</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nmode</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nmodes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mmodes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amplitude</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">omega</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phase</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nrho</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rhomin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rhomax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ntime</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">desc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.mhd.MHD_NONSTAT.write_hdf5" title="Link to this definition"></a></dt>
+<dd><p>Write input data to the HDF5 file.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>fn</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Full path to the HDF5 file.</p>
+</dd>
+<dt><strong>nmode</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Number of modes.</p>
+</dd>
+<dt><strong>nmodes</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a> (nmode,)</span></dt><dd><p>Mode n (toroidal) numbers.</p>
+</dd>
+<dt><strong>mmodes</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a> (nmode,)</span></dt><dd><p>Mode m (poloidal) numbers.</p>
+</dd>
+<dt><strong>amplitude</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a> (nmode,)</span></dt><dd><p>Mode amplitudies.</p>
+</dd>
+<dt><strong>omega</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a> (nmode,)</span></dt><dd><p>Mode frequencies [rad/s].</p>
+</dd>
+<dt><strong>omega</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a> (nmode,)</span></dt><dd><p>Mode phases [rad].</p>
+</dd>
+<dt><strong>alpha</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">nrho</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">ntime</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">nmode</span></code>)</span></dt><dd><p>Magnetic perturbation eigenfunctions.</p>
+</dd>
+<dt><strong>phi</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">nrho</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">ntime</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">nmode</span></code>)</span></dt><dd><p>Electric perturbation eigenfunctions.</p>
+</dd>
+<dt><strong>nrho</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Number of rho grid points.</p>
+</dd>
+<dt><strong>rhomin</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>Minimum value in rho grid.</p>
+</dd>
+<dt><strong>rhomax</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>Maximum value in rho grid.</p>
+</dd>
+<dt><strong>ntime</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Number of time grid points.</p>
+</dd>
+<dt><strong>tmin</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>Minimum value in time grid.</p>
+</dd>
+<dt><strong>tmax</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Maximum value in time grid.</p>
+</dd>
+<dt><strong>desc</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Input’s description.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>name</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Name, i.e. “&lt;type&gt;_&lt;qid&gt;”, of the new input that was written.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ValueError</span></code></a></dt><dd><p>If inputs were not consistent.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.mhd.MHD_NONSTAT.write_hdf5_dummy">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">write_hdf5_dummy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.mhd.MHD_NONSTAT.write_hdf5_dummy" title="Link to this definition"></a></dt>
+<dd><p>Write dummy data that has correct format and is valid, but can be
+non-sensical.</p>
+<p>This method is intended for testing purposes or to provide data whose
+presence is needed but which is not actually used in simulation.</p>
+<p>This method writes two modes with constant eigenfunctions.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>fn</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Full path to the HDF5 file.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>name</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Name, i.e. “&lt;type&gt;_&lt;qid&gt;”, of the new input that was written.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="a5py.ascot5io.boozer.html" class="btn btn-neutral float-left" title="boozer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="a5py.ascot5io.nbi.html" class="btn btn-neutral float-right" title="nbi" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Ascot Group.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Generating Poincaré plots &mdash; ASCOT5 5.5 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/sg_gallery.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/nbsphinx-code-cells.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=b689823a"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Citing ASCOT5" href="../publishing.html" />
+    <link rel="prev" title="Introduction" href="tutorial.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html">
+            
+              <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Running Simulations</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../running.html">Installing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../running.html#simulations">Simulations</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Processing Data</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../processing.html">Data storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../processing.html#input-generation">Input generation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../processing.html#post-processing">Post-processing</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Simulating Physics</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../teaching.html">Tutorials</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html">Introduction</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Generating Poincaré plots</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../teaching.html#physics-in-ascot5">Physics in ASCOT5</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Publications</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../publishing.html">Citing ASCOT5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../publishing.html#gallery">Gallery</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Code Development</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../developing.html">Coding style and practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developing.html#parallelization">Parallelization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developing.html#testing">Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developing.html#id2">C API</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../papi/a5py.html">Python API</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ASCOT5</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../teaching.html">Tutorials</a></li>
+      <li class="breadcrumb-item active">Generating Poincaré plots</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/tutorials/poincaretutorial.ipynb.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="Generating-Poincaré-plots">
+<h1>Generating Poincaré plots<a class="headerlink" href="#Generating-Poincaré-plots" title="Link to this heading"></a></h1>
+<p>This example shows how to generate Poincaré plots, a.k.a. puncture plots, with ASCOT5. These plots are generated by tracing markers and recording their position each time a marker crosses a poloidal or toroidal plane. They are mainly used to visualize magnetic field structures and particle resonances. Poincaré plots can be made for both field lines and physical particles.</p>
+<p>First we create a simple test case (skip this part when doing actual studies).</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">a5py</span> <span class="kn">import</span> <span class="n">Ascot</span>
+
+<span class="n">a5</span> <span class="o">=</span> <span class="n">Ascot</span><span class="p">(</span><span class="s2">&quot;ascot.h5&quot;</span><span class="p">,</span> <span class="n">create</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">create_input</span><span class="p">(</span><span class="s2">&quot;options tutorial&quot;</span><span class="p">)</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">create_input</span><span class="p">(</span><span class="s2">&quot;bfield analytical iter circular&quot;</span><span class="p">)</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">create_input</span><span class="p">(</span><span class="s2">&quot;wall rectangular&quot;</span><span class="p">)</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">create_input</span><span class="p">(</span><span class="s2">&quot;plasma flat&quot;</span><span class="p">)</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">create_input</span><span class="p">(</span><span class="s2">&quot;E_TC&quot;</span><span class="p">,</span> <span class="n">exyz</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]))</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">create_input</span><span class="p">(</span><span class="s2">&quot;N0_3D&quot;</span><span class="p">)</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">create_input</span><span class="p">(</span><span class="s2">&quot;Boozer&quot;</span><span class="p">)</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">create_input</span><span class="p">(</span><span class="s2">&quot;MHD_STAT&quot;</span><span class="p">)</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">create_input</span><span class="p">(</span><span class="s2">&quot;asigma_loc&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Inputs created&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>Next we create markers and options for the Poincaré simulation. There is nothing extraordinary in these inputs: the markers are just initialized at uniform interals in radius and the options disable all other physics except orbit-following, set proper end conditions, and enable Poincaré data collection.</p>
+<p>Generating markers involves mapping (rho,theta) coordinates to (R,z) which is why magnetic field initialization is required.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a5</span><span class="o">.</span><span class="n">input_init</span><span class="p">(</span><span class="n">bfield</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">create_input</span><span class="p">(</span><span class="s2">&quot;marker poincare&quot;</span><span class="p">,</span> <span class="n">activate</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">desc</span><span class="o">=</span><span class="s2">&quot;PNCR Poincare&quot;</span><span class="p">)</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">input_free</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">marker</span><span class="o">.</span><span class="n">active</span><span class="o">.</span><span class="n">get_desc</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">create_input</span><span class="p">(</span><span class="s2">&quot;options poincare&quot;</span><span class="p">,</span> <span class="n">maxrho</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">activate</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">desc</span><span class="o">=</span><span class="s2">&quot;PNCR Poincare&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">active</span><span class="o">.</span><span class="n">get_desc</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<p>Now you can either run the simulation using <code class="docutils literal notranslate"><span class="pre">ascot5_main</span></code> or, as we do here, utilize the live simulation support.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a5</span><span class="o">.</span><span class="n">simulation_initinputs</span><span class="p">()</span>
+<span class="n">mrk</span> <span class="o">=</span> <span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">marker</span><span class="o">.</span><span class="n">active</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">simulation_initmarkers</span><span class="p">(</span><span class="o">**</span><span class="n">mrk</span><span class="p">)</span>
+<span class="n">opt</span> <span class="o">=</span> <span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">active</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">simulation_initoptions</span><span class="p">(</span><span class="o">**</span><span class="n">opt</span><span class="p">)</span>
+<span class="n">vrun</span> <span class="o">=</span> <span class="n">a5</span><span class="o">.</span><span class="n">simulation_run</span><span class="p">(</span><span class="n">printsummary</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Done&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>Now we can plot the results.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vrun</span><span class="o">.</span><span class="n">plotorbit_poincare</span><span class="p">(</span><span class="s2">&quot;pol 1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>Remember to free resources if you ran a live simulation.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a5</span><span class="o">.</span><span class="n">simulation_free</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<p>That was the basic method of creating Poincaré plots. It is strongly advised to generate a Poincaré plot when using a new magnetic field data for the first time to verify the field quality. Note that if the field quality is abysmal, the adaptive time-stepping used in field-line tracing might get stuck, which can be somewhat mitigated by tracing electron guiding centers with a fixed time step instead or setting the maximum CPU time limit end condition active. Furthermore, the Poincaré marker
+generation might fail if rho becomes imaginary near the axis due to incorrect normalization, so always check that with the <code class="docutils literal notranslate"><span class="pre">input_plotrz</span></code> method.</p>
+<p>Poincaré plots made with physical particles can be created in a following way, i.e. by providing species name, energy and pitch. Poincaré plots for poloidally trapped particles is not yet fully supported.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a5</span><span class="o">.</span><span class="n">input_init</span><span class="p">(</span><span class="n">bfield</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">create_input</span><span class="p">(</span><span class="s2">&quot;marker poincare&quot;</span><span class="p">,</span> <span class="n">species</span><span class="o">=</span><span class="s2">&quot;alpha&quot;</span><span class="p">,</span> <span class="n">energy</span><span class="o">=</span><span class="mf">3.5e6</span><span class="p">,</span> <span class="n">pitch</span><span class="o">=</span><span class="mf">0.9</span><span class="p">,</span> <span class="n">activate</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                     <span class="n">desc</span><span class="o">=</span><span class="s2">&quot;PRTPNCR Particle poincare&quot;</span><span class="p">)</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">input_free</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">marker</span><span class="o">.</span><span class="n">active</span><span class="o">.</span><span class="n">get_desc</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<p>This change alone doesn’t affect anything unless we change the simulation mode from field-line to guiding-center. Gyro-orbit simulations are also supported.</p>
+<p>Making multiple Poincaré plots at different planes simultaneously is also supported as we demonstrate here.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">create_input</span><span class="p">(</span><span class="s2">&quot;options poincare&quot;</span><span class="p">,</span> <span class="n">maxrho</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">simmode</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">tor</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">180</span><span class="p">],</span> <span class="n">pol</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">180</span><span class="p">],</span> <span class="n">activate</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                     <span class="n">desc</span><span class="o">=</span><span class="s2">&quot;PRTPNCR Particle poincare&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">active</span><span class="o">.</span><span class="n">get_desc</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<p>Note that we set <code class="docutils literal notranslate"><span class="pre">maxrho=True</span></code>, which dictates that markers are only traced until they exit the separatrix. The default behaviour is to trace markers all the way to the wall (however, this is cannot be done in this test input case where the mock-up wall is in a galaxy far far away). By tracing markers all the way to the wall, the connection length in the plots is the proper connection length, i.e. the distance along the orbit to the wall.</p>
+<p>Now is the time to run the simulation.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a5</span><span class="o">.</span><span class="n">simulation_initinputs</span><span class="p">()</span>
+<span class="n">mrk</span> <span class="o">=</span> <span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">marker</span><span class="o">.</span><span class="n">active</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">simulation_initmarkers</span><span class="p">(</span><span class="o">**</span><span class="n">mrk</span><span class="p">)</span>
+<span class="n">opt</span> <span class="o">=</span> <span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">active</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">simulation_initoptions</span><span class="p">(</span><span class="o">**</span><span class="n">opt</span><span class="p">)</span>
+<span class="n">vrun</span> <span class="o">=</span> <span class="n">a5</span><span class="o">.</span><span class="n">simulation_run</span><span class="p">(</span><span class="n">printsummary</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Done&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>Plot all Poincarés.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vrun</span><span class="o">.</span><span class="n">plotorbit_poincare</span><span class="p">(</span><span class="s2">&quot;pol 1&quot;</span><span class="p">)</span>
+<span class="n">vrun</span><span class="o">.</span><span class="n">plotorbit_poincare</span><span class="p">(</span><span class="s2">&quot;pol 2&quot;</span><span class="p">)</span>
+<span class="n">vrun</span><span class="o">.</span><span class="n">plotorbit_poincare</span><span class="p">(</span><span class="s2">&quot;tor 1&quot;</span><span class="p">)</span>
+<span class="n">vrun</span><span class="o">.</span><span class="n">plotorbit_poincare</span><span class="p">(</span><span class="s2">&quot;tor 2&quot;</span><span class="p">)</span>
+<span class="n">vrun</span><span class="o">.</span><span class="n">plotorbit_poincare</span><span class="p">(</span><span class="s2">&quot;rad 1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>(Free the resources.)</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a5</span><span class="o">.</span><span class="n">simulation_free</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<p>Done.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="tutorial.html" class="btn btn-neutral float-left" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../publishing.html" class="btn btn-neutral float-right" title="Citing ASCOT5" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Ascot Group.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

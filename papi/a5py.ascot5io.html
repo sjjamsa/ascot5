@@ -1,0 +1,1400 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ascot5io &mdash; ASCOT5 5.5 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/sg_gallery.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=b689823a"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="bfield" href="a5py.ascot5io.bfield.html" />
+    <link rel="prev" title="Python API" href="a5py.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html">
+            
+              <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Running Simulations</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../running.html">Installing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../running.html#simulations">Simulations</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Processing Data</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../processing.html">Data storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../processing.html#input-generation">Input generation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../processing.html#post-processing">Post-processing</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Simulating Physics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../teaching.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../teaching.html#physics-in-ascot5">Physics in ASCOT5</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Publications</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../publishing.html">Citing ASCOT5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../publishing.html#gallery">Gallery</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Code Development</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../developing.html">Coding style and practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developing.html#parallelization">Parallelization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developing.html#testing">Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developing.html#id2">C API</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="a5py.html">Python API</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="a5py.html#module-a5py"><code class="docutils literal notranslate"><span class="pre">a5py</span></code></a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">ascot5io</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.bfield.html"><code class="docutils literal notranslate"><span class="pre">bfield</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.efield.html"><code class="docutils literal notranslate"><span class="pre">efield</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.plasma.html"><code class="docutils literal notranslate"><span class="pre">plasma</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.marker.html"><code class="docutils literal notranslate"><span class="pre">marker</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.wall.html"><code class="docutils literal notranslate"><span class="pre">wall</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.neutral.html"><code class="docutils literal notranslate"><span class="pre">neutral</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.boozer.html"><code class="docutils literal notranslate"><span class="pre">boozer</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.mhd.html"><code class="docutils literal notranslate"><span class="pre">mhd</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.nbi.html"><code class="docutils literal notranslate"><span class="pre">nbi</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.options.html"><code class="docutils literal notranslate"><span class="pre">options</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="a5py.ascot5io.coreio.html"><code class="docutils literal notranslate"><span class="pre">CoreIO</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#a5py.ascot5io.Ascot5IO"><code class="docutils literal notranslate"><span class="pre">Ascot5IO</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.Ascot5IO.create_input"><code class="docutils literal notranslate"><span class="pre">Ascot5IO.create_input()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.Ascot5IO.destroy"><code class="docutils literal notranslate"><span class="pre">Ascot5IO.destroy()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.Ascot5IO.get_contents"><code class="docutils literal notranslate"><span class="pre">Ascot5IO.get_contents()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.Ascot5IO.get_runs"><code class="docutils literal notranslate"><span class="pre">Ascot5IO.get_runs()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.Ascot5IO.ls"><code class="docutils literal notranslate"><span class="pre">Ascot5IO.ls()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#a5py.ascot5io.RunGroup"><code class="docutils literal notranslate"><span class="pre">RunGroup</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.RunGroup.activate"><code class="docutils literal notranslate"><span class="pre">RunGroup.activate()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.RunGroup.destroy"><code class="docutils literal notranslate"><span class="pre">RunGroup.destroy()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.RunGroup.export"><code class="docutils literal notranslate"><span class="pre">RunGroup.export()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.RunGroup.get_contents"><code class="docutils literal notranslate"><span class="pre">RunGroup.get_contents()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.RunGroup.get_date"><code class="docutils literal notranslate"><span class="pre">RunGroup.get_date()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.RunGroup.get_desc"><code class="docutils literal notranslate"><span class="pre">RunGroup.get_desc()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.RunGroup.get_name"><code class="docutils literal notranslate"><span class="pre">RunGroup.get_name()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.RunGroup.get_qid"><code class="docutils literal notranslate"><span class="pre">RunGroup.get_qid()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.RunGroup.get_type"><code class="docutils literal notranslate"><span class="pre">RunGroup.get_type()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.RunGroup.getdist"><code class="docutils literal notranslate"><span class="pre">RunGroup.getdist()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.RunGroup.getdist_list"><code class="docutils literal notranslate"><span class="pre">RunGroup.getdist_list()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.RunGroup.getdist_moments"><code class="docutils literal notranslate"><span class="pre">RunGroup.getdist_moments()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.RunGroup.getorbit"><code class="docutils literal notranslate"><span class="pre">RunGroup.getorbit()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.RunGroup.getorbit_average"><code class="docutils literal notranslate"><span class="pre">RunGroup.getorbit_average()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.RunGroup.getorbit_list"><code class="docutils literal notranslate"><span class="pre">RunGroup.getorbit_list()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.RunGroup.getorbit_poincareplanes"><code class="docutils literal notranslate"><span class="pre">RunGroup.getorbit_poincareplanes()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.RunGroup.getstate"><code class="docutils literal notranslate"><span class="pre">RunGroup.getstate()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.RunGroup.getstate_list"><code class="docutils literal notranslate"><span class="pre">RunGroup.getstate_list()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.RunGroup.getstate_losssummary"><code class="docutils literal notranslate"><span class="pre">RunGroup.getstate_losssummary()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.RunGroup.getstate_markers"><code class="docutils literal notranslate"><span class="pre">RunGroup.getstate_markers()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.RunGroup.getstate_markersummary"><code class="docutils literal notranslate"><span class="pre">RunGroup.getstate_markersummary()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.RunGroup.getstate_pointcloud"><code class="docutils literal notranslate"><span class="pre">RunGroup.getstate_pointcloud()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.RunGroup.getwall_3dmesh"><code class="docutils literal notranslate"><span class="pre">RunGroup.getwall_3dmesh()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.RunGroup.getwall_figuresofmerit"><code class="docutils literal notranslate"><span class="pre">RunGroup.getwall_figuresofmerit()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.RunGroup.getwall_loads"><code class="docutils literal notranslate"><span class="pre">RunGroup.getwall_loads()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.RunGroup.ls"><code class="docutils literal notranslate"><span class="pre">RunGroup.ls()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.RunGroup.plotdist"><code class="docutils literal notranslate"><span class="pre">RunGroup.plotdist()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.RunGroup.plotdist_moments"><code class="docutils literal notranslate"><span class="pre">RunGroup.plotdist_moments()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.RunGroup.plotorbit_poincare"><code class="docutils literal notranslate"><span class="pre">RunGroup.plotorbit_poincare()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.RunGroup.plotorbit_trajectory"><code class="docutils literal notranslate"><span class="pre">RunGroup.plotorbit_trajectory()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.RunGroup.plotstate_histogram"><code class="docutils literal notranslate"><span class="pre">RunGroup.plotstate_histogram()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.RunGroup.plotstate_scatter"><code class="docutils literal notranslate"><span class="pre">RunGroup.plotstate_scatter()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.RunGroup.plotwall_3dinteractive"><code class="docutils literal notranslate"><span class="pre">RunGroup.plotwall_3dinteractive()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.RunGroup.plotwall_3dstill"><code class="docutils literal notranslate"><span class="pre">RunGroup.plotwall_3dstill()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.RunGroup.plotwall_loadvsarea"><code class="docutils literal notranslate"><span class="pre">RunGroup.plotwall_loadvsarea()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.RunGroup.plotwall_torpol"><code class="docutils literal notranslate"><span class="pre">RunGroup.plotwall_torpol()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.RunGroup.set_desc"><code class="docutils literal notranslate"><span class="pre">RunGroup.set_desc()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#a5py.ascot5io.InputGroup"><code class="docutils literal notranslate"><span class="pre">InputGroup</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.InputGroup.destroy"><code class="docutils literal notranslate"><span class="pre">InputGroup.destroy()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.InputGroup.get_contents"><code class="docutils literal notranslate"><span class="pre">InputGroup.get_contents()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#a5py.ascot5io.InputGroup.ls"><code class="docutils literal notranslate"><span class="pre">InputGroup.ls()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.ascotpy.html"><code class="docutils literal notranslate"><span class="pre">ascotpy</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.templates.html"><code class="docutils literal notranslate"><span class="pre">templates</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.physlib.html"><code class="docutils literal notranslate"><span class="pre">physlib</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.routines.html"><code class="docutils literal notranslate"><span class="pre">routines</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.gui.html"><code class="docutils literal notranslate"><span class="pre">a5py.gui</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.html#a5py.exceptions.AscotIOException"><code class="docutils literal notranslate"><span class="pre">AscotIOException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.html#a5py.exceptions.AscotInitException"><code class="docutils literal notranslate"><span class="pre">AscotInitException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.html#a5py.exceptions.AscotNoDataException"><code class="docutils literal notranslate"><span class="pre">AscotNoDataException</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="a5py.html#a5py.exceptions.AscotUnitWarning"><code class="docutils literal notranslate"><span class="pre">AscotUnitWarning</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="a5py.html#ascot"><code class="docutils literal notranslate"><span class="pre">Ascot</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ASCOT5</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="a5py.html">Python API</a></li>
+      <li class="breadcrumb-item active"><code class="docutils literal notranslate"><span class="pre">ascot5io</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/papi/a5py.ascot5io.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-a5py.ascot5io">
+<span id="ascot5io"></span><h1><code class="docutils literal notranslate"><span class="pre">ascot5io</span></code><a class="headerlink" href="#module-a5py.ascot5io" title="Link to this heading"></a></h1>
+<p>Interface for accessing data in ASCOT5 HDF5 files.</p>
+<div class="toctree-wrapper compound">
+</div>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="a5py.ascot5io.bfield.html#module-a5py.ascot5io.bfield" title="a5py.ascot5io.bfield"><code class="xref py py-obj docutils literal notranslate"><span class="pre">a5py.ascot5io.bfield</span></code></a></p></td>
+<td><p>Magnetic field input.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="a5py.ascot5io.efield.html#module-a5py.ascot5io.efield" title="a5py.ascot5io.efield"><code class="xref py py-obj docutils literal notranslate"><span class="pre">a5py.ascot5io.efield</span></code></a></p></td>
+<td><p>Electric field input.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="a5py.ascot5io.plasma.html#module-a5py.ascot5io.plasma" title="a5py.ascot5io.plasma"><code class="xref py py-obj docutils literal notranslate"><span class="pre">a5py.ascot5io.plasma</span></code></a></p></td>
+<td><p>Input data representing plasma background species.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="a5py.ascot5io.marker.html#module-a5py.ascot5io.marker" title="a5py.ascot5io.marker"><code class="xref py py-obj docutils literal notranslate"><span class="pre">a5py.ascot5io.marker</span></code></a></p></td>
+<td><p>Markers whose orbits are solved within the ASCOT5 code.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="a5py.ascot5io.wall.html#module-a5py.ascot5io.wall" title="a5py.ascot5io.wall"><code class="xref py py-obj docutils literal notranslate"><span class="pre">a5py.ascot5io.wall</span></code></a></p></td>
+<td><p>Input representing first wall and other plasma facing components.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="a5py.ascot5io.neutral.html#module-a5py.ascot5io.neutral" title="a5py.ascot5io.neutral"><code class="xref py py-obj docutils literal notranslate"><span class="pre">a5py.ascot5io.neutral</span></code></a></p></td>
+<td><p>Input representing plasma neutral bakcground.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="a5py.ascot5io.boozer.html#module-a5py.ascot5io.boozer" title="a5py.ascot5io.boozer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">a5py.ascot5io.boozer</span></code></a></p></td>
+<td><p>Input representing mapping from real-space to Boozer coordinates.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="a5py.ascot5io.mhd.html#module-a5py.ascot5io.mhd" title="a5py.ascot5io.mhd"><code class="xref py py-obj docutils literal notranslate"><span class="pre">a5py.ascot5io.mhd</span></code></a></p></td>
+<td><p>Input containing MHD eigenmodes.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="a5py.ascot5io.nbi.html#module-a5py.ascot5io.nbi" title="a5py.ascot5io.nbi"><code class="xref py py-obj docutils literal notranslate"><span class="pre">a5py.ascot5io.nbi</span></code></a></p></td>
+<td><p>Input data representing NBI.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="a5py.ascot5io.options.html#module-a5py.ascot5io.options" title="a5py.ascot5io.options"><code class="xref py py-obj docutils literal notranslate"><span class="pre">a5py.ascot5io.options</span></code></a></p></td>
+<td><p>Simulation options input.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="a5py.ascot5io.coreio.html#module-a5py.ascot5io.coreio" title="a5py.ascot5io.coreio"><code class="xref py py-obj docutils literal notranslate"><span class="pre">a5py.ascot5io.coreio</span></code></a></p></td>
+<td><p>Low level API for HDF5 data access and building the treeview.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt class="sig sig-object py" id="a5py.ascot5io.Ascot5IO">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">a5py.ascot5io.</span></span><span class="sig-name descname"><span class="pre">Ascot5IO</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ascot</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.Ascot5IO" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="a5py.ascot5io.coreio.html#a5py.ascot5io.coreio.treeview.RootNode" title="a5py.ascot5io.coreio.treeview.RootNode"><code class="xref py py-class docutils literal notranslate"><span class="pre">RootNode</span></code></a></p>
+<p>Entry node for accessing data in the HDF5 file.</p>
+<p>Initializing this node builds rest of the tree. This object and its child
+nodes act as container objects for the data in the HDF5 file. At top level
+(this node) run nodes containing simulation results can be accessed as well
+as the parent nodes (bfield, efield, etc.) that in turn contain the actual
+input groups.</p>
+<p>The data can be accessed as</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">bfield</span><span class="o">.</span><span class="n">B_2DS_1234567890</span>
+</pre></div>
+</div>
+<p>or, equivalently,</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;bfield&quot;</span><span class="p">][</span><span class="s2">&quot;B_2DS_1234567890&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>In each input group, one input is always set as “active” (meaning it would
+be used for the next simulation) and it can be accessed as</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">bfield</span><span class="o">.</span><span class="n">active</span>
+</pre></div>
+</div>
+<p>QID can be used as a reference as well</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">bfield</span><span class="o">.</span><span class="n">q1234567890</span>
+</pre></div>
+</div>
+<p>Run groups are accessed in a similar fashion, e.g.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">run_1234567890</span> <span class="o">.</span>
+</pre></div>
+</div>
+<p>However, the easiest way to access the simulation output is via the methods
+in the RunNode. The active run (by default the most recent simulation) can
+be accessed with</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">active</span>
+</pre></div>
+</div>
+<p>and its inputs as</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">active</span><span class="o">.</span><span class="n">bfield</span>
+</pre></div>
+</div>
+<p>Most of these examples also work with dictionary-like reference but here we
+use only the attribute-like referencing for brevity.</p>
+<p>You can even use user defined tag taken from description to refer to it</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">THATPRLRUN</span>
+</pre></div>
+</div>
+<p>However, there are few rules to this:</p>
+<ul class="simple">
+<li><p>Tag is the first word in description converted to all caps for brevity.</p></li>
+<li><p>Maximum length is ten characters.</p></li>
+<li><p>Only letters and numbers are allowed (all special characters are removed).</p></li>
+<li><p>First character must be a letter.</p></li>
+<li><p>If two fields would have identical tags, they are changed to format
+&lt;tag&gt;_&lt;i&gt;, where i is running index starting from zero (corresponding
+to most recent data).</p></li>
+</ul>
+<p>Finally, you can print the contents of a node with</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">ls</span><span class="p">()</span>
+</pre></div>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.Ascot5IO.create_input">
+<span class="sig-name descname"><span class="pre">create_input</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">desc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">activate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dryrun</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.Ascot5IO.create_input" title="Link to this definition"></a></dt>
+<dd><p>Create input and write the data to the HDF5 file.</p>
+<p>This method can be used in two ways to write input data.</p>
+<ol class="arabic simple">
+<li><p>From <code class="xref py py-mod docutils literal notranslate"><span class="pre">ascot5io</span></code> choose the input type and find what is requested
+by the corresponding <code class="docutils literal notranslate"><span class="pre">write_hdf5</span></code> function to write inputs
+explicitly.</p></li>
+<li><p>From <code class="xref py py-mod docutils literal notranslate"><span class="pre">template</span></code> choose a template or import, and find what
+parameters are requested to write premade inputs or imported data.</p></li>
+</ol>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>inp</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Type of the input e.g. “B_2DS” or name of the template/import
+e.g. “analytical ITER-like”.</p>
+</dd>
+<dt><strong>desc</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Input description.</p>
+</dd>
+<dt><strong>activate</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Set created input as active.</p>
+</dd>
+<dt><strong>dryrun</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>If True, the data is not written to HDF5 but instead it is returned
+as a dictionary.</p>
+</dd>
+<dt><strong>**kwargs</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a></span></dt><dd><p>The parameters that are needed to create the requested input type
+or template.</p>
+<p>If input type is given but kwargs is empty, dummy input of given
+type is created.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>data</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a></span></dt><dd><p>Name, i.e. “&lt;type&gt;_&lt;qid&gt;”, of the new input that was written or the
+data that was created but not written if <code class="docutils literal notranslate"><span class="pre">dryrun</span></code> is True.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.Ascot5IO.destroy">
+<span class="sig-name descname"><span class="pre">destroy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">repack</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.Ascot5IO.destroy" title="Link to this definition"></a></dt>
+<dd><p>Remove all results from the HDF5 file.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>repack</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>If True, repack the HDF5 file.</p>
+<p>Removing data from the HDF5 file only removes references to it and
+repacking is required to free the disk space. Repacking makes a copy
+of the HDF5 file and destroys the original, and it also requires
+3rd party tool <cite>h5repack</cite> which is why it’s use is optional here.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.Ascot5IO.get_contents">
+<span class="sig-name descname"><span class="pre">get_contents</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.Ascot5IO.get_contents" title="Link to this definition"></a></dt>
+<dd><p>Return metadata for all childs sorted by date.</p>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>qids</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>QIDs.</p>
+</dd>
+<dt><strong>dates</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Dates.</p>
+</dd>
+<dt><strong>descs</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Descriptions.</p>
+</dd>
+<dt><strong>types</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Data types.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.Ascot5IO.get_runs">
+<span class="sig-name descname"><span class="pre">get_runs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputqid</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.Ascot5IO.get_runs" title="Link to this definition"></a></dt>
+<dd><p>Fetch QIDs of runs using given input.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>inputqid</strong><span class="classifier"><cite>qid</cite></span></dt><dd><p>QID of the input.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>qids</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a> [<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>]</span></dt><dd><p>List of run QIDs.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.Ascot5IO.ls">
+<span class="sig-name descname"><span class="pre">ls</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">show</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.Ascot5IO.ls" title="Link to this definition"></a></dt>
+<dd><p>Get a string representation of the contents.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>show</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>If True, the contents are also printed on screen.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>contents</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Multiline string decorated with ANSI escape sequences that list
+all results and their meta data and currently active inputs.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="a5py.ascot5io.RunGroup">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">a5py.ascot5io.</span></span><span class="sig-name descname"><span class="pre">RunGroup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inputqids</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.RunGroup" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="a5py.ascot5io.coreio.html#a5py.ascot5io.coreio.treeview.ResultNode" title="a5py.ascot5io.coreio.treeview.ResultNode"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResultNode</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">RunMixin</span></code></p>
+<p>Node containing results and methods to process them.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.RunGroup.activate">
+<span class="sig-name descname"><span class="pre">activate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.RunGroup.activate" title="Link to this definition"></a></dt>
+<dd><p>Set this group as active.</p>
+<p>Active inputs are used when the simulation is run. Active groups are
+also used during post-processing.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.RunGroup.destroy">
+<span class="sig-name descname"><span class="pre">destroy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">repack</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.RunGroup.destroy" title="Link to this definition"></a></dt>
+<dd><p>Remove this group from the HDF5 file.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>repack</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>If True, repack the HDF5 file.</p>
+<p>Removing data from the HDF5 file only removes references to it and
+repacking is required to free the disk space. Repacking makes a copy
+of the HDF5 file and destroys the original, and it also requires
+3rd party tool <cite>h5repack</cite> which is why it’s use is optional here.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.RunGroup.export">
+<span class="sig-name descname"><span class="pre">export</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">newgroup</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.RunGroup.export" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.RunGroup.get_contents">
+<span class="sig-name descname"><span class="pre">get_contents</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.RunGroup.get_contents" title="Link to this definition"></a></dt>
+<dd><p>Return names of all childs.</p>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>names</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a> [<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>]</span></dt><dd><p>List of names.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.RunGroup.get_date">
+<span class="sig-name descname"><span class="pre">get_date</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.RunGroup.get_date" title="Link to this definition"></a></dt>
+<dd><p>Get the date when this group was created.</p>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>date</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>The date in YYYY-MM-DD hh:mm:ss format.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.RunGroup.get_desc">
+<span class="sig-name descname"><span class="pre">get_desc</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.RunGroup.get_desc" title="Link to this definition"></a></dt>
+<dd><p>Get this group’s description.</p>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>desc</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Documentation the user has used to describe this group.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.RunGroup.get_name">
+<span class="sig-name descname"><span class="pre">get_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.RunGroup.get_name" title="Link to this definition"></a></dt>
+<dd><p>Return name of this group.</p>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>name</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>The name of the group as “&lt;group type&gt;_&lt;group qid&gt;”.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.RunGroup.get_qid">
+<span class="sig-name descname"><span class="pre">get_qid</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.RunGroup.get_qid" title="Link to this definition"></a></dt>
+<dd><p>Get QID of this group.</p>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>qid</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>String with 10 characters containing numbers from 0-9 which is
+an unique identifier for this group.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.RunGroup.get_type">
+<span class="sig-name descname"><span class="pre">get_type</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.RunGroup.get_type" title="Link to this definition"></a></dt>
+<dd><p>Return type of this group.</p>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>gtype</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Group type.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.RunGroup.getdist">
+<span class="sig-name descname"><span class="pre">getdist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dist</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ekin_edges</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pitch_edges</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plotexi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.RunGroup.getdist" title="Link to this definition"></a></dt>
+<dd><p>Return distribution function.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>dist</strong><span class="classifier">{“5d”, “6d”, “rho5d”, “rho6d”, “com”}</span></dt><dd><p>Name of the distribution.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">dist</span></code> is <code class="docutils literal notranslate"><span class="pre">None</span></code>, returns a list of available distributions.</p>
+</dd>
+<dt><strong>exi</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Convert the momentum space to energy-pitch.</p>
+<p>The distribution is normalized to conserve the particle number.</p>
+<p>Not applicable for <code class="docutils literal notranslate"><span class="pre">dist</span></code> = {“6d”, “rho6d”, “com”}.</p>
+</dd>
+<dt><strong>ekin_edges</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a> or <a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Number of bins or bin edges in the energy abscissa if <code class="docutils literal notranslate"><span class="pre">exi=True</span></code>.</p>
+</dd>
+<dt><strong>pitch_edges</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a> or <a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Number of bins or bin edges in the pitch abscissa if <code class="docutils literal notranslate"><span class="pre">exi=True</span></code>.</p>
+</dd>
+<dt><strong>plotexi</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Visualize the transformation from ppar-perp to energy-pitch if
+if <code class="docutils literal notranslate"><span class="pre">exi=True</span></code>.</p>
+<p>Use this option to adjust energy and pitch abscissae to your liking.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>data</strong><span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">DistData</span></code> or <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a> [<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>]</span></dt><dd><p>The distribution data object or a list of available distributions if
+<code class="docutils literal notranslate"><span class="pre">dist</span></code> is <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.RunGroup.getdist_list">
+<span class="sig-name descname"><span class="pre">getdist_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">show</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.RunGroup.getdist_list" title="Link to this definition"></a></dt>
+<dd><p>List all available distributions and moments.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>show</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Print the output.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>dists</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a> [<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>]</span></dt><dd><p>List of available distributions.</p>
+</dd>
+<dt><strong>moms</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a> [(<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>)]</span></dt><dd><p>List of distribution moments that can be evaluated and their
+meaning.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.RunGroup.getdist_moments">
+<span class="sig-name descname"><span class="pre">getdist_moments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dist</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">moments</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">volmethod</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'prism'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.RunGroup.getdist_moments" title="Link to this definition"></a></dt>
+<dd><p>Calculate moments of distribution.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>dist</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> or <code class="xref py py-class docutils literal notranslate"><span class="pre">DistData</span></code></span></dt><dd><p>Distribution from which moments are calculated.</p>
+</dd>
+<dt><strong>*moments</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Moments to be calculated.</p>
+</dd>
+<dt><strong>volmethod</strong><span class="classifier">{“mc”, “prism”}, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Method used to calculate the volume.</p>
+<p>It is a good idea to verify that same results are obtained with both
+methods.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>out</strong><span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">DistMoment</span></code></span></dt><dd><p>Distribution object containing moments as ordinates.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.RunGroup.getorbit">
+<span class="sig-name descname"><span class="pre">getorbit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">qnt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ids</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pncrid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endcond</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.RunGroup.getorbit" title="Link to this definition"></a></dt>
+<dd><p>Return orbit data.</p>
+<p>Returns marker phase space coordinates and derived quantities along
+the recorded orbit, if the orbit recording was enabled.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>*qnt</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Names of the quantities.</p>
+</dd>
+<dt><strong>ids</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Filter markers by their IDs.</p>
+</dd>
+<dt><strong>pncrid</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Filter data points by the Poincaré plane they correspond to.</p>
+</dd>
+<dt><strong>endcond</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a> [<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>], <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Filter markers by their end conditions.</p>
+<p>See <a class="reference internal" href="#a5py.ascot5io.RunGroup.getstate" title="a5py.ascot5io.RunGroup.getstate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">getstate()</span></code></a> for details on how this argument is parsed and
+for a list of end conditions present in the data.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>val</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a></span></dt><dd><p>The queried quantity sorted first by marker ID and then by mileage.</p>
+<p>If multiple quantities are queried, they are returned as a list in
+the order they were listed in <code class="docutils literal notranslate"><span class="pre">*qnt</span></code>.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ValueError</span></code></a></dt><dd><p>Raised when the queried quantity could not be interpreted.</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">AscotNoDataException</span></code></dt><dd><p>Raised when data required for the operation is not present.</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">AscotInitException</span></code></dt><dd><p>If evaluating quantity required interpolating an input that
+was not initialized.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.RunGroup.getorbit_average">
+<span class="sig-name descname"><span class="pre">getorbit_average</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qnt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ids</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.RunGroup.getorbit_average" title="Link to this definition"></a></dt>
+<dd><p>Calculate average of a quantity during a single poloidal transit.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>qnt</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Name of the averaged quantity.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.RunGroup.getorbit_list">
+<span class="sig-name descname"><span class="pre">getorbit_list</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.RunGroup.getorbit_list" title="Link to this definition"></a></dt>
+<dd><p>List quantities that can be evaluated with <a class="reference internal" href="#a5py.ascot5io.RunGroup.getorbit" title="a5py.ascot5io.RunGroup.getorbit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">getorbit()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.RunGroup.getorbit_poincareplanes">
+<span class="sig-name descname"><span class="pre">getorbit_poincareplanes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.RunGroup.getorbit_poincareplanes" title="Link to this definition"></a></dt>
+<dd><p>Return a list of Poincaré planes that were present in the simulation
+and the corresponding pncrid.</p>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>pol</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a> [(<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>)]</span></dt><dd><p>List of tuples with a toroidal angle and pncrid for each poloidal
+plane or empty list if there are none.</p>
+</dd>
+<dt><strong>tor</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a> [<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>]</span></dt><dd><p>List of tuples with a poloidal angle and pncrid for each toroidal
+plane or empty list if there are none.</p>
+</dd>
+<dt><strong>rad</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a> [<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>]</span></dt><dd><p>List of tuples with radius and pncrid for radial surfaces or empty
+list if there are none.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.RunGroup.getstate">
+<span class="sig-name descname"><span class="pre">getstate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">qnt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'gc'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ini'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ids</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endcond</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.RunGroup.getstate" title="Link to this definition"></a></dt>
+<dd><p>Evaluate a marker quantity based on its ini/endstate.</p>
+<p>Inistate is marker’s phase-space position right at the start of
+the simulation and endstate is the position at the end of
+the simulation.</p>
+<p>This function not only returns the marker phase space coordinates but
+also other quantities that can be inferred from it and information that
+is stored along with coordinates. For a complete list of available
+quantities, see.</p>
+<p>ASCOT5 stores both particle and guiding center phase-space position in
+all simulations. To differentiate these, quantities with suffix “prt”,
+e.g. “xprt”, return particle quantities and without suffix the guiding
+center quantity is returned.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>*qnt</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Names of the quantities.</p>
+</dd>
+<dt><strong>state</strong><span class="classifier">{“ini”, “end”}, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Is the quantity evaluated at the ini- or endstate.</p>
+</dd>
+<dt><strong>ids</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Filter markers by their IDs.</p>
+</dd>
+<dt><strong>endcond</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> or <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a> [<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>], <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Filter markers by their end conditions.</p>
+<p>See for a list of all possible end conditions or to list end
+conditions that are currently present in the data.</p>
+<p>Markers may have multiple end conditions active simultaneously. If
+just the name of the end condition e.g. “POLMAX” is passed, then all
+markers that have (at least) the <code class="docutils literal notranslate"><span class="pre">POLMAX</span></code> end condition are
+returned.</p>
+<p>If the end condition is preceded by “NOT”, e.g. “NOT POLMAX”, then
+markers that don’t have that end condition are returned.</p>
+<p>Passing multiple end conditions in a single string returns markers
+that have all listed end conditions active, e.g. “MAXPOL MAXTOR”
+returns markers that have both <code class="docutils literal notranslate"><span class="pre">POLMAX</span></code> and <code class="docutils literal notranslate"><span class="pre">TORMAX</span></code> active
+simultaneously.</p>
+<p>Passing end condition strings as separate list items acts as
+a logical OR, e.g. [“POLMAX”, “TORMAX”] returns markers that have
+either <code class="docutils literal notranslate"><span class="pre">POLMAX</span></code> or <code class="docutils literal notranslate"><span class="pre">TORMAX</span></code> active.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>val</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a></span></dt><dd><p>The evaluated quantity sorted by marker ID.</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">If</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">multiple</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">quantities</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">are</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">queried</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">they</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">are</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">returned</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">as</span></code> <code class="xref py py-obj docutils literal notranslate"><span class="pre">a</span></code> <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a> <code class="xref py py-obj docutils literal notranslate"><span class="pre">in</span></code></dt><dd><p>the order they were listed in <code class="docutils literal notranslate"><span class="pre">*qnt</span></code>.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ValueError</span></code></a></dt><dd><p>Raised when the queried quantity could not be interpreted.</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">AscotNoDataException</span></code></dt><dd><p>Raised when data required for the operation is not present.</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">AscotInitException</span></code></dt><dd><p>If evaluating quantity required interpolating an input that
+was not initialized.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.RunGroup.getstate_list">
+<span class="sig-name descname"><span class="pre">getstate_list</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.RunGroup.getstate_list" title="Link to this definition"></a></dt>
+<dd><p>List quantities that can be evaluated with <a class="reference internal" href="#a5py.ascot5io.RunGroup.getstate" title="a5py.ascot5io.RunGroup.getstate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">getstate()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.RunGroup.getstate_losssummary">
+<span class="sig-name descname"><span class="pre">getstate_losssummary</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.RunGroup.getstate_losssummary" title="Link to this definition"></a></dt>
+<dd><p>Return a summary of lost markers.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.RunGroup.getstate_markers">
+<span class="sig-name descname"><span class="pre">getstate_markers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mrktype</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ids</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.RunGroup.getstate_markers" title="Link to this definition"></a></dt>
+<dd><p>Convert endstate to marker input.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>mrktype</strong><span class="classifier">{“prt”, “gc”, “fl”}</span></dt><dd><p>Type of marker input to be created.</p>
+</dd>
+<dt><strong>ids</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Select only these markers for the output.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>mrk</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a></span></dt><dd><p>Markers parameters that can be supplied to <code class="xref py py-meth docutils literal notranslate"><span class="pre">Prt.write_hdf5()</span></code>,
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">GC.write_hdf5()</span></code> or <code class="xref py py-meth docutils literal notranslate"><span class="pre">FL.write_hdf5()</span></code> depending on
+<code class="docutils literal notranslate"><span class="pre">mrktype</span></code> value.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.RunGroup.getstate_markersummary">
+<span class="sig-name descname"><span class="pre">getstate_markersummary</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.RunGroup.getstate_markersummary" title="Link to this definition"></a></dt>
+<dd><p>Return a summary of marker end conditions and errors present in
+the data.</p>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>econds</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a> [(<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>)]</span></dt><dd><p>List of present end conditions.</p>
+<p>Each list member is a tuple, where first item is the number of
+markers with the end condition specified in the second item.</p>
+</dd>
+<dt><strong>emsg</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a> [(<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>)]</span></dt><dd><p>List of present errors.</p>
+<p>Each list member is a tuple, where first item is the error
+message, second the line number where error was raised, and
+third is the name of the file.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">AscotNoDataException</span></code></dt><dd><p>Raised when data required for the operation is not present.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.RunGroup.getstate_pointcloud">
+<span class="sig-name descname"><span class="pre">getstate_pointcloud</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">endcond</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.RunGroup.getstate_pointcloud" title="Link to this definition"></a></dt>
+<dd><p>Return marker endstate (x,y,z) coordinates in single array.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>endcond</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Only return markers that have given end condition.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.RunGroup.getwall_3dmesh">
+<span class="sig-name descname"><span class="pre">getwall_3dmesh</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.RunGroup.getwall_3dmesh" title="Link to this definition"></a></dt>
+<dd><p>Return 3D mesh representation of 3D wall and associated loads.</p>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>wallmesh</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Polydata</span></code></span></dt><dd><p>Mesh representing the wall.</p>
+<p>The mesh cell data has fields:</p>
+<ul class="simple">
+<li><p>“pload” particle load in units of prt/m^2 or prt/m^2s,</p></li>
+<li><p>“eload” power/energy load in units of W/m^2 or J/m^2</p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.RunGroup.getwall_figuresofmerit">
+<span class="sig-name descname"><span class="pre">getwall_figuresofmerit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.RunGroup.getwall_figuresofmerit" title="Link to this definition"></a></dt>
+<dd><p>Get peak power load and other 0D quantities related to wall loads.</p>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>warea</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>Total wetted area.</p>
+</dd>
+<dt><strong>pload</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>Peak power load.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.RunGroup.getwall_loads">
+<span class="sig-name descname"><span class="pre">getwall_loads</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">weights</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.RunGroup.getwall_loads" title="Link to this definition"></a></dt>
+<dd><p>Get wall loads and associated quantities.</p>
+<p>This method does not return loads on all wall elements (as usually most
+of them receive no loads) but only those that are affected and their
+IDs.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>weights</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Include marker weights to get physical results (otherwise particle
+deposition would be just the number of markers that hit the tile).</p>
+<p>Dropping weights is useful to check how many markers hit a tile
+which tells us how good the statistics are.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>ids</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a></span></dt><dd><p>Indices of loaded wall tiles.</p>
+</dd>
+<dt><strong>area</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a></span></dt><dd><p>Area of each tile.</p>
+</dd>
+<dt><strong>edepo</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a></span></dt><dd><p>Energy/power deposition per tile.</p>
+</dd>
+<dt><strong>pdepo</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a></span></dt><dd><p>Particle/flux deposition per tile.</p>
+</dd>
+<dt><strong>iangle</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a></span></dt><dd><p>Angle of incidence (TODO).</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.RunGroup.ls">
+<span class="sig-name descname"><span class="pre">ls</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">show</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.RunGroup.ls" title="Link to this definition"></a></dt>
+<dd><p>Get a string representation of the contents.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>show</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>If True, the contents are also printed on screen.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>contents</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Multiline string decorated with ANSI escape sequences that list
+this node’s meta data, all output data within this node, and inputs
+that were used.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.RunGroup.plotdist">
+<span class="sig-name descname"><span class="pre">plotdist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dist</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.RunGroup.plotdist" title="Link to this definition"></a></dt>
+<dd><p>Plot distribution in 1D or 2D.</p>
+<p>This method assumes that the input distribution has been integrated,
+sliced, and interpolated so that only one or two dimensions have
+a size above one.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>dist</strong><span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">DistData</span></code></span></dt><dd><p>The distribution data object.</p>
+</dd>
+<dt><strong>axes</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.8.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>The axes where figure is plotted or otherwise new figure is created.</p>
+</dd>
+<dt><strong>cax</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.8.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>The color bar axes or otherwise taken from the main axes.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.RunGroup.plotdist_moments">
+<span class="sig-name descname"><span class="pre">plotdist_moments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">moment</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ordinate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.RunGroup.plotdist_moments" title="Link to this definition"></a></dt>
+<dd><p>Plot radial or (R,z) profile of a distribution moment.</p>
+<p>The plotted profile is the average of (theta, phi) or phi depending
+on whether the input is calculated from a rho distribution or not.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>moment: class:`DistMoment`</strong></dt><dd><p>Moments calculated from the distribution.</p>
+</dd>
+<dt><strong>ordinate</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Name of the moment to be plotted.</p>
+</dd>
+<dt><strong>axes</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.8.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>The axes where figure is plotted or otherwise new figure is created.</p>
+</dd>
+<dt><strong>cax</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.8.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>The color bar axes or otherwise taken from the main axes.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.RunGroup.plotorbit_poincare">
+<span class="sig-name descname"><span class="pre">plotorbit_poincare</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plane</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">connlen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.RunGroup.plotorbit_poincare" title="Link to this definition"></a></dt>
+<dd><p>Create a Poincaré plot where the color separates different markers
+or shows the connection length.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>plane</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>The Poincaré plane to be plotted.</p>
+<p>The argument is expected to have format “pol/tor/rad i” where the
+first part specifies the type of the plane (poloidal, toroidal,
+radial) and the second argument is the plane index. For example,
+<code class="docutils literal notranslate"><span class="pre">plane=&quot;pol</span> <span class="pre">2&quot;</span></code> plots the second poloidal plane. The order of
+the planes is same as given by <a class="reference internal" href="#a5py.ascot5io.RunGroup.getorbit_poincareplanes" title="a5py.ascot5io.RunGroup.getorbit_poincareplanes"><code class="xref py py-meth docutils literal notranslate"><span class="pre">getorbit_poincareplanes()</span></code></a>.</p>
+</dd>
+<dt><strong>connlen</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Show connection length and separated lost and confined markers with
+color.</p>
+<p>If true, trajectories of lost markers are colored (in blue
+shades) where the color shows the connection length at that
+position. Confined (or all if conlen=False) markers are shown
+with shades of red where color separates subsequent
+trajectories.</p>
+</dd>
+<dt><strong>axes</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.8.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>The axes where figure is plotted or otherwise new figure is created.</p>
+</dd>
+<dt><strong>cax</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.8.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>The color bar axes or otherwise taken from the main axes.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ValueError</span></code></a></dt><dd><p>Raised when the plane is unknown.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.RunGroup.plotorbit_trajectory">
+<span class="sig-name descname"><span class="pre">plotorbit_trajectory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endcond</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ids</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axesequal</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.RunGroup.plotorbit_trajectory" title="Link to this definition"></a></dt>
+<dd><p>Plot orbit trajectories in arbitrary coordinates.</p>
+<p>The plot is either 2D+1D or 3D+1D, where the extra coordinate is color,
+depending on the number of queried coordinates. The color scale is
+discrete, not continuous.</p>
+<p>The quantity (“qnt”) must have one of the following formats:</p>
+<ul class="simple">
+<li><p>“diff qnt” plots the difference between inistate and current value.</p></li>
+<li><p>“reldiff qnt” plots the relative difference (x1/x0 - 1).</p></li>
+<li><p>“log &lt;diff/reldiff&gt; qnt” plots the logarithmic value.</p></li>
+</ul>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>x</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Name of the quantity on x-axis.</p>
+</dd>
+<dt><strong>y</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Name of the quantity on y-axis.</p>
+</dd>
+<dt><strong>z</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Name of the quantity on z-axis.</p>
+<p>If not None, the plot will be in 3D.</p>
+</dd>
+<dt><strong>c</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>The color used to plot the markers or name of the quantity shown
+with color.</p>
+<p>If None, markers are plotted with different colors.</p>
+</dd>
+<dt><strong>endcond</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Endcond of those  markers which are plotted.</p>
+</dd>
+<dt><strong>ids</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a></span></dt><dd><p>IDs of the markers to be plotted.</p>
+</dd>
+<dt><strong>cmap</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Colormap.</p>
+</dd>
+<dt><strong>axesequal</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Flag whether to set aspect ratio for x and y (and z) axes equal.</p>
+</dd>
+<dt><strong>axes</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.8.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>The axes where figure is plotted or otherwise new figure is created.</p>
+</dd>
+<dt><strong>cax</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.8.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>The color bar axes or otherwise taken from the main axes.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.RunGroup.plotstate_histogram">
+<span class="sig-name descname"><span class="pre">plotstate_histogram</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xbins</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ybins</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xmode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'gc'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ymode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'gc'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endcond</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ids</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logscale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axesequal</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.RunGroup.plotstate_histogram" title="Link to this definition"></a></dt>
+<dd><p>Make a histogram plot of marker state coordinates.</p>
+<p>The histogram is either 1D or 2D depending on if the y coordinate is
+provided. In the 1D histogram the markers with different endstate are
+separated by color if the endcond argument is None.</p>
+<p>The quantity (“qnt”) must have one of the following formats:</p>
+<ul class="simple">
+<li><p>“ini qnt” plots inistate of quantity qnt.</p></li>
+<li><p>“end qnt” plots endstate of quantity qnt.</p></li>
+<li><p>“diff qnt” plots the difference between ini and endstate.</p></li>
+<li><p>“reldiff qnt” plots the relative difference (x1/x0 - 1).</p></li>
+<li><p>“log ini/end/diff/reldiff qnt” plots the logarithmic value.</p></li>
+</ul>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>x</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Name of the quantity on x-axis.</p>
+</dd>
+<dt><strong>y</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Name of the quantity on y-axis.</p>
+<p>If not None, the histogram will be in 2D.</p>
+</dd>
+<dt><strong>xbins</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a> or <a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Bin edges for the x coordinate or the number of bins.</p>
+</dd>
+<dt><strong>ybins</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a> or <a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Bin edges for the y coordinate or the number of bins.</p>
+</dd>
+<dt><strong>xmode</strong><span class="classifier">{“prt”, “gc”}, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Evaluate x quantity in particle or guiding-center phase space.</p>
+</dd>
+<dt><strong>ymode</strong><span class="classifier">{“prt”, “gc”}, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Evaluate y quantity in particle or guiding-center phase space.</p>
+</dd>
+<dt><strong>endcond</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Endcond of those markers which are plotted.</p>
+<p>If None and the plot is in 1D, the histogram will be stacked with
+different colors indicating different end conditions.</p>
+</dd>
+<dt><strong>ids</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a></span></dt><dd><p>IDs of the markers to be plotted.</p>
+</dd>
+<dt><strong>weight</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a></span></dt><dd><p>Whether to weight markers when they are binned to the histogram.</p>
+<p>The weighted histogram represents physical particles whereas
+the unweighted histogram corresponds to markers.</p>
+</dd>
+<dt><strong>cmap</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Name of the colormap used in the 2D histogram.</p>
+</dd>
+<dt><strong>axesequal</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Flag whether to set aspect ratio for x and y axes equal in 2D.</p>
+</dd>
+<dt><strong>axes</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.8.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>The axes where figure is plotted or otherwise new figure is created.</p>
+</dd>
+<dt><strong>cax</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.8.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>The color bar axes or otherwise taken from the main axes.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.RunGroup.plotstate_scatter">
+<span class="sig-name descname"><span class="pre">plotstate_scatter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xmode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'gc'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ymode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'gc'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zmode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'gc'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'gc'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endcond</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ids</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cint</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">9</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axesequal</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.RunGroup.plotstate_scatter" title="Link to this definition"></a></dt>
+<dd><p>Make a scatter plot of marker state coordinates.</p>
+<p>The plot is either 2D+1D or 3D+1D, where the extra coordinate is color,
+depending on the number of queried coordinates. The color scale is
+discrete, not continuous.</p>
+<p>The quantity (“qnt”) must have one of the following formats:</p>
+<ul class="simple">
+<li><p>“ini qnt” plots inistate of quantity qnt.</p></li>
+<li><p>“end qnt” plots endstate of quantity qnt.</p></li>
+<li><p>“diff qnt” plots the difference between ini and endstate.</p></li>
+<li><p>“reldiff qnt” plots the relative difference (x1/x0 - 1).</p></li>
+<li><p>“log ini/end/diff/reldiff qnt” plots the logarithmic value.</p></li>
+</ul>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>x</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Name of the quantity on x-axis.</p>
+</dd>
+<dt><strong>y</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Name of the quantity on y-axis.</p>
+</dd>
+<dt><strong>z</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Name of the quantity on z-axis.</p>
+<p>If not None, the plot will be in 3D.</p>
+</dd>
+<dt><strong>c</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Name of the quantity shown with color scale or name of a color
+to plot all markers with same color.</p>
+</dd>
+<dt><strong>xmode</strong><span class="classifier">{“prt”, “gc”}, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Evaluate x quantity in particle or guiding-center phase space.</p>
+</dd>
+<dt><strong>ymode</strong><span class="classifier">{“prt”, “gc”}, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Evaluate y quantity in particle or guiding-center phase space.</p>
+</dd>
+<dt><strong>zmode</strong><span class="classifier">{“prt”, “gc”}, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Evaluate z quantity in particle or guiding-center phase space.</p>
+</dd>
+<dt><strong>cmode</strong><span class="classifier">{“prt”, “gc”}, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Evaluate color quantity in particle or guiding-center phase space.</p>
+</dd>
+<dt><strong>endcond</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Endcond of those markers which are plotted.</p>
+</dd>
+<dt><strong>ids</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a></span></dt><dd><p>IDs of the markers to be plotted.</p>
+</dd>
+<dt><strong>cint</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a> or <a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a> <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Number of colors to be used or bin edges.</p>
+<p>All markers that have <code class="docutils literal notranslate"><span class="pre">cint[i]</span> <span class="pre">&lt;</span> <span class="pre">c</span> <span class="pre">&lt;=</span> <span class="pre">cint[i+1]</span></code> are plotted with
+same color. If <code class="docutils literal notranslate"><span class="pre">cint</span></code> array is not given explicitly,
+cint = np.linspace(min(c), max(c), cint).</p>
+</dd>
+<dt><strong>cmap</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Name of the colormap where colors are picked.</p>
+</dd>
+<dt><strong>axesequal</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Flag whether to set aspect ratio for x and y (and z) axes equal.</p>
+</dd>
+<dt><strong>axes</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.8.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>The axes where figure is plotted or otherwise new figure is created.</p>
+</dd>
+<dt><strong>cax</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.8.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>The color bar axes or otherwise taken from the main axes.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">AscotNoDataException</span></code></dt><dd><p>Raised when data required for the opreation is not present.</p>
+</dd>
+<dt><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ValueError</span></code></a></dt><dd><p>If argument could not be parsed.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.RunGroup.plotwall_3dinteractive">
+<span class="sig-name descname"><span class="pre">plotwall_3dinteractive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wallmesh</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">points</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cpos</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cfoc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cang</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.RunGroup.plotwall_3dinteractive" title="Link to this definition"></a></dt>
+<dd><p>Open vtk window to display interactive view of the wall mesh.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>wallmesh, optional</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Polydata</span></code></span></dt><dd><p>Mesh representing the wall. If not given then construct the
+mesh from the wall data.</p>
+</dd>
+<dt><strong>*args</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">method</span></code>), <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Key (str) method pairs. When key is pressed when the plot is
+displayed, the associated method is called. The method should
+take Plotter instance as an argument.</p>
+</dd>
+<dt><strong>points</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Array Npoint x 3 defining points (markers) to be shown. For
+each point [x, y, z] coordinates are given. If boolean True is
+given, then markers are read from the endstate.</p>
+</dd>
+<dt><strong>cpos</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Camera position coordinates [x, y, z].</p>
+</dd>
+<dt><strong>cfoc</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Camera focal point coordinates [x, y, z].</p>
+</dd>
+<dt><strong>cang</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Camera angle [azimuth, elevation, roll].</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.RunGroup.plotwall_3dstill">
+<span class="sig-name descname"><span class="pre">plotwall_3dstill</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wallmesh</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">points</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cpos</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cfoc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cang</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.RunGroup.plotwall_3dstill" title="Link to this definition"></a></dt>
+<dd><p>Take a still shot of the mesh and display it using matplotlib
+backend.</p>
+<p>The rendering is done using vtk but the vtk (interactive) window is not
+displayed. It is recommended to use the interactive plot to find desired
+camera position and produce the actual plot using this method. The plot
+is shown using imshow and acts as a regular matplotlib plot.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>wallmesh</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Polydata</span></code></span></dt><dd><p>Mesh representing the wall. If not given then construct the mesh
+from the wall data.</p>
+</dd>
+<dt><strong>points</strong><span class="classifier">{<a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>}, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Array Npoint x 3 defining points (markers) to be shown. For each
+point [x, y, z] coordinates are given. If boolean True is given,
+then markers are read from the endstate.</p>
+</dd>
+<dt><strong>cpos</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Camera position coordinates [x, y, z].</p>
+</dd>
+<dt><strong>cfoc</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Camera focal point coordinates [x, y, z].</p>
+</dd>
+<dt><strong>cang</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Camera angle [azimuth, elevation, roll].</p>
+</dd>
+<dt><strong>axes</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.8.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>The axes where figure is plotted or otherwise new figure is created.</p>
+</dd>
+<dt><strong>cax</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.8.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>The color bar axes or otherwise taken from the main axes.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.RunGroup.plotwall_loadvsarea">
+<span class="sig-name descname"><span class="pre">plotwall_loadvsarea</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">axes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.RunGroup.plotwall_loadvsarea" title="Link to this definition"></a></dt>
+<dd><p>Plot histogram showing area affected by at least a given load.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>axes</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.8.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>The axes where figure is plotted or otherwise new figure is created.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.RunGroup.plotwall_torpol">
+<span class="sig-name descname"><span class="pre">plotwall_torpol</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">log</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.RunGroup.plotwall_torpol" title="Link to this definition"></a></dt>
+<dd><p>Plot the toroidal-poloidal projection of the wall loads.</p>
+<p>Note that the resulting doesn’t present the areas accurately and even
+the locations are approximate. The purpose of the plot is to roughly
+illustrate how the losses are distributed.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>log</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Make the color scale logarithmic.</p>
+</dd>
+<dt><strong>clim</strong><span class="classifier">[<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>], <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Minimum and maximum values in the color scale.</p>
+</dd>
+<dt><strong>axes</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.8.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>The axes where figure is plotted or otherwise new figure is created.</p>
+</dd>
+<dt><strong>cax</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.8.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>The color bar axes or otherwise taken from the main axes.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.RunGroup.set_desc">
+<span class="sig-name descname"><span class="pre">set_desc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">desc</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.RunGroup.set_desc" title="Link to this definition"></a></dt>
+<dd><p>Set description for this group.</p>
+<p>Note that the first word in the description is this group’s tag which
+can be used to refer to this group.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>desc</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Short description for the user to document this group.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="a5py.ascot5io.InputGroup">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">a5py.ascot5io.</span></span><span class="sig-name descname"><span class="pre">InputGroup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h5</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.InputGroup" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="a5py.ascot5io.coreio.html#a5py.ascot5io.coreio.treeview.InputNode" title="a5py.ascot5io.coreio.treeview.InputNode"><code class="xref py py-class docutils literal notranslate"><span class="pre">InputNode</span></code></a></p>
+<p>Node containing input data groups.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.InputGroup.destroy">
+<span class="sig-name descname"><span class="pre">destroy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">repack</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.InputGroup.destroy" title="Link to this definition"></a></dt>
+<dd><p>Remove this group from the HDF5 file.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>repack</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>If True, repack the HDF5 file.</p>
+<p>Removing data from the HDF5 file only removes references to it and
+repacking is required to free the disk space. Repacking makes a copy
+of the HDF5 file and destroys the original, and it also requires
+3rd party tool <cite>h5repack</cite> which is why it’s use is optional here.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.InputGroup.get_contents">
+<span class="sig-name descname"><span class="pre">get_contents</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.InputGroup.get_contents" title="Link to this definition"></a></dt>
+<dd><p>Return metadata for all childs sorted by date.</p>
+<dl class="field-list">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>qids</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>QIDs.</p>
+</dd>
+<dt><strong>dates</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Dates.</p>
+</dd>
+<dt><strong>descs</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Descriptions.</p>
+</dd>
+<dt><strong>types</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/glossary.html#term-array_like" title="(in NumPy v1.26)"><span>array_like</span></a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Data types.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="a5py.ascot5io.InputGroup.ls">
+<span class="sig-name descname"><span class="pre">ls</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">show</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#a5py.ascot5io.InputGroup.ls" title="Link to this definition"></a></dt>
+<dd><p>Get a string representation of the contents.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>show</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>If True, the contents are also printed on screen.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>contents</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Multiline string decorated with ANSI escape sequences that list
+all data groups within this node.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="a5py.html" class="btn btn-neutral float-left" title="Python API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="a5py.ascot5io.bfield.html" class="btn btn-neutral float-right" title="bfield" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Ascot Group.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

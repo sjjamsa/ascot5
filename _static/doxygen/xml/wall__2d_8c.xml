@@ -1,0 +1,446 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="wall__2d_8c" kind="file" language="C++">
+    <compoundname>wall_2d.c</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes refid="math_8h" local="no">math.h</includes>
+    <includes refid="ascot5_8h" local="yes">../ascot5.h</includes>
+    <includes refid="print_8h" local="yes">../print.h</includes>
+    <includes refid="wall__2d_8h" local="yes">wall_2d.h</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>stdlib.h</label>
+      </node>
+      <node id="6">
+        <label>omp.h</label>
+      </node>
+      <node id="7">
+        <label>time.h</label>
+      </node>
+      <node id="4">
+        <label>math.h</label>
+        <link refid="math_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+      </node>
+      <node id="8">
+        <label>../print.h</label>
+        <link refid="print_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>wall/wall_2d.c</label>
+        <link refid="wall__2d_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>wall_2d.h</label>
+        <link refid="wall__2d_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>ascot5.h</label>
+        <link refid="ascot5_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="wall__2d_8c_1a8e995d541a21a25b438cea528f046f7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wall_2d_init_offload</definition>
+        <argsstring>(wall_2d_offload_data *offload_data, real **offload_array)</argsstring>
+        <name>wall_2d_init_offload</name>
+        <param>
+          <type><ref refid="structwall__2d__offload__data" kindref="compound">wall_2d_offload_data</ref> *</type>
+          <declname>offload_data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> **</type>
+          <declname>offload_array</declname>
+        </param>
+        <briefdescription>
+<para>Load 2D wall data and prepare parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function assumes offload data is already finished and the offload array is allocated and initialized with values</para>
+<para>&amp;(*offload_array)[0] = Wall polygon R coordinates &amp;(*offload_array)[n] = Wall polygon z coordinates</para>
+<para>Since this data requires no initialization, the only thing this function does is that it prints some values as sanity check.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>offload_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to pointer to offload array</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>zero to indicate success </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="wall/wall_2d.c" line="29" column="5" bodyfile="wall/wall_2d.c" bodystart="29" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="wall__2d_8c_1a03243bd2237fc067855155ffcf4813f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wall_2d_free_offload</definition>
+        <argsstring>(wall_2d_offload_data *offload_data, real **offload_array)</argsstring>
+        <name>wall_2d_free_offload</name>
+        <param>
+          <type><ref refid="structwall__2d__offload__data" kindref="compound">wall_2d_offload_data</ref> *</type>
+          <declname>offload_data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> **</type>
+          <declname>offload_array</declname>
+        </param>
+        <briefdescription>
+<para>Free offload array and reset parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function deallocates the offload_array.</para>
+<para>This function is host only.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>offload_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to pointer to offload array </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="wall/wall_2d.c" line="62" column="6" bodyfile="wall/wall_2d.c" bodystart="62" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="wall__2d_8c_1a417323f274cc169e65f270791b6955df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wall_2d_init</definition>
+        <argsstring>(wall_2d_data *w, wall_2d_offload_data *offload_data, real *offload_array)</argsstring>
+        <name>wall_2d_init</name>
+        <param>
+          <type><ref refid="structwall__2d__data" kindref="compound">wall_2d_data</ref> *</type>
+          <declname>w</declname>
+        </param>
+        <param>
+          <type><ref refid="structwall__2d__offload__data" kindref="compound">wall_2d_offload_data</ref> *</type>
+          <declname>offload_data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>offload_array</declname>
+        </param>
+        <briefdescription>
+<para>Initialize 2D wall data struct on target. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Copies the 2D wall parameters from the offload struct to the struct on on target and sets the wall data pointer inside to the offload array.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>w</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to data struct on target </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the offload array </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="wall/wall_2d.c" line="78" column="6" bodyfile="wall/wall_2d.c" bodystart="78" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="wall__2d_8c_1a4f30db1630e8d948ba0453bb7d8a55c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wall_2d_inside</definition>
+        <argsstring>(real r, real z, wall_2d_data *w)</argsstring>
+        <name>wall_2d_inside</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type><ref refid="structwall__2d__data" kindref="compound">wall_2d_data</ref> *</type>
+          <declname>w</declname>
+        </param>
+        <briefdescription>
+<para>Check if coordinates are within 2D polygon wall. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function checks if the given coordinates are within the walls defind by a 2D polygon using a modified axis crossing method [1]. Origin is moved to the coordinates and the number of wall segments crossing the positive r-axis are calculated. If this is odd, the point is inside the polygon.</para>
+<para>[1] D.G. Alciatore, R. Miranda. A Winding Number and Point-in-Polygon Algorithm. Technical report, Colorado State University, 1995. <ulink url="http://www.engr.colostate.edu/~dga/dga/papers/point_in_polygon.pdf">http://www.engr.colostate.edu/~dga/dga/papers/point_in_polygon.pdf</ulink></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>r coordinate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>z coordinate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>w</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>2D wall data structure </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="wall/wall_2d.c" line="101" column="5" bodyfile="wall/wall_2d.c" bodystart="101" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="wall__2d_8c_1ae5498a77343a2e15ae59a07e4441c043" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wall_2d_hit_wall</definition>
+        <argsstring>(real r1, real phi1, real z1, real r2, real phi2, real z2, wall_2d_data *w)</argsstring>
+        <name>wall_2d_hit_wall</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>r1</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>phi1</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>z1</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>r2</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>phi2</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>z2</declname>
+        </param>
+        <param>
+          <type><ref refid="structwall__2d__data" kindref="compound">wall_2d_data</ref> *</type>
+          <declname>w</declname>
+        </param>
+        <briefdescription>
+<para>Check if trajectory from (r1, phi1, z1) to (r2, phi2, z2) intersects the wall. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>r1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>start point R coordinate [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>phi1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>start point phi coordinate [rad] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>start point z coordinate [rad] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>end point R coordinate [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>phi2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>end point phi coordinate [rad] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>end point z coordinate [rad] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>w</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to data struct on target</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>wall element ID if hit, zero otherwise</para>
+</simplesect>
+<xrefsect id="todo_1_todo000012"><xreftitle>Todo</xreftitle><xrefdescription><para>Right now this returns only a boolean wall for hit but not the wall ID </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="wall/wall_2d.c" line="136" column="5" bodyfile="wall/wall_2d.c" bodystart="136" bodyend="142"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>2D wall collision checks </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="math_8h" kindref="compound">math.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../ascot5.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../print.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="wall__2d_8h" kindref="compound">wall_2d.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="wall__2d_8c_1a8e995d541a21a25b438cea528f046f7e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="wall__2d_8c_1a8e995d541a21a25b438cea528f046f7e" kindref="member">wall_2d_init_offload</ref>(<ref refid="structwall__2d__offload__data" kindref="compound">wall_2d_offload_data</ref>*<sp/>offload_data,</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>**<sp/>offload_array)<sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Do<sp/>no<sp/>initialization</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n<sp/>=<sp/>offload_data-&gt;<ref refid="structwall__2d__offload__data_1acd8c3a1114f5f3bcc64d97fe06072c97" kindref="member">n</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>rmin<sp/>=<sp/>(*offload_array)[0],<sp/>rmax<sp/>=<sp/>(*offload_array)[0];</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>zmin<sp/>=<sp/>(*offload_array)[n],<sp/>zmax<sp/>=<sp/>(*offload_array)[n];</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;n;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rmin<sp/>=<sp/>fmin(rmin,<sp/>(*offload_array)[i]);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rmax<sp/>=<sp/>fmax(rmax,<sp/>(*offload_array)[i]);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>zmin<sp/>=<sp/>fmin(zmin,<sp/>(*offload_array)[n+i]);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>zmax<sp/>=<sp/>fmax(zmax,<sp/>(*offload_array)[n+i]);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="print_8h_1a8520c71eb5db223009e5079e420bc398" kindref="member">print_out</ref>(VERBOSE_IO,<sp/></highlight><highlight class="stringliteral">&quot;\n2D<sp/>wall<sp/>model<sp/>(wall_2D)\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="print_8h_1a8520c71eb5db223009e5079e420bc398" kindref="member">print_out</ref>(VERBOSE_IO,<sp/></highlight><highlight class="stringliteral">&quot;Number<sp/>of<sp/>wall<sp/>elements<sp/>=<sp/>%d,&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>R<sp/>extend<sp/>=<sp/>[%2.2f,<sp/>%2.2f],<sp/>z<sp/>extend<sp/>=<sp/>[%2.2f,<sp/>%2.2f]\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n,<sp/>rmin,<sp/>rmax,<sp/>zmin,<sp/>zmax);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="wall__2d_8c_1a03243bd2237fc067855155ffcf4813f2" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="wall__2d_8c_1a03243bd2237fc067855155ffcf4813f2" kindref="member">wall_2d_free_offload</ref>(<ref refid="structwall__2d__offload__data" kindref="compound">wall_2d_offload_data</ref>*<sp/>offload_data,</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>**<sp/>offload_array)<sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>free(*offload_array);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>*offload_array<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="wall__2d_8c_1a417323f274cc169e65f270791b6955df" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="wall__2d_8c_1a417323f274cc169e65f270791b6955df" kindref="member">wall_2d_init</ref>(<ref refid="structwall__2d__data" kindref="compound">wall_2d_data</ref>*<sp/>w,<sp/><ref refid="structwall__2d__offload__data" kindref="compound">wall_2d_offload_data</ref>*<sp/>offload_data,</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>offload_array)<sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>w-&gt;<ref refid="structwall__2d__data_1a5eb56636a47f221b9d07ddb1227a7fcd" kindref="member">n</ref><sp/>=<sp/>offload_data-&gt;<ref refid="structwall__2d__offload__data_1acd8c3a1114f5f3bcc64d97fe06072c97" kindref="member">n</ref>;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>w-&gt;<ref refid="structwall__2d__data_1aa72c27ae0a1bc8240cdc4970edf717e5" kindref="member">wall_r</ref><sp/>=<sp/>&amp;offload_array[0];</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>w-&gt;<ref refid="structwall__2d__data_1a913174b09fb13d4bdfa2c9c2390776c1" kindref="member">wall_z</ref><sp/>=<sp/>&amp;offload_array[offload_data-&gt;<ref refid="structwall__2d__offload__data_1acd8c3a1114f5f3bcc64d97fe06072c97" kindref="member">n</ref>];</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="wall__2d_8c_1a4f30db1630e8d948ba0453bb7d8a55c1" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="wall__2d_8c_1a4f30db1630e8d948ba0453bb7d8a55c1" kindref="member">wall_2d_inside</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z,<sp/><ref refid="structwall__2d__data" kindref="compound">wall_2d_data</ref>*<sp/>w)<sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>hits<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>w-&gt;<ref refid="structwall__2d__data_1a5eb56636a47f221b9d07ddb1227a7fcd" kindref="member">n</ref><sp/>-<sp/>1;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>wz1<sp/>=<sp/>w-&gt;<ref refid="structwall__2d__data_1a913174b09fb13d4bdfa2c9c2390776c1" kindref="member">wall_z</ref>[i]<sp/>-<sp/>z;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>wz2<sp/>=<sp/>w-&gt;<ref refid="structwall__2d__data_1a913174b09fb13d4bdfa2c9c2390776c1" kindref="member">wall_z</ref>[i+1]<sp/>-<sp/>z;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>wr1<sp/>=<sp/>w-&gt;<ref refid="structwall__2d__data_1aa72c27ae0a1bc8240cdc4970edf717e5" kindref="member">wall_r</ref>[i]<sp/>-<sp/>r;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>wr2<sp/>=<sp/>w-&gt;<ref refid="structwall__2d__data_1aa72c27ae0a1bc8240cdc4970edf717e5" kindref="member">wall_r</ref>[i+1]<sp/>-<sp/>r;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(wz1<sp/>*<sp/>wz2<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>ri<sp/>=<sp/>wr1<sp/>+<sp/>(wz1*(wr2-wr1))<sp/>/<sp/>(wz1-wz2);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(ri<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hits++;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>hits<sp/>%<sp/>2;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136" refid="wall__2d_8c_1ae5498a77343a2e15ae59a07e4441c043" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="wall__2d_8c_1ae5498a77343a2e15ae59a07e4441c043" kindref="member">wall_2d_hit_wall</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r1,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>phi1,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z1,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r2,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>phi2,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z2,</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structwall__2d__data" kindref="compound">wall_2d_data</ref>*<sp/>w)<sp/>{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!<ref refid="wall__2d_8c_1a4f30db1630e8d948ba0453bb7d8a55c1" kindref="member">wall_2d_inside</ref>(r2,<sp/>z2,<sp/>w))</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="wall/wall_2d.c"/>
+  </compounddef>
+</doxygen>

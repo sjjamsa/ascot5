@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structE__field__offload__data" kind="struct" language="C++" prot="public">
+    <compoundname>E_field_offload_data</compoundname>
+    <includes refid="E__field_8h" local="no">E_field.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structE__field__offload__data_1a84bcd5efca36c7336eda033036726feb" prot="public" static="no" mutable="no">
+        <type><ref refid="E__field_8h_1acd92ff41d651621c8f1778e14c2808a6" kindref="member">E_field_type</ref></type>
+        <definition>E_field_type E_field_offload_data::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Electric field type wrapped by this struct </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E_field.h" line="39" column="18" bodyfile="E_field.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structE__field__offload__data_1a26a62d4cb90506d697307ed550a6738a" prot="public" static="no" mutable="no">
+        <type><ref refid="structE__TC__offload__data" kindref="compound">E_TC_offload_data</ref></type>
+        <definition>E_TC_offload_data E_field_offload_data::ETC</definition>
+        <argsstring></argsstring>
+        <name>ETC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TC field or NULL if not active <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E_field.h" line="40" column="23" bodyfile="E_field.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structE__field__offload__data_1a5171c57a6705c6b0821057d120d0d66c" prot="public" static="no" mutable="no">
+        <type><ref refid="structE__1DS__offload__data" kindref="compound">E_1DS_offload_data</ref></type>
+        <definition>E_1DS_offload_data E_field_offload_data::E1DS</definition>
+        <argsstring></argsstring>
+        <name>E1DS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>1DS field or NULL if not active <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E_field.h" line="41" column="24" bodyfile="E_field.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structE__field__offload__data_1a9ed2ce68aa2e3a32e33a0050f850253c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int E_field_offload_data::offload_array_length</definition>
+        <argsstring></argsstring>
+        <name>offload_array_length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Allocated offload array length <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E_field.h" line="42" column="9" bodyfile="E_field.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Electric field offload data. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This struct holds data necessary for offloading. The struct is initialized in <ref refid="E__field_8c_1a5784612c08e8edb20602a0a3a13c1562" kindref="member">E_field_init_offload()</ref>.</para>
+<para>The intended usage is that only single offload data is used at the time, and the type of the data is declared with the &quot;type&quot; field. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>E_1DS_offload_data</label>
+        <link refid="structE__1DS__offload__data"/>
+      </node>
+      <node id="1">
+        <label>E_field_offload_data</label>
+        <link refid="structE__field__offload__data"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>ETC</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>E1DS</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>E_TC_offload_data</label>
+        <link refid="structE__TC__offload__data"/>
+      </node>
+    </collaborationgraph>
+    <location file="E_field.h" line="38" column="1" bodyfile="E_field.h" bodystart="38" bodyend="43"/>
+    <listofallmembers>
+      <member refid="structE__field__offload__data_1a5171c57a6705c6b0821057d120d0d66c" prot="public" virt="non-virtual"><scope>E_field_offload_data</scope><name>E1DS</name></member>
+      <member refid="structE__field__offload__data_1a26a62d4cb90506d697307ed550a6738a" prot="public" virt="non-virtual"><scope>E_field_offload_data</scope><name>ETC</name></member>
+      <member refid="structE__field__offload__data_1a9ed2ce68aa2e3a32e33a0050f850253c" prot="public" virt="non-virtual"><scope>E_field_offload_data</scope><name>offload_array_length</name></member>
+      <member refid="structE__field__offload__data_1a84bcd5efca36c7336eda033036726feb" prot="public" virt="non-virtual"><scope>E_field_offload_data</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

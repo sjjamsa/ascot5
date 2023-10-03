@@ -1,0 +1,2141 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="B__field_8h" kind="file" language="C++">
+    <compoundname>B_field.h</compoundname>
+    <includes refid="ascot5_8h" local="yes">ascot5.h</includes>
+    <includes refid="error_8h" local="yes">error.h</includes>
+    <includes refid="B__GS_8h" local="yes">Bfield/B_GS.h</includes>
+    <includes refid="B__2DS_8h" local="yes">Bfield/B_2DS.h</includes>
+    <includes refid="B__3DS_8h" local="yes">Bfield/B_3DS.h</includes>
+    <includes refid="B__STS_8h" local="yes">Bfield/B_STS.h</includes>
+    <includes refid="B__TC_8h" local="yes">Bfield/B_TC.h</includes>
+    <includedby refid="ascot5__main_8c" local="yes">ascot5_main.c</includedby>
+    <includedby refid="B__field_8c" local="yes">B_field.c</includedby>
+    <includedby refid="bbnbi5_8c" local="yes">bbnbi5.c</includedby>
+    <includedby refid="boozer_8c" local="yes">boozer.c</includedby>
+    <includedby refid="boozer_8h" local="yes">boozer.h</includedby>
+    <includedby refid="dist__com_8h" local="yes">diag/dist_com.h</includedby>
+    <includedby refid="diag_8c" local="yes">diag.c</includedby>
+    <includedby refid="diag_8h" local="yes">diag.h</includedby>
+    <includedby refid="E__field_8c" local="yes">E_field.c</includedby>
+    <includedby refid="E__field_8h" local="yes">E_field.h</includedby>
+    <includedby refid="E__1DS_8c" local="yes">Efield/E_1DS.c</includedby>
+    <includedby refid="E__1DS_8h" local="yes">Efield/E_1DS.h</includedby>
+    <includedby refid="E__TC_8c" local="yes">Efield/E_TC.c</includedby>
+    <includedby refid="E__TC_8h" local="yes">Efield/E_TC.h</includedby>
+    <includedby refid="hdf5__bfield_8c" local="yes">hdf5io/hdf5_bfield.c</includedby>
+    <includedby refid="hdf5__bfield_8h" local="yes">hdf5io/hdf5_bfield.h</includedby>
+    <includedby refid="libascot_8c" local="yes">libascot.c</includedby>
+    <includedby refid="mhd__nonstat_8c" local="yes">mhd/mhd_nonstat.c</includedby>
+    <includedby refid="mhd__nonstat_8h" local="yes">mhd/mhd_nonstat.h</includedby>
+    <includedby refid="mhd__stat_8c" local="yes">mhd/mhd_stat.c</includedby>
+    <includedby refid="mhd__stat_8h" local="yes">mhd/mhd_stat.h</includedby>
+    <includedby refid="mhd_8c" local="yes">mhd.c</includedby>
+    <includedby refid="mhd_8h" local="yes">mhd.h</includedby>
+    <includedby refid="nbi_8c" local="yes">nbi.c</includedby>
+    <includedby refid="nbi_8h" local="yes">nbi.h</includedby>
+    <includedby refid="particle_8c" local="yes">particle.c</includedby>
+    <includedby refid="particle_8h" local="yes">particle.h</includedby>
+    <includedby refid="mccc_8h" local="yes">simulate/mccc/mccc.h</includedby>
+    <includedby refid="mccc__gc__euler_8c" local="yes">simulate/mccc/mccc_gc_euler.c</includedby>
+    <includedby refid="mccc__gc__milstein_8c" local="yes">simulate/mccc/mccc_gc_milstein.c</includedby>
+    <includedby refid="simulate__fo__fixed_8c" local="yes">simulate/simulate_fo_fixed.c</includedby>
+    <includedby refid="simulate__gc__adaptive_8c" local="yes">simulate/simulate_gc_adaptive.c</includedby>
+    <includedby refid="simulate__gc__fixed_8c" local="yes">simulate/simulate_gc_fixed.c</includedby>
+    <includedby refid="simulate__ml__adaptive_8c" local="yes">simulate/simulate_ml_adaptive.c</includedby>
+    <includedby refid="step__fo__vpa_8c" local="yes">simulate/step/step_fo_vpa.c</includedby>
+    <includedby refid="step__fo__vpa_8h" local="yes">simulate/step/step_fo_vpa.h</includedby>
+    <includedby refid="step__gc__cashkarp_8c" local="yes">simulate/step/step_gc_cashkarp.c</includedby>
+    <includedby refid="step__gc__cashkarp_8h" local="yes">simulate/step/step_gc_cashkarp.h</includedby>
+    <includedby refid="step__gc__rk4_8c" local="yes">simulate/step/step_gc_rk4.c</includedby>
+    <includedby refid="step__gc__rk4_8h" local="yes">simulate/step/step_gc_rk4.h</includedby>
+    <includedby refid="step__ml__cashkarp_8c" local="yes">simulate/step/step_ml_cashkarp.c</includedby>
+    <includedby refid="step__ml__cashkarp_8h" local="yes">simulate/step/step_ml_cashkarp.h</includedby>
+    <includedby refid="simulate_8h" local="yes">simulate.h</includedby>
+    <incdepgraph>
+      <node id="10">
+        <label>../spline/interp.h</label>
+        <link refid="interp_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>Bfield/B_GS.h</label>
+        <link refid="B__GS_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>omp.h</label>
+      </node>
+      <node id="1">
+        <label>B_field.h</label>
+        <link refid="B__field_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>error.h</label>
+        <link refid="error_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>time.h</label>
+      </node>
+      <node id="14">
+        <label>Bfield/B_TC.h</label>
+        <link refid="B__TC_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>../linint/linint.h</label>
+        <link refid="linint_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>Bfield/B_2DS.h</label>
+        <link refid="B__2DS_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>Bfield/B_3DS.h</label>
+        <link refid="B__3DS_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>math.h</label>
+        <link refid="math_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>stdio.h</label>
+      </node>
+      <node id="12">
+        <label>Bfield/B_STS.h</label>
+        <link refid="B__STS_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ascot5.h</label>
+        <link refid="ascot5_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="75">
+        <label>diag/dist_rho5D.c</label>
+        <link refid="dist__rho5D_8c"/>
+      </node>
+      <node id="29">
+        <label>simulate/simulate_ml_adaptive.c</label>
+        <link refid="simulate__ml__adaptive_8c"/>
+      </node>
+      <node id="76">
+        <label>diag/dist_rho5D.h</label>
+        <link refid="dist__rho5D_8h"/>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="49">
+        <label>simulate/simulate_ml_adaptive.h</label>
+        <link refid="simulate__ml__adaptive_8h"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="71">
+        <label>diag/dist_5D.c</label>
+        <link refid="dist__5D_8c"/>
+      </node>
+      <node id="72">
+        <label>diag/dist_5D.h</label>
+        <link refid="dist__5D_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+      </node>
+      <node id="64">
+        <label>particle.c</label>
+        <link refid="particle_8c"/>
+      </node>
+      <node id="36">
+        <label>diag.c</label>
+        <link refid="diag_8c"/>
+      </node>
+      <node id="65">
+        <label>particle.h</label>
+        <link refid="particle_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="84" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="85" relation="include">
+        </childnode>
+        <childnode refid="86" relation="include">
+        </childnode>
+        <childnode refid="87" relation="include">
+        </childnode>
+        <childnode refid="90" relation="include">
+        </childnode>
+        <childnode refid="91" relation="include">
+        </childnode>
+        <childnode refid="92" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="53">
+        <label>diag.h</label>
+        <link refid="diag_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>simulate.c</label>
+        <link refid="simulate_8c"/>
+      </node>
+      <node id="30">
+        <label>simulate.h</label>
+        <link refid="simulate_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>simulate/simulate_fo_fixed.c</label>
+        <link refid="simulate__fo__fixed_8c"/>
+      </node>
+      <node id="46">
+        <label>simulate/simulate_fo_fixed.h</label>
+        <link refid="simulate__fo__fixed_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>simulate/step/step_gc_rk4.c</label>
+        <link refid="step__gc__rk4_8c"/>
+      </node>
+      <node id="26">
+        <label>simulate/simulate_gc_fixed.c</label>
+        <link refid="simulate__gc__fixed_8c"/>
+      </node>
+      <node id="25">
+        <label>simulate/step/step_gc_rk4.h</label>
+        <link refid="step__gc__rk4_8h"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ascot5_main.c</label>
+        <link refid="ascot5__main_8c"/>
+      </node>
+      <node id="48">
+        <label>simulate/simulate_gc_fixed.h</label>
+        <link refid="simulate__gc__fixed_8h"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>ascot5_main.h</label>
+        <link refid="ascot5__main_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>mhd/mhd_nonstat.c</label>
+        <link refid="mhd__nonstat_8c"/>
+      </node>
+      <node id="12">
+        <label>mhd/mhd_nonstat.h</label>
+        <link refid="mhd__nonstat_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>endcond.c</label>
+        <link refid="endcond_8c"/>
+      </node>
+      <node id="38">
+        <label>endcond.h</label>
+        <link refid="endcond_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="88">
+        <label>simulate/mccc/mccc.c</label>
+        <link refid="mccc_8c"/>
+      </node>
+      <node id="87">
+        <label>simulate/mccc/mccc.h</label>
+        <link refid="mccc_8h"/>
+        <childnode refid="88" relation="include">
+        </childnode>
+        <childnode refid="89" relation="include">
+        </childnode>
+        <childnode refid="90" relation="include">
+        </childnode>
+        <childnode refid="91" relation="include">
+        </childnode>
+        <childnode refid="92" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="85">
+        <label>simulate/atomic.c</label>
+        <link refid="atomic_8c"/>
+      </node>
+      <node id="86">
+        <label>simulate/atomic.h</label>
+        <link refid="atomic_8h"/>
+        <childnode refid="85" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="83">
+        <label>libascot_mem.c</label>
+        <link refid="libascot__mem_8c"/>
+      </node>
+      <node id="84">
+        <label>libascot_mem.h</label>
+        <link refid="libascot__mem_8h"/>
+        <childnode refid="83" relation="include">
+        </childnode>
+      </node>
+      <node id="79">
+        <label>hdf5io/hdf5_marker.c</label>
+        <link refid="hdf5__marker_8c"/>
+      </node>
+      <node id="80">
+        <label>hdf5io/hdf5_marker.h</label>
+        <link refid="hdf5__marker_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+      </node>
+      <node id="58">
+        <label>hdf5io/hdf5_dist.c</label>
+        <link refid="hdf5__dist_8c"/>
+      </node>
+      <node id="59">
+        <label>hdf5io/hdf5_dist.h</label>
+        <link refid="hdf5__dist_8h_source"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>afsi.c</label>
+        <link refid="afsi_8c"/>
+      </node>
+      <node id="69">
+        <label>hdf5io/hdf5_transcoef.c</label>
+        <link refid="hdf5__transcoef_8c"/>
+      </node>
+      <node id="54">
+        <label>nbi.c</label>
+        <link refid="nbi_8c"/>
+      </node>
+      <node id="32">
+        <label>afsi.h</label>
+        <link refid="afsi_8h_source"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="70">
+        <label>hdf5io/hdf5_transcoef.h</label>
+        <link refid="hdf5__transcoef_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+      </node>
+      <node id="55">
+        <label>nbi.h</label>
+        <link refid="nbi_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>diag/diag_orb.c</label>
+        <link refid="diag__orb_8c"/>
+      </node>
+      <node id="66">
+        <label>diag/diag_orb.h</label>
+        <link refid="diag__orb_8h"/>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+      </node>
+      <node id="92">
+        <label>simulate/mccc/mccc_gc_milstein.c</label>
+        <link refid="mccc__gc__milstein_8c"/>
+      </node>
+      <node id="3">
+        <label>B_field.c</label>
+        <link refid="B__field_8c"/>
+      </node>
+      <node id="1">
+        <label>B_field.h</label>
+        <link refid="B__field_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="93" relation="include">
+        </childnode>
+        <childnode refid="94" relation="include">
+        </childnode>
+        <childnode refid="95" relation="include">
+        </childnode>
+        <childnode refid="96" relation="include">
+        </childnode>
+        <childnode refid="97" relation="include">
+        </childnode>
+        <childnode refid="98" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="87" relation="include">
+        </childnode>
+        <childnode refid="91" relation="include">
+        </childnode>
+        <childnode refid="92" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>mhd/mhd_stat.c</label>
+        <link refid="mhd__stat_8c"/>
+      </node>
+      <node id="39">
+        <label>hdf5io/hdf5_options.c</label>
+        <link refid="hdf5__options_8c"/>
+      </node>
+      <node id="50">
+        <label>mhd/mhd_stat.h</label>
+        <link refid="mhd__stat_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>hdf5io/hdf5_options.h</label>
+        <link refid="hdf5__options_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="93">
+        <label>Efield/E_1DS.c</label>
+        <link refid="E__1DS_8c"/>
+      </node>
+      <node id="94">
+        <label>Efield/E_1DS.h</label>
+        <link refid="E__1DS_8h"/>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="93" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>hdf5io/hdf5_mhd.c</label>
+        <link refid="hdf5__mhd_8c"/>
+      </node>
+      <node id="43">
+        <label>hdf5io/hdf5_orbit.c</label>
+        <link refid="hdf5__orbit_8c"/>
+      </node>
+      <node id="14">
+        <label>hdf5io/hdf5_mhd.h</label>
+        <link refid="hdf5__mhd_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="67">
+        <label>hdf5io/hdf5_orbit.h</label>
+        <link refid="hdf5__orbit_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>simulate/simulate_gc_adaptive.c</label>
+        <link refid="simulate__gc__adaptive_8c"/>
+      </node>
+      <node id="47">
+        <label>simulate/simulate_gc_adaptive.h</label>
+        <link refid="simulate__gc__adaptive_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="90">
+        <label>simulate/mccc/mccc_fo_euler.c</label>
+        <link refid="mccc__fo__euler_8c"/>
+      </node>
+      <node id="44">
+        <label>mpi_interface.c</label>
+        <link refid="mpi__interface_8c"/>
+      </node>
+      <node id="45">
+        <label>mpi_interface.h</label>
+        <link refid="mpi__interface_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>libascot.c</label>
+        <link refid="libascot_8c"/>
+      </node>
+      <node id="9">
+        <label>hdf5_interface.c</label>
+        <link refid="hdf5__interface_8c"/>
+      </node>
+      <node id="41">
+        <label>hdf5_interface.h</label>
+        <link refid="hdf5__interface_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>simulate/step/step_ml_cashkarp.c</label>
+        <link refid="step__ml__cashkarp_8c"/>
+      </node>
+      <node id="28">
+        <label>simulate/step/step_ml_cashkarp.h</label>
+        <link refid="step__ml__cashkarp_8h"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="52">
+        <label>diag/dist_com.c</label>
+        <link refid="dist__com_8c"/>
+      </node>
+      <node id="51">
+        <label>diag/dist_com.h</label>
+        <link refid="dist__com_8h"/>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>diag/diag_transcoef.c</label>
+        <link refid="diag__transcoef_8c"/>
+      </node>
+      <node id="60">
+        <label>E_field.c</label>
+        <link refid="E__field_8c"/>
+      </node>
+      <node id="68">
+        <label>diag/diag_transcoef.h</label>
+        <link refid="diag__transcoef_8h"/>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+      </node>
+      <node id="61">
+        <label>E_field.h</label>
+        <link refid="E__field_8h"/>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="89">
+        <label>simulate/mccc/mccc_coefs.h</label>
+        <link refid="mccc__coefs_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="90" relation="include">
+        </childnode>
+        <childnode refid="91" relation="include">
+        </childnode>
+        <childnode refid="92" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>simulate/step/step_gc_cashkarp.c</label>
+        <link refid="step__gc__cashkarp_8c"/>
+      </node>
+      <node id="22">
+        <label>simulate/step/step_gc_cashkarp.h</label>
+        <link refid="step__gc__cashkarp_8h_source"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>mhd.c</label>
+        <link refid="mhd_8c"/>
+      </node>
+      <node id="16">
+        <label>mhd.h</label>
+        <link refid="mhd_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>bbnbi5.c</label>
+        <link refid="bbnbi5_8c"/>
+      </node>
+      <node id="95">
+        <label>Efield/E_TC.c</label>
+        <link refid="E__TC_8c"/>
+      </node>
+      <node id="91">
+        <label>simulate/mccc/mccc_gc_euler.c</label>
+        <link refid="mccc__gc__euler_8c"/>
+      </node>
+      <node id="5">
+        <label>boozer.c</label>
+        <link refid="boozer_8c"/>
+      </node>
+      <node id="96">
+        <label>Efield/E_TC.h</label>
+        <link refid="E__TC_8h"/>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="95" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>boozer.h</label>
+        <link refid="boozer_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="56">
+        <label>hdf5io/hdf5_nbi.c</label>
+        <link refid="hdf5__nbi_8c"/>
+      </node>
+      <node id="57">
+        <label>hdf5io/hdf5_nbi.h</label>
+        <link refid="hdf5__nbi_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+      </node>
+      <node id="74">
+        <label>diag/dist_6D.c</label>
+        <link refid="dist__6D_8c"/>
+      </node>
+      <node id="73">
+        <label>diag/dist_6D.h</label>
+        <link refid="dist__6D_8h"/>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="81">
+        <label>hdf5io/hdf5_state.c</label>
+        <link refid="hdf5__state_8c"/>
+      </node>
+      <node id="82">
+        <label>hdf5io/hdf5_state.h</label>
+        <link refid="hdf5__state_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>hdf5io/hdf5_boozer.c</label>
+        <link refid="hdf5__boozer_8c"/>
+      </node>
+      <node id="8">
+        <label>hdf5io/hdf5_boozer.h</label>
+        <link refid="hdf5__boozer_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>simulate/step/step_fo_vpa.c</label>
+        <link refid="step__fo__vpa_8c"/>
+      </node>
+      <node id="20">
+        <label>simulate/step/step_fo_vpa.h</label>
+        <link refid="step__fo__vpa_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="78">
+        <label>diag/dist_rho6D.c</label>
+        <link refid="dist__rho6D_8c"/>
+      </node>
+      <node id="77">
+        <label>diag/dist_rho6D.h</label>
+        <link refid="dist__rho6D_8h"/>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="62">
+        <label>hdf5io/hdf5_efield.c</label>
+        <link refid="hdf5__efield_8c"/>
+      </node>
+      <node id="63">
+        <label>hdf5io/hdf5_efield.h</label>
+        <link refid="hdf5__efield_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="97">
+        <label>hdf5io/hdf5_bfield.c</label>
+        <link refid="hdf5__bfield_8c"/>
+      </node>
+      <node id="98">
+        <label>hdf5io/hdf5_bfield.h</label>
+        <link refid="hdf5__bfield_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="97" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structB__field__offload__data" prot="public">B_field_offload_data</innerclass>
+    <innerclass refid="structB__field__data" prot="public">B_field_data</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6" prot="public" static="no" strong="no">
+        <type></type>
+        <name>B_field_type</name>
+        <enumvalue id="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6aeaae35c569ce5b05f25150378264dad5" prot="public">
+          <name>B_field_type_GS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Analytic magnetic field <linebreak/>
+ </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6a08a6eeec9f59141cfc01878c7776b84a" prot="public">
+          <name>B_field_type_2DS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Spline-interpolated axisymmetric magnetic field </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6acddc6f4338f89f1aa608b08ca1d03af9" prot="public">
+          <name>B_field_type_3DS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Spline-interpolated 3D magnetic field <linebreak/>
+ </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6ad8b42ea6016c92f4767615d7fb9027f8" prot="public">
+          <name>B_field_type_STS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Spline-interpolated stellarator magnetic field <linebreak/>
+ </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6a24ea2346ab109f89825d54ea4518e662" prot="public">
+          <name>B_field_type_TC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Trivial Cartesian magnetic field <linebreak/>
+ </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Magnetic field types. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Magnetic field types are used in the magnetic field interface (<ref refid="B__field_8c" kindref="compound">B_field.c</ref>) to direct function calls to correct magnetic field instances. Each magnetic field instance must have a corresponding type. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="B_field.h" line="26" column="1" bodyfile="B_field.h" bodystart="26" bodyend="32"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="B__field_8h_1ab0d0cc0492877a29fd8875fe93a480e2" prot="public" static="no">
+        <type>enum <ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6" kindref="member">B_field_type</ref></type>
+        <definition>typedef enum B_field_type B_field_type</definition>
+        <argsstring></argsstring>
+        <name>B_field_type</name>
+        <briefdescription>
+<para>Magnetic field types. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Magnetic field types are used in the magnetic field interface (<ref refid="B__field_8c" kindref="compound">B_field.c</ref>) to direct function calls to correct magnetic field instances. Each magnetic field instance must have a corresponding type. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="B_field.h" line="32" column="14"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="B__field_8h_1a2d598ab320e3063286cdbde51a265d74" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int B_field_init_offload</definition>
+        <argsstring>(B_field_offload_data *offload_data, real **offload_array)</argsstring>
+        <name>B_field_init_offload</name>
+        <param>
+          <type><ref refid="structB__field__offload__data" kindref="compound">B_field_offload_data</ref> *</type>
+          <declname>offload_data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> **</type>
+          <declname>offload_array</declname>
+        </param>
+        <briefdescription>
+<para>Load magnetic field data and prepare parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function fills the relevant magnetic field offload struct with parameters and allocates and fills the offload array. Sets offload array length in the offload struct.</para>
+<para>The offload data has to have a type when this function is called as it should be set when the offload data is constructed from inputs.</para>
+<para>This function is host only.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>offload_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to pointer to offload array</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Zero if initialization succeeded </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="B_field.h" line="71" column="5" bodyfile="B_field.c" bodystart="44" bodyend="93" declfile="B_field.h" declline="71" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="B__field_8h_1ad9f1807c8824e65f22bbff2056379003" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void B_field_free_offload</definition>
+        <argsstring>(B_field_offload_data *offload_data, real **offload_array)</argsstring>
+        <name>B_field_free_offload</name>
+        <param>
+          <type><ref refid="structB__field__offload__data" kindref="compound">B_field_offload_data</ref> *</type>
+          <declname>offload_data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> **</type>
+          <declname>offload_array</declname>
+        </param>
+        <briefdescription>
+<para>Free offload array and reset parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function deallocates the offload_array.</para>
+<para>This function is host only.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>offload_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to pointer to offload array</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Zero if initialization succeeded </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="B_field.h" line="73" column="6" bodyfile="B_field.c" bodystart="107" bodyend="130" declfile="B_field.h" declline="73" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="B__field_8h_1ad85ceaa2570aa7a5395ec20e400f4b9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int B_field_init</definition>
+        <argsstring>(B_field_data *Bdata, B_field_offload_data *offload_data, real *offload_array)</argsstring>
+        <name>B_field_init</name>
+        <param>
+          <type><ref refid="structB__field__data" kindref="compound">B_field_data</ref> *</type>
+          <declname>Bdata</declname>
+        </param>
+        <param>
+          <type><ref refid="structB__field__offload__data" kindref="compound">B_field_offload_data</ref> *</type>
+          <declname>offload_data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>offload_array</declname>
+        </param>
+        <briefdescription>
+<para>Initialize magnetic field data struct on target. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function copies the magnetic field parameters from the offload struct to the struct on target and sets the magnetic field data pointers to correct offsets in the offload array.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Bdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to data struct on target </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>offload array</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Zero if initialization succeeded </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="B_field.h" line="77" column="5" bodyfile="B_field.c" bodystart="145" bodyend="184" declfile="B_field.h" declline="77" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="B__field_8h_1a48c1f881a5f7fc9bf2d04edadfc2becf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref></type>
+        <definition>a5err B_field_eval_psi</definition>
+        <argsstring>(real *psi, real r, real phi, real z, real t, B_field_data *Bdata)</argsstring>
+        <name>B_field_eval_psi</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>psi</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>phi</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type><ref refid="structB__field__data" kindref="compound">B_field_data</ref> *</type>
+          <declname>Bdata</declname>
+        </param>
+        <briefdescription>
+<para>Evaluate poloidal flux psi. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function evaluates the poloidal flux psi at the given coordinates. The psi is exactly as it appears in Grad-Shafranov equation.</para>
+<para>This is a SIMD function.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>psi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer where psi [V*s*m^-1] value will be stored </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>R coordinate [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>phi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>phi coordinate [rad] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>z coordinate [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>time coordinate [s] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Bdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to magnetic field data struct</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Non-zero a5err value if evaluation failed, zero otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="B_field.h" line="81" column="7" bodyfile="B_field.c" bodystart="203" bodyend="241" declfile="B_field.h" declline="81" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="B__field_8h_1a26cc6bf09e4cc46e99d4ab19b2a8b370" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref></type>
+        <definition>a5err B_field_eval_psi_dpsi</definition>
+        <argsstring>(real psi_dpsi[4], real r, real phi, real z, real t, B_field_data *Bdata)</argsstring>
+        <name>B_field_eval_psi_dpsi</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>psi_dpsi</declname>
+          <array>[4]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>phi</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type><ref refid="structB__field__data" kindref="compound">B_field_data</ref> *</type>
+          <declname>Bdata</declname>
+        </param>
+        <briefdescription>
+<para>Evaluate poloidal flux psi and its derivatives. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function evaluates the poloidal flux psi and its derivatives at the given coordinates. The psi is exactly as it appears in Grad-Shafranov equation.</para>
+<para>The values are stored in the given array as:<itemizedlist>
+<listitem><para>psi_dpsi[0] = psi</para>
+</listitem><listitem><para>psi_dpsi[1] = dpsi/dr</para>
+</listitem><listitem><para>psi_dpsi[2] = dpsi/dphi</para>
+</listitem><listitem><para>psi_dpsi[3] = dpsi/dz</para>
+</listitem></itemizedlist>
+</para>
+<para>This is a SIMD function.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>psi_dpsi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer for storing psi [V*s*m^-1] and its derivatives </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>R coordinate [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>phi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>phi coordinate [rad] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>z coordinate [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>time coordinate [s] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Bdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to magnetic field data struct</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Non-zero a5err value if evaluation failed, zero otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="B_field.h" line="84" column="7" bodyfile="B_field.c" bodystart="267" bodyend="306" declfile="B_field.h" declline="84" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="B__field_8h_1a3e0114363493349f81a78142e70f2bd4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref></type>
+        <definition>a5err B_field_eval_rho</definition>
+        <argsstring>(real rho[2], real psi, B_field_data *Bdata)</argsstring>
+        <name>B_field_eval_rho</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>rho</declname>
+          <array>[2]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>psi</declname>
+        </param>
+        <param>
+          <type><ref refid="structB__field__data" kindref="compound">B_field_data</ref> *</type>
+          <declname>Bdata</declname>
+        </param>
+        <briefdescription>
+<para>Evaluate normalized poloidal flux rho and its psi derivative. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function evaluates the normalized poloidal flux rho at the given coordinates. The rho is evaluated from psi as:</para>
+<para><formula id="0">\begin{equation*} \rho = \sqrt{ \frac{\psi - \psi_0}{\psi_1 - \psi_0} }, \end{equation*}</formula></para>
+<para>where <formula id="1">$\psi_0$</formula> is psi at magnetic axis and <formula id="2">$\psi_1$</formula> is psi at separatrix.</para>
+<para>This is a SIMD function.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rho</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer where rho value will be stored </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>psi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>poloidal flux from which rho is evaluated </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Bdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to magnetic field data struct</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Non-zero a5err value if evaluation failed, zero otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="B_field.h" line="87" column="7" bodyfile="B_field.c" bodystart="329" bodyend="381" declfile="B_field.h" declline="87" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="B__field_8h_1aba435be442080ac85a1b3963029f9aa1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref></type>
+        <definition>a5err B_field_eval_rho_drho</definition>
+        <argsstring>(real rho_drho[4], real r, real phi, real z, B_field_data *Bdata)</argsstring>
+        <name>B_field_eval_rho_drho</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>rho_drho</declname>
+          <array>[4]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>phi</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type><ref refid="structB__field__data" kindref="compound">B_field_data</ref> *</type>
+          <declname>Bdata</declname>
+        </param>
+        <briefdescription>
+<para>Evaluate normalized poloidal flux rho and its derivatives. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function evaluates the normalized poloidal flux rho at the given coordinates. The rho is evaluated from psi as:</para>
+<para><formula id="0">\begin{equation*} \rho = \sqrt{ \frac{\psi - \psi_0}{\psi_1 - \psi_0} }, \end{equation*}</formula></para>
+<para>where <formula id="1">$\psi_0$</formula> is psi at magnetic axis and <formula id="2">$\psi_1$</formula> is psi at separatrix.</para>
+<para>The values are stored in the given array as:<itemizedlist>
+<listitem><para>rho_drho[0] = rho</para>
+</listitem><listitem><para>rho_drho[1] = drho/dr</para>
+</listitem><listitem><para>rho_drho[2] = drho/dphi</para>
+</listitem><listitem><para>rho_drho[3] = drho/dz</para>
+</listitem></itemizedlist>
+</para>
+<para>This is a SIMD function.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rho_drho</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer where rho and its derivatives will be stored </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>R coordinate [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>phi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>phi coordinate [rad] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>z coordinate [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Bdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to magnetic field data struct</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Non-zero a5err value if evaluation failed, zero otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="B_field.h" line="89" column="7" bodyfile="B_field.c" bodystart="412" bodyend="451" declfile="B_field.h" declline="89" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="B__field_8h_1af9d719b1f559e39fdeacfd8527af587c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref></type>
+        <definition>a5err B_field_eval_B</definition>
+        <argsstring>(real B[3], real r, real phi, real z, real t, B_field_data *Bdata)</argsstring>
+        <name>B_field_eval_B</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>B</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>phi</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type><ref refid="structB__field__data" kindref="compound">B_field_data</ref> *</type>
+          <declname>Bdata</declname>
+        </param>
+        <briefdescription>
+<para>Evaluate magnetic field. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function evaluates the magnetic field at the given coordinates.</para>
+<para>The values are stored in the given array as:<itemizedlist>
+<listitem><para>B[0] = BR</para>
+</listitem><listitem><para>B[1] = Bphi</para>
+</listitem><listitem><para>B[2] = Bz</para>
+</listitem></itemizedlist>
+</para>
+<para>This is a SIMD function.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>B</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to array where magnetic field values are stored </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>R coordinate [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>phi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>phi coordinate [deg] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>z coordinate [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>time coordinate [s] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Bdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to magnetic field data struct</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Non-zero a5err value if evaluation failed, zero otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="B_field.h" line="92" column="7" bodyfile="B_field.c" bodystart="474" bodyend="513" declfile="B_field.h" declline="92" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="B__field_8h_1a90eee159b997ec948d58e1b760f7a555" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref></type>
+        <definition>a5err B_field_eval_B_dB</definition>
+        <argsstring>(real B_dB[15], real r, real phi, real z, real t, B_field_data *Bdata)</argsstring>
+        <name>B_field_eval_B_dB</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>B_dB</declname>
+          <array>[15]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>phi</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type><ref refid="structB__field__data" kindref="compound">B_field_data</ref> *</type>
+          <declname>Bdata</declname>
+        </param>
+        <briefdescription>
+<para>Evaluate magnetic field and its derivatives. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function evaluates the magnetic field and its derivatives at the given coordinates.</para>
+<para>The values are stored in the given array as:<itemizedlist>
+<listitem><para>B[0] = BR</para>
+</listitem><listitem><para>B[1] = dBR/dR</para>
+</listitem><listitem><para>B[2] = dBR/dphi</para>
+</listitem><listitem><para>B[3] = dBR/dz</para>
+</listitem><listitem><para>B[4] = Bphi</para>
+</listitem><listitem><para>B[5] = dBphi/dR</para>
+</listitem><listitem><para>B[6] = dBphi/dphi</para>
+</listitem><listitem><para>B[7] = dBphi/dz</para>
+</listitem><listitem><para>B[8] = Bz</para>
+</listitem><listitem><para>B[9] = dBz/dR</para>
+</listitem><listitem><para>B[10] = dBz/dphi</para>
+</listitem><listitem><para>B[11] = dBz/dz</para>
+</listitem><listitem><para>B[12] = dBR/dt</para>
+</listitem><listitem><para>B[13] = dBphi/dt</para>
+</listitem><listitem><para>B[14] = dBz/dt</para>
+</listitem></itemizedlist>
+</para>
+<para>This is a SIMD function.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>B_dB</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to array where the field and its derivatives are stored </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>R coordinate [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>phi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>phi coordinate [deg] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>z coordinate [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>time coordinate [s] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Bdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to magnetic field data struct</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Non-zero a5err value if evaluation failed, zero otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="B_field.h" line="95" column="7" bodyfile="B_field.c" bodystart="549" bodyend="588" declfile="B_field.h" declline="95" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="B__field_8h_1ad8cf51ecdc7730eca39eb54ef4484a2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref></type>
+        <definition>a5err B_field_get_axis_rz</definition>
+        <argsstring>(real rz[2], B_field_data *Bdata, real phi)</argsstring>
+        <name>B_field_get_axis_rz</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>rz</declname>
+          <array>[2]</array>
+        </param>
+        <param>
+          <type><ref refid="structB__field__data" kindref="compound">B_field_data</ref> *</type>
+          <declname>Bdata</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>phi</declname>
+        </param>
+        <briefdescription>
+<para>Return magnetic axis Rz-coordinates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns magnetic axis Rz-coordinates at given toroidal angle.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer where axis R and z [m] values will be stored </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Bdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to magnetic field data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>phi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>phi coordinate [deg]</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Magnetic axis R-coordinate [m] </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="B_field.h" line="98" column="7" bodyfile="B_field.c" bodystart="601" bodyend="639" declfile="B_field.h" declline="98" declcolumn="7"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Header file for <ref refid="B__field_8c" kindref="compound">B_field.c</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Contains a list declaring all B_field_types, and declaration of <ref refid="structB__field__offload__data" kindref="compound">B_field_offload_data</ref> and <ref refid="structB__field__data" kindref="compound">B_field_data</ref> structs. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>B_FIELD_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>B_FIELD_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ascot5_8h" kindref="compound">ascot5.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="error_8h" kindref="compound">error.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="B__GS_8h" kindref="compound">Bfield/B_GS.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="B__2DS_8h" kindref="compound">Bfield/B_2DS.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="B__3DS_8h" kindref="compound">Bfield/B_3DS.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="B__STS_8h" kindref="compound">Bfield/B_STS.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="B__TC_8h" kindref="compound">Bfield/B_TC.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6" kindref="member">B_field_type</ref><sp/>{</highlight></codeline>
+<codeline lineno="27" refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6aeaae35c569ce5b05f25150378264dad5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6aeaae35c569ce5b05f25150378264dad5" kindref="member">B_field_type_GS</ref>,<sp/><sp/></highlight></codeline>
+<codeline lineno="28" refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6a08a6eeec9f59141cfc01878c7776b84a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6a08a6eeec9f59141cfc01878c7776b84a" kindref="member">B_field_type_2DS</ref>,<sp/></highlight></codeline>
+<codeline lineno="29" refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6acddc6f4338f89f1aa608b08ca1d03af9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6acddc6f4338f89f1aa608b08ca1d03af9" kindref="member">B_field_type_3DS</ref>,<sp/></highlight></codeline>
+<codeline lineno="30" refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6ad8b42ea6016c92f4767615d7fb9027f8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6ad8b42ea6016c92f4767615d7fb9027f8" kindref="member">B_field_type_STS</ref>,<sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6a24ea2346ab109f89825d54ea4518e662" kindref="member">B_field_type_TC</ref><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="32" refid="B__field_8h_1ab0d0cc0492877a29fd8875fe93a480e2" refkind="member"><highlight class="normal">}<sp/><ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6" kindref="member">B_field_type</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="structB__field__offload__data" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="44" refid="structB__field__offload__data_1aa831a5fdf440b4490c9cf774be57349b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6" kindref="member">B_field_type</ref><sp/><ref refid="structB__field__offload__data_1aa831a5fdf440b4490c9cf774be57349b" kindref="member">type</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="45" refid="structB__field__offload__data_1ad568b60fc7226dc57def1746aae5370c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structB__GS__offload__data" kindref="compound">B_GS_offload_data</ref><sp/><ref refid="structB__field__offload__data_1ad568b60fc7226dc57def1746aae5370c" kindref="member">BGS</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="46" refid="structB__field__offload__data_1a1a15b385dc6c20318facbd027585c439" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structB__2DS__offload__data" kindref="compound">B_2DS_offload_data</ref><sp/><ref refid="structB__field__offload__data_1a1a15b385dc6c20318facbd027585c439" kindref="member">B2DS</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="47" refid="structB__field__offload__data_1aec0175d0425f36b2eb727cc7e05e95a1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structB__3DS__offload__data" kindref="compound">B_3DS_offload_data</ref><sp/><ref refid="structB__field__offload__data_1aec0175d0425f36b2eb727cc7e05e95a1" kindref="member">B3DS</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="48" refid="structB__field__offload__data_1ae3a36c2bf7060d370638c216f4ffce79" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structB__STS__offload__data" kindref="compound">B_STS_offload_data</ref><sp/><ref refid="structB__field__offload__data_1ae3a36c2bf7060d370638c216f4ffce79" kindref="member">BSTS</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="49" refid="structB__field__offload__data_1aa9584fb7afce2bf745fce0b9048f5a1f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structB__TC__offload__data" kindref="compound">B_TC_offload_data</ref><sp/><ref refid="structB__field__offload__data_1aa9584fb7afce2bf745fce0b9048f5a1f" kindref="member">BTC</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="50" refid="structB__field__offload__data_1aa18fb7c0f67ea0f1b8fe6f92952020b0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structB__field__offload__data_1aa18fb7c0f67ea0f1b8fe6f92952020b0" kindref="member">offload_array_length</ref>;<sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}<sp/><ref refid="structB__field__offload__data" kindref="compound">B_field_offload_data</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="structB__field__data" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="63" refid="structB__field__data_1a5eaf6065b399089f080fd8110789201a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="B__field_8h_1a807b3aa80967ae6c94bd38f23e391ea6" kindref="member">B_field_type</ref><sp/><ref refid="structB__field__data_1a5eaf6065b399089f080fd8110789201a" kindref="member">type</ref>;<sp/></highlight></codeline>
+<codeline lineno="64" refid="structB__field__data_1a998ad9cf3f1561f787601bbdec849810" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structB__GS__data" kindref="compound">B_GS_data</ref><sp/><ref refid="structB__field__data_1a998ad9cf3f1561f787601bbdec849810" kindref="member">BGS</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="65" refid="structB__field__data_1a26126a3a3ac31c677af14da45ec6bb7f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structB__2DS__data" kindref="compound">B_2DS_data</ref><sp/><ref refid="structB__field__data_1a26126a3a3ac31c677af14da45ec6bb7f" kindref="member">B2DS</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="66" refid="structB__field__data_1a999c3aa9dc4ca032efd5b95179cba20a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structB__3DS__data" kindref="compound">B_3DS_data</ref><sp/><ref refid="structB__field__data_1a999c3aa9dc4ca032efd5b95179cba20a" kindref="member">B3DS</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="67" refid="structB__field__data_1a008fae4c7877895a76d13405e15273ed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structB__STS__data" kindref="compound">B_STS_data</ref><sp/><ref refid="structB__field__data_1a008fae4c7877895a76d13405e15273ed" kindref="member">BSTS</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="68" refid="structB__field__data_1a04b89c7bacbe0e9708d5b16bc40624d4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structB__TC__data" kindref="compound">B_TC_data</ref><sp/><ref refid="structB__field__data_1a04b89c7bacbe0e9708d5b16bc40624d4" kindref="member">BTC</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="69"><highlight class="normal">}<sp/><ref refid="structB__field__data" kindref="compound">B_field_data</ref>;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="B__field_8h_1a2d598ab320e3063286cdbde51a265d74" kindref="member">B_field_init_offload</ref>(<ref refid="structB__field__offload__data" kindref="compound">B_field_offload_data</ref>*<sp/>offload_data,</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>**<sp/>offload_array);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="B__field_8h_1ad9f1807c8824e65f22bbff2056379003" kindref="member">B_field_free_offload</ref>(<ref refid="structB__field__offload__data" kindref="compound">B_field_offload_data</ref>*<sp/>offload_data,</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>**<sp/>offload_array);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>declare<sp/>target</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="B__field_8h_1ad85ceaa2570aa7a5395ec20e400f4b9b" kindref="member">B_field_init</ref>(</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structB__field__data" kindref="compound">B_field_data</ref>*<sp/>Bdata,<sp/><ref refid="structB__field__offload__data" kindref="compound">B_field_offload_data</ref>*<sp/>offload_data,</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>offload_array);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>declare<sp/>simd<sp/>uniform(Bdata)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref><sp/><ref refid="B__field_8h_1a48c1f881a5f7fc9bf2d04edadfc2becf" kindref="member">B_field_eval_psi</ref>(</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>psi,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>phi,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>t,<sp/><ref refid="structB__field__data" kindref="compound">B_field_data</ref>*<sp/>Bdata);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>declare<sp/>simd<sp/>uniform(Bdata)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref><sp/><ref refid="B__field_8h_1a26cc6bf09e4cc46e99d4ab19b2a8b370" kindref="member">B_field_eval_psi_dpsi</ref>(</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>psi_dpsi[4],<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>phi,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>t,<sp/><ref refid="structB__field__data" kindref="compound">B_field_data</ref>*<sp/>Bdata);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>declare<sp/>simd<sp/>uniform(Bdata)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref><sp/><ref refid="B__field_8h_1a3e0114363493349f81a78142e70f2bd4" kindref="member">B_field_eval_rho</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>rho[2],<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>psi,<sp/><ref refid="structB__field__data" kindref="compound">B_field_data</ref>*<sp/>Bdata);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>declare<sp/>simd<sp/>uniform(Bdata)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref><sp/><ref refid="B__field_8h_1aba435be442080ac85a1b3963029f9aa1" kindref="member">B_field_eval_rho_drho</ref>(</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>rho_drho[4],<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>phi,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z,<sp/><ref refid="structB__field__data" kindref="compound">B_field_data</ref>*<sp/>Bdata);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>declare<sp/>simd<sp/>uniform(Bdata)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref><sp/><ref refid="B__field_8h_1af9d719b1f559e39fdeacfd8527af587c" kindref="member">B_field_eval_B</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>B[3],<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>phi,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>t,</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structB__field__data" kindref="compound">B_field_data</ref>*<sp/>Bdata);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>declare<sp/>simd<sp/>uniform(Bdata)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref><sp/><ref refid="B__field_8h_1a90eee159b997ec948d58e1b760f7a555" kindref="member">B_field_eval_B_dB</ref>(</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>B_dB[15],<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>phi,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>t,<sp/><ref refid="structB__field__data" kindref="compound">B_field_data</ref>*<sp/>Bdata);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>declare<sp/>simd<sp/>uniform(Bdata)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref><sp/><ref refid="B__field_8h_1ad8cf51ecdc7730eca39eb54ef4484a2d" kindref="member">B_field_get_axis_rz</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>rz[2],<sp/><ref refid="structB__field__data" kindref="compound">B_field_data</ref>*<sp/>Bdata,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>phi);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>end<sp/>declare<sp/>target</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="B_field.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,383 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="octree_8h" kind="file" language="C++">
+    <compoundname>octree.h</compoundname>
+    <includes refid="ascot5_8h" local="yes">ascot5.h</includes>
+    <includes refid="list_8h" local="yes">list.h</includes>
+    <includedby refid="octree_8c" local="yes">octree.c</includedby>
+    <includedby refid="wall__3d_8c" local="yes">wall/wall_3d.c</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>omp.h</label>
+      </node>
+      <node id="1">
+        <label>octree.h</label>
+        <link refid="octree_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>time.h</label>
+      </node>
+      <node id="5">
+        <label>list.h</label>
+        <link refid="list_8h"/>
+      </node>
+      <node id="2">
+        <label>ascot5.h</label>
+        <link refid="ascot5_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>octree.c</label>
+        <link refid="octree_8c"/>
+      </node>
+      <node id="1">
+        <label>octree.h</label>
+        <link refid="octree_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>wall/wall_3d.c</label>
+        <link refid="wall__3d_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structoctree__node" prot="public">octree_node</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="octree_8h_1a213eac7af4c986e40b127323a2623b89" prot="public" static="no">
+        <type>struct <ref refid="structoctree__node" kindref="compound">octree_node</ref></type>
+        <definition>typedef struct octree_node octree_node</definition>
+        <argsstring></argsstring>
+        <name>octree_node</name>
+        <briefdescription>
+<para>Struct representing single octree node. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Stores eight child nodes, bounding box of the volume this node encloses, and a linked list containing IDs of triangles belonging to this node. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="octree.h" line="29" column="13"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="octree_8h_1a63644b2d301b5599dff501129f610669" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void octree_create</definition>
+        <argsstring>(octree_node **node, real x_min, real x_max, real y_min, real y_max, real z_min, real z_max, int depth)</argsstring>
+        <name>octree_create</name>
+        <param>
+          <type><ref refid="structoctree__node" kindref="compound">octree_node</ref> **</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>x_min</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>x_max</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>y_min</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>y_max</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>z_min</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>z_max</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>depth</declname>
+        </param>
+        <briefdescription>
+<para>Create octree of given depth. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function creates recursively a complete octree hierarchy with given number of levels. Each node have bounding box asigned and there is a small overlap between the boxes to avoid numerical artifact where a point is exactly between two boxes but belongs to neither.</para>
+<para>The linked lists on leaf nodes are initialized.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to parent node from which the octree sprawls </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x_min</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>minimum x coordinate of the parent node </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x_max</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>maximum x coordinate of the parent node </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y_min</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>minimum y coordinate of the parent node </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y_max</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>maximum y coordinate of the parent node </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z_min</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>minimum z coordinate of the parent node </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z_max</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>maximum z coordinate of the parent node </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>depth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>levels of octree nodes to be created. If depth=1, this node will be a leaf node. Final volume will be 1/8^(depth-1) th of the initial volume. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="octree.h" line="32" column="6" bodyfile="octree.c" bodystart="46" bodyend="82" declfile="octree.h" declline="32" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="octree_8h_1a5ebab3217beacb1201887631a364e75e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void octree_free</definition>
+        <argsstring>(octree_node **node)</argsstring>
+        <name>octree_free</name>
+        <param>
+          <type><ref refid="structoctree__node" kindref="compound">octree_node</ref> **</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+<para>Free octree node and all its child nodes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Deallocates node and its child node recursively. Linked lists are also freed.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to octree node </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="octree.h" line="35" column="6" bodyfile="octree.c" bodystart="91" bodyend="107" declfile="octree.h" declline="35" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="octree_8h_1a32d0722050bcdd7588e9fb80566d3421" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void octree_add</definition>
+        <argsstring>(octree_node *node, real t1[3], real t2[3], real t3[3], int id)</argsstring>
+        <name>octree_add</name>
+        <param>
+          <type><ref refid="structoctree__node" kindref="compound">octree_node</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>t1</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>t2</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>t3</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Add triangle to the node(s) it belongs to. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function uses recursion to travel the octree and find all leaf nodes the given triangle belongs to.In other words, at each step this function determines the child node(s) the triangle belongs to and calls this function for that/those node(s).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>octree node to which or to which child nodes triangle is added to </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>triangle first vertex xyz coordinates </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>triangle second vertex xyz coordinates </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t3</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>triangle third vertex xyz coordinates </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>triangle id which is stored in the node(s) the triangle belongs to </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="octree.h" line="36" column="6" bodyfile="octree.c" bodystart="123" bodyend="146" declfile="octree.h" declline="36" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="octree_8h_1a306a13544a6a82c24220688cef615839" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structlist__int__node" kindref="compound">list_int_node</ref> *</type>
+        <definition>list_int_node* octree_get</definition>
+        <argsstring>(octree_node *node, real p[3])</argsstring>
+        <name>octree_get</name>
+        <param>
+          <type><ref refid="structoctree__node" kindref="compound">octree_node</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>p</declname>
+          <array>[3]</array>
+        </param>
+        <briefdescription>
+<para>Get that leaf node&apos;s linked list the given coordinate belongs to. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function uses recursion to travel through the octree, determining at each step the correct branch to follow next until the leaf node is found. In other words, at each step this function determines the child node the point belongs to and calls this function for that node.</para>
+<para>The point is assumed to belong to the volume of the node used in the argument.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>octree node that is traversed </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>xyz coordinates of the point</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>linked list of the leaf node given point belongs to </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="octree.h" line="37" column="15" bodyfile="octree.c" bodystart="164" bodyend="194" declfile="octree.h" declline="37" declcolumn="15"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Header file for <ref refid="octree_8c" kindref="compound">octree.c</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>OCTREE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OCTREE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ascot5_8h" kindref="compound">ascot5.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="list_8h" kindref="compound">list.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="structoctree__node" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structoctree__node" kindref="compound">octree_node</ref><sp/>{</highlight></codeline>
+<codeline lineno="18" refid="structoctree__node_1a911069e224e60ce175fbf39cb4758027" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structoctree__node" kindref="compound">octree_node</ref>*<sp/><ref refid="structoctree__node_1a911069e224e60ce175fbf39cb4758027" kindref="member">n000</ref>;<sp/></highlight></codeline>
+<codeline lineno="19" refid="structoctree__node_1a22e9a3943b47110c176162bc57a97f7a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structoctree__node" kindref="compound">octree_node</ref>*<sp/><ref refid="structoctree__node_1a22e9a3943b47110c176162bc57a97f7a" kindref="member">n100</ref>;<sp/></highlight></codeline>
+<codeline lineno="20" refid="structoctree__node_1a7fb5eaad0555e9f7a690a41d14ba28fb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structoctree__node" kindref="compound">octree_node</ref>*<sp/><ref refid="structoctree__node_1a7fb5eaad0555e9f7a690a41d14ba28fb" kindref="member">n010</ref>;<sp/></highlight></codeline>
+<codeline lineno="21" refid="structoctree__node_1a5c52aeddf75c68eb523d678843d8b4a2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structoctree__node" kindref="compound">octree_node</ref>*<sp/><ref refid="structoctree__node_1a5c52aeddf75c68eb523d678843d8b4a2" kindref="member">n110</ref>;<sp/></highlight></codeline>
+<codeline lineno="22" refid="structoctree__node_1ac5f6ca553e03f7f0231cfa0cbf389973" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structoctree__node" kindref="compound">octree_node</ref>*<sp/><ref refid="structoctree__node_1ac5f6ca553e03f7f0231cfa0cbf389973" kindref="member">n001</ref>;<sp/></highlight></codeline>
+<codeline lineno="23" refid="structoctree__node_1a40b97a6730843e85bbe54d0100dfda23" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structoctree__node" kindref="compound">octree_node</ref>*<sp/><ref refid="structoctree__node_1a40b97a6730843e85bbe54d0100dfda23" kindref="member">n101</ref>;<sp/></highlight></codeline>
+<codeline lineno="24" refid="structoctree__node_1acb0684d532942d932ec8d537bfb05dd7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structoctree__node" kindref="compound">octree_node</ref>*<sp/><ref refid="structoctree__node_1acb0684d532942d932ec8d537bfb05dd7" kindref="member">n011</ref>;<sp/></highlight></codeline>
+<codeline lineno="25" refid="structoctree__node_1a2c3b85d22ac7bd7dc32f54a965f4c6c0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structoctree__node" kindref="compound">octree_node</ref>*<sp/><ref refid="structoctree__node_1a2c3b85d22ac7bd7dc32f54a965f4c6c0" kindref="member">n111</ref>;<sp/></highlight></codeline>
+<codeline lineno="26" refid="structoctree__node_1aee2ae825426068a21c0ccbb53a74b19e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structoctree__node_1aee2ae825426068a21c0ccbb53a74b19e" kindref="member">bb1</ref>[3];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="27" refid="structoctree__node_1ae5361d18f21865eedf17276d01f9b293" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="structoctree__node_1ae5361d18f21865eedf17276d01f9b293" kindref="member">bb2</ref>[3];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="28" refid="structoctree__node_1ae1ca6ddb4989d9d1397602ef6ea9e9af" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structlist__int__node" kindref="compound">list_int_node</ref>*<sp/><ref refid="structoctree__node_1ae1ca6ddb4989d9d1397602ef6ea9e9af" kindref="member">list</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="29" refid="octree_8h_1a213eac7af4c986e40b127323a2623b89" refkind="member"><highlight class="normal">}<sp/><ref refid="octree_8h_1a213eac7af4c986e40b127323a2623b89" kindref="member">octree_node</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>declare<sp/>target</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="octree_8h_1a63644b2d301b5599dff501129f610669" kindref="member">octree_create</ref>(<ref refid="structoctree__node" kindref="compound">octree_node</ref>**<sp/>node,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>x_min,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>x_max,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>y_min,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>y_max,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z_min,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z_max,</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>depth);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="octree_8h_1a5ebab3217beacb1201887631a364e75e" kindref="member">octree_free</ref>(<ref refid="structoctree__node" kindref="compound">octree_node</ref>**<sp/>node);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="octree_8h_1a32d0722050bcdd7588e9fb80566d3421" kindref="member">octree_add</ref>(<ref refid="structoctree__node" kindref="compound">octree_node</ref>*<sp/>node,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>t1[3],<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>t2[3],<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>t3[3],<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><ref refid="structlist__int__node" kindref="compound">list_int_node</ref>*<sp/><ref refid="octree_8h_1a306a13544a6a82c24220688cef615839" kindref="member">octree_get</ref>(<ref refid="structoctree__node" kindref="compound">octree_node</ref>*<sp/>node,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>p[3]);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>end<sp/>declare<sp/>target</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="octree.h"/>
+  </compounddef>
+</doxygen>

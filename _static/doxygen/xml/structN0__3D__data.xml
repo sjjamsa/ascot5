@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structN0__3D__data" kind="struct" language="C++" prot="public">
+    <compoundname>N0_3D_data</compoundname>
+    <includes refid="N0__3D_8h" local="no">N0_3D.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structN0__3D__data_1a88e25968fbacd73e219b352f3d0fc9de" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int N0_3D_data::n_species</definition>
+        <argsstring></argsstring>
+        <name>n_species</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of neutral species <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="neutral/N0_3D.h" line="35" column="9" bodyfile="neutral/N0_3D.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structN0__3D__data_1af0624694454abfbdb7a8c0d3b87b97aa" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int N0_3D_data::anum[MAX_SPECIES]</definition>
+        <argsstring>[MAX_SPECIES]</argsstring>
+        <name>anum</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Neutral species mass number [] <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="neutral/N0_3D.h" line="36" column="9" bodyfile="neutral/N0_3D.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structN0__3D__data_1a5605e60e979834d6fc858c13373f6d1e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int N0_3D_data::znum[MAX_SPECIES]</definition>
+        <argsstring>[MAX_SPECIES]</argsstring>
+        <name>znum</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Neutral species charge number [] <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="neutral/N0_3D.h" line="37" column="9" bodyfile="neutral/N0_3D.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structN0__3D__data_1acf502410aa0fcd56a9859d4ee27a70c0" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int N0_3D_data::maxwellian[MAX_SPECIES]</definition>
+        <argsstring>[MAX_SPECIES]</argsstring>
+        <name>maxwellian</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Whether species distribution is Maxwellian or monoenergetic <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="neutral/N0_3D.h" line="38" column="9" bodyfile="neutral/N0_3D.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structN0__3D__data_1a27a38d3b4e769a34aa534c3b48b8f4fe" prot="public" static="no" mutable="no">
+        <type><ref refid="structlinint3D__data" kindref="compound">linint3D_data</ref></type>
+        <definition>linint3D_data N0_3D_data::n0[MAX_SPECIES]</definition>
+        <argsstring>[MAX_SPECIES]</argsstring>
+        <name>n0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Pointer to start of neutral density interpolation data struct array <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="neutral/N0_3D.h" line="40" column="19" bodyfile="neutral/N0_3D.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structN0__3D__data_1a27a005e11a58423d634ee404c67b49b8" prot="public" static="no" mutable="no">
+        <type><ref refid="structlinint3D__data" kindref="compound">linint3D_data</ref></type>
+        <definition>linint3D_data N0_3D_data::t0[MAX_SPECIES]</definition>
+        <argsstring>[MAX_SPECIES]</argsstring>
+        <name>t0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Pointer to start of neutral temperature interpolation data struct array <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="neutral/N0_3D.h" line="42" column="19" bodyfile="neutral/N0_3D.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>3D neutral parameters on the target </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>N0_3D_data</label>
+        <link refid="structN0__3D__data"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>n0</edgelabel>
+          <edgelabel>t0</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>linint3D_data</label>
+        <link refid="structlinint3D__data"/>
+      </node>
+    </collaborationgraph>
+    <location file="neutral/N0_3D.h" line="34" column="1" bodyfile="neutral/N0_3D.h" bodystart="34" bodyend="44"/>
+    <listofallmembers>
+      <member refid="structN0__3D__data_1af0624694454abfbdb7a8c0d3b87b97aa" prot="public" virt="non-virtual"><scope>N0_3D_data</scope><name>anum</name></member>
+      <member refid="structN0__3D__data_1acf502410aa0fcd56a9859d4ee27a70c0" prot="public" virt="non-virtual"><scope>N0_3D_data</scope><name>maxwellian</name></member>
+      <member refid="structN0__3D__data_1a27a38d3b4e769a34aa534c3b48b8f4fe" prot="public" virt="non-virtual"><scope>N0_3D_data</scope><name>n0</name></member>
+      <member refid="structN0__3D__data_1a88e25968fbacd73e219b352f3d0fc9de" prot="public" virt="non-virtual"><scope>N0_3D_data</scope><name>n_species</name></member>
+      <member refid="structN0__3D__data_1a27a005e11a58423d634ee404c67b49b8" prot="public" virt="non-virtual"><scope>N0_3D_data</scope><name>t0</name></member>
+      <member refid="structN0__3D__data_1a5605e60e979834d6fc858c13373f6d1e" prot="public" virt="non-virtual"><scope>N0_3D_data</scope><name>znum</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

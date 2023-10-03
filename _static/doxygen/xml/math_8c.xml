@@ -1,0 +1,1206 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="math_8c" kind="file" language="C++">
+    <compoundname>math.c</compoundname>
+    <includes refid="math_8h" local="no">math.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes refid="ascot5_8h" local="yes">ascot5.h</includes>
+    <incdepgraph>
+      <node id="6">
+        <label>stdlib.h</label>
+      </node>
+      <node id="4">
+        <label>omp.h</label>
+      </node>
+      <node id="5">
+        <label>time.h</label>
+      </node>
+      <node id="1">
+        <label>math.c</label>
+        <link refid="math_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>math.h</label>
+        <link refid="math_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ascot5.h</label>
+        <link refid="ascot5_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="math_8c_1a78c99ffd76a7bb3c8c74db76207e9ab4" prot="public" static="no">
+        <name>_XOPEN_SOURCE</name>
+        <initializer>500</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>drand48 requires POSIX 1995 standard </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="math.c" line="5" column="9" bodyfile="math.c" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="math_8c_1a76b409bcf0a02133fc933a0bf797329d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int rcomp</definition>
+        <argsstring>(const void *a, const void *b)</argsstring>
+        <name>rcomp</name>
+        <param>
+          <type>const void *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>Helper comparison routine for &quot;math_rsearch&quot;. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function checks if a key value is between two consecutive values in a real array. The array to be searched has to be in ascending sorted order.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>first comparison value (key) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>first value in array</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if key is between the consecutive values, 1 if key is greater than the first value, and -1 if key is smaller than the first value. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="math.c" line="373" column="5" bodyfile="math.c" bodystart="373" bodyend="382" declfile="math.c" declline="12" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="math_8c_1ac7901810c3de9f46d356558efbaccebd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double math_simpson_helper</definition>
+        <argsstring>(double(*f)(double), double a, double b, double eps, double S, double fa, double fb, double fc, int bottom)</argsstring>
+        <name>math_simpson_helper</name>
+        <param>
+          <type>double(*)(double)</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>eps</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>S</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>fa</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>fb</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bottom</declname>
+        </param>
+        <briefdescription>
+<para>Helper routine for &quot;math_simpson&quot;. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="math.c" line="441" column="8" bodyfile="math.c" bodystart="441" bodyend="455" declfile="math.c" declline="13" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="math_8c_1afe38b43cda283fdf4db89eafe9515746" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void math_jac_rpz2xyz</definition>
+        <argsstring>(real *rpz, real *xyz, real r, real phi)</argsstring>
+        <name>math_jac_rpz2xyz</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>rpz</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>xyz</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>phi</declname>
+        </param>
+        <briefdescription>
+<para>Convert a Jacobian from cylindrical to cartesian coordinates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function converts a Jacobian located at angle phi and radius r from cylindrical to cartesian coordinates. The input Jacobian is an array with</para>
+<para>[Br dBr/dr dBr/dphi dBr/dz Bphi dBphi/dr dBphi/dphi dBphi/dz Bz dBz/dr dBz/dphi dBz/dz]</para>
+<para>an the output is</para>
+<para>[Bx dBx/dx dBx/dy dBx/dz By dBy/dx dBy/dy dBy/dz Bz dBz/dx dBz/dy dBz/dz].</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rpz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>input rpz coordinates in a 3-length array </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>xyz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>output xyz coordinates in a 3-length array </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>r coordinate of the gradient </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>phi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>phi coordinate of the gradient </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="math.c" line="36" column="6" bodyfile="math.c" bodystart="36" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="math_8c_1aed7ada7822595d869435af64095f5330" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void math_jac_xyz2rpz</definition>
+        <argsstring>(real *xyz, real *rpz, real r, real phi)</argsstring>
+        <name>math_jac_xyz2rpz</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>xyz</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>rpz</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>phi</declname>
+        </param>
+        <briefdescription>
+<para>Convert a Jacobian from cartesian to cylindrical coordinates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function converts a Jacobian located at angle phi and radius r from cartesian to cylindrical coordinates. The input Jacobian is an array with</para>
+<para>[Bx dBx/dx dBx/dy dBx/dz By dBy/dx dBy/dy dBy/dz Bz dBz/dx dBz/dy dBz/dz]</para>
+<para>an the output is</para>
+<para>[Br dBr/dr dBr/dphi dBr/dz Bphi dBphi/dr dBphi/dphi dBphi/dz Bz dBz/dr dBz/dphi dBz/dz].</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>xyz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>output xyz coordinates in a 3-length array </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rpz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>input rpz coordinates in a 3-length array </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>r coordinate of the gradient </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>phi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>phi coordinate of the gradient </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="math.c" line="95" column="6" bodyfile="math.c" bodystart="95" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="math_8c_1a42e276b970620bc71c2d4833079b4ddc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void math_matmul</definition>
+        <argsstring>(real *matA, real *matB, int d1, int d2, int d3, real *matC)</argsstring>
+        <name>math_matmul</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>matA</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>matB</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>d1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>d2</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>d3</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>matC</declname>
+        </param>
+        <briefdescription>
+<para>Matrix multiplication. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function performs matrix multiplication. The matrices are given as arrays, the indexing being row-wise.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>matA</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>input array representing a d1 x d2 matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>matB</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>input array representing a d2 x d3 matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>d1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>input scalar dimension (columns in matA and matC) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>d2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>input scalar dimension (rows in matA and columns in matB) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>d3</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>input scalar dimension (rows in matB and matC) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>matC</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>output array representing a d1 x d3 matrix </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="math.c" line="151" column="6" bodyfile="math.c" bodystart="151" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="math_8c_1af31c732694ca2533a1f00e2663d14bb5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+        <definition>real math_normal_rand</definition>
+        <argsstring>(void)</argsstring>
+        <name>math_normal_rand</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Generate normally distributed random numbers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function generates normally distributed random numbers with expected value of 0 and variance of 1 using the polar method [1]. The rand48 random number generator should be initialized with srand48() before calling this function.</para>
+<para>[1] G. Marsaglia, T. A. Bray. A convenient method for generating normal variables. Siam Review 6.3 (1964): 260-264. <ulink url="http://epubs.siam.org/doi/abs/10.1137/1006063:w">http://epubs.siam.org/doi/abs/10.1137/1006063:w</ulink></para>
+<para><xrefsect id="todo_1_todo000006"><xreftitle>Todo</xreftitle><xrefdescription><para>Currently only one of the generated numbers is returned; a second independent variate is Y = v2 * sqrt(-2*log(s) / s) </para>
+<para>Try other random number generators such as those in Intel MKL </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="math.c" line="180" column="6" bodyfile="math.c" bodystart="180" bodyend="192"/>
+      </memberdef>
+      <memberdef kind="function" id="math_8c_1a268aacd23c5013cad8ccaa9692aa3631" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int math_ipow</definition>
+        <argsstring>(int a, int p)</argsstring>
+        <name>math_ipow</name>
+        <param>
+          <type>int</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>Calculate a^p where both a and p are integers (p &gt;= 0) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>argument </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>power</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a^b </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="math.c" line="202" column="5" bodyfile="math.c" bodystart="202" bodyend="208"/>
+      </memberdef>
+      <memberdef kind="function" id="math_8c_1a13a44d019b29f5281851b5574ad1c247" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double math_simpson</definition>
+        <argsstring>(double(*f)(double), double a, double b, double eps)</argsstring>
+        <name>math_simpson</name>
+        <param>
+          <type>double(*)(double)</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>eps</declname>
+        </param>
+        <briefdescription>
+<para>Adaptive Simpsons rule for integral. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function uses recursive splitting of the interval until either maximum number of intervals is reached or given relative error tolerance is obtained</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the integrand function (of one variable) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>lower limit for the interval </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>upper limit for the interval </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>eps</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>absolute tolerance</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<xrefsect id="bug_1_bug000001"><xreftitle>Bug</xreftitle><xrefdescription><para>Probably does not work with SIMD </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="math.c" line="224" column="8" bodyfile="math.c" bodystart="224" bodyend="230"/>
+      </memberdef>
+      <memberdef kind="function" id="math_8c_1acbaa1d87b5cc438fbd03b48912b3fee1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void math_linspace</definition>
+        <argsstring>(real *vec, real a, real b, int n)</argsstring>
+        <name>math_linspace</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>vec</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Generate linearly spaced vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Generates linearly space vector with n elements whose end points are a and b. If n = 1, return b.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>n length array where result is stored </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>start point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>end point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of elements </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="math.c" line="243" column="6" bodyfile="math.c" bodystart="243" bodyend="253"/>
+      </memberdef>
+      <memberdef kind="function" id="math_8c_1a0891e188229459cadca6a189675d9af6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void math_uniquecount</definition>
+        <argsstring>(int *in, int *unique, int *count, int n)</argsstring>
+        <name>math_uniquecount</name>
+        <param>
+          <type>int *</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>unique</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>count</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Find unique numbers and their frequency in given array. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>All argument arrays are assumed to have the same length as the array holding the input numbers. If not all numbers are unique, the remaining entries in unique and count arguments are zero.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>input array of length n </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>unique</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>array where unique numbers are stored, must be of length n </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>count[i] is how many times unique[i] appears in array in, must be of length n </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of the argument arrays </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="math.c" line="268" column="6" bodyfile="math.c" bodystart="268" bodyend="293"/>
+      </memberdef>
+      <memberdef kind="function" id="math_8c_1ad058764586ae6b1953b866bf156fa521" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int math_point_on_plane</definition>
+        <argsstring>(real q[3], real t1[3], real t2[3], real t3[3])</argsstring>
+        <name>math_point_on_plane</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>q</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>t1</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>t2</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>t3</declname>
+          <array>[3]</array>
+        </param>
+        <briefdescription>
+<para>Find if a point is on a given plane. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Let t1=(x1, y1, z1), t2=(x2, y2, z2), and t3=(x3, y3, z3) be non-collinear points on the plane. Let q =(x, y, z) be an arbitrary point. It lies in the plane if:</para>
+<para>det( |x -x1 y -y1 z -z1| |x2-x1 y2-y1 z2-z1| |x3-x1 y3-y1 z3-z1| ) == 0</para>
+<para>det( |x -x1 y -y1 z -z1| |x -x2 y -y2 z -z2| |x -x3 y -y3 z -z3| ) == 0</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>q</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>xyz coordinates of a query point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>xyz coordinates of the first point defining the plane </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>xyz coordinates of the second point defining the plane </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t3</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>xyz coordinates of the third point defining the plane </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="math.c" line="316" column="6" bodyfile="math.c" bodystart="316" bodyend="336"/>
+      </memberdef>
+      <memberdef kind="function" id="math_8c_1a8556627d200439ee8b6da2c5dc1a1af2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void math_barycentric_coords_triangle</definition>
+        <argsstring>(real AP[3], real AB[3], real AC[3], real n[3], real *s, real *t)</argsstring>
+        <name>math_barycentric_coords_triangle</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>AP</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>AB</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>AC</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>n</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Find barycentric coordinates for a given point. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Let a,b,c be the vertices of a triangle and p an arbitrary point. The s,t are the barycentric coordinates of p if: p = (1-s-t)*a + s*b + t*c</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>AP</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>point position vector [x,y,z] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>AB</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>triangle edge AB vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>AC</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>triangle edge AC vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>normal vector [nx, ny, nz] of the triangle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>evaluated s coordinate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>evaluated t coordinate </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="math.c" line="352" column="6" bodyfile="math.c" bodystart="352" bodyend="359"/>
+      </memberdef>
+      <memberdef kind="function" id="math_8c_1ad2fe8b5e5783b76fd11470a5c4db27bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+        <definition>real* math_rsearch</definition>
+        <argsstring>(const real key, const real *base, int num)</argsstring>
+        <name>math_rsearch</name>
+        <param>
+          <type>const <ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>const <ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>num</declname>
+        </param>
+        <briefdescription>
+<para>Search for array element preceding a key value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function takes an array of real values and a key value, and finds the array element which precedes the key value. The array to be searched has to be in ascending sorted order (according to comparison function rcomp).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>real value that serves as key for the search </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the first object of the array to be searched </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of elements in array</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>pointer to array element preceding the key, or NULL if search failed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="math.c" line="397" column="6" bodyfile="math.c" bodystart="397" bodyend="399"/>
+      </memberdef>
+      <memberdef kind="function" id="math_8c_1a2f5d2f375008cc840b427e332b15588c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int math_point_in_polygon</definition>
+        <argsstring>(real r, real z, real *rv, real *zv, int n)</argsstring>
+        <name>math_point_in_polygon</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>rv</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>zv</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Check if coordinates are within polygon. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function checks if the given coordinates are within a 2D polygon using a modified axis crossing method [1]. Origin is moved to the coordinates and the number of wall segments crossing the positive r-axis are calculated. If this is odd, the point is inside the polygon.</para>
+<para>[1] D.G. Alciatore, R. Miranda. A Winding Number and Point-in-Polygon Algorithm. Technical report, Colorado State University, 1995. <ulink url="http://www.engr.colostate.edu/~dga/dga/papers/point_in_polygon.pdf">http://www.engr.colostate.edu/~dga/dga/papers/point_in_polygon.pdf</ulink></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>r coordinate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>z coordinate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>array of r points for the polygon </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>zv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>array of z points for the polygon </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of points in the polygon </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="math.c" line="419" column="5" bodyfile="math.c" bodystart="419" bodyend="436"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Mathematical utility functions. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="math_8c_1a78c99ffd76a7bb3c8c74db76207e9ab4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_XOPEN_SOURCE<sp/>500<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="math_8h" kindref="compound">math.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ascot5_8h" kindref="compound">ascot5.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="math_8h" kindref="compound">math.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>declare<sp/>target</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="math_8c_1a76b409bcf0a02133fc933a0bf797329d" kindref="member">rcomp</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>b);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="math_8c_1ac7901810c3de9f46d356558efbaccebd" kindref="member">math_simpson_helper</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>(*f)(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">),<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>a,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>b,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>eps,</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>S,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>fa,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>fb,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>fc,</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bottom);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>end<sp/>declare<sp/>target</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="math_8c_1afe38b43cda283fdf4db89eafe9515746" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="math_8c_1afe38b43cda283fdf4db89eafe9515746" kindref="member">math_jac_rpz2xyz</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>rpz,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>xyz,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>phi)<sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Temporary<sp/>variables</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>c<sp/>=<sp/>cos(phi);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>s<sp/>=<sp/>sin(phi);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>temp[3];</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>xyz[0]<sp/>=<sp/>rpz[0]<sp/>*<sp/>c<sp/>-<sp/>rpz[4]<sp/>*<sp/>s;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>xyz[4]<sp/>=<sp/>rpz[0]<sp/>*<sp/>s<sp/>+<sp/>rpz[4]<sp/>*<sp/>c;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>xyz[8]<sp/>=<sp/>rpz[8];</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Step<sp/>1:<sp/>Vector<sp/>[dBr/dx<sp/>dBr/dy<sp/>dBr/dz]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>temp[0]<sp/>=<sp/>rpz[1]<sp/>*<sp/>c<sp/>-<sp/>rpz[5]<sp/>*<sp/>s;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>temp[1]<sp/>=<sp/>rpz[2]<sp/>*<sp/>c<sp/>-<sp/>rpz[6]<sp/>*<sp/>s;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>temp[2]<sp/>=<sp/>rpz[3]<sp/>*<sp/>c<sp/>-<sp/>rpz[7]<sp/>*<sp/>s;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Step<sp/>2:<sp/>Gradient</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>xyz[1]<sp/>=<sp/>temp[0]<sp/>*<sp/>c<sp/>-<sp/>temp[1]<sp/>*<sp/>s<sp/>/<sp/>r<sp/>+<sp/>(rpz[0]*s<sp/>+<sp/>rpz[4]*c)<sp/>*<sp/>s<sp/>/<sp/>r;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>xyz[2]<sp/>=<sp/>temp[0]<sp/>*<sp/>s<sp/>+<sp/>temp[1]<sp/>*<sp/>c<sp/>/<sp/>r<sp/>-<sp/>(rpz[0]*s<sp/>+<sp/>rpz[4]*c)<sp/>*<sp/>c<sp/>/<sp/>r;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>xyz[3]<sp/>=<sp/>temp[2];</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Step<sp/>1:<sp/>Vector<sp/>[dBphi/dx<sp/>dBphi/dy<sp/>dBphi/dz]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>temp[0]<sp/>=<sp/>rpz[1]<sp/>*<sp/>s<sp/>+<sp/>rpz[5]<sp/>*<sp/>c;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>temp[1]<sp/>=<sp/>rpz[2]<sp/>*<sp/>s<sp/>+<sp/>rpz[6]<sp/>*<sp/>c;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>temp[2]<sp/>=<sp/>rpz[3]<sp/>*<sp/>s<sp/>+<sp/>rpz[7]<sp/>*<sp/>c;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Step<sp/>2:<sp/>Gradient</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>xyz[5]<sp/>=<sp/>temp[0]<sp/>*<sp/>c<sp/>-<sp/>temp[1]<sp/>*<sp/>s<sp/>/<sp/>r<sp/>+<sp/>(rpz[0]*c<sp/>-<sp/>rpz[4]*s)<sp/>*<sp/>s<sp/>/<sp/>r;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>xyz[6]<sp/>=<sp/>temp[0]<sp/>*<sp/>s<sp/>+<sp/>temp[1]<sp/>*<sp/>c<sp/>/<sp/>r<sp/>-<sp/>(rpz[0]*c<sp/>-<sp/>rpz[4]*s)<sp/>*<sp/>c<sp/>/<sp/>r;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>xyz[7]<sp/>=<sp/>temp[2];</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Step<sp/>1:<sp/>Vector<sp/>[dBz/dx<sp/>dBz/dy<sp/>dBz/dz]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>temp[0]<sp/>=<sp/>rpz[9];</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>temp[1]<sp/>=<sp/>rpz[10];</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>temp[2]<sp/>=<sp/>rpz[11];</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Step<sp/>2:<sp/>Gradient</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>xyz[9]<sp/><sp/>=<sp/>temp[0]<sp/>*<sp/>c<sp/>-<sp/>temp[1]<sp/>*<sp/>s<sp/>/<sp/>r;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>xyz[10]<sp/>=<sp/>temp[0]<sp/>*<sp/>s<sp/>+<sp/>temp[1]<sp/>*<sp/>c<sp/>/<sp/>r;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>xyz[11]<sp/>=<sp/>temp[2];</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="math_8c_1aed7ada7822595d869435af64095f5330" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="math_8c_1aed7ada7822595d869435af64095f5330" kindref="member">math_jac_xyz2rpz</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>xyz,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>rpz,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>phi)<sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Temporary<sp/>variables</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>c<sp/>=<sp/>cos(phi);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>s<sp/>=<sp/>sin(phi);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>temp[3];</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>rpz[0]<sp/>=<sp/><sp/>xyz[0]<sp/>*<sp/>c<sp/>+<sp/>xyz[4]<sp/>*<sp/>s;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>rpz[4]<sp/>=<sp/>-xyz[0]<sp/>*<sp/>s<sp/>+<sp/>xyz[4]<sp/>*<sp/>c;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>rpz[8]<sp/>=<sp/><sp/>xyz[8];</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Step<sp/>1:<sp/>Vector<sp/>[dBx/dr<sp/>dBx/dphi<sp/>dBx/dz]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>temp[0]<sp/>=<sp/>xyz[1]<sp/>*<sp/>c<sp/>+<sp/>xyz[5]<sp/>*<sp/>s;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>temp[1]<sp/>=<sp/>xyz[2]<sp/>*<sp/>c<sp/>+<sp/>xyz[6]<sp/>*<sp/>s;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>temp[2]<sp/>=<sp/>xyz[3]<sp/>*<sp/>c<sp/>+<sp/>xyz[7]<sp/>*<sp/>s;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Step<sp/>2:<sp/>Gradient</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>rpz[1]<sp/>=<sp/><sp/>temp[0]<sp/>*<sp/>c<sp/>+<sp/>temp[1]<sp/>*<sp/>s;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>rpz[2]<sp/>=<sp/>-temp[0]<sp/>*<sp/>s<sp/>*<sp/>r<sp/>+<sp/>temp[1]<sp/>*<sp/>c<sp/>*<sp/>r</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>xyz[0]<sp/>*<sp/>s<sp/>+<sp/>xyz[4]<sp/>*<sp/>c;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>rpz[3]<sp/>=<sp/><sp/>temp[2];</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Step<sp/>1:<sp/>Vector<sp/>[dBy/dr<sp/>dBy/dphi<sp/>dBy/dz]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>temp[0]<sp/>=<sp/>-xyz[1]<sp/>*<sp/>s<sp/>+<sp/>xyz[5]<sp/>*<sp/>c;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>temp[1]<sp/>=<sp/>-xyz[2]<sp/>*<sp/>s<sp/>+<sp/>xyz[6]<sp/>*<sp/>c;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>temp[2]<sp/>=<sp/>-xyz[3]<sp/>*<sp/>s<sp/>+<sp/>xyz[7]<sp/>*<sp/>c;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Step<sp/>2:<sp/>Gradient</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>rpz[5]<sp/>=<sp/><sp/>temp[0]<sp/>*<sp/>c<sp/>+<sp/>temp[1]<sp/>*<sp/>s;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>rpz[6]<sp/>=<sp/>-temp[0]<sp/>*<sp/>s<sp/>*<sp/>r<sp/>+<sp/>temp[1]<sp/>*<sp/>c<sp/>*<sp/>r</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>xyz[0]<sp/>*<sp/>c<sp/>-<sp/>xyz[4]<sp/>*<sp/>s;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>rpz[7]<sp/>=<sp/><sp/>temp[2];</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Step<sp/>1:<sp/>Vector<sp/>[dBz/dr<sp/>dBz/dphi<sp/>dBz/dz]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>temp[0]<sp/>=<sp/>xyz[9];</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>temp[1]<sp/>=<sp/>xyz[10];</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>temp[2]<sp/>=<sp/>xyz[11];</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Step<sp/>2:<sp/>Gradient</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>rpz[9]<sp/><sp/>=<sp/><sp/>temp[0]<sp/>*<sp/>c<sp/>+<sp/>temp[1]<sp/>*<sp/>s;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>rpz[10]<sp/>=<sp/>-temp[0]<sp/>*<sp/>s<sp/>*<sp/>r<sp/>+<sp/>temp[1]<sp/>*<sp/>c<sp/>*<sp/>r;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>rpz[11]<sp/>=<sp/><sp/>temp[2];</highlight></codeline>
+<codeline lineno="136"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151" refid="math_8c_1a42e276b970620bc71c2d4833079b4ddc" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="math_8c_1a42e276b970620bc71c2d4833079b4ddc" kindref="member">math_matmul</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>matA,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>matB,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>d1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>d2,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>d3,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>matC)<sp/>{</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>sum;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>d1;<sp/>i=i+1)<sp/>{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>d3;<sp/>j=j+1)<sp/>{</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sum<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k<sp/>=<sp/>0;<sp/>k<sp/>&lt;<sp/>d2;<sp/>k=k+1){</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sum<sp/>=<sp/>sum<sp/>+<sp/>matA[k<sp/>*<sp/>d1<sp/>+<sp/>i]*matB[j<sp/>*<sp/>d2<sp/>+<sp/>k];</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>matC[i<sp/>*<sp/>d3<sp/>+<sp/>j]<sp/>=<sp/>sum;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="162"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180" refid="math_8c_1af31c732694ca2533a1f00e2663d14bb5" refkind="member"><highlight class="normal"><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/><ref refid="math_8c_1af31c732694ca2533a1f00e2663d14bb5" kindref="member">math_normal_rand</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>X;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>v1,<sp/>v2,<sp/>s;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>v1<sp/>=<sp/>drand48()<sp/>*<sp/>2<sp/>-<sp/>1;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>v2<sp/>=<sp/>drand48()<sp/>*<sp/>2<sp/>-<sp/>1;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>s<sp/>=<sp/>v1*v1<sp/>+<sp/>v2*v2;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(s<sp/>&gt;=<sp/>1);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>X<sp/>=<sp/>v1<sp/>*<sp/>sqrt(-2*log(s)<sp/>/<sp/>s);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>X;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202" refid="math_8c_1a268aacd23c5013cad8ccaa9692aa3631" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="math_8c_1a268aacd23c5013cad8ccaa9692aa3631" kindref="member">math_ipow</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>a,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>p)<sp/>{</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pow<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>p;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pow<sp/>*=<sp/>a;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pow;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224" refid="math_8c_1a13a44d019b29f5281851b5574ad1c247" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="math_8c_1a13a44d019b29f5281851b5574ad1c247" kindref="member">math_simpson</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>(*f)(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">),<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>a,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>b,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>eps)<sp/>{</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>c<sp/>=<sp/>(a<sp/>+<sp/>b)/2,<sp/>h<sp/>=<sp/>b<sp/>-<sp/>a;</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>fa<sp/>=<sp/>f(a),<sp/>fb<sp/>=<sp/>f(b),<sp/>fc<sp/>=<sp/>f(c);</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>S<sp/>=<sp/>(h/6)*(fa<sp/>+<sp/>4*fc<sp/>+<sp/>fb);</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="math_8c_1ac7901810c3de9f46d356558efbaccebd" kindref="member">math_simpson_helper</ref>(f,<sp/>a,<sp/>b,<sp/>eps,<sp/>S,<sp/>fa,<sp/>fb,<sp/>fc,</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="math_8h_1a4535483342e05f7c8bee5caa4407a150" kindref="member">math_maxSimpsonDepth</ref>);</highlight></codeline>
+<codeline lineno="230"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="243" refid="math_8c_1acbaa1d87b5cc438fbd03b48912b3fee1" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="math_8c_1acbaa1d87b5cc438fbd03b48912b3fee1" kindref="member">math_linspace</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>vec,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>a,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>b,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n)<sp/>{</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(n<sp/>==<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vec[0]<sp/>=<sp/>b;</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>d<sp/>=<sp/>(b-a)/(n-1);</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>n;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vec[i]<sp/>=<sp/>a+i*d;</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="253"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight></codeline>
+<codeline lineno="268" refid="math_8c_1a0891e188229459cadca6a189675d9af6" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="math_8c_1a0891e188229459cadca6a189675d9af6" kindref="member">math_uniquecount</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>in,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>unique,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>count,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n)<sp/>{</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;n;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>unique[i]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>count[i]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n_unique<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;n;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>test<sp/>=<sp/>in[i];</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>isunique<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j=0;<sp/>j&lt;n_unique;<sp/>j++)<sp/>{</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(test<sp/>==<sp/>unique[j])<sp/>{</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>isunique<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>count[j]<sp/>+=<sp/>1;</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(isunique)<sp/>{</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>unique[n_unique]<sp/>=<sp/>test;</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>count[n_unique]<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n_unique++;</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="293"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight></codeline>
+<codeline lineno="316" refid="math_8c_1ad058764586ae6b1953b866bf156fa521" refkind="member"><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="math_8c_1ad058764586ae6b1953b866bf156fa521" kindref="member">math_point_on_plane</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>q[3],<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>t1[3],<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>t2[3],<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>t3[3]){</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>x<sp/><sp/>=<sp/><sp/>q[0],<sp/>y<sp/><sp/>=<sp/><sp/>q[1],<sp/>z<sp/><sp/>=<sp/><sp/>q[2];</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>x1<sp/>=<sp/>t1[0],<sp/>y1<sp/>=<sp/>t1[1],<sp/>z1<sp/>=<sp/>t1[2];</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>x2<sp/>=<sp/>t2[0],<sp/>y2<sp/>=<sp/>t2[1],<sp/>z2<sp/>=<sp/>t2[2];</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>x3<sp/>=<sp/>t3[0],<sp/>y3<sp/>=<sp/>t3[1],<sp/>z3<sp/>=<sp/>t3[2];</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>val<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="math_8h_1a1d820c5b699aab90f4f55194b3d705bf" kindref="member">math_determinant3x3</ref>(</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x<sp/>-x1,<sp/>y<sp/>-y1,<sp/>z<sp/>-z1,</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x2-x1,<sp/>y2-y1,<sp/>z2-z1,</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x3-x1,<sp/>y3-y1,<sp/>z3-z1)<sp/>!=<sp/>0.0){</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>val;</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="math_8h_1a1d820c5b699aab90f4f55194b3d705bf" kindref="member">math_determinant3x3</ref>(</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x<sp/>-x1,<sp/>y<sp/>-y1,<sp/>z<sp/>-z1,</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x<sp/>-x2,<sp/>y<sp/>-y2,<sp/>z<sp/>-z2,</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x<sp/>-x3,<sp/>y<sp/>-y3,<sp/>z<sp/>-z3)<sp/>!=<sp/>0.0){</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>val;</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>val;</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/>}</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"></highlight></codeline>
+<codeline lineno="352" refid="math_8c_1a8556627d200439ee8b6da2c5dc1a1af2" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="math_8c_1a8556627d200439ee8b6da2c5dc1a1af2" kindref="member">math_barycentric_coords_triangle</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>AP[3],<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>AB[3],<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>AC[3],</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>n[3],<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>*s,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>*t){</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>n0[3],area;</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="math_8h_1a29911679af4275647fea8492f908bbd9" kindref="member">math_unit</ref>(n,n0);</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/>area<sp/>=<sp/><ref refid="math_8h_1a78ab588b36d3bad74748769c518cbeea" kindref="member">math_scalar_triple_product</ref>(AB,AC,n0);</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/>*s<sp/>=<sp/><ref refid="math_8h_1a78ab588b36d3bad74748769c518cbeea" kindref="member">math_scalar_triple_product</ref>(AP,AC,n0)<sp/>/<sp/>area;</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/>*t<sp/>=<sp/><ref refid="math_8h_1a78ab588b36d3bad74748769c518cbeea" kindref="member">math_scalar_triple_product</ref>(AB,AP,n0)<sp/>/<sp/>area;</highlight></codeline>
+<codeline lineno="359"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"></highlight></codeline>
+<codeline lineno="373" refid="math_8c_1a76b409bcf0a02133fc933a0bf797329d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="math_8c_1a76b409bcf0a02133fc933a0bf797329d" kindref="member">rcomp</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>b)<sp/>{</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>a_val<sp/>=<sp/>*((<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*)<sp/>a);</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>b_val<sp/>=<sp/>*((<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*)<sp/>b);</highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>c_val<sp/>=<sp/>*((<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*)<sp/>b<sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"></highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(a_val<sp/>&gt;=<sp/>b_val<sp/>&amp;&amp;<sp/>a_val<sp/>&lt;<sp/>c_val)<sp/>{</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>a_val<sp/>&gt;<sp/>b_val<sp/>?<sp/>1<sp/>:<sp/>-1;</highlight></codeline>
+<codeline lineno="382"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"></highlight></codeline>
+<codeline lineno="397" refid="math_8c_1ad2fe8b5e5783b76fd11470a5c4db27bd" refkind="member"><highlight class="normal"><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/><ref refid="math_8c_1ad2fe8b5e5783b76fd11470a5c4db27bd" kindref="member">math_rsearch</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>key,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>base,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>num)<sp/>{</highlight></codeline>
+<codeline lineno="398"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*)<sp/>bsearch(&amp;key,<sp/>base,<sp/>num-1,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>),<sp/><ref refid="math_8c_1a76b409bcf0a02133fc933a0bf797329d" kindref="member">rcomp</ref>);</highlight></codeline>
+<codeline lineno="399"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="400"><highlight class="normal"></highlight></codeline>
+<codeline lineno="419" refid="math_8c_1a2f5d2f375008cc840b427e332b15588c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="math_8c_1a2f5d2f375008cc840b427e332b15588c" kindref="member">math_point_in_polygon</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>rv,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>zv,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n)<sp/>{</highlight></codeline>
+<codeline lineno="420"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>hits<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="421"><highlight class="normal"></highlight></codeline>
+<codeline lineno="422"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="423"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>n<sp/>-<sp/>1;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="424"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z1<sp/>=<sp/>zv[i]<sp/>-<sp/>z;</highlight></codeline>
+<codeline lineno="425"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z2<sp/>=<sp/>zv[i+1]<sp/>-<sp/>z;</highlight></codeline>
+<codeline lineno="426"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r1<sp/>=<sp/>rv[i]<sp/>-<sp/>r;</highlight></codeline>
+<codeline lineno="427"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r2<sp/>=<sp/>rv[i+1]<sp/>-<sp/>r;</highlight></codeline>
+<codeline lineno="428"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(z1<sp/>*<sp/>z2<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="429"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>ri<sp/>=<sp/>r1<sp/>+<sp/>(z1*(r2-r1))<sp/>/<sp/>(z1-z2);</highlight></codeline>
+<codeline lineno="430"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(ri<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="431"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hits++;</highlight></codeline>
+<codeline lineno="432"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="433"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="434"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="435"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>hits<sp/>%<sp/>2;</highlight></codeline>
+<codeline lineno="436"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="437"><highlight class="normal"></highlight></codeline>
+<codeline lineno="441" refid="math_8c_1ac7901810c3de9f46d356558efbaccebd" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="math_8c_1ac7901810c3de9f46d356558efbaccebd" kindref="member">math_simpson_helper</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>(*f)(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">),<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>a,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>b,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>eps,</highlight></codeline>
+<codeline lineno="442"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>S,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>fa,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>fb,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>fc,</highlight></codeline>
+<codeline lineno="443"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bottom)<sp/>{</highlight></codeline>
+<codeline lineno="444"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>c<sp/>=<sp/>(a<sp/>+<sp/>b)/2,<sp/>h<sp/>=<sp/>b<sp/>-<sp/>a;</highlight></codeline>
+<codeline lineno="445"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>d<sp/>=<sp/>(a<sp/>+<sp/>c)/2,<sp/>e<sp/>=<sp/>(c<sp/>+<sp/>b)/2;</highlight></codeline>
+<codeline lineno="446"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>fd<sp/>=<sp/>f(d),<sp/>fe<sp/>=<sp/>f(e);</highlight></codeline>
+<codeline lineno="447"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Sleft<sp/>=<sp/>(h/12)*(fa<sp/>+<sp/>4*fd<sp/>+<sp/>fc);</highlight></codeline>
+<codeline lineno="448"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Sright<sp/>=<sp/>(h/12)*(fc<sp/>+<sp/>4*fe<sp/>+<sp/>fb);</highlight></codeline>
+<codeline lineno="449"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>S2<sp/>=<sp/>Sleft<sp/>+<sp/>Sright;</highlight></codeline>
+<codeline lineno="450"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(bottom<sp/>&lt;=<sp/>0<sp/>||<sp/>fabs(S2<sp/>-<sp/>S)<sp/>&lt;=<sp/>eps*fabs(S))<sp/>{</highlight></codeline>
+<codeline lineno="451"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><sp/>S2<sp/>+<sp/>(S2<sp/>-<sp/>S)/15;</highlight></codeline>
+<codeline lineno="452"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="453"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="math_8c_1ac7901810c3de9f46d356558efbaccebd" kindref="member">math_simpson_helper</ref>(f,<sp/>a,<sp/>c,<sp/>eps,<sp/>Sleft,<sp/><sp/>fa,<sp/>fc,<sp/>fd,<sp/>bottom-1)</highlight></codeline>
+<codeline lineno="454"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<ref refid="math_8c_1ac7901810c3de9f46d356558efbaccebd" kindref="member">math_simpson_helper</ref>(f,<sp/>c,<sp/>b,<sp/>eps,<sp/>Sright,<sp/>fc,<sp/>fb,<sp/>fe,<sp/>bottom-1);</highlight></codeline>
+<codeline lineno="455"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="math.c"/>
+  </compounddef>
+</doxygen>

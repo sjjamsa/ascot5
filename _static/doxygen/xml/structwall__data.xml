@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structwall__data" kind="struct" language="C++" prot="public">
+    <compoundname>wall_data</compoundname>
+    <includes refid="wall_8h" local="no">wall.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structwall__data_1a535795020b69e3c55720658444e1d8a0" prot="public" static="no" mutable="no">
+        <type><ref refid="wall_8h_1aa44ee0f90142da2a1da8771c19643633" kindref="member">wall_type</ref></type>
+        <definition>wall_type wall_data::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Wall model type wrapped by this struct </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="wall.h" line="55" column="15" bodyfile="wall.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwall__data_1ad33b5001672a8370a7d27da83c11656f" prot="public" static="no" mutable="no">
+        <type><ref refid="structwall__2d__data" kindref="compound">wall_2d_data</ref></type>
+        <definition>wall_2d_data wall_data::w2d</definition>
+        <argsstring></argsstring>
+        <name>w2d</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>2D model or NULL if not active <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="wall.h" line="56" column="18" bodyfile="wall.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwall__data_1a99f61da522654d7c4771dd1cf1992378" prot="public" static="no" mutable="no">
+        <type><ref refid="structwall__3d__data" kindref="compound">wall_3d_data</ref></type>
+        <definition>wall_3d_data wall_data::w3d</definition>
+        <argsstring></argsstring>
+        <name>w3d</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>3D model or NULL if not active <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="wall.h" line="57" column="18" bodyfile="wall.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Wall model simulation data. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This struct holds data necessary for simulation. The struct is initialized from the <ref refid="structwall__offload__data" kindref="compound">wall_offload_data</ref> in <ref refid="wall_8c_1a988188cbb3aa23bc2bb5004ebca9b722" kindref="member">wall_init()</ref>.</para>
+<para>The intended usage is that only single <ref refid="structwall__data" kindref="compound">wall_data</ref> is used at the time, and the type of the data is declared with the &quot;type&quot; field. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>wall_2d_data</label>
+        <link refid="structwall__2d__data"/>
+      </node>
+      <node id="3">
+        <label>wall_3d_data</label>
+        <link refid="structwall__3d__data"/>
+      </node>
+      <node id="1">
+        <label>wall_data</label>
+        <link refid="structwall__data"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>w2d</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>w3d</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="wall.h" line="54" column="1" bodyfile="wall.h" bodystart="54" bodyend="58"/>
+    <listofallmembers>
+      <member refid="structwall__data_1a535795020b69e3c55720658444e1d8a0" prot="public" virt="non-virtual"><scope>wall_data</scope><name>type</name></member>
+      <member refid="structwall__data_1ad33b5001672a8370a7d27da83c11656f" prot="public" virt="non-virtual"><scope>wall_data</scope><name>w2d</name></member>
+      <member refid="structwall__data_1a99f61da522654d7c4771dd1cf1992378" prot="public" virt="non-virtual"><scope>wall_data</scope><name>w3d</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

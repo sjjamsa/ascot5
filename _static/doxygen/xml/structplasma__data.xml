@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structplasma__data" kind="struct" language="C++" prot="public">
+    <compoundname>plasma_data</compoundname>
+    <includes refid="plasma_8h" local="no">plasma.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structplasma__data_1a90b2329f953ae932f4c8e98308a724bd" prot="public" static="no" mutable="no">
+        <type><ref refid="plasma_8h_1aeac371b8350c40fe94429c0e2167df63" kindref="member">plasma_type</ref></type>
+        <definition>plasma_type plasma_data::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Plasma data type wrapped by this struct </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="plasma.h" line="58" column="17" bodyfile="plasma.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structplasma__data_1a4350001b594316a4fc0aef50a72a47fe" prot="public" static="no" mutable="no">
+        <type><ref refid="structplasma__1D__data" kindref="compound">plasma_1D_data</ref></type>
+        <definition>plasma_1D_data plasma_data::plasma_1D</definition>
+        <argsstring></argsstring>
+        <name>plasma_1D</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>1D data or NULL if not active <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="plasma.h" line="59" column="20" bodyfile="plasma.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structplasma__data_1a49257447913ca9b70eb1f59ecca2a389" prot="public" static="no" mutable="no">
+        <type><ref refid="structplasma__1Dt__data" kindref="compound">plasma_1Dt_data</ref></type>
+        <definition>plasma_1Dt_data plasma_data::plasma_1Dt</definition>
+        <argsstring></argsstring>
+        <name>plasma_1Dt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>1D data or NULL if not active <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="plasma.h" line="60" column="21" bodyfile="plasma.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structplasma__data_1a6846ed4e1bf8b34ac17c3d606733146a" prot="public" static="no" mutable="no">
+        <type><ref refid="structplasma__1DS__data" kindref="compound">plasma_1DS_data</ref></type>
+        <definition>plasma_1DS_data plasma_data::plasma_1DS</definition>
+        <argsstring></argsstring>
+        <name>plasma_1DS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>1DS data or NULL if not active <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="plasma.h" line="61" column="21" bodyfile="plasma.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Plasma simulation data. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This struct holds data necessary for simulation. The struct is initialized from the <ref refid="structplasma__offload__data" kindref="compound">plasma_offload_data</ref> in <ref refid="plasma_8c_1ae1bd9e9f87802b9fca57c8fd31e462e0" kindref="member">plasma_init()</ref>.</para>
+<para>The intended usage is that only single <ref refid="structplasma__data" kindref="compound">plasma_data</ref> is used at the time, and the type of the data is declared with the &quot;type&quot; field. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>plasma_1D_data</label>
+        <link refid="structplasma__1D__data"/>
+      </node>
+      <node id="5">
+        <label>plasma_1Dt_data</label>
+        <link refid="structplasma__1Dt__data"/>
+      </node>
+      <node id="1">
+        <label>plasma_data</label>
+        <link refid="structplasma__data"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>plasma_1D</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>plasma_1DS</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>plasma_1Dt</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>interp1D_data</label>
+        <link refid="structinterp1D__data"/>
+      </node>
+      <node id="3">
+        <label>plasma_1DS_data</label>
+        <link refid="structplasma__1DS__data"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>dens</edgelabel>
+          <edgelabel>temp</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="plasma.h" line="57" column="1" bodyfile="plasma.h" bodystart="57" bodyend="62"/>
+    <listofallmembers>
+      <member refid="structplasma__data_1a4350001b594316a4fc0aef50a72a47fe" prot="public" virt="non-virtual"><scope>plasma_data</scope><name>plasma_1D</name></member>
+      <member refid="structplasma__data_1a6846ed4e1bf8b34ac17c3d606733146a" prot="public" virt="non-virtual"><scope>plasma_data</scope><name>plasma_1DS</name></member>
+      <member refid="structplasma__data_1a49257447913ca9b70eb1f59ecca2a389" prot="public" virt="non-virtual"><scope>plasma_data</scope><name>plasma_1Dt</name></member>
+      <member refid="structplasma__data_1a90b2329f953ae932f4c8e98308a724bd" prot="public" virt="non-virtual"><scope>plasma_data</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

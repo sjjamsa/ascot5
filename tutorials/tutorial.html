@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Introduction &mdash; ASCOT5 5.5 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/sg_gallery.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/nbsphinx-code-cells.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=b689823a"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Generating Poincaré plots" href="poincaretutorial.html" />
+    <link rel="prev" title="Tutorials" href="../teaching.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html">
+            
+              <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Running Simulations</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../running.html">Installing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../running.html#simulations">Simulations</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Processing Data</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../processing.html">Data storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../processing.html#input-generation">Input generation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../processing.html#post-processing">Post-processing</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Simulating Physics</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../teaching.html">Tutorials</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Introduction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#First-simulation:-step-by-step">First simulation: step-by-step</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Contents-of-the-HDF5-file">Contents of the HDF5 file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Python-interface-to-libascot.so">Python interface to libascot.so</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Input-generation">Input generation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Post-processing">Post-processing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Live-simulations">Live simulations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Need-help?">Need help?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="poincaretutorial.html">Generating Poincaré plots</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../teaching.html#physics-in-ascot5">Physics in ASCOT5</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Publications</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../publishing.html">Citing ASCOT5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../publishing.html#gallery">Gallery</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Code Development</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../developing.html">Coding style and practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developing.html#parallelization">Parallelization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developing.html#testing">Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developing.html#id2">C API</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../papi/a5py.html">Python API</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ASCOT5</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../teaching.html">Tutorials</a></li>
+      <li class="breadcrumb-item active">Introduction</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/tutorials/tutorial.ipynb.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="Introduction">
+<h1>Introduction<a class="headerlink" href="#Introduction" title="Link to this heading"></a></h1>
+<p>This example gives a general overview on how to pre- and postprocess ASCOT5 simulations.</p>
+<ol class="arabic simple">
+<li><p>First simulation: step-by-step</p></li>
+<li><p>Contents of the HDF5 file</p></li>
+<li><p>Python interface to libascot.so</p></li>
+<li><p>Input generation</p></li>
+<li><p>Post processing</p></li>
+<li><p>Live simulations</p></li>
+</ol>
+<section id="First-simulation:-step-by-step">
+<h2>First simulation: step-by-step<a class="headerlink" href="#First-simulation:-step-by-step" title="Link to this heading"></a></h2>
+<p>Go to <code class="docutils literal notranslate"><span class="pre">ascot5/doc/tutorials</span></code> folder and type <code class="docutils literal notranslate"><span class="pre">ipython3</span></code> to begin this tutorial. Then repeat these steps:</p>
+<ol class="arabic simple">
+<li><p>All pre- and post-processing is done via <code class="docutils literal notranslate"><span class="pre">Ascot</span></code> object. To create a new ASCOT5 data file, use <code class="docutils literal notranslate"><span class="pre">create=True</span></code>.</p></li>
+</ol>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">a5py</span> <span class="kn">import</span> <span class="n">Ascot</span>
+
+<span class="n">a5</span> <span class="o">=</span> <span class="n">Ascot</span><span class="p">(</span><span class="s2">&quot;ascot.h5&quot;</span><span class="p">,</span> <span class="n">create</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;File created&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>The following lines initialize test data. We will go through the input generation in detail later.</p></li>
+</ol>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use pre-existing template to create some input data</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">create_input</span><span class="p">(</span><span class="s2">&quot;options tutorial&quot;</span><span class="p">)</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">create_input</span><span class="p">(</span><span class="s2">&quot;bfield analytical iter circular&quot;</span><span class="p">)</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">create_input</span><span class="p">(</span><span class="s2">&quot;wall rectangular&quot;</span><span class="p">)</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">create_input</span><span class="p">(</span><span class="s2">&quot;plasma flat&quot;</span><span class="p">)</span>
+
+<span class="c1"># Create electric field and markers by giving input parameters explicitly</span>
+<span class="kn">from</span> <span class="nn">a5py.ascot5io.marker</span> <span class="kn">import</span> <span class="n">Marker</span>
+<span class="n">mrk</span> <span class="o">=</span> <span class="n">Marker</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span><span class="s2">&quot;gc&quot;</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">species</span><span class="o">=</span><span class="s2">&quot;alpha&quot;</span><span class="p">)</span>
+<span class="n">mrk</span><span class="p">[</span><span class="s2">&quot;energy&quot;</span><span class="p">][:]</span> <span class="o">=</span> <span class="mf">3.5e6</span>
+<span class="n">mrk</span><span class="p">[</span><span class="s2">&quot;pitch&quot;</span><span class="p">][:]</span>  <span class="o">=</span> <span class="mf">0.99</span> <span class="o">-</span> <span class="mf">1.98</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">100</span><span class="p">,)</span>
+<span class="n">mrk</span><span class="p">[</span><span class="s2">&quot;r&quot;</span><span class="p">][:]</span>      <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">6.2</span><span class="p">,</span> <span class="mf">8.2</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">create_input</span><span class="p">(</span><span class="s2">&quot;gc&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">mrk</span><span class="p">)</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">create_input</span><span class="p">(</span><span class="s2">&quot;E_TC&quot;</span><span class="p">,</span> <span class="n">exyz</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]))</span> <span class="c1"># Zero electric field</span>
+
+<span class="c1"># Create dummy input for the rest</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">create_input</span><span class="p">(</span><span class="s2">&quot;N0_3D&quot;</span><span class="p">)</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">create_input</span><span class="p">(</span><span class="s2">&quot;Boozer&quot;</span><span class="p">)</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">create_input</span><span class="p">(</span><span class="s2">&quot;MHD_STAT&quot;</span><span class="p">)</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">create_input</span><span class="p">(</span><span class="s2">&quot;asigma_loc&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Inputs initialized&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<ol class="arabic" start="3">
+<li><p><strong>EITHER</strong> close the ipython session and edit options on terminal (opens a text editor):</p>
+<p><code class="docutils literal notranslate"><span class="pre">a5editoptions</span> <span class="pre">ascot.h5</span></code></p>
+<p>Scroll down to “End conditions” and set <code class="docutils literal notranslate"><span class="pre">ENDCOND_MAX_MILEAGE</span> <span class="pre">=</span> <span class="pre">0.5e-2</span></code>. Save and close the editor. When prompted, set “Fast” as a description.</p>
+<p><strong>OR</strong> set the options in ipython:</p>
+</li>
+</ol>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">active</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">ENDCOND_MAX_MILEAGE</span><span class="o">=</span><span class="mf">0.5e-2</span><span class="p">,</span> <span class="n">desc</span><span class="o">=</span><span class="s2">&quot;Fast&quot;</span><span class="p">)</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">activate</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Options updated&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<ol class="arabic" start="4">
+<li><p>Now execute <code class="docutils literal notranslate"><span class="pre">ascot5_main</span></code> which should take less than 10 seconds.</p>
+<p><strong>EITHER</strong> in terminal:</p>
+<p><code class="docutils literal notranslate"><span class="pre">./../../build/ascot5_main</span> <span class="pre">--d=&quot;Hello</span> <span class="pre">world!&quot;</span></code></p>
+<p><strong>OR</strong> in ipython:</p>
+</li>
+</ol>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">subprocess</span>
+<span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s2">&quot;./../../build/ascot5_main&quot;</span><span class="p">,</span> <span class="s2">&quot;--d=</span><span class="se">\&quot;</span><span class="s2">Hello world!</span><span class="se">\&quot;</span><span class="s2">&quot;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Simulation completed&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<ol class="arabic" start="5">
+<li><p>Open <code class="docutils literal notranslate"><span class="pre">ipython</span></code> again to read the data and plot marker endstates.</p>
+<p>Hint: You can add the line <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">a5py</span> <span class="pre">import</span> <span class="pre">Ascot</span></code> to your ipython config file (<code class="docutils literal notranslate"><span class="pre">~/.ipython/profile_default/ipython_config.py</span></code>) so that it is automatically called in beginning of every ipython session:</p>
+<pre>
+     c = get_config()
+     c.InteractiveShellApp.exec_lines = [
+         '%load_ext autoreload',
+         '%autoreload 2',
+         'import numpy as np',
+         'import scipy',
+         'import matplotlib as mpl',
+         'import matplotlib.pyplot as plt',
+         'from a5py import Ascot',
+     ]
+</pre></li>
+</ol>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">a5py</span> <span class="kn">import</span> <span class="n">Ascot</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">a5</span> <span class="o">=</span> <span class="n">Ascot</span><span class="p">(</span><span class="s2">&quot;ascot.h5&quot;</span><span class="p">)</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">ls</span><span class="p">(</span><span class="n">show</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># Print summary of the data within this file</span>
+<span class="n">mil</span> <span class="o">=</span> <span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">active</span><span class="o">.</span><span class="n">getstate</span><span class="p">(</span><span class="s2">&quot;mileage&quot;</span><span class="p">,</span> <span class="n">state</span><span class="o">=</span><span class="s2">&quot;end&quot;</span><span class="p">)</span> <span class="c1"># How much time passed for each marker</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Average mileage: </span><span class="si">%0.5f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">mil</span><span class="p">)))</span>
+
+<span class="c1"># Plots markers&#39; final (R, z) coordinates and wall contour</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">active</span><span class="o">.</span><span class="n">plotstate_scatter</span><span class="p">(</span><span class="s2">&quot;end r&quot;</span><span class="p">,</span> <span class="s2">&quot;end z&quot;</span><span class="p">,</span> <span class="n">axes</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">block</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<ol class="arabic" start="6">
+<li><p>That’s it! Now you have prepared inputs, ran ASCOT5, and accessed the simulation output.</p>
+<p>For actual simulations each step is more involving, but the basic premise was illustrated here. ASCOT5 development aims to integrate most input generation and post-processing tools so that they can be accessed via an <code class="docutils literal notranslate"><span class="pre">Ascot</span></code> object. Therefore, it is a good idea to always check from the documentation if there is an existing tool available.</p>
+<p>Next in this tutorial, we will go through each step in detail. However, don’t forget to try ASCOT5 GUI for fast and easy access to the data (type <code class="docutils literal notranslate"><span class="pre">a5gui</span> <span class="pre">ascot.h5</span></code> in terminal to open it).</p>
+</li>
+</ol>
+</section>
+<section id="Contents-of-the-HDF5-file">
+<h2>Contents of the HDF5 file<a class="headerlink" href="#Contents-of-the-HDF5-file" title="Link to this heading"></a></h2>
+<p>ASCOT5 stores the data in a HDF5 file. The file contains <strong>all</strong> inputs necessary to (re)run the simulation and the simulation output. The format supports multiple inputs and multiple outputs so that all data relevant for a single study can be stored in a single file (but remember to make backups!). To separate inputs and simulations from one another, each input and each simulation is assigned a quasi-unique identifier (QID) which is string of ten numbers from 0-10.</p>
+<p>How exactly the data is stored in a file is not relevant, as the data is accessed via <code class="docutils literal notranslate"><span class="pre">Ascot</span></code> object. Or to be more precise, the contents of the file is accessed and modified via <code class="docutils literal notranslate"><span class="pre">Ascot.data</span></code> attribute which is an <code class="docutils literal notranslate"><span class="pre">Ascot5IO</span></code> object.</p>
+<p>The contents of the file can be quickly viewed with <code class="docutils literal notranslate"><span class="pre">ls()</span></code> method (GUI is also very good for this purpose).</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># In ipython terminal:</span>
+<span class="kn">from</span> <span class="nn">a5py</span> <span class="kn">import</span> <span class="n">Ascot</span>
+<span class="n">a5</span> <span class="o">=</span> <span class="n">Ascot</span><span class="p">(</span><span class="s2">&quot;ascot.h5&quot;</span><span class="p">)</span>
+<span class="n">info</span> <span class="o">=</span> <span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">ls</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">data</span></code> attribute provides a <em>treeview</em> of the contents. At the top level are <em>input parent groups</em>, e.g. <code class="docutils literal notranslate"><span class="pre">bfield</span></code>, and <em>result groups</em>. Each input parent group contains all inputs in that category, e.g. <code class="docutils literal notranslate"><span class="pre">bfield</span></code> contains every magnetic field input. The one that is going to be used in a simulation is marked with an <em>active</em> flag. Again, <code class="docutils literal notranslate"><span class="pre">ls()</span></code> method can be used to view the contents of input parent groups.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">info</span> <span class="o">=</span> <span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">ls</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<p>As can be seen, each input has a QID (the quasi-unique identifier), date when it was created, user-given description, and name that has a format &lt;inputtype&gt;_&lt;qid&gt;. Note that when we used <code class="docutils literal notranslate"><span class="pre">a5editoptions</span></code> to modify options, the old options were preserved.</p>
+<p>Objects representing the inputs can be accessed via their name, qid, or tag which is the first word in the description. Both attribute-like and dictionary-like referencing is supported.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># These all point to same object (note that this cell fails if commented lines are uncommented without using proper QID)</span>
+<span class="c1">#a5.data.options.q1234567890       # Ref by QID, note &quot;q&quot; prefix</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">FAST</span>               <span class="c1"># Ref by tag, note that it is always all caps, no special symbols allowed and max 10 characters</span>
+<span class="c1">#a5.data.options.Opt_1234567890    # Ref by name</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">active</span>             <span class="c1"># Ref to options input that is currently active and will be used in the next simulation</span>
+<span class="c1">#a5.data[&quot;options&quot;][&quot;q1234567890&quot;] # Dictionary-like access</span>
+</pre></div>
+</div>
+</div>
+<p>Each input object (as well as result group) has methods to access its meta data and alter the description (and, hence, tag). The inbut objects don’t read the actual data when <code class="docutils literal notranslate"><span class="pre">Ascot</span></code> object is initialized to keep it light-weight. The <code class="docutils literal notranslate"><span class="pre">read</span></code> method reads the raw data from the HDF5 file but for post-processing purposes there are better tools which are introduced later.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">active</span><span class="o">.</span><span class="n">get_qid</span><span class="p">()</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">active</span><span class="o">.</span><span class="n">get_date</span><span class="p">()</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">active</span><span class="o">.</span><span class="n">get_name</span><span class="p">()</span>
+
+<span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">active</span><span class="o">.</span><span class="n">set_desc</span><span class="p">(</span><span class="s2">&quot;New tag&quot;</span><span class="p">)</span>
+<span class="c1"># The tag was updated</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">NEW</span><span class="o">.</span><span class="n">get_desc</span><span class="p">()</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">active</span><span class="o">.</span><span class="n">activate</span><span class="p">()</span> <span class="c1"># Set group as active</span>
+<span class="c1">#a5.data.options.active.destroy() # This would remove the data from the HDF5 file</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">active</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<p>Most of what has been said is true for the result groups as well. Result groups also hold direct references to inputs. Again, <code class="docutils literal notranslate"><span class="pre">ls()</span></code> shows overview of the group’s contents.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">HELLO</span><span class="o">.</span><span class="n">get_desc</span><span class="p">()</span> <span class="c1"># Recall we set run description ascot5_main --d=&quot;Hello world!&quot;</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">HELLO</span><span class="o">.</span><span class="n">bfield</span><span class="o">.</span><span class="n">get_desc</span><span class="p">()</span> <span class="c1"># Inputs used in a run can be referenced like this</span>
+<span class="n">info</span> <span class="o">=</span> <span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">HELLO</span><span class="o">.</span><span class="n">ls</span><span class="p">(</span><span class="n">show</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>This concludes the tutorial on how the file is organized and accessed. For input generation and post-processing, the <code class="docutils literal notranslate"><span class="pre">Ascot</span></code> object, its <code class="docutils literal notranslate"><span class="pre">data</span></code> attribute, and the result groups are mostly relevant.</p>
+</section>
+<section id="Python-interface-to-libascot.so">
+<h2>Python interface to libascot.so<a class="headerlink" href="#Python-interface-to-libascot.so" title="Link to this heading"></a></h2>
+<p>Many of the Python tools in <code class="docutils literal notranslate"><span class="pre">a5py</span></code> make use of the <code class="docutils literal notranslate"><span class="pre">libascot.so</span></code> shared library that provides direct access to same functions that <code class="docutils literal notranslate"><span class="pre">ascot5_main</span></code> uses to trace markers and interpolate inputs. The <code class="docutils literal notranslate"><span class="pre">Ascot</span></code> object automatically initializes the interface to <code class="docutils literal notranslate"><span class="pre">libascot</span></code> via <code class="docutils literal notranslate"><span class="pre">ascotpy</span></code> package provided that the library has been compiled.</p>
+<p>However, inputs must be initialized and freed manually. Here’s an example on how to initialize magnetic field input.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">a5py</span> <span class="kn">import</span> <span class="n">Ascot</span>
+
+<span class="n">a5</span> <span class="o">=</span> <span class="n">Ascot</span><span class="p">(</span><span class="s2">&quot;ascot.h5&quot;</span><span class="p">)</span> <span class="c1"># Use the same file as in the previous tutorials</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">input_init</span><span class="p">(</span><span class="n">bfield</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># Initialize active bfield input</span>
+
+<span class="c1"># To initialize specific input, provide its QID as a string. Since a bfield is already initialized,</span>
+<span class="c1"># use switch=True to switch input or else exception is raised.</span>
+<span class="c1">#a5.input_init(bfield=&quot;1234567890&quot;, switch=True)</span>
+
+<span class="n">a5</span><span class="o">.</span><span class="n">input_initialized</span><span class="p">()</span> <span class="c1"># Shows what inputs are currently initialized</span>
+</pre></div>
+</div>
+</div>
+<p>Routines that require the Python interface will raise an exception if required input has not been initialized before the routine was called. Since magnetic field is now initialized, we can safely interpolate and plot it. Once you no longer need the specific data, you can deallocate it to free some memory. Note that marker and options input cannot be initialized (here).</p>
+<p>You can ignore the warnings below. They just inform you in what units the functions expect the arguments to be in. The units in <code class="docutils literal notranslate"><span class="pre">a5py</span></code> are implemented via <code class="docutils literal notranslate"><span class="pre">unyt</span></code> package; see the documentation for details.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">psi</span><span class="p">,</span> <span class="n">rho</span> <span class="o">=</span> <span class="n">a5</span><span class="o">.</span><span class="n">input_eval</span><span class="p">(</span><span class="mf">6.2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;psi&quot;</span><span class="p">,</span> <span class="s2">&quot;rho&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;psi = </span><span class="si">%.2f</span><span class="s2">, rho = </span><span class="si">%.2f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">psi</span><span class="p">,</span> <span class="n">rho</span><span class="p">))</span>
+
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">input_plotrz</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">50</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="s2">&quot;psi&quot;</span><span class="p">,</span> <span class="n">axes</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">block</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="n">a5</span><span class="o">.</span><span class="n">input_free</span><span class="p">(</span><span class="n">bfield</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># Deallocates just the magnetic field input</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">input_free</span><span class="p">()</span>            <span class="c1"># Deallocates all inputs (except markers and options)</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="Input-generation">
+<h2>Input generation<a class="headerlink" href="#Input-generation" title="Link to this heading"></a></h2>
+<p>ASCOT5 is modular when it comes to inputs. Several different implementations of magnetic field, electric field, etc. exist. When planning a study, check from the documentation (see <code class="docutils literal notranslate"><span class="pre">a5py.ascot5io</span></code>) what kind of inputs would serve you and what kind of data those need. The required data is listed in the <code class="docutils literal notranslate"><span class="pre">write_hdf5</span></code> function corresponding to that input.</p>
+<p>Once that is decided, there are two ways to proceed. Templates for different kind of inputs can be found in <code class="docutils literal notranslate"><span class="pre">a5py.templates</span></code>. Some of the templates import data from external sources, e.g. EQDSK, to ASCOT5 and using those is strongly recommended.</p>
+<p>If no suitable template exists, one must generate the arguments for the <code class="docutils literal notranslate"><span class="pre">write_hdf5</span></code> function themselves.</p>
+<p>Running <code class="docutils literal notranslate"><span class="pre">ascot5_main</span></code> requires that all input parents (<code class="docutils literal notranslate"><span class="pre">bfield</span></code>, <code class="docutils literal notranslate"><span class="pre">efield</span></code>, <code class="docutils literal notranslate"><span class="pre">plasma</span></code>, <code class="docutils literal notranslate"><span class="pre">wall</span></code>, <code class="docutils literal notranslate"><span class="pre">neutral</span></code>, <code class="docutils literal notranslate"><span class="pre">boozer</span></code>, <code class="docutils literal notranslate"><span class="pre">mhd</span></code>, <code class="docutils literal notranslate"><span class="pre">marker</span></code>, <code class="docutils literal notranslate"><span class="pre">options</span></code>) have at least one input present. Some of these are actually rarely used in a simulation and for those it is sufficient to provide dummy data.</p>
+<p>No matter how or what input is created, all is done via <code class="docutils literal notranslate"><span class="pre">create_input</span></code> method.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">a5py</span> <span class="kn">import</span> <span class="n">Ascot</span>
+<span class="n">a5</span> <span class="o">=</span> <span class="n">Ascot</span><span class="p">(</span><span class="s2">&quot;ascot.h5&quot;</span><span class="p">)</span>
+
+<span class="c1"># Call explicitly E_TC.write_hdf5 function that requires exyz as a parameter</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">create_input</span><span class="p">(</span><span class="s2">&quot;E_TC&quot;</span><span class="p">,</span> <span class="n">exyz</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]),</span> <span class="n">activate</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">desc</span><span class="o">=</span><span class="s2">&quot;Zero electric field&quot;</span><span class="p">)</span>
+
+<span class="c1"># Use template</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">create_input</span><span class="p">(</span><span class="s2">&quot;bfield analytical iter circular&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="Post-processing">
+<h2>Post-processing<a class="headerlink" href="#Post-processing" title="Link to this heading"></a></h2>
+<p>Simulations are post-processed by using the corresponding run group in <code class="docutils literal notranslate"><span class="pre">data</span></code>. Run groups provide access to the data, supports evaluation of quantities derived from the data, and host many routines to export or plot the data.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">a5py</span> <span class="kn">import</span> <span class="n">Ascot</span>
+<span class="n">a5</span> <span class="o">=</span> <span class="n">Ascot</span><span class="p">(</span><span class="s2">&quot;ascot.h5&quot;</span><span class="p">)</span>
+
+<span class="c1"># Get final (R,z) coordinates of all markers that hit the wall</span>
+<span class="n">r</span><span class="p">,</span><span class="n">z</span> <span class="o">=</span> <span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">active</span><span class="o">.</span><span class="n">getstate</span><span class="p">(</span><span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="s2">&quot;z&quot;</span><span class="p">,</span> <span class="n">state</span><span class="o">=</span><span class="s2">&quot;end&quot;</span><span class="p">,</span> <span class="n">endcond</span><span class="o">=</span><span class="s2">&quot;wall&quot;</span><span class="p">,</span> <span class="n">ids</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+
+<span class="c1"># Plot (time, energy) of confined marker orbits</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">active</span><span class="o">.</span><span class="n">plotorbit_trajectory</span><span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="s2">&quot;ekin&quot;</span><span class="p">,</span> <span class="n">endcond</span><span class="o">=</span><span class="s2">&quot;not wall&quot;</span><span class="p">,</span> <span class="n">axes</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">block</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="c1"># Summarize simulation</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">active</span><span class="o">.</span><span class="n">getstate_markersummary</span><span class="p">()</span>
+
+<span class="c1"># Visualize losses</span>
+
+<span class="c1"># Etc... see the documentation of RunGroup for details</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="Live-simulations">
+<h2>Live simulations<a class="headerlink" href="#Live-simulations" title="Link to this heading"></a></h2>
+<p>The Python interface to <code class="docutils literal notranslate"><span class="pre">libascot.so</span></code> provides a way to run simulations directly from Python. These “live” simulations are equivalent to those run via <code class="docutils literal notranslate"><span class="pre">ascot5_main</span></code> except that the markers, options, and results are not stored in the HDF5 file. These simulations are convenient to use, but the main intention is to use them for post-processing or light simulations on a desktop.</p>
+<p>Running live simulations requires that you have the inputs (excluding markers and options) present in the HDF5 file.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">a5py</span> <span class="kn">import</span> <span class="n">Ascot</span>
+<span class="n">a5</span> <span class="o">=</span> <span class="n">Ascot</span><span class="p">(</span><span class="s2">&quot;ascot.h5&quot;</span><span class="p">)</span>
+
+<span class="c1"># This method initializes and &quot;packs&quot; inputs in a single array. No input data can be freed while the</span>
+<span class="c1"># data is packed.</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">simulation_initinputs</span><span class="p">()</span>
+
+<span class="c1"># Marker input can be anything but here we just use the on ascot.h5</span>
+<span class="n">mrk</span> <span class="o">=</span> <span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">marker</span><span class="o">.</span><span class="n">active</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">simulation_initmarkers</span><span class="p">(</span><span class="o">**</span><span class="n">mrk</span><span class="p">)</span>
+
+<span class="c1"># Options input can also be anything but here we just use the on ascot.h5</span>
+<span class="n">opt</span> <span class="o">=</span> <span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">active</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">simulation_initoptions</span><span class="p">(</span><span class="o">**</span><span class="n">opt</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Input initialized&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>Running the live simulation returns a <code class="docutils literal notranslate"><span class="pre">VirtualRun</span></code> object which in many ways behaves similarly as the <code class="docutils literal notranslate"><span class="pre">RunGroup</span></code> introduced earlier.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vrun</span> <span class="o">=</span> <span class="n">a5</span><span class="o">.</span><span class="n">simulation_run</span><span class="p">()</span>
+
+<span class="c1"># Get final (R,z) coordinates of all markers that hit the wall</span>
+<span class="n">r</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">vrun</span><span class="o">.</span><span class="n">getstate</span><span class="p">(</span><span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="s2">&quot;z&quot;</span><span class="p">,</span> <span class="n">state</span><span class="o">=</span><span class="s2">&quot;end&quot;</span><span class="p">,</span> <span class="n">endcond</span><span class="o">=</span><span class="s2">&quot;wall&quot;</span><span class="p">,</span> <span class="n">ids</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">z</span><span class="p">)</span>
+
+<span class="c1"># Plot (time, energy) of confined marker orbits</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">vrun</span><span class="o">.</span><span class="n">plotorbit_trajectory</span><span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="s2">&quot;ekin&quot;</span><span class="p">,</span> <span class="n">endcond</span><span class="o">=</span><span class="s2">&quot;not wall&quot;</span><span class="p">,</span> <span class="n">axes</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">block</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Summarize simulation</span>
+<span class="n">vrun</span><span class="o">.</span><span class="n">getstate_markersummary</span><span class="p">()</span>
+
+<span class="c1"># Visualize losses</span>
+
+<span class="c1"># Etc... see the documentation of RunGroup for details</span>
+</pre></div>
+</div>
+</div>
+<p>To rerun the code, free the simulation output. Once it is freed, the previous <code class="docutils literal notranslate"><span class="pre">VirtualRun</span></code> becomes an empty shell and it is no longer usable. Once you have had enough fun, the markers should be freed and inputs unpacked and deallocated.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a5</span><span class="o">.</span><span class="n">simulation_free</span><span class="p">(</span><span class="n">diagnostics</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">simulation_run</span><span class="p">()</span>
+
+<span class="n">a5</span><span class="o">.</span><span class="n">simulation_free</span><span class="p">(</span><span class="n">inputs</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">markers</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">diagnostics</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="Need-help?">
+<h2>Need help?<a class="headerlink" href="#Need-help?" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Ask in our ASCOT5 Slack channel.</p></li>
+<li><p>If you have an issue to report, use the GitHub issue tracker. For bugs, state which version/branch you are using and try to provide the HDF5 file.</p></li>
+<li><p>Join one of our “weekly” meetings to present your research and discuss any issues.</p></li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../teaching.html" class="btn btn-neutral float-left" title="Tutorials" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="poincaretutorial.html" class="btn btn-neutral float-right" title="Generating Poincaré plots" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Ascot Group.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

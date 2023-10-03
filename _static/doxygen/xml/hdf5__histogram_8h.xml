@@ -1,0 +1,231 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="hdf5__histogram_8h" kind="file" language="C++">
+    <compoundname>hdf5_histogram.h</compoundname>
+    <includes local="no">hdf5.h</includes>
+    <includedby refid="hdf5__dist_8c" local="yes">hdf5io/hdf5_dist.c</includedby>
+    <includedby refid="hdf5__histogram_8c" local="yes">hdf5io/hdf5_histogram.c</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>hdf5io/hdf5_histogram.h</label>
+        <link refid="hdf5__histogram_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hdf5.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>hdf5io/hdf5_dist.c</label>
+        <link refid="hdf5__dist_8c"/>
+      </node>
+      <node id="3">
+        <label>hdf5io/hdf5_histogram.c</label>
+        <link refid="hdf5__histogram_8c"/>
+      </node>
+      <node id="1">
+        <label>hdf5io/hdf5_histogram.h</label>
+        <link refid="hdf5__histogram_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="hdf5__histogram_8h_1a0588017bb306f135bac18ff3a058138e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hdf5_histogram_write_uniform_double</definition>
+        <argsstring>(hid_t f, const char *path, int abscissaDim, int ordinateDim, int *abscissaNslots, double *abscissaMin, double *abscissaMax, char **abscissaUnits, char **abscissaNames, char **ordinateUnits, char **ordinateNames, double *ordinate)</argsstring>
+        <name>hdf5_histogram_write_uniform_double</name>
+        <param>
+          <type>hid_t</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>abscissaDim</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ordinateDim</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>abscissaNslots</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>abscissaMin</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>abscissaMax</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>abscissaUnits</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>abscissaNames</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>ordinateUnits</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>ordinateNames</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>ordinate</declname>
+        </param>
+        <briefdescription>
+<para>Write a histogram with uniform grid to HDF5 file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Histogram can have up to 99 dimensions (abscissae) and likewise the ordinate can be multi-dimensional.</para>
+<para>The ordinate is stored as Ndim array where format is ordinateDim x abscissa01Dim x abscissa02Dim ...</para>
+<para>The datasets that are written are the ordinate, ordinate dimension, abscissa dimension, abscissa grid vectors (that define edges of each cell), and abscissa grid vector lengths. Abscissae names and units and ordinate names and units are stored as attributes in ordinate and abscissa grid vectors.</para>
+<para>The ordinate data is expected to be array with format</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>HDF5 file id </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>full path including group name where histogram is stored </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>abscissaDim</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of abscissa dimensions </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ordinateDim</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of ordinate dimensions </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>abscissaNslots</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>array with abscissa dimensions </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>abscissaMin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the lowest abscissa edge for each abscissa dimension </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>abscissaMax</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the highest abscissa edge for each abscissa dimension </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>abscissaUnits</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>array with abscissa units </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>abscissaNames</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>array with abscissa names </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ordinateUnits</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>array with ordinate units </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ordinateNames</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>array with ordinate names </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ordinate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ordinate data</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>zero on success </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="hdf5io/hdf5_histogram.h" line="10" column="5" bodyfile="hdf5io/hdf5_histogram.c" bodystart="42" bodyend="140" declfile="hdf5io/hdf5_histogram.h" declline="10" declcolumn="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Header file for <ref refid="hdf5__histogram_8c" kindref="compound">hdf5_histogram.c</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>HDF5_HISTOGRAM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HDF5_HISTOGRAM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;hdf5.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="hdf5__histogram_8h_1a0588017bb306f135bac18ff3a058138e" kindref="member">hdf5_histogram_write_uniform_double</ref>(hid_t<sp/>f,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*path,</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>abscissaDim,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ordinateDim,</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*abscissaNslots,</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*abscissaMin,</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*abscissaMax,</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**abscissaUnits,</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**abscissaNames,</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**ordinateUnits,</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**ordinateNames,</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*ordinate);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="hdf5io/hdf5_histogram.h"/>
+  </compounddef>
+</doxygen>

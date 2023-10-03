@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structafsi__data" kind="struct" language="C++" prot="public">
+    <compoundname>afsi_data</compoundname>
+    <includes refid="afsi_8h" local="no">afsi.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structafsi__data_1af637dda72d6ada8dddb09344540c1607" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int afsi_data::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Distribution type (1:5D, 2:thermal) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="afsi.h" line="39" column="9" bodyfile="afsi.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structafsi__data_1a1a1cd8b2528e4c8a6dac5ef4e97a080d" prot="public" static="no" mutable="no">
+        <type><ref refid="structdist__5D__data" kindref="compound">dist_5D_data</ref> *</type>
+        <definition>dist_5D_data* afsi_data::dist_5D</definition>
+        <argsstring></argsstring>
+        <name>dist_5D</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Distribution data <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="afsi.h" line="40" column="18" bodyfile="afsi.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structafsi__data_1abcf23ada36d7e9d8c32b8f927116792a" prot="public" static="no" mutable="no">
+        <type><ref refid="structafsi__thermal__data" kindref="compound">afsi_thermal_data</ref> *</type>
+        <definition>afsi_thermal_data* afsi_data::dist_thermal</definition>
+        <argsstring></argsstring>
+        <name>dist_thermal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Thermal data <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="afsi.h" line="41" column="23" bodyfile="afsi.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Wrapper around input data structures. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>dist_5D_data</label>
+        <link refid="structdist__5D__data"/>
+      </node>
+      <node id="1">
+        <label>afsi_data</label>
+        <link refid="structafsi__data"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>dist_thermal</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>dist_5D</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>afsi_thermal_data</label>
+        <link refid="structafsi__thermal__data"/>
+      </node>
+    </collaborationgraph>
+    <location file="afsi.h" line="38" column="1" bodyfile="afsi.h" bodystart="38" bodyend="42"/>
+    <listofallmembers>
+      <member refid="structafsi__data_1a1a1cd8b2528e4c8a6dac5ef4e97a080d" prot="public" virt="non-virtual"><scope>afsi_data</scope><name>dist_5D</name></member>
+      <member refid="structafsi__data_1abcf23ada36d7e9d8c32b8f927116792a" prot="public" virt="non-virtual"><scope>afsi_data</scope><name>dist_thermal</name></member>
+      <member refid="structafsi__data_1af637dda72d6ada8dddb09344540c1607" prot="public" virt="non-virtual"><scope>afsi_data</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

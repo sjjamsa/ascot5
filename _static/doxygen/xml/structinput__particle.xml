@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structinput__particle" kind="struct" language="C++" prot="public">
+    <compoundname>input_particle</compoundname>
+    <includes refid="particle_8h" local="no">particle.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structinput__particle_1a71c8abbe87f5c140c204faa483b76cd3" prot="public" static="no" mutable="no">
+        <type><ref refid="particle_8h_1ad9e26d23f507828132c597fb21168ce2" kindref="member">input_particle_type</ref></type>
+        <definition>input_particle_type input_particle::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Type of data currently stored </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="particle.h" line="188" column="25" bodyfile="particle.h" bodystart="188" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structinput__particle_1aa2cb232cc6b104a529619f0d369f5622" prot="public" static="no" mutable="no">
+        <type><ref refid="structparticle" kindref="compound">particle</ref></type>
+        <definition>particle input_particle::p</definition>
+        <argsstring></argsstring>
+        <name>p</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Particle input <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="particle.h" line="190" column="18" bodyfile="particle.h" bodystart="190" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structinput__particle_1aa6c024538cbd13632c677ed21d58e0f6" prot="public" static="no" mutable="no">
+        <type><ref refid="structparticle__gc" kindref="compound">particle_gc</ref></type>
+        <definition>particle_gc input_particle::p_gc</definition>
+        <argsstring></argsstring>
+        <name>p_gc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Guiding center input <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="particle.h" line="191" column="21" bodyfile="particle.h" bodystart="191" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structinput__particle_1a2579b051b276ceb8b5a3892167c08667" prot="public" static="no" mutable="no">
+        <type><ref refid="structparticle__ml" kindref="compound">particle_ml</ref></type>
+        <definition>particle_ml input_particle::p_ml</definition>
+        <argsstring></argsstring>
+        <name>p_ml</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Field line tracer input <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="particle.h" line="192" column="21" bodyfile="particle.h" bodystart="192" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structinput__particle_1a9742f4ed55a468a64481da438744adad" prot="public" static="no" mutable="no">
+        <type><ref refid="structparticle__state" kindref="compound">particle_state</ref></type>
+        <definition>particle_state input_particle::p_s</definition>
+        <argsstring></argsstring>
+        <name>p_s</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Marker state <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="particle.h" line="193" column="24" bodyfile="particle.h" bodystart="193" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structinput__particle_1aa5c146a1a3934f4b5e8e09983f340bcd" prot="public" static="no" mutable="no">
+        <type>union input_particle::@2</type>
+        <definition>union input_particle::@2 input_particle::@3</definition>
+        <argsstring></argsstring>
+        <name>@3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="particle.h" line="194" column="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Wrapper for marker structs. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This struct wraps <ref refid="structparticle__state" kindref="compound">particle_state</ref> struct and all input structs. Reason is because input data can have several marker types and with this wrapper only a single array is required to store them. The same array can be used when the input markers are turned into marker states.</para>
+<para>Only a single type is stored here indicated by the &quot;type&quot; field. Storing a a new marker struct removes the old marker struct. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>particle_gc</label>
+        <link refid="structparticle__gc"/>
+      </node>
+      <node id="2">
+        <label>particle_ml</label>
+        <link refid="structparticle__ml"/>
+      </node>
+      <node id="5">
+        <label>particle_state</label>
+        <link refid="structparticle__state"/>
+      </node>
+      <node id="4">
+        <label>particle</label>
+        <link refid="structparticle"/>
+      </node>
+      <node id="1">
+        <label>input_particle</label>
+        <link refid="structinput__particle"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>p_ml</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>p_gc</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>p</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>p_s</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="particle.h" line="187" column="1" bodyfile="particle.h" bodystart="187" bodyend="195"/>
+    <listofallmembers>
+      <member refid="structinput__particle_1aa2cb232cc6b104a529619f0d369f5622" prot="public" virt="non-virtual"><scope>input_particle</scope><name>p</name></member>
+      <member refid="structinput__particle_1aa6c024538cbd13632c677ed21d58e0f6" prot="public" virt="non-virtual"><scope>input_particle</scope><name>p_gc</name></member>
+      <member refid="structinput__particle_1a2579b051b276ceb8b5a3892167c08667" prot="public" virt="non-virtual"><scope>input_particle</scope><name>p_ml</name></member>
+      <member refid="structinput__particle_1a9742f4ed55a468a64481da438744adad" prot="public" virt="non-virtual"><scope>input_particle</scope><name>p_s</name></member>
+      <member refid="structinput__particle_1a71c8abbe87f5c140c204faa483b76cd3" prot="public" virt="non-virtual"><scope>input_particle</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

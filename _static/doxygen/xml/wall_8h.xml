@@ -1,0 +1,789 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="wall_8h" kind="file" language="C++">
+    <compoundname>wall.h</compoundname>
+    <includes refid="ascot5_8h" local="yes">ascot5.h</includes>
+    <includes refid="wall__2d_8h" local="yes">wall/wall_2d.h</includes>
+    <includes refid="wall__3d_8h" local="yes">wall/wall_3d.h</includes>
+    <includedby refid="ascot5__main_8c" local="yes">ascot5_main.c</includedby>
+    <includedby refid="bbnbi5_8c" local="yes">bbnbi5.c</includedby>
+    <includedby refid="hdf5__wall_8c" local="yes">hdf5io/hdf5_wall.c</includedby>
+    <includedby refid="hdf5__wall_8h" local="yes">hdf5io/hdf5_wall.h</includedby>
+    <includedby refid="libascot_8c" local="yes">libascot.c</includedby>
+    <includedby refid="nbi_8c" local="yes">nbi.c</includedby>
+    <includedby refid="nbi_8h" local="yes">nbi.h</includedby>
+    <includedby refid="simulate__fo__fixed_8c" local="yes">simulate/simulate_fo_fixed.c</includedby>
+    <includedby refid="simulate__gc__adaptive_8c" local="yes">simulate/simulate_gc_adaptive.c</includedby>
+    <includedby refid="simulate__gc__fixed_8c" local="yes">simulate/simulate_gc_fixed.c</includedby>
+    <includedby refid="simulate__ml__adaptive_8c" local="yes">simulate/simulate_ml_adaptive.c</includedby>
+    <includedby refid="simulate_8h" local="yes">simulate.h</includedby>
+    <includedby refid="wall_8c" local="yes">wall.c</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>wall.h</label>
+        <link refid="wall_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>omp.h</label>
+      </node>
+      <node id="4">
+        <label>time.h</label>
+      </node>
+      <node id="6">
+        <label>wall/wall_3d.h</label>
+        <link refid="wall__3d_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>wall/wall_2d.h</label>
+        <link refid="wall__2d_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ascot5.h</label>
+        <link refid="ascot5_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="25">
+        <label>simulate/simulate_ml_adaptive.c</label>
+        <link refid="simulate__ml__adaptive_8c"/>
+      </node>
+      <node id="35">
+        <label>simulate/simulate_ml_adaptive.h</label>
+        <link refid="simulate__ml__adaptive_8h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>diag.c</label>
+        <link refid="diag_8c"/>
+      </node>
+      <node id="26">
+        <label>simulate.c</label>
+        <link refid="simulate_8c"/>
+      </node>
+      <node id="12">
+        <label>simulate.h</label>
+        <link refid="simulate_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>simulate/simulate_fo_fixed.c</label>
+        <link refid="simulate__fo__fixed_8c"/>
+      </node>
+      <node id="32">
+        <label>simulate/simulate_fo_fixed.h</label>
+        <link refid="simulate__fo__fixed_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>wall.c</label>
+        <link refid="wall_8c"/>
+      </node>
+      <node id="24">
+        <label>simulate/simulate_gc_fixed.c</label>
+        <link refid="simulate__gc__fixed_8c"/>
+      </node>
+      <node id="2">
+        <label>ascot5_main.c</label>
+        <link refid="ascot5__main_8c"/>
+      </node>
+      <node id="1">
+        <label>wall.h</label>
+        <link refid="wall_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>simulate/simulate_gc_fixed.h</label>
+        <link refid="simulate__gc__fixed_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>ascot5_main.h</label>
+        <link refid="ascot5__main_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>endcond.c</label>
+        <link refid="endcond_8c"/>
+      </node>
+      <node id="20">
+        <label>endcond.h</label>
+        <link refid="endcond_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>afsi.c</label>
+        <link refid="afsi_8c"/>
+      </node>
+      <node id="14">
+        <label>afsi.h</label>
+        <link refid="afsi_8h_source"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>nbi.c</label>
+        <link refid="nbi_8c"/>
+      </node>
+      <node id="9">
+        <label>nbi.h</label>
+        <link refid="nbi_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>hdf5io/hdf5_wall.c</label>
+        <link refid="hdf5__wall_8c"/>
+      </node>
+      <node id="5">
+        <label>hdf5io/hdf5_wall.h</label>
+        <link refid="hdf5__wall_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>diag/diag_orb.c</label>
+        <link refid="diag__orb_8c"/>
+      </node>
+      <node id="21">
+        <label>hdf5io/hdf5_options.c</label>
+        <link refid="hdf5__options_8c"/>
+      </node>
+      <node id="28">
+        <label>hdf5io/hdf5_options.h</label>
+        <link refid="hdf5__options_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>hdf5io/hdf5_orbit.c</label>
+        <link refid="hdf5__orbit_8c"/>
+      </node>
+      <node id="23">
+        <label>simulate/simulate_gc_adaptive.c</label>
+        <link refid="simulate__gc__adaptive_8c"/>
+      </node>
+      <node id="33">
+        <label>simulate/simulate_gc_adaptive.h</label>
+        <link refid="simulate__gc__adaptive_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>mpi_interface.c</label>
+        <link refid="mpi__interface_8c"/>
+      </node>
+      <node id="31">
+        <label>mpi_interface.h</label>
+        <link refid="mpi__interface_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>libascot.c</label>
+        <link refid="libascot_8c"/>
+      </node>
+      <node id="6">
+        <label>hdf5_interface.c</label>
+        <link refid="hdf5__interface_8c"/>
+      </node>
+      <node id="27">
+        <label>hdf5_interface.h</label>
+        <link refid="hdf5__interface_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>diag/diag_transcoef.c</label>
+        <link refid="diag__transcoef_8c"/>
+      </node>
+      <node id="3">
+        <label>bbnbi5.c</label>
+        <link refid="bbnbi5_8c"/>
+      </node>
+      <node id="10">
+        <label>hdf5io/hdf5_nbi.c</label>
+        <link refid="hdf5__nbi_8c"/>
+      </node>
+      <node id="11">
+        <label>hdf5io/hdf5_nbi.h</label>
+        <link refid="hdf5__nbi_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structwall__offload__data" prot="public">wall_offload_data</innerclass>
+    <innerclass refid="structwall__data" prot="public">wall_data</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="wall_8h_1aa44ee0f90142da2a1da8771c19643633" prot="public" static="no" strong="no">
+        <type></type>
+        <name>wall_type</name>
+        <enumvalue id="wall_8h_1aa44ee0f90142da2a1da8771c19643633a048a41510bf053102285aedd82289ead" prot="public">
+          <name>wall_type_2D</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Axisymmetric wall model consisting of single contour </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="wall_8h_1aa44ee0f90142da2a1da8771c19643633a4a27f13be1aef2a86b99d5518ca771ff" prot="public">
+          <name>wall_type_3D</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>3D wall model consisting of triangles <linebreak/>
+ </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Wall model types. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Wall model types are used in the magnetic wall interface (<ref refid="wall_8c" kindref="compound">wall.c</ref>) to direct function calls to correct wall model instances. Each wall model instance must have a corresponding type. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="wall.h" line="23" column="1" bodyfile="wall.h" bodystart="23" bodyend="26"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="wall_8h_1a0a7dcdbf9ac8356cd8b656bad02a241a" prot="public" static="no">
+        <type>enum <ref refid="wall_8h_1aa44ee0f90142da2a1da8771c19643633" kindref="member">wall_type</ref></type>
+        <definition>typedef enum wall_type wall_type</definition>
+        <argsstring></argsstring>
+        <name>wall_type</name>
+        <briefdescription>
+<para>Wall model types. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Wall model types are used in the magnetic wall interface (<ref refid="wall_8c" kindref="compound">wall.c</ref>) to direct function calls to correct wall model instances. Each wall model instance must have a corresponding type. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="wall.h" line="26" column="11"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="wall_8h_1a983cb9967c7259649a1ed01672fb0467" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wall_init_offload</definition>
+        <argsstring>(wall_offload_data *offload_data, real **offload_array, int **int_offload_array)</argsstring>
+        <name>wall_init_offload</name>
+        <param>
+          <type><ref refid="structwall__offload__data" kindref="compound">wall_offload_data</ref> *</type>
+          <declname>offload_data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> **</type>
+          <declname>offload_array</declname>
+        </param>
+        <param>
+          <type>int **</type>
+          <declname>int_offload_array</declname>
+        </param>
+        <briefdescription>
+<para>Load wall data and prepare parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function fills the relevant wall offload struct with parameters and allocates and fills the offload array. Sets offload array length in the offload struct.</para>
+<para>The offload data has to have a type when this function is called as it should be set when the offload data is constructed from inputs.</para>
+<para>This function is host only.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>offload_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to pointer to offload array </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to pointer to offload array storing integers</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>zero if initialization succeeded </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="wall.h" line="60" column="5" bodyfile="wall.c" bodystart="42" bodyend="78" declfile="wall.h" declline="60" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="wall_8h_1a8c4fbe663f4f86dadb70d3a23907a080" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wall_free_offload</definition>
+        <argsstring>(wall_offload_data *offload_data, real **offload_array, int **int_offload_array)</argsstring>
+        <name>wall_free_offload</name>
+        <param>
+          <type><ref refid="structwall__offload__data" kindref="compound">wall_offload_data</ref> *</type>
+          <declname>offload_data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> **</type>
+          <declname>offload_array</declname>
+        </param>
+        <param>
+          <type>int **</type>
+          <declname>int_offload_array</declname>
+        </param>
+        <briefdescription>
+<para>Free offload array and reset parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function deallocates the offload_array.</para>
+<para>This function is host only.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>offload_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to pointer to offload array </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to pointer to offload array storing integers </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="wall.h" line="62" column="6" bodyfile="wall.c" bodystart="91" bodyend="103" declfile="wall.h" declline="62" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="wall_8h_1a988188cbb3aa23bc2bb5004ebca9b722" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wall_init</definition>
+        <argsstring>(wall_data *w, wall_offload_data *offload_data, real *offload_array, int *int_offload_array)</argsstring>
+        <name>wall_init</name>
+        <param>
+          <type><ref refid="structwall__data" kindref="compound">wall_data</ref> *</type>
+          <declname>w</declname>
+        </param>
+        <param>
+          <type><ref refid="structwall__offload__data" kindref="compound">wall_offload_data</ref> *</type>
+          <declname>offload_data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>offload_array</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>int_offload_array</declname>
+        </param>
+        <briefdescription>
+<para>Initialize wall data struct on target. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function copies the wall parameters from the offload struct to the struct on target and sets the wall data pointers to correct offsets in the offload array.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>w</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to data struct on target </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload array </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to pointer to offload array storing integers</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>zero on success </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="wall.h" line="66" column="5" bodyfile="wall.c" bodystart="119" bodyend="139" declfile="wall.h" declline="66" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="wall_8h_1a66c9e2c7f3db0e3ccbf7507b45e4e5c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wall_hit_wall</definition>
+        <argsstring>(real r1, real phi1, real z1, real r2, real phi2, real z2, wall_data *w, real *w_coll)</argsstring>
+        <name>wall_hit_wall</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>r1</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>phi1</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>z1</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>r2</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>phi2</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>z2</declname>
+        </param>
+        <param>
+          <type><ref refid="structwall__data" kindref="compound">wall_data</ref> *</type>
+          <declname>w</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>w_coll</declname>
+        </param>
+        <briefdescription>
+<para>Check if a given directed line segment intersects the wall. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function is intended to be used to check whether a marker collides with the wall. If there is a collision, this function returns an identification number specific to that wall tile. If the marker hits multiple wall elements, only the first one is returned.</para>
+<para>This is a SIMD function.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>r1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>start point R coordinate [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>phi1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>start point phi coordinate [rad] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>start point z coordinate [rad] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>end point R coordinate [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>phi2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>end point phi coordinate [rad] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>end point z coordinate [rad] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>w</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to data struct on target </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>w_coll</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer for storing the parameter in P = P1 + w_coll * (P2-P1), where P is the point where the collision occurred.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>wall element id if hit, zero otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="wall.h" line="69" column="5" bodyfile="wall.c" bodystart="163" bodyend="177" declfile="wall.h" declline="69" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="wall_8h_1ad33cd65b0688785d3822cbb48c480cda" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wall_get_n_elements</definition>
+        <argsstring>(wall_data *w)</argsstring>
+        <name>wall_get_n_elements</name>
+        <param>
+          <type><ref refid="structwall__data" kindref="compound">wall_data</ref> *</type>
+          <declname>w</declname>
+        </param>
+        <briefdescription>
+<para>Return the number of wall elements. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>w</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to wall data struct on target</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Number of wall elements or zero on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="wall.h" line="72" column="5" bodyfile="wall.c" bodystart="186" bodyend="198" declfile="wall.h" declline="72" declcolumn="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Header file for <ref refid="wall_8c" kindref="compound">wall.c</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Contains a list declaring all wall_types, and declaration of <ref refid="structwall__offload__data" kindref="compound">wall_offload_data</ref> and <ref refid="structwall__data" kindref="compound">wall_data</ref> structs. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>WALL_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WALL_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ascot5_8h" kindref="compound">ascot5.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="wall__2d_8h" kindref="compound">wall/wall_2d.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="wall__3d_8h" kindref="compound">wall/wall_3d.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="wall_8h_1aa44ee0f90142da2a1da8771c19643633" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="wall_8h_1aa44ee0f90142da2a1da8771c19643633" kindref="member">wall_type</ref><sp/>{</highlight></codeline>
+<codeline lineno="24" refid="wall_8h_1aa44ee0f90142da2a1da8771c19643633a048a41510bf053102285aedd82289ead" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="wall_8h_1aa44ee0f90142da2a1da8771c19643633a048a41510bf053102285aedd82289ead" kindref="member">wall_type_2D</ref>,<sp/></highlight></codeline>
+<codeline lineno="25" refid="wall_8h_1aa44ee0f90142da2a1da8771c19643633a4a27f13be1aef2a86b99d5518ca771ff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="wall_8h_1aa44ee0f90142da2a1da8771c19643633a4a27f13be1aef2a86b99d5518ca771ff" kindref="member">wall_type_3D</ref>,<sp/></highlight></codeline>
+<codeline lineno="26" refid="wall_8h_1a0a7dcdbf9ac8356cd8b656bad02a241a" refkind="member"><highlight class="normal">}<sp/><ref refid="wall_8h_1aa44ee0f90142da2a1da8771c19643633" kindref="member">wall_type</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="structwall__offload__data" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="38" refid="structwall__offload__data_1ac645b53810eaeee9dc03f1d0b0a13f28" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="wall_8h_1aa44ee0f90142da2a1da8771c19643633" kindref="member">wall_type</ref><sp/><ref refid="structwall__offload__data_1ac645b53810eaeee9dc03f1d0b0a13f28" kindref="member">type</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="39" refid="structwall__offload__data_1adf933c29d1a2d2f6dbacecb6276b4252" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structwall__2d__offload__data" kindref="compound">wall_2d_offload_data</ref><sp/><ref refid="structwall__offload__data_1adf933c29d1a2d2f6dbacecb6276b4252" kindref="member">w2d</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="40" refid="structwall__offload__data_1aa862f56c41f7d90a8acef24cb2258656" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structwall__3d__offload__data" kindref="compound">wall_3d_offload_data</ref><sp/><ref refid="structwall__offload__data_1aa862f56c41f7d90a8acef24cb2258656" kindref="member">w3d</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="41" refid="structwall__offload__data_1a242a1130a7723b022ca4a69dc98040df" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structwall__offload__data_1a242a1130a7723b022ca4a69dc98040df" kindref="member">offload_array_length</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="42" refid="structwall__offload__data_1a36b5f32e1356e5f6ea96255603bdbd12" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structwall__offload__data_1a36b5f32e1356e5f6ea96255603bdbd12" kindref="member">int_offload_array_length</ref>;<sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}<sp/><ref refid="structwall__offload__data" kindref="compound">wall_offload_data</ref>;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="structwall__data" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="55" refid="structwall__data_1a535795020b69e3c55720658444e1d8a0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="wall_8h_1aa44ee0f90142da2a1da8771c19643633" kindref="member">wall_type</ref><sp/><ref refid="structwall__data_1a535795020b69e3c55720658444e1d8a0" kindref="member">type</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="56" refid="structwall__data_1ad33b5001672a8370a7d27da83c11656f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structwall__2d__data" kindref="compound">wall_2d_data</ref><sp/><ref refid="structwall__data_1ad33b5001672a8370a7d27da83c11656f" kindref="member">w2d</ref>;<sp/></highlight></codeline>
+<codeline lineno="57" refid="structwall__data_1a99f61da522654d7c4771dd1cf1992378" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structwall__3d__data" kindref="compound">wall_3d_data</ref><sp/><ref refid="structwall__data_1a99f61da522654d7c4771dd1cf1992378" kindref="member">w3d</ref>;<sp/></highlight></codeline>
+<codeline lineno="58"><highlight class="normal">}<sp/><ref refid="structwall__data" kindref="compound">wall_data</ref>;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="wall_8h_1a983cb9967c7259649a1ed01672fb0467" kindref="member">wall_init_offload</ref>(<ref refid="structwall__offload__data" kindref="compound">wall_offload_data</ref>*<sp/>offload_data,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>**<sp/>offload_array,</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">**<sp/>int_offload_array);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="wall_8h_1a8c4fbe663f4f86dadb70d3a23907a080" kindref="member">wall_free_offload</ref>(<ref refid="structwall__offload__data" kindref="compound">wall_offload_data</ref>*<sp/>offload_data,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>**<sp/>offload_array,</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">**<sp/>int_offload_array);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>declare<sp/>target</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="wall_8h_1a988188cbb3aa23bc2bb5004ebca9b722" kindref="member">wall_init</ref>(<ref refid="structwall__data" kindref="compound">wall_data</ref>*<sp/>w,<sp/><ref refid="structwall__offload__data" kindref="compound">wall_offload_data</ref>*<sp/>offload_data,</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>offload_array,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>int_offload_array);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>declare<sp/>simd<sp/>uniform(w)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="wall_8h_1a66c9e2c7f3db0e3ccbf7507b45e4e5c2" kindref="member">wall_hit_wall</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r1,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>phi1,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z1,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r2,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>phi2,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z2,</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structwall__data" kindref="compound">wall_data</ref>*<sp/>w,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>w_coll);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>declare<sp/>simd<sp/>uniform(w)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="wall_8h_1ad33cd65b0688785d3822cbb48c480cda" kindref="member">wall_get_n_elements</ref>(<ref refid="structwall__data" kindref="compound">wall_data</ref>*<sp/>w);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>omp<sp/>end<sp/>declare<sp/>target</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="wall.h"/>
+  </compounddef>
+</doxygen>

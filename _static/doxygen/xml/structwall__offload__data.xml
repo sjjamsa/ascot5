@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structwall__offload__data" kind="struct" language="C++" prot="public">
+    <compoundname>wall_offload_data</compoundname>
+    <includes refid="wall_8h" local="no">wall.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structwall__offload__data_1ac645b53810eaeee9dc03f1d0b0a13f28" prot="public" static="no" mutable="no">
+        <type><ref refid="wall_8h_1aa44ee0f90142da2a1da8771c19643633" kindref="member">wall_type</ref></type>
+        <definition>wall_type wall_offload_data::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Wall model type wrapped by this struct </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="wall.h" line="38" column="15" bodyfile="wall.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwall__offload__data_1adf933c29d1a2d2f6dbacecb6276b4252" prot="public" static="no" mutable="no">
+        <type><ref refid="structwall__2d__offload__data" kindref="compound">wall_2d_offload_data</ref></type>
+        <definition>wall_2d_offload_data wall_offload_data::w2d</definition>
+        <argsstring></argsstring>
+        <name>w2d</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>2D model or NULL if not active <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="wall.h" line="39" column="26" bodyfile="wall.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwall__offload__data_1aa862f56c41f7d90a8acef24cb2258656" prot="public" static="no" mutable="no">
+        <type><ref refid="structwall__3d__offload__data" kindref="compound">wall_3d_offload_data</ref></type>
+        <definition>wall_3d_offload_data wall_offload_data::w3d</definition>
+        <argsstring></argsstring>
+        <name>w3d</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>3D model or NULL if not active <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="wall.h" line="40" column="26" bodyfile="wall.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwall__offload__data_1a242a1130a7723b022ca4a69dc98040df" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int wall_offload_data::offload_array_length</definition>
+        <argsstring></argsstring>
+        <name>offload_array_length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Allocated offload array length <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="wall.h" line="41" column="9" bodyfile="wall.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwall__offload__data_1a36b5f32e1356e5f6ea96255603bdbd12" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int wall_offload_data::int_offload_array_length</definition>
+        <argsstring></argsstring>
+        <name>int_offload_array_length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Allocated int offload array length <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="wall.h" line="42" column="9" bodyfile="wall.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Wall model offload data. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This struct holds data necessary for offloading. The struct is initialized in <ref refid="wall_8c_1a983cb9967c7259649a1ed01672fb0467" kindref="member">wall_init_offload()</ref>.</para>
+<para>The intended usage is that only single offload data is used at the time, and the type of the data is declared with the &quot;type&quot; field. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>wall_2d_offload_data</label>
+        <link refid="structwall__2d__offload__data"/>
+      </node>
+      <node id="1">
+        <label>wall_offload_data</label>
+        <link refid="structwall__offload__data"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>w3d</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>w2d</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>wall_3d_offload_data</label>
+        <link refid="structwall__3d__offload__data"/>
+      </node>
+    </collaborationgraph>
+    <location file="wall.h" line="37" column="1" bodyfile="wall.h" bodystart="37" bodyend="43"/>
+    <listofallmembers>
+      <member refid="structwall__offload__data_1a36b5f32e1356e5f6ea96255603bdbd12" prot="public" virt="non-virtual"><scope>wall_offload_data</scope><name>int_offload_array_length</name></member>
+      <member refid="structwall__offload__data_1a242a1130a7723b022ca4a69dc98040df" prot="public" virt="non-virtual"><scope>wall_offload_data</scope><name>offload_array_length</name></member>
+      <member refid="structwall__offload__data_1ac645b53810eaeee9dc03f1d0b0a13f28" prot="public" virt="non-virtual"><scope>wall_offload_data</scope><name>type</name></member>
+      <member refid="structwall__offload__data_1adf933c29d1a2d2f6dbacecb6276b4252" prot="public" virt="non-virtual"><scope>wall_offload_data</scope><name>w2d</name></member>
+      <member refid="structwall__offload__data_1aa862f56c41f7d90a8acef24cb2258656" prot="public" virt="non-virtual"><scope>wall_offload_data</scope><name>w3d</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

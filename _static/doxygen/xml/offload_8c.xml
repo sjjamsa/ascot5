@@ -1,0 +1,450 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="offload_8c" kind="file" language="C++">
+    <compoundname>offload.c</compoundname>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">string.h</includes>
+    <includes refid="ascot5_8h" local="yes">ascot5.h</includes>
+    <includes refid="offload_8h" local="yes">offload.h</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>stdlib.h</label>
+      </node>
+      <node id="5">
+        <label>omp.h</label>
+      </node>
+      <node id="3">
+        <label>string.h</label>
+      </node>
+      <node id="6">
+        <label>time.h</label>
+      </node>
+      <node id="1">
+        <label>offload.c</label>
+        <link refid="offload_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>offload.h</label>
+        <link refid="offload_8h"/>
+      </node>
+      <node id="4">
+        <label>ascot5.h</label>
+        <link refid="ascot5_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="offload_8c_1a9e16efa6e08de658a942cbefc9ec2bf0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void offload_init_offload</definition>
+        <argsstring>(offload_package *o, real **offload_array, int **int_offload_array)</argsstring>
+        <name>offload_init_offload</name>
+        <param>
+          <type><ref refid="structoffload__package" kindref="compound">offload_package</ref> *</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> **</type>
+          <declname>offload_array</declname>
+        </param>
+        <param>
+          <type>int **</type>
+          <declname>int_offload_array</declname>
+        </param>
+        <briefdescription>
+<para>Initialize offload package. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets offload_package.pack_array_length and <ref refid="structoffload__package_1a6195bbcd9526f1ceec93b22b4a9489f6" kindref="member">offload_package.unpack_pos</ref> to zero and assigns NULL to offload_array pointer.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>o</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>uninitialized offload package </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to packarray </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to int packarray </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="offload.c" line="31" column="6" bodyfile="offload.c" bodystart="31" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="offload_8c_1a2522f11c93446eb6000b6b437f42a89f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void offload_free_offload</definition>
+        <argsstring>(offload_package *o, real **offload_array, int **int_offload_array)</argsstring>
+        <name>offload_free_offload</name>
+        <param>
+          <type><ref refid="structoffload__package" kindref="compound">offload_package</ref> *</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> **</type>
+          <declname>offload_array</declname>
+        </param>
+        <param>
+          <type>int **</type>
+          <declname>int_offload_array</declname>
+        </param>
+        <briefdescription>
+<para>Free offload array and set <ref refid="structoffload__package" kindref="compound">offload_package</ref> to clean state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>o</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>offload package </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload_array </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to int packarray </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="offload.c" line="49" column="6" bodyfile="offload.c" bodystart="49" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="offload_8c_1ab007fc10b186bccd0f8edf82d3358f9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void offload_pack</definition>
+        <argsstring>(offload_package *o, real **offload_array, real *pack_array, size_t pack_length, int **int_offload_array, int *int_pack_array, size_t int_pack_length)</argsstring>
+        <name>offload_pack</name>
+        <param>
+          <type><ref refid="structoffload__package" kindref="compound">offload_package</ref> *</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> **</type>
+          <declname>offload_array</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>pack_array</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>pack_length</declname>
+        </param>
+        <param>
+          <type>int **</type>
+          <declname>int_offload_array</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>int_pack_array</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>int_pack_length</declname>
+        </param>
+        <briefdescription>
+<para>Pack an offload array to package array. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Reallocates the offload array so that the new data from the package array can be appended. Once the data has been appended, the old offload array is freed. The new length of the offload array is stored to <ref refid="structoffload__package" kindref="compound">offload_package</ref> struct.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>o</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>offload package </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload array where data will be packed </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pack_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pack array containing the data to be appended </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pack_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of the offload_array </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload array where integer data will be packed </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_pack_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pack array containing the integer data to be appended </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_pack_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of the int_offload_array </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="offload.c" line="78" column="6" bodyfile="offload.c" bodystart="78" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="offload_8c_1a898aa698f5064914e42d7cdc897ea3e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void offload_unpack</definition>
+        <argsstring>(offload_package *o, real *offload_array, size_t pack_length, int *int_offload_array, size_t int_pack_length, real **ptr, int **intptr)</argsstring>
+        <name>offload_unpack</name>
+        <param>
+          <type><ref refid="structoffload__package" kindref="compound">offload_package</ref> *</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>offload_array</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>pack_length</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>int_offload_array</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>int_pack_length</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> **</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>int **</type>
+          <declname>intptr</declname>
+        </param>
+        <briefdescription>
+<para>Unpack offload array from the package. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The data is not actually moved anywhere. Unpacking means that pointers to the start of packed offload arrays are returned. Unpacking must be done in the same order as data was packed.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>o</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>offload package </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>offload array </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pack_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of the data that is unpacked </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int offload array </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_pack_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer where the unpacked data begins </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>intptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer where the unpacked int data begins </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="offload.c" line="137" column="6" bodyfile="offload.c" bodystart="137" bodyend="145"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Offload functions. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>An offload package that is used to collect all offload arrays into a single one so that offloading can be done nice and clean. <ref refid="offload_8c_1ab007fc10b186bccd0f8edf82d3358f9e" kindref="member">offload_pack()</ref> takes an offload data array and appends it to the common offload array. <ref refid="offload_8c_1a898aa698f5064914e42d7cdc897ea3e7" kindref="member">offload_unpack()</ref> returns a pointer at the start of the common offload array. <ref refid="offload_8c_1a898aa698f5064914e42d7cdc897ea3e7" kindref="member">offload_unpack()</ref> must be called in the same order as <ref refid="offload_8c_1ab007fc10b186bccd0f8edf82d3358f9e" kindref="member">offload_pack()</ref> was called when data was packaged.</para>
+<para>Since input data may contain both floats and integers, we store those separately (i.e. there is one common offload array for floats and one common offload array for integers). </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ascot5_8h" kindref="compound">ascot5.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="offload_8h" kindref="compound">offload.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="offload_8c_1a9e16efa6e08de658a942cbefc9ec2bf0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="offload_8c_1a9e16efa6e08de658a942cbefc9ec2bf0" kindref="member">offload_init_offload</ref>(<ref refid="structoffload__package" kindref="compound">offload_package</ref>*<sp/>o,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>**<sp/>offload_array,</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">**<sp/>int_offload_array)<sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>*offload_array<sp/><sp/><sp/><sp/><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>*int_offload_array<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>o-&gt;<ref refid="structoffload__package_1a8c20a7eb71fb31e996662e3b745702a2" kindref="member">offload_array_length</ref><sp/><sp/><sp/><sp/><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>o-&gt;<ref refid="structoffload__package_1a0db258b5261986426506807f5543ccd1" kindref="member">int_offload_array_length</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>o-&gt;<ref refid="structoffload__package_1a6195bbcd9526f1ceec93b22b4a9489f6" kindref="member">unpack_pos</ref><sp/><sp/><sp/><sp/><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>o-&gt;<ref refid="structoffload__package_1ae3e6d85fe4c964f51a70354df2360a92" kindref="member">int_unpack_pos</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="offload_8c_1a2522f11c93446eb6000b6b437f42a89f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="offload_8c_1a2522f11c93446eb6000b6b437f42a89f" kindref="member">offload_free_offload</ref>(<ref refid="structoffload__package" kindref="compound">offload_package</ref>*<sp/>o,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>**<sp/>offload_array,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">**<sp/>int_offload_array)<sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>free(*offload_array);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>free(*int_offload_array);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>*offload_array<sp/><sp/><sp/><sp/><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>*int_offload_array<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>o-&gt;<ref refid="structoffload__package_1a8c20a7eb71fb31e996662e3b745702a2" kindref="member">offload_array_length</ref><sp/><sp/><sp/><sp/><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>o-&gt;<ref refid="structoffload__package_1a0db258b5261986426506807f5543ccd1" kindref="member">int_offload_array_length</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>o-&gt;<ref refid="structoffload__package_1a6195bbcd9526f1ceec93b22b4a9489f6" kindref="member">unpack_pos</ref><sp/><sp/><sp/><sp/><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>o-&gt;<ref refid="structoffload__package_1ae3e6d85fe4c964f51a70354df2360a92" kindref="member">int_unpack_pos</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="offload_8c_1ab007fc10b186bccd0f8edf82d3358f9e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="offload_8c_1ab007fc10b186bccd0f8edf82d3358f9e" kindref="member">offload_pack</ref>(<ref refid="structoffload__package" kindref="compound">offload_package</ref>*<sp/>o,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>**<sp/>offload_array,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>pack_array,</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>pack_length,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">**<sp/>int_offload_array,</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>int_pack_array,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>int_pack_length)<sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Float<sp/>array<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>pack_length<sp/>&gt;<sp/>0<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>new_length<sp/>=<sp/>o-&gt;<ref refid="structoffload__package_1a8c20a7eb71fb31e996662e3b745702a2" kindref="member">offload_array_length</ref><sp/>+<sp/>pack_length;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>new_array<sp/>=<sp/>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*)<sp/>malloc(new_length<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>));</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(o-&gt;<ref refid="structoffload__package_1a8c20a7eb71fb31e996662e3b745702a2" kindref="member">offload_array_length</ref><sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memcpy(new_array,<sp/>*offload_array,</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>o-&gt;<ref refid="structoffload__package_1a8c20a7eb71fb31e996662e3b745702a2" kindref="member">offload_array_length</ref>*</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>));</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memcpy(new_array+o-&gt;<ref refid="structoffload__package_1a8c20a7eb71fb31e996662e3b745702a2" kindref="member">offload_array_length</ref>,<sp/>pack_array,</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pack_length*</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>));</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(*offload_array);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*offload_array<sp/>=<sp/>new_array;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>o-&gt;<ref refid="structoffload__package_1a8c20a7eb71fb31e996662e3b745702a2" kindref="member">offload_array_length</ref><sp/>=<sp/>new_length;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Int<sp/>array<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>int_pack_length<sp/>&gt;<sp/>0<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>int_new_length<sp/>=<sp/>o-&gt;<ref refid="structoffload__package_1a0db258b5261986426506807f5543ccd1" kindref="member">int_offload_array_length</ref><sp/>+<sp/>int_pack_length;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>int_new_array<sp/>=<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*)<sp/>malloc(int_new_length<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(o-&gt;<ref refid="structoffload__package_1a0db258b5261986426506807f5543ccd1" kindref="member">int_offload_array_length</ref><sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memcpy(int_new_array,<sp/>*int_offload_array,</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>o-&gt;<ref refid="structoffload__package_1a0db258b5261986426506807f5543ccd1" kindref="member">int_offload_array_length</ref>*</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memcpy(int_new_array+o-&gt;<ref refid="structoffload__package_1a0db258b5261986426506807f5543ccd1" kindref="member">int_offload_array_length</ref>,<sp/>int_pack_array,</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int_pack_length*</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(*int_offload_array);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*int_offload_array<sp/>=<sp/>int_new_array;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>o-&gt;<ref refid="structoffload__package_1a0db258b5261986426506807f5543ccd1" kindref="member">int_offload_array_length</ref><sp/>=<sp/>int_new_length;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137" refid="offload_8c_1a898aa698f5064914e42d7cdc897ea3e7" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="offload_8c_1a898aa698f5064914e42d7cdc897ea3e7" kindref="member">offload_unpack</ref>(<ref refid="structoffload__package" kindref="compound">offload_package</ref>*<sp/>o,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>offload_array,</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>pack_length,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>int_offload_array,</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>int_pack_length,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>**<sp/>ptr,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">**<sp/>intptr)<sp/>{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>*ptr<sp/>=<sp/>offload_array<sp/>+<sp/>o-&gt;<ref refid="structoffload__package_1a6195bbcd9526f1ceec93b22b4a9489f6" kindref="member">unpack_pos</ref>;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>o-&gt;<ref refid="structoffload__package_1a6195bbcd9526f1ceec93b22b4a9489f6" kindref="member">unpack_pos</ref><sp/>+=<sp/>pack_length;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>*intptr<sp/>=<sp/>int_offload_array<sp/>+<sp/>o-&gt;<ref refid="structoffload__package_1ae3e6d85fe4c964f51a70354df2360a92" kindref="member">int_unpack_pos</ref>;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>o-&gt;<ref refid="structoffload__package_1ae3e6d85fe4c964f51a70354df2360a92" kindref="member">int_unpack_pos</ref><sp/>+=<sp/>int_pack_length;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="offload.c"/>
+  </compounddef>
+</doxygen>

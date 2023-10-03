@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>ASCOT5</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<sect1 id="index_1intro">
+<title>Introduction</title>
+<para>ASCOT5 is a test-particle Monte Carlo orbit-following code for solving the Fokker-Planck equation in toroidal plasmas.</para>
+</sect1>
+<sect1 id="index_1compilation">
+<title>Compilation</title>
+<para>Currently only Intel&apos;s compiler version 14.0 and up support all the OpenMP features used, but gcc can be used to compile some test programs and the full code with limited features.</para>
+<para>Before compilation the necessary compiler modules need to be loaded. The command on CSC Bull and Helios is &quot;module load intel/&lt;version&gt;&quot;. Available versions can be checked with &quot;module avail&quot;.</para>
+<para>Due to the use of compiler flags to define code functionality, the code should always be fully recompiled by calling <preformatted>make clean</preformatted> first if the parameters are changed.</para>
+<para>Syntax for compilation:</para>
+<para>make clean &amp;&amp; make &lt;program_name&gt; &lt;parameters&gt;</para>
+<para>Available parameters:</para>
+<para><itemizedlist>
+<listitem><para>NSIMD=n number of particles in a group (default 16); these are processed simultaneously by each thread</para>
+</listitem><listitem><para>CC=... compiler (default icc)</para>
+</listitem><listitem><para>TARGET=1 Offload computation to Xeon Phi accelerator</para>
+</listitem><listitem><para>VERBOSE=n print increasing amounts of progress information: 0: No information except bare essentials 1: Standard information; everything happening outside simulation loops is printed 2: Extensive information; a record of simulation progress is written process-specific *.stdout files</para>
+</listitem><listitem><para>MPI=1 enable MPI</para>
+</listitem><listitem><para>NOGIT=1 disable recording of repository status which is printed in runtime (disable if Git is not available)</para>
+</listitem></itemizedlist>
+</para>
+<para>Available programs:</para>
+<para><itemizedlist>
+<listitem><para>ascot5_main : The stand-alone ASCOT5 main program</para>
+</listitem></itemizedlist>
+</para>
+<para>Example:</para>
+<para>make clean &amp;&amp; make ascot5_main CC=icc NSIMD=16 </para>
+</sect1>
+    </detaileddescription>
+    <location file="ascot5.h"/>
+  </compounddef>
+</doxygen>

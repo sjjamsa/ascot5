@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data storage &mdash; ASCOT5 5.5 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sg_gallery.css" type="text/css" />
+      <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=b689823a"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Tutorials" href="teaching.html" />
+    <link rel="prev" title="Installing" href="running.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html">
+            
+              <img src="_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Running Simulations</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="running.html">Installing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="running.html#simulations">Simulations</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Processing Data</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Data storage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#data-access">Data access</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#terminal-scripts">Terminal scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#input-generation">Input generation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#magnetic-field-bfield">Magnetic field <code class="docutils literal notranslate"><span class="pre">bfield</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#electric-field-efield">Electric field <code class="docutils literal notranslate"><span class="pre">efield</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plasma-plasma">Plasma <code class="docutils literal notranslate"><span class="pre">plasma</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#wall-mesh-wall">Wall mesh <code class="docutils literal notranslate"><span class="pre">wall</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#neutral-neutral">Neutral <code class="docutils literal notranslate"><span class="pre">neutral</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#boozer-data-boozer">Boozer data <code class="docutils literal notranslate"><span class="pre">boozer</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mhd-eigenfunctions-mhd">MHD eigenfunctions <code class="docutils literal notranslate"><span class="pre">mhd</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mhd-eigenfunctions-asigma">MHD eigenfunctions <code class="docutils literal notranslate"><span class="pre">asigma</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#neutral-beam-injectors-nbi">Neutral beam injectors <code class="docutils literal notranslate"><span class="pre">nbi</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#markers-marker">Markers <code class="docutils literal notranslate"><span class="pre">marker</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#options-opt">Options <code class="docutils literal notranslate"><span class="pre">opt</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#templates">Templates</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#post-processing">Post-processing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#ascotpy">Ascotpy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#simulation-output">Simulation output</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ini-and-endstate">Ini- and endstate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#marker-orbits">Marker orbits</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#end-conditions">End conditions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#distributions">Distributions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#advanced">Advanced</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#interactive-simulations">Interactive simulations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#neutral-beam-simulations-bbnbi5">Neutral beam simulations (BBNBI5)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#generating-fusion-products-afsi5">Generating fusion products (AFSI5)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#computing-3d-field-from-coils-biosaw">Computing 3D field from coils (BioSaw)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#units">Units</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#exceptions">Exceptions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Simulating Physics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="teaching.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="teaching.html#physics-in-ascot5">Physics in ASCOT5</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Publications</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="publishing.html">Citing ASCOT5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="publishing.html#gallery">Gallery</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Code Development</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="developing.html">Coding style and practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developing.html#parallelization">Parallelization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developing.html#testing">Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developing.html#id2">C API</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="papi/a5py.html">Python API</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ASCOT5</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Data storage</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/processing.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="data-storage">
+<span id="data"></span><h1>Data storage<a class="headerlink" href="#data-storage" title="Link to this heading"></a></h1>
+<p>Simulation inputs and options, as well as the outputs once the simulation is complete, are stored in a single HDF5 file.</p>
+<p>The ASCOT5 HDF5 file, <code class="docutils literal notranslate"><span class="pre">ascot.h5</span></code> from here on out, contains all data required to run a simulation, and so the results and the inputs that produced them are always kept together.
+The file is designed to hold multiple inputs (even of same type) and results of multiple simulations to encourage one to use a single file for the whole project or study.</p>
+<p>The exact structure of the HDF5 file is not that relevent since it should always be accessed via the Python interface provided by <a class="reference internal" href="papi/a5py.html#module-a5py" title="a5py"><code class="xref py py-mod docutils literal notranslate"><span class="pre">a5py</span></code></a>.</p>
+<section id="data-access">
+<h2>Data access<a class="headerlink" href="#data-access" title="Link to this heading"></a></h2>
+<p>Instances of <a class="reference internal" href="papi/a5py.html#a5py.Ascot" title="a5py.Ascot"><code class="xref py py-class docutils literal notranslate"><span class="pre">Ascot</span></code></a> class are used to open <code class="docutils literal notranslate"><span class="pre">ascot.h5</span></code> or create an empty file.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">a5py</span> <span class="kn">import</span> <span class="n">Ascot</span>
+<span class="n">a5</span> <span class="o">=</span> <span class="n">Ascot</span><span class="p">(</span><span class="s2">&quot;ascot.h5&quot;</span><span class="p">,</span> <span class="n">create</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># Creates a new file</span>
+</pre></div>
+</div>
+<p>The contents of the file are accessed via <code class="docutils literal notranslate"><span class="pre">Ascot.data</span></code>, which is an instance of <a class="reference internal" href="papi/a5py.ascot5io.html#a5py.ascot5io.Ascot5IO" title="a5py.ascot5io.Ascot5IO"><code class="xref py py-class docutils literal notranslate"><span class="pre">Ascot5IO</span></code></a>, and it provides a “treeview” of the file.
+For example, the currently <em>active</em> magnetic field input is</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a5</span> <span class="o">=</span> <span class="n">Ascot</span><span class="p">(</span><span class="s2">&quot;ascot.h5&quot;</span><span class="p">)</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">bfield</span><span class="o">.</span><span class="n">active</span> <span class="c1"># Currently active magnetic field input</span>
+</pre></div>
+</div>
+<p>The magnetic field object here, like the results and input data in general, are stored as objects that inherit from the <a class="reference internal" href="papi/a5py.ascot5io.coreio.html#a5py.ascot5io.coreio.treedata.DataGroup" title="a5py.ascot5io.coreio.treedata.DataGroup"><code class="xref py py-class docutils literal notranslate"><span class="pre">DataGroup</span></code></a> class.
+These objects don’t actually contain any data.
+Instead, they provide an interface to access the data on the disk.
+This makes <a class="reference internal" href="papi/a5py.html#a5py.Ascot" title="a5py.Ascot"><code class="xref py py-class docutils literal notranslate"><span class="pre">Ascot</span></code></a> objects very light-weight since no actual data is read during the initialization.</p>
+<p>Simulation results are located at the top level of the hierarchy, e.g. the <a class="reference internal" href="papi/a5py.ascot5io.coreio.html#a5py.ascot5io.coreio.treedata.DataGroup" title="a5py.ascot5io.coreio.treedata.DataGroup"><code class="xref py py-class docutils literal notranslate"><span class="pre">DataGroup</span></code></a> corresponding to the <em>active</em> run is</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">active</span> <span class="c1"># Currently active run (most recent by default)</span>
+</pre></div>
+</div>
+<p>Inputs are divided to groups depending on what type of input data they provide.
+All magnetic field inputs are located in the <code class="docutils literal notranslate"><span class="pre">bfield</span></code> group, all electric field inputs in the <code class="docutils literal notranslate"><span class="pre">efield</span></code> group, and so on.
+All different <em>input parent</em> groups are instances of <a class="reference internal" href="papi/a5py.ascot5io.coreio.html#a5py.ascot5io.coreio.treeview.InputNode" title="a5py.ascot5io.coreio.treeview.InputNode"><code class="xref py py-class docutils literal notranslate"><span class="pre">InputNode</span></code></a> class.
+<strong>One of the inputs in each group is always flagged *active*, meaning it will be used as an input the next time a simulation is run.</strong>
+The active flag is stored in the HDF5 file.</p>
+<p>Similarly, results groups are instances of <a class="reference internal" href="papi/a5py.ascot5io.coreio.html#a5py.ascot5io.coreio.treeview.ResultNode" title="a5py.ascot5io.coreio.treeview.ResultNode"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResultNode</span></code></a> class and one of them is always flagged active.
+Whenever a simulation is ran, the newly created group is always set as active.</p>
+<p>In addition to being used in the next simulation, the active inputs are also used in post-processing and in GUI, so pay attention to what groups are active at the moment.</p>
+<p>A group can be set active with</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">bfield</span><span class="o">.</span><span class="n">active</span><span class="o">.</span><span class="n">activate</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Each group has a QID which is a 10-number identifier to separate that group from others and it is automatically created when the group data is written to the HDF5 file.
+The QID can be used as a reference to the group.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">bfield</span><span class="o">.</span><span class="n">active</span><span class="o">.</span><span class="n">get_qid</span><span class="p">()</span> <span class="c1"># Returns a string with a format &quot;qXXXXXXXXXX&quot;</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">bfield</span><span class="o">.</span><span class="n">q0123456789</span>      <span class="c1"># DataGroup corresponding to magnetic field input that has QID = 0123456789</span>
+</pre></div>
+</div>
+<p>Each <a class="reference internal" href="papi/a5py.ascot5io.coreio.html#a5py.ascot5io.coreio.treedata.DataGroup" title="a5py.ascot5io.coreio.treedata.DataGroup"><code class="xref py py-class docutils literal notranslate"><span class="pre">DataGroup</span></code></a> also has a date when it was created and an user-given description.
+The first word (or ten first characters of that word) of the description can be used as a <strong>tag</strong> to refer to the group.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">get_date</span><span class="p">()</span> <span class="c1"># Returns date when this group (run) was created.</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">set_desc</span><span class="p">(</span><span class="s2">&quot;Alpha particle simulation&quot;</span><span class="p">)</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">ALPHA</span> <span class="c1"># Refers to the group on the previous line.</span>
+</pre></div>
+</div>
+<p>Finally, the treeview can be accessed both attribute-like and dictionary-like.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># These are all equivalent references to a group</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">bfield</span><span class="o">.</span><span class="n">q0123456789</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;bfield&quot;</span><span class="p">][</span><span class="s2">&quot;q0123456789&quot;</span><span class="p">]</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">bfield</span><span class="p">[</span><span class="s2">&quot;TAG&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>See the tutorial and API for the following entries for more details.</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.html#a5py.ascot5io.Ascot5IO" title="a5py.ascot5io.Ascot5IO"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Ascot5IO</span></code></a></p></td>
+<td><p>Entry node for accessing data in the HDF5 file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.html#a5py.ascot5io.RunGroup" title="a5py.ascot5io.RunGroup"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RunGroup</span></code></a></p></td>
+<td><p>Node containing results and methods to process them.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.html#a5py.ascot5io.InputGroup" title="a5py.ascot5io.InputGroup"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputGroup</span></code></a></p></td>
+<td><p>Node containing input data groups.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.coreio.html#a5py.ascot5io.coreio.treedata.DataGroup" title="a5py.ascot5io.coreio.treedata.DataGroup"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DataGroup</span></code></a></p></td>
+<td><p>Data container that also has meta data (QID, date, description).</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="terminal-scripts">
+<span id="scripts"></span><h2>Terminal scripts<a class="headerlink" href="#terminal-scripts" title="Link to this heading"></a></h2>
+<p>Some useful scripts found in <cite>./bin</cite> folder are accessible from terminal if <code class="docutils literal notranslate"><span class="pre">a5py</span></code> was installed succesfully.
+These scripts modify the contents of the HDF5 file and they are listed here.</p>
+<table class="docutils align-default" id="id1">
+<caption><span class="caption-text">Command line scripts</span><a class="headerlink" href="#id1" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 75%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">a5editoptions</span></code></p></td>
+<td><p>Edit currently active simulation options (or create default options if none exists).
+Options are edited with a text editor and set as active after saving.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">a5manage</span></code></p></td>
+<td><p>Manage data groups by setting them as active, removing them, or copying them to another file.
+Inputs that have been used by a run cannot be removed unless that run is removed first.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">a5gui</span></code></p></td>
+<td><p>Open GUI where you can manage your data and view results and inputs.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">a5combine</span></code></p></td>
+<td><p>Combine simulation results if: a run was split into several processes without MPI (this creates multiple output files), several simulations were run in parallel and stored in different files, an existing simulation was continued.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">a5upgrade</span></code></p></td>
+<td><p>Makes a copy “&lt;originalname&gt;_&lt;currentversion&gt;.h5” of the file if it was made with an older version of ASCOT5.
+The aim is to maintain backwards compatibility with this script.
+However, it is not always possible to convert the results into a new format and in those cases rerunning the simulation with updated inputs is unfortunately necessary.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="input-generation">
+<span id="preprocessing"></span><h1>Input generation<a class="headerlink" href="#input-generation" title="Link to this heading"></a></h1>
+<p>The inputs in ASCOT5 are all stored in <code class="docutils literal notranslate"><span class="pre">ascot.h5</span></code> and its structure reflects how the code operates.
+Each input belongs to one of the <em>parent groups</em> that in the code itself act like interfaces.
+For example, the magnetic field parent group <code class="docutils literal notranslate"><span class="pre">bfield</span></code> has a corresponding interface in the code that provides routines to evaluate magnetic field quantities at the queried coordinates etc.
+The exact implementation is left for the modules that correspond to the <em>data groups</em> located under the parent group in <code class="docutils literal notranslate"><span class="pre">ascot.h5</span></code>.
+This allows ASCOT5 to have modular inputs so that we can have e.g. one implementation for an axisymmetric tokamak field, <a class="reference internal" href="papi/a5py.ascot5io.bfield.html#a5py.ascot5io.bfield.B_2DS" title="a5py.ascot5io.bfield.B_2DS"><code class="xref py py-class docutils literal notranslate"><span class="pre">B_2DS</span></code></a>, and one implementation for stellarators, <a class="reference internal" href="papi/a5py.ascot5io.bfield.html#a5py.ascot5io.bfield.B_STS" title="a5py.ascot5io.bfield.B_STS"><code class="xref py py-class docutils literal notranslate"><span class="pre">B_STS</span></code></a>.
+To run a simulation, all required input parent groups must have a data group of some type present even though the input would not actually be used in the simulation.
+For those cases one can supply dummy data.</p>
+<p>Inputs are created with <a class="reference internal" href="papi/a5py.ascot5io.html#a5py.ascot5io.Ascot5IO.create_input" title="a5py.ascot5io.Ascot5IO.create_input"><code class="xref py py-meth docutils literal notranslate"><span class="pre">create_input()</span></code></a> method which can operate in three ways.
+To create <em>dummy</em> input, call the method without providing any data.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">create_input</span><span class="p">(</span><span class="s2">&quot;E_TC&quot;</span><span class="p">,</span> <span class="n">desc</span><span class="o">=</span><span class="s2">&quot;Dummy data&quot;</span><span class="p">,</span> <span class="n">activate</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Here <code class="docutils literal notranslate"><span class="pre">E_TC</span></code> is the desired input type, which in this case is the <em>trivial Cartesian electric field</em>.
+Description is user-specified, where the first word acts as a <em>tag</em> when traversing the treeview (here the tag becomes DUMMY as covered in the last section).
+The last argument sets the input active.</p>
+<p>To generate proper input, one must provide all required data.
+<strong>What data is required can be learned by inspecting the input specific</strong> <code class="docutils literal notranslate"><span class="pre">write_hdf5</span></code> <strong>function.</strong>
+In this example, <a class="reference internal" href="papi/a5py.ascot5io.efield.html#a5py.ascot5io.efield.E_TC.write_hdf5" title="a5py.ascot5io.efield.E_TC.write_hdf5"><code class="xref py py-meth docutils literal notranslate"><span class="pre">E_TC.write_hdf5()</span></code></a> requires that an array with all electric field components is provided.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">create_input</span><span class="p">(</span><span class="s2">&quot;E_TC&quot;</span><span class="p">,</span> <span class="n">exyz</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]))</span>
+</pre></div>
+</div>
+<p>However, it can be laborous to e.g. extract magnetic field data from EQDSK and convert it to the format required by the axisymmetric tokamak field <a class="reference internal" href="papi/a5py.ascot5io.bfield.html#a5py.ascot5io.bfield.B_2DS.write_hdf5" title="a5py.ascot5io.bfield.B_2DS.write_hdf5"><code class="xref py py-meth docutils literal notranslate"><span class="pre">B_2DS.write_hdf5()</span></code></a>.
+For this reason, we aim to implement conversion of common data formats to ASCOT5 inputs as <em>templates</em> that process the data into a suitable format and calls proper <code class="docutils literal notranslate"><span class="pre">write_hdf5</span></code> internally.
+Templates provide a convenient way to import data to ASCOT5 and they also contain some premade inputs, e.g. options and markers for creating Poincaré plots.</p>
+<p>Templates are used by providing the name of the template and any required or optional parameters.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">create_input</span><span class="p">(</span><span class="s2">&quot;options poincare&quot;</span><span class="p">,</span> <span class="n">maxrho</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">simmode</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">tor</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">180</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Next we list all available input types followed by available templates.
+When beginning a new study, look through inputs to see what input types you will need and what data is required, and skim through templates to see if you can make use of them.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>ASCOT5 aims to use the user-provided data “as is” as far as possible, so that the user retains control and knowledge what is done with the data.
+This means that ASCOT5 does not extrapolate inputs, so it is user’s responsibility to ensure e.g. that the plasma profiles covers the whole region and that the magnetic field extends all the way to the wall.</p>
+</div>
+<section id="magnetic-field-bfield">
+<h2>Magnetic field <code class="docutils literal notranslate"><span class="pre">bfield</span></code><a class="headerlink" href="#magnetic-field-bfield" title="Link to this heading"></a></h2>
+<p>A good quality magnetic field is essential for any orbit-following study.
+Always check the field quality by generating Poincaré plots and plotting the divergence.
+If you don’t specifically require some other input, use the axisymmetric field since that is fast to interpolate and divergence free.
+Note that MHD eigenmodes can be included via dedicated input.</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.bfield.html#module-a5py.ascot5io.bfield" title="a5py.ascot5io.bfield"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bfield</span></code></a></p></td>
+<td><p>Magnetic field input.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.bfield.html#a5py.ascot5io.bfield.B_2DS" title="a5py.ascot5io.bfield.B_2DS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bfield.B_2DS</span></code></a></p></td>
+<td><p>Axisymmetric tokamak field interpolated with splines.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.bfield.html#a5py.ascot5io.bfield.B_2DS.write_hdf5" title="a5py.ascot5io.bfield.B_2DS.write_hdf5"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bfield.B_2DS.write_hdf5</span></code></a></p></td>
+<td><p>Write input data to the HDF5 file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.bfield.html#a5py.ascot5io.bfield.B_3DS" title="a5py.ascot5io.bfield.B_3DS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bfield.B_3DS</span></code></a></p></td>
+<td><p>Non-axisymmetric tokamak field.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.bfield.html#a5py.ascot5io.bfield.B_3DS.write_hdf5" title="a5py.ascot5io.bfield.B_3DS.write_hdf5"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bfield.B_3DS.write_hdf5</span></code></a></p></td>
+<td><p>Write input data to the HDF5 file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.bfield.html#a5py.ascot5io.bfield.B_STS" title="a5py.ascot5io.bfield.B_STS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bfield.B_STS</span></code></a></p></td>
+<td><p>Stellarator magnetic field.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.bfield.html#a5py.ascot5io.bfield.B_STS.write_hdf5" title="a5py.ascot5io.bfield.B_STS.write_hdf5"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bfield.B_STS.write_hdf5</span></code></a></p></td>
+<td><p>Write input data to the HDF5 file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.bfield.html#a5py.ascot5io.bfield.B_GS" title="a5py.ascot5io.bfield.B_GS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bfield.B_GS</span></code></a></p></td>
+<td><p>Analytical tokamak field.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.bfield.html#a5py.ascot5io.bfield.B_GS.write_hdf5" title="a5py.ascot5io.bfield.B_GS.write_hdf5"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bfield.B_GS.write_hdf5</span></code></a></p></td>
+<td><p>Write input data to the HDF5 file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.bfield.html#a5py.ascot5io.bfield.B_TC" title="a5py.ascot5io.bfield.B_TC"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bfield.B_TC</span></code></a></p></td>
+<td><p>Magnetic field in Cartesian basis for testing purposes.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.bfield.html#a5py.ascot5io.bfield.B_TC.write_hdf5" title="a5py.ascot5io.bfield.B_TC.write_hdf5"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bfield.B_TC.write_hdf5</span></code></a></p></td>
+<td><p>Write input data to the HDF5 file.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="electric-field-efield">
+<h2>Electric field <code class="docutils literal notranslate"><span class="pre">efield</span></code><a class="headerlink" href="#electric-field-efield" title="Link to this heading"></a></h2>
+<p>Note that electric field cannot be disabled manually in simulations.
+If electric field is not relevant for your simulation, use <a class="reference internal" href="papi/a5py.ascot5io.efield.html#a5py.ascot5io.efield.E_TC" title="a5py.ascot5io.efield.E_TC"><code class="xref py py-class docutils literal notranslate"><span class="pre">E_TC</span></code></a> and set it to zero to effectively disable electric field.</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.efield.html#module-a5py.ascot5io.efield" title="a5py.ascot5io.efield"><code class="xref py py-obj docutils literal notranslate"><span class="pre">efield</span></code></a></p></td>
+<td><p>Electric field input.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.efield.html#a5py.ascot5io.efield.E_TC" title="a5py.ascot5io.efield.E_TC"><code class="xref py py-obj docutils literal notranslate"><span class="pre">efield.E_TC</span></code></a></p></td>
+<td><p>Uniform electric field in Cartesian basis.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.efield.html#a5py.ascot5io.efield.E_TC.write_hdf5" title="a5py.ascot5io.efield.E_TC.write_hdf5"><code class="xref py py-obj docutils literal notranslate"><span class="pre">efield.E_TC.write_hdf5</span></code></a></p></td>
+<td><p>Write input data to the HDF5 file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.efield.html#a5py.ascot5io.efield.E_1DS" title="a5py.ascot5io.efield.E_1DS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">efield.E_1DS</span></code></a></p></td>
+<td><p>One-dimensional electric field interpolated with cubic splines.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.efield.html#a5py.ascot5io.efield.E_1DS.write_hdf5" title="a5py.ascot5io.efield.E_1DS.write_hdf5"><code class="xref py py-obj docutils literal notranslate"><span class="pre">efield.E_1DS.write_hdf5</span></code></a></p></td>
+<td><p>Write input data to the HDF5 file.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="plasma-plasma">
+<h2>Plasma <code class="docutils literal notranslate"><span class="pre">plasma</span></code><a class="headerlink" href="#plasma-plasma" title="Link to this heading"></a></h2>
+<p>Plasma data is required if collisions are included.</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.plasma.html#module-a5py.ascot5io.plasma" title="a5py.ascot5io.plasma"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plasma</span></code></a></p></td>
+<td><p>Input data representing plasma background species.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.plasma.html#a5py.ascot5io.plasma.plasma_1D" title="a5py.ascot5io.plasma.plasma_1D"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plasma.plasma_1D</span></code></a></p></td>
+<td><p>Plasma profiles that have only radial dependency.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.plasma.html#a5py.ascot5io.plasma.plasma_1D.write_hdf5" title="a5py.ascot5io.plasma.plasma_1D.write_hdf5"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plasma.plasma_1D.write_hdf5</span></code></a></p></td>
+<td><p>Write input data to the HDF5 file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.plasma.html#a5py.ascot5io.plasma.plasma_1DS" title="a5py.ascot5io.plasma.plasma_1DS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plasma.plasma_1DS</span></code></a></p></td>
+<td><p>Same input as <code class="xref py py-class docutils literal notranslate"><span class="pre">plasma_1D</span></code> but interpolated with splines.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.plasma.html#a5py.ascot5io.plasma.plasma_1DS.write_hdf5" title="a5py.ascot5io.plasma.plasma_1DS.write_hdf5"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plasma.plasma_1DS.write_hdf5</span></code></a></p></td>
+<td><p>Write input data to the HDF5 file.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="wall-mesh-wall">
+<h2>Wall mesh <code class="docutils literal notranslate"><span class="pre">wall</span></code><a class="headerlink" href="#wall-mesh-wall" title="Link to this heading"></a></h2>
+<p>Wall input is need when modelling losses accurately.
+If losses are of no interest it is advised to use some wall to prevent markers from escaping the computational domain.
+Alternatively, one can use the <code class="docutils literal notranslate"><span class="pre">RHOMAX</span></code> end condition to stop markers at the separatrix.</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.wall.html#module-a5py.ascot5io.wall" title="a5py.ascot5io.wall"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wall</span></code></a></p></td>
+<td><p>Input representing first wall and other plasma facing components.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.wall.html#a5py.ascot5io.wall.wall_2D" title="a5py.ascot5io.wall.wall_2D"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wall.wall_2D</span></code></a></p></td>
+<td><p>Contour in Rz-plane that represents an axisymmetric wall.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.wall.html#a5py.ascot5io.wall.wall_2D.write_hdf5" title="a5py.ascot5io.wall.wall_2D.write_hdf5"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wall.wall_2D.write_hdf5</span></code></a></p></td>
+<td><p>Write input data to the HDF5 file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.wall.html#a5py.ascot5io.wall.wall_3D" title="a5py.ascot5io.wall.wall_3D"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wall.wall_3D</span></code></a></p></td>
+<td><p>Triangle mesh that represents a 3D wall.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.wall.html#a5py.ascot5io.wall.wall_3D.write_hdf5" title="a5py.ascot5io.wall.wall_3D.write_hdf5"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wall.wall_3D.write_hdf5</span></code></a></p></td>
+<td><p>Write input data to the HDF5 file.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="neutral-neutral">
+<h2>Neutral <code class="docutils literal notranslate"><span class="pre">neutral</span></code><a class="headerlink" href="#neutral-neutral" title="Link to this heading"></a></h2>
+<p>Neutral particle profiles required when atomic (CX, etc.) reactions are included.</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.neutral.html#module-a5py.ascot5io.neutral" title="a5py.ascot5io.neutral"><code class="xref py py-obj docutils literal notranslate"><span class="pre">neutral</span></code></a></p></td>
+<td><p>Input representing plasma neutral bakcground.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">neutral.N0_1D</span></code></p></td>
+<td><p>Constant-on-flux-surfaces neutral profile.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">neutral.N0_1D.write_hdf5</span></code></p></td>
+<td><p>Write input data to the HDF5 file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.neutral.html#a5py.ascot5io.neutral.N0_3D" title="a5py.ascot5io.neutral.N0_3D"><code class="xref py py-obj docutils literal notranslate"><span class="pre">neutral.N0_3D</span></code></a></p></td>
+<td><p>Non-axisymmetric neutral data.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.neutral.html#a5py.ascot5io.neutral.N0_3D.write_hdf5" title="a5py.ascot5io.neutral.N0_3D.write_hdf5"><code class="xref py py-obj docutils literal notranslate"><span class="pre">neutral.N0_3D.write_hdf5</span></code></a></p></td>
+<td><p>Write input data to the HDF5 file.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="boozer-data-boozer">
+<h2>Boozer data <code class="docutils literal notranslate"><span class="pre">boozer</span></code><a class="headerlink" href="#boozer-data-boozer" title="Link to this heading"></a></h2>
+<p>Boozer data is required for simulations with MHD eigenfunctions.
+One can create it automatically from <a class="reference internal" href="papi/a5py.ascot5io.bfield.html#a5py.ascot5io.bfield.B_2DS" title="a5py.ascot5io.bfield.B_2DS"><code class="xref py py-class docutils literal notranslate"><span class="pre">B_2DS</span></code></a> or <a class="reference internal" href="papi/a5py.ascot5io.bfield.html#a5py.ascot5io.bfield.B_3DS" title="a5py.ascot5io.bfield.B_3DS"><code class="xref py py-class docutils literal notranslate"><span class="pre">B_3DS</span></code></a> with a template <code class="xref py py-meth docutils literal notranslate"><span class="pre">InputFactory.boozer_tokamak()</span></code>.</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.boozer.html#module-a5py.ascot5io.boozer" title="a5py.ascot5io.boozer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">boozer</span></code></a></p></td>
+<td><p>Input representing mapping from real-space to Boozer coordinates.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.boozer.html#a5py.ascot5io.boozer.Boozer" title="a5py.ascot5io.boozer.Boozer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">boozer.Boozer</span></code></a></p></td>
+<td><p>Mapping between cylindrical and Boozer coordinates assuming that psi is axisymmetric.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.boozer.html#a5py.ascot5io.boozer.Boozer.write_hdf5" title="a5py.ascot5io.boozer.Boozer.write_hdf5"><code class="xref py py-obj docutils literal notranslate"><span class="pre">boozer.Boozer.write_hdf5</span></code></a></p></td>
+<td><p>Write input data to the HDF5 file.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="mhd-eigenfunctions-mhd">
+<h2>MHD eigenfunctions <code class="docutils literal notranslate"><span class="pre">mhd</span></code><a class="headerlink" href="#mhd-eigenfunctions-mhd" title="Link to this heading"></a></h2>
+<p>MHD input is used to model particle response to MHD (feedback from particles to modes is not implemented).</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.mhd.html#module-a5py.ascot5io.mhd" title="a5py.ascot5io.mhd"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mhd</span></code></a></p></td>
+<td><p>Input containing MHD eigenmodes.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.mhd.html#a5py.ascot5io.mhd.MHD_STAT" title="a5py.ascot5io.mhd.MHD_STAT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mhd.MHD_STAT</span></code></a></p></td>
+<td><p>Stationary MHD eigenfunctions.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.mhd.html#a5py.ascot5io.mhd.MHD_STAT.write_hdf5" title="a5py.ascot5io.mhd.MHD_STAT.write_hdf5"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mhd.MHD_STAT.write_hdf5</span></code></a></p></td>
+<td><p>Write input data to the HDF5 file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.mhd.html#a5py.ascot5io.mhd.MHD_NONSTAT" title="a5py.ascot5io.mhd.MHD_NONSTAT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mhd.MHD_NONSTAT</span></code></a></p></td>
+<td><p>Time-dependent MHD eigenfunctions.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.mhd.html#a5py.ascot5io.mhd.MHD_NONSTAT.write_hdf5" title="a5py.ascot5io.mhd.MHD_NONSTAT.write_hdf5"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mhd.MHD_NONSTAT.write_hdf5</span></code></a></p></td>
+<td><p>Write input data to the HDF5 file.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="mhd-eigenfunctions-asigma">
+<h2>MHD eigenfunctions <code class="docutils literal notranslate"><span class="pre">asigma</span></code><a class="headerlink" href="#mhd-eigenfunctions-asigma" title="Link to this heading"></a></h2>
+<p>Atomic reaction data (e.g. from ADAS) for simulations where atomic reactions are enabled.</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">asigma</span></code></p></td>
+<td><p>Atomic reaction data HDF5 IO.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">asigma.Asigma_loc</span></code></p></td>
+<td><p>Local atomic data.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">asigma.Asigma_loc.write_hdf5</span></code></p></td>
+<td><p>Write input data to the HDF5 file.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="neutral-beam-injectors-nbi">
+<h2>Neutral beam injectors <code class="docutils literal notranslate"><span class="pre">nbi</span></code><a class="headerlink" href="#neutral-beam-injectors-nbi" title="Link to this heading"></a></h2>
+<p>NBI input is used by BBNBI5 exclusively.
+The input consists of a bundle of injectors, which in <code class="docutils literal notranslate"><span class="pre">a5py</span></code> are represented by <code class="xref py py-class docutils literal notranslate"><span class="pre">Injector</span></code>.</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.nbi.html#module-a5py.ascot5io.nbi" title="a5py.ascot5io.nbi"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nbi</span></code></a></p></td>
+<td><p>Input data representing NBI.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.nbi.html#a5py.ascot5io.nbi.NBI" title="a5py.ascot5io.nbi.NBI"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nbi.NBI</span></code></a></p></td>
+<td><p>Object representing a bundle of injectors used as an input in BBNBI5.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.nbi.html#a5py.ascot5io.nbi.NBI.write_hdf5" title="a5py.ascot5io.nbi.NBI.write_hdf5"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nbi.NBI.write_hdf5</span></code></a></p></td>
+<td><p>Write input data to the HDF5 file.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="markers-marker">
+<h2>Markers <code class="docutils literal notranslate"><span class="pre">marker</span></code><a class="headerlink" href="#markers-marker" title="Link to this heading"></a></h2>
+<p>Simulation markers.</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.marker.html#module-a5py.ascot5io.marker" title="a5py.ascot5io.marker"><code class="xref py py-obj docutils literal notranslate"><span class="pre">marker</span></code></a></p></td>
+<td><p>Markers whose orbits are solved within the ASCOT5 code.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.marker.html#a5py.ascot5io.marker.Prt" title="a5py.ascot5io.marker.Prt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">marker.Prt</span></code></a></p></td>
+<td><p>Marker input representing physical particles.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.marker.html#a5py.ascot5io.marker.Prt.write_hdf5" title="a5py.ascot5io.marker.Prt.write_hdf5"><code class="xref py py-obj docutils literal notranslate"><span class="pre">marker.Prt.write_hdf5</span></code></a></p></td>
+<td><p>Write input data to the HDF5 file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.marker.html#a5py.ascot5io.marker.GC" title="a5py.ascot5io.marker.GC"><code class="xref py py-obj docutils literal notranslate"><span class="pre">marker.GC</span></code></a></p></td>
+<td><p>Particle input in guiding-center coordinates.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.marker.html#a5py.ascot5io.marker.GC.write_hdf5" title="a5py.ascot5io.marker.GC.write_hdf5"><code class="xref py py-obj docutils literal notranslate"><span class="pre">marker.GC.write_hdf5</span></code></a></p></td>
+<td><p>Write input data to the HDF5 file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.marker.html#a5py.ascot5io.marker.FL" title="a5py.ascot5io.marker.FL"><code class="xref py py-obj docutils literal notranslate"><span class="pre">marker.FL</span></code></a></p></td>
+<td><p>Magnetic-field-line tracer input.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.marker.html#a5py.ascot5io.marker.FL.write_hdf5" title="a5py.ascot5io.marker.FL.write_hdf5"><code class="xref py py-obj docutils literal notranslate"><span class="pre">marker.FL.write_hdf5</span></code></a></p></td>
+<td><p>Write input data to the HDF5 file.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="options-opt">
+<h2>Options <code class="docutils literal notranslate"><span class="pre">opt</span></code><a class="headerlink" href="#options-opt" title="Link to this heading"></a></h2>
+<p>There is only one type of options <a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt" title="a5py.ascot5io.options.Opt"><code class="xref py py-class docutils literal notranslate"><span class="pre">Opt</span></code></a> and it is treated like any other input.
+The options are documented in <a class="reference internal" href="running.html#simulationoptions"><span class="std std-ref">Running Simulations</span></a>.</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#module-a5py.ascot5io.options" title="a5py.ascot5io.options"><code class="xref py py-obj docutils literal notranslate"><span class="pre">options</span></code></a></p></td>
+<td><p>Simulation options input.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.options.html#a5py.ascot5io.options.Opt" title="a5py.ascot5io.options.Opt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">options.Opt</span></code></a></p></td>
+<td><p>Simulation options.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="templates">
+<h2>Templates<a class="headerlink" href="#templates" title="Link to this heading"></a></h2>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">bfield_analytical_iter_circular</span></code></p></td>
+<td><p>Create ITER like but circular magnetic field.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">boozer_tokamak</span></code></p></td>
+<td><p>Build mapping from real-space to Boozer coordinates assuming axisymmetric tokamak field.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">options_poincare</span></code></p></td>
+<td><p>Generate options to generate Poincaré plot data.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">marker_poincare</span></code></p></td>
+<td><p>Generate markers at fixed intervals in radius.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">plasma_flat</span></code></p></td>
+<td><p>Create uniform single-species plasma that is flat inside the separatrix but inexistent outside.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">wall_rectangular</span></code></p></td>
+<td><p>Create wall with a rectangular cross section.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">options_tutorial</span></code></p></td>
+<td><p>Create fast slowing-down simulation options with orbits and distributions enabled.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="post-processing">
+<span id="postprocessing"></span><h1>Post-processing<a class="headerlink" href="#post-processing" title="Link to this heading"></a></h1>
+<section id="ascotpy">
+<h2>Ascotpy<a class="headerlink" href="#ascotpy" title="Link to this heading"></a></h2>
+<p>Many post-processing (and also some pre-processing) tools make use of the Python interface to ASCOT5, referred as <code class="docutils literal notranslate"><span class="pre">Ascotpy</span></code>.
+Instances of <a class="reference internal" href="papi/a5py.html#a5py.Ascot" title="a5py.Ascot"><code class="xref py py-class docutils literal notranslate"><span class="pre">Ascot</span></code></a> automatically establish the interface if <code class="docutils literal notranslate"><span class="pre">libascot.so</span></code> has been compiled.
+The interface provides direct access to the C routines and it can be used to interpolate inputs exactly as they are interpolated during the simulation.
+It can also be used to simulate markers directly from Python.</p>
+<p>The interface is used by first initializing the data (note that this can be memory intensive with large inputs).
+The <a class="reference internal" href="papi/a5py.html#a5py.Ascot.input_init" title="a5py.Ascot.input_init"><code class="xref py py-meth docutils literal notranslate"><span class="pre">input_init()</span></code></a> method reads the data from the HDF5 file and initializes it using <a class="reference external" href="https://docs.python.org/3/library/ctypes.html#module-ctypes" title="(in Python v3.11)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ctypes</span></code></a> so that the data can be passed on to the C routines.
+The resources are freed with <a class="reference internal" href="papi/a5py.html#a5py.Ascot.input_free" title="a5py.Ascot.input_free"><code class="xref py py-meth docutils literal notranslate"><span class="pre">input_free()</span></code></a>.
+An exception is raised if trying to evaluate a quantity that needs input which has not been initialised.</p>
+<p>Here’s a complete example on how to initialize input data, evaluate and plot it, and free the resources.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a5</span> <span class="o">=</span> <span class="n">Ascot</span><span class="p">(</span><span class="s2">&quot;ascot.h5&quot;</span><span class="p">)</span>
+<span class="n">rgrid</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">zgrid</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">phi</span>   <span class="o">=</span> <span class="mi">0</span>
+<span class="n">t</span>     <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c1"># Initialize currently active bfield</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">input_init</span><span class="p">(</span><span class="n">bfield</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Evaluate rho and psi at given (R,phi,z,t) locations</span>
+<span class="n">rho</span><span class="p">,</span> <span class="n">psi</span> <span class="o">=</span> <span class="n">a5</span><span class="o">.</span><span class="n">input_eval</span><span class="p">(</span><span class="n">rgrid</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">phi</span><span class="p">,</span> <span class="n">zgrid</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">t</span><span class="p">,</span> <span class="s2">&quot;rho&quot;</span><span class="p">,</span> <span class="s2">&quot;psi&quot;</span><span class="p">)</span>
+
+<span class="c1"># Evaluate rho at given (R,phi,z,t) grid (returns 4D matrix)</span>
+<span class="n">psirz</span> <span class="o">=</span> <span class="n">a5</span><span class="o">.</span><span class="n">input_eval</span><span class="p">(</span><span class="n">rgrid</span><span class="p">,</span> <span class="n">phi</span><span class="p">,</span> <span class="n">zgrid</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="s2">&quot;rho&quot;</span><span class="p">,</span> <span class="n">grid</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Plot the data (on log10 scale)</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">input_plotrz</span><span class="p">(</span><span class="n">rgrid</span><span class="p">,</span> <span class="n">zgrid</span><span class="p">,</span> <span class="s2">&quot;log psi&quot;</span><span class="p">,</span> <span class="n">phi</span><span class="o">=</span><span class="n">phi</span><span class="p">,</span> <span class="n">t</span><span class="o">=</span><span class="n">t</span><span class="p">)</span>
+
+<span class="c1"># Free all resources</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">input_free</span><span class="p">()</span>
+
+<span class="c1"># Initialize bfield with a given QID</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">input_init</span><span class="p">(</span><span class="n">bfield</span><span class="o">=</span><span class="s2">&quot;0123456789&quot;</span><span class="p">)</span>
+
+<span class="c1"># Free just the bfield data.</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">input_free</span><span class="p">(</span><span class="n">bfield</span><span class="p">)</span>
+
+<span class="c1"># Initialize all inputs used by the active run</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">input_init</span><span class="p">(</span><span class="n">run</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">free</span><span class="p">()</span>
+
+<span class="c1"># Initialize magnetic field input of a run with given QID</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">input_init</span><span class="p">(</span><span class="n">run</span><span class="o">=</span><span class="s2">&quot;0123456789&quot;</span><span class="p">,</span> <span class="n">bfield</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">free</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Complete list of quantities that can be evaluated can be found with <a class="reference internal" href="papi/a5py.html#a5py.Ascot.input_eval_list" title="a5py.Ascot.input_eval_list"><code class="xref py py-meth docutils literal notranslate"><span class="pre">input_eval_list()</span></code></a>.</p>
+<p>Methods relevant for input evaluation are listed below.</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.html#a5py.Ascot" title="a5py.Ascot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Ascot</span></code></a></p></td>
+<td><p>Primary tool for processing ASCOT5 data.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.html#a5py.Ascot.input_init" title="a5py.Ascot.input_init"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Ascot.input_init</span></code></a></p></td>
+<td><p>Initialize input so it can be accessed via Python interface.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.html#a5py.Ascot.input_free" title="a5py.Ascot.input_free"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Ascot.input_free</span></code></a></p></td>
+<td><p>Free input used by the Python interface.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.html#a5py.Ascot.input_eval" title="a5py.Ascot.input_eval"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Ascot.input_eval</span></code></a></p></td>
+<td><p>Evaluate input quantities at given coordinates.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.html#a5py.Ascot.input_plotrz" title="a5py.Ascot.input_plotrz"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Ascot.input_plotrz</span></code></a></p></td>
+<td><p>Plot input quantity on a (R, z) plane at given coordinates.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.html#a5py.Ascot.get_plasmaquantities" title="a5py.Ascot.get_plasmaquantities"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Ascot.get_plasmaquantities</span></code></a></p></td>
+<td><p>Return species present in plasma input.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.html#a5py.Ascot.input_eval_list" title="a5py.Ascot.input_eval_list"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Ascot.input_eval_list</span></code></a></p></td>
+<td><p>Return quantities that can be evaluated from inputs.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.html#a5py.Ascot.input_eval_collcoefs" title="a5py.Ascot.input_eval_collcoefs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Ascot.input_eval_collcoefs</span></code></a></p></td>
+<td><p>Evaluate Coulomb collision coefficients for a given test particle.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.html#a5py.Ascot.input_getplasmaspecies" title="a5py.Ascot.input_getplasmaspecies"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Ascot.input_getplasmaspecies</span></code></a></p></td>
+<td><p>Get species present in plasma input (electrons first).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.html#a5py.Ascot.input_rhotheta2rz" title="a5py.Ascot.input_rhotheta2rz"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Ascot.input_rhotheta2rz</span></code></a></p></td>
+<td><p>Convert (rho, theta, phi) coordinates to (R,z) positions.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="simulation-output">
+<h2>Simulation output<a class="headerlink" href="#simulation-output" title="Link to this heading"></a></h2>
+<p>The simulation output depends on what diagnostics where active.
+Marker ini- and endstate are always present and they contain the marker phase-space position before the first time-step and after the last time-step, respectively.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Plotting routines accept arguments for <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.8.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a> where the plot is created (and  axes for the colorbar if applicable).
+This can be used to create figures for publishing as the axes can be customized and reused.
+The axes argument is optional; a new figure is created if the argument is not supplied.</p>
+</div>
+<section id="ini-and-endstate">
+<h3>Ini- and endstate<a class="headerlink" href="#ini-and-endstate" title="Link to this heading"></a></h3>
+<p>The data in marker ini- and endstate can be accessed with <a class="reference internal" href="papi/a5py.ascot5io.html#a5py.ascot5io.RunGroup.getstate" title="a5py.ascot5io.RunGroup.getstate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">getstate()</span></code></a> method which returns the queried quantity as an array sorted by marker ID.
+The marker state contains both particle and guiding-center phase space coordinates, and it also automatically evaluates some derived quantities.
+Note that evaluating some of the quantities requires input data to be initialized.
+Whether a given quantity is evaluated in particle or guiding-center phase space is dictated by <code class="docutils literal notranslate"><span class="pre">mode</span></code> parameter.
+Name of the queried quantity must be preceded by “ini” or “end” to indicate whether the quantity is evaluated at the ini- or endstate.
+Multiple quantities can be evaluated simultaneously and it is more efficient to do so than to call <a class="reference internal" href="papi/a5py.ascot5io.html#a5py.ascot5io.RunGroup.getstate" title="a5py.ascot5io.RunGroup.getstate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">getstate()</span></code></a> separately for each quantity.
+Full list of available quantities is given by <a class="reference internal" href="papi/a5py.ascot5io.html#a5py.ascot5io.RunGroup.getstate_list" title="a5py.ascot5io.RunGroup.getstate_list"><code class="xref py py-meth docutils literal notranslate"><span class="pre">getstate_list()</span></code></a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Final (R,z) coordinates of marker guiding center and particle positions</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">active</span><span class="o">.</span><span class="n">getstate</span><span class="p">(</span><span class="s2">&quot;end r&quot;</span><span class="p">,</span> <span class="s2">&quot;end z&quot;</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;gc&quot;</span><span class="p">)</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">active</span><span class="o">.</span><span class="n">getstate</span><span class="p">(</span><span class="s2">&quot;end r&quot;</span><span class="p">,</span> <span class="s2">&quot;end z&quot;</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;prt&quot;</span><span class="p">)</span>
+
+<span class="c1"># Initial guiding center psi coordinate (requires magnetic field to be initialized)</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">active</span><span class="o">.</span><span class="n">getstate</span><span class="p">(</span><span class="s2">&quot;ini psi&quot;</span><span class="p">)</span>
+
+<span class="c1"># Markers can be pruned by their ID and end condition, and the returned quantity</span>
+<span class="c1"># can be a difference/relative difference between ini- and ednstate.</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">active</span><span class="o">.</span><span class="n">getstate</span><span class="p">(</span><span class="s2">&quot;diff ekin&quot;</span><span class="p">,</span> <span class="n">endcond</span><span class="o">=</span><span class="s2">&quot;TLIM&quot;</span><span class="p">,</span> <span class="n">ids</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Marker states can be visualized conveniently with <a class="reference internal" href="papi/a5py.ascot5io.html#a5py.ascot5io.RunGroup.plotstate_scatter" title="a5py.ascot5io.RunGroup.plotstate_scatter"><code class="xref py py-meth docutils literal notranslate"><span class="pre">plotstate_scatter()</span></code></a> and <a class="reference internal" href="papi/a5py.ascot5io.html#a5py.ascot5io.RunGroup.plotstate_histogram" title="a5py.ascot5io.RunGroup.plotstate_histogram"><code class="xref py py-meth docutils literal notranslate"><span class="pre">plotstate_histogram()</span></code></a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Quering quantities acts in a similar way as in getstate()</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">active</span><span class="o">.</span><span class="n">plotstate_scatter</span><span class="p">(</span><span class="s2">&quot;ini x&quot;</span><span class="p">,</span> <span class="s2">&quot;end y&quot;</span><span class="p">,</span> <span class="s2">&quot;diff z&quot;</span><span class="p">,</span> <span class="n">cc</span><span class="o">=</span><span class="s2">&quot;log reldiff ekin&quot;</span><span class="p">,</span>
+                                 <span class="n">xmode</span><span class="o">=</span><span class="s2">&quot;prt&quot;</span><span class="p">,</span> <span class="n">endcond</span><span class="o">=</span><span class="s2">&quot;TLIM&quot;</span><span class="p">,</span> <span class="n">ids</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+
+<span class="c1"># 2D scatter plot with a single color</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">active</span><span class="o">.</span><span class="n">plotstate_scatter</span><span class="p">(</span><span class="s2">&quot;end x&quot;</span><span class="p">,</span> <span class="s2">&quot;end y&quot;</span><span class="p">,</span> <span class="n">cc</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">)</span>
+
+<span class="c1"># 2D scatter plot with color as a coordinate</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">active</span><span class="o">.</span><span class="n">plotstate_scatter</span><span class="p">(</span><span class="s2">&quot;end x&quot;</span><span class="p">,</span> <span class="s2">&quot;end y&quot;</span><span class="p">,</span> <span class="n">cc</span><span class="o">=</span><span class="s2">&quot;end ekin&quot;</span><span class="p">)</span>
+
+<span class="c1"># 3D scatter plot with color as a coordinate</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">active</span><span class="o">.</span><span class="n">plotstate_scatter</span><span class="p">(</span><span class="s2">&quot;end x&quot;</span><span class="p">,</span> <span class="s2">&quot;end y&quot;</span><span class="p">,</span> <span class="s2">&quot;end z&quot;</span><span class="p">,</span> <span class="n">cc</span><span class="o">=</span><span class="s2">&quot;end ekin&quot;</span><span class="p">)</span>
+
+<span class="c1"># 1D stacked histogram where markers with different end conditions are separated</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">active</span><span class="o">.</span><span class="n">plotstate_histogram</span><span class="p">(</span><span class="s2">&quot;ini rho&quot;</span><span class="p">)</span>
+
+<span class="c1"># 2D histogram</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">active</span><span class="o">.</span><span class="n">plotstate_histogram</span><span class="p">(</span><span class="s2">&quot;end rho&quot;</span><span class="p">,</span> <span class="s2">&quot;end phimod&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.html#a5py.ascot5io.RunGroup" title="a5py.ascot5io.RunGroup"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RunGroup</span></code></a></p></td>
+<td><p>Node containing results and methods to process them.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.html#a5py.ascot5io.RunGroup.getstate" title="a5py.ascot5io.RunGroup.getstate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RunGroup.getstate</span></code></a></p></td>
+<td><p>Evaluate a marker quantity based on its ini/endstate.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.html#a5py.ascot5io.RunGroup.getstate_list" title="a5py.ascot5io.RunGroup.getstate_list"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RunGroup.getstate_list</span></code></a></p></td>
+<td><p>List quantities that can be evaluated with <code class="xref py py-meth docutils literal notranslate"><span class="pre">getstate()</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.html#a5py.ascot5io.RunGroup.getstate_markersummary" title="a5py.ascot5io.RunGroup.getstate_markersummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RunGroup.getstate_markersummary</span></code></a></p></td>
+<td><p>Return a summary of marker end conditions and errors present in the data.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.html#a5py.ascot5io.RunGroup.plotstate_scatter" title="a5py.ascot5io.RunGroup.plotstate_scatter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RunGroup.plotstate_scatter</span></code></a></p></td>
+<td><p>Make a scatter plot of marker state coordinates.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.html#a5py.ascot5io.RunGroup.plotstate_histogram" title="a5py.ascot5io.RunGroup.plotstate_histogram"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RunGroup.plotstate_histogram</span></code></a></p></td>
+<td><p>Make a histogram plot of marker state coordinates.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="marker-orbits">
+<h3>Marker orbits<a class="headerlink" href="#marker-orbits" title="Link to this heading"></a></h3>
+<p>The orbit output consists of marker phase-space coordinates collected on several points along the marker trajectory.
+The data is either gathered at given intervals or it is collected when specific toroidal, poloidal or radial surfaces are crossed.
+The latter case allows one to plot Poincaré plots from the orbit data.</p>
+<p>The orbit output differs from marker state in that only the phase-space coordinates corresponding to the simulation mode are stored, i.e., GO simulations store only particle coordinates and GC simulations only the guiding-center coordinates.
+Other than that, the orbit output is accessed and plotted in same manner as the state output.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Return coordinates that are first sorted by marker ID and then by mileage.</span>
+<span class="n">rho</span><span class="p">,</span> <span class="n">dekin</span> <span class="o">=</span> <span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">active</span><span class="o">.</span><span class="n">getorbit</span><span class="p">(</span><span class="s2">&quot;rho&quot;</span><span class="p">,</span> <span class="s2">&quot;diff ekin&quot;</span><span class="p">,</span> <span class="n">endcond</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ids</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+
+<span class="c1"># Plot the trajectory in 2D+1 and 3D+1 where color is the extra dimension</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">active</span><span class="o">.</span><span class="n">plotorbit_trajectory</span><span class="p">()</span>
+</pre></div>
+</div>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.html#a5py.ascot5io.RunGroup.getorbit" title="a5py.ascot5io.RunGroup.getorbit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RunGroup.getorbit</span></code></a></p></td>
+<td><p>Return orbit data.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.html#a5py.ascot5io.RunGroup.getorbit_list" title="a5py.ascot5io.RunGroup.getorbit_list"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RunGroup.getorbit_list</span></code></a></p></td>
+<td><p>List quantities that can be evaluated with <code class="xref py py-meth docutils literal notranslate"><span class="pre">getorbit()</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.html#a5py.ascot5io.RunGroup.plotorbit_trajectory" title="a5py.ascot5io.RunGroup.plotorbit_trajectory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RunGroup.plotorbit_trajectory</span></code></a></p></td>
+<td><p>Plot orbit trajectories in arbitrary coordinates.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.html#a5py.ascot5io.RunGroup.plotorbit_poincare" title="a5py.ascot5io.RunGroup.plotorbit_poincare"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RunGroup.plotorbit_poincare</span></code></a></p></td>
+<td><p>Create a Poincaré plot where the color separates different markers or shows the connection length.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="end-conditions">
+<h3>End conditions<a class="headerlink" href="#end-conditions" title="Link to this heading"></a></h3>
+<p>Marker simulation ends when one or more of the active end conditions is met.
+The marker end condition is stored as a bitarray, where the active bits indicate what were the end conditions resulting for that marker’s termination.
+The post-processing routines use more human-readable approach where end conditions are expressed with strings.
+Routines, that allows selecting markers according to their end condition, takes <code class="docutils literal notranslate"><span class="pre">endcond</span></code> string as an argument.
+This string can either be a single end condition, e.g. <code class="docutils literal notranslate"><span class="pre">endcond=&quot;WALL&quot;</span></code>, in which case all markers <strong>with at least that end condition</strong> are selected.
+Providing multiple end conditions, e.g. <code class="docutils literal notranslate"><span class="pre">endcond=&quot;POLMAX</span> <span class="pre">TORMAX&quot;</span></code>, selects all markers that have at least those end conditions.
+Finally, selecting markers that don’t have a given end condition can be done with <code class="docutils literal notranslate"><span class="pre">NOT</span></code> keyword as <code class="docutils literal notranslate"><span class="pre">endcond=&quot;NOT</span> <span class="pre">WALL&quot;</span></code>.</p>
+<p>The following list contains all possible end conditions.</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+</tbody>
+</table>
+<p>If marker was aborted, something went wrong in the simulation.
+<strong>The cause should always be investigated</strong> as the underlying error could have also affected the markers that finished normally.
+In most cases the reason for the error is that the marker input contains non-physical data, the input data grids don’t cover the whole plasma or the magnetic field <code class="docutils literal notranslate"><span class="pre">rho</span></code> is not properly normalized.</p>
+<p>To list all end conditions and possible errors, use the <code class="xref py py-meth docutils literal notranslate"><span class="pre">getstate_summary()</span></code> method.
+The error shows the error message and the line and file in which it originated.</p>
+</section>
+<section id="distributions">
+<h3>Distributions<a class="headerlink" href="#distributions" title="Link to this heading"></a></h3>
+<p>ASCOT5 can be used to collect N-dimensional histograms that represent distribution of the simulated particle population in phase-space.
+There are in total of five distributions that can be collected:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">5d</span></code> Distribution in (R, phi, z, ppar, pperp).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">6d</span></code> Distribution in (R, phi, z, pR, pphi, pz).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rho5d</span></code> Distribution in (rho, theta, phi, ppar, pperp).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rho6d</span></code> Distribution in (rho, theta, pR, phi, pz).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">com</span></code> Distribution in (mu, ekin, ptor), i.e. in constants of motion space (first adiabatic invariant, energy, canonical toroidal angluar momentum).</p></li>
+</ul>
+</div></blockquote>
+<p>While all distributions can be collected irrespective of the simulation mode, there are few considerations.
+If you are only interested in the distribution function itself, use either <code class="docutils literal notranslate"><span class="pre">5d</span></code>/<code class="docutils literal notranslate"><span class="pre">rho5d</span></code> or <code class="docutils literal notranslate"><span class="pre">6d</span></code>/<code class="docutils literal notranslate"><span class="pre">rho6d</span></code> depending on whether the simulation is in guiding -center (5D) or gyro-orbit (6D) mode and in what real-space basis you need the distribution in.
+<code class="docutils literal notranslate"><span class="pre">com</span></code> is for special cases.
+However, if you are also interested in moments of the distribution, choose one of the 5D distributions: <code class="docutils literal notranslate"><span class="pre">rho5d</span></code> can be used to calculate 1D profiles of the moments while <code class="docutils literal notranslate"><span class="pre">5d</span></code> can be used for (R, z) profiles.</p>
+<p>In addition to the phase-space coordinates stated here, all distributions (except <code class="docutils literal notranslate"><span class="pre">com</span></code>) can also have charge state and time as additional coordinates.
+Note though that other than that there is no way to separate contributions from different particles.
+It is advisable to run separate simulations when there are e.g. several NBIs so that their contributions can be separated.
+Finally, all markers should have same mass when distributions are collected as the mass is not a separate coordinate.</p>
+<p>Distribution data is obtained in post-processing with the method <a class="reference internal" href="papi/a5py.ascot5io.html#a5py.ascot5io.RunGroup.getdist" title="a5py.ascot5io.RunGroup.getdist"><code class="xref py py-meth docutils literal notranslate"><span class="pre">getdist()</span></code></a>, which returns a <code class="xref py py-class docutils literal notranslate"><span class="pre">DistData</span></code> object.
+For 5D distributions it is possible to change the momentum space from parallel and perpendicular momentum to energy and pitch.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Return 5d distribution</span>
+<span class="n">dist</span> <span class="o">=</span> <span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">active</span><span class="o">.</span><span class="n">getdist</span><span class="p">(</span><span class="s2">&quot;5d&quot;</span><span class="p">)</span>
+
+<span class="c1"># 5D distribution where momentum space is converted to energy-pitch</span>
+<span class="n">exidist</span> <span class="o">=</span> <span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">active</span><span class="o">.</span><span class="n">getdist</span><span class="p">(</span><span class="s2">&quot;5d&quot;</span><span class="p">,</span> <span class="n">exi</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># List containing names of the abscissae</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dist</span><span class="o">.</span><span class="n">abscissae</span><span class="p">)</span>
+
+<span class="c1"># Get abscissa and edges of an abscissa</span>
+<span class="n">dist</span><span class="o">.</span><span class="n">abscissa</span><span class="p">(</span><span class="s2">&quot;r&quot;</span><span class="p">)</span>
+<span class="n">dist</span><span class="o">.</span><span class="n">abscissa_edges</span><span class="p">(</span><span class="s2">&quot;r&quot;</span><span class="p">)</span>
+
+<span class="c1"># Distribution (function) and histogram (particles per bin)</span>
+<span class="n">dist</span><span class="o">.</span><span class="n">distribution</span><span class="p">()</span>
+<span class="n">dist</span><span class="o">.</span><span class="n">histogram</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>The resulting distribution data can be easily sliced, integrated and interpolated using the methods of <code class="xref py py-class docutils literal notranslate"><span class="pre">DistData</span></code>.
+One can use these methods to process the distribution until it has only one or two non-singleton dimensions left and it can be visualized.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dist</span> <span class="o">=</span> <span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">active</span><span class="o">.</span><span class="n">getdist</span><span class="p">(</span><span class="s2">&quot;5d&quot;</span><span class="p">)</span>
+
+<span class="c1"># Integrate over time dimension. Also integrate over the charge dimension</span>
+<span class="c1"># but use charge as a weight.</span>
+<span class="n">dist</span><span class="o">.</span><span class="n">integrate</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">s_</span><span class="p">[:],</span> <span class="n">charge</span><span class="o">=</span><span class="n">dist</span><span class="o">.</span><span class="n">abscissa</span><span class="p">(</span><span class="s2">&quot;charge&quot;</span><span class="p">))</span>
+
+<span class="c1"># Take slices and interpolate. These operations won&#39;t reduce dimensionality but</span>
+<span class="c1"># they reduce the size of the dimensions to one.</span>
+<span class="n">dist</span><span class="o">.</span><span class="n">slice</span><span class="p">(</span><span class="n">ppar</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">s_</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">pperp</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">s_</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">dist</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">phi</span><span class="o">=</span><span class="mi">2</span><span class="o">*</span><span class="n">unyt</span><span class="o">.</span><span class="n">deg</span><span class="p">)</span>
+
+<span class="c1"># Two non-singleton dimensions (R and z) remain so the distribution can be visualized</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">active</span><span class="o">.</span><span class="n">plotdist</span><span class="p">(</span><span class="n">dist</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Moments are calculated with <a class="reference internal" href="papi/a5py.ascot5io.html#a5py.ascot5io.RunGroup.getdist_moments" title="a5py.ascot5io.RunGroup.getdist_moments"><code class="xref py py-meth docutils literal notranslate"><span class="pre">getdist_moments()</span></code></a> and they are represented with <code class="xref py py-class docutils literal notranslate"><span class="pre">DistMoment</span></code> object.
+Note that some of the moments require that the input data such as the magnetic field is initialized first.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate and plot toroidally averaged density on (R,z) plane</span>
+<span class="n">dist</span> <span class="o">=</span> <span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">active</span><span class="o">.</span><span class="n">getdist</span><span class="p">(</span><span class="s2">&quot;5d&quot;</span><span class="p">)</span>
+<span class="n">mom</span> <span class="o">=</span> <span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">active</span><span class="o">.</span><span class="n">getdist_moments</span><span class="p">(</span><span class="n">dist</span><span class="p">,</span> <span class="s2">&quot;density&quot;</span><span class="p">,</span> <span class="s2">&quot;chargedensity&quot;</span><span class="p">)</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">plotdist_moments</span><span class="p">(</span><span class="n">mom</span><span class="p">,</span> <span class="s2">&quot;density&quot;</span><span class="p">)</span>
+
+<span class="c1"># Calculate and plot 1D profile of a toroidally and poloidally averaged density</span>
+<span class="n">dist</span> <span class="o">=</span> <span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">active</span><span class="o">.</span><span class="n">getdist</span><span class="p">(</span><span class="s2">&quot;rho5d&quot;</span><span class="p">)</span>
+<span class="n">mom</span> <span class="o">=</span> <span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">active</span><span class="o">.</span><span class="n">getdist_moments</span><span class="p">(</span><span class="n">dist</span><span class="p">,</span> <span class="s2">&quot;density&quot;</span><span class="p">,</span> <span class="s2">&quot;chargedensity&quot;</span><span class="p">)</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">plotdist_moments</span><span class="p">(</span><span class="n">mom</span><span class="p">,</span> <span class="s2">&quot;density&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.html#a5py.ascot5io.RunGroup.getdist" title="a5py.ascot5io.RunGroup.getdist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RunGroup.getdist</span></code></a></p></td>
+<td><p>Return distribution function.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.html#a5py.ascot5io.RunGroup.getdist_moments" title="a5py.ascot5io.RunGroup.getdist_moments"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RunGroup.getdist_moments</span></code></a></p></td>
+<td><p>Calculate moments of distribution.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.ascot5io.html#a5py.ascot5io.RunGroup.plotdist" title="a5py.ascot5io.RunGroup.plotdist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RunGroup.plotdist</span></code></a></p></td>
+<td><p>Plot distribution in 1D or 2D.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.ascot5io.html#a5py.ascot5io.RunGroup.plotdist_moments" title="a5py.ascot5io.RunGroup.plotdist_moments"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RunGroup.plotdist_moments</span></code></a></p></td>
+<td><p>Plot radial or (R,z) profile of a distribution moment.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">DistData</span></code></p></td>
+<td><p>Distribution data object.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">DistData.distribution</span></code></p></td>
+<td><p>Return the distribution function.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">DistData.histogram</span></code></p></td>
+<td><p>Return the distribution as a histogram (particles per bin).</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">DistData.abscissa</span></code></p></td>
+<td><p>Return abscissa values.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">DistData.abscissa_edges</span></code></p></td>
+<td><p>Return abscissa edges.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">DistData.integrate</span></code></p></td>
+<td><p>Integrate distribution along the given dimension.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">DistData.slice</span></code></p></td>
+<td><p>Take slices of distribution.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">DistData.interpolate</span></code></p></td>
+<td><p>Perform (N-dim) linear interpolation on the distribution.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">DistMoment</span></code></p></td>
+<td><p>Class that stores moments calculated from a distribution.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">DistMoment.ordinate</span></code></p></td>
+<td><p>Return stored moment.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="advanced">
+<h2>Advanced<a class="headerlink" href="#advanced" title="Link to this heading"></a></h2>
+<section id="interactive-simulations">
+<h3>Interactive simulations<a class="headerlink" href="#interactive-simulations" title="Link to this heading"></a></h3>
+<p>Simulations can also be run directly from Python via the interface provided by <code class="docutils literal notranslate"><span class="pre">libascot.so</span></code> and <code class="xref py py-mod docutils literal notranslate"><span class="pre">Ascotpy</span></code>.
+These simulations are equivalent to running <code class="docutils literal notranslate"><span class="pre">ascot5_main</span></code> with the exception that the output is not stored in <code class="docutils literal notranslate"><span class="pre">ascot.h5</span></code>.
+These <em>interactive</em> simulations are intended for simulating a handful of markers at most which is why the distribution output is not implemented.
+The interface is useful for visualizing marker trajectories or Poincaré plots and evaluating quantities that require markers to be traced only for few orbits.</p>
+<p>Before an interactive simulation can be launched, one has to initialize and pack inputs, and set options and markers.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a5</span> <span class="o">=</span> <span class="n">Ascot</span><span class="p">(</span><span class="s2">&quot;ascot.h5&quot;</span><span class="p">)</span>
+
+<span class="c1"># You may use any options and markers but in this example we take them from</span>
+<span class="c1"># the input file.</span>
+<span class="n">mrk</span> <span class="o">=</span> <span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">marker</span><span class="o">.</span><span class="n">active</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">opt</span> <span class="o">=</span> <span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">active</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="n">a5</span><span class="o">.</span><span class="n">simulation_initinputs</span><span class="p">()</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">simulation_initmarkers</span><span class="p">(</span><span class="o">**</span><span class="n">mrk</span><span class="p">)</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">simulation_initoptions</span><span class="p">(</span><span class="o">**</span><span class="n">opt</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The marker and options data are dictionaries with same format as required by their corresponding <code class="docutils literal notranslate"><span class="pre">write_hdf5</span></code> routines.
+The <code class="xref py py-meth docutils literal notranslate"><span class="pre">Ascot.simulation_initinputs()</span></code> method requires that no inputs are initialized before calling it.
+It differs from the <code class="xref py py-meth docutils literal notranslate"><span class="pre">Ascot.input_init()</span></code> method in that it initializes all inputs required for the simulation (except options and markers) and <em>packs</em> them.
+Packing means that input data is allocated in a single array and this is what ASCOT5 does internally when the data is <em>offloaded</em> for simulation.
+When inputs are packed, the input data cannot be deallocated or altered but otherwise it is possible to use methods like <code class="xref py py-meth docutils literal notranslate"><span class="pre">Ascot.input_eval()</span></code>, that evaluate and plot input data, normally.</p>
+<p>Simulation is run and data is accessed as:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Running simulations returns a virtual run that acts the same way as normal runs</span>
+<span class="n">vrun</span> <span class="o">=</span> <span class="n">a5</span><span class="o">.</span><span class="n">simulation_run</span><span class="p">()</span>
+<span class="n">r</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">vrun</span><span class="o">.</span><span class="n">getorbit</span><span class="p">(</span><span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="s2">&quot;z&quot;</span><span class="p">)</span>
+
+<span class="c1"># Simulations can be rerun by freeing the previous results first</span>
+<span class="c1"># Options can be changed when results are freed</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">simulation_free</span><span class="p">(</span><span class="n">diagnostics</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">simulation_initoptions</span><span class="p">(</span><span class="o">**</span><span class="n">opt</span><span class="p">)</span>
+<span class="n">vrun</span> <span class="o">=</span> <span class="n">a5</span><span class="o">.</span><span class="n">simulation_run</span><span class="p">()</span>
+
+<span class="c1"># Simulations can be rerun with new markers if markers are freed as well</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">simulation_free</span><span class="p">(</span><span class="n">markers</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">diagnostics</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">simulation_initmarkers</span><span class="p">(</span><span class="o">**</span><span class="n">mrk</span><span class="p">)</span>
+<span class="n">vrun</span> <span class="o">=</span> <span class="n">a5</span><span class="o">.</span><span class="n">simulation_run</span><span class="p">()</span>
+
+<span class="c1"># Free all resources</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">simulation_free</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>List of methods relevant for running live simulations can be found below.</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.html#a5py.Ascot.simulation_initinputs" title="a5py.Ascot.simulation_initinputs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">a5py.Ascot.simulation_initinputs</span></code></a></p></td>
+<td><p>Prepare input fields for the interactive simulation.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.html#a5py.Ascot.simulation_initmarkers" title="a5py.Ascot.simulation_initmarkers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">a5py.Ascot.simulation_initmarkers</span></code></a></p></td>
+<td><p>Create markers for the interactive simulations.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.html#a5py.Ascot.simulation_initoptions" title="a5py.Ascot.simulation_initoptions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">a5py.Ascot.simulation_initoptions</span></code></a></p></td>
+<td><p>Set simulation options for the interactive simulation.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.html#a5py.Ascot.simulation_run" title="a5py.Ascot.simulation_run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">a5py.Ascot.simulation_run</span></code></a></p></td>
+<td><p>Run the interactive simulation using inputs, options and markers that were set.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.html#a5py.Ascot.simulation_free" title="a5py.Ascot.simulation_free"><code class="xref py py-obj docutils literal notranslate"><span class="pre">a5py.Ascot.simulation_free</span></code></a></p></td>
+<td><p>Free resources used by the interactive simulation.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="neutral-beam-simulations-bbnbi5">
+<h3>Neutral beam simulations (BBNBI5)<a class="headerlink" href="#neutral-beam-simulations-bbnbi5" title="Link to this heading"></a></h3>
+<p>BBNBI5 implements a beamlet based model for generating neutrals from an injector geometry.
+Neutrals are then followed until they are ionized or they hit the wall (shinethrough).</p>
+<p>BBNBI5 uses <a class="reference internal" href="papi/a5py.ascot5io.nbi.html#a5py.ascot5io.nbi.NBI" title="a5py.ascot5io.nbi.NBI"><code class="xref py py-class docutils literal notranslate"><span class="pre">NBI</span></code></a> input which consists of a single or a bundle of injectors represented by <code class="xref py py-class docutils literal notranslate"><span class="pre">Injector</span></code>.
+It is important to note that there are now way to separate results by injector if the injectors were bundled.
+Only bundle injectors if they have identical geometries or otherwise there is no reason to separate the results.</p>
+<p>BBNBI5 is a separate program that has to be compiled separately: <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">bbnbi5</span></code> in the main folder.
+This creates binary <code class="docutils literal notranslate"><span class="pre">./build/bbnbi5</span></code> that uses the same input file and shares some inputs with the main program.
+A <code class="docutils literal notranslate"><span class="pre">bbnbi5</span></code> run requires following inputs: <code class="docutils literal notranslate"><span class="pre">nbi</span></code>, <code class="docutils literal notranslate"><span class="pre">bfield</span></code>, <code class="docutils literal notranslate"><span class="pre">plasma</span></code>, <code class="docutils literal notranslate"><span class="pre">wall</span></code>, and <code class="docutils literal notranslate"><span class="pre">options</span></code>.
+The only options that are used from the input are settings for the distributions: if a distribution is toggled on, BBNBI5 gathers ionized markers on that distribution.
+When these are present, the code is run with</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># n is the number of markers to be used in simulation</span>
+<span class="c1"># writemarkers creates marker input from ionized markers (on by default)</span>
+<span class="c1"># [t0, t1] is the time interval when the beam is on. This affects the time</span>
+<span class="c1"># assigned to generated markers and the output distributions are weighted</span>
+<span class="c1"># with (t1-t0). Default is t0=t1=0.0 where all markers have t=0.0 and the</span>
+<span class="c1"># the distribution is weighted with 1.0 s</span>
+<span class="o">./</span><span class="n">bbnbi5</span> <span class="o">--</span><span class="ow">in</span><span class="o">=</span><span class="n">ascot</span><span class="o">.</span><span class="n">h5</span> <span class="o">--</span><span class="n">d</span><span class="o">=</span><span class="s2">&quot;MYTAG My description&quot;</span> <span class="o">--</span><span class="n">n</span><span class="o">=</span><span class="mi">1000</span> <span class="o">--</span><span class="n">writemarkers</span><span class="o">=</span><span class="mi">1</span> <span class="o">--</span><span class="n">t0</span><span class="o">=</span><span class="mf">0.0</span> <span class="o">--</span><span class="n">t1</span><span class="o">=</span><span class="mf">1.0</span>
+</pre></div>
+</div>
+<p>If the option was set to generate marker input, there is a new instance of <code class="docutils literal notranslate"><span class="pre">marker</span></code> present in the file.
+Each BBNBI5 run is also stored in HDF5, and in Python it can read and access the data in same fashion as the ASCOT5 runs.
+Open Python terminal to access the data</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># File which has BBNBI5 run tagged &quot;BBNBI&quot;</span>
+<span class="n">a5</span> <span class="o">=</span> <span class="n">Ascot</span><span class="p">(</span><span class="s2">&quot;ascot.h5&quot;</span><span class="p">)</span>
+<span class="c1"># List all inputs and outputs</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">BBNBI</span><span class="o">.</span><span class="n">ls</span><span class="p">()</span>
+</pre></div>
+</div>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.html#a5py.Ascot.simulation_initinputs" title="a5py.Ascot.simulation_initinputs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">a5py.Ascot.simulation_initinputs</span></code></a></p></td>
+<td><p>Prepare input fields for the interactive simulation.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="generating-fusion-products-afsi5">
+<h3>Generating fusion products (AFSI5)<a class="headerlink" href="#generating-fusion-products-afsi5" title="Link to this heading"></a></h3>
+<p>AFSI5 calculates distribution of fusion products from the interaction of two arbitrary populations.
+It can be used to create either a fast particle source for ASCOT5 simulations or a neutron source e.g. for codes such as Serpent.
+AFSI5 has three modes of operation: <em>thermal</em> where two Maxwellian populations are interacting, <em>beam-thermal</em> where one population is Maxwellian and the other is given by arbitrary distribution (e.g. beam ion slowing-down distribution), or <em>beam-beam</em> where both populations are given by arbitrary distributions.
+The distributions must have the format of a 5D distribution.</p>
+<p>AFSI5 uses <code class="docutils literal notranslate"><span class="pre">libascot.so</span></code> to perform the calculations efficiently, but the interface is completely in Python.
+Each AFSI5 run is also stored in HDF5, and in Python it can read and access the data in same fashion as the ASCOT5 runs.
+Assuming that we have a file with magnetic field data and DT plasma input present, and also a run tagged “BEAMS” which contains beam slowing-down distribution in 5D, then AFSI5 is run as</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a5</span> <span class="o">=</span> <span class="n">Ascot</span><span class="p">(</span><span class="s2">&quot;ascot.h5&quot;</span><span class="p">)</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">input_init</span><span class="p">(</span><span class="n">bfield</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">plasma</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">afsi</span><span class="o">.</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">input_free</span><span class="p">()</span>
+
+<span class="c1"># The output is stored in HDF5 as a results group (and set as active):</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">ls</span><span class="p">()</span>
+<span class="n">a5</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">active</span><span class="o">.</span><span class="n">plot_dist</span><span class="p">(</span><span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="s2">&quot;z&quot;</span><span class="p">,</span> <span class="s2">&quot;product1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="computing-3d-field-from-coils-biosaw">
+<h3>Computing 3D field from coils (BioSaw)<a class="headerlink" href="#computing-3d-field-from-coils-biosaw" title="Link to this heading"></a></h3>
+<p>BioSaw is a solver using Biot-Savart law to conveniently include perturbation from external coils to ASCOT5 simulation.
+It computes the magnetic field from a coil geometry and turns it into a <a class="reference internal" href="papi/a5py.ascot5io.bfield.html#a5py.ascot5io.bfield.B_3DS" title="a5py.ascot5io.bfield.B_3DS"><code class="xref py py-class docutils literal notranslate"><span class="pre">B_3DS</span></code></a> input.
+A common use of BioSaw is to incorporate the ripple from TF coils or the error-field from RMP coils into simulations.
+The produced data is divergence-free although the level of divergence in simulation, when the data is interpolated with splines, depends on the grid resolution.</p>
+<p>BioSaw uses <code class="docutils literal notranslate"><span class="pre">libascot.so</span></code> to perform the calculations efficiently, but the interface is completely in Python.
+To run BioSaw, first open a file that has either <a class="reference internal" href="papi/a5py.ascot5io.bfield.html#a5py.ascot5io.bfield.B_2DS" title="a5py.ascot5io.bfield.B_2DS"><code class="xref py py-class docutils literal notranslate"><span class="pre">B_2DS</span></code></a> or <a class="reference internal" href="papi/a5py.ascot5io.bfield.html#a5py.ascot5io.bfield.B_3DS" title="a5py.ascot5io.bfield.B_3DS"><code class="xref py py-class docutils literal notranslate"><span class="pre">B_3DS</span></code></a> magnetic field present or set as active.
+The calculation is then simply done as follows using the <code class="docutils literal notranslate"><span class="pre">biosaw</span></code> attribure which is an instance of <code class="xref py py-class docutils literal notranslate"><span class="pre">BioSaw</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define a simple coil which does not have to form a closed loop</span>
+
+
+<span class="c1"># Open a file that has B_2DS input &quot;B2D&quot; and B_3DS input &quot;B3D&quot;</span>
+<span class="c1"># BioSaw is operated via &quot;biosaw&quot; attribute.</span>
+<span class="n">a5</span> <span class="o">=</span> <span class="n">Ascot</span><span class="p">(</span><span class="s2">&quot;ascot.h5&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">a5py.routines.biosaw5.BioSaw</span></code></p></td>
+<td><p>Biot-Savart solver for computing magnetic field from a coil geometry.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">a5py.routines.biosaw5.BioSaw.addto2d</span></code></p></td>
+<td><p>Generate 3D tokamak magnetic field input from coil geometry and</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">a5py.routines.biosaw5.BioSaw.addto3d</span></code></p></td>
+<td><p>Generate new 3D tokamak magnetic field input where contribution from</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">a5py.routines.biosaw5.BioSaw.calculate</span></code></p></td>
+<td><p>Calculate magnetic field at given points due to given coil(s).</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="units">
+<h3>Units<a class="headerlink" href="#units" title="Link to this heading"></a></h3>
+<p><a class="reference internal" href="papi/a5py.html#module-a5py" title="a5py"><code class="xref py py-mod docutils literal notranslate"><span class="pre">a5py</span></code></a> uses <code class="xref py py-mod docutils literal notranslate"><span class="pre">unyt</span></code> package to include units in physical quantities.</p>
+<p>Unyt package is easy to use as the documentation shows and briefly summarized here.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Units can be assigned to values or numpy arrays by multiplying with the unit</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">*</span> <span class="n">unyt</span><span class="o">.</span><span class="n">m</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span> <span class="o">*</span> <span class="n">unyt</span><span class="o">.</span><span class="n">s</span>
+
+<span class="c1"># Units obey basic arithmetic</span>
+<span class="n">velocity</span> <span class="o">=</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span>
+<span class="n">velocity</span><span class="o">.</span><span class="n">units</span> <span class="c1"># Has units m/s</span>
+
+<span class="c1"># Strip units</span>
+<span class="n">velocity</span><span class="o">.</span><span class="n">v</span>
+
+<span class="c1"># Assign units using a string</span>
+<span class="n">energy</span> <span class="o">=</span> <span class="n">unyt</span><span class="o">.</span><span class="n">unyt_quantity</span><span class="o">.</span><span class="n">from_string</span><span class="p">(</span><span class="s2">&quot;10 eV&quot;</span><span class="p">)</span>
+
+<span class="c1"># Converting to different units (returns a new array)</span>
+<span class="n">energy_J</span> <span class="o">=</span> <span class="n">energy</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s2">&quot;J&quot;</span><span class="p">)</span>
+
+<span class="c1"># Converting in place</span>
+<span class="n">energy_J</span><span class="o">.</span><span class="n">convert_to_units</span><span class="p">(</span><span class="s2">&quot;eV&quot;</span><span class="p">)</span>
+
+<span class="c1"># Converting to SI units</span>
+<span class="n">energy</span><span class="o">.</span><span class="n">convert_to_base</span><span class="p">(</span><span class="s2">&quot;mks&quot;</span><span class="p">)</span>
+
+<span class="n">Converting</span> <span class="n">to</span> <span class="s2">&quot;ascot&quot;</span> <span class="n">unit</span> <span class="n">system</span>
+<span class="n">energy</span><span class="o">.</span><span class="n">convert_to_base</span><span class="p">(</span><span class="s2">&quot;ascot&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The package takes care of unit conversions automatically when operating quantities that have different units.
+Exception is raised whenever trying to operate quantities that don’t have matching physical dimensions.</p>
+<p><a class="reference internal" href="papi/a5py.html#module-a5py" title="a5py"><code class="xref py py-mod docutils literal notranslate"><span class="pre">a5py</span></code></a> implements its own unit system <code class="docutils literal notranslate"><span class="pre">ascot</span></code> which for the most part is in SI units with the exception of energy [eV], mass [amu], charge [e], and angle [deg].</p>
+<p>Functions expecting arguments to have units issue warning if units are not provided and assumes that the arguments already are in correct units.
+The warning can be suppressed with:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">warnings</span>
+<span class="kn">from</span> <span class="nn">a5py</span> <span class="kn">import</span> <span class="n">AscotUnitWarning</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="n">AscotUnitWarning</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="exceptions">
+<h3>Exceptions<a class="headerlink" href="#exceptions" title="Link to this heading"></a></h3>
+<p>These are the custom exceptions and warnings used by <a class="reference internal" href="papi/a5py.html#module-a5py" title="a5py"><code class="xref py py-mod docutils literal notranslate"><span class="pre">a5py</span></code></a>.</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.html#a5py.exceptions.AscotIOException" title="a5py.exceptions.AscotIOException"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AscotIOException</span></code></a></p></td>
+<td><p>Raised when there is an internal error in <cite>Ascot5IO</cite>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.html#a5py.exceptions.AscotNoDataException" title="a5py.exceptions.AscotNoDataException"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AscotNoDataException</span></code></a></p></td>
+<td><p>Raised when required input or output is not present.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="papi/a5py.html#a5py.exceptions.AscotInitException" title="a5py.exceptions.AscotInitException"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AscotInitException</span></code></a></p></td>
+<td><p>Raised when there is an issue with data initialized by <cite>Ascot</cite>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="papi/a5py.html#a5py.exceptions.AscotUnitWarning" title="a5py.exceptions.AscotUnitWarning"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AscotUnitWarning</span></code></a></p></td>
+<td><p>Warning raised when quantities are provided without units.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="running.html" class="btn btn-neutral float-left" title="Installing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="teaching.html" class="btn btn-neutral float-right" title="Tutorials" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Ascot Group.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

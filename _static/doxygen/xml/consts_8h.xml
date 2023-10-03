@@ -1,0 +1,681 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="consts_8h" kind="file" language="C++">
+    <compoundname>consts.h</compoundname>
+    <includes refid="ascot5_8h" local="yes">ascot5.h</includes>
+    <includedby refid="afsi_8c" local="yes">afsi.c</includedby>
+    <includedby refid="afsi_8h" local="yes">afsi.h</includedby>
+    <includedby refid="ascot5__main_8c" local="yes">ascot5_main.c</includedby>
+    <includedby refid="asigma__loc_8c" local="yes">asigma/asigma_loc.c</includedby>
+    <includedby refid="asigma_8c" local="yes">asigma.c</includedby>
+    <includedby refid="bbnbi5_8c" local="yes">bbnbi5.c</includedby>
+    <includedby refid="B__GS_8c" local="yes">Bfield/B_GS.c</includedby>
+    <includedby refid="B__STS_8c" local="yes">Bfield/B_STS.c</includedby>
+    <includedby refid="biosaw_8c" local="yes">biosaw.c</includedby>
+    <includedby refid="boozer_8c" local="yes">boozer.c</includedby>
+    <includedby refid="diag__orb_8c" local="yes">diag/diag_orb.c</includedby>
+    <includedby refid="diag__transcoef_8c" local="yes">diag/diag_transcoef.c</includedby>
+    <includedby refid="dist__5D_8c" local="yes">diag/dist_5D.c</includedby>
+    <includedby refid="dist__6D_8c" local="yes">diag/dist_6D.c</includedby>
+    <includedby refid="dist__com_8c" local="yes">diag/dist_com.c</includedby>
+    <includedby refid="dist__rho5D_8c" local="yes">diag/dist_rho5D.c</includedby>
+    <includedby refid="dist__rho6D_8c" local="yes">diag/dist_rho6D.c</includedby>
+    <includedby refid="endcond_8c" local="yes">endcond.c</includedby>
+    <includedby refid="gctransform_8c" local="yes">gctransform.c</includedby>
+    <includedby refid="hdf5__bfield_8c" local="yes">hdf5io/hdf5_bfield.c</includedby>
+    <includedby refid="hdf5__boozer_8c" local="yes">hdf5io/hdf5_boozer.c</includedby>
+    <includedby refid="hdf5__dist_8c" local="yes">hdf5io/hdf5_dist.c</includedby>
+    <includedby refid="hdf5__marker_8c" local="yes">hdf5io/hdf5_marker.c</includedby>
+    <includedby refid="hdf5__nbi_8c" local="yes">hdf5io/hdf5_nbi.c</includedby>
+    <includedby refid="hdf5__neutral_8c" local="yes">hdf5io/hdf5_neutral.c</includedby>
+    <includedby refid="hdf5__options_8c" local="yes">hdf5io/hdf5_options.c</includedby>
+    <includedby refid="hdf5__orbit_8c" local="yes">hdf5io/hdf5_orbit.c</includedby>
+    <includedby refid="hdf5__plasma_8c" local="yes">hdf5io/hdf5_plasma.c</includedby>
+    <includedby refid="hdf5__state_8c" local="yes">hdf5io/hdf5_state.c</includedby>
+    <includedby refid="libascot_8c" local="yes">libascot.c</includedby>
+    <includedby refid="nbi_8c" local="yes">nbi.c</includedby>
+    <includedby refid="particle_8c" local="yes">particle.c</includedby>
+    <includedby refid="physlib_8h" local="yes">physlib.h</includedby>
+    <includedby refid="plasma__1D_8c" local="yes">plasma/plasma_1D.c</includedby>
+    <includedby refid="plasma__1DS_8c" local="yes">plasma/plasma_1DS.c</includedby>
+    <includedby refid="plasma__1Dt_8c" local="yes">plasma/plasma_1Dt.c</includedby>
+    <includedby refid="plasma_8c" local="yes">plasma.c</includedby>
+    <includedby refid="random_8c" local="yes">random.c</includedby>
+    <includedby refid="atomic_8c" local="yes">simulate/atomic.c</includedby>
+    <includedby refid="mccc__coefs_8h" local="yes">simulate/mccc/mccc_coefs.h</includedby>
+    <includedby refid="mccc__fo__euler_8c" local="yes">simulate/mccc/mccc_fo_euler.c</includedby>
+    <includedby refid="mccc__gc__euler_8c" local="yes">simulate/mccc/mccc_gc_euler.c</includedby>
+    <includedby refid="mccc__gc__milstein_8c" local="yes">simulate/mccc/mccc_gc_milstein.c</includedby>
+    <includedby refid="mccc__wiener_8c" local="yes">simulate/mccc/mccc_wiener.c</includedby>
+    <includedby refid="simulate__fo__fixed_8c" local="yes">simulate/simulate_fo_fixed.c</includedby>
+    <includedby refid="simulate__gc__adaptive_8c" local="yes">simulate/simulate_gc_adaptive.c</includedby>
+    <includedby refid="simulate__gc__fixed_8c" local="yes">simulate/simulate_gc_fixed.c</includedby>
+    <includedby refid="simulate__ml__adaptive_8c" local="yes">simulate/simulate_ml_adaptive.c</includedby>
+    <includedby refid="step__fo__vpa_8c" local="yes">simulate/step/step_fo_vpa.c</includedby>
+    <includedby refid="step__gc__cashkarp_8c" local="yes">simulate/step/step_gc_cashkarp.c</includedby>
+    <includedby refid="step__gc__rk4_8c" local="yes">simulate/step/step_gc_rk4.c</includedby>
+    <includedby refid="step__gceom__mhd_8h" local="yes">simulate/step/step_gceom_mhd.h</includedby>
+    <includedby refid="interp3Dcomp_8c" local="yes">spline/interp3Dcomp.c</includedby>
+    <includedby refid="interp3Dexpl_8c" local="yes">spline/interp3Dexpl.c</includedby>
+    <includedby refid="suzuki_8c" local="yes">suzuki.c</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>omp.h</label>
+      </node>
+      <node id="1">
+        <label>consts.h</label>
+        <link refid="consts_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>time.h</label>
+      </node>
+      <node id="2">
+        <label>ascot5.h</label>
+        <link refid="ascot5_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="17">
+        <label>diag/dist_rho5D.c</label>
+        <link refid="dist__rho5D_8c"/>
+      </node>
+      <node id="54">
+        <label>simulate/simulate_ml_adaptive.c</label>
+        <link refid="simulate__ml__adaptive_8c"/>
+      </node>
+      <node id="57">
+        <label>suzuki.c</label>
+        <link refid="suzuki_8c"/>
+      </node>
+      <node id="50">
+        <label>plasma.c</label>
+        <link refid="plasma_8c"/>
+      </node>
+      <node id="56">
+        <label>spline/interp3Dexpl.c</label>
+        <link refid="interp3Dexpl_8c"/>
+      </node>
+      <node id="14">
+        <label>diag/dist_5D.c</label>
+        <link refid="dist__5D_8c"/>
+      </node>
+      <node id="20">
+        <label>gctransform.c</label>
+        <link refid="gctransform_8c"/>
+      </node>
+      <node id="33">
+        <label>particle.c</label>
+        <link refid="particle_8c"/>
+      </node>
+      <node id="55">
+        <label>spline/interp3Dcomp.c</label>
+        <link refid="interp3Dcomp_8c"/>
+      </node>
+      <node id="39">
+        <label>simulate/simulate_fo_fixed.c</label>
+        <link refid="simulate__fo__fixed_8c"/>
+      </node>
+      <node id="8">
+        <label>Bfield/B_GS.c</label>
+        <link refid="B__GS_8c"/>
+      </node>
+      <node id="45">
+        <label>simulate/step/step_gc_rk4.c</label>
+        <link refid="step__gc__rk4_8c"/>
+      </node>
+      <node id="41">
+        <label>simulate/simulate_gc_fixed.c</label>
+        <link refid="simulate__gc__fixed_8c"/>
+      </node>
+      <node id="4">
+        <label>ascot5_main.c</label>
+        <link refid="ascot5__main_8c"/>
+      </node>
+      <node id="6">
+        <label>asigma.c</label>
+        <link refid="asigma_8c"/>
+      </node>
+      <node id="48">
+        <label>plasma/plasma_1DS.c</label>
+        <link refid="plasma__1DS_8c"/>
+      </node>
+      <node id="19">
+        <label>endcond.c</label>
+        <link refid="endcond_8c"/>
+      </node>
+      <node id="35">
+        <label>simulate/atomic.c</label>
+        <link refid="atomic_8c"/>
+      </node>
+      <node id="5">
+        <label>asigma/asigma_loc.c</label>
+        <link refid="asigma__loc_8c"/>
+      </node>
+      <node id="24">
+        <label>hdf5io/hdf5_marker.c</label>
+        <link refid="hdf5__marker_8c"/>
+      </node>
+      <node id="23">
+        <label>hdf5io/hdf5_dist.c</label>
+        <link refid="hdf5__dist_8c"/>
+      </node>
+      <node id="2">
+        <label>afsi.c</label>
+        <link refid="afsi_8c"/>
+      </node>
+      <node id="32">
+        <label>nbi.c</label>
+        <link refid="nbi_8c"/>
+      </node>
+      <node id="3">
+        <label>afsi.h</label>
+        <link refid="afsi_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>diag/diag_orb.c</label>
+        <link refid="diag__orb_8c"/>
+      </node>
+      <node id="29">
+        <label>hdf5io/hdf5_plasma.c</label>
+        <link refid="hdf5__plasma_8c"/>
+      </node>
+      <node id="10">
+        <label>biosaw.c</label>
+        <link refid="biosaw_8c"/>
+      </node>
+      <node id="1">
+        <label>consts.h</label>
+        <link refid="consts_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+      </node>
+      <node id="53">
+        <label>simulate/mccc/mccc_wiener.c</label>
+        <link refid="mccc__wiener_8c"/>
+      </node>
+      <node id="38">
+        <label>simulate/mccc/mccc_gc_milstein.c</label>
+        <link refid="mccc__gc__milstein_8c"/>
+      </node>
+      <node id="27">
+        <label>hdf5io/hdf5_options.c</label>
+        <link refid="hdf5__options_8c"/>
+      </node>
+      <node id="28">
+        <label>hdf5io/hdf5_orbit.c</label>
+        <link refid="hdf5__orbit_8c"/>
+      </node>
+      <node id="49">
+        <label>plasma/plasma_1Dt.c</label>
+        <link refid="plasma__1Dt_8c"/>
+      </node>
+      <node id="40">
+        <label>simulate/simulate_gc_adaptive.c</label>
+        <link refid="simulate__gc__adaptive_8c"/>
+      </node>
+      <node id="34">
+        <label>physlib.h</label>
+        <link refid="physlib_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>simulate/mccc/mccc_fo_euler.c</label>
+        <link refid="mccc__fo__euler_8c"/>
+      </node>
+      <node id="51">
+        <label>random.c</label>
+        <link refid="random_8c"/>
+      </node>
+      <node id="31">
+        <label>libascot.c</label>
+        <link refid="libascot_8c"/>
+      </node>
+      <node id="46">
+        <label>simulate/step/step_gceom_mhd.h</label>
+        <link refid="step__gceom__mhd_8h"/>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>hdf5io/hdf5_neutral.c</label>
+        <link refid="hdf5__neutral_8c"/>
+      </node>
+      <node id="16">
+        <label>diag/dist_com.c</label>
+        <link refid="dist__com_8c"/>
+      </node>
+      <node id="13">
+        <label>diag/diag_transcoef.c</label>
+        <link refid="diag__transcoef_8c"/>
+      </node>
+      <node id="43">
+        <label>simulate/step/step_gceom.h</label>
+        <link refid="step__gceom_8h"/>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+      </node>
+      <node id="52">
+        <label>simulate/mccc/mccc_coefs.h</label>
+        <link refid="mccc__coefs_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="47">
+        <label>plasma/plasma_1D.c</label>
+        <link refid="plasma__1D_8c"/>
+      </node>
+      <node id="44">
+        <label>simulate/step/step_gc_cashkarp.c</label>
+        <link refid="step__gc__cashkarp_8c"/>
+      </node>
+      <node id="7">
+        <label>bbnbi5.c</label>
+        <link refid="bbnbi5_8c"/>
+      </node>
+      <node id="37">
+        <label>simulate/mccc/mccc_gc_euler.c</label>
+        <link refid="mccc__gc__euler_8c"/>
+      </node>
+      <node id="11">
+        <label>boozer.c</label>
+        <link refid="boozer_8c"/>
+      </node>
+      <node id="25">
+        <label>hdf5io/hdf5_nbi.c</label>
+        <link refid="hdf5__nbi_8c"/>
+      </node>
+      <node id="15">
+        <label>diag/dist_6D.c</label>
+        <link refid="dist__6D_8c"/>
+      </node>
+      <node id="30">
+        <label>hdf5io/hdf5_state.c</label>
+        <link refid="hdf5__state_8c"/>
+      </node>
+      <node id="22">
+        <label>hdf5io/hdf5_boozer.c</label>
+        <link refid="hdf5__boozer_8c"/>
+      </node>
+      <node id="42">
+        <label>simulate/step/step_fo_vpa.c</label>
+        <link refid="step__fo__vpa_8c"/>
+      </node>
+      <node id="18">
+        <label>diag/dist_rho6D.c</label>
+        <link refid="dist__rho6D_8c"/>
+      </node>
+      <node id="9">
+        <label>Bfield/B_STS.c</label>
+        <link refid="B__STS_8c"/>
+      </node>
+      <node id="21">
+        <label>hdf5io/hdf5_bfield.c</label>
+        <link refid="hdf5__bfield_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="consts_8h_1a02b01cde332fa86c92d54802cce7f3d2" prot="public" static="no">
+        <name>CONST_PI</name>
+        <initializer>3.1415926535897932384626</initializer>
+        <briefdescription>
+<para>pi <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="consts.h" line="11" column="9" bodyfile="consts.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="consts_8h_1a99afae74ef964a9048eb263452e6e158" prot="public" static="no">
+        <name>CONST_2PI</name>
+        <initializer>6.2831853071795862319959</initializer>
+        <briefdescription>
+<para>2*pi <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="consts.h" line="14" column="9" bodyfile="consts.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="consts_8h_1abef5a0b9d1c1ade75b76e0b3bb8a08f9" prot="public" static="no">
+        <name>CONST_SQRTPI</name>
+        <initializer>1.7724538509055160272982</initializer>
+        <briefdescription>
+<para>sqrt(pi) <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="consts.h" line="17" column="9" bodyfile="consts.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="consts_8h_1a48339a730ee12d23d732ee7ce96f0aa6" prot="public" static="no">
+        <name>CONST_C</name>
+        <initializer>299792458.0</initializer>
+        <briefdescription>
+<para>Speed of light [m/s] <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="consts.h" line="20" column="9" bodyfile="consts.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="consts_8h_1ae427b19ef34c352c69b3e565d55427b7" prot="public" static="no">
+        <name>CONST_C2</name>
+        <initializer>89875517873681760.0</initializer>
+        <briefdescription>
+<para>Speed of light squared [m^2/s^2] <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="consts.h" line="23" column="9" bodyfile="consts.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="consts_8h_1a0042abe6b0fe12725d0b111347ab7964" prot="public" static="no">
+        <name>CONST_U</name>
+        <initializer>1.660538921e-27</initializer>
+        <briefdescription>
+<para>Atomic mass unit in kilograms [kg] <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="consts.h" line="26" column="9" bodyfile="consts.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="consts_8h_1aa2d52037e91528e354a59fc909365f7c" prot="public" static="no">
+        <name>CONST_E</name>
+        <initializer>1.602176565e-19</initializer>
+        <briefdescription>
+<para>Elementary charge [C] <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="consts.h" line="29" column="9" bodyfile="consts.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="consts_8h_1ad156b50cceedcf435b0778f237f08c6e" prot="public" static="no">
+        <name>CONST_KB</name>
+        <initializer>1.3807e-23</initializer>
+        <briefdescription>
+<para>Boltzmann constant [J/K] <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="consts.h" line="32" column="9" bodyfile="consts.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="consts_8h_1a206d3d5b12456dfb6b7feb9a4fa12123" prot="public" static="no">
+        <name>CONST_M_E</name>
+        <initializer>9.1094e-31</initializer>
+        <briefdescription>
+<para>Electron mass [kg] <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="consts.h" line="35" column="9" bodyfile="consts.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="consts_8h_1a20089914a6ddfb8f5a40038bd72d3e9b" prot="public" static="no">
+        <name>CONST_E0</name>
+        <initializer>8.8542e-12</initializer>
+        <briefdescription>
+<para>Electric constant [m^-3*kg^-1*s^4*A^2] <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="consts.h" line="38" column="9" bodyfile="consts.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="consts_8h_1aa551b6d49a678019207aa16e1fff107f" prot="public" static="no">
+        <name>CONST_HBAR</name>
+        <initializer>1.0546e-34</initializer>
+        <briefdescription>
+<para>Reduced Planck constant [m^2*kg/s] <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="consts.h" line="41" column="9" bodyfile="consts.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="consts_8h_1a9c29d8c5706b9847ad9fb8b9d6762489" prot="public" static="no">
+        <name>CONST_MU0</name>
+        <initializer>1.25663706212e-6</initializer>
+        <briefdescription>
+<para>Magnetic constant [kg*m*s^-2*A^-2] <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="consts.h" line="44" column="9" bodyfile="consts.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Header file containing physical and mathematical constants. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CONSTS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CONSTS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ascot5_8h" kindref="compound">ascot5.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="consts_8h_1a02b01cde332fa86c92d54802cce7f3d2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CONST_PI<sp/><sp/><sp/><sp/><sp/>3.1415926535897932384626</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="consts_8h_1a99afae74ef964a9048eb263452e6e158" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CONST_2PI<sp/><sp/><sp/><sp/>6.2831853071795862319959</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="consts_8h_1abef5a0b9d1c1ade75b76e0b3bb8a08f9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CONST_SQRTPI<sp/>1.7724538509055160272982</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="consts_8h_1a48339a730ee12d23d732ee7ce96f0aa6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CONST_C<sp/><sp/>299792458.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="consts_8h_1ae427b19ef34c352c69b3e565d55427b7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CONST_C2<sp/>89875517873681760.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="consts_8h_1a0042abe6b0fe12725d0b111347ab7964" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CONST_U<sp/>1.660538921e-27</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="consts_8h_1aa2d52037e91528e354a59fc909365f7c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CONST_E<sp/>1.602176565e-19</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="consts_8h_1ad156b50cceedcf435b0778f237f08c6e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CONST_KB<sp/>1.3807e-23</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="consts_8h_1a206d3d5b12456dfb6b7feb9a4fa12123" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CONST_M_E<sp/>9.1094e-31</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="consts_8h_1a20089914a6ddfb8f5a40038bd72d3e9b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CONST_E0<sp/>8.8542e-12</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="consts_8h_1aa551b6d49a678019207aa16e1fff107f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CONST_HBAR<sp/>1.0546e-34</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="consts_8h_1a9c29d8c5706b9847ad9fb8b9d6762489" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CONST_MU0<sp/>1.25663706212e-6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="consts.h"/>
+  </compounddef>
+</doxygen>

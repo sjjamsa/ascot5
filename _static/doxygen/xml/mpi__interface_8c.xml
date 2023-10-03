@@ -1,0 +1,1223 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="mpi__interface_8c" kind="file" language="C++">
+    <compoundname>mpi_interface.c</compoundname>
+    <includes local="no">stddef.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes refid="ascot5_8h" local="yes">ascot5.h</includes>
+    <includes refid="diag_8h" local="yes">diag.h</includes>
+    <includes refid="mpi__interface_8h" local="yes">mpi_interface.h</includes>
+    <includes refid="particle_8h" local="yes">particle.h</includes>
+    <includes refid="simulate_8h" local="yes">simulate.h</includes>
+    <incdepgraph>
+      <node id="25">
+        <label>diag/dist_rho5D.h</label>
+        <link refid="dist__rho5D_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>plasma.h</label>
+        <link refid="plasma_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>diag/dist_5D.h</label>
+        <link refid="dist__5D_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>particle.h</label>
+        <link refid="particle_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>diag.h</label>
+        <link refid="diag_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>../spline/interp.h</label>
+        <link refid="interp_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>simulate.h</label>
+        <link refid="simulate_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>Bfield/B_GS.h</label>
+        <link refid="B__GS_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>wall.h</label>
+        <link refid="wall_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>asigma.h</label>
+        <link refid="asigma_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>plasma/plasma_1DS.h</label>
+        <link refid="plasma__1DS_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>mhd/mhd_nonstat.h</label>
+        <link refid="mhd__nonstat_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>stdlib.h</label>
+      </node>
+      <node id="51">
+        <label>simulate/mccc/mccc.h</label>
+        <link refid="mccc_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+      </node>
+      <node id="47">
+        <label>asigma/asigma_loc.h</label>
+        <link refid="asigma__loc_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="48">
+        <label>nbi.h</label>
+        <link refid="nbi_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>diag/diag_orb.h</label>
+        <link refid="diag__orb_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>omp.h</label>
+      </node>
+      <node id="52">
+        <label>mccc_wiener.h</label>
+        <link refid="mccc__wiener_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stddef.h</label>
+      </node>
+      <node id="38">
+        <label>neutral/N0_3D.h</label>
+        <link refid="N0__3D_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>B_field.h</label>
+        <link refid="B__field_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>mhd/mhd_stat.h</label>
+        <link refid="mhd__stat_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>Efield/E_1DS.h</label>
+        <link refid="E__1DS_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>neutral/N0_1D.h</label>
+        <link refid="N0__1D_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>plasma/plasma_1Dt.h</label>
+        <link refid="plasma__1Dt_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>neutral.h</label>
+        <link refid="neutral_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>mpi_interface.c</label>
+        <link refid="mpi__interface_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="49">
+        <label>random.h</label>
+        <link refid="random_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>mpi_interface.h</label>
+        <link refid="mpi__interface_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>error.h</label>
+        <link refid="error_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>diag/dist_com.h</label>
+        <link refid="dist__com_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>diag/diag_transcoef.h</label>
+        <link refid="diag__transcoef_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>E_field.h</label>
+        <link refid="E__field_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>plasma/plasma_1D.h</label>
+        <link refid="plasma__1D_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>time.h</label>
+      </node>
+      <node id="19">
+        <label>Bfield/B_TC.h</label>
+        <link refid="B__TC_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>../linint/linint.h</label>
+        <link refid="linint_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>Bfield/B_2DS.h</label>
+        <link refid="B__2DS_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>mhd.h</label>
+        <link refid="mhd_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>Efield/E_TC.h</label>
+        <link refid="E__TC_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>boozer.h</label>
+        <link refid="boozer_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>Bfield/B_3DS.h</label>
+        <link refid="B__3DS_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>math.h</label>
+        <link refid="math_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>diag/dist_6D.h</label>
+        <link refid="dist__6D_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>wall/wall_3d.h</label>
+        <link refid="wall__3d_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="50">
+        <label>offload.h</label>
+        <link refid="offload_8h"/>
+      </node>
+      <node id="12">
+        <label>stdio.h</label>
+      </node>
+      <node id="26">
+        <label>diag/dist_rho6D.h</label>
+        <link refid="dist__rho6D_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>Bfield/B_STS.h</label>
+        <link refid="B__STS_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>wall/wall_2d.h</label>
+        <link refid="wall__2d_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>ascot5.h</label>
+        <link refid="ascot5_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="mpi__interface_8c_1a55d0c264b9d53e5f511845a206feb54f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mpi_interface_init</definition>
+        <argsstring>(int argc, char **argv, sim_offload_data *sim, int *mpi_rank, int *mpi_size, int *mpi_root)</argsstring>
+        <name>mpi_interface_init</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <param>
+          <type><ref refid="structsim__offload__data" kindref="compound">sim_offload_data</ref> *</type>
+          <declname>sim</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>mpi_rank</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>mpi_size</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>mpi_root</declname>
+        </param>
+        <briefdescription>
+<para>Initialize MPI. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function initializes MPI and sets the mpi_rank and mpi_size accordingly. If compiled without MPI, mpi_rank and mpi_size given on command line are used. To be called before any other MPI calls.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>argc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>count of the command line arguments </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>argv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointers to the command line arguments </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sim</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to simulation offload struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mpi_rank</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to mpi_rank variable in main program </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mpi_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to mpi_size variable in main program </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mpi_root</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to mpi_root variable in main program </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mpi_interface.c" line="32" column="6" bodyfile="mpi_interface.c" bodystart="32" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="mpi__interface_8c_1ab50e9156ca6b024e2855fc6f051e96c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mpi_interface_finalize</definition>
+        <argsstring>()</argsstring>
+        <name>mpi_interface_finalize</name>
+        <briefdescription>
+<para>Finalize MPI. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function finalizes the MPI environment, to be called at the end of execution. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mpi_interface.c" line="64" column="6" bodyfile="mpi_interface.c" bodystart="64" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="mpi__interface_8c_1a7711f37cffe29430a885743ac3c3050d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mpi_my_particles</definition>
+        <argsstring>(int *start_index, int *n, int ntotal, int mpi_rank, int mpi_size)</argsstring>
+        <name>mpi_my_particles</name>
+        <param>
+          <type>int *</type>
+          <declname>start_index</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ntotal</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mpi_rank</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mpi_size</declname>
+        </param>
+        <briefdescription>
+<para>Divide markers to mpi processes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function divides ntotal markers evenly and returns the starting index and number of markers to be simulated for each process.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>start_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to variable for starting index in input markers </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to variable for number of markers for this process </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ntotal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>total number of markers in the simulation </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mpi_rank</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>rank of this MPI process </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mpi_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>total number of MPI processes </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mpi_interface.c" line="82" column="6" bodyfile="mpi_interface.c" bodystart="82" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="mpi__interface_8c_1a267a2b3da8d744e8e43dff189b6875b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mpi_gather_particlestate</definition>
+        <argsstring>(particle_state *ps, particle_state **psgathered, int *ngathered, int ntotal, int mpi_rank, int mpi_size, int mpi_root)</argsstring>
+        <name>mpi_gather_particlestate</name>
+        <param>
+          <type><ref refid="structparticle__state" kindref="compound">particle_state</ref> *</type>
+          <declname>ps</declname>
+        </param>
+        <param>
+          <type><ref refid="structparticle__state" kindref="compound">particle_state</ref> **</type>
+          <declname>psgathered</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>ngathered</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ntotal</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mpi_rank</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mpi_size</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mpi_root</declname>
+        </param>
+        <briefdescription>
+<para>Gather all particle states to the root process. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function gathers the particle states from each process to an array in the root process. In condor-style execution only particle states for current process are stored. An allocated array for gathered particle states is stored in psgathered and number of states in ngathered.</para>
+<para><xrefsect id="todo_1_todo000007"><xreftitle>Todo</xreftitle><xrefdescription><para>Could be done more cleanly with custom datatypes</para>
+</xrefdescription></xrefsect></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ps</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to array particle states for this process </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>psgathered</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to pointer to array where markers are gathered </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ngathered</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to variable for number of gathered markers </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ntotal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>total number of markers in the simulation </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mpi_rank</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>rank of this MPI process </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mpi_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>total number of MPI processes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mpi_root</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>rank of the root process </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mpi_interface.c" line="112" column="6" bodyfile="mpi_interface.c" bodystart="112" bodyend="275"/>
+      </memberdef>
+      <memberdef kind="function" id="mpi__interface_8c_1a6b149e4c10b749ba7b5e203862ab6430" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mpi_gather_diag</definition>
+        <argsstring>(diag_offload_data *data, real *offload_array, int ntotal, int mpi_rank, int mpi_size, int mpi_root)</argsstring>
+        <name>mpi_gather_diag</name>
+        <param>
+          <type><ref refid="structdiag__offload__data" kindref="compound">diag_offload_data</ref> *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>offload_array</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ntotal</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mpi_rank</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mpi_size</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mpi_root</declname>
+        </param>
+        <briefdescription>
+<para>Gather all diagnostics to the root process. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function gathers the distributions and orbits to the root process. Distributions are summed and orbit data is appended to the root process diagnostics array.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>diagnostics offload data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to diagnostics offload array </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ntotal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>total number of markers in the simulation </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mpi_rank</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>rank of this MPI process </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mpi_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>total number of MPI processes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mpi_root</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>rank of the root process </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mpi_interface.c" line="291" column="6" bodyfile="mpi_interface.c" bodystart="291" bodyend="366"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>MPI interface. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This module provides interfaces for communication with MPI. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>MPI</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;mpi.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stddef.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ascot5_8h" kindref="compound">ascot5.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="diag_8h" kindref="compound">diag.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mpi__interface_8h" kindref="compound">mpi_interface.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="particle_8h" kindref="compound">particle.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="simulate_8h" kindref="compound">simulate.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="mpi__interface_8c_1a55d0c264b9d53e5f511845a206feb54f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="mpi__interface_8c_1a55d0c264b9d53e5f511845a206feb54f" kindref="member">mpi_interface_init</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>argv,<sp/><ref refid="structsim__offload__data" kindref="compound">sim_offload_data</ref>*<sp/>sim,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>mpi_rank,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>mpi_size,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>mpi_root)<sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>MPI</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>provided;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>MPI_Init_thread(&amp;argc,<sp/>&amp;argv,<sp/>MPI_THREAD_FUNNELED,<sp/>&amp;provided);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>MPI_Comm_rank(MPI_COMM_WORLD,<sp/>mpi_rank);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>MPI_Comm_size(MPI_COMM_WORLD,<sp/>mpi_size);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>sim-&gt;<ref refid="structsim__offload__data_1a409826e5528d891048ba7407d47f241f" kindref="member">mpi_rank</ref><sp/>=<sp/>*mpi_rank;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>sim-&gt;<ref refid="structsim__offload__data_1ac1f001102767cad77961793f4b13fdcf" kindref="member">mpi_size</ref><sp/>=<sp/>*mpi_size;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>*mpi_root<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(sim-&gt;<ref refid="structsim__offload__data_1ac1f001102767cad77961793f4b13fdcf" kindref="member">mpi_size</ref><sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*mpi_rank<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*mpi_size<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*mpi_rank<sp/>=<sp/>sim-&gt;<ref refid="structsim__offload__data_1a409826e5528d891048ba7407d47f241f" kindref="member">mpi_rank</ref>;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*mpi_size<sp/>=<sp/>sim-&gt;<ref refid="structsim__offload__data_1ac1f001102767cad77961793f4b13fdcf" kindref="member">mpi_size</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>*mpi_root<sp/>=<sp/>*mpi_rank;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="mpi__interface_8c_1ab50e9156ca6b024e2855fc6f051e96c4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="mpi__interface_8c_1ab50e9156ca6b024e2855fc6f051e96c4" kindref="member">mpi_interface_finalize</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>MPI</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>MPI_Finalize();</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="mpi__interface_8c_1a7711f37cffe29430a885743ac3c3050d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="mpi__interface_8c_1a7711f37cffe29430a885743ac3c3050d" kindref="member">mpi_my_particles</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>start_index,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>n,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ntotal,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mpi_rank,</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mpi_size)<sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(mpi_rank<sp/>==<sp/>mpi_size-1)<sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*n<sp/>=<sp/>ntotal<sp/>-<sp/>mpi_rank<sp/>*<sp/>(ntotal<sp/>/<sp/>mpi_size);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*n<sp/>=<sp/>ntotal<sp/>/<sp/>mpi_size;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>*start_index<sp/>=<sp/>mpi_rank<sp/>*<sp/>(ntotal<sp/>/<sp/>mpi_size);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112" refid="mpi__interface_8c_1a267a2b3da8d744e8e43dff189b6875b8" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="mpi__interface_8c_1a267a2b3da8d744e8e43dff189b6875b8" kindref="member">mpi_gather_particlestate</ref>(<ref refid="structparticle__state" kindref="compound">particle_state</ref>*<sp/>ps,<sp/><ref refid="structparticle__state" kindref="compound">particle_state</ref>**<sp/>psgathered,</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>ngathered,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ntotal,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mpi_rank,</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mpi_size,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mpi_root)<sp/>{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>MPI</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n_real<sp/>=<sp/>32;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n_int<sp/>=<sp/>5;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n_err<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structparticle__state" kindref="compound">particle_state</ref>*<sp/>ps_all<sp/>=<sp/>malloc(ntotal<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structparticle__state" kindref="compound">particle_state</ref>));</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(mpi_rank<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>start_index,<sp/>n;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="mpi__interface_8c_1a7711f37cffe29430a885743ac3c3050d" kindref="member">mpi_my_particles</ref>(&amp;start_index,<sp/>&amp;n,<sp/>ntotal,<sp/>mpi_rank,<sp/>mpi_size);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>n;<sp/>j++)<sp/>{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ps_all[j]<sp/>=<sp/>ps[j];</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>1;<sp/>i<sp/>&lt;<sp/>mpi_size;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="mpi__interface_8c_1a7711f37cffe29430a885743ac3c3050d" kindref="member">mpi_my_particles</ref>(&amp;start_index,<sp/>&amp;n,<sp/>ntotal,<sp/>i,<sp/>mpi_size);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>realdata;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>realdata<sp/>=<sp/>malloc(n_real<sp/>*<sp/>n<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(realdata));</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a865b01f4cbb6f2bb3270e094934d3263" kindref="member">integer</ref>*<sp/>intdata;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>intdata<sp/>=<sp/>malloc(n_int<sp/>*<sp/>n<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(intdata));</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref>*<sp/>errdata;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>errdata<sp/>=<sp/>malloc(n_err<sp/>*<sp/>n<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(intdata));</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MPI_Recv(realdata,<sp/>n_real*n,<sp/>mpi_type_real,<sp/>i,<sp/>0,</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MPI_COMM_WORLD,<sp/>MPI_STATUS_IGNORE);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MPI_Recv(intdata,<sp/>n_int*n,<sp/>mpi_type_integer,<sp/>i,<sp/>0,</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MPI_COMM_WORLD,<sp/>MPI_STATUS_IGNORE);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MPI_Recv(errdata,<sp/>n_err*n,<sp/>mpi_type_a5err,<sp/>i,<sp/>0,</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MPI_COMM_WORLD,<sp/>MPI_STATUS_IGNORE);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>n;<sp/>j++)<sp/>{</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ps_all[start_index+j].<ref refid="structparticle__state_1a3f8be755cb8baac1b13a68d90c59c3f5" kindref="member">r</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>realdata[0*n+j];</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ps_all[start_index+j].<ref refid="structparticle__state_1aff41ea912d6616b74496ce6acb2e5b7e" kindref="member">phi</ref><sp/><sp/><sp/><sp/>=<sp/>realdata[1*n+j];</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ps_all[start_index+j].<ref refid="structparticle__state_1af550bffa561085f7c0b775bd43ccaed2" kindref="member">z</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>realdata[2*n+j];</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ps_all[start_index+j].<ref refid="structparticle__state_1aac9ea73afc147fa4aad9a3e0b1d62adc" kindref="member">ppar</ref><sp/><sp/><sp/>=<sp/>realdata[3*n+j];</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ps_all[start_index+j].<ref refid="structparticle__state_1a52ac6ad583818871d6dd6aee78d27779" kindref="member">mu</ref><sp/><sp/><sp/><sp/><sp/>=<sp/>realdata[4*n+j];</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ps_all[start_index+j].<ref refid="structparticle__state_1a32910eee2ba00869e56a165347883837" kindref="member">zeta</ref><sp/><sp/><sp/>=<sp/>realdata[5*n+j];</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ps_all[start_index+j].<ref refid="structparticle__state_1a327fd67d35cc4fb8f83e442109b8c846" kindref="member">rprt</ref><sp/><sp/><sp/>=<sp/>realdata[6*n+j];</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ps_all[start_index+j].<ref refid="structparticle__state_1a2ffcee71bbfed82201f3e3641756b6cb" kindref="member">phiprt</ref><sp/>=<sp/>realdata[7*n+j];</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ps_all[start_index+j].<ref refid="structparticle__state_1afe6f3b950482634327607b34de5fd70a" kindref="member">zprt</ref><sp/><sp/><sp/>=<sp/>realdata[8*n+j];</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ps_all[start_index+j].<ref refid="structparticle__state_1ae054cde64c773b1d4a762d520b91e66e" kindref="member">p_r</ref><sp/><sp/><sp/><sp/>=<sp/>realdata[9*n+j];</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ps_all[start_index+j].<ref refid="structparticle__state_1a22435dc975a3e26284b88e7d3e301d8a" kindref="member">p_phi</ref><sp/><sp/>=<sp/>realdata[10*n+j];</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ps_all[start_index+j].<ref refid="structparticle__state_1a70e5a31a5aab3fdf5ad11e5aa924ba38" kindref="member">p_z</ref><sp/><sp/><sp/><sp/>=<sp/>realdata[11*n+j];</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ps_all[start_index+j].<ref refid="structparticle__state_1ac2d207ee9934020ee0e5fa0740c5dc2e" kindref="member">mass</ref><sp/><sp/><sp/>=<sp/>realdata[12*n+j];</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ps_all[start_index+j].<ref refid="structparticle__state_1a23139c51384acefa9689e370bb471bb9" kindref="member">charge</ref><sp/>=<sp/>realdata[13*n+j];</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ps_all[start_index+j].<ref refid="structparticle__state_1ae5b792077ab165fa2175d7dcb7553b0e" kindref="member">anum</ref><sp/><sp/><sp/>=<sp/>intdata[0*n+j];</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ps_all[start_index+j].<ref refid="structparticle__state_1ac2ded6c45152ab0d1f4c39b2c2442fb0" kindref="member">znum</ref><sp/><sp/><sp/>=<sp/>intdata[1*n+j];</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ps_all[start_index+j].<ref refid="structparticle__state_1a1361c6ea896ed99423226c7bdcdd8aa4" kindref="member">weight</ref><sp/>=<sp/>realdata[14*n+j];</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ps_all[start_index+j].<ref refid="structparticle__state_1a17b0da1c3ecdcd972eb28f7b3f163eba" kindref="member">time</ref><sp/><sp/><sp/>=<sp/>realdata[15*n+j];</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ps_all[start_index+j].<ref refid="structparticle__state_1aa396877576f7a3bcecfae0ddefa84b0c" kindref="member">cputime</ref><sp/>=<sp/>realdata[16*n+j];</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ps_all[start_index+j].<ref refid="structparticle__state_1ab8ae01c7daaff543bbebcd5c59944b11" kindref="member">rho</ref><sp/><sp/><sp/><sp/>=<sp/>realdata[17*n+j];</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ps_all[start_index+j].<ref refid="structparticle__state_1a67998b97c3ee35af4c80f4135b7bd856" kindref="member">theta</ref><sp/><sp/>=<sp/>realdata[18*n+j];</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ps_all[start_index+j].<ref refid="structparticle__state_1a47d5709d5e17ec1129064a1eb702b895" kindref="member">id</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>intdata[2*n+j];</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ps_all[start_index+j].<ref refid="structparticle__state_1afba5ec956f0515668cba944ce1f02daf" kindref="member">endcond</ref><sp/><sp/>=<sp/>intdata[3*n+j];</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ps_all[start_index+j].<ref refid="structparticle__state_1a6c005013f55d58c7985d33c2dbfd5ef1" kindref="member">walltile</ref><sp/>=<sp/>intdata[4*n+j];</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ps_all[start_index+j].<ref refid="structparticle__state_1ab8c38c260bf35d18b4efc8a4d3f3c42e" kindref="member">B_r</ref><sp/><sp/><sp/><sp/>=<sp/>realdata[19*n+j];</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ps_all[start_index+j].<ref refid="structparticle__state_1a1f2fffa46d75cc9b4055222250753a5e" kindref="member">B_phi</ref><sp/><sp/>=<sp/>realdata[20*n+j];</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ps_all[start_index+j].<ref refid="structparticle__state_1a1260984dc0fc5d7ae30b7fe9a9cbd5e6" kindref="member">B_z</ref><sp/><sp/><sp/><sp/>=<sp/>realdata[21*n+j];</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ps_all[start_index+j].<ref refid="structparticle__state_1ac64189647aa40512c29a609adf5744be" kindref="member">B_r_dr</ref><sp/>=<sp/>realdata[22*n+j];</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ps_all[start_index+j].<ref refid="structparticle__state_1ad89fb268bfcbe2d0165be251abe01ddb" kindref="member">B_phi_dr</ref><sp/>=<sp/>realdata[23*n+j];</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ps_all[start_index+j].<ref refid="structparticle__state_1aab09ae9b71c12634da8be01ae2f8d0b3" kindref="member">B_z_dr</ref><sp/><sp/><sp/>=<sp/>realdata[24*n+j];</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ps_all[start_index+j].<ref refid="structparticle__state_1afe87a52e03d76b50c2ff6c61392cb242" kindref="member">B_r_dphi</ref><sp/>=<sp/>realdata[25*n+j];</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ps_all[start_index+j].<ref refid="structparticle__state_1a6ce8b04b942d4ed9c35b506fa98614f5" kindref="member">B_phi_dphi</ref><sp/>=<sp/>realdata[26*n+j];</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ps_all[start_index+j].<ref refid="structparticle__state_1aa6876cfa0d7b3ccd513c67b7d58ae9e3" kindref="member">B_z_dphi</ref><sp/>=<sp/>realdata[27*n+j];</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ps_all[start_index+j].<ref refid="structparticle__state_1a5ab2aeaf91174744fe61c542de1d466d" kindref="member">B_r_dz</ref><sp/><sp/><sp/>=<sp/>realdata[28*n+j];</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ps_all[start_index+j].<ref refid="structparticle__state_1a16c1e0bf43ce272246712d2e869f5413" kindref="member">B_phi_dz</ref><sp/>=<sp/>realdata[29*n+j];</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ps_all[start_index+j].<ref refid="structparticle__state_1a5f91b582caef69702f8ff981f8f32fa2" kindref="member">B_z_dz</ref><sp/><sp/><sp/>=<sp/>realdata[30*n+j];</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ps_all[start_index+j].<ref refid="structparticle__state_1a09fe2854a148d4eb8449f202cf932466" kindref="member">mileage</ref><sp/><sp/>=<sp/>realdata[31*n+j];</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ps_all[start_index+j].<ref refid="structparticle__state_1abefd34d479201d01ff36e4497def613d" kindref="member">err</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>errdata[j];</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(realdata);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(intdata);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(errdata);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>start_index,<sp/>n;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="mpi__interface_8c_1a7711f37cffe29430a885743ac3c3050d" kindref="member">mpi_my_particles</ref>(&amp;start_index,<sp/>&amp;n,<sp/>ntotal,<sp/>mpi_rank,<sp/>mpi_size);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>realdata;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>realdata<sp/>=<sp/>malloc(n_real<sp/>*<sp/>n<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(realdata));</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a865b01f4cbb6f2bb3270e094934d3263" kindref="member">integer</ref>*<sp/>intdata;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>intdata<sp/>=<sp/>malloc(n_int<sp/>*<sp/>n<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(intdata));</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref>*<sp/>errdata;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>errdata<sp/>=<sp/>malloc(n_err<sp/>*<sp/>n<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(intdata));</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>n;<sp/>j++)<sp/>{</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>realdata[0*n+j]<sp/>=<sp/>ps[j].<ref refid="structparticle__state_1a3f8be755cb8baac1b13a68d90c59c3f5" kindref="member">r</ref>;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>realdata[1*n+j]<sp/>=<sp/>ps[j].<ref refid="structparticle__state_1aff41ea912d6616b74496ce6acb2e5b7e" kindref="member">phi</ref>;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>realdata[2*n+j]<sp/>=<sp/>ps[j].<ref refid="structparticle__state_1af550bffa561085f7c0b775bd43ccaed2" kindref="member">z</ref>;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>realdata[3*n+j]<sp/>=<sp/>ps[j].<ref refid="structparticle__state_1aac9ea73afc147fa4aad9a3e0b1d62adc" kindref="member">ppar</ref>;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>realdata[4*n+j]<sp/>=<sp/>ps[j].<ref refid="structparticle__state_1a52ac6ad583818871d6dd6aee78d27779" kindref="member">mu</ref>;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>realdata[5*n+j]<sp/>=<sp/>ps[j].<ref refid="structparticle__state_1a32910eee2ba00869e56a165347883837" kindref="member">zeta</ref>;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>realdata[6*n+j]<sp/>=<sp/>ps[j].<ref refid="structparticle__state_1a327fd67d35cc4fb8f83e442109b8c846" kindref="member">rprt</ref>;</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>realdata[7*n+j]<sp/>=<sp/>ps[j].<ref refid="structparticle__state_1a2ffcee71bbfed82201f3e3641756b6cb" kindref="member">phiprt</ref>;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>realdata[8*n+j]<sp/>=<sp/>ps[j].<ref refid="structparticle__state_1afe6f3b950482634327607b34de5fd70a" kindref="member">zprt</ref>;</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>realdata[9*n+j]<sp/>=<sp/>ps[j].<ref refid="structparticle__state_1ae054cde64c773b1d4a762d520b91e66e" kindref="member">p_r</ref>;</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>realdata[10*n+j]<sp/>=<sp/>ps[j].<ref refid="structparticle__state_1a22435dc975a3e26284b88e7d3e301d8a" kindref="member">p_phi</ref>;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>realdata[11*n+j]<sp/>=<sp/>ps[j].<ref refid="structparticle__state_1a70e5a31a5aab3fdf5ad11e5aa924ba38" kindref="member">p_z</ref>;</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>realdata[12*n+j]<sp/>=<sp/>ps[j].<ref refid="structparticle__state_1ac2d207ee9934020ee0e5fa0740c5dc2e" kindref="member">mass</ref>;</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>realdata[13*n+j]<sp/>=<sp/>ps[j].<ref refid="structparticle__state_1a23139c51384acefa9689e370bb471bb9" kindref="member">charge</ref>;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>intdata[0*n+j]<sp/><sp/>=<sp/>ps[j].<ref refid="structparticle__state_1ae5b792077ab165fa2175d7dcb7553b0e" kindref="member">anum</ref>;</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>intdata[1*n+j]<sp/><sp/>=<sp/>ps[j].<ref refid="structparticle__state_1ac2ded6c45152ab0d1f4c39b2c2442fb0" kindref="member">znum</ref>;</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>realdata[14*n+j]<sp/>=<sp/>ps[j].<ref refid="structparticle__state_1a1361c6ea896ed99423226c7bdcdd8aa4" kindref="member">weight</ref>;</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>realdata[15*n+j]<sp/>=<sp/>ps[j].<ref refid="structparticle__state_1a17b0da1c3ecdcd972eb28f7b3f163eba" kindref="member">time</ref>;</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>realdata[16*n+j]<sp/>=<sp/>ps[j].<ref refid="structparticle__state_1aa396877576f7a3bcecfae0ddefa84b0c" kindref="member">cputime</ref>;</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>realdata[17*n+j]<sp/>=<sp/>ps[j].<ref refid="structparticle__state_1ab8ae01c7daaff543bbebcd5c59944b11" kindref="member">rho</ref>;</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>realdata[18*n+j]<sp/>=<sp/>ps[j].<ref refid="structparticle__state_1a67998b97c3ee35af4c80f4135b7bd856" kindref="member">theta</ref>;</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>intdata[2*n+j]<sp/>=<sp/>ps[j].<ref refid="structparticle__state_1a47d5709d5e17ec1129064a1eb702b895" kindref="member">id</ref>;</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>intdata[3*n+j]<sp/>=<sp/>ps[j].<ref refid="structparticle__state_1afba5ec956f0515668cba944ce1f02daf" kindref="member">endcond</ref>;</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>intdata[4*n+j]<sp/>=<sp/>ps[j].<ref refid="structparticle__state_1a6c005013f55d58c7985d33c2dbfd5ef1" kindref="member">walltile</ref>;</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>realdata[19*n+j]<sp/>=<sp/>ps[j].<ref refid="structparticle__state_1ab8c38c260bf35d18b4efc8a4d3f3c42e" kindref="member">B_r</ref>;</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>realdata[20*n+j]<sp/>=<sp/>ps[j].<ref refid="structparticle__state_1a1f2fffa46d75cc9b4055222250753a5e" kindref="member">B_phi</ref>;</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>realdata[21*n+j]<sp/>=<sp/>ps[j].<ref refid="structparticle__state_1a1260984dc0fc5d7ae30b7fe9a9cbd5e6" kindref="member">B_z</ref>;</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>realdata[22*n+j]<sp/>=<sp/>ps[j].<ref refid="structparticle__state_1ac64189647aa40512c29a609adf5744be" kindref="member">B_r_dr</ref>;</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>realdata[23*n+j]<sp/>=<sp/>ps[j].<ref refid="structparticle__state_1ad89fb268bfcbe2d0165be251abe01ddb" kindref="member">B_phi_dr</ref>;</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>realdata[24*n+j]<sp/>=<sp/>ps[j].<ref refid="structparticle__state_1aab09ae9b71c12634da8be01ae2f8d0b3" kindref="member">B_z_dr</ref>;</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>realdata[25*n+j]<sp/>=<sp/>ps[j].<ref refid="structparticle__state_1afe87a52e03d76b50c2ff6c61392cb242" kindref="member">B_r_dphi</ref>;</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>realdata[26*n+j]<sp/>=<sp/>ps[j].<ref refid="structparticle__state_1a6ce8b04b942d4ed9c35b506fa98614f5" kindref="member">B_phi_dphi</ref>;</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>realdata[27*n+j]<sp/>=<sp/>ps[j].<ref refid="structparticle__state_1aa6876cfa0d7b3ccd513c67b7d58ae9e3" kindref="member">B_z_dphi</ref>;</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>realdata[28*n+j]<sp/>=<sp/>ps[j].<ref refid="structparticle__state_1a5ab2aeaf91174744fe61c542de1d466d" kindref="member">B_r_dz</ref>;</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>realdata[29*n+j]<sp/>=<sp/>ps[j].<ref refid="structparticle__state_1a16c1e0bf43ce272246712d2e869f5413" kindref="member">B_phi_dz</ref>;</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>realdata[30*n+j]<sp/>=<sp/>ps[j].<ref refid="structparticle__state_1a5f91b582caef69702f8ff981f8f32fa2" kindref="member">B_z_dz</ref>;</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>realdata[31*n+j]<sp/>=<sp/>ps[j].<ref refid="structparticle__state_1a09fe2854a148d4eb8449f202cf932466" kindref="member">mileage</ref>;</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>errdata[j]<sp/>=<sp/>ps[j].<ref refid="structparticle__state_1abefd34d479201d01ff36e4497def613d" kindref="member">err</ref>;</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MPI_Send(realdata,<sp/>n_real*n,<sp/>mpi_type_real,<sp/>0,<sp/>0,<sp/>MPI_COMM_WORLD);</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MPI_Send(intdata,<sp/>n_int*n,<sp/>mpi_type_integer,<sp/>0,<sp/>0,<sp/>MPI_COMM_WORLD);</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MPI_Send(errdata,<sp/>n_err*n,<sp/>mpi_type_a5err,<sp/>0,<sp/>0,<sp/>MPI_COMM_WORLD);</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(realdata);</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(intdata);</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(errdata);</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/>*psgathered<sp/>=<sp/>ps_all;</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/>*ngathered<sp/>=<sp/>ntotal;</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>start_index,<sp/>n;</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpi__interface_8c_1a7711f37cffe29430a885743ac3c3050d" kindref="member">mpi_my_particles</ref>(&amp;start_index,<sp/>&amp;n,<sp/>ntotal,<sp/>mpi_rank,<sp/>mpi_size);</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Only<sp/>store<sp/>particles<sp/>for<sp/>this<sp/>process<sp/>in<sp/>Condor-style<sp/>execution<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structparticle__state" kindref="compound">particle_state</ref>*<sp/>ps_all<sp/>=<sp/>malloc(n<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structparticle__state" kindref="compound">particle_state</ref>));</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>n;<sp/>j++)<sp/>{</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ps_all[j]<sp/>=<sp/>ps[j];</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/>*psgathered<sp/>=<sp/>ps_all;</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/>*ngathered<sp/>=<sp/>n;</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight></codeline>
+<codeline lineno="291" refid="mpi__interface_8c_1a6b149e4c10b749ba7b5e203862ab6430" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="mpi__interface_8c_1a6b149e4c10b749ba7b5e203862ab6430" kindref="member">mpi_gather_diag</ref>(<ref refid="structdiag__offload__data" kindref="compound">diag_offload_data</ref>*<sp/>data,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>offload_array,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ntotal,</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mpi_rank,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mpi_size,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mpi_root)<sp/>{</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>MPI</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="294"><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(data-&gt;<ref refid="structdiag__offload__data_1aabca1d9e3ef4d773892d2e4365859a67" kindref="member">dist5D_collect</ref><sp/>||<sp/>data-&gt;<ref refid="structdiag__offload__data_1aa9ec9d30ef45b3cb2146b76d6018740d" kindref="member">distrho5D_collect</ref></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||<sp/>data-&gt;<ref refid="structdiag__offload__data_1aef02e17e9aaecc7439810fc422c6ce60" kindref="member">dist6D_collect</ref><sp/>||<sp/>data-&gt;<ref refid="structdiag__offload__data_1a34703f180dfda6f4f9fba6115ee3fc93" kindref="member">distrho6D_collect</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(mpi_rank<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MPI_Reduce(MPI_IN_PLACE,<sp/>offload_array,</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data-&gt;<ref refid="structdiag__offload__data_1a0e1a20cd89d005986cae64545761f5c1" kindref="member">offload_dist_length</ref>,<sp/>mpi_type_real,<sp/>MPI_SUM,</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/>MPI_COMM_WORLD);</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MPI_Reduce(offload_array,<sp/>offload_array,</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data-&gt;<ref refid="structdiag__offload__data_1a0e1a20cd89d005986cae64545761f5c1" kindref="member">offload_dist_length</ref>,<sp/>mpi_type_real,<sp/>MPI_SUM,</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/>MPI_COMM_WORLD);</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"></highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(data-&gt;<ref refid="structdiag__offload__data_1ad9102563ea0becdd37e81ea4626c3084" kindref="member">diagorb_collect</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(mpi_rank<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>1;<sp/>i<sp/>&lt;<sp/>mpi_size;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>start_index,<sp/>n;</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="mpi__interface_8c_1a7711f37cffe29430a885743ac3c3050d" kindref="member">mpi_my_particles</ref>(&amp;start_index,<sp/>&amp;n,<sp/>ntotal,<sp/>i,<sp/>mpi_size);</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"></highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>data-&gt;<ref refid="structdiag__offload__data_1afb9eada4ecfb08dbba726e86dab88658" kindref="member">diagorb</ref>.<ref refid="structdiag__orb__offload__data_1ab2e46e37a9d0c3cb3035bd6556f7a26e" kindref="member">Nfld</ref>;<sp/>j++)<sp/>{</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MPI_Recv(&amp;offload_array[data-&gt;<ref refid="structdiag__offload__data_1a6528f5757dee549f1a98a4a522b09ccf" kindref="member">offload_diagorb_index</ref></highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+j*data-&gt;<ref refid="structdiag__offload__data_1afb9eada4ecfb08dbba726e86dab88658" kindref="member">diagorb</ref>.<ref refid="structdiag__orb__offload__data_1a9d439e4f64efefde32da8a3643caf137" kindref="member">Nmrk</ref>*data-&gt;<ref refid="structdiag__offload__data_1afb9eada4ecfb08dbba726e86dab88658" kindref="member">diagorb</ref>.<ref refid="structdiag__orb__offload__data_1a26e54630ba9ed82db45609eb56d17b15" kindref="member">Npnt</ref></highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+start_index*data-&gt;<ref refid="structdiag__offload__data_1afb9eada4ecfb08dbba726e86dab88658" kindref="member">diagorb</ref>.<ref refid="structdiag__orb__offload__data_1a26e54630ba9ed82db45609eb56d17b15" kindref="member">Npnt</ref>],</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n*data-&gt;<ref refid="structdiag__offload__data_1afb9eada4ecfb08dbba726e86dab88658" kindref="member">diagorb</ref>.<ref refid="structdiag__orb__offload__data_1a26e54630ba9ed82db45609eb56d17b15" kindref="member">Npnt</ref>,<sp/>mpi_type_real,<sp/>i,<sp/>0,</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MPI_COMM_WORLD,<sp/>MPI_STATUS_IGNORE);</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>start_index,<sp/>n;</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="mpi__interface_8c_1a7711f37cffe29430a885743ac3c3050d" kindref="member">mpi_my_particles</ref>(&amp;start_index,<sp/>&amp;n,<sp/>ntotal,<sp/>mpi_rank,<sp/>mpi_size);</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"></highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>data-&gt;<ref refid="structdiag__offload__data_1afb9eada4ecfb08dbba726e86dab88658" kindref="member">diagorb</ref>.<ref refid="structdiag__orb__offload__data_1ab2e46e37a9d0c3cb3035bd6556f7a26e" kindref="member">Nfld</ref>;<sp/>j++)<sp/>{</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MPI_Send(&amp;offload_array[data-&gt;<ref refid="structdiag__offload__data_1a6528f5757dee549f1a98a4a522b09ccf" kindref="member">offload_diagorb_index</ref></highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+j*data-&gt;<ref refid="structdiag__offload__data_1afb9eada4ecfb08dbba726e86dab88658" kindref="member">diagorb</ref>.<ref refid="structdiag__orb__offload__data_1a9d439e4f64efefde32da8a3643caf137" kindref="member">Nmrk</ref>*data-&gt;<ref refid="structdiag__offload__data_1afb9eada4ecfb08dbba726e86dab88658" kindref="member">diagorb</ref>.<ref refid="structdiag__orb__offload__data_1a26e54630ba9ed82db45609eb56d17b15" kindref="member">Npnt</ref>],</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n*data-&gt;<ref refid="structdiag__offload__data_1afb9eada4ecfb08dbba726e86dab88658" kindref="member">diagorb</ref>.<ref refid="structdiag__orb__offload__data_1a26e54630ba9ed82db45609eb56d17b15" kindref="member">Npnt</ref>,<sp/>mpi_type_real,<sp/>0,<sp/>0,<sp/>MPI_COMM_WORLD);</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"></highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(data-&gt;<ref refid="structdiag__offload__data_1a5d8020ce200dc6c1b87b2a83cfda2527" kindref="member">diagtrcof_collect</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>3<sp/>fields<sp/>for<sp/>transport<sp/>coefficients,<sp/>id,<sp/>D,<sp/>K<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nfield<sp/>=<sp/>3;</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"></highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(mpi_rank<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>1;<sp/>i<sp/>&lt;<sp/>mpi_size;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>start_index,<sp/>n;</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="mpi__interface_8c_1a7711f37cffe29430a885743ac3c3050d" kindref="member">mpi_my_particles</ref>(&amp;start_index,<sp/>&amp;n,<sp/>ntotal,<sp/>i,<sp/>mpi_size);</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"></highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>nfield;<sp/>j++)<sp/>{</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MPI_Recv(&amp;offload_array[data-&gt;<ref refid="structdiag__offload__data_1a29cc0b194c237c7a9575e669fe84f3bf" kindref="member">offload_diagtrcof_index</ref></highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+j*data-&gt;<ref refid="structdiag__offload__data_1a6a59753e72823958726cc4fe2fb67f17" kindref="member">diagtrcof</ref>.<ref refid="structdiag__transcoef__offload__data_1a48f656b4352359b467791dac8ecf6df6" kindref="member">Nmrk</ref></highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+start_index],</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n,<sp/>mpi_type_real,<sp/>i,<sp/>0,</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MPI_COMM_WORLD,<sp/>MPI_STATUS_IGNORE);</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>start_index,<sp/>n;</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="mpi__interface_8c_1a7711f37cffe29430a885743ac3c3050d" kindref="member">mpi_my_particles</ref>(&amp;start_index,<sp/>&amp;n,<sp/>ntotal,<sp/>mpi_rank,<sp/>mpi_size);</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"></highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>nfield;<sp/>j++)<sp/>{</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MPI_Send(&amp;offload_array[data-&gt;<ref refid="structdiag__offload__data_1a29cc0b194c237c7a9575e669fe84f3bf" kindref="member">offload_diagtrcof_index</ref></highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+j*data-&gt;<ref refid="structdiag__offload__data_1a6a59753e72823958726cc4fe2fb67f17" kindref="member">diagtrcof</ref>.<ref refid="structdiag__transcoef__offload__data_1a48f656b4352359b467791dac8ecf6df6" kindref="member">Nmrk</ref>],</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n,<sp/>mpi_type_real,<sp/>0,<sp/>0,<sp/>MPI_COMM_WORLD);</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"></highlight></codeline>
+<codeline lineno="365"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="366"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="mpi_interface.c"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,555 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="N0__3D_8c" kind="file" language="C++">
+    <compoundname>N0_3D.c</compoundname>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes refid="math_8h" local="no">math.h</includes>
+    <includes local="no">string.h</includes>
+    <includes refid="ascot5_8h" local="yes">../ascot5.h</includes>
+    <includes refid="error_8h" local="yes">../error.h</includes>
+    <includes refid="print_8h" local="yes">../print.h</includes>
+    <includes refid="N0__3D_8h" local="yes">N0_3D.h</includes>
+    <includes refid="linint_8h" local="yes">../linint/linint.h</includes>
+    <incdepgraph>
+      <node id="13">
+        <label>../spline/interp.h</label>
+        <link refid="interp_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stdlib.h</label>
+      </node>
+      <node id="6">
+        <label>omp.h</label>
+      </node>
+      <node id="1">
+        <label>neutral/N0_3D.c</label>
+        <link refid="N0__3D_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>N0_3D.h</label>
+        <link refid="N0__3D_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>string.h</label>
+      </node>
+      <node id="9">
+        <label>../error.h</label>
+        <link refid="error_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>time.h</label>
+      </node>
+      <node id="12">
+        <label>../linint/linint.h</label>
+        <link refid="linint_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>math.h</label>
+        <link refid="math_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>stdio.h</label>
+      </node>
+      <node id="10">
+        <label>../print.h</label>
+        <link refid="print_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>ascot5.h</label>
+        <link refid="ascot5_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="N0__3D_8c_1aed777775a81471e183a0651d3abc27f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int N0_3D_init_offload</definition>
+        <argsstring>(N0_3D_offload_data *offload_data, real **offload_array)</argsstring>
+        <name>N0_3D_init_offload</name>
+        <param>
+          <type><ref refid="structN0__3D__offload__data" kindref="compound">N0_3D_offload_data</ref> *</type>
+          <declname>offload_data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> **</type>
+          <declname>offload_array</declname>
+        </param>
+        <briefdescription>
+<para>Initialize offload data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>offload_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload data array</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>zero if initialization succeeded </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="neutral/N0_3D.c" line="24" column="5" bodyfile="neutral/N0_3D.c" bodystart="24" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="N0__3D_8c_1a69baf9dad0fcaed8b8d78ef8f9a06848" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void N0_3D_free_offload</definition>
+        <argsstring>(N0_3D_offload_data *offload_data, real **offload_array)</argsstring>
+        <name>N0_3D_free_offload</name>
+        <param>
+          <type><ref refid="structN0__3D__offload__data" kindref="compound">N0_3D_offload_data</ref> *</type>
+          <declname>offload_data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> **</type>
+          <declname>offload_array</declname>
+        </param>
+        <briefdescription>
+<para>Free offload array and reset parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function deallocates the offload_array.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>offload_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to pointer to offload array </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="neutral/N0_3D.c" line="66" column="6" bodyfile="neutral/N0_3D.c" bodystart="66" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="N0__3D_8c_1ad7c1b9474c9e8bd48777c27a4a231c62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void N0_3D_init</definition>
+        <argsstring>(N0_3D_data *ndata, N0_3D_offload_data *offload_data, real *offload_array)</argsstring>
+        <name>N0_3D_init</name>
+        <param>
+          <type><ref refid="structN0__3D__data" kindref="compound">N0_3D_data</ref> *</type>
+          <declname>ndata</declname>
+        </param>
+        <param>
+          <type><ref refid="structN0__3D__offload__data" kindref="compound">N0_3D_offload_data</ref> *</type>
+          <declname>offload_data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>offload_array</declname>
+        </param>
+        <briefdescription>
+<para>Initialize neutral data on target. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function copies parameters from the offload struct to the struct on target and sets the data pointers on target struct to correct offsets in the offload array.</para>
+<para>Any initialization that requires any computations must have been done already when the offload struct was initialized.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ndata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to data struct on target </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload array </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="neutral/N0_3D.c" line="86" column="6" bodyfile="neutral/N0_3D.c" bodystart="86" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="N0__3D_8c_1a4cb09379a260afc23e94bcb29610b2b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref></type>
+        <definition>a5err N0_3D_eval_n0</definition>
+        <argsstring>(real *n0, real r, real phi, real z, N0_3D_data *ndata)</argsstring>
+        <name>N0_3D_eval_n0</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>n0</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>phi</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type><ref refid="structN0__3D__data" kindref="compound">N0_3D_data</ref> *</type>
+          <declname>ndata</declname>
+        </param>
+        <briefdescription>
+<para>Evaluate neutral density. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function evaluates the neutral density at the given coordinates using trilinear interpolation on the 3D neutral density data.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>n0 value will be stored in n0[0] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>r coordinate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>phi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>phi coordinate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>z coordinate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ndata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to neutral data struct</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>zero if evaluation succeeded </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="neutral/N0_3D.c" line="129" column="7" bodyfile="neutral/N0_3D.c" bodystart="129" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="N0__3D_8c_1a7d9ec9f9acf55fd91fa3f59938d9057f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref></type>
+        <definition>a5err N0_3D_eval_t0</definition>
+        <argsstring>(real *t0, real r, real phi, real z, N0_3D_data *ndata)</argsstring>
+        <name>N0_3D_eval_t0</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>t0</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>phi</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type><ref refid="structN0__3D__data" kindref="compound">N0_3D_data</ref> *</type>
+          <declname>ndata</declname>
+        </param>
+        <briefdescription>
+<para>Evaluate neutral temperature. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function evaluates the neutral temperature at the given coordinates using trilinear interpolation on the 3D neutral temperature data.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>t0 value will be stored in t0[0] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>r coordinate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>phi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>phi coordinate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>z coordinate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ndata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to neutral data struct</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>zero if evaluation succeeded </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="neutral/N0_3D.c" line="157" column="7" bodyfile="neutral/N0_3D.c" bodystart="157" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="N0__3D_8c_1a5d83802a6ced6d789936ea5bceef59f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int N0_3D_get_n_species</definition>
+        <argsstring>(N0_3D_data *ndata)</argsstring>
+        <name>N0_3D_get_n_species</name>
+        <param>
+          <type><ref refid="structN0__3D__data" kindref="compound">N0_3D_data</ref> *</type>
+          <declname>ndata</declname>
+        </param>
+        <briefdescription>
+<para>Return number of neutral species. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ndata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to neutral data struct</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>number of neutral species </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="neutral/N0_3D.c" line="178" column="5" bodyfile="neutral/N0_3D.c" bodystart="178" bodyend="180"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>3D neutral data with trilinear interpolation </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="math_8h" kindref="compound">math.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../math.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../ascot5.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../error.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../print.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="N0__3D_8h" kindref="compound">N0_3D.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../linint/linint.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="N0__3D_8c_1aed777775a81471e183a0651d3abc27f8" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="N0__3D_8c_1aed777775a81471e183a0651d3abc27f8" kindref="member">N0_3D_init_offload</ref>(<ref refid="structN0__3D__offload__data" kindref="compound">N0_3D_offload_data</ref>*<sp/>offload_data,</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>**<sp/>offload_array)<sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>N0_size<sp/>=<sp/>offload_data-&gt;<ref refid="structN0__3D__offload__data_1a0861553c4c1d1e4ad25eadd66472114e" kindref="member">n_r</ref><sp/>*<sp/>offload_data-&gt;<ref refid="structN0__3D__offload__data_1ae3a9c8bc64aefdf21db2af4aae234702" kindref="member">n_phi</ref><sp/>*<sp/>offload_data-&gt;<ref refid="structN0__3D__offload__data_1abfa33742a44925dbd9ef3e3bc0a369ee" kindref="member">n_z</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>T0_size<sp/>=<sp/>offload_data-&gt;<ref refid="structN0__3D__offload__data_1a0861553c4c1d1e4ad25eadd66472114e" kindref="member">n_r</ref><sp/>*<sp/>offload_data-&gt;<ref refid="structN0__3D__offload__data_1ae3a9c8bc64aefdf21db2af4aae234702" kindref="member">n_phi</ref><sp/>*<sp/>offload_data-&gt;<ref refid="structN0__3D__offload__data_1abfa33742a44925dbd9ef3e3bc0a369ee" kindref="member">n_z</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structN0__3D__offload__data_1ab7b21a2d401ef9161716fd52e03f73f8" kindref="member">offload_array_length</ref><sp/>=<sp/>offload_data-&gt;<ref refid="structN0__3D__offload__data_1afd206dc0445bcebc44e88898b987cd04" kindref="member">n_species</ref><sp/>*<sp/>N0_size</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>offload_data-&gt;<ref refid="structN0__3D__offload__data_1afd206dc0445bcebc44e88898b987cd04" kindref="member">n_species</ref><sp/>*<sp/>T0_size;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="print_8h_1a8520c71eb5db223009e5079e420bc398" kindref="member">print_out</ref>(VERBOSE_IO,<sp/></highlight><highlight class="stringliteral">&quot;\n3D<sp/>neutral<sp/>density<sp/>and<sp/>temperature<sp/>(N0_3D)\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="print_8h_1a8520c71eb5db223009e5079e420bc398" kindref="member">print_out</ref>(VERBOSE_IO,<sp/></highlight><highlight class="stringliteral">&quot;Grid:<sp/><sp/>nR<sp/>=<sp/>%4.d<sp/><sp/><sp/>Rmin<sp/>=<sp/>%3.3f<sp/><sp/><sp/>Rmax<sp/>=<sp/>%3.3f\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structN0__3D__offload__data_1a0861553c4c1d1e4ad25eadd66472114e" kindref="member">n_r</ref>,</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structN0__3D__offload__data_1ae1cbde85dbd0d5b67a611567a47265bb" kindref="member">r_min</ref>,<sp/>offload_data-&gt;<ref refid="structN0__3D__offload__data_1ae4d07b5eab0db639e4d1045b03f10c75" kindref="member">r_max</ref>);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="print_8h_1a8520c71eb5db223009e5079e420bc398" kindref="member">print_out</ref>(VERBOSE_IO,<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/>nz<sp/>=<sp/>%4.d<sp/><sp/><sp/>zmin<sp/>=<sp/>%3.3f<sp/><sp/><sp/>zmax<sp/>=<sp/>%3.3f\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structN0__3D__offload__data_1abfa33742a44925dbd9ef3e3bc0a369ee" kindref="member">n_z</ref>,</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structN0__3D__offload__data_1a7529ec3d60a1c7eebefe2789307c6b2e" kindref="member">z_min</ref>,<sp/>offload_data-&gt;<ref refid="structN0__3D__offload__data_1a150f4f1c1da4b049f4dbb29786d0e723" kindref="member">z_max</ref>);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="print_8h_1a8520c71eb5db223009e5079e420bc398" kindref="member">print_out</ref>(VERBOSE_IO,<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/>nphi<sp/>=<sp/>%4.d<sp/>phimin<sp/>=<sp/>%3.3f<sp/>phimax<sp/>=<sp/>%3.3f\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structN0__3D__offload__data_1ae3a9c8bc64aefdf21db2af4aae234702" kindref="member">n_phi</ref>,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structN0__3D__offload__data_1ab5b66f44abbe9951eee1c278a1d9c3d6" kindref="member">phi_min</ref>,<sp/>offload_data-&gt;<ref refid="structN0__3D__offload__data_1a89e55615ec62e2c490d792e4fd681d2e" kindref="member">phi_max</ref>);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="print_8h_1a8520c71eb5db223009e5079e420bc398" kindref="member">print_out</ref>(VERBOSE_IO,</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>Number<sp/>of<sp/>neutral<sp/>species<sp/>=<sp/>%d\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structN0__3D__offload__data_1afd206dc0445bcebc44e88898b987cd04" kindref="member">n_species</ref>);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="print_8h_1a8520c71eb5db223009e5079e420bc398" kindref="member">print_out</ref>(VERBOSE_IO,</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Species<sp/>Z/A<sp/><sp/><sp/>(Maxwellian)\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i<sp/>&lt;<sp/>offload_data-&gt;<ref refid="structN0__3D__offload__data_1afd206dc0445bcebc44e88898b987cd04" kindref="member">n_species</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="print_8h_1a8520c71eb5db223009e5079e420bc398" kindref="member">print_out</ref>(VERBOSE_IO,</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/><sp/>%3d/%3d<sp/>(%1d)<sp/><sp/><sp/><sp/>\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)(offload_data-&gt;<ref refid="structN0__3D__offload__data_1a53540af67ab475687048fc7bc3fd82b3" kindref="member">znum</ref>[i]),</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)(offload_data-&gt;<ref refid="structN0__3D__offload__data_1ae649417c45fdffbabea239abedf644a5" kindref="member">anum</ref>[i]),</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)(offload_data-&gt;<ref refid="structN0__3D__offload__data_1aa46854e6ce78aa39ea1a8cd7af7cbbe7" kindref="member">maxwellian</ref>[i]));</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="N0__3D_8c_1a69baf9dad0fcaed8b8d78ef8f9a06848" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="N0__3D_8c_1a69baf9dad0fcaed8b8d78ef8f9a06848" kindref="member">N0_3D_free_offload</ref>(<ref refid="structN0__3D__offload__data" kindref="compound">N0_3D_offload_data</ref>*<sp/>offload_data,</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>**<sp/>offload_array)<sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>free(*offload_array);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>*offload_array<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="N0__3D_8c_1ad7c1b9474c9e8bd48777c27a4a231c62" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="N0__3D_8c_1ad7c1b9474c9e8bd48777c27a4a231c62" kindref="member">N0_3D_init</ref>(<ref refid="structN0__3D__data" kindref="compound">N0_3D_data</ref>*<sp/>ndata,<sp/><ref refid="structN0__3D__offload__data" kindref="compound">N0_3D_offload_data</ref>*<sp/>offload_data,</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>offload_array)<sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>N0_size<sp/>=<sp/>offload_data-&gt;<ref refid="structN0__3D__offload__data_1a0861553c4c1d1e4ad25eadd66472114e" kindref="member">n_r</ref><sp/>*<sp/>offload_data-&gt;<ref refid="structN0__3D__offload__data_1ae3a9c8bc64aefdf21db2af4aae234702" kindref="member">n_phi</ref><sp/>*<sp/>offload_data-&gt;<ref refid="structN0__3D__offload__data_1abfa33742a44925dbd9ef3e3bc0a369ee" kindref="member">n_z</ref>;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>T0_size<sp/>=<sp/>offload_data-&gt;<ref refid="structN0__3D__offload__data_1a0861553c4c1d1e4ad25eadd66472114e" kindref="member">n_r</ref><sp/>*<sp/>offload_data-&gt;<ref refid="structN0__3D__offload__data_1ae3a9c8bc64aefdf21db2af4aae234702" kindref="member">n_phi</ref><sp/>*<sp/>offload_data-&gt;<ref refid="structN0__3D__offload__data_1abfa33742a44925dbd9ef3e3bc0a369ee" kindref="member">n_z</ref>;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>ndata-&gt;<ref refid="structN0__3D__data_1a88e25968fbacd73e219b352f3d0fc9de" kindref="member">n_species</ref><sp/><sp/>=<sp/>offload_data-&gt;<ref refid="structN0__3D__offload__data_1afd206dc0445bcebc44e88898b987cd04" kindref="member">n_species</ref>;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>offload_data-&gt;<ref refid="structN0__3D__offload__data_1afd206dc0445bcebc44e88898b987cd04" kindref="member">n_species</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ndata-&gt;<ref refid="structN0__3D__data_1af0624694454abfbdb7a8c0d3b87b97aa" kindref="member">anum</ref>[i]<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>offload_data-&gt;<ref refid="structN0__3D__offload__data_1ae649417c45fdffbabea239abedf644a5" kindref="member">anum</ref>[i];</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ndata-&gt;<ref refid="structN0__3D__data_1a5605e60e979834d6fc858c13373f6d1e" kindref="member">znum</ref>[i]<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>offload_data-&gt;<ref refid="structN0__3D__offload__data_1a53540af67ab475687048fc7bc3fd82b3" kindref="member">znum</ref>[i];</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ndata-&gt;<ref refid="structN0__3D__data_1acf502410aa0fcd56a9859d4ee27a70c0" kindref="member">maxwellian</ref>[i]<sp/>=<sp/>offload_data-&gt;<ref refid="structN0__3D__offload__data_1aa46854e6ce78aa39ea1a8cd7af7cbbe7" kindref="member">maxwellian</ref>[i];</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="linint_8h_1aba50c2050fe89fb32e318d9fd533bb23" kindref="member">linint3D_init</ref>(</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;ndata-&gt;<ref refid="structN0__3D__data_1a27a38d3b4e769a34aa534c3b48b8f4fe" kindref="member">n0</ref>[i],<sp/>&amp;offload_array[i<sp/>*<sp/>N0_size],</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structN0__3D__offload__data_1a0861553c4c1d1e4ad25eadd66472114e" kindref="member">n_r</ref>,<sp/>offload_data-&gt;<ref refid="structN0__3D__offload__data_1ae3a9c8bc64aefdf21db2af4aae234702" kindref="member">n_phi</ref>,<sp/>offload_data-&gt;<ref refid="structN0__3D__offload__data_1abfa33742a44925dbd9ef3e3bc0a369ee" kindref="member">n_z</ref>,</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="interp_8h_1a65e5120fbe667470941a6bd9258b97afa66bcb6506f4bbd571f4ba3bc80114cec" kindref="member">NATURALBC</ref>,<sp/><ref refid="interp_8h_1a65e5120fbe667470941a6bd9258b97afa8b66be978239727ccd08c3060d18f72e" kindref="member">PERIODICBC</ref>,<sp/><ref refid="interp_8h_1a65e5120fbe667470941a6bd9258b97afa66bcb6506f4bbd571f4ba3bc80114cec" kindref="member">NATURALBC</ref>,</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structN0__3D__offload__data_1ae1cbde85dbd0d5b67a611567a47265bb" kindref="member">r_min</ref>,<sp/>offload_data-&gt;<ref refid="structN0__3D__offload__data_1ae4d07b5eab0db639e4d1045b03f10c75" kindref="member">r_max</ref>,</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structN0__3D__offload__data_1ab5b66f44abbe9951eee1c278a1d9c3d6" kindref="member">phi_min</ref>,<sp/>offload_data-&gt;<ref refid="structN0__3D__offload__data_1a89e55615ec62e2c490d792e4fd681d2e" kindref="member">phi_max</ref>,</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structN0__3D__offload__data_1a7529ec3d60a1c7eebefe2789307c6b2e" kindref="member">z_min</ref>,<sp/>offload_data-&gt;<ref refid="structN0__3D__offload__data_1a150f4f1c1da4b049f4dbb29786d0e723" kindref="member">z_max</ref>);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="linint_8h_1aba50c2050fe89fb32e318d9fd533bb23" kindref="member">linint3D_init</ref>(</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;ndata-&gt;<ref refid="structN0__3D__data_1a27a005e11a58423d634ee404c67b49b8" kindref="member">t0</ref>[i],</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;offload_array[i<sp/>*<sp/>T0_size<sp/>+<sp/>offload_data-&gt;<ref refid="structN0__3D__offload__data_1afd206dc0445bcebc44e88898b987cd04" kindref="member">n_species</ref><sp/>*<sp/>N0_size],</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structN0__3D__offload__data_1a0861553c4c1d1e4ad25eadd66472114e" kindref="member">n_r</ref>,<sp/>offload_data-&gt;<ref refid="structN0__3D__offload__data_1ae3a9c8bc64aefdf21db2af4aae234702" kindref="member">n_phi</ref>,<sp/>offload_data-&gt;<ref refid="structN0__3D__offload__data_1abfa33742a44925dbd9ef3e3bc0a369ee" kindref="member">n_z</ref>,</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="interp_8h_1a65e5120fbe667470941a6bd9258b97afa66bcb6506f4bbd571f4ba3bc80114cec" kindref="member">NATURALBC</ref>,<sp/><ref refid="interp_8h_1a65e5120fbe667470941a6bd9258b97afa8b66be978239727ccd08c3060d18f72e" kindref="member">PERIODICBC</ref>,<sp/><ref refid="interp_8h_1a65e5120fbe667470941a6bd9258b97afa66bcb6506f4bbd571f4ba3bc80114cec" kindref="member">NATURALBC</ref>,</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structN0__3D__offload__data_1ae1cbde85dbd0d5b67a611567a47265bb" kindref="member">r_min</ref>,<sp/>offload_data-&gt;<ref refid="structN0__3D__offload__data_1ae4d07b5eab0db639e4d1045b03f10c75" kindref="member">r_max</ref>,</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structN0__3D__offload__data_1ab5b66f44abbe9951eee1c278a1d9c3d6" kindref="member">phi_min</ref>,<sp/>offload_data-&gt;<ref refid="structN0__3D__offload__data_1a89e55615ec62e2c490d792e4fd681d2e" kindref="member">phi_max</ref>,</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structN0__3D__offload__data_1a7529ec3d60a1c7eebefe2789307c6b2e" kindref="member">z_min</ref>,<sp/>offload_data-&gt;<ref refid="structN0__3D__offload__data_1a150f4f1c1da4b049f4dbb29786d0e723" kindref="member">z_max</ref>);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129" refid="N0__3D_8c_1a4cb09379a260afc23e94bcb29610b2b1" refkind="member"><highlight class="normal"><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref><sp/><ref refid="N0__3D_8c_1a4cb09379a260afc23e94bcb29610b2b1" kindref="member">N0_3D_eval_n0</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>n0,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>phi,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z,<sp/><ref refid="structN0__3D__data" kindref="compound">N0_3D_data</ref>*<sp/>ndata)<sp/>{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref><sp/>err<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>interperr<sp/>=<sp/>0;<sp/></highlight><highlight class="comment">/*<sp/>If<sp/>error<sp/>happened<sp/>during<sp/>interpolation<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;ndata-&gt;<ref refid="structN0__3D__data_1a88e25968fbacd73e219b352f3d0fc9de" kindref="member">n_species</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>interperr<sp/>+=<sp/><ref refid="linint_8h_1a42fa9b4b66e284c6785ed150538c12ed" kindref="member">linint3D_eval_f</ref>(&amp;n0[i],<sp/>&amp;ndata-&gt;<ref refid="structN0__3D__data_1a27a38d3b4e769a34aa534c3b48b8f4fe" kindref="member">n0</ref>[i],<sp/>r,<sp/>phi,<sp/>z);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(interperr)<sp/>{</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="error_8h_1a580a0b8b4a823a26a00b2f83d9343bc4" kindref="member">error_raise</ref>(<ref refid="error_8h_1a6756b9f30781ed8ca8ce938e49ad9d92aaa34d7aa427b982efa61030ebc069963" kindref="member">ERR_INPUT_EVALUATION</ref>,<sp/>__LINE__,<sp/><ref refid="error_8h_1a4e101179605aba551caa2576fd83a1dda033d1c052ba9d193de05fec4c5962a0f" kindref="member">EF_N0_3D</ref>);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>err;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157" refid="N0__3D_8c_1a7d9ec9f9acf55fd91fa3f59938d9057f" refkind="member"><highlight class="normal"><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref><sp/><ref refid="N0__3D_8c_1a7d9ec9f9acf55fd91fa3f59938d9057f" kindref="member">N0_3D_eval_t0</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>t0,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>phi,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z,<sp/><ref refid="structN0__3D__data" kindref="compound">N0_3D_data</ref>*<sp/>ndata)<sp/>{</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="error_8h_1a3bca029fa2975420f00b89f3cb38872e" kindref="member">a5err</ref><sp/>err<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>interperr<sp/>=<sp/>0;<sp/></highlight><highlight class="comment">/*<sp/>If<sp/>error<sp/>happened<sp/>during<sp/>interpolation<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;ndata-&gt;<ref refid="structN0__3D__data_1a88e25968fbacd73e219b352f3d0fc9de" kindref="member">n_species</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>interperr<sp/>+=<sp/><ref refid="linint_8h_1a42fa9b4b66e284c6785ed150538c12ed" kindref="member">linint3D_eval_f</ref>(&amp;t0[i],<sp/>&amp;ndata-&gt;<ref refid="structN0__3D__data_1a27a005e11a58423d634ee404c67b49b8" kindref="member">t0</ref>[i],<sp/>r,<sp/>phi,<sp/>z);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(interperr)<sp/>{</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="error_8h_1a580a0b8b4a823a26a00b2f83d9343bc4" kindref="member">error_raise</ref>(<ref refid="error_8h_1a6756b9f30781ed8ca8ce938e49ad9d92aaa34d7aa427b982efa61030ebc069963" kindref="member">ERR_INPUT_EVALUATION</ref>,<sp/>__LINE__,<sp/><ref refid="error_8h_1a4e101179605aba551caa2576fd83a1dda033d1c052ba9d193de05fec4c5962a0f" kindref="member">EF_N0_3D</ref>);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>err;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178" refid="N0__3D_8c_1a5d83802a6ced6d789936ea5bceef59f5" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="N0__3D_8c_1a5d83802a6ced6d789936ea5bceef59f5" kindref="member">N0_3D_get_n_species</ref>(<ref refid="structN0__3D__data" kindref="compound">N0_3D_data</ref>*<sp/>ndata)<sp/>{</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ndata-&gt;<ref refid="structN0__3D__data_1a88e25968fbacd73e219b352f3d0fc9de" kindref="member">n_species</ref>;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="neutral/N0_3D.c"/>
+  </compounddef>
+</doxygen>

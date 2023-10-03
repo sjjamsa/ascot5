@@ -1,0 +1,1342 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="wall__3d_8c" kind="file" language="C++">
+    <compoundname>wall_3d.c</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes refid="math_8h" local="no">math.h</includes>
+    <includes refid="ascot5_8h" local="yes">../ascot5.h</includes>
+    <includes refid="wall__3d_8h" local="yes">wall_3d.h</includes>
+    <includes refid="list_8h" local="yes">../list.h</includes>
+    <includes refid="octree_8h" local="yes">../octree.h</includes>
+    <includes refid="print_8h" local="yes">../print.h</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>stdlib.h</label>
+      </node>
+      <node id="6">
+        <label>omp.h</label>
+      </node>
+      <node id="10">
+        <label>../octree.h</label>
+        <link refid="octree_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>time.h</label>
+      </node>
+      <node id="4">
+        <label>math.h</label>
+        <link refid="math_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>wall/wall_3d.c</label>
+        <link refid="wall__3d_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>wall_3d.h</label>
+        <link refid="wall__3d_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+      </node>
+      <node id="9">
+        <label>../list.h</label>
+        <link refid="list_8h"/>
+      </node>
+      <node id="11">
+        <label>../print.h</label>
+        <link refid="print_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>ascot5.h</label>
+        <link refid="ascot5_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="wall__3d_8c_1a95776be277218fa57c28c4b7f2154eca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wall_3d_init_offload</definition>
+        <argsstring>(wall_3d_offload_data *offload_data, real **offload_array, int **int_offload_array)</argsstring>
+        <name>wall_3d_init_offload</name>
+        <param>
+          <type><ref refid="structwall__3d__offload__data" kindref="compound">wall_3d_offload_data</ref> *</type>
+          <declname>offload_data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> **</type>
+          <declname>offload_array</declname>
+        </param>
+        <param>
+          <type>int **</type>
+          <declname>int_offload_array</declname>
+        </param>
+        <briefdescription>
+<para>Initialize 3D wall data and check inputs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Before calling this function, the offload struct is expected to hold triangle positions as</para>
+<para>[x1_1, y1_1, z1_1, x2_1, y2_1, z2_1, x3_1, y3_1, z3_1,... ],</para>
+<para>where first index is for the triangle vertex and second for the triangle itself.</para>
+<para>This function fill rest of the offload struct and constructs the octree, while also printing some values as sanity check.</para>
+<para>The default octree depth is defined by macro WALL_OCTREE_DEPTH in <ref refid="wall__3d_8h" kindref="compound">wall_3d.h</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>offload_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload array </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload array containing integers</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>zero if initialization succeeded </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="wall/wall_3d.c" line="44" column="5" bodyfile="wall/wall_3d.c" bodystart="44" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="wall__3d_8c_1abd94f5ab151031ee4dd86e757557c3c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wall_3d_free_offload</definition>
+        <argsstring>(wall_3d_offload_data *offload_data, real **offload_array, int **int_offload_array)</argsstring>
+        <name>wall_3d_free_offload</name>
+        <param>
+          <type><ref refid="structwall__3d__offload__data" kindref="compound">wall_3d_offload_data</ref> *</type>
+          <declname>offload_data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> **</type>
+          <declname>offload_array</declname>
+        </param>
+        <param>
+          <type>int **</type>
+          <declname>int_offload_array</declname>
+        </param>
+        <briefdescription>
+<para>Free offload array and reset parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function deallocates the offload_array.</para>
+<para>This function is host only.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>offload_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload array </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload array containing integers </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="wall/wall_3d.c" line="110" column="6" bodyfile="wall/wall_3d.c" bodystart="110" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="wall__3d_8c_1a497356fffb82793491c87d8d375761e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wall_3d_init</definition>
+        <argsstring>(wall_3d_data *w, wall_3d_offload_data *offload_data, real *offload_array, int *int_offload_array)</argsstring>
+        <name>wall_3d_init</name>
+        <param>
+          <type><ref refid="structwall__3d__data" kindref="compound">wall_3d_data</ref> *</type>
+          <declname>w</declname>
+        </param>
+        <param>
+          <type><ref refid="structwall__3d__offload__data" kindref="compound">wall_3d_offload_data</ref> *</type>
+          <declname>offload_data</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>offload_array</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>int_offload_array</declname>
+        </param>
+        <briefdescription>
+<para>Initialize wall data struct on target. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function copies the wall parameters from the offload struct to the struct on target and sets the wall data pointers to correct offsets in the offload array.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>w</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to data struct on target </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to offload data struct </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>offload array </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int_offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>offload array containing integers </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="wall/wall_3d.c" line="131" column="6" bodyfile="wall/wall_3d.c" bodystart="131" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="wall__3d_8c_1a1420772005932496348e1ce1fbb06587" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wall_3d_init_tree</definition>
+        <argsstring>(wall_3d_data *w, real *offload_array)</argsstring>
+        <name>wall_3d_init_tree</name>
+        <param>
+          <type><ref refid="structwall__3d__data" kindref="compound">wall_3d_data</ref> *</type>
+          <declname>w</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>offload_array</declname>
+        </param>
+        <briefdescription>
+<para>Construct wall octree iteratively. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs the octree array by iterating through all wall triangles and octree grid to identify triangles belonging to each grid cell.</para>
+<para>Slow, only for testing purposes.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>w</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to wall data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>offload array </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="wall/wall_3d.c" line="162" column="6" bodyfile="wall/wall_3d.c" bodystart="162" bodyend="229"/>
+      </memberdef>
+      <memberdef kind="function" id="wall__3d_8c_1ab918f99749efff559370a4e45004412b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wall_3d_init_octree</definition>
+        <argsstring>(wall_3d_offload_data *w, real *offload_array, int **tree_array)</argsstring>
+        <name>wall_3d_init_octree</name>
+        <param>
+          <type><ref refid="structwall__3d__offload__data" kindref="compound">wall_3d_offload_data</ref> *</type>
+          <declname>w</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>offload_array</declname>
+        </param>
+        <param>
+          <type>int **</type>
+          <declname>tree_array</declname>
+        </param>
+        <briefdescription>
+<para>Construct wall octree recursively. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs the octree array by iterating through all wall triangles and placing them into an octree structure</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>w</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to wall data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offload_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the offload array </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tree_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to array storing what octree cells contain which triangles </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="wall/wall_3d.c" line="242" column="6" bodyfile="wall/wall_3d.c" bodystart="242" bodyend="321"/>
+      </memberdef>
+      <memberdef kind="function" id="wall__3d_8c_1aa387551bbbe9f7352a567cd466794ecc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wall_3d_hit_wall</definition>
+        <argsstring>(real r1, real phi1, real z1, real r2, real phi2, real z2, wall_3d_data *wdata, real *w_coll)</argsstring>
+        <name>wall_3d_hit_wall</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>r1</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>phi1</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>z1</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>r2</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>phi2</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>z2</declname>
+        </param>
+        <param>
+          <type><ref refid="structwall__3d__data" kindref="compound">wall_3d_data</ref> *</type>
+          <declname>wdata</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>w_coll</declname>
+        </param>
+        <briefdescription>
+<para>Check if trajectory from (r1, phi1, z1) to (r2, phi2, z2) intersects the wall using the octree structure. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>r1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>start point R coordinate [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>phi1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>start point phi coordinate [rad] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>start point z coordinate [rad] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>end point R coordinate [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>phi2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>end point phi coordinate [rad] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>end point z coordinate [rad] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>wdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to data struct on target </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>w_coll</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer for storing the parameter in P = P1 + w_coll * (P2-P1), where P is the point where the collision occurred.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>id, which is the first element id if hit, zero otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="wall/wall_3d.c" line="339" column="5" bodyfile="wall/wall_3d.c" bodystart="339" bodyend="401"/>
+      </memberdef>
+      <memberdef kind="function" id="wall__3d_8c_1a4f188446a503d514eac62491fc3fa3af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wall_3d_hit_wall_full</definition>
+        <argsstring>(real r1, real phi1, real z1, real r2, real phi2, real z2, wall_3d_data *wdata, real *w_coll)</argsstring>
+        <name>wall_3d_hit_wall_full</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>r1</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>phi1</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>z1</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>r2</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>phi2</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>z2</declname>
+        </param>
+        <param>
+          <type><ref refid="structwall__3d__data" kindref="compound">wall_3d_data</ref> *</type>
+          <declname>wdata</declname>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref> *</type>
+          <declname>w_coll</declname>
+        </param>
+        <briefdescription>
+<para>Check if trajectory from (r1, phi1, z1) to (r2, phi2, z2) intersects the wall against all triangles. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>r1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>start point R coordinate [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>phi1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>start point phi coordinate [rad] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>start point z coordinate [rad] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>end point R coordinate [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>phi2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>end point phi coordinate [rad] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>end point z coordinate [rad] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>wdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to data struct on target </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>w_coll</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer for storing the parameter in P = P1 + w_coll * (P2-P1), where P is the point where the collision occurred.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>id is wall element id if hit, zero otherwise* </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="wall/wall_3d.c" line="419" column="5" bodyfile="wall/wall_3d.c" bodystart="419" bodyend="451"/>
+      </memberdef>
+      <memberdef kind="function" id="wall__3d_8c_1a10ecf6ad1ca68351067111cf6dfdec9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wall_3d_tri_in_cube</definition>
+        <argsstring>(real t1[3], real t2[3], real t3[3], real bb1[3], real bb2[3])</argsstring>
+        <name>wall_3d_tri_in_cube</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>t1</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>t2</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>t3</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>bb1</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>bb2</declname>
+          <array>[3]</array>
+        </param>
+        <briefdescription>
+<para>Check if any part of a triangle is inside a box. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>xyz coordinates of first triangle vertex [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>xyz coordinates of second triangle vertex [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t3</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>xyz coordinates of third triangle vertex [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bb1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>bounding box minimum xyz coordinates [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bb2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>bounding box maximum xyz coordinates [m]</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>zero if not any part of the triangle is within the box </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="wall/wall_3d.c" line="464" column="5" bodyfile="wall/wall_3d.c" bodystart="464" bodyend="527"/>
+      </memberdef>
+      <memberdef kind="function" id="wall__3d_8c_1a64ae89b58068702c9e084b80cd78fd1b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double wall_3d_tri_collision</definition>
+        <argsstring>(real q1[3], real q2[3], real t1[3], real t2[3], real t3[3])</argsstring>
+        <name>wall_3d_tri_collision</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>q1</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>q2</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>t1</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>t2</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>t3</declname>
+          <array>[3]</array>
+        </param>
+        <briefdescription>
+<para>Check if a line segment intersects a triangle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This routine implements the Möller-Trumbore algorithm.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>q1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>line segment start point xyz coordinates [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>q2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>line segment end point xyz coordinates [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>xyz coordinates of first triangle vertex [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>xyz coordinates of second triangle vertex [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t3</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>xyz coordinates of third triangle vertex [m]</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A positive number w which is defined so that vector q1 + w*(q2-q1) is the intersection point. A negative number is returned if no there is no intersection </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="wall/wall_3d.c" line="544" column="8" bodyfile="wall/wall_3d.c" bodystart="544" bodyend="605"/>
+      </memberdef>
+      <memberdef kind="function" id="wall__3d_8c_1ae7d0f1f8ac2ab55fa76ba1dd377f689d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wall_3d_quad_collision</definition>
+        <argsstring>(real q1[3], real q2[3], real t1[3], real t2[3], real t3[3], real t4[3])</argsstring>
+        <name>wall_3d_quad_collision</name>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>q1</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>q2</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>t1</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>t2</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>t3</declname>
+          <array>[3]</array>
+        </param>
+        <param>
+          <type><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref></type>
+          <declname>t4</declname>
+          <array>[3]</array>
+        </param>
+        <briefdescription>
+<para>Check if a line segment intersects a quad (assumed planar) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>q1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>line segment start point xyz coordinates [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>q2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>line segment end point xyz coordinates [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>xyz coordinates of first quad vertex [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>xyz coordinates of second quad vertex [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t3</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>xyz coordinates of third quad vertex [m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t4</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>xyz coordinates of fourth quad vertex [m]</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Zero if no intersection, positive number otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="wall/wall_3d.c" line="619" column="5" bodyfile="wall/wall_3d.c" bodystart="619" bodyend="626"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>3D wall collision checks </para>
+    </briefdescription>
+    <detaileddescription>
+<para>3D wall model where wall consists of small triangles that form a surface mesh. A wall collision happens when a marker intersects a wall triangle&apos;s plane. During initialization, the computational model is divided into smaller cell using octree, and wall triangles are divided according to which cell(s) they inhabit. Collision checks are only made with respect to triangles that are in the same cell as the marker. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="math_8h" kindref="compound">math.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../ascot5.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="wall__3d_8h" kindref="compound">wall_3d.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../math.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../list.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../octree.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../print.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="wall__3d_8c_1a95776be277218fa57c28c4b7f2154eca" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="wall__3d_8c_1a95776be277218fa57c28c4b7f2154eca" kindref="member">wall_3d_init_offload</ref>(<ref refid="structwall__3d__offload__data" kindref="compound">wall_3d_offload_data</ref>*<sp/>offload_data,</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>**<sp/>offload_array,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">**<sp/>int_offload_array)<sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Find<sp/>min<sp/>&amp;<sp/>max<sp/>values<sp/>of<sp/>the<sp/>volume<sp/>occupied<sp/>by<sp/>the<sp/>wall<sp/>triangles.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>xmin<sp/>=<sp/>(*offload_array)[0],<sp/>xmax<sp/>=<sp/>(*offload_array)[0];</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>ymin<sp/>=<sp/>(*offload_array)[1],<sp/>ymax<sp/>=<sp/>(*offload_array)[1];</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>zmin<sp/>=<sp/>(*offload_array)[2],<sp/>zmax<sp/>=<sp/>(*offload_array)[2];</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;offload_data-&gt;<ref refid="structwall__3d__offload__data_1a5db0c2f711e3ea4edf7587b23552e337" kindref="member">n</ref>*3;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>xmin<sp/>=<sp/>fmin(<sp/>xmin,<sp/>(*offload_array)[i*3<sp/>+<sp/>0]<sp/>);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>xmax<sp/>=<sp/>fmax(<sp/>xmax,<sp/>(*offload_array)[i*3<sp/>+<sp/>0]<sp/>);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ymin<sp/>=<sp/>fmin(<sp/>ymin,<sp/>(*offload_array)[i*3<sp/>+<sp/>1]<sp/>);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ymax<sp/>=<sp/>fmax(<sp/>ymax,<sp/>(*offload_array)[i*3<sp/>+<sp/>1]<sp/>);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>zmin<sp/>=<sp/>fmin(<sp/>zmin,<sp/>(*offload_array)[i*3<sp/>+<sp/>2]<sp/>);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>zmax<sp/>=<sp/>fmax(<sp/>zmax,<sp/>(*offload_array)[i*3<sp/>+<sp/>2]<sp/>);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Add<sp/>a<sp/>little<sp/>bit<sp/>of<sp/>padding<sp/>so<sp/>we<sp/>don&apos;t<sp/>need<sp/>to<sp/>worry<sp/>about<sp/>triangles</highlight></codeline>
+<codeline lineno="61"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>clipping<sp/>the<sp/>edges<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structwall__3d__offload__data_1ab5f7c4b4fe22ecceeeb7eb3470c37732" kindref="member">xmin</ref><sp/>=<sp/>xmin<sp/>-<sp/>0.1;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structwall__3d__offload__data_1a131100707d17d6845330ad68c4924482" kindref="member">xmax</ref><sp/>=<sp/>xmax<sp/>+<sp/>0.1;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structwall__3d__offload__data_1a70172c0f31cc2bec5516a40f7ee88a26" kindref="member">ymin</ref><sp/>=<sp/>ymin<sp/>-<sp/>0.1;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structwall__3d__offload__data_1a603af391333ed4f2e1efec52a6e8123a" kindref="member">ymax</ref><sp/>=<sp/>ymax<sp/>+<sp/>0.1;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structwall__3d__offload__data_1aa92b773dc1747173e9e5ab5aa454d502" kindref="member">zmin</ref><sp/>=<sp/>zmin<sp/>-<sp/>0.1;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structwall__3d__offload__data_1af6aacee574c90782b2fa567e437dbc1d" kindref="member">zmax</ref><sp/>=<sp/>zmax<sp/>+<sp/>0.1;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Depth<sp/>of<sp/>the<sp/>octree<sp/>in<sp/>which<sp/>the<sp/>triangles<sp/>are<sp/>sorted<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structwall__3d__offload__data_1a7cc50262fb55c9be8701430fbe5aceb3" kindref="member">depth</ref><sp/>=<sp/><ref refid="ascot5_8h_1a53eb9b423a1b5d4478e2d8fca332e483" kindref="member">WALL_OCTREE_DEPTH</ref>;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ngrid<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>offload_data-&gt;<ref refid="structwall__3d__offload__data_1a7cc50262fb55c9be8701430fbe5aceb3" kindref="member">depth</ref><sp/>-<sp/>1;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ngrid<sp/>*=<sp/>2;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structwall__3d__offload__data_1a499de2aec1a086ea0ddc0b75792ec9b0" kindref="member">ngrid</ref><sp/>=<sp/>ngrid;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structwall__3d__offload__data_1a762fe1f362c10ed199bae816a05ff3fb" kindref="member">xgrid</ref><sp/>=<sp/>(offload_data-&gt;<ref refid="structwall__3d__offload__data_1a131100707d17d6845330ad68c4924482" kindref="member">xmax</ref><sp/>-<sp/>offload_data-&gt;<ref refid="structwall__3d__offload__data_1ab5f7c4b4fe22ecceeeb7eb3470c37732" kindref="member">xmin</ref>)</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/<sp/>offload_data-&gt;<ref refid="structwall__3d__offload__data_1a499de2aec1a086ea0ddc0b75792ec9b0" kindref="member">ngrid</ref>;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structwall__3d__offload__data_1a7fe19e0468ac52b538c5bdfecf4723f3" kindref="member">ygrid</ref><sp/>=<sp/>(offload_data-&gt;<ref refid="structwall__3d__offload__data_1a603af391333ed4f2e1efec52a6e8123a" kindref="member">ymax</ref><sp/>-<sp/>offload_data-&gt;<ref refid="structwall__3d__offload__data_1a70172c0f31cc2bec5516a40f7ee88a26" kindref="member">ymin</ref>)</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/<sp/>offload_data-&gt;<ref refid="structwall__3d__offload__data_1a499de2aec1a086ea0ddc0b75792ec9b0" kindref="member">ngrid</ref>;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structwall__3d__offload__data_1a85717fb05b2b77d5dbe0abbba8049944" kindref="member">zgrid</ref><sp/>=<sp/>(offload_data-&gt;<ref refid="structwall__3d__offload__data_1af6aacee574c90782b2fa567e437dbc1d" kindref="member">zmax</ref><sp/>-<sp/>offload_data-&gt;<ref refid="structwall__3d__offload__data_1aa92b773dc1747173e9e5ab5aa454d502" kindref="member">zmin</ref>)</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/<sp/>offload_data-&gt;<ref refid="structwall__3d__offload__data_1a499de2aec1a086ea0ddc0b75792ec9b0" kindref="member">ngrid</ref>;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="print_8h_1a8520c71eb5db223009e5079e420bc398" kindref="member">print_out</ref>(VERBOSE_IO,<sp/></highlight><highlight class="stringliteral">&quot;\n3D<sp/>wall<sp/>model<sp/>(wall_3D)\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="print_8h_1a8520c71eb5db223009e5079e420bc398" kindref="member">print_out</ref>(VERBOSE_IO,</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Number<sp/>of<sp/>wall<sp/>elements<sp/>%d\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Spanning<sp/>xmin<sp/>=<sp/>%2.3f<sp/>m,<sp/>xmax<sp/>=<sp/>%2.3f<sp/>m\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ymin<sp/>=<sp/>%2.3f<sp/>m,<sp/>ymax<sp/>=<sp/>%2.3f<sp/>m\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>zmin<sp/>=<sp/>%2.3f<sp/>m,<sp/>zmax<sp/>=<sp/>%2.3f<sp/>m\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structwall__3d__offload__data_1a5db0c2f711e3ea4edf7587b23552e337" kindref="member">n</ref>,</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structwall__3d__offload__data_1ab5f7c4b4fe22ecceeeb7eb3470c37732" kindref="member">xmin</ref>,<sp/>offload_data-&gt;<ref refid="structwall__3d__offload__data_1a131100707d17d6845330ad68c4924482" kindref="member">xmax</ref>,<sp/>offload_data-&gt;<ref refid="structwall__3d__offload__data_1a70172c0f31cc2bec5516a40f7ee88a26" kindref="member">ymin</ref>,</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offload_data-&gt;<ref refid="structwall__3d__offload__data_1a603af391333ed4f2e1efec52a6e8123a" kindref="member">ymax</ref>,<sp/>offload_data-&gt;<ref refid="structwall__3d__offload__data_1aa92b773dc1747173e9e5ab5aa454d502" kindref="member">zmin</ref>,<sp/>offload_data-&gt;<ref refid="structwall__3d__offload__data_1af6aacee574c90782b2fa567e437dbc1d" kindref="member">zmax</ref>);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="wall__3d_8c_1ab918f99749efff559370a4e45004412b" kindref="member">wall_3d_init_octree</ref>(offload_data,<sp/>*offload_array,<sp/>int_offload_array);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="wall__3d_8c_1abd94f5ab151031ee4dd86e757557c3c9" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="wall__3d_8c_1abd94f5ab151031ee4dd86e757557c3c9" kindref="member">wall_3d_free_offload</ref>(<ref refid="structwall__3d__offload__data" kindref="compound">wall_3d_offload_data</ref>*<sp/>offload_data,</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>**<sp/>offload_array,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">**<sp/>int_offload_array)<sp/>{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>free(*offload_array);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>*offload_array<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>free(*int_offload_array);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>*int_offload_array<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131" refid="wall__3d_8c_1a497356fffb82793491c87d8d375761e3" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="wall__3d_8c_1a497356fffb82793491c87d8d375761e3" kindref="member">wall_3d_init</ref>(<ref refid="structwall__3d__data" kindref="compound">wall_3d_data</ref>*<sp/>w,<sp/><ref refid="structwall__3d__offload__data" kindref="compound">wall_3d_offload_data</ref>*<sp/>offload_data,</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>offload_array,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>int_offload_array)<sp/>{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>w-&gt;<ref refid="structwall__3d__data_1ad7d1e0e0b8e007c938dc2582e21340c9" kindref="member">n</ref><sp/>=<sp/>offload_data-&gt;<ref refid="structwall__3d__offload__data_1a5db0c2f711e3ea4edf7587b23552e337" kindref="member">n</ref>;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>w-&gt;<ref refid="structwall__3d__data_1ac502c13a835229255dd2b2b0cb6b1dbb" kindref="member">xmin</ref><sp/>=<sp/>offload_data-&gt;<ref refid="structwall__3d__offload__data_1ab5f7c4b4fe22ecceeeb7eb3470c37732" kindref="member">xmin</ref>;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>w-&gt;<ref refid="structwall__3d__data_1a66d628c46a42c0855703221988068545" kindref="member">xmax</ref><sp/>=<sp/>offload_data-&gt;<ref refid="structwall__3d__offload__data_1a131100707d17d6845330ad68c4924482" kindref="member">xmax</ref>;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>w-&gt;<ref refid="structwall__3d__data_1acd32806d73777f6996d354d17f07a1c7" kindref="member">xgrid</ref><sp/>=<sp/>offload_data-&gt;<ref refid="structwall__3d__offload__data_1a762fe1f362c10ed199bae816a05ff3fb" kindref="member">xgrid</ref>;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>w-&gt;<ref refid="structwall__3d__data_1a8c8315c16d3199a871578b355aa354de" kindref="member">ymin</ref><sp/>=<sp/>offload_data-&gt;<ref refid="structwall__3d__offload__data_1a70172c0f31cc2bec5516a40f7ee88a26" kindref="member">ymin</ref>;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>w-&gt;<ref refid="structwall__3d__data_1affa6b79632ceedf844a363299d279d82" kindref="member">ymax</ref><sp/>=<sp/>offload_data-&gt;<ref refid="structwall__3d__offload__data_1a603af391333ed4f2e1efec52a6e8123a" kindref="member">ymax</ref>;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>w-&gt;<ref refid="structwall__3d__data_1ad941384278cd5e303a0c8c8014cd1809" kindref="member">ygrid</ref><sp/>=<sp/>offload_data-&gt;<ref refid="structwall__3d__offload__data_1a7fe19e0468ac52b538c5bdfecf4723f3" kindref="member">ygrid</ref>;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>w-&gt;<ref refid="structwall__3d__data_1a7e32a916ae37edc0ce97e0a442d89285" kindref="member">zmin</ref><sp/>=<sp/>offload_data-&gt;<ref refid="structwall__3d__offload__data_1aa92b773dc1747173e9e5ab5aa454d502" kindref="member">zmin</ref>;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>w-&gt;<ref refid="structwall__3d__data_1a580b7b7a1c91c80f84695adf64f7224b" kindref="member">zmax</ref><sp/>=<sp/>offload_data-&gt;<ref refid="structwall__3d__offload__data_1af6aacee574c90782b2fa567e437dbc1d" kindref="member">zmax</ref>;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>w-&gt;<ref refid="structwall__3d__data_1a1377e8bbf4dcd493a0dea857f7ae49a3" kindref="member">zgrid</ref><sp/>=<sp/>offload_data-&gt;<ref refid="structwall__3d__offload__data_1a85717fb05b2b77d5dbe0abbba8049944" kindref="member">zgrid</ref>;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>w-&gt;<ref refid="structwall__3d__data_1ab14fe3a751726d918f1055cdc83d2c2e" kindref="member">depth</ref><sp/>=<sp/>offload_data-&gt;<ref refid="structwall__3d__offload__data_1a7cc50262fb55c9be8701430fbe5aceb3" kindref="member">depth</ref>;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>w-&gt;<ref refid="structwall__3d__data_1a56272e9a4693f5bd0de1eb8abdf247c9" kindref="member">ngrid</ref><sp/>=<sp/>offload_data-&gt;<ref refid="structwall__3d__offload__data_1a499de2aec1a086ea0ddc0b75792ec9b0" kindref="member">ngrid</ref>;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>w-&gt;<ref refid="structwall__3d__data_1ac59066949768bc4f90e0125eb564b2c9" kindref="member">wall_tris</ref><sp/>=<sp/>&amp;offload_array[0];</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>w-&gt;<ref refid="structwall__3d__data_1a96fd0ecb77494d0d02fed1c539cc3915" kindref="member">tree_array_size</ref><sp/>=<sp/>offload_data-&gt;<ref refid="structwall__3d__offload__data_1a3cbfeda67d335c40ed4b07123e30db66" kindref="member">int_offload_array_length</ref>;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>w-&gt;<ref refid="structwall__3d__data_1a508d0fbec2de22d81ff959585f32ce7b" kindref="member">tree_array</ref><sp/>=<sp/>&amp;int_offload_array[0];</highlight></codeline>
+<codeline lineno="149"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162" refid="wall__3d_8c_1a1420772005932496348e1ce1fbb06587" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="wall__3d_8c_1a1420772005932496348e1ce1fbb06587" kindref="member">wall_3d_init_tree</ref>(<ref refid="structwall__3d__data" kindref="compound">wall_3d_data</ref>*<sp/>w,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>offload_array)<sp/>{</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>create<sp/>a<sp/>list<sp/>for<sp/>holding<sp/>the<sp/>triangle<sp/>ids<sp/>in<sp/>each<sp/>cell<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ncell<sp/>=<sp/>w-&gt;<ref refid="structwall__3d__data_1a56272e9a4693f5bd0de1eb8abdf247c9" kindref="member">ngrid</ref>*w-&gt;<ref refid="structwall__3d__data_1a56272e9a4693f5bd0de1eb8abdf247c9" kindref="member">ngrid</ref>*w-&gt;<ref refid="structwall__3d__data_1a56272e9a4693f5bd0de1eb8abdf247c9" kindref="member">ngrid</ref>;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structlist__int__node" kindref="compound">list_int_node</ref>**<sp/>tri_list<sp/>=<sp/>(<ref refid="structlist__int__node" kindref="compound">list_int_node</ref>**)<sp/>malloc(ncell</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structlist__int__node" kindref="compound">list_int_node</ref>*));</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>ncell;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="list_8c_1a70697e3c4840b3fcf44b559461bcee95" kindref="member">list_int_create</ref>(&amp;tri_list[i]);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>iterate<sp/>through<sp/>all<sp/>triangles<sp/>and<sp/>cells<sp/>and<sp/>fill<sp/>the<sp/>lists<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>w-&gt;<ref refid="structwall__3d__data_1ad7d1e0e0b8e007c938dc2582e21340c9" kindref="member">n</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>t1[3],<sp/>t2[3],<sp/>t3[3];</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t1[0]<sp/>=<sp/>offload_array[i*9];</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t1[1]<sp/>=<sp/>offload_array[i*9+1];</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t1[2]<sp/>=<sp/>offload_array[i*9+2];</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t2[0]<sp/>=<sp/>offload_array[i*9+3];</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t2[1]<sp/>=<sp/>offload_array[i*9+4];</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t2[2]<sp/>=<sp/>offload_array[i*9+5];</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t3[0]<sp/>=<sp/>offload_array[i*9+6];</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t3[1]<sp/>=<sp/>offload_array[i*9+7];</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t3[2]<sp/>=<sp/>offload_array[i*9+8];</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ix,<sp/>iy,<sp/>iz;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#pragma<sp/>omp<sp/>parallel<sp/>for<sp/>private(ix,<sp/>iy,<sp/>iz)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(ix<sp/>=<sp/>0;<sp/>ix<sp/>&lt;<sp/>w-&gt;<ref refid="structwall__3d__data_1a56272e9a4693f5bd0de1eb8abdf247c9" kindref="member">ngrid</ref>;<sp/>ix++)<sp/>{</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(iy<sp/>=<sp/>0;<sp/>iy<sp/>&lt;<sp/>w-&gt;<ref refid="structwall__3d__data_1a56272e9a4693f5bd0de1eb8abdf247c9" kindref="member">ngrid</ref>;<sp/>iy++)<sp/>{</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(iz<sp/>=<sp/>0;<sp/>iz<sp/>&lt;<sp/>w-&gt;<ref refid="structwall__3d__data_1a56272e9a4693f5bd0de1eb8abdf247c9" kindref="member">ngrid</ref>;<sp/>iz++)<sp/>{</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>c1[3],<sp/>c2[3];</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>epsilon<sp/>=<sp/>1e-6;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c1[0]<sp/>=<sp/>w-&gt;<ref refid="structwall__3d__data_1ac502c13a835229255dd2b2b0cb6b1dbb" kindref="member">xmin</ref><sp/>+<sp/>ix<sp/>*<sp/>w-&gt;<ref refid="structwall__3d__data_1acd32806d73777f6996d354d17f07a1c7" kindref="member">xgrid</ref><sp/>-<sp/>epsilon;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c2[0]<sp/>=<sp/>w-&gt;<ref refid="structwall__3d__data_1ac502c13a835229255dd2b2b0cb6b1dbb" kindref="member">xmin</ref><sp/>+<sp/>(ix+1)<sp/>*<sp/>w-&gt;<ref refid="structwall__3d__data_1acd32806d73777f6996d354d17f07a1c7" kindref="member">xgrid</ref><sp/>+<sp/>epsilon;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c1[1]<sp/>=<sp/>w-&gt;<ref refid="structwall__3d__data_1a8c8315c16d3199a871578b355aa354de" kindref="member">ymin</ref><sp/>+<sp/>iy<sp/>*<sp/>w-&gt;<ref refid="structwall__3d__data_1ad941384278cd5e303a0c8c8014cd1809" kindref="member">ygrid</ref><sp/>-<sp/>epsilon;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c2[1]<sp/>=<sp/>w-&gt;<ref refid="structwall__3d__data_1a8c8315c16d3199a871578b355aa354de" kindref="member">ymin</ref><sp/>+<sp/>(iy+1)<sp/>*<sp/>w-&gt;<ref refid="structwall__3d__data_1ad941384278cd5e303a0c8c8014cd1809" kindref="member">ygrid</ref><sp/>+<sp/>epsilon;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c1[2]<sp/>=<sp/>w-&gt;<ref refid="structwall__3d__data_1a7e32a916ae37edc0ce97e0a442d89285" kindref="member">zmin</ref><sp/>+<sp/>iz<sp/>*<sp/>w-&gt;<ref refid="structwall__3d__data_1a1377e8bbf4dcd493a0dea857f7ae49a3" kindref="member">zgrid</ref><sp/>-<sp/>epsilon;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c2[2]<sp/>=<sp/>w-&gt;<ref refid="structwall__3d__data_1a7e32a916ae37edc0ce97e0a442d89285" kindref="member">zmin</ref><sp/>+<sp/>(iz+1)<sp/>*<sp/>w-&gt;<ref refid="structwall__3d__data_1a1377e8bbf4dcd493a0dea857f7ae49a3" kindref="member">zgrid</ref><sp/>+<sp/>epsilon;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>result<sp/>=<sp/><ref refid="wall__3d_8c_1a10ecf6ad1ca68351067111cf6dfdec9b" kindref="member">wall_3d_tri_in_cube</ref>(t1,<sp/>t2,<sp/>t3,<sp/>c1,<sp/>c2);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cell_index<sp/>=<sp/>ix*w-&gt;<ref refid="structwall__3d__data_1a56272e9a4693f5bd0de1eb8abdf247c9" kindref="member">ngrid</ref>*w-&gt;<ref refid="structwall__3d__data_1a56272e9a4693f5bd0de1eb8abdf247c9" kindref="member">ngrid</ref>+iy*w-&gt;<ref refid="structwall__3d__data_1a56272e9a4693f5bd0de1eb8abdf247c9" kindref="member">ngrid</ref>+iz;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(result<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="list_8c_1ab95c10f1bed735ac4b9a6a44165028ab" kindref="member">list_int_add</ref>(tri_list[cell_index],<sp/>i);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>construct<sp/>an<sp/>array<sp/>from<sp/>the<sp/>triangle<sp/>lists<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>list_size<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>ncell;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>list_size<sp/>+=<sp/><ref refid="list_8c_1a4933c31867750b9a47274aa813c0d1bb" kindref="member">list_int_size</ref>(tri_list[i]);</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/>w-&gt;<ref refid="structwall__3d__data_1a96fd0ecb77494d0d02fed1c539cc3915" kindref="member">tree_array_size</ref><sp/>=<sp/>2*ncell<sp/>+<sp/>list_size;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/>w-&gt;<ref refid="structwall__3d__data_1a508d0fbec2de22d81ff959585f32ce7b" kindref="member">tree_array</ref><sp/>=<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*)<sp/>malloc((w-&gt;<ref refid="structwall__3d__data_1a96fd0ecb77494d0d02fed1c539cc3915" kindref="member">tree_array_size</ref>)*</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(int));</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>next_empty_list<sp/>=<sp/>ncell;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>ncell;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>w-&gt;<ref refid="structwall__3d__data_1a508d0fbec2de22d81ff959585f32ce7b" kindref="member">tree_array</ref>[i]<sp/>=<sp/>next_empty_list;</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>w-&gt;<ref refid="structwall__3d__data_1a508d0fbec2de22d81ff959585f32ce7b" kindref="member">tree_array</ref>[next_empty_list]<sp/>=<sp/><ref refid="list_8c_1a4933c31867750b9a47274aa813c0d1bb" kindref="member">list_int_size</ref>(tri_list[i]);</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j;</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>w-&gt;<ref refid="structwall__3d__data_1a508d0fbec2de22d81ff959585f32ce7b" kindref="member">tree_array</ref>[next_empty_list];<sp/>j++)<sp/>{</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>w-&gt;<ref refid="structwall__3d__data_1a508d0fbec2de22d81ff959585f32ce7b" kindref="member">tree_array</ref>[next_empty_list+j+1]<sp/>=<sp/><ref refid="list_8c_1a9c9fa192f1ea90f504111ddc60a29bf6" kindref="member">list_int_get</ref>(tri_list[i],<sp/>j);</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>next_empty_list<sp/>+=<sp/>w-&gt;<ref refid="structwall__3d__data_1a508d0fbec2de22d81ff959585f32ce7b" kindref="member">tree_array</ref>[next_empty_list]<sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="list_8c_1a943d55eeecebb0294df81d701902d39d" kindref="member">list_int_free</ref>(&amp;tri_list[i]);</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/>free(tri_list);</highlight></codeline>
+<codeline lineno="229"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242" refid="wall__3d_8c_1ab918f99749efff559370a4e45004412b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="wall__3d_8c_1ab918f99749efff559370a4e45004412b" kindref="member">wall_3d_init_octree</ref>(<ref refid="structwall__3d__offload__data" kindref="compound">wall_3d_offload_data</ref>*<sp/>w,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>offload_array,</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">**<sp/>tree_array)<sp/>{</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(w-&gt;<ref refid="structwall__3d__offload__data_1a5db0c2f711e3ea4edf7587b23552e337" kindref="member">n</ref><sp/>&gt;<sp/>1000000){</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="print_8h_1a8520c71eb5db223009e5079e420bc398" kindref="member">print_out</ref>(VERBOSE_NORMAL,</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Starting<sp/>to<sp/>initialize<sp/>3D-wall<sp/>octree<sp/>with<sp/>%d<sp/>triangles.\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>w-&gt;<ref refid="structwall__3d__offload__data_1a5db0c2f711e3ea4edf7587b23552e337" kindref="member">n</ref>);</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Construct<sp/>the<sp/>octree<sp/>and<sp/>store<sp/>triangles<sp/>there<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structoctree__node" kindref="compound">octree_node</ref>*<sp/>tree;</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="octree_8c_1a63644b2d301b5599dff501129f610669" kindref="member">octree_create</ref>(&amp;tree,<sp/>w-&gt;<ref refid="structwall__3d__offload__data_1ab5f7c4b4fe22ecceeeb7eb3470c37732" kindref="member">xmin</ref>,<sp/>w-&gt;<ref refid="structwall__3d__offload__data_1a131100707d17d6845330ad68c4924482" kindref="member">xmax</ref>,<sp/>w-&gt;<ref refid="structwall__3d__offload__data_1a70172c0f31cc2bec5516a40f7ee88a26" kindref="member">ymin</ref>,<sp/>w-&gt;<ref refid="structwall__3d__offload__data_1a603af391333ed4f2e1efec52a6e8123a" kindref="member">ymax</ref>,<sp/>w-&gt;<ref refid="structwall__3d__offload__data_1aa92b773dc1747173e9e5ab5aa454d502" kindref="member">zmin</ref>,<sp/>w-&gt;<ref refid="structwall__3d__offload__data_1af6aacee574c90782b2fa567e437dbc1d" kindref="member">zmax</ref>,</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>w-&gt;<ref refid="structwall__3d__offload__data_1a7cc50262fb55c9be8701430fbe5aceb3" kindref="member">depth</ref>);</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>w-&gt;<ref refid="structwall__3d__offload__data_1a5db0c2f711e3ea4edf7587b23552e337" kindref="member">n</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>t1[3],<sp/>t2[3],<sp/>t3[3];</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t1[0]<sp/>=<sp/>offload_array[i*9];</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t1[1]<sp/>=<sp/>offload_array[i*9+1];</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t1[2]<sp/>=<sp/>offload_array[i*9+2];</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t2[0]<sp/>=<sp/>offload_array[i*9+3];</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t2[1]<sp/>=<sp/>offload_array[i*9+4];</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t2[2]<sp/>=<sp/>offload_array[i*9+5];</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t3[0]<sp/>=<sp/>offload_array[i*9+6];</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t3[1]<sp/>=<sp/>offload_array[i*9+7];</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t3[2]<sp/>=<sp/>offload_array[i*9+8];</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="octree_8c_1a32d0722050bcdd7588e9fb80566d3421" kindref="member">octree_add</ref>(tree,<sp/>t1,<sp/>t2,<sp/>t3,<sp/>i);</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i%1000000==0<sp/>&amp;&amp;<sp/>i<sp/>&gt;<sp/>0){</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="print_8h_1a8520c71eb5db223009e5079e420bc398" kindref="member">print_out</ref>(VERBOSE_NORMAL,<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/>Adding<sp/>triangle<sp/>%10d/%d.\n&quot;</highlight><highlight class="normal">,i,w-&gt;<ref refid="structwall__3d__offload__data_1a5db0c2f711e3ea4edf7587b23552e337" kindref="member">n</ref>);</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Create<sp/>lists<sp/>for<sp/>triangles<sp/>in<sp/>each<sp/>grid<sp/>square<sp/>and<sp/>fill<sp/>the<sp/>lists</highlight></codeline>
+<codeline lineno="275"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>by<sp/>querying<sp/>the<sp/>octree<sp/>in<sp/>each<sp/>grid<sp/>point<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ncell<sp/>=<sp/>w-&gt;<ref refid="structwall__3d__offload__data_1a499de2aec1a086ea0ddc0b75792ec9b0" kindref="member">ngrid</ref>*w-&gt;<ref refid="structwall__3d__offload__data_1a499de2aec1a086ea0ddc0b75792ec9b0" kindref="member">ngrid</ref>*w-&gt;<ref refid="structwall__3d__offload__data_1a499de2aec1a086ea0ddc0b75792ec9b0" kindref="member">ngrid</ref>;</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structlist__int__node" kindref="compound">list_int_node</ref>**<sp/>tri_list<sp/>=</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<ref refid="structlist__int__node" kindref="compound">list_int_node</ref>**)<sp/>malloc(ncell<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structlist__int__node" kindref="compound">list_int_node</ref>*));</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ix,<sp/>iy,<sp/>iz;</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(ix<sp/>=<sp/>0;<sp/>ix<sp/>&lt;<sp/>w-&gt;<ref refid="structwall__3d__offload__data_1a499de2aec1a086ea0ddc0b75792ec9b0" kindref="member">ngrid</ref>;<sp/>ix++)<sp/>{</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(iy<sp/>=<sp/>0;<sp/>iy<sp/>&lt;<sp/>w-&gt;<ref refid="structwall__3d__offload__data_1a499de2aec1a086ea0ddc0b75792ec9b0" kindref="member">ngrid</ref>;<sp/>iy++)<sp/>{</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(iz<sp/>=<sp/>0;<sp/>iz<sp/>&lt;<sp/>w-&gt;<ref refid="structwall__3d__offload__data_1a499de2aec1a086ea0ddc0b75792ec9b0" kindref="member">ngrid</ref>;<sp/>iz++)<sp/>{</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>p[3];</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p[0]<sp/>=<sp/>w-&gt;<ref refid="structwall__3d__offload__data_1ab5f7c4b4fe22ecceeeb7eb3470c37732" kindref="member">xmin</ref><sp/>+<sp/>ix<sp/>*<sp/>w-&gt;<ref refid="structwall__3d__offload__data_1a762fe1f362c10ed199bae816a05ff3fb" kindref="member">xgrid</ref><sp/>+<sp/>0.5*w-&gt;<ref refid="structwall__3d__offload__data_1a762fe1f362c10ed199bae816a05ff3fb" kindref="member">xgrid</ref>;</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p[1]<sp/>=<sp/>w-&gt;<ref refid="structwall__3d__offload__data_1a70172c0f31cc2bec5516a40f7ee88a26" kindref="member">ymin</ref><sp/>+<sp/>iy<sp/>*<sp/>w-&gt;<ref refid="structwall__3d__offload__data_1a7fe19e0468ac52b538c5bdfecf4723f3" kindref="member">ygrid</ref><sp/>+<sp/>0.5*w-&gt;<ref refid="structwall__3d__offload__data_1a7fe19e0468ac52b538c5bdfecf4723f3" kindref="member">ygrid</ref>;</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p[2]<sp/>=<sp/>w-&gt;<ref refid="structwall__3d__offload__data_1aa92b773dc1747173e9e5ab5aa454d502" kindref="member">zmin</ref><sp/>+<sp/>iz<sp/>*<sp/>w-&gt;<ref refid="structwall__3d__offload__data_1a85717fb05b2b77d5dbe0abbba8049944" kindref="member">zgrid</ref><sp/>+<sp/>0.5*w-&gt;<ref refid="structwall__3d__offload__data_1a85717fb05b2b77d5dbe0abbba8049944" kindref="member">zgrid</ref>;</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cell_index<sp/>=<sp/>ix*w-&gt;<ref refid="structwall__3d__offload__data_1a499de2aec1a086ea0ddc0b75792ec9b0" kindref="member">ngrid</ref>*w-&gt;<ref refid="structwall__3d__offload__data_1a499de2aec1a086ea0ddc0b75792ec9b0" kindref="member">ngrid</ref>+iy*w-&gt;<ref refid="structwall__3d__offload__data_1a499de2aec1a086ea0ddc0b75792ec9b0" kindref="member">ngrid</ref>+iz;</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tri_list[cell_index]<sp/>=<sp/><ref refid="octree_8c_1a306a13544a6a82c24220688cef615839" kindref="member">octree_get</ref>(tree,<sp/>p);</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>construct<sp/>an<sp/>array<sp/>from<sp/>the<sp/>triangle<sp/>lists<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>list_size<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>ncell;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>list_size<sp/>+=<sp/><ref refid="list_8c_1a4933c31867750b9a47274aa813c0d1bb" kindref="member">list_int_size</ref>(tri_list[i]);</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/>w-&gt;<ref refid="structwall__3d__offload__data_1a3cbfeda67d335c40ed4b07123e30db66" kindref="member">int_offload_array_length</ref><sp/>=<sp/>2*ncell<sp/>+<sp/>list_size;</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/>*tree_array<sp/>=<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*)<sp/>malloc((w-&gt;<ref refid="structwall__3d__offload__data_1a3cbfeda67d335c40ed4b07123e30db66" kindref="member">int_offload_array_length</ref>)*</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(int));</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"></highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>next_empty_list<sp/>=<sp/>ncell;</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>ncell;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>First<sp/>ncell<sp/>elements<sp/>store<sp/>the<sp/>position<sp/>where<sp/>the<sp/>actual<sp/>cell<sp/>data</highlight></codeline>
+<codeline lineno="306"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>begins<sp/>in<sp/>tree_array<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*tree_array)[i]<sp/>=<sp/>next_empty_list;</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"></highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>The<sp/>first<sp/>data<sp/>point<sp/>in<sp/>the<sp/>actual<sp/>cell<sp/>data<sp/>is<sp/>the<sp/>number<sp/>of</highlight></codeline>
+<codeline lineno="310"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>triangles<sp/>in<sp/>this<sp/>cell<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*tree_array)[next_empty_list]<sp/>=<sp/><ref refid="list_8c_1a4933c31867750b9a47274aa813c0d1bb" kindref="member">list_int_size</ref>(tri_list[i]);</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"></highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Store<sp/>triangle<sp/>IDs<sp/>that<sp/>are<sp/>located<sp/>in<sp/>this<sp/>cell<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>(*tree_array)[next_empty_list];<sp/>j++)<sp/>{</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*tree_array)[next_empty_list+j+1]<sp/>=<sp/><ref refid="list_8c_1a9c9fa192f1ea90f504111ddc60a29bf6" kindref="member">list_int_get</ref>(tri_list[i],<sp/>j);</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>next_empty_list<sp/>+=<sp/>(*tree_array)[next_empty_list]<sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/>free(tri_list);</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="octree_8c_1a5ebab3217beacb1201887631a364e75e" kindref="member">octree_free</ref>(&amp;tree);</highlight></codeline>
+<codeline lineno="321"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"></highlight></codeline>
+<codeline lineno="339" refid="wall__3d_8c_1aa387551bbbe9f7352a567cd466794ecc" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="wall__3d_8c_1aa387551bbbe9f7352a567cd466794ecc" kindref="member">wall_3d_hit_wall</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r1,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>phi1,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z1,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r2,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>phi2,</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z2,<sp/><ref refid="structwall__3d__data" kindref="compound">wall_3d_data</ref>*<sp/>wdata,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>w_coll)<sp/>{</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>rpz1[3],<sp/>rpz2[3];</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/>rpz1[0]<sp/>=<sp/>r1;</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/>rpz1[1]<sp/>=<sp/>phi1;</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/>rpz1[2]<sp/>=<sp/>z1;</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/>rpz2[0]<sp/>=<sp/>r2;</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/>rpz2[1]<sp/>=<sp/>phi2;</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/>rpz2[2]<sp/>=<sp/>z2;</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"></highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>q1[3],<sp/>q2[3];</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="math_8h_1a809a2184a4686fc5413b60fa21b9b5cc" kindref="member">math_rpz2xyz</ref>(rpz1,<sp/>q1);</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="math_8h_1a809a2184a4686fc5413b60fa21b9b5cc" kindref="member">math_rpz2xyz</ref>(rpz2,<sp/>q2);</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"></highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ix1<sp/>=<sp/>(int)<sp/>floor((q1[0]<sp/>-<sp/>wdata-&gt;<ref refid="structwall__3d__data_1ac502c13a835229255dd2b2b0cb6b1dbb" kindref="member">xmin</ref>)</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/<sp/>((wdata-&gt;<ref refid="structwall__3d__data_1a66d628c46a42c0855703221988068545" kindref="member">xmax</ref><sp/>-<sp/>wdata-&gt;<ref refid="structwall__3d__data_1ac502c13a835229255dd2b2b0cb6b1dbb" kindref="member">xmin</ref>)<sp/>/<sp/>(wdata-&gt;<ref refid="structwall__3d__data_1a56272e9a4693f5bd0de1eb8abdf247c9" kindref="member">ngrid</ref>)));</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>iy1<sp/>=<sp/>(int)<sp/>floor((q1[1]<sp/>-<sp/>wdata-&gt;<ref refid="structwall__3d__data_1a8c8315c16d3199a871578b355aa354de" kindref="member">ymin</ref>)</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/<sp/>((wdata-&gt;<ref refid="structwall__3d__data_1affa6b79632ceedf844a363299d279d82" kindref="member">ymax</ref><sp/>-<sp/>wdata-&gt;<ref refid="structwall__3d__data_1a8c8315c16d3199a871578b355aa354de" kindref="member">ymin</ref>)<sp/>/<sp/>(wdata-&gt;<ref refid="structwall__3d__data_1a56272e9a4693f5bd0de1eb8abdf247c9" kindref="member">ngrid</ref>)));</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>iz1<sp/>=<sp/>(int)<sp/>floor((q1[2]<sp/>-<sp/>wdata-&gt;<ref refid="structwall__3d__data_1a7e32a916ae37edc0ce97e0a442d89285" kindref="member">zmin</ref>)</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/<sp/>((wdata-&gt;<ref refid="structwall__3d__data_1a580b7b7a1c91c80f84695adf64f7224b" kindref="member">zmax</ref><sp/>-<sp/>wdata-&gt;<ref refid="structwall__3d__data_1a7e32a916ae37edc0ce97e0a442d89285" kindref="member">zmin</ref>)<sp/>/<sp/>(wdata-&gt;<ref refid="structwall__3d__data_1a56272e9a4693f5bd0de1eb8abdf247c9" kindref="member">ngrid</ref>)));</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"></highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ix2<sp/>=<sp/>(int)<sp/>floor((q2[0]<sp/>-<sp/>wdata-&gt;<ref refid="structwall__3d__data_1ac502c13a835229255dd2b2b0cb6b1dbb" kindref="member">xmin</ref>)</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/<sp/>((wdata-&gt;<ref refid="structwall__3d__data_1a66d628c46a42c0855703221988068545" kindref="member">xmax</ref><sp/>-<sp/>wdata-&gt;<ref refid="structwall__3d__data_1ac502c13a835229255dd2b2b0cb6b1dbb" kindref="member">xmin</ref>)<sp/>/<sp/>(wdata-&gt;<ref refid="structwall__3d__data_1a56272e9a4693f5bd0de1eb8abdf247c9" kindref="member">ngrid</ref>)));</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>iy2<sp/>=<sp/>(int)<sp/>floor((q2[1]<sp/>-<sp/>wdata-&gt;<ref refid="structwall__3d__data_1a8c8315c16d3199a871578b355aa354de" kindref="member">ymin</ref>)</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/<sp/>((wdata-&gt;<ref refid="structwall__3d__data_1affa6b79632ceedf844a363299d279d82" kindref="member">ymax</ref><sp/>-<sp/>wdata-&gt;<ref refid="structwall__3d__data_1a8c8315c16d3199a871578b355aa354de" kindref="member">ymin</ref>)<sp/>/<sp/>(wdata-&gt;<ref refid="structwall__3d__data_1a56272e9a4693f5bd0de1eb8abdf247c9" kindref="member">ngrid</ref>)));</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>iz2<sp/>=<sp/>(int)<sp/>floor((q2[2]<sp/>-<sp/>wdata-&gt;<ref refid="structwall__3d__data_1a7e32a916ae37edc0ce97e0a442d89285" kindref="member">zmin</ref>)</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/<sp/>((wdata-&gt;<ref refid="structwall__3d__data_1a580b7b7a1c91c80f84695adf64f7224b" kindref="member">zmax</ref><sp/>-<sp/>wdata-&gt;<ref refid="structwall__3d__data_1a7e32a916ae37edc0ce97e0a442d89285" kindref="member">zmin</ref>)<sp/>/<sp/>(wdata-&gt;<ref refid="structwall__3d__data_1a56272e9a4693f5bd0de1eb8abdf247c9" kindref="member">ngrid</ref>)));</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"></highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>hit_tri<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>smallest_w<sp/>=<sp/>1.1;</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"></highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;=<sp/>abs(ix2-ix1);<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;=<sp/>abs(iy2-iy1);<sp/>j++)<sp/>{</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k<sp/>=<sp/>0;<sp/>k<sp/>&lt;=<sp/>abs(iz2-iz1);<sp/>k++)<sp/>{</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ix<sp/>=<sp/>ix1<sp/>+<sp/>i*((int)<sp/>copysign(1,<sp/>ix2-ix1));</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>iy<sp/>=<sp/>iy1<sp/>+<sp/>j*((int)<sp/>copysign(1,<sp/>iy2-iy1));</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>iz<sp/>=<sp/>iz1<sp/>+<sp/>k*((int)<sp/>copysign(1,<sp/>iz2-iz1));</highlight></codeline>
+<codeline lineno="376"><highlight class="normal"></highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(ix<sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>ix<sp/>&lt;<sp/>wdata-&gt;ngrid<sp/>&amp;&amp;<sp/>iy<sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>iy<sp/>&lt;<sp/>wdata-&gt;ngrid</highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/>iz<sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>iz<sp/>&lt;<sp/>wdata-&gt;ngrid)<sp/>{</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"></highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ilist<sp/>=<sp/>wdata-&gt;<ref refid="structwall__3d__data_1a508d0fbec2de22d81ff959585f32ce7b" kindref="member">tree_array</ref>[ix*wdata-&gt;<ref refid="structwall__3d__data_1a56272e9a4693f5bd0de1eb8abdf247c9" kindref="member">ngrid</ref>*wdata-&gt;<ref refid="structwall__3d__data_1a56272e9a4693f5bd0de1eb8abdf247c9" kindref="member">ngrid</ref></highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>iy*wdata-&gt;<ref refid="structwall__3d__data_1a56272e9a4693f5bd0de1eb8abdf247c9" kindref="member">ngrid</ref><sp/>+<sp/>iz];</highlight></codeline>
+<codeline lineno="382"><highlight class="normal"></highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>l<sp/>=<sp/>0;<sp/>l<sp/>&lt;<sp/>wdata-&gt;<ref refid="structwall__3d__data_1a508d0fbec2de22d81ff959585f32ce7b" kindref="member">tree_array</ref>[ilist];<sp/>l++)<sp/>{</highlight></codeline>
+<codeline lineno="384"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>itri<sp/>=<sp/>wdata-&gt;<ref refid="structwall__3d__data_1a508d0fbec2de22d81ff959585f32ce7b" kindref="member">tree_array</ref>[ilist+l+1];</highlight></codeline>
+<codeline lineno="385"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>w<sp/>=<sp/><ref refid="wall__3d_8c_1a64ae89b58068702c9e084b80cd78fd1b" kindref="member">wall_3d_tri_collision</ref>(</highlight></codeline>
+<codeline lineno="386"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>q1,<sp/>q2,</highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;wdata-&gt;<ref refid="structwall__3d__data_1ac59066949768bc4f90e0125eb564b2c9" kindref="member">wall_tris</ref>[9*itri],</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;wdata-&gt;<ref refid="structwall__3d__data_1ac59066949768bc4f90e0125eb564b2c9" kindref="member">wall_tris</ref>[9*itri+3],</highlight></codeline>
+<codeline lineno="389"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;wdata-&gt;<ref refid="structwall__3d__data_1ac59066949768bc4f90e0125eb564b2c9" kindref="member">wall_tris</ref>[9*itri+6]);</highlight></codeline>
+<codeline lineno="390"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(w<sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>w<sp/>&lt;<sp/>smallest_w)<sp/>{</highlight></codeline>
+<codeline lineno="391"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>smallest_w<sp/>=<sp/>w;</highlight></codeline>
+<codeline lineno="392"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hit_tri<sp/>=<sp/>itri+1;</highlight></codeline>
+<codeline lineno="393"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="394"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="395"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="396"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="397"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="398"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="399"><highlight class="normal"><sp/><sp/><sp/><sp/>*w_coll<sp/>=<sp/>smallest_w;</highlight></codeline>
+<codeline lineno="400"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>hit_tri;</highlight></codeline>
+<codeline lineno="401"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="402"><highlight class="normal"></highlight></codeline>
+<codeline lineno="419" refid="wall__3d_8c_1a4f188446a503d514eac62491fc3fa3af" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="wall__3d_8c_1a4f188446a503d514eac62491fc3fa3af" kindref="member">wall_3d_hit_wall_full</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r1,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>phi1,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z1,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>r2,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>phi2,</highlight></codeline>
+<codeline lineno="420"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>z2,<sp/><ref refid="structwall__3d__data" kindref="compound">wall_3d_data</ref>*<sp/>wdata,<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref>*<sp/>w_coll)<sp/>{</highlight></codeline>
+<codeline lineno="421"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>rpz1[3],<sp/>rpz2[3];</highlight></codeline>
+<codeline lineno="422"><highlight class="normal"><sp/><sp/><sp/><sp/>rpz1[0]<sp/>=<sp/>r1;</highlight></codeline>
+<codeline lineno="423"><highlight class="normal"><sp/><sp/><sp/><sp/>rpz1[1]<sp/>=<sp/>phi1;</highlight></codeline>
+<codeline lineno="424"><highlight class="normal"><sp/><sp/><sp/><sp/>rpz1[2]<sp/>=<sp/>z1;</highlight></codeline>
+<codeline lineno="425"><highlight class="normal"><sp/><sp/><sp/><sp/>rpz2[0]<sp/>=<sp/>r2;</highlight></codeline>
+<codeline lineno="426"><highlight class="normal"><sp/><sp/><sp/><sp/>rpz2[1]<sp/>=<sp/>phi2;</highlight></codeline>
+<codeline lineno="427"><highlight class="normal"><sp/><sp/><sp/><sp/>rpz2[2]<sp/>=<sp/>z2;</highlight></codeline>
+<codeline lineno="428"><highlight class="normal"></highlight></codeline>
+<codeline lineno="429"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>q1[3],<sp/>q2[3];</highlight></codeline>
+<codeline lineno="430"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="math_8h_1a809a2184a4686fc5413b60fa21b9b5cc" kindref="member">math_rpz2xyz</ref>(rpz1,<sp/>q1);</highlight></codeline>
+<codeline lineno="431"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="math_8h_1a809a2184a4686fc5413b60fa21b9b5cc" kindref="member">math_rpz2xyz</ref>(rpz2,<sp/>q2);</highlight></codeline>
+<codeline lineno="432"><highlight class="normal"></highlight></codeline>
+<codeline lineno="433"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>hit_tri<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="434"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>smallest_w<sp/>=<sp/>1.1;</highlight></codeline>
+<codeline lineno="435"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>w;</highlight></codeline>
+<codeline lineno="436"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j;</highlight></codeline>
+<codeline lineno="437"><highlight class="normal"></highlight></codeline>
+<codeline lineno="438"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>wdata-&gt;<ref refid="structwall__3d__data_1ad7d1e0e0b8e007c938dc2582e21340c9" kindref="member">n</ref>;<sp/>j++)<sp/>{</highlight></codeline>
+<codeline lineno="439"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>w<sp/>=<sp/><ref refid="wall__3d_8c_1a64ae89b58068702c9e084b80cd78fd1b" kindref="member">wall_3d_tri_collision</ref>(q1,<sp/>q2,<sp/>&amp;wdata-&gt;<ref refid="structwall__3d__data_1ac59066949768bc4f90e0125eb564b2c9" kindref="member">wall_tris</ref>[9*j],</highlight></codeline>
+<codeline lineno="440"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;wdata-&gt;<ref refid="structwall__3d__data_1ac59066949768bc4f90e0125eb564b2c9" kindref="member">wall_tris</ref>[9*j+3],<sp/>&amp;wdata-&gt;<ref refid="structwall__3d__data_1ac59066949768bc4f90e0125eb564b2c9" kindref="member">wall_tris</ref>[9*j+6]);</highlight></codeline>
+<codeline lineno="441"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(w<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="442"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(w<sp/>&lt;<sp/>smallest_w)<sp/>{</highlight></codeline>
+<codeline lineno="443"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>smallest_w<sp/>=<sp/>w;</highlight></codeline>
+<codeline lineno="444"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hit_tri<sp/>=<sp/>j+1;</highlight></codeline>
+<codeline lineno="445"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="446"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="447"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="448"><highlight class="normal"></highlight></codeline>
+<codeline lineno="449"><highlight class="normal"><sp/><sp/><sp/><sp/>*w_coll<sp/>=<sp/>smallest_w;</highlight></codeline>
+<codeline lineno="450"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>hit_tri;</highlight></codeline>
+<codeline lineno="451"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="452"><highlight class="normal"></highlight></codeline>
+<codeline lineno="464" refid="wall__3d_8c_1a10ecf6ad1ca68351067111cf6dfdec9b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="wall__3d_8c_1a10ecf6ad1ca68351067111cf6dfdec9b" kindref="member">wall_3d_tri_in_cube</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>t1[3],<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>t2[3],<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>t3[3],<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>bb1[3],</highlight></codeline>
+<codeline lineno="465"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>bb2[3])<sp/>{</highlight></codeline>
+<codeline lineno="466"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>check<sp/>if<sp/>any<sp/>point<sp/>is<sp/>inside<sp/>the<sp/>cube<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="467"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(bb1[0]<sp/>&lt;=<sp/>t1[0]<sp/>&amp;&amp;<sp/>t1[0]<sp/>&lt;=<sp/>bb2[0]</highlight></codeline>
+<codeline lineno="468"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/>bb1[1]<sp/>&lt;=<sp/>t1[1]<sp/>&amp;&amp;<sp/>t1[1]<sp/>&lt;=<sp/>bb2[1]</highlight></codeline>
+<codeline lineno="469"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/>bb1[2]<sp/>&lt;=<sp/>t1[2]<sp/>&amp;&amp;<sp/>t1[2]<sp/>&lt;=<sp/>bb2[2])</highlight></codeline>
+<codeline lineno="470"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="471"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(bb1[0]<sp/>&lt;<sp/>t2[0]<sp/>&amp;&amp;<sp/>t2[0]<sp/>&lt;=<sp/>bb2[0]</highlight></codeline>
+<codeline lineno="472"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/>bb1[1]<sp/>&lt;=<sp/>t2[1]<sp/>&amp;&amp;<sp/>t2[1]<sp/>&lt;=<sp/>bb2[1]</highlight></codeline>
+<codeline lineno="473"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/>bb1[2]<sp/>&lt;=<sp/>t2[2]<sp/>&amp;&amp;<sp/>t2[2]<sp/>&lt;=<sp/>bb2[2])</highlight></codeline>
+<codeline lineno="474"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="475"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(bb1[0]<sp/>&lt;=<sp/>t3[0]<sp/>&amp;&amp;<sp/>t3[0]<sp/>&lt;=<sp/>bb2[0]</highlight></codeline>
+<codeline lineno="476"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/>bb1[1]<sp/>&lt;=<sp/>t3[1]<sp/>&amp;&amp;<sp/>t3[1]<sp/>&lt;=<sp/>bb2[1]</highlight></codeline>
+<codeline lineno="477"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/>bb1[2]<sp/>&lt;=<sp/>t3[2]<sp/>&amp;&amp;<sp/>t3[2]<sp/>&lt;=<sp/>bb2[2])</highlight></codeline>
+<codeline lineno="478"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="479"><highlight class="normal"></highlight></codeline>
+<codeline lineno="480"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>no<sp/>such<sp/>luck;<sp/>check<sp/>if<sp/>any<sp/>of<sp/>the<sp/>cube<sp/>edges<sp/>intersects<sp/>the<sp/>triangle<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="481"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>c000[3];<sp/>c000[0]<sp/>=<sp/>bb1[0];<sp/>c000[1]<sp/>=<sp/>bb1[1];<sp/>c000[2]<sp/>=<sp/>bb1[2];</highlight></codeline>
+<codeline lineno="482"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>c100[3];<sp/>c100[0]<sp/>=<sp/>bb2[0];<sp/>c100[1]<sp/>=<sp/>bb1[1];<sp/>c100[2]<sp/>=<sp/>bb1[2];</highlight></codeline>
+<codeline lineno="483"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>c010[3];<sp/>c010[0]<sp/>=<sp/>bb1[0];<sp/>c010[1]<sp/>=<sp/>bb2[1];<sp/>c010[2]<sp/>=<sp/>bb1[2];</highlight></codeline>
+<codeline lineno="484"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>c110[3];<sp/>c110[0]<sp/>=<sp/>bb2[0];<sp/>c110[1]<sp/>=<sp/>bb2[1];<sp/>c110[2]<sp/>=<sp/>bb1[2];</highlight></codeline>
+<codeline lineno="485"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>c001[3];<sp/>c001[0]<sp/>=<sp/>bb1[0];<sp/>c001[1]<sp/>=<sp/>bb1[1];<sp/>c001[2]<sp/>=<sp/>bb2[2];</highlight></codeline>
+<codeline lineno="486"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>c101[3];<sp/>c101[0]<sp/>=<sp/>bb2[0];<sp/>c101[1]<sp/>=<sp/>bb1[1];<sp/>c101[2]<sp/>=<sp/>bb2[2];</highlight></codeline>
+<codeline lineno="487"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>c011[3];<sp/>c011[0]<sp/>=<sp/>bb1[0];<sp/>c011[1]<sp/>=<sp/>bb2[1];<sp/>c011[2]<sp/>=<sp/>bb2[2];</highlight></codeline>
+<codeline lineno="488"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>c111[3];<sp/>c111[0]<sp/>=<sp/>bb2[0];<sp/>c111[1]<sp/>=<sp/>bb2[1];<sp/>c111[2]<sp/>=<sp/>bb2[2];</highlight></codeline>
+<codeline lineno="489"><highlight class="normal"></highlight></codeline>
+<codeline lineno="490"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><sp/><sp/><ref refid="wall__3d_8c_1a64ae89b58068702c9e084b80cd78fd1b" kindref="member">wall_3d_tri_collision</ref>(c000,<sp/>c100,<sp/>t1,<sp/>t2,<sp/>t3)<sp/>&gt;=<sp/>0</highlight></codeline>
+<codeline lineno="491"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||<sp/><ref refid="wall__3d_8c_1a64ae89b58068702c9e084b80cd78fd1b" kindref="member">wall_3d_tri_collision</ref>(c000,<sp/>c010,<sp/>t1,<sp/>t2,<sp/>t3)<sp/>&gt;=<sp/>0</highlight></codeline>
+<codeline lineno="492"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||<sp/><ref refid="wall__3d_8c_1a64ae89b58068702c9e084b80cd78fd1b" kindref="member">wall_3d_tri_collision</ref>(c110,<sp/>c010,<sp/>t1,<sp/>t2,<sp/>t3)<sp/>&gt;=<sp/>0</highlight></codeline>
+<codeline lineno="493"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||<sp/><ref refid="wall__3d_8c_1a64ae89b58068702c9e084b80cd78fd1b" kindref="member">wall_3d_tri_collision</ref>(c110,<sp/>c100,<sp/>t1,<sp/>t2,<sp/>t3)<sp/>&gt;=<sp/>0</highlight></codeline>
+<codeline lineno="494"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||<sp/><ref refid="wall__3d_8c_1a64ae89b58068702c9e084b80cd78fd1b" kindref="member">wall_3d_tri_collision</ref>(c000,<sp/>c001,<sp/>t1,<sp/>t2,<sp/>t3)<sp/>&gt;=<sp/>0</highlight></codeline>
+<codeline lineno="495"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||<sp/><ref refid="wall__3d_8c_1a64ae89b58068702c9e084b80cd78fd1b" kindref="member">wall_3d_tri_collision</ref>(c010,<sp/>c011,<sp/>t1,<sp/>t2,<sp/>t3)<sp/>&gt;=<sp/>0</highlight></codeline>
+<codeline lineno="496"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||<sp/><ref refid="wall__3d_8c_1a64ae89b58068702c9e084b80cd78fd1b" kindref="member">wall_3d_tri_collision</ref>(c100,<sp/>c101,<sp/>t1,<sp/>t2,<sp/>t3)<sp/>&gt;=<sp/>0</highlight></codeline>
+<codeline lineno="497"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||<sp/><ref refid="wall__3d_8c_1a64ae89b58068702c9e084b80cd78fd1b" kindref="member">wall_3d_tri_collision</ref>(c110,<sp/>c111,<sp/>t1,<sp/>t2,<sp/>t3)<sp/>&gt;=<sp/>0</highlight></codeline>
+<codeline lineno="498"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||<sp/><ref refid="wall__3d_8c_1a64ae89b58068702c9e084b80cd78fd1b" kindref="member">wall_3d_tri_collision</ref>(c001,<sp/>c101,<sp/>t1,<sp/>t2,<sp/>t3)<sp/>&gt;=<sp/>0</highlight></codeline>
+<codeline lineno="499"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||<sp/><ref refid="wall__3d_8c_1a64ae89b58068702c9e084b80cd78fd1b" kindref="member">wall_3d_tri_collision</ref>(c001,<sp/>c011,<sp/>t1,<sp/>t2,<sp/>t3)<sp/>&gt;=<sp/>0</highlight></codeline>
+<codeline lineno="500"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||<sp/><ref refid="wall__3d_8c_1a64ae89b58068702c9e084b80cd78fd1b" kindref="member">wall_3d_tri_collision</ref>(c111,<sp/>c011,<sp/>t1,<sp/>t2,<sp/>t3)<sp/>&gt;=<sp/>0</highlight></codeline>
+<codeline lineno="501"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||<sp/><ref refid="wall__3d_8c_1a64ae89b58068702c9e084b80cd78fd1b" kindref="member">wall_3d_tri_collision</ref>(c111,<sp/>c101,<sp/>t1,<sp/>t2,<sp/>t3)<sp/>&gt;=<sp/>0)</highlight></codeline>
+<codeline lineno="502"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="503"><highlight class="normal"></highlight></codeline>
+<codeline lineno="504"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>check<sp/>for<sp/>triangle<sp/>edges<sp/>intersecting<sp/>cube<sp/>quads<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="505"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><sp/><sp/><ref refid="wall__3d_8c_1ae7d0f1f8ac2ab55fa76ba1dd377f689d" kindref="member">wall_3d_quad_collision</ref>(t1,<sp/>t2,<sp/>c000,<sp/>c100,<sp/>c110,<sp/>c010)<sp/>==<sp/>1</highlight></codeline>
+<codeline lineno="506"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||<sp/><ref refid="wall__3d_8c_1ae7d0f1f8ac2ab55fa76ba1dd377f689d" kindref="member">wall_3d_quad_collision</ref>(t1,<sp/>t2,<sp/>c000,<sp/>c010,<sp/>c011,<sp/>c001)<sp/>==<sp/>1</highlight></codeline>
+<codeline lineno="507"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||<sp/><ref refid="wall__3d_8c_1ae7d0f1f8ac2ab55fa76ba1dd377f689d" kindref="member">wall_3d_quad_collision</ref>(t1,<sp/>t2,<sp/>c000,<sp/>c100,<sp/>c101,<sp/>c001)<sp/>==<sp/>1</highlight></codeline>
+<codeline lineno="508"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||<sp/><ref refid="wall__3d_8c_1ae7d0f1f8ac2ab55fa76ba1dd377f689d" kindref="member">wall_3d_quad_collision</ref>(t1,<sp/>t2,<sp/>c010,<sp/>c110,<sp/>c111,<sp/>c011)<sp/>==<sp/>1</highlight></codeline>
+<codeline lineno="509"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||<sp/><ref refid="wall__3d_8c_1ae7d0f1f8ac2ab55fa76ba1dd377f689d" kindref="member">wall_3d_quad_collision</ref>(t1,<sp/>t2,<sp/>c100,<sp/>c101,<sp/>c111,<sp/>c110)<sp/>==<sp/>1</highlight></codeline>
+<codeline lineno="510"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||<sp/><ref refid="wall__3d_8c_1ae7d0f1f8ac2ab55fa76ba1dd377f689d" kindref="member">wall_3d_quad_collision</ref>(t1,<sp/>t2,<sp/>c001,<sp/>c101,<sp/>c111,<sp/>c011)<sp/>==<sp/>1)</highlight></codeline>
+<codeline lineno="511"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="512"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><sp/><sp/><ref refid="wall__3d_8c_1ae7d0f1f8ac2ab55fa76ba1dd377f689d" kindref="member">wall_3d_quad_collision</ref>(t3,<sp/>t2,<sp/>c000,<sp/>c100,<sp/>c110,<sp/>c010)<sp/>==<sp/>1</highlight></codeline>
+<codeline lineno="513"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||<sp/><ref refid="wall__3d_8c_1ae7d0f1f8ac2ab55fa76ba1dd377f689d" kindref="member">wall_3d_quad_collision</ref>(t3,<sp/>t2,<sp/>c000,<sp/>c010,<sp/>c011,<sp/>c001)<sp/>==<sp/>1</highlight></codeline>
+<codeline lineno="514"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||<sp/><ref refid="wall__3d_8c_1ae7d0f1f8ac2ab55fa76ba1dd377f689d" kindref="member">wall_3d_quad_collision</ref>(t3,<sp/>t2,<sp/>c000,<sp/>c100,<sp/>c101,<sp/>c001)<sp/>==<sp/>1</highlight></codeline>
+<codeline lineno="515"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||<sp/><ref refid="wall__3d_8c_1ae7d0f1f8ac2ab55fa76ba1dd377f689d" kindref="member">wall_3d_quad_collision</ref>(t3,<sp/>t2,<sp/>c010,<sp/>c110,<sp/>c111,<sp/>c011)<sp/>==<sp/>1</highlight></codeline>
+<codeline lineno="516"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||<sp/><ref refid="wall__3d_8c_1ae7d0f1f8ac2ab55fa76ba1dd377f689d" kindref="member">wall_3d_quad_collision</ref>(t3,<sp/>t2,<sp/>c100,<sp/>c101,<sp/>c111,<sp/>c110)<sp/>==<sp/>1</highlight></codeline>
+<codeline lineno="517"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||<sp/><ref refid="wall__3d_8c_1ae7d0f1f8ac2ab55fa76ba1dd377f689d" kindref="member">wall_3d_quad_collision</ref>(t3,<sp/>t2,<sp/>c001,<sp/>c101,<sp/>c111,<sp/>c011)<sp/>==<sp/>1)</highlight></codeline>
+<codeline lineno="518"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="519"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><sp/><sp/><ref refid="wall__3d_8c_1ae7d0f1f8ac2ab55fa76ba1dd377f689d" kindref="member">wall_3d_quad_collision</ref>(t1,<sp/>t3,<sp/>c000,<sp/>c100,<sp/>c110,<sp/>c010)<sp/>==<sp/>1</highlight></codeline>
+<codeline lineno="520"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||<sp/><ref refid="wall__3d_8c_1ae7d0f1f8ac2ab55fa76ba1dd377f689d" kindref="member">wall_3d_quad_collision</ref>(t1,<sp/>t3,<sp/>c000,<sp/>c010,<sp/>c011,<sp/>c001)<sp/>==<sp/>1</highlight></codeline>
+<codeline lineno="521"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||<sp/><ref refid="wall__3d_8c_1ae7d0f1f8ac2ab55fa76ba1dd377f689d" kindref="member">wall_3d_quad_collision</ref>(t1,<sp/>t3,<sp/>c000,<sp/>c100,<sp/>c101,<sp/>c001)<sp/>==<sp/>1</highlight></codeline>
+<codeline lineno="522"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||<sp/><ref refid="wall__3d_8c_1ae7d0f1f8ac2ab55fa76ba1dd377f689d" kindref="member">wall_3d_quad_collision</ref>(t1,<sp/>t3,<sp/>c010,<sp/>c110,<sp/>c111,<sp/>c011)<sp/>==<sp/>1</highlight></codeline>
+<codeline lineno="523"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||<sp/><ref refid="wall__3d_8c_1ae7d0f1f8ac2ab55fa76ba1dd377f689d" kindref="member">wall_3d_quad_collision</ref>(t1,<sp/>t3,<sp/>c100,<sp/>c101,<sp/>c111,<sp/>c110)<sp/>==<sp/>1</highlight></codeline>
+<codeline lineno="524"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||<sp/><ref refid="wall__3d_8c_1ae7d0f1f8ac2ab55fa76ba1dd377f689d" kindref="member">wall_3d_quad_collision</ref>(t1,<sp/>t3,<sp/>c001,<sp/>c101,<sp/>c111,<sp/>c011)<sp/>==<sp/>1)</highlight></codeline>
+<codeline lineno="525"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="526"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="527"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="528"><highlight class="normal"></highlight></codeline>
+<codeline lineno="544" refid="wall__3d_8c_1a64ae89b58068702c9e084b80cd78fd1b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="wall__3d_8c_1a64ae89b58068702c9e084b80cd78fd1b" kindref="member">wall_3d_tri_collision</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>q1[3],<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>q2[3],<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>t1[3],<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>t2[3],</highlight></codeline>
+<codeline lineno="545"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>t3[3])<sp/>{</highlight></codeline>
+<codeline lineno="546"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>q12[3],<sp/>Q12[3];</highlight></codeline>
+<codeline lineno="547"><highlight class="normal"><sp/><sp/><sp/><sp/>Q12[0]<sp/>=<sp/>q2[0]<sp/>-<sp/>q1[0];</highlight></codeline>
+<codeline lineno="548"><highlight class="normal"><sp/><sp/><sp/><sp/>Q12[1]<sp/>=<sp/>q2[1]<sp/>-<sp/>q1[1];</highlight></codeline>
+<codeline lineno="549"><highlight class="normal"><sp/><sp/><sp/><sp/>Q12[2]<sp/>=<sp/>q2[2]<sp/>-<sp/>q1[2];</highlight></codeline>
+<codeline lineno="550"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="math_8h_1a29911679af4275647fea8492f908bbd9" kindref="member">math_unit</ref>(Q12,<sp/>q12);</highlight></codeline>
+<codeline lineno="551"><highlight class="normal"></highlight></codeline>
+<codeline lineno="552"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>edge12[3];</highlight></codeline>
+<codeline lineno="553"><highlight class="normal"><sp/><sp/><sp/><sp/>edge12[0]<sp/>=<sp/>t2[0]<sp/>-<sp/>t1[0];</highlight></codeline>
+<codeline lineno="554"><highlight class="normal"><sp/><sp/><sp/><sp/>edge12[1]<sp/>=<sp/>t2[1]<sp/>-<sp/>t1[1];</highlight></codeline>
+<codeline lineno="555"><highlight class="normal"><sp/><sp/><sp/><sp/>edge12[2]<sp/>=<sp/>t2[2]<sp/>-<sp/>t1[2];</highlight></codeline>
+<codeline lineno="556"><highlight class="normal"></highlight></codeline>
+<codeline lineno="557"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>edge13[3];</highlight></codeline>
+<codeline lineno="558"><highlight class="normal"><sp/><sp/><sp/><sp/>edge13[0]<sp/>=<sp/>t3[0]<sp/>-<sp/>t1[0];</highlight></codeline>
+<codeline lineno="559"><highlight class="normal"><sp/><sp/><sp/><sp/>edge13[1]<sp/>=<sp/>t3[1]<sp/>-<sp/>t1[1];</highlight></codeline>
+<codeline lineno="560"><highlight class="normal"><sp/><sp/><sp/><sp/>edge13[2]<sp/>=<sp/>t3[2]<sp/>-<sp/>t1[2];</highlight></codeline>
+<codeline lineno="561"><highlight class="normal"></highlight></codeline>
+<codeline lineno="562"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>h[3];</highlight></codeline>
+<codeline lineno="563"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="math_8h_1abe0d82787eb750e38e7fbb791c575084" kindref="member">math_cross</ref>(q12,<sp/>edge13,<sp/>h);</highlight></codeline>
+<codeline lineno="564"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>det<sp/>=<sp/><ref refid="math_8h_1a212fc9c17be398b934456f0fa641541a" kindref="member">math_dot</ref>(h,<sp/>edge12);</highlight></codeline>
+<codeline lineno="565"><highlight class="normal"></highlight></codeline>
+<codeline lineno="566"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Check<sp/>that<sp/>the<sp/>triangle<sp/>has<sp/>non-zero<sp/>area<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="567"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>normal[3],<sp/>area;</highlight></codeline>
+<codeline lineno="568"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="math_8h_1abe0d82787eb750e38e7fbb791c575084" kindref="member">math_cross</ref>(edge12,<sp/>edge13,<sp/>normal);</highlight></codeline>
+<codeline lineno="569"><highlight class="normal"><sp/><sp/><sp/><sp/>area<sp/>=<sp/><ref refid="math_8h_1adfcdc12f390386bae35dfed59f73e247" kindref="member">math_norm</ref>(normal);</highlight></codeline>
+<codeline lineno="570"><highlight class="normal"></highlight></codeline>
+<codeline lineno="571"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>w<sp/>=<sp/>-1.0;</highlight></codeline>
+<codeline lineno="572"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>area<sp/>&gt;<sp/><ref refid="wall__3d_8h_1a2b53ef755c6f7a4537538a79d6998c9a" kindref="member">WALL_EPSILON</ref><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="573"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>If<sp/>ray<sp/>is<sp/>parallel<sp/>to<sp/>the<sp/>triangle,<sp/>nudge<sp/>it<sp/>a<sp/>little<sp/>bit<sp/>so<sp/>we<sp/>don&apos;t</highlight></codeline>
+<codeline lineno="574"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>have<sp/>to<sp/>handle<sp/>annoying<sp/>special<sp/>cases<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="575"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>fabs(det)<sp/>&lt;<sp/><ref refid="wall__3d_8h_1a2b53ef755c6f7a4537538a79d6998c9a" kindref="member">WALL_EPSILON</ref><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="576"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Q12[0]<sp/>=<sp/>q2[0]<sp/>-<sp/>q1[0]<sp/>+<sp/>2<sp/>*<sp/><ref refid="wall__3d_8h_1a2b53ef755c6f7a4537538a79d6998c9a" kindref="member">WALL_EPSILON</ref><sp/>*<sp/>normal[0]<sp/>/<sp/>area;</highlight></codeline>
+<codeline lineno="577"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Q12[1]<sp/>=<sp/>q2[1]<sp/>-<sp/>q1[1]<sp/>+<sp/>2<sp/>*<sp/><ref refid="wall__3d_8h_1a2b53ef755c6f7a4537538a79d6998c9a" kindref="member">WALL_EPSILON</ref><sp/>*<sp/>normal[1]<sp/>/<sp/>area;</highlight></codeline>
+<codeline lineno="578"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Q12[2]<sp/>=<sp/>q2[2]<sp/>-<sp/>q1[2]<sp/>+<sp/>2<sp/>*<sp/><ref refid="wall__3d_8h_1a2b53ef755c6f7a4537538a79d6998c9a" kindref="member">WALL_EPSILON</ref><sp/>*<sp/>normal[2]<sp/>/<sp/>area;</highlight></codeline>
+<codeline lineno="579"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="math_8h_1a29911679af4275647fea8492f908bbd9" kindref="member">math_unit</ref>(Q12,<sp/>q12);</highlight></codeline>
+<codeline lineno="580"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="math_8h_1abe0d82787eb750e38e7fbb791c575084" kindref="member">math_cross</ref>(q12,<sp/>edge13,<sp/>h);</highlight></codeline>
+<codeline lineno="581"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>det<sp/>=<sp/><ref refid="math_8h_1a212fc9c17be398b934456f0fa641541a" kindref="member">math_dot</ref>(h,<sp/>edge12);</highlight></codeline>
+<codeline lineno="582"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="583"><highlight class="normal"></highlight></codeline>
+<codeline lineno="584"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>tq11[3];</highlight></codeline>
+<codeline lineno="585"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tq11[0]<sp/>=<sp/>q1[0]<sp/>-<sp/>t1[0];</highlight></codeline>
+<codeline lineno="586"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tq11[1]<sp/>=<sp/>q1[1]<sp/>-<sp/>t1[1];</highlight></codeline>
+<codeline lineno="587"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tq11[2]<sp/>=<sp/>q1[2]<sp/>-<sp/>t1[2];</highlight></codeline>
+<codeline lineno="588"><highlight class="normal"></highlight></codeline>
+<codeline lineno="589"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>n[3];</highlight></codeline>
+<codeline lineno="590"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="math_8h_1abe0d82787eb750e38e7fbb791c575084" kindref="member">math_cross</ref>(tq11,<sp/>edge12,<sp/>n);</highlight></codeline>
+<codeline lineno="591"><highlight class="normal"></highlight></codeline>
+<codeline lineno="592"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>u<sp/>=<sp/><ref refid="math_8h_1a212fc9c17be398b934456f0fa641541a" kindref="member">math_dot</ref>(h,<sp/>tq11)<sp/>/<sp/>det;</highlight></codeline>
+<codeline lineno="593"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>v<sp/>=<sp/><ref refid="math_8h_1a212fc9c17be398b934456f0fa641541a" kindref="member">math_dot</ref>(q12,<sp/>n)<sp/>/<sp/>det;</highlight></codeline>
+<codeline lineno="594"><highlight class="normal"></highlight></codeline>
+<codeline lineno="595"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>(<sp/>u<sp/>&gt;=<sp/>0.0<sp/>&amp;&amp;<sp/>u<sp/>&lt;=<sp/>1.0<sp/>)<sp/>&amp;&amp;<sp/>(<sp/>v<sp/>&gt;=<sp/>0.0<sp/>&amp;&amp;<sp/>u<sp/>+<sp/>v<sp/>&lt;=<sp/>1.0<sp/>)<sp/><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="596"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>w<sp/>=<sp/>(<sp/><ref refid="math_8h_1a212fc9c17be398b934456f0fa641541a" kindref="member">math_dot</ref>(n,<sp/>edge13)<sp/>/<sp/>det<sp/>)<sp/>/<sp/><ref refid="math_8h_1adfcdc12f390386bae35dfed59f73e247" kindref="member">math_norm</ref>(Q12);</highlight></codeline>
+<codeline lineno="597"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>w<sp/>&gt;<sp/>1.0<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="598"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>w<sp/>=<sp/>-1.0;</highlight></codeline>
+<codeline lineno="599"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="600"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="601"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="602"><highlight class="normal"></highlight></codeline>
+<codeline lineno="603"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>w;</highlight></codeline>
+<codeline lineno="604"><highlight class="normal"></highlight></codeline>
+<codeline lineno="605"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="606"><highlight class="normal"></highlight></codeline>
+<codeline lineno="619" refid="wall__3d_8c_1ae7d0f1f8ac2ab55fa76ba1dd377f689d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="wall__3d_8c_1ae7d0f1f8ac2ab55fa76ba1dd377f689d" kindref="member">wall_3d_quad_collision</ref>(<ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>q1[3],<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>q2[3],<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>t1[3],<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>t2[3],</highlight></codeline>
+<codeline lineno="620"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>t3[3],<sp/><ref refid="ascot5_8h_1a11d147c64891830c9e79b3315b1b2e21" kindref="member">real</ref><sp/>t4[3])<sp/>{</highlight></codeline>
+<codeline lineno="621"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="wall__3d_8c_1a64ae89b58068702c9e084b80cd78fd1b" kindref="member">wall_3d_tri_collision</ref>(q1,<sp/>q2,<sp/>t1,<sp/>t2,<sp/>t3)<sp/>&gt;=<sp/>0</highlight></codeline>
+<codeline lineno="622"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||<sp/><ref refid="wall__3d_8c_1a64ae89b58068702c9e084b80cd78fd1b" kindref="member">wall_3d_tri_collision</ref>(q1,<sp/>q2,<sp/>t1,<sp/>t3,<sp/>t4)<sp/>&gt;=<sp/>0)</highlight></codeline>
+<codeline lineno="623"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="624"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="625"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="626"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="wall/wall_3d.c"/>
+  </compounddef>
+</doxygen>
