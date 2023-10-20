@@ -1,0 +1,23 @@
+name: Private runner actions
+on: [push]
+
+jobs:
+  make_ascot5:
+    runs-on: self-hosted
+    name: Compile ascot5
+    steps:
+      # To use this repository's private action,
+      # you must check out the repository
+      - name: Checkout
+        uses: actions/checkout@v4
+      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
+
+      - run: pwd
+        
+      - run: ls -la
+        
+      - name: Make ascot5_main
+        uses: ./github/actions/compile/
+        id: makeascot5main
+        with:
+          makefile-parameters: 'ascot5_main'

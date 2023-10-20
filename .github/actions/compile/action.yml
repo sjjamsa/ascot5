@@ -1,0 +1,16 @@
+# action.yml
+name: 'make'
+description: 'Run Makefile'
+inputs:
+  makefile-parameters: 
+    description: 'What makefile targets to request'
+    required: true
+    default: 'ascot5_main'
+outputs:
+#  time: # id of output
+#    description: 'The time we greeted you'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.makefile-parameters }}
