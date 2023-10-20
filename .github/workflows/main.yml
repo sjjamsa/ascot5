@@ -17,7 +17,7 @@ jobs:
       - run: ls -la
         
       - name: Make ascot5_main
-        uses: .github/actions/compile/
+        uses: ./.github/actions/compile/
         id: makeascot5main
         with:
           makefile-parameters: 'ascot5_main'
