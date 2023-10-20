@@ -27,3 +27,9 @@ jobs:
         id: makelibascot
         with:
           makefile-parameters: 'libascot.so'
+
+      - name: Make ascot5_main with h5pcc
+        uses: ./.github/actions/compile/
+        id: makeascot5main_h5pcc
+        with:
+          makefile-parameters: 'libascot.so CC=h5pcc'
