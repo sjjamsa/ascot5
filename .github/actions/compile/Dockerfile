@@ -22,7 +22,7 @@ RUN yes | apt-get install make
 RUN yes | apt-get install gcc
 RUN yes | apt-get install libclang-12-dev
 RUN yes | apt-get install pip
-RUN yes | pip install ctypeslib2 clang=12.0.1
+RUN yes | pip install ctypeslib2 clang==12.0.1
 RUN yes | apt-get install git
 
 
