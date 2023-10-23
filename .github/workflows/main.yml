@@ -1,9 +1,10 @@
-name: Private runner actions
+name: Compile the code
 on: [push]
 
 jobs:
   make_ascot5:
-    runs-on: self-hosted
+    #runs-on: self-hosted
+    runs-on: ubuntu-latest
     name: Compile ascot5
     steps:
       # To use this repository's private action,
