@@ -6,7 +6,7 @@
 #
 
 
-FROM ubuntu
+FROM ubuntu:20.03
 
 MAINTAINER Simppa AEkaeslompolo <simppa.akaslompolo@aalto.fi>
 
@@ -20,9 +20,9 @@ RUN yes | apt-get install h5utils
 RUN yes | apt-get install emacs
 RUN yes | apt-get install make
 RUN yes | apt-get install gcc
-RUN yes | apt-get install libclang-11-dev
+RUN yes | apt-get install libclang-12-dev
 RUN yes | apt-get install pip
-RUN yes | pip install ctypeslib2
+RUN yes | pip install ctypeslib2 clang=12.0.1
 RUN yes | apt-get install git
 
 
