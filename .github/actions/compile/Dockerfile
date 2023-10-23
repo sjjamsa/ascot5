@@ -6,7 +6,7 @@
 #
 
 
-FROM ubuntu:20.03
+FROM ubuntu:20.04
 
 MAINTAINER Simppa AEkaeslompolo <simppa.akaslompolo@aalto.fi>
 
